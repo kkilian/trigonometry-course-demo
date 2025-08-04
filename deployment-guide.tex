@@ -1,0 +1,435 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{\textbf{Instrukcja Wdrożenia Kursu Online}\\
+\large Projekt-M Demo - Trygonometria}
+\author{Kurs Trygonometrii - Deployment Guide}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Przygotowanie do wdrożenia}
+
+\subsection{Wymagania wstępne}
+Przed rozpoczęciem procesu wdrożenia upewnij się, że masz:
+\begin{itemize}
+    \item Zainstalowany Node.js (wersja 14 lub nowsza)
+    \item Dostęp do terminala/konsoli
+    \item Projekt znajdujący się w folderze \texttt{projekt-m-demo}
+    \item Połączenie z internetem
+\end{itemize}
+
+\subsection{Weryfikacja instalacji}
+Otwórz terminal i wykonaj:
+\begin{lstlisting}[language=bash]
+node --version
+npm --version
+\end{lstlisting}
+
+\section{Budowanie aplikacji}
+
+\subsection{Krok 1: Przejście do folderu projektu}
+\begin{lstlisting}[language=bash]
+cd /Users/krzysztofkilian/Desktop/projekt-m-demo
+\end{lstlisting}
+
+\subsection{Krok 2: Instalacja zależności (jeśli nie wykonano wcześniej)}
+\begin{lstlisting}[language=bash]
+npm install
+\end{lstlisting}
+
+\subsection{Krok 3: Budowanie produkcyjnej wersji}
+\begin{lstlisting}[language=bash]
+npm run build
+\end{lstlisting}
+
+\textbf{Ważne:} Ten proces może potrwać 1-3 minuty. Po zakończeniu zobaczysz komunikat:
+\begin{verbatim}
+The build folder is ready to be deployed.
+\end{verbatim}
+
+\subsection{Krok 4: Weryfikacja}
+Sprawdź, czy folder \texttt{build} został utworzony:
+\begin{lstlisting}[language=bash]
+ls -la build/
+\end{lstlisting}
+
+\newpage
+\section{Wdrożenie na Vercel}
+
+\subsection{Metoda 1: Przez przeglądarkę (najprostsza)}
+
+\subsubsection{Krok 1: Rejestracja}
+\begin{enumerate}
+    \item Wejdź na stronę: \url{https://vercel.com}
+    \item Kliknij \textbf{Sign Up}
+    \item Zaloguj się przez GitHub, GitLab lub email
+\end{enumerate}
+
+\subsubsection{Krok 2: Upload projektu}
+\begin{enumerate}
+    \item Po zalogowaniu kliknij \textbf{Add New...} → \textbf{Project}
+    \item Wybierz opcję \textbf{Deploy from Local}
+    \item Przeciągnij folder \texttt{build} na stronę
+    \item Poczekaj na upload (zwykle 10-30 sekund)
+\end{enumerate}
+
+\subsubsection{Krok 3: Konfiguracja}
+\begin{enumerate}
+    \item Nazwa projektu: \texttt{trigonometry-course} (lub dowolna)
+    \item Framework Preset: wybierz \textbf{Other}
+    \item Build Command: zostaw puste
+    \item Output Directory: zostaw puste lub wpisz \texttt{.}
+    \item Kliknij \textbf{Deploy}
+\end{enumerate}
+
+\subsubsection{Krok 4: Gotowe}
+\begin{enumerate}
+    \item Po około 30 sekundach otrzymasz link typu:
+    \begin{verbatim}
+    https://trigonometry-course.vercel.app
+    \end{verbatim}
+    \item Kliknij link aby zobaczyć działającą aplikację
+\end{enumerate}
+
+\subsection{Metoda 2: Przez CLI (dla zaawansowanych)}
+
+\subsubsection{Instalacja Vercel CLI}
+\begin{lstlisting}[language=bash]
+npm install -g vercel
+\end{lstlisting}
+
+\subsubsection{Deploy}
+\begin{lstlisting}[language=bash]
+cd /Users/krzysztofkilian/Desktop/projekt-m-demo
+vercel --prod ./build
+\end{lstlisting}
+
+Postępuj zgodnie z promptami:
+\begin{itemize}
+    \item Set up and deploy? \textbf{Y}
+    \item Which scope? Wybierz swoje konto
+    \item Link to existing project? \textbf{N}
+    \item Project name? \texttt{trigonometry-course}
+    \item Directory? \texttt{./build}
+    \item Override settings? \textbf{N}
+\end{itemize}
+
+\newpage
+\section{Wdrożenie na Netlify}
+
+\subsection{Metoda 1: Drag and Drop}
+
+\subsubsection{Krok 1: Przygotowanie}
+\begin{enumerate}
+    \item Wejdź na: \url{https://app.netlify.com/drop}
+    \item Nie musisz się logować (ale możesz dla zachowania projektu)
+\end{enumerate}
+
+\subsubsection{Krok 2: Upload}
+\begin{enumerate}
+    \item Otwórz Finder/Explorer
+    \item Znajdź folder: \texttt{projekt-m-demo/build}
+    \item Przeciągnij cały folder \texttt{build} na stronę Netlify
+    \item Poczekaj na upload (10-30 sekund)
+\end{enumerate}
+
+\subsubsection{Krok 3: Gotowe}
+\begin{enumerate}
+    \item Otrzymasz link typu:
+    \begin{verbatim}
+    https://amazing-curie-521a4b.netlify.app
+    \end{verbatim}
+    \item Możesz zmienić nazwę domeny w ustawieniach
+\end{enumerate}
+
+\subsection{Metoda 2: Git Integration}
+
+\subsubsection{Krok 1: Push do GitHub}
+\begin{lstlisting}[language=bash]
+cd /Users/krzysztofkilian/Desktop/projekt-m-demo
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/twoje-konto/trigonometry-course.git
+git push -u origin main
+\end{lstlisting}
+
+\subsubsection{Krok 2: Połączenie z Netlify}
+\begin{enumerate}
+    \item Zaloguj się na \url{https://netlify.com}
+    \item Kliknij \textbf{Add new site} → \textbf{Import an existing project}
+    \item Wybierz GitHub i autoryzuj
+    \item Wybierz repozytorium
+    \item Ustawienia budowania:
+    \begin{itemize}
+        \item Build command: \texttt{npm run build}
+        \item Publish directory: \texttt{build}
+    \end{itemize}
+    \item Kliknij \textbf{Deploy site}
+\end{enumerate}
+
+\newpage
+\section{Wdrożenie na GitHub Pages}
+
+\subsection{Przygotowanie}
+
+\subsubsection{Krok 1: Modyfikacja package.json}
+Dodaj do pliku \texttt{package.json}:
+\begin{lstlisting}[language=json]
+"homepage": "https://twoje-konto.github.io/trigonometry-course"
+\end{lstlisting}
+
+\subsubsection{Krok 2: Instalacja gh-pages}
+\begin{lstlisting}[language=bash]
+npm install --save-dev gh-pages
+\end{lstlisting}
+
+\subsubsection{Krok 3: Dodanie skryptów}
+W \texttt{package.json} w sekcji \texttt{scripts} dodaj:
+\begin{lstlisting}[language=json]
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+\end{lstlisting}
+
+\subsection{Deployment}
+
+\subsubsection{Krok 1: Utworzenie repozytorium}
+\begin{lstlisting}[language=bash]
+cd /Users/krzysztofkilian/Desktop/projekt-m-demo
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/twoje-konto/trigonometry-course.git
+git push -u origin main
+\end{lstlisting}
+
+\subsubsection{Krok 2: Deploy}
+\begin{lstlisting}[language=bash]
+npm run deploy
+\end{lstlisting}
+
+\subsubsection{Krok 3: Aktywacja GitHub Pages}
+\begin{enumerate}
+    \item Wejdź na GitHub do swojego repozytorium
+    \item Settings → Pages
+    \item Source: Deploy from a branch
+    \item Branch: \texttt{gh-pages}
+    \item Folder: \texttt{/ (root)}
+    \item Save
+\end{enumerate}
+
+\subsubsection{Krok 4: Dostęp}
+Po około 5 minutach aplikacja będzie dostępna pod:
+\begin{verbatim}
+https://twoje-konto.github.io/trigonometry-course
+\end{verbatim}
+
+\newpage
+\section{Porównanie platform}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Cecha} & \textbf{Vercel} & \textbf{Netlify} & \textbf{GitHub Pages} \\
+\hline
+Darmowy limit & 100 GB & 100 GB & 100 GB \\
+\hline
+Własna domena & Tak & Tak & Tak \\
+\hline
+HTTPS & Automatycznie & Automatycznie & Automatycznie \\
+\hline
+Deploy czas & 30 sekund & 30 sekund & 5 minut \\
+\hline
+Łatwość & Bardzo łatwe & Bardzo łatwe & Średnie \\
+\hline
+CI/CD & Tak & Tak & Tak (Actions) \\
+\hline
+\end{tabular}
+\caption{Porównanie platform hostingowych}
+\end{table}
+
+\section{Rozwiązywanie problemów}
+
+\subsection{Problem: Build failed}
+\textbf{Rozwiązanie:}
+\begin{lstlisting}[language=bash]
+rm -rf node_modules package-lock.json
+npm install
+npm run build
+\end{lstlisting}
+
+\subsection{Problem: Blank page po deploy}
+\textbf{Rozwiązanie:}
+\begin{enumerate}
+    \item Sprawdź konsolę przeglądarki (F12)
+    \item Upewnij się, że w \texttt{package.json} nie ma \texttt{homepage} (chyba że GitHub Pages)
+    \item Sprawdź czy wszystkie pliki są w folderze \texttt{build}
+\end{enumerate}
+
+\subsection{Problem: 404 na Netlify/Vercel}
+\textbf{Rozwiązanie:}
+Utwórz plik \texttt{public/\_redirects} (Netlify) lub \texttt{vercel.json} (Vercel):
+
+Dla Netlify (\texttt{public/\_redirects}):
+\begin{lstlisting}
+/*    /index.html   200
+\end{lstlisting}
+
+Dla Vercel (\texttt{vercel.json}):
+\begin{lstlisting}[language=json]
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
+\end{lstlisting}
+
+\section{Aktualizacja aplikacji}
+
+\subsection{Lokalne zmiany}
+\begin{lstlisting}[language=bash]
+# Edytuj pliki w src/
+# Następnie:
+npm run build
+\end{lstlisting}
+
+\subsection{Deploy aktualizacji}
+
+\subsubsection{Vercel/Netlify z Git}
+\begin{lstlisting}[language=bash]
+git add .
+git commit -m "Update: opis zmian"
+git push
+# Automatyczny deploy w 1-2 minuty
+\end{lstlisting}
+
+\subsubsection{Vercel/Netlify manual}
+Powtórz proces drag \& drop z nowym folderem \texttt{build}
+
+\subsubsection{GitHub Pages}
+\begin{lstlisting}[language=bash]
+npm run deploy
+\end{lstlisting}
+
+\section{Koszty i limity}
+
+\subsection{Darmowe limity}
+\begin{itemize}
+    \item \textbf{Vercel:} 100 GB transferu/miesiąc, nieograniczone projekty
+    \item \textbf{Netlify:} 100 GB transferu/miesiąc, 300 minut budowania
+    \item \textbf{GitHub Pages:} 100 GB transferu/miesiąc, 10 budowań/godzinę
+\end{itemize}
+
+\subsection{Szacowane użycie}
+Dla kursu z 194 zadaniami:
+\begin{itemize}
+    \item Rozmiar aplikacji: ~2 MB
+    \item 1000 użytkowników/miesiąc = ~2 GB transferu
+    \item 10000 użytkowników/miesiąc = ~20 GB transferu
+    \item \textbf{Wniosek:} Darmowy plan wystarczy dla 50000 użytkowników/miesiąc
+\end{itemize}
+
+\section{Własna domena (opcjonalnie)}
+
+\subsection{Krok 1: Kup domenę}
+Popularne serwisy:
+\begin{itemize}
+    \item Namecheap: od \$8/rok
+    \item Google Domains: od \$12/rok
+    \item OVH: od 20 zł/rok (.pl)
+\end{itemize}
+
+\subsection{Krok 2: Konfiguracja DNS}
+
+\subsubsection{Dla Vercel}
+Dodaj rekord CNAME:
+\begin{verbatim}
+Type: CNAME
+Name: @
+Value: cname.vercel-dns.com
+\end{verbatim}
+
+\subsubsection{Dla Netlify}
+Dodaj rekord CNAME:
+\begin{verbatim}
+Type: CNAME
+Name: @
+Value: twoja-aplikacja.netlify.app
+\end{verbatim}
+
+\subsection{Krok 3: Dodanie domeny w panelu}
+\begin{enumerate}
+    \item Wejdź do panelu Vercel/Netlify
+    \item Settings → Domains
+    \item Add domain
+    \item Wpisz swoją domenę
+    \item Postępuj zgodnie z instrukcjami
+\end{enumerate}
+
+\section{Podsumowanie}
+
+\subsection{Rekomendacje}
+\begin{enumerate}
+    \item \textbf{Dla początkujących:} Netlify (drag \& drop)
+    \item \textbf{Dla szybkiego deploy:} Vercel
+    \item \textbf{Dla integracji z GitHub:} GitHub Pages
+    \item \textbf{Dla produkcji:} Vercel lub Netlify z Git
+\end{enumerate}
+
+\subsection{Czas całkowity}
+\begin{itemize}
+    \item Build aplikacji: 2-3 minuty
+    \item Upload i konfiguracja: 2-5 minut
+    \item Propagacja DNS (własna domena): do 48 godzin
+    \item \textbf{Razem:} 5-10 minut do działającej aplikacji
+\end{itemize}
+
+\subsection{Wsparcie}
+W razie problemów:
+\begin{itemize}
+    \item Vercel: \url{https://vercel.com/docs}
+    \item Netlify: \url{https://docs.netlify.com}
+    \item GitHub Pages: \url{https://docs.github.com/pages}
+\end{itemize}
+
+\end{document}
