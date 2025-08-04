@@ -37,36 +37,22 @@ const TrigonometryCourse = () => {
     setCompletedProblems(new Set([...completedProblems, problemId]));
   };
 
-  const progress = (completedProblems.size / problems.length) * 100;
+  if (currentProblem) {
+    return (
+      <ProblemView
+        problem={currentProblem}
+        onBack={handleBack}
+        onComplete={handleComplete}
+      />
+    );
+  }
 
   return (
-    <div className="course-container">
-      <header className="course-header">
-        <h1>Kurs Trygonometrii - Definicje Funkcji</h1>
-        <div className="course-stats">
-          <span>Ukończono: {completedProblems.size} / {problems.length} zadań</span>
-          <div className="overall-progress">
-            <div className="overall-progress-bar" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-      </header>
-
-      <main className="course-content">
-        {currentProblem ? (
-          <ProblemView
-            problem={currentProblem}
-            onBack={handleBack}
-            onComplete={handleComplete}
-          />
-        ) : (
-          <ProblemList
-            problems={problems}
-            onSelectProblem={handleSelectProblem}
-            completedProblems={completedProblems}
-          />
-        )}
-      </main>
-    </div>
+    <ProblemList
+      problems={problems}
+      onSelectProblem={handleSelectProblem}
+      completedProblems={completedProblems}
+    />
   );
 };
 
