@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ProblemList from './ProblemList';
 import ProblemView from './ProblemView';
+import TrigonometryQuiz from './TrigonometryQuiz';
+import QuizSelector from './QuizSelector';
 import problemsData from '../data/problems.json';
 
 const TrigonometryCourse = () => {
+  const [mode, setMode] = useState('course'); // 'course' | 'quiz'
   const [currentProblem, setCurrentProblem] = useState(null);
   const [completedProblems, setCompletedProblems] = useState(new Set());
   const [problems] = useState(problemsData);
@@ -37,22 +40,43 @@ const TrigonometryCourse = () => {
     setCompletedProblems(new Set([...completedProblems, problemId]));
   };
 
-  if (currentProblem) {
+  const handleModeChange = (newMode) => {
+    setMode(newMode);
+    setCurrentProblem(null); // Reset current problem when switching modes
+  };
+
+  const handleQuizBack = () => {
+    setMode('course');
+  };
+
+  // Render quiz mode
+  if (mode === 'quiz') {
     return (
-      <ProblemView
-        problem={currentProblem}
-        onBack={handleBack}
-        onComplete={handleComplete}
-      />
+      <>
+        <QuizSelector currentMode={mode} onModeChange={handleModeChange} />
+        <TrigonometryQuiz onBack={handleQuizBack} />
+      </>
     );
   }
 
+  // Render course mode
   return (
-    <ProblemList
-      problems={problems}
-      onSelectProblem={handleSelectProblem}
-      completedProblems={completedProblems}
-    />
+    <>
+      <QuizSelector currentMode={mode} onModeChange={handleModeChange} />
+      {currentProblem ? (
+        <ProblemView
+          problem={currentProblem}
+          onBack={handleBack}
+          onComplete={handleComplete}
+        />
+      ) : (
+        <ProblemList
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={completedProblems}
+        />
+      )}
+    </>
   );
 };
 
