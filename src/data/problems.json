@@ -4395,7 +4395,7 @@
   {
     "id": "tex_problem_101",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie}\\(\\tan x=2 \\sin x\\)",
+    "statement": "\\text{Rozwiąż równanie} \\tan x=2 \\sin x",
     "steps": [
       {
         "step": 1,
@@ -4464,7 +4464,7 @@
   {
     "id": "tex_problem_102",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(R \\cos x \\cdot \\tan x+\\sin x=2\\)",
+    "statement": "\\text{Rozwiąż równanie } R \\cos x \\cdot \\tan x+\\sin x=2",
     "steps": [
       {
         "step": 1,
@@ -4540,7 +4540,7 @@
   {
     "id": "tex_problem_103",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie}\\(x=\\cos 3 x\\)",
+    "statement": "\\text{Rozwiąż równanie} x=\\cos 3 x",
     "steps": [
       {
         "step": 1,
@@ -4613,7 +4613,7 @@
   {
     "id": "tex_problem_104",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(w \\cos x \\cdot \\cos 2 x\\)",
+    "statement": "\\text{Rozwiąż równanie } w \\cos x \\cdot \\cos 2 x",
     "steps": [
       {
         "step": 1,
@@ -4660,7 +4660,7 @@
   {
     "id": "tex_problem_105",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(w \\sin x+\\cos x=1 ; \\quad\\) b) \\(w \\sin 5 x+\\sin x=0\\)",
+    "statement": "\\text{Rozwiąż równanie } w \\sin x+\\cos x=1 ; \\quad b) w \\sin 5 x+\\sin x=0",
     "steps": [
       {
         "step": 1,
@@ -4762,7 +4762,7 @@
   {
     "id": "tex_problem_106",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(R \\cos x-\\cos \\left(x+\\frac{\\pi}{3}\\right)=0\\)",
+    "statement": "\\text{Rozwiąż równanie } R \\cos x-\\cos \\left(x+\\frac{\\pi}{3}\\right)=0",
     "steps": [
       {
         "step": 1,
@@ -4836,7 +4836,7 @@
   {
     "id": "tex_problem_108",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Zbadaj dla jakich wartości parametru } \\(m\\) \\text{ istnieją rozwiązania równania } \\(\\cos x=m\\)",
+    "statement": "\\text{Zbadaj dla jakich wartości parametru } m \\text{ istnieją rozwiązania równania } \\cos x=m",
     "steps": [
       {
         "step": 1,
@@ -4896,7 +4896,7 @@
   {
     "id": "tex_problem_109",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Zbadaj dla jakich wartości parametru } \\(m\\) \\text{ istnieją rozwiązania równania } \\(\\sin (4 x+1)=2 m+3\\)",
+    "statement": "\\text{Zbadaj dla jakich wartości parametru } m \\text{ istnieją rozwiązania równania } \\sin (4 x+1)=2 m+3",
     "steps": [
       {
         "step": 1,
@@ -4957,7 +4957,7 @@
   {
     "id": "tex_problem_110",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Zbadaj dla jakich wartości parametru } \\(m\\) \\text{ istnieją rozwiązania równania } \\(\\sqrt{3} \\sin x+\\cos x=m\\)",
+    "statement": "\\text{Zbadaj dla jakich wartości parametru } m \\text{ istnieją rozwiązania równania } \\sqrt{3} \\sin x+\\cos x=m",
     "steps": [
       {
         "step": 1,
@@ -5018,7 +5018,7 @@
   {
     "id": "tex_problem_111",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że liczby } \\(\\sqrt[3]{3^{3 \\sin 3^{\\circ}}}, 3^{\\sqrt{1-\\cos ^{2} 3^{\\circ}}},\\left(3^{\\cos 3^{\\circ}}\\right)^{\\tan 3^{\\circ}}\\) \\text{ są równe}",
+    "statement": "\\text{Uzasadnij, że liczby } \\sqrt[3]{3^{3 \\sin 3^{\\circ}}}, 3^{\\sqrt{1-\\cos ^{2} 3^{\\circ}}},\\left(3^{\\cos 3^{\\circ}}\\right)^{\\tan 3^{\\circ}} \\text{ są równe}",
     "steps": [
       {
         "step": 1,
@@ -5071,7 +5071,7 @@
   {
     "id": "tex_problem_112",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kosinus kąta ostrego } \\(\\alpha\\) \\text{ jest równy } \\(\\sqrt{\\sqrt{2}-1}\\). \\text{Uzasadnij, że tangens kąta } \\(\\alpha\\) \\text{ równy jest } \\(\\sqrt[4]{2}\\)",
+    "statement": "\\text{Kosinus kąta ostrego } \\alpha \\text{ jest równy } \\sqrt{\\sqrt{2}-1}. \\text{Uzasadnij, że tangens kąta } \\alpha \\text{ równy jest } \\sqrt[4]{2}",
     "steps": [
       {
         "step": 1,
@@ -5138,7 +5138,7 @@
   {
     "id": "tex_problem_113",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kąt } \\(\\alpha\\) \\text{ jest ostry i tg } \\(\\alpha=2\\). \\text{Oblicz } \\(\\frac{\\sin \\alpha-\\cos \\alpha}{\\sin \\alpha+\\cos \\alpha}\\)",
+    "statement": "\\text{Kąt } \\alpha \\text{ jest ostry i tg } \\alpha=2. \\text{Oblicz } \\frac{\\sin \\alpha-\\cos \\alpha}{\\sin \\alpha+\\cos \\alpha}",
     "steps": [
       {
         "step": 1,
@@ -5211,7 +5211,7 @@
   {
     "id": "tex_problem_114",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wiedząc, że } \\(4 \\sin ^{2} \\alpha-3 \\cos ^{2} \\alpha=3\\) \\text{ i } \\(\\alpha\\) \\text{ jest katem ostrym, oblicz tg } \\(\\alpha\\)",
+    "statement": "\\text{Wiedząc, że } 4 \\sin ^{2} \\alpha-3 \\cos ^{2} \\alpha=3 \\text{ i } \\alpha \\text{ jest katem ostrym, oblicz tg } \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5278,7 +5278,7 @@
   {
     "id": "tex_problem_115",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Sinus kąta ostrego } \\(\\alpha\\) \\text{ jest o } \\(77 \\%\\) \\text{ mniejszy od kosinusa tego kąta. Oblicz tangens kąta } \\(\\alpha\\)",
+    "statement": "\\text{Sinus kąta ostrego } \\alpha \\text{ jest o } 77 \\% \\text{ mniejszy od kosinusa tego kąta. Oblicz tangens kąta } \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5363,7 +5363,7 @@
   {
     "id": "tex_problem_116",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Sinus kąta ostrego } \\(\\alpha\\) \\text{ jest o } \\(\\frac{\\sqrt{2}}{2}\\) \\text{ większy od kosinusa tego kąta. Oblicz } \\(\\cos \\alpha\\)",
+    "statement": "\\text{Sinus kąta ostrego } \\alpha \\text{ jest o } \\frac{\\sqrt{2}}{2} \\text{ większy od kosinusa tego kąta. Oblicz } \\cos \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5448,7 +5448,7 @@
   {
     "id": "tex_problem_117",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kąt } \\(\\alpha\\) \\text{ jest ostry i spełnia równość tg } \\(\\alpha+\\frac{1}{\\tan \\alpha}=\\frac{7}{2}\\). \\text{Oblicz wartość wyrażenia } \\(\\sin \\alpha \\cdot \\cos \\alpha\\)",
+    "statement": "\\text{Kąt } \\alpha \\text{ jest ostry i spełnia równość tg } \\alpha+\\frac{1}{\\tan \\alpha}=\\frac{7}{2}. \\text{Oblicz wartość wyrażenia } \\sin \\alpha \\cdot \\cos \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5491,7 +5491,7 @@
   {
     "id": "tex_problem_118",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że liczba } \\(\\frac{80+\\sin ^{2} 80^{\\circ}+\\sin ^{2} 10^{\\circ}}{10-\\cos ^{2} 10^{\\circ}-\\cos ^{2} 80^{\\circ}}\\) \\text{ jest całkowita}",
+    "statement": "\\text{Uzasadnij, że liczba } \\frac{80+\\sin ^{2} 80^{\\circ}+\\sin ^{2} 10^{\\circ}}{10-\\cos ^{2} 10^{\\circ}-\\cos ^{2} 80^{\\circ}} \\text{ jest całkowita}",
     "steps": [
       {
         "step": 1,
@@ -5562,7 +5562,7 @@
   {
     "id": "tex_problem_119",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że jeżeli } \\(\\alpha\\) \\text{ jest kątem ostrym, to } \\(\\sin \\alpha \\cdot(\\sin \\alpha \\cdot \\tan \\alpha+\\cos \\alpha)=\\tan \\alpha\\)",
+    "statement": "\\text{Uzasadnij, że jeżeli } \\alpha \\text{ jest kątem ostrym, to } \\sin \\alpha \\cdot(\\sin \\alpha \\cdot \\tan \\alpha+\\cos \\alpha)=\\tan \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5629,7 +5629,7 @@
   {
     "id": "tex_problem_120",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że dla dowolnych katów } \\(\\alpha, \\beta\\) \\text{ spełniających warunki } \\(0^{\\circ}<\\alpha<180^{\\circ}\\) \\text{ i } \\(0^{\\circ}<\\beta<180^{\\circ}\\) \\text{ zachodzi równość } \\(\\sin ^{2} \\alpha \\cos ^{2} \\beta-\\sin ^{2} \\beta \\cos ^{2} \\alpha=\\sin ^{2} \\alpha-\\sin ^{2} \\beta\\)",
+    "statement": "\\text{Uzasadnij, że dla dowolnych katów } \\alpha, \\beta \\text{ spełniających warunki } 0^{\\circ}<\\alpha<180^{\\circ} \\text{ i } 0^{\\circ}<\\beta<180^{\\circ} \\text{ zachodzi równość } \\sin ^{2} \\alpha \\cos ^{2} \\beta-\\sin ^{2} \\beta \\cos ^{2} \\alpha=\\sin ^{2} \\alpha-\\sin ^{2} \\beta",
     "steps": [
       {
         "step": 1,
@@ -5678,7 +5678,7 @@
   {
     "id": "tex_problem_121",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że jeżeli } \\(\\alpha\\) \\text{ jest kątem ostrym, to } \\(\\frac{(\\cos \\alpha+\\sin \\alpha)(\\cos \\alpha-\\sin \\alpha)}{\\cos ^{2} \\alpha}=1-\\tan^{2} \\alpha\\)",
+    "statement": "\\text{Uzasadnij, że jeżeli } \\alpha \\text{ jest kątem ostrym, to } \\frac{(\\cos \\alpha+\\sin \\alpha)(\\cos \\alpha-\\sin \\alpha)}{\\cos ^{2} \\alpha}=1-\\tan^{2} \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5727,7 +5727,7 @@
   {
     "id": "tex_problem_122",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że dla każdego kąta ostrego } \\(\\alpha\\). \\text{wyrażenie } \\(\\left(\\frac{1}{\\sin \\alpha}-\\sin \\alpha\\right)\\left(\\frac{1}{\\cos \\alpha}-\\cos \\alpha\\right)\\left(\\frac{1}{\\tan \\alpha}+\\tan \\alpha\\right)\\) \\text{ przyjmuje tę samą wartość}",
+    "statement": "\\text{Uzasadnij, że dla każdego kąta ostrego } \\alpha. \\text{wyrażenie } \\left(\\frac{1}{\\sin \\alpha}-\\sin \\alpha\\right)\\left(\\frac{1}{\\cos \\alpha}-\\cos \\alpha\\right)\\left(\\frac{1}{\\tan \\alpha}+\\tan \\alpha\\right) \\text{ przyjmuje tę samą wartość}",
     "steps": [
       {
         "step": 1,
@@ -5788,7 +5788,7 @@
   {
     "id": "tex_problem_123",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że dla każdego kąta ostrego } \\(\\alpha\\) \\text{ zachodzi równość } \\(\\frac{\\tan^{2} \\alpha-\\sin ^{2} \\alpha}{1-\\tan^{2} \\alpha \\cos ^{2} \\alpha}=\\tan^{4} \\alpha\\)",
+    "statement": "\\text{Uzasadnij, że dla każdego kąta ostrego } \\alpha \\text{ zachodzi równość } \\frac{\\tan^{2} \\alpha-\\sin ^{2} \\alpha}{1-\\tan^{2} \\alpha \\cos ^{2} \\alpha}=\\tan^{4} \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5849,7 +5849,7 @@
   {
     "id": "tex_problem_124",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Udowodnij, że jeżeli } \\(\\alpha\\) \\text{ jest kạtem ostrym, to } \\(\\frac{1}{\\cos \\alpha}-\\frac{\\cos \\alpha}{1+\\sin \\alpha}=\\tan \\alpha\\)",
+    "statement": "\\text{Udowodnij, że jeżeli } \\alpha \\text{ jest kạtem ostrym, to } \\frac{1}{\\cos \\alpha}-\\frac{\\cos \\alpha}{1+\\sin \\alpha}=\\tan \\alpha",
     "steps": [
       {
         "step": 1,
@@ -5898,7 +5898,7 @@
   {
     "id": "tex_problem_125",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Doprowadź do najprostszej postaci wyrażenie } \\(\\left(\\frac{\\sqrt{1-\\cos ^{2} \\alpha}}{1+\\cos \\alpha}+\\frac{1+\\sqrt{1-\\sin ^{2} \\alpha}}{\\sin \\alpha}\\right) \\cdot \\sqrt{1-\\cos ^{2} \\alpha}\\), \\text{gdzie } \\(0^{\\circ}<\\alpha<90^{\\circ}\\)",
+    "statement": "\\text{Doprowadź do najprostszej postaci wyrażenie } \\left(\\frac{\\sqrt{1-\\cos ^{2} \\alpha}}{1+\\cos \\alpha}+\\frac{1+\\sqrt{1-\\sin ^{2} \\alpha}}{\\sin \\alpha}\\right) \\cdot \\sqrt{1-\\cos ^{2} \\alpha}, \\text{gdzie } 0^{\\circ}<\\alpha<90^{\\circ}",
     "steps": [
       {
         "step": 1,
@@ -5965,7 +5965,7 @@
   {
     "id": "tex_problem_126",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kąt } \\(\\alpha\\) \\text{ jest kątem ostrym, jaki tworzy prosta o równaniu } \\(y=2 x+5\\) \\text{ z osią } \\(O X\\). \\text{Oblicz wartość wyrażenia } \\(\\frac{\\sin \\alpha(\\cos \\alpha+\\sin \\alpha)}{\\cos ^{2} \\alpha}\\)",
+    "statement": "\\text{Kąt } \\alpha \\text{ jest kątem ostrym, jaki tworzy prosta o równaniu } y=2 x+5 \\text{ z osią } O X. \\text{Oblicz wartość wyrażenia } \\frac{\\sin \\alpha(\\cos \\alpha+\\sin \\alpha)}{\\cos ^{2} \\alpha}",
     "steps": [
       {
         "step": 1,
@@ -6033,7 +6033,7 @@
   {
     "id": "tex_problem_127",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Sinus kąta ostrego } \\(\\alpha\\) \\text{ jest równy } \\(0,3 \\sqrt{11}\\). \\text{Oblicz wartość wyrażenia } \\(\\log (\\sin \\alpha+\\cos \\alpha)-\\log (1+\\tan \\alpha)\\)",
+    "statement": "\\text{Sinus kąta ostrego } \\alpha \\text{ jest równy } 0,3 \\sqrt{11}. \\text{Oblicz wartość wyrażenia } \\log (\\sin \\alpha+\\cos \\alpha)-\\log (1+\\tan \\alpha)",
     "steps": [
       {
         "step": 1,
@@ -6112,7 +6112,7 @@
   {
     "id": "tex_problem_128",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wiedząc, ze } \\(\\sin (6 \\pi+\\alpha)>0\\) \\text{ i } \\(\\cos (\\pi+\\alpha)=\\frac{5}{13}\\), \\text{oblicz tg } \\(\\alpha\\)",
+    "statement": "\\text{Wiedząc, ze } \\sin (6 \\pi+\\alpha)>0 \\text{ i } \\cos (\\pi+\\alpha)=\\frac{5}{13}, \\text{oblicz tg } \\alpha",
     "steps": [
       {
         "step": 1,
@@ -6197,7 +6197,7 @@
   {
     "id": "tex_problem_129",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Twierdzenie. Dla każdej liczby rzeczywistej } \\(\\alpha\\) \\text{ zachodzi równość } \\(\\sin 3 \\alpha=3 \\sin \\alpha-4 \\sin ^{3} \\alpha\\). \\text{Wykorzystując podane twierdzenie, wykaż, że liczba } \\(\\sin 10^{\\circ}\\) \\text{ jest pierwiastkiem wielomianu } \\(W(x)=8 x^{3}-6 x+1\\)",
+    "statement": "\\text{Twierdzenie. Dla każdej liczby rzeczywistej } \\alpha \\text{ zachodzi równość } \\sin 3 \\alpha=3 \\sin \\alpha-4 \\sin ^{3} \\alpha. \\text{Wykorzystując podane twierdzenie, wykaż, że liczba } \\sin 10^{\\circ} \\text{ jest pierwiastkiem wielomianu } W(x)=8 x^{3}-6 x+1",
     "steps": [
       {
         "step": 1,
@@ -6250,7 +6250,7 @@
   {
     "id": "tex_problem_130",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kąt } \\(\\alpha\\) \\text{ jest ostry i zachodzi równość } \\(\\sin \\alpha+\\cos \\alpha=\\frac{\\sqrt{7}}{2}\\). \\text{Oblicz wartość wyrażenia } \\((\\sin \\alpha-\\cos \\alpha)^{2}\\)",
+    "statement": "\\text{Kąt } \\alpha \\text{ jest ostry i zachodzi równość } \\sin \\alpha+\\cos \\alpha=\\frac{\\sqrt{7}}{2}. \\text{Oblicz wartość wyrażenia } (\\sin \\alpha-\\cos \\alpha)^{2}",
     "steps": [
       {
         "step": 1,
@@ -6317,7 +6317,7 @@
   {
     "id": "tex_problem_131",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Kąt } \\(\\alpha\\) \\text{ jest taki, że } \\(\\cos \\alpha+\\sin \\alpha=\\frac{4}{3}\\). \\text{Oblicz wartość wyrażenia } \\(|\\cos \\alpha-\\sin \\alpha|\\)",
+    "statement": "\\text{Kąt } \\alpha \\text{ jest taki, że } \\cos \\alpha+\\sin \\alpha=\\frac{4}{3}. \\text{Oblicz wartość wyrażenia } |\\cos \\alpha-\\sin \\alpha|",
     "steps": [
       {
         "step": 1,
@@ -6382,7 +6382,7 @@
   {
     "id": "tex_problem_132",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Sprawdź, czy równość } \\(\\frac{1-\\tan^{2} x}{1+\\tan^{2} x}=\\cos 2 x\\) \\text{ jest tożsamoscią trygonometryczną}",
+    "statement": "\\text{Sprawdź, czy równość } \\frac{1-\\tan^{2} x}{1+\\tan^{2} x}=\\cos 2 x \\text{ jest tożsamoscią trygonometryczną}",
     "steps": [
       {
         "step": 1,
@@ -6431,7 +6431,7 @@
   {
     "id": "tex_problem_133",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wykaż, że dla dowolnego kąta } \\(\\alpha\\) \\text{ prawdziwa jest tożsamość } \\(\\sin ^{4} \\alpha+\\cos ^{4} \\alpha=\\frac{1+\\cos ^{2} 2 \\alpha}{2}\\)",
+    "statement": "\\text{Wykaż, że dla dowolnego kąta } \\alpha \\text{ prawdziwa jest tożsamość } \\sin ^{4} \\alpha+\\cos ^{4} \\alpha=\\frac{1+\\cos ^{2} 2 \\alpha}{2}",
     "steps": [
       {
         "step": 1,
@@ -6496,7 +6496,7 @@
   {
     "id": "tex_problem_134",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że wartość wyrażenia } \\(\\cos 2 \\alpha+8 \\sin ^{2} \\frac{1}{2} \\alpha \\cdot \\cos ^{2} \\frac{1}{2} \\alpha\\) \\text{ nie zależy od wartości zmiennej } \\(\\alpha\\)",
+    "statement": "\\text{Uzasadnij, że wartość wyrażenia } \\cos 2 \\alpha+8 \\sin ^{2} \\frac{1}{2} \\alpha \\cdot \\cos ^{2} \\frac{1}{2} \\alpha \\text{ nie zależy od wartości zmiennej } \\alpha",
     "steps": [
       {
         "step": 1,
@@ -6549,7 +6549,7 @@
   {
     "id": "tex_problem_135",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Udowodnić toźsamość } \\(\\frac{1-2 \\sin ^{2} \\alpha}{1+\\sin 2 \\alpha}=\\frac{1-\\tan \\alpha}{1+\\tan \\alpha}\\)",
+    "statement": "\\text{Udowodnić toźsamość } \\frac{1-2 \\sin ^{2} \\alpha}{1+\\sin 2 \\alpha}=\\frac{1-\\tan \\alpha}{1+\\tan \\alpha}",
     "steps": [
       {
         "step": 1,
@@ -6658,7 +6658,7 @@
   {
     "id": "tex_problem_136",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wykazać, że } \\(\\frac{\\sin 2 \\alpha}{1+\\cos 2 \\alpha} \\cdot \\frac{\\cos \\alpha}{1+\\cos \\alpha}=\\tan \\frac{1}{2} \\alpha\\)",
+    "statement": "\\text{Wykazać, że } \\frac{\\sin 2 \\alpha}{1+\\cos 2 \\alpha} \\cdot \\frac{\\cos \\alpha}{1+\\cos \\alpha}=\\tan \\frac{1}{2} \\alpha",
     "steps": [
       {
         "step": 1,
@@ -6713,7 +6713,7 @@
   {
     "id": "tex_problem_137",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Uzasadnij, że liczba } \\(\\sin 10^{\\circ} \\cdot \\cos 10^{\\circ} \\cdot \\cos 20^{\\circ} \\cdot \\cos 40^{\\circ}\\) \\text{ jest 8 razy mniejsza od liczby } \\(\\sin 80^{\\circ}\\)",
+    "statement": "\\text{Uzasadnij, że liczba } \\sin 10^{\\circ} \\cdot \\cos 10^{\\circ} \\cdot \\cos 20^{\\circ} \\cdot \\cos 40^{\\circ} \\text{ jest 8 razy mniejsza od liczby } \\sin 80^{\\circ}",
     "steps": [
       {
         "step": 1,
@@ -6754,7 +6754,7 @@
   {
     "id": "tex_problem_138",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wykaż, że dla dowolnych liczb rzeczywistych } \\(x\\) \\text{ i } y \\text{ zachodzi równość } \\(\\sin ^{2} x-\\sin ^{2} y=\\sin (x+y) \\cdot \\sin (x-y)\\)",
+    "statement": "\\text{Wykaż, że dla dowolnych liczb rzeczywistych } x \\text{ i } y \\text{ zachodzi równość } \\sin ^{2} x-\\sin ^{2} y=\\sin (x+y) \\cdot \\sin (x-y)",
     "steps": [
       {
         "step": 1,
@@ -6819,7 +6819,7 @@
   {
     "id": "tex_problem_139",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wykaż, że dla dowolnych kątów } \\(\\alpha, \\beta\\) \\text{ zachodzi równość } \\((\\cos \\alpha+\\cos \\beta)^{2}+(\\sin \\alpha+\\sin \\beta)^{2}=4 \\cos ^{2} \\frac{\\alpha-\\beta}{2}\\)",
+    "statement": "\\text{Wykaż, że dla dowolnych kątów } \\alpha, \\beta \\text{ zachodzi równość } (\\cos \\alpha+\\cos \\beta)^{2}+(\\sin \\alpha+\\sin \\beta)^{2}=4 \\cos ^{2} \\frac{\\alpha-\\beta}{2}",
     "steps": [
       {
         "step": 1,
@@ -6866,7 +6866,7 @@
   {
     "id": "tex_problem_140",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wykaż, że równość } \\(\\sin 2 x+\\sin 2 y+\\sin 2(x+y)=4 \\cos x \\cdot \\cos y \\cdot \\sin (x+y)\\) \\text{ prawdziwa jest dla dowolnych liczb rzeczywistych } \\(x\\) \\text{ i } \\(y\\)",
+    "statement": "\\text{Wykaż, że równość } \\sin 2 x+\\sin 2 y+\\sin 2(x+y)=4 \\cos x \\cdot \\cos y \\cdot \\sin (x+y) \\text{ prawdziwa jest dla dowolnych liczb rzeczywistych } x \\text{ i } y",
     "steps": [
       {
         "step": 1,
@@ -6967,7 +6967,7 @@
   {
     "id": "tex_problem_141",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Wyznacz zbiór wartości funkcji } \\(f(x)=4 \\sin ^{2} x-4 \\sin x+5\\)",
+    "statement": "\\text{Wyznacz zbiór wartości funkcji } f(x)=4 \\sin ^{2} x-4 \\sin x+5",
     "steps": [
       {
         "step": 1,
@@ -7040,7 +7040,7 @@
   {
     "id": "tex_problem_142",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Znajdź najmniejszą i największą wartość funkcji } \\(f(x)=-\\cos ^{2} x-4 \\cos x+5\\)",
+    "statement": "\\text{Znajdź najmniejszą i największą wartość funkcji } f(x)=-\\cos ^{2} x-4 \\cos x+5",
     "steps": [
       {
         "step": 1,
@@ -7109,7 +7109,7 @@
   {
     "id": "tex_problem_143",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(\\cos 2 x+3 \\cos x=-2\\) \\text{ w przedziale } \\([0 ; 2 \\pi]\\)",
+    "statement": "\\text{Rozwiąż równanie } \\cos 2 x+3 \\cos x=-2 \\text{ w przedziale } [0 ; 2 \\pi]",
     "steps": [
       {
         "step": 1,
@@ -7184,7 +7184,7 @@
   {
     "id": "tex_problem_144",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(3 \\cos 2 x+10 \\cos ^{2} x=24 \\sin x-3\\) \\text{ dla } \\(x \\in[0 ; 2 \\pi]\\)",
+    "statement": "\\text{Rozwiąż równanie } 3 \\cos 2 x+10 \\cos ^{2} x=24 \\sin x-3 \\text{ dla } x \\in[0 ; 2 \\pi]",
     "steps": [
       {
         "step": 1,
@@ -7282,7 +7282,7 @@
   {
     "id": "tex_problem_145",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(2 \\sin x+\\sqrt{3} \\tan x=0\\)",
+    "statement": "\\text{Rozwiąż równanie } 2 \\sin x+\\sqrt{3} \\tan x=0",
     "steps": [
       {
         "step": 1,
@@ -7345,7 +7345,7 @@
   {
     "id": "tex_problem_146",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(\\tan^{4} x-2 \\tan^{3} x-2 \\tan^{2} x+6 \\tan x-3=0\\)",
+    "statement": "\\text{Rozwiąż równanie } \\tan^{4} x-2 \\tan^{3} x-2 \\tan^{2} x+6 \\tan x-3=0",
     "steps": [
       {
         "step": 1,
@@ -7444,7 +7444,7 @@
   {
     "id": "tex_problem_147",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(\\sin x \\cos x+\\tan x=2,5 \\sin x\\)",
+    "statement": "\\text{Rozwiąż równanie } \\sin x \\cos x+\\tan x=2,5 \\sin x",
     "steps": [
       {
         "step": 1,
@@ -7531,7 +7531,7 @@
   {
     "id": "tex_problem_148",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiąż równanie } \\(\\sin x-\\cos x+1=\\sin x \\cos x\\)",
+    "statement": "\\text{Rozwiąż równanie } \\sin x-\\cos x+1=\\sin x \\cos x",
     "steps": [
       {
         "step": 1,
@@ -7615,7 +7615,7 @@
   {
     "id": "tex_problem_149",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiaż równanie } \\(\\sin x \\cdot \\tan x-\\sqrt{3}=\\tan x-\\sqrt{3} \\sin x\\)",
+    "statement": "\\text{Rozwiaż równanie } \\sin x \\cdot \\tan x-\\sqrt{3}=\\tan x-\\sqrt{3} \\sin x",
     "steps": [
       {
         "step": 1,
@@ -7683,7 +7683,7 @@
   {
     "id": "tex_problem_150",
     "topic": "Równania trygonometryczne",
-    "statement": "\\text{Rozwiaż równanie } \\(4 \\sin ^{3} x+\\sin 2 x=2 \\sin ^{2} x \\cdot(2 \\cos x+1)\\)",
+    "statement": "\\text{Rozwiaż równanie } 4 \\sin ^{3} x+\\sin 2 x=2 \\sin ^{2} x \\cdot(2 \\cos x+1)",
     "steps": [
       {
         "step": 1,
