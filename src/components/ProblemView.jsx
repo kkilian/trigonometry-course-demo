@@ -123,65 +123,70 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                 </div>
               </div>
 
-              {/* Two column layout for steps and hints */}
-              <div className="grid md:grid-cols-[1fr,400px] gap-8">
-                {/* Left column - Steps */}
-                <div className="space-y-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Kroki rozwiązania</h3>
-                  <div className="space-y-4">
-                    {problem.steps?.map((step, index) => (
-                      <div key={index} className="relative pl-8">
-                        {/* Step number circle */}
-                        <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">
-                          {index + 1}
-                        </div>
-                        
-                        {/* Connecting line */}
-                        {index < problem.steps.length - 1 && (
-                          <div className="absolute left-3 top-8 bottom-0 w-0.5 bg-gray-700"></div>
-                        )}
-                        
-                        {/* Step content */}
-                        <div className="bg-gray-900/50 rounded-lg p-4 space-y-3">
-                          {step.expression && (
-                            <div className="text-lg text-white">
-                              <MathExpression content={step.expression} block={true} />
-                            </div>
-                          )}
-                          {step.explanation && (
-                            <div className="text-sm text-gray-400">
-                              <MathRenderer content={step.explanation} />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              {/* Headers */}
+              <div className="grid md:grid-cols-[1fr,400px] gap-8 mb-6">
+                <h3 className="text-lg font-semibold text-white">Kroki rozwiązania</h3>
+                <h3 className="text-lg font-semibold text-yellow-400 hidden md:block">Wskazówki</h3>
+              </div>
 
-                {/* Right column - Hints */}
-                <div className="space-y-6">
-                  <h3 className="text-lg font-semibold text-yellow-400 mb-4">Wskazówki</h3>
-                  <div className="space-y-4">
-                    {problem.steps?.map((step, index) => (
-                      step.hint && (
-                        <div key={index} className="relative">
-                          {/* Step reference */}
-                          <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 text-xs flex items-center justify-center font-bold">
-                            {index + 1}
+              {/* Steps with aligned hints */}
+              <div className="space-y-4">
+                {problem.steps?.map((step, index) => (
+                  <div key={index} className="grid md:grid-cols-[1fr,400px] gap-8 items-start">
+                    {/* Left side - Step */}
+                    <div className="relative pl-8">
+                      {/* Step number circle */}
+                      <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">
+                        {index + 1}
+                      </div>
+                      
+                      {/* Connecting line */}
+                      {index < problem.steps.length - 1 && (
+                        <div className="absolute left-3 top-8 -bottom-4 w-0.5 bg-gray-700"></div>
+                      )}
+                      
+                      {/* Step content */}
+                      <div className="bg-gray-900/50 rounded-lg p-4 space-y-3">
+                        {step.expression && (
+                          <div className="text-lg text-white">
+                            <MathExpression content={step.expression} block={true} />
                           </div>
-                          
-                          {/* Hint content */}
-                          <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-4 pl-6">
-                            <p className="text-sm text-yellow-300/90">
-                              <MathRenderer content={step.hint} />
-                            </p>
+                        )}
+                        {step.explanation && (
+                          <div className="text-sm text-gray-400">
+                            <MathRenderer content={step.explanation} />
                           </div>
-                        </div>
-                      )
-                    ))}
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Right side - Hint */}
+                    <div className="relative">
+                      {step.hint ? (
+                        <>
+                          {/* Mobile hint label */}
+                          <h4 className="text-sm font-semibold text-yellow-400 mb-2 md:hidden">Wskazówka</h4>
+                          <div className="relative">
+                            {/* Step reference */}
+                            <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 text-xs flex items-center justify-center font-bold">
+                              {index + 1}
+                            </div>
+                            
+                            {/* Hint content */}
+                            <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-4 pl-6">
+                              <p className="text-sm text-yellow-300/90">
+                                <MathRenderer content={step.hint} />
+                              </p>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        /* Empty space for steps without hints */
+                        <div className="hidden md:block"></div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           ) : (
