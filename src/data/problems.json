@@ -1,47 +1,5 @@
 [
-  {
-    "id": "tex_problem_1",
-    "topic": "Równania trygonometryczne",
-    "statement": "\\text{Podane miary stopniowe kątów wyraź w radianach}",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "\\text{Pamiętasz wzór na przeliczanie stopni na radiany? Jaka jest relacja między pełnym obrotem w stopniach i radianach?}",
-        "expression": "360° = 2\\pi \\text{ radianów}",
-        "explanation": "\\text{Pełny obrót to } 360° \\text{ lub } 2\\pi \\text{ radianów}"
-      },
-      {
-        "step": 2,
-        "hint": "\\text{Jak z tej relacji wyprowadzić wzór na przeliczanie dowolnego kąta ze stopni na radiany?}",
-        "expression": "1° = \\frac{2\\pi}{360°} = \\frac{\\pi}{180°} \\text{ radianów}",
-        "explanation": "\\text{Dzielimy obie strony równania przez } 360"
-      },
-      {
-        "step": 3,
-        "hint": "\\text{Jaki będzie ogólny wzór na przeliczenie } \\alpha° \\text{ na radiany?}",
-        "expression": "\\alpha° = \\alpha \\cdot \\frac{\\pi}{180} \\text{ radianów}",
-        "explanation": "\\text{Mnożymy liczbę stopni przez } \\frac{\\pi}{180}"
-      },
-      {
-        "step": 4,
-        "hint": "\\text{Sprawdź poprawność wzoru dla znanego kąta. Ile radianów ma kąt prosty } 90°\\text{?}",
-        "expression": "90° = 90 \\cdot \\frac{\\pi}{180} = \\frac{90\\pi}{180} = \\frac{\\pi}{2} \\text{ radianów}",
-        "explanation": "\\text{Upraszczamy ułamek dzieląc licznik i mianownik przez } 90"
-      },
-      {
-        "step": 5,
-        "hint": "\\text{Możesz teraz zastosować ten wzór do dowolnego kąta podanego w stopniach. Jak uprościsz otrzymany ułamek?}",
-        "expression": "\\text{Dla kąta } \\alpha°: \\quad \\alpha° = \\frac{\\alpha \\pi}{180} \\text{ rad (po skróceniu przez NWD)}",
-        "explanation": "\\text{Zawsze staraj się uprościć ułamek do najprostszej postaci}"
-      }
-    ],
-    "solutions": [
-      "\\text{Wzór: } \\alpha° = \\frac{\\alpha \\pi}{180} \\text{ radianów}"
-    ],
-    "parameters": {
-      "conversion_formula": "\\alpha° = \\frac{\\alpha \\pi}{180} \\text{ rad}"
-    }
-  },
+  
   {
     "id": "tex_problem_2",
     "topic": "Równania trygonometryczne",

@@ -73,7 +73,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
 
       {/* Sticky Header */}
       <div className="sticky top-0 z-40 bg-black border-b border-gray-800">
-        <div className="max-w-4xl mx-auto px-8 py-6">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 py-4 md:py-6">
           {/* Header */}
           <header>
             <div className="mb-2 flex items-center justify-between">
@@ -81,13 +81,13 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                 <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">
                   {problem.topic?.replace(/_/g, ' ')}
                 </span>
-                <span className="text-xs text-gray-600 font-mono ml-4">
+                <span className="text-xs text-gray-600 font-mono ml-2 md:ml-4 hidden md:inline">
                   {problem.id}
                 </span>
               </div>
             </div>
             
-            <h1 className="text-2xl font-bold text-white leading-relaxed mb-2">
+            <h1 className="text-lg md:text-2xl font-bold text-white leading-relaxed mb-2">
               <MathRenderer content={problem.statement} />
             </h1>
           </header>
@@ -108,11 +108,11 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
         </div>
       </div>
       
-      <div className="max-w-4xl mx-auto px-8 pb-16">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16">
         {/* Problem Content */}
-        <div className="space-y-12 pt-8">
+        <div className="space-y-8 md:space-y-12 pt-6 md:pt-8">
           {/* Steps */}
-          <div className="space-y-8 mb-20">
+          <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
             {problem.steps?.map((step, index) => (
               <article
                 key={index}
@@ -126,7 +126,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                   <div className="absolute -inset-4 bg-yellow-500/10 blur-2xl rounded-2xl"></div>
                 )}
                 
-                <div className={`relative space-y-6 p-6 -m-6 rounded-xl transition-all duration-300 ${
+                <div className={`relative space-y-4 md:space-y-6 p-4 md:p-6 -m-4 md:-m-6 rounded-xl transition-all duration-300 ${
                   hintShownSteps.has(index) && !revealedSteps.has(index) ? "ring-2 ring-yellow-500/30" : ""
                 }`}>
                   <div className="flex items-start justify-between">
@@ -136,7 +136,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                     />
                   </div>
                   
-                  <div className="pl-10 space-y-4">
+                  <div className="pl-8 md:pl-10 space-y-3 md:space-y-4">
                     {/* Show hint if available and clicked once */}
                     {step.hint && hintShownSteps.has(index) && !revealedSteps.has(index) && (
                       <div className="relative">
@@ -154,7 +154,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                       <div className={`transition-all duration-500 ${
                         revealedSteps.has(index) ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                       }`}>
-                        <div className="text-xl text-white font-medium">
+                        <div className="text-base md:text-xl text-white font-medium">
                           <MathExpression content={step.expression} block={true} />
                         </div>
                       </div>
@@ -176,11 +176,11 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
           {showSolution && problem.solutions && (
             <div className="relative">
               <div className="absolute inset-0 bg-green-500/10 blur-2xl rounded-2xl"></div>
-              <div className="relative p-8 bg-green-500/5 border border-green-500/20 rounded-xl">
-                <h3 className="text-lg font-semibold text-green-400 mb-6">Rozwiązanie</h3>
-                <div className="space-y-4">
+              <div className="relative p-6 md:p-8 bg-green-500/5 border border-green-500/20 rounded-xl">
+                <h3 className="text-base md:text-lg font-semibold text-green-400 mb-4 md:mb-6">Rozwiązanie</h3>
+                <div className="space-y-3 md:space-y-4">
                   {problem.solutions.map((solution, index) => (
-                    <div key={index} className="text-white text-lg">
+                    <div key={index} className="text-white text-base md:text-lg">
                       <MathExpression content={solution} block={true} />
                     </div>
                   ))}

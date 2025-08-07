@@ -12,41 +12,89 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-This is a single-page React application for an online trigonometry course with 194 step-by-step problems.
+This is a React 19.1.1 application for an online trigonometry course featuring 194 step-by-step problems and 93 quiz questions. Built with Create React App 5.0.1 and styled with Tailwind CSS 3.4.17.
 
-### Core Components Structure
+### Component Hierarchy
 
-The app uses a hierarchical component structure:
-- `App.js` → `TrigonometryCourse` → `ProblemList` | `ProblemView`
-- All math rendering flows through `MathRenderer` which handles LaTeX parsing and KaTeX rendering
+```
+App.js
+└── TrigonometryCourse (main container, manages mode switching)
+    ├── QuizSelector (toggle between course/quiz modes)
+    ├── ProblemList (course mode - lists all problems)
+    │   └── MathRenderer (LaTeX rendering)
+    ├── ProblemView (individual problem with step-by-step revelation)
+    │   └── MathRenderer
+    └── TrigonometryQuiz (quiz mode with 10 random questions)
+        ├── StudentReport (performance analysis and recommendations)
+        └── MathRenderer
+```
 
-### Data Flow
+### Math Rendering System
 
-- Problems data (`src/data/problems.json`) contains 194 trigonometry problems with steps, hints, expressions, and solutions
-- User progress is stored in localStorage as a Set of completed problem IDs
-- No backend required - entirely client-side application
+The `MathRenderer.jsx` component implements a sophisticated LaTeX parsing pipeline:
+- **Dynamic Loading**: KaTeX loaded from CDN on demand (reduces bundle by ~100KB)
+- **Mixed Content Parsing**: Handles `\text{}`, `$...$`, and `\(...\)` delimiters
+- **Performance**: LRU cache (100 items max) prevents re-parsing identical content
+- **Error Handling**: Graceful fallback to plain text if rendering fails
+- **Cleanup**: Proper unmount handling to prevent memory leaks
 
-### Math Rendering Pipeline
+### Progressive Problem Revelation
 
-`MathRenderer.jsx` implements a sophisticated LaTeX parsing system:
-1. Dynamically loads KaTeX from CDN to reduce bundle size
-2. Parses mixed text/math content using regex patterns for `\text{}`, `$...$`, and `\(...\)` delimiters
-3. Uses memoization cache to avoid re-parsing identical content
-4. Renders math segments with KaTeX, text segments as plain text
+`ProblemView` implements a 3-click interaction pattern per step:
+1. First click: Reveals hint (yellow glow animation)
+2. Second click: Shows mathematical expression and explanation
+3. Third click: Marks step as completed
+- Auto-reveals solution when all steps are completed
+- Progress tracked in localStorage as Set of problem IDs
+
+### Quiz System Architecture
+
+- **Quiz Generator** (`quizGenerator.js`): Stratified sampling (3 questions from levels 1-2, 4 from level 3, total 10)
+- **Quiz Analyzer** (`quizAnalyzer.js`): Categorizes performance across 6 knowledge areas, generates study recommendations
+- **Timed Mode**: 30-minute timer with auto-submission
+- **Detailed Reporting**: Shows correct/incorrect answers with explanations
+
+### Data Structures
+
+**Problems** (`src/data/problems.json` - 194 items):
+```json
+{
+  "id": "tex_problem_1",
+  "topic": "Topic name",
+  "statement": "LaTeX problem statement",
+  "steps": [{
+    "hint": "Optional hint",
+    "expression": "LaTeX expression",
+    "explanation": "Step explanation"
+  }],
+  "solutions": ["Solution array"]
+}
+```
+
+**Quiz Questions** (`src/data/quiz-questions.json` - 93 items):
+```json
+{
+  "level": 1,  // 1=basic, 2=medium, 3=advanced
+  "content": "LaTeX question",
+  "options": {"a": "...", "b": "...", "c": "...", "d": "..."},
+  "correctAnswer": "a",
+  "explanation": "LaTeX explanation",
+  "tags": ["category", "topic"]
+}
+```
 
 ### State Management
 
-- Local component state for UI interactions (current problem, revealed steps)
-- localStorage for persistence (completed problems)
-- No global state management library needed
+- **Component State**: React hooks for UI interactions (current problem, revealed steps, quiz answers)
+- **Persistence**: localStorage for completed problems (survives browser sessions)
+- **No Global State**: Simple prop drilling sufficient for app size
 
-### Styling
+### Performance Optimizations
 
-Custom CSS in `App.css` with:
-- Dark theme optimized for math content
-- Progress bars and completion indicators
-- Responsive layout with max-width container
-- KaTeX style overrides for better dark theme integration
+- **Lazy KaTeX Loading**: CDN loading reduces initial bundle size
+- **Memoized Parsing**: Caches parsed LaTeX content
+- **React Optimization**: `useMemo` for expensive computations
+- **DOM Efficiency**: Document fragments for batch updates
 
 ## Deployment
 
@@ -55,3 +103,4 @@ The app is deployed to Vercel from GitHub:
 - Auto-deploys on push to main branch
 - Build output in `build/` folder
 - No environment variables required
+- Fully static - suitable for CDN deployment
