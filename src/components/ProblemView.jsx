@@ -73,7 +73,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
 
       {/* Sticky Header */}
       <div className="sticky top-0 z-40 bg-black border-b border-gray-800">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 py-4 md:py-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 md:py-6">
           {/* Header */}
           <header>
             <div className="mb-2 flex items-center justify-between">
@@ -108,79 +108,154 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
         </div>
       </div>
       
-      <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pb-16">
         {/* Problem Content */}
         <div className="space-y-8 md:space-y-12 pt-6 md:pt-8">
-          {/* Steps */}
-          <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
-            {problem.steps?.map((step, index) => (
-              <article
-                key={index}
-                onClick={() => handleStepClick(index)}
-                className={`relative cursor-pointer transition-all duration-200 ${
-                  completedSteps.has(index) ? "opacity-40" : "opacity-100"
-                }`}
-              >
-                {/* Yellow glow when hint is shown */}
-                {hintShownSteps.has(index) && !revealedSteps.has(index) && (
-                  <div className="absolute -inset-4 bg-yellow-500/10 blur-2xl rounded-2xl"></div>
-                )}
-                
-                <div className={`relative space-y-4 md:space-y-6 p-4 md:p-6 -m-4 md:-m-6 rounded-xl transition-all duration-300 ${
-                  hintShownSteps.has(index) && !revealedSteps.has(index) ? "ring-2 ring-yellow-500/30" : ""
-                }`}>
-                  <div className="flex items-start justify-between">
-                    <StepCheckbox 
-                      isCompleted={completedSteps.has(index)} 
-                      stepNumber={step.step || index + 1}
-                    />
-                  </div>
-                  
-                  <div className="pl-8 md:pl-10 space-y-3 md:space-y-4">
-                    {/* Show hint if available and clicked once */}
-                    {step.hint && hintShownSteps.has(index) && !revealedSteps.has(index) && (
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-yellow-500/10 blur-xl"></div>
-                        <div className="relative p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-lg">
-                          <p className="text-sm text-yellow-500/80 leading-relaxed">
-                            <MathRenderer content={step.hint} />
-                          </p>
+          {/* Completed View - Two Column Layout */}
+          {showSolution ? (
+            <div className="space-y-8">
+              <div className="text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-400 rounded-full">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">Zadanie ukończone!</span>
+                </div>
+              </div>
+
+              {/* Two column layout for steps and hints */}
+              <div className="grid md:grid-cols-[1fr,400px] gap-8">
+                {/* Left column - Steps */}
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Kroki rozwiązania</h3>
+                  <div className="space-y-4">
+                    {problem.steps?.map((step, index) => (
+                      <div key={index} className="relative pl-8">
+                        {/* Step number circle */}
+                        <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">
+                          {index + 1}
+                        </div>
+                        
+                        {/* Connecting line */}
+                        {index < problem.steps.length - 1 && (
+                          <div className="absolute left-3 top-8 bottom-0 w-0.5 bg-gray-700"></div>
+                        )}
+                        
+                        {/* Step content */}
+                        <div className="bg-gray-900/50 rounded-lg p-4 space-y-3">
+                          {step.expression && (
+                            <div className="text-lg text-white">
+                              <MathExpression content={step.expression} block={true} />
+                            </div>
+                          )}
+                          {step.explanation && (
+                            <div className="text-sm text-gray-400">
+                              <MathRenderer content={step.explanation} />
+                            </div>
+                          )}
                         </div>
                       </div>
-                    )}
-                    
-                    {/* Expression shown after hint (or first click if no hint) */}
-                    {step.expression && (
-                      <div className={`transition-all duration-500 ${
-                        revealedSteps.has(index) ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-                      }`}>
-                        <div className="text-base md:text-xl text-white font-medium">
-                          <MathExpression content={step.expression} block={true} />
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Explanation shown with expression */}
-                    {step.explanation && revealedSteps.has(index) && (
-                      <div className="text-sm text-gray-400 leading-relaxed">
-                        <MathRenderer content={step.explanation} />
-                      </div>
-                    )}
+                    ))}
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
 
-          {/* Solutions */}
+                {/* Right column - Hints */}
+                <div className="space-y-6">
+                  <h3 className="text-lg font-semibold text-yellow-400 mb-4">Wskazówki</h3>
+                  <div className="space-y-4">
+                    {problem.steps?.map((step, index) => (
+                      step.hint && (
+                        <div key={index} className="relative">
+                          {/* Step reference */}
+                          <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 text-xs flex items-center justify-center font-bold">
+                            {index + 1}
+                          </div>
+                          
+                          {/* Hint content */}
+                          <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-4 pl-6">
+                            <p className="text-sm text-yellow-300/90">
+                              <MathRenderer content={step.hint} />
+                            </p>
+                          </div>
+                        </div>
+                      )
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            /* Interactive Steps View (original) */
+            <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
+              {problem.steps?.map((step, index) => (
+                <article
+                  key={index}
+                  onClick={() => handleStepClick(index)}
+                  className={`relative cursor-pointer transition-all duration-200 ${
+                    completedSteps.has(index) ? "opacity-40" : "opacity-100"
+                  }`}
+                >
+                  {/* Yellow glow when hint is shown */}
+                  {hintShownSteps.has(index) && !revealedSteps.has(index) && (
+                    <div className="absolute -inset-4 bg-yellow-500/10 blur-2xl rounded-2xl"></div>
+                  )}
+                  
+                  <div className={`relative space-y-4 md:space-y-6 p-4 md:p-6 -m-4 md:-m-6 rounded-xl transition-all duration-300 ${
+                    hintShownSteps.has(index) && !revealedSteps.has(index) ? "ring-2 ring-yellow-500/30" : ""
+                  }`}>
+                    <div className="flex items-start justify-between">
+                      <StepCheckbox 
+                        isCompleted={completedSteps.has(index)} 
+                        stepNumber={step.step || index + 1}
+                      />
+                    </div>
+                    
+                    <div className="pl-8 md:pl-10 space-y-3 md:space-y-4">
+                      {/* Show hint if available and clicked once */}
+                      {step.hint && hintShownSteps.has(index) && !revealedSteps.has(index) && (
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-yellow-500/10 blur-xl"></div>
+                          <div className="relative p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-lg">
+                            <p className="text-sm text-yellow-500/80 leading-relaxed">
+                              <MathRenderer content={step.hint} />
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Expression shown after hint (or first click if no hint) */}
+                      {step.expression && (
+                        <div className={`transition-all duration-500 ${
+                          revealedSteps.has(index) ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                        }`}>
+                          <div className="text-base md:text-xl text-white font-medium">
+                            <MathExpression content={step.expression} block={true} />
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Explanation shown with expression */}
+                      {step.explanation && revealedSteps.has(index) && (
+                        <div className="text-sm text-gray-400 leading-relaxed">
+                          <MathRenderer content={step.explanation} />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+
+          {/* Solutions - Only show in completed view */}
           {showSolution && problem.solutions && (
-            <div className="relative">
+            <div className="relative mt-8">
               <div className="absolute inset-0 bg-green-500/10 blur-2xl rounded-2xl"></div>
               <div className="relative p-6 md:p-8 bg-green-500/5 border border-green-500/20 rounded-xl">
-                <h3 className="text-base md:text-lg font-semibold text-green-400 mb-4 md:mb-6">Rozwiązanie</h3>
+                <h3 className="text-base md:text-lg font-semibold text-green-400 mb-4 md:mb-6">Odpowiedź końcowa</h3>
                 <div className="space-y-3 md:space-y-4">
                   {problem.solutions.map((solution, index) => (
-                    <div key={index} className="text-white text-base md:text-lg">
+                    <div key={index} className="text-white text-lg md:text-xl font-medium">
                       <MathExpression content={solution} block={true} />
                     </div>
                   ))}
