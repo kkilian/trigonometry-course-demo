@@ -1,4 +1,5 @@
 [
+  
   {
     "id": "tex_problem_2",
     "topic": "Równania trygonometryczne",
@@ -176,6 +177,63 @@
     "parameters": {}
   },
   {
+    "id": "tex_problem_6",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Podane miary łukowe kątów wyraź w stopniach}",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Pamiętasz wzór na przeliczanie miar łukowych na stopnie? Jaka jest relacja między radianami a stopniami?}",
+        "expression": "\\pi \\text{ rad} = 180°",
+        "explanation": "\\text{Podstawowa relacja między miarą łukową a stopniową}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak możesz wykorzystać tę relację do utworzenia wzoru przeliczeniowego?}",
+        "expression": "1 \\text{ rad} = \\frac{180°}{\\pi}",
+        "explanation": "\\text{Dzieląc obie strony przez } \\pi \\text{ otrzymujemy przelicznik}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Aby przeliczyć dowolny kąt w radianach na stopnie, przez co musisz go pomnożyć?}",
+        "expression": "\\alpha \\text{ rad} = \\alpha \\cdot \\frac{180°}{\\pi}",
+        "explanation": "\\text{Wzór ogólny na przeliczanie radianów na stopnie}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Sprawdź wzór na przykładzie. Ile stopni to } \\frac{\\pi}{2} \\text{ radiana?}",
+        "expression": "\\frac{\\pi}{2} \\text{ rad} = \\frac{\\pi}{2} \\cdot \\frac{180°}{\\pi} = \\frac{\\pi \\cdot 180°}{2 \\cdot \\pi} = \\frac{180°}{2} = 90°",
+        "explanation": "\\text{Weryfikujemy wzór - ćwierć okręgu to rzeczywiście 90°}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź drugi przykład. Ile stopni to } \\frac{\\pi}{3} \\text{ radiana?}",
+        "expression": "\\frac{\\pi}{3} \\text{ rad} = \\frac{\\pi}{3} \\cdot \\frac{180°}{\\pi} = \\frac{\\pi \\cdot 180°}{3 \\cdot \\pi} = \\frac{180°}{3} = 60°",
+        "explanation": "\\text{Kolejna weryfikacja - kąt 60° odpowiada } \\frac{\\pi}{3} \\text{ radiana}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Jak uprościć obliczenia gdy masz ułamek z } \\pi \\text{ w liczniku?}",
+        "expression": "\\frac{a\\pi}{b} \\text{ rad} = \\frac{a\\pi}{b} \\cdot \\frac{180°}{\\pi} = \\frac{a \\cdot 180°}{b}",
+        "explanation": "\\text{Dla ułamków z } \\pi \\text{ wystarczy pomnożyć licznik przez 180° i podzielić przez mianownik}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{A co gdy kąt w radianach nie zawiera } \\pi \\text{? Jak przeliczyć np. 2 radiany?}",
+        "expression": "2 \\text{ rad} = 2 \\cdot \\frac{180°}{\\pi} = \\frac{360°}{\\pi} \\approx 114.59°",
+        "explanation": "\\text{Dla kątów bez } \\pi \\text{ używamy przybliżenia } \\pi \\approx 3.14159"
+      }
+    ],
+    "solutions": [
+      "\\text{Wzór przeliczeniowy: } \\alpha_{\\text{stopnie}} = \\alpha_{\\text{radiany}} \\cdot \\frac{180°}{\\pi}",
+      "\\text{Dla ułamków z } \\pi\\text{: } \\frac{a\\pi}{b} \\text{ rad} = \\frac{a \\cdot 180°}{b}",
+      "\\text{Dla kątów bez } \\pi\\text{: mnożymy przez } \\frac{180°}{\\pi} \\approx 57.296°"
+    ],
+    "parameters": {
+      "conversion_factor": "\\frac{180°}{\\pi} \\approx 57.296°"
+    }
+  },
+  {
     "id": "tex_problem_7",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Podane miary łukowe kątów wyraź w stopniach } 3 \\pi",
@@ -213,6 +271,53 @@
     ],
     "solutions": [
       "540°"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_8",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Podane miary łukowe kątów wyraź w stopniach } R 0,75 \\pi",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz kąt wyrażony w radianach. Jaka jest relacja między radianami a stopniami?}",
+        "expression": "\\text{Wiemy, że } \\pi \\text{ radianów} = 180°",
+        "explanation": "\\text{To podstawowa relacja między miarą łukową a stopniową}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Skoro } \\pi \\text{ rad} = 180°\\text{, to ile stopni to } 1 \\text{ radian}\\text{?}",
+        "expression": "1 \\text{ radian} = \\frac{180°}{\\pi}",
+        "explanation": "\\text{Dzielimy obie strony równania przez } \\pi"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz możesz przeliczyć } 0{,}75\\pi \\text{ radianów. Jak pomnożysz tę wartość przez przelicznik?}",
+        "expression": "0{,}75\\pi \\text{ rad} = 0{,}75\\pi \\cdot \\frac{180°}{\\pi}",
+        "explanation": "\\text{Mnożymy przez przelicznik z radianów na stopnie}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Co się dzieje z } \\pi \\text{ w liczniku i mianowniku? Jak uprościsz to wyrażenie?}",
+        "expression": "0{,}75\\pi \\cdot \\frac{180°}{\\pi} = 0{,}75 \\cdot 180°",
+        "explanation": "\\text{Wartość } \\pi \\text{ w liczniku i mianowniku się skraca}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz iloczyn } 0{,}75 \\cdot 180\\text{. Możesz zamienić } 0{,}75 \\text{ na ułamek zwykły}",
+        "expression": "0{,}75 \\cdot 180° = \\frac{3}{4} \\cdot 180° = \\frac{3 \\cdot 180°}{4}",
+        "explanation": "\\text{Zamieniamy } 0{,}75 = \\frac{3}{4} \\text{ dla łatwiejszego obliczenia}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Wykonaj dzielenie } 3 \\cdot 180 \\div 4\\text{. Ile to daje?}",
+        "expression": "\\frac{3 \\cdot 180°}{4} = \\frac{540°}{4} = 135°",
+        "explanation": "\\text{Obliczamy: } 3 \\cdot 180 = 540\\text{, następnie } 540 \\div 4 = 135"
+      }
+    ],
+    "solutions": [
+      "0{,}75\\pi \\text{ rad} = 135°"
     ],
     "parameters": {}
   },
@@ -1033,6 +1138,37 @@
     }
   },
   {
+    "id": "tex_problem_24",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Sprowadź podane wyrażenie do najprostszej postaci } \\tg \\alpha \\cos \\alpha",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Jak możesz zapisać tangens używając sinusa i cosinusa?}",
+        "expression": "\\tan \\alpha \\cos \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} \\cdot \\cos \\alpha",
+        "explanation": "\\text{Podstawiamy definicję tangensa: } \\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Co się dzieje gdy pomnożysz ułamek przez jego mianownik?}",
+        "expression": "\\frac{\\sin \\alpha}{\\cos \\alpha} \\cdot \\cos \\alpha = \\frac{\\sin \\alpha \\cdot \\cos \\alpha}{\\cos \\alpha}",
+        "explanation": "\\text{Zapisujemy jako jeden ułamek}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Czy widzisz wspólny czynnik w liczniku i mianowniku? Co możesz skrócić?}",
+        "expression": "\\frac{\\sin \\alpha \\cdot \\cos \\alpha}{\\cos \\alpha} = \\sin \\alpha",
+        "explanation": "\\text{Skracamy } \\cos \\alpha \\text{ w liczniku i mianowniku, przy założeniu } \\cos \\alpha \\neq 0"
+      }
+    ],
+    "solutions": [
+      "\\sin \\alpha"
+    ],
+    "parameters": {
+      "domain": "\\cos \\alpha \\neq 0"
+    }
+  },
+  {
     "id": "tex_problem_25",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Sprowadź podane wyrażenie do najprostszej postaci } (1+\\sin \\beta)(1-\\sin \\beta)",
@@ -1822,6 +1958,82 @@
     }
   },
   {
+    "id": "tex_problem_42",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz wartości pozostałych funkcji trygonometrycznych kąta ostrego } \\alpha, \\text{ tzn, tangens oraz sinus albo kosinus, wiedząc, że } R \\sin \\alpha=0,6",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz równanie } R \\sin \\alpha = 0,6\\text{. Co oznacza symbol } R \\text{ w kontekście funkcji trygonometrycznych?}",
+        "expression": "R = \\frac{1}{\\sin \\alpha}",
+        "explanation": "\\text{Symbol } R \\text{ oznacza odwrotność sinusa, więc } R \\sin \\alpha = \\frac{\\sin \\alpha}{\\sin \\alpha} = 1"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jeśli } R \\sin \\alpha = 0,6\\text{, a } R = \\frac{1}{\\sin \\alpha}\\text{, to jak możesz wyznaczyć wartość sinusa?}",
+        "expression": "\\frac{1}{\\sin \\alpha} \\cdot \\sin \\alpha = 0,6 \\Rightarrow 1 = 0,6",
+        "explanation": "\\text{To prowadzi do sprzeczności, więc } R \\text{ nie może oznaczać odwrotności sinusa}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Może } R \\text{ to po prostu stała? Jeśli } R \\sin \\alpha = 0,6\\text{, to jak wyrazić sinus przez } R\\text{?}",
+        "expression": "\\sin \\alpha = \\frac{0,6}{R}",
+        "explanation": "\\text{Dzielimy obie strony równania przez } R"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Czy w zadaniu jest podana wartość } R\\text{? Jeśli nie, może należy założyć konkretną wartość?}",
+        "expression": "\\text{Przyjmijmy } R = 1 \\Rightarrow \\sin \\alpha = 0,6",
+        "explanation": "\\text{Przy założeniu } R = 1 \\text{ otrzymujemy konkretną wartość sinusa}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Znasz już sinus kąta ostrego. Jakie równanie wiąże sinus i cosinus tego samego kąta?}",
+        "expression": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Korzystamy z podstawowej tożsamości trygonometrycznej}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Podstaw znaną wartość sinusa do tożsamości i wyznacz cosinus}",
+        "expression": "(0,6)^2 + \\cos^2 \\alpha = 1 \\Rightarrow 0,36 + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Obliczamy kwadrat sinusa: } (0,6)^2 = 0,36"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Jak wyznaczyć } \\cos^2 \\alpha \\text{ z otrzymanego równania?}",
+        "expression": "\\cos^2 \\alpha = 1 - 0,36 = 0,64",
+        "explanation": "\\text{Przenosimy } 0,36 \\text{ na prawą stronę równania}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Mając } \\cos^2 \\alpha = 0,64\\text{, jak znajdziesz } \\cos \\alpha\\text{? Pamiętaj, że kąt jest ostry}",
+        "expression": "\\cos \\alpha = \\sqrt{0,64} = 0,8",
+        "explanation": "\\text{Dla kąta ostrego cosinus jest dodatni, więc bierzemy pierwiastek dodatni}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Znasz już sinus i cosinus. Jak zdefiniowany jest tangens przez te funkcje?}",
+        "expression": "\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}",
+        "explanation": "\\text{Tangens to stosunek sinusa do cosinusa}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Podstaw znane wartości sinusa i cosinusa do wzoru na tangens}",
+        "expression": "\\tan \\alpha = \\frac{0,6}{0,8} = \\frac{6}{8} = \\frac{3}{4}",
+        "explanation": "\\text{Upraszczamy ułamek dzieląc licznik i mianownik przez } 2"
+      }
+    ],
+    "solutions": [
+      "\\sin \\alpha = 0,6",
+      "\\cos \\alpha = 0,8",
+      "\\tan \\alpha = \\frac{3}{4}"
+    ],
+    "parameters": {
+      "assumption": "R = 1",
+      "angle_type": "\\text{kąt ostry}"
+    }
+  },
+  {
     "id": "tex_problem_43",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Oblicz wartości pozostałych funkcji trygonometrycznych kąta ostrego } \\alpha, \\text{ tzn, tangens oraz sinus albo kosinus, wiedząc, że } \\cos \\alpha=\\frac{\\sqrt{2}}{3}",
@@ -1882,6 +2094,160 @@
     "parameters": {
       "given": "\\cos \\alpha = \\frac{\\sqrt{2}}{3}",
       "condition": "\\alpha \\text{ jest kątem ostrym}"
+    }
+  },
+  {
+    "id": "tex_problem_44",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz sinus i kosinus kąta ostrego } \\alpha, \\text{ wiedząc, że } R \\tg \\alpha=\\frac{5}{12}",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz podaną wartość tangensa. Czy pamiętasz definicję tangensa przez sinus i cosinus?}",
+        "expression": "\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{5}{12}",
+        "explanation": "\\text{Zapisujemy tangens jako stosunek sinusa do cosinusa}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Z równania } \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{5}{12} \\text{ możesz wyrazić sinus przez cosinus. Jak?}",
+        "expression": "\\sin \\alpha = \\frac{5}{12} \\cos \\alpha",
+        "explanation": "\\text{Mnożymy obie strony przez } \\cos \\alpha"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Masz wyrażenie na sinus przez cosinus. Jakie podstawowe równanie wiąże } \\sin^2 \\alpha \\text{ z } \\cos^2 \\alpha\\text{?}",
+        "expression": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Korzystamy z podstawowej tożsamości trygonometrycznej}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw wyrażenie na sinus z kroku 2 do tożsamości. Co otrzymasz?}",
+        "expression": "\\left(\\frac{5}{12} \\cos \\alpha\\right)^2 + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Podstawiamy } \\sin \\alpha = \\frac{5}{12} \\cos \\alpha \\text{ do tożsamości}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz kwadrat ułamka i wyłącz wspólny czynnik}",
+        "expression": "\\frac{25}{144} \\cos^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Ponieważ } \\left(\\frac{5}{12}\\right)^2 = \\frac{25}{144}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Masz dwa składniki z } \\cos^2 \\alpha\\text{. Jak je połączyć w jeden?}",
+        "expression": "\\cos^2 \\alpha \\left(\\frac{25}{144} + 1\\right) = 1",
+        "explanation": "\\text{Wyłączamy } \\cos^2 \\alpha \\text{ przed nawias}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oblicz sumę w nawiasie. Pamiętaj o sprowadzeniu do wspólnego mianownika}",
+        "expression": "\\cos^2 \\alpha \\cdot \\frac{25 + 144}{144} = \\cos^2 \\alpha \\cdot \\frac{169}{144} = 1",
+        "explanation": "\\text{Ponieważ } 1 = \\frac{144}{144}\\text{, więc } \\frac{25}{144} + 1 = \\frac{25 + 144}{144} = \\frac{169}{144}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Wyznacz } \\cos^2 \\alpha \\text{ z równania. Jak pozbyć się ułamka po prawej stronie?}",
+        "expression": "\\cos^2 \\alpha = \\frac{144}{169}",
+        "explanation": "\\text{Dzielimy obie strony przez } \\frac{169}{144}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Masz } \\cos^2 \\alpha\\text{. Jak wyznaczyć } \\cos \\alpha\\text{? Pamiętaj, że kąt jest ostry}",
+        "expression": "\\cos \\alpha = \\sqrt{\\frac{144}{169}} = \\frac{\\sqrt{144}}{\\sqrt{169}} = \\frac{12}{13}",
+        "explanation": "\\text{Dla kąta ostrego cosinus jest dodatni, więc bierzemy pierwiastek dodatni}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Teraz możesz obliczyć sinus używając wzoru z kroku 2}",
+        "expression": "\\sin \\alpha = \\frac{5}{12} \\cos \\alpha = \\frac{5}{12} \\cdot \\frac{12}{13} = \\frac{5 \\cdot 12}{12 \\cdot 13} = \\frac{5}{13}",
+        "explanation": "\\text{Podstawiamy obliczoną wartość cosinusa}"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Sprawdź poprawność wyniku. Czy } \\sin^2 \\alpha + \\cos^2 \\alpha = 1\\text{?}",
+        "expression": "\\left(\\frac{5}{13}\\right)^2 + \\left(\\frac{12}{13}\\right)^2 = \\frac{25}{169} + \\frac{144}{169} = \\frac{169}{169} = 1 \\checkmark",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność rozwiązania}"
+      }
+    ],
+    "solutions": [
+      "\\sin \\alpha = \\frac{5}{13}",
+      "\\cos \\alpha = \\frac{12}{13}"
+    ],
+    "parameters": {
+      "domain": "\\alpha \\text{ - kąt ostry}"
+    }
+  },
+  {
+    "id": "tex_problem_45",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz sinus i kosinus kąta ostrego } \\alpha, \\text{ wiedząc, że } W \\tg \\alpha=\\sqrt{15}",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz daną wartość tangensa. Czy pamiętasz podstawową tożsamość łączącą tangens z sinusem i cosinusem?}",
+        "expression": "\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\sqrt{15}",
+        "explanation": "\\text{Zapisujemy tangens jako stosunek sinusa do cosinusa}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Z równania } \\frac{\\sin \\alpha}{\\cos \\alpha} = \\sqrt{15} \\text{ możesz wyrazić sinus przez cosinus. Jak to zrobić?}",
+        "expression": "\\sin \\alpha = \\sqrt{15} \\cos \\alpha",
+        "explanation": "\\text{Mnożymy obie strony przez } \\cos \\alpha"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Masz teraz wyrażenie na sinus przez cosinus. Jaką podstawową tożsamość trygonometryczną możesz wykorzystać?}",
+        "expression": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Korzystamy z jedynki trygonometrycznej}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw wyrażenie na sinus z kroku 2 do jedynki trygonometrycznej}",
+        "expression": "(\\sqrt{15} \\cos \\alpha)^2 + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Podstawiamy } \\sin \\alpha = \\sqrt{15} \\cos \\alpha"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz kwadrat pierwszego składnika i uprość równanie}",
+        "expression": "15 \\cos^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Ponieważ } (\\sqrt{15})^2 = 15"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Wyłącz wspólny czynnik z lewej strony równania}",
+        "expression": "\\cos^2 \\alpha (15 + 1) = 1 \\Rightarrow 16 \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Łączymy podobne składniki}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Wyznacz } \\cos^2 \\alpha \\text{ dzieląc obie strony przez 16}",
+        "expression": "\\cos^2 \\alpha = \\frac{1}{16}",
+        "explanation": "\\text{Dzielimy równanie przez 16}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Wyciągnij pierwiastek z obu stron. Pamiętaj, że kąt } \\alpha \\text{ jest ostry - jaki to ma wpływ na znak cosinusa?}",
+        "expression": "\\cos \\alpha = \\frac{1}{4}",
+        "explanation": "\\text{Dla kąta ostrego cosinus jest dodatni, więc } \\cos \\alpha = +\\sqrt{\\frac{1}{16}} = \\frac{1}{4}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Teraz możesz obliczyć sinus używając związku z kroku 2}",
+        "expression": "\\sin \\alpha = \\sqrt{15} \\cos \\alpha = \\sqrt{15} \\cdot \\frac{1}{4} = \\frac{\\sqrt{15}}{4}",
+        "explanation": "\\text{Podstawiamy obliczoną wartość cosinusa}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź poprawność wyniku podstawiając do jedynki trygonometrycznej}",
+        "expression": "\\sin^2 \\alpha + \\cos^2 \\alpha = \\left(\\frac{\\sqrt{15}}{4}\\right)^2 + \\left(\\frac{1}{4}\\right)^2 = \\frac{15}{16} + \\frac{1}{16} = \\frac{16}{16} = 1",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność rozwiązania}"
+      }
+    ],
+    "solutions": [
+      "\\sin \\alpha = \\frac{\\sqrt{15}}{4}",
+      "\\cos \\alpha = \\frac{1}{4}"
+    ],
+    "parameters": {
+      "domain": "\\alpha \\text{ - kąt ostry}"
     }
   },
   {
@@ -2018,6 +2384,74 @@
     "parameters": {
       "point": "P(14, 18)",
       "angle_condition": "\\sin \\alpha = \\frac{24}{25}, \\alpha \\text{ - kąt ostry}"
+    }
+  },
+  {
+    "id": "tex_problem_48",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\sin \\alpha \\text{ i } \\tg \\alpha, \\text{ jeżeli } \\cos \\alpha=\\frac{1}{7} \\text{ i } \\alpha \\in(\\frac{3}{2} \\pi ; 2 \\pi)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wartość cosinusa i przedział, w którym leży kąt. Jakie równanie wiąże sinus i cosinus?}",
+        "expression": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+        "explanation": "\\text{Korzystamy z podstawowej tożsamości trygonometrycznej}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Podstaw znaną wartość cosinusa do równania}",
+        "expression": "\\sin^2 \\alpha + \\left(\\frac{1}{7}\\right)^2 = 1",
+        "explanation": "\\text{Podstawiamy } \\cos \\alpha = \\frac{1}{7}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz kwadrat ułamka i wyznacz } \\sin^2 \\alpha",
+        "expression": "\\sin^2 \\alpha = 1 - \\frac{1}{49} = \\frac{49}{49} - \\frac{1}{49} = \\frac{48}{49}",
+        "explanation": "\\text{Sprowadzamy do wspólnego mianownika i odejmujemy}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Wyciągnij pierwiastek z obu stron. Pamiętaj, że sinus może być dodatni lub ujemny}",
+        "expression": "\\sin \\alpha = \\pm\\sqrt{\\frac{48}{49}} = \\pm\\frac{\\sqrt{48}}{7}",
+        "explanation": "\\text{Pierwiastek z ułamka to ułamek pierwiastków}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Uprość } \\sqrt{48}\\text{. Jakie liczby kwadratowe dzielą 48?}",
+        "expression": "\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}",
+        "explanation": "\\text{Rozkładamy 48 na czynniki, wyciągając pełne kwadraty}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Podstaw uproszczony pierwiastek}",
+        "expression": "\\sin \\alpha = \\pm\\frac{4\\sqrt{3}}{7}",
+        "explanation": "\\text{Otrzymujemy dwie możliwe wartości sinusa}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź w której ćwiartce leży kąt } \\alpha \\in \\left(\\frac{3\\pi}{2}; 2\\pi\\right)\\text{. Jaki znak ma tam sinus?}",
+        "expression": "\\sin \\alpha = -\\frac{4\\sqrt{3}}{7}",
+        "explanation": "\\text{W czwartej ćwiartce sinus jest ujemny, więc wybieramy znak minus}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Jak definiuje się tangens przez sinus i cosinus?}",
+        "expression": "\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}",
+        "explanation": "\\text{Używamy definicji tangensa jako ilorazu sinusa i cosinusa}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Podstaw obliczone wartości sinusa i cosinusa}",
+        "expression": "\\tan \\alpha = \\frac{-\\frac{4\\sqrt{3}}{7}}{\\frac{1}{7}} = -\\frac{4\\sqrt{3}}{7} \\cdot \\frac{7}{1} = -4\\sqrt{3}",
+        "explanation": "\\text{Dzielenie ułamków zamieniamy na mnożenie przez odwrotność}"
+      }
+    ],
+    "solutions": [
+      "\\sin \\alpha = -\\frac{4\\sqrt{3}}{7}",
+      "\\tan \\alpha = -4\\sqrt{3}"
+    ],
+    "parameters": {
+      "domain": "\\alpha \\in \\left(\\frac{3\\pi}{2}; 2\\pi\\right)"
     }
   },
   {
@@ -2525,6 +2959,53 @@
     }
   },
   {
+    "id": "tex_problem_57",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\sin 15°",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zauważ, że } 15° = 45° - 30°\\text{. Czy znasz wzór na sinus różnicy dwóch kątów?}",
+        "expression": "\\sin 15° = \\sin(45° - 30°)",
+        "explanation": "\\text{Rozkładamy kąt } 15° \\text{ na różnicę znanych kątów}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Zastosuj wzór na sinus różnicy. Jak brzmi wzór } \\sin(\\alpha - \\beta)\\text{?}",
+        "expression": "\\sin(45° - 30°) = \\sin 45° \\cos 30° - \\cos 45° \\sin 30°",
+        "explanation": "\\text{Używamy wzoru } \\sin(\\alpha - \\beta) = \\sin \\alpha \\cos \\beta - \\cos \\alpha \\sin \\beta"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jakie są dokładne wartości funkcji trygonometrycznych dla kątów } 30° \\text{ i } 45°\\text{?}",
+        "expression": "\\sin 45° = \\frac{\\sqrt{2}}{2}, \\; \\cos 45° = \\frac{\\sqrt{2}}{2}, \\; \\sin 30° = \\frac{1}{2}, \\; \\cos 30° = \\frac{\\sqrt{3}}{2}",
+        "explanation": "\\text{Przypominamy wartości funkcji dla kątów szczególnych}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw te wartości do wzoru i wykonaj mnożenie w każdym składniku}",
+        "expression": "\\sin 15° = \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}",
+        "explanation": "\\text{Obliczamy każdy iloczyn: } \\sqrt{2} \\cdot \\sqrt{3} = \\sqrt{6} \\text{ oraz } \\sqrt{2} \\cdot 1 = \\sqrt{2}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oba składniki mają ten sam mianownik. Jak uprościć różnicę ułamków o tym samym mianowniku?}",
+        "expression": "\\sin 15° = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+        "explanation": "\\text{Łączymy ułamki o wspólnym mianowniku}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Czy możesz wyłączyć wspólny czynnik z licznika, aby uprościć wyrażenie?}",
+        "expression": "\\sin 15° = \\frac{\\sqrt{2}(\\sqrt{3} - 1)}{4}",
+        "explanation": "\\text{Wyłączamy } \\sqrt{2} \\text{ z licznika: } \\sqrt{6} = \\sqrt{2} \\cdot \\sqrt{3}"
+      }
+    ],
+    "solutions": [
+      "\\sin 15° = \\frac{\\sqrt{6} - \\sqrt{2}}{4} = \\frac{\\sqrt{2}(\\sqrt{3} - 1)}{4}"
+    ],
+    "parameters": {}
+  },
+  {
     "id": "tex_problem_58",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Oblicz } \\cos 105°",
@@ -2661,6 +3142,47 @@
     "parameters": {}
   },
   {
+    "id": "tex_problem_60",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Uprość wyrażenie } R \\sin (4 \\pi+\\alpha)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wyrażenie } R \\sin(4\\pi + \\alpha)\\text{. Czy pamiętasz o okresowości funkcji sinus?}",
+        "expression": "R \\sin(4\\pi + \\alpha)",
+        "explanation": "\\text{Analizujemy wyrażenie z kątem większym od jednego okresu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jaki jest okres funkcji sinus? Ile pełnych okresów zawiera kąt } 4\\pi\\text{?}",
+        "expression": "4\\pi = 2 \\cdot 2\\pi",
+        "explanation": "\\text{Kąt } 4\\pi \\text{ to dokładnie dwa pełne okresy funkcji sinus}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Co się dzieje z wartością sinusa, gdy dodamy do kąta pełną liczbę okresów?}",
+        "expression": "\\sin(4\\pi + \\alpha) = \\sin(2 \\cdot 2\\pi + \\alpha)",
+        "explanation": "\\text{Przepisujemy kąt jako wielokrotność okresu podstawowego plus reszta}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skorzystaj z własności okresowości: } \\sin(x + 2\\pi k) = \\sin x \\text{ dla } k \\in \\mathbb{Z}",
+        "expression": "\\sin(2 \\cdot 2\\pi + \\alpha) = \\sin(\\alpha)",
+        "explanation": "\\text{Usuwamy pełne okresy, bo nie wpływają na wartość funkcji}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Wróć do pierwotnego wyrażenia i podstaw uproszczony sinus}",
+        "expression": "R \\sin(4\\pi + \\alpha) = R \\sin(\\alpha)",
+        "explanation": "\\text{Otrzymujemy wyrażenie w najprostszej postaci}"
+      }
+    ],
+    "solutions": [
+      "R \\sin(\\alpha)"
+    ],
+    "parameters": {}
+  },
+  {
     "id": "tex_problem_61",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Uprość wyrażenie } \\tan(\\alpha-3 \\pi)",
@@ -2745,6 +3267,100 @@
     "parameters": {}
   },
   {
+    "id": "tex_problem_63",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Uprość wyrażenie } R \\cos (\\pi+\\alpha)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz cosinus sumy kąta } \\pi \\text{ i kąta } \\alpha\\text{. Czy pamiętasz wzór na cosinus sumy dwóch kątów?}",
+        "expression": "R \\cos(\\pi + \\alpha) = R[\\cos \\pi \\cos \\alpha - \\sin \\pi \\sin \\alpha]",
+        "explanation": "\\text{Stosujemy wzór } \\cos(a + b) = \\cos a \\cos b - \\sin a \\sin b"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jakie są wartości funkcji trygonometrycznych dla kąta } \\pi\\text{? Przypomnij sobie położenie tego kąta na okręgu jednostkowym}",
+        "expression": "\\cos \\pi = -1 \\quad \\text{i} \\quad \\sin \\pi = 0",
+        "explanation": "\\text{Kąt } \\pi \\text{ odpowiada punktowi } (-1, 0) \\text{ na okręgu jednostkowym}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Podstaw obliczone wartości do wzoru. Co otrzymasz po podstawieniu?}",
+        "expression": "R[\\cos \\pi \\cos \\alpha - \\sin \\pi \\sin \\alpha] = R[(-1) \\cdot \\cos \\alpha - 0 \\cdot \\sin \\alpha]",
+        "explanation": "\\text{Podstawiamy } \\cos \\pi = -1 \\text{ i } \\sin \\pi = 0"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Uprość wyrażenie w nawiasie kwadratowym. Co się dzieje z wyrazem zawierającym zero?}",
+        "expression": "R[(-1) \\cdot \\cos \\alpha - 0 \\cdot \\sin \\alpha] = R[-\\cos \\alpha - 0] = R[-\\cos \\alpha]",
+        "explanation": "\\text{Wyraz } 0 \\cdot \\sin \\alpha = 0 \\text{ znika, zostaje } -\\cos \\alpha"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Wyłącz znak minus przed nawias. Jak będzie wyglądać końcowy wynik?}",
+        "expression": "R[-\\cos \\alpha] = -R \\cos \\alpha",
+        "explanation": "\\text{Otrzymujemy uproszczoną postać wyrażenia}"
+      }
+    ],
+    "solutions": [
+      "-R \\cos \\alpha"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_64",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Uprość wyrażenie } R \\tan(\\pi-\\alpha)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz tangens kąta } (\\pi - \\alpha)\\text{. Czy pamiętasz wzór na tangens różnicy kątów?}",
+        "expression": "\\tan(\\pi - \\alpha) = \\frac{\\sin(\\pi - \\alpha)}{\\cos(\\pi - \\alpha)}",
+        "explanation": "\\text{Zapisujemy tangens jako stosunek sinusa do cosinusa}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak zachowuje się sinus dla kąta } (\\pi - \\alpha)\\text{? Przypomnij sobie wzory redukcyjne}",
+        "expression": "\\sin(\\pi - \\alpha) = \\sin \\alpha",
+        "explanation": "\\text{Sinus kąta } (\\pi - \\alpha) \\text{ równa się sinusowi kąta } \\alpha"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{A jak zachowuje się cosinus dla kąta } (\\pi - \\alpha)\\text{? Sprawdź znak w drugiej ćwiartce}",
+        "expression": "\\cos(\\pi - \\alpha) = -\\cos \\alpha",
+        "explanation": "\\text{Cosinus kąta } (\\pi - \\alpha) \\text{ równa się minus cosinusowi kąta } \\alpha"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw otrzymane wyrażenia do ułamka z pierwszego kroku}",
+        "expression": "\\tan(\\pi - \\alpha) = \\frac{\\sin \\alpha}{-\\cos \\alpha}",
+        "explanation": "\\text{Wstawiamy przekształcone funkcje do definicji tangensa}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jak możesz uprościć ten ułamek? Zwróć uwagę na znak minus}",
+        "expression": "\\tan(\\pi - \\alpha) = -\\frac{\\sin \\alpha}{\\cos \\alpha}",
+        "explanation": "\\text{Wyciągamy znak minus przed ułamek}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Czy rozpoznajesz stosunek } \\frac{\\sin \\alpha}{\\cos \\alpha}\\text{? Jak można go zapisać?}",
+        "expression": "\\tan(\\pi - \\alpha) = -\\tan \\alpha",
+        "explanation": "\\text{Stosunek sinusa do cosinusa to definicja tangensa}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Teraz pomnóż przez } R \\text{ aby otrzymać końcowy wynik}",
+        "expression": "R \\tan(\\pi - \\alpha) = R \\cdot (-\\tan \\alpha) = -R \\tan \\alpha",
+        "explanation": "\\text{Mnożymy przez stałą } R"
+      }
+    ],
+    "solutions": [
+      "-R \\tan \\alpha"
+    ],
+    "parameters": {}
+  },
+  {
     "id": "tex_problem_65",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Uprość wyrażenie } \\cos \\left(\\frac{3}{2} \\pi+\\alpha\\right)",
@@ -2823,6 +3439,82 @@
     ],
     "solutions": [
       "\\sin(\\alpha - \\frac{\\pi}{2}) = -\\cos \\alpha"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_67",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\cos 720°",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz kąt } 720°\\text{. Czy pamiętasz, jaki jest okres funkcji cosinus?}",
+        "expression": "720° = 2 \\cdot 360°",
+        "explanation": "\\text{Sprawdzamy ile pełnych obrotów zawiera kąt } 720°"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Skoro cosinus ma okres } 360°\\text{, to jak możesz uprościć } \\cos 720°\\text{?}",
+        "expression": "\\cos 720° = \\cos(2 \\cdot 360°) = \\cos 0°",
+        "explanation": "\\text{Korzystamy z okresowości cosinusa: } \\cos(x + 360°) = \\cos x"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jaka jest wartość cosinusa dla kąta } 0°\\text{? Przypomnij sobie definicję na okręgu jednostkowym}",
+        "expression": "\\cos 0° = 1",
+        "explanation": "\\text{Dla kąta } 0° \\text{ punkt na okręgu jednostkowym ma współrzędne } (1, 0)"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz możesz podstawić obliczoną wartość cosinusa do wyrażenia z } R",
+        "expression": "R \\cos 720° = R \\cdot 1 = R",
+        "explanation": "\\text{Mnożenie przez 1 nie zmienia wartości}"
+      }
+    ],
+    "solutions": [
+      "R"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_68",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\sin 150°",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kąt 150° leży w drugiej ćwiartce. Jak możesz wyrazić go przez kąt z pierwszej ćwiartki?}",
+        "expression": "150° = 180° - 30°",
+        "explanation": "\\text{Zapisujemy kąt jako różnicę 180° i kąta ostrego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak zachowuje się sinus dla kąta } 180° - \\alpha\\text{? Przypomnij sobie wzory redukcyjne}",
+        "expression": "\\sin 150° = \\sin(180° - 30°) = \\sin 30°",
+        "explanation": "\\text{W drugiej ćwiartce sinus jest dodatni i } \\sin(180° - \\alpha) = \\sin \\alpha"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jaka jest wartość sinusa dla kąta 30°? To jeden z kątów szczególnych}",
+        "expression": "\\sin 30° = \\frac{1}{2}",
+        "explanation": "\\text{Wartość sinusa 30° wynika z trójkąta równobocznego}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz możesz podstawić obliczoną wartość do wyrażenia z } R",
+        "expression": "R \\sin 150° = R \\cdot \\frac{1}{2}",
+        "explanation": "\\text{Podstawiamy } \\sin 150° = \\frac{1}{2}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Uprość otrzymane wyrażenie}",
+        "expression": "R \\sin 150° = \\frac{R}{2}",
+        "explanation": "\\text{Mnożenie przez ułamek to dzielenie przez mianownik}"
+      }
+    ],
+    "solutions": [
+      "\\frac{R}{2}"
     ],
     "parameters": {}
   },
@@ -3011,6 +3703,82 @@
     ],
     "solutions": [
       "\\sin(-120°) = -\\frac{\\sqrt{3}}{2}"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_73",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\cos \\left(-1110°\\right)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz kąt } -1110°\\text{. Czy pamiętasz, że cosinus ma okres } 360°\\text{? Jak możesz sprowadzić ten kąt do przedziału podstawowego?}",
+        "expression": "\\cos(-1110°) = \\cos(-1110° + k \\cdot 360°)",
+        "explanation": "\\text{Wykorzystujemy okresowość cosinusa, aby znaleźć równoważny kąt}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Ile pełnych obrotów zawiera kąt } -1110°\\text{? Podziel przez } 360° \\text{ i sprawdź resztę}",
+        "expression": "-1110° = -3 \\cdot 360° - 30° = -1080° - 30°",
+        "explanation": "\\text{Obliczamy: } -1110 ÷ 360 = -3.083...\\text{, więc mamy } -3 \\text{ pełne obroty plus } -30°"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz możesz uprościć wyrażenie. Co otrzymasz po dodaniu trzech pełnych obrotów?}",
+        "expression": "\\cos(-1110°) = \\cos(-30°)",
+        "explanation": "\\text{Dodajemy } 3 \\cdot 360° = 1080° \\text{ do kąta } -1110°"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Masz } \\cos(-30°)\\text{. Czy pamiętasz właściwość cosinusa względem zmiany znaku argumentu?}",
+        "expression": "\\cos(-30°) = \\cos(30°)",
+        "explanation": "\\text{Cosinus jest funkcją parzystą: } \\cos(-\\alpha) = \\cos(\\alpha)"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jaka jest wartość } \\cos(30°)\\text{? Przypomnij sobie wartości funkcji trygonometrycznych dla kątów szczególnych}",
+        "expression": "\\cos(30°) = \\frac{\\sqrt{3}}{2}",
+        "explanation": "\\text{To jedna z podstawowych wartości dla kąta } 30° = \\frac{\\pi}{6}"
+      }
+    ],
+    "solutions": [
+      "\\cos(-1110°) = \\frac{\\sqrt{3}}{2}"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_74",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Oblicz } R \\sin ^{2} 10°+\\sin ^{2} 80°",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Spójrz na kąty w wyrażeniu: } 10° \\text{ i } 80°\\text{. Jaka jest ich suma? Czy to ci coś przypomina?}",
+        "expression": "\\sin^2 10° + \\sin^2 80°",
+        "explanation": "\\text{Zauważamy, że } 10° + 80° = 90°\\text{, więc kąty są dopełniające}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak wyraża się sinus kąta przez cosinus jego dopełnienia? Pamiętasz wzór na funkcje kątów dopełniających?}",
+        "expression": "\\sin 80° = \\sin(90° - 10°) = \\cos 10°",
+        "explanation": "\\text{Stosujemy wzór } \\sin(90° - \\alpha) = \\cos \\alpha"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Podstaw otrzymaną zależność do pierwotnego wyrażenia}",
+        "expression": "\\sin^2 10° + \\sin^2 80° = \\sin^2 10° + \\cos^2 10°",
+        "explanation": "\\text{Zamieniamy } \\sin^2 80° \\text{ na } \\cos^2 10°"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Czy rozpoznajesz to wyrażenie? Jakie podstawowe równanie trygonometryczne łączy kwadraty sinusa i cosinusa tego samego kąta?}",
+        "expression": "\\sin^2 10° + \\cos^2 10° = 1",
+        "explanation": "\\text{Stosujemy podstawową tożsamość trygonometryczną } \\sin^2 \\alpha + \\cos^2 \\alpha = 1"
+      }
+    ],
+    "solutions": [
+      "1"
     ],
     "parameters": {}
   },
@@ -4327,6 +5095,67 @@
     "parameters": {}
   },
   {
+    "id": "tex_problem_99",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Rozwiąż równanie } W \\sin x-\\cos x=0",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Spójrz na równanie } W \\sin x - \\cos x = 0\\text{. Jak możesz przenieść jeden z wyrazów na drugą stronę?}",
+        "expression": "W \\sin x = \\cos x",
+        "explanation": "\\text{Przenosimy } \\cos x \\text{ na prawą stronę równania}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Masz równanie z sinusem i cosinusem. Jak możesz je przekształcić, żeby otrzymać równanie tylko z tangensem?}",
+        "expression": "\\frac{W \\sin x}{\\cos x} = \\frac{\\cos x}{\\cos x}",
+        "explanation": "\\text{Dzielimy obie strony przez } \\cos x\\text{, przy założeniu } \\cos x \\neq 0"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Uprość otrzymane ułamki. Czy rozpoznajesz definicję tangensa?}",
+        "expression": "W \\cdot \\frac{\\sin x}{\\cos x} = 1",
+        "explanation": "\\text{Po uproszczeniu prawej strony otrzymujemy 1}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Zastąp stosunek } \\frac{\\sin x}{\\cos x} \\text{ odpowiednią funkcją trygonometryczną}",
+        "expression": "W \\tan x = 1",
+        "explanation": "\\text{Używamy definicji } \\tan x = \\frac{\\sin x}{\\cos x}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Wyznacz wartość tangensa. Jak podzielić obie strony przez } W\\text{?}",
+        "expression": "\\tan x = \\frac{1}{W}",
+        "explanation": "\\text{Dzielimy obie strony przez } W\\text{, przy założeniu } W \\neq 0"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Masz równanie } \\tan x = \\frac{1}{W}\\text{. Jak wygląda ogólne rozwiązanie takiego równania?}",
+        "expression": "x = \\arc\\tan\\left(\\frac{1}{W}\\right) + k\\pi, \\; k \\in \\mathbb{Z}",
+        "explanation": "\\text{Tangens ma okres } \\pi\\text{, więc dodajemy wielokrotności } \\pi"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Pamiętaj o założeniach! Kiedy nasze przekształcenia były poprawne?}",
+        "expression": "\\text{przy założeniach: } \\cos x \\neq 0 \\text{ i } W \\neq 0",
+        "explanation": "\\text{Sprawdzamy warunki, które muszą być spełnione dla poprawności rozwiązania}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Czy założenie } \\cos x \\neq 0 \\text{ wyklucza jakieś rozwiązania z naszego wyniku?}",
+        "expression": "\\text{Założenie } \\cos x \\neq 0 \\text{ jest automatycznie spełnione, bo } x \\neq \\frac{\\pi}{2} + k\\pi",
+        "explanation": "\\text{Nasze rozwiązania nie pokrywają się z punktami, gdzie cosinus się zeruje}"
+      }
+    ],
+    "solutions": [
+      "x = \\arc\\tan\\left(\\frac{1}{W}\\right) + k\\pi, \\; k \\in \\mathbb{Z}"
+    ],
+    "parameters": {
+      "domain": "W \\neq 0, \\; \\cos x \\neq 0"
+    }
+  },
+  {
     "id": "tex_problem_100",
     "topic": "Równania trygonometryczne",
     "statement": "\\text{Rozwiąż równanie } \\cos 2 x+2 \\cos x+1=0",
@@ -4831,6 +5660,68 @@
     "parameters": {
       "domain": "\\cos x \\neq 0",
       "note": "\\text{Rozwiązanie zależy od parametru } R"
+    }
+  },
+  {
+    "id": "tex_problem_107",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Zbadaj dla jakich wartości parametru } \\(m\\) \\text{ istnieją rozwiązania równania}",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zauważ, że w równaniu masz } \\sin^2 x \\text{ i } \\cos^2 x\\text{. Czy znasz podstawową tożsamość łączącą te funkcje?}",
+        "expression": "m\\sin^2 x + \\cos^2 x = 1 - \\sin^2 x + \\cos^2 x = (1-m)\\sin^2 x + 1",
+        "explanation": "\\text{Podstawiamy } \\sin^2 x = 1 - \\cos^2 x \\text{ aby uzyskać równanie tylko z cosinusem}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Po przekształceniu otrzymałeś równanie liniowe względem } \\sin^2 x\\text{. Jak je rozwiązać?}",
+        "expression": "(1-m)\\sin^2 x = -1",
+        "explanation": "\\text{Przenosimy 1 na lewą stronę równania}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Aby wyznaczyć } \\sin^2 x\\text{, musisz podzielić przez współczynnik. Kiedy to dzielenie jest możliwe?}",
+        "expression": "\\sin^2 x = \\frac{-1}{1-m} = \\frac{1}{m-1}, \\quad \\text{przy założeniu } m \\neq 1",
+        "explanation": "\\text{Dzielimy przez } (1-m) \\text{ i zmieniamy znak w liczniku i mianowniku}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jaka jest dziedzina wartości funkcji } \\sin^2 x\\text{? Jakie ograniczenia to nakłada na parametr } m\\text{?}",
+        "expression": "0 \\leq \\sin^2 x \\leq 1 \\Rightarrow 0 \\leq \\frac{1}{m-1} \\leq 1",
+        "explanation": "\\text{Kwadrat sinusa musi być nieujemny i nie większy od 1}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Rozpatrz nierówność } \\frac{1}{m-1} \\geq 0\\text{. Kiedy ułamek jest nieujemny?}",
+        "expression": "\\frac{1}{m-1} \\geq 0 \\Rightarrow m-1 > 0 \\Rightarrow m > 1",
+        "explanation": "\\text{Licznik jest dodatni, więc mianownik też musi być dodatni}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz rozpatrz nierówność } \\frac{1}{m-1} \\leq 1\\text{. Jak ją rozwiązać gdy wiesz już, że } m > 1\\text{?}",
+        "expression": "\\frac{1}{m-1} \\leq 1 \\Rightarrow 1 \\leq m-1 \\Rightarrow m \\geq 2",
+        "explanation": "\\text{Ponieważ } m-1 > 0\\text{, możemy pomnożyć nierówność przez } (m-1)"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Co się dzieje w przypadku granicznym } m = 1\\text{? Podstaw tę wartość do pierwotnego równania}",
+        "expression": "\\text{Dla } m = 1: \\sin^2 x + \\cos^2 x = 1",
+        "explanation": "\\text{To jest tożsamość trygonometryczna, prawdziwa dla wszystkich } x"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Połącz wszystkie przypadki. Dla jakich wartości } m \\text{ równanie ma rozwiązania?}",
+        "expression": "m = 1 \\text{ lub } m \\geq 2",
+        "explanation": "\\text{Przypadek } m = 1 \\text{ daje nieskończenie wiele rozwiązań, } m \\geq 2 \\text{ daje rozwiązania skończone}"
+      }
+    ],
+    "solutions": [
+      "m \\in \\{1\\} \\cup [2, +\\infty)"
+    ],
+    "parameters": {
+      "special_case": "\\text{Dla } m = 1 \\text{ równanie jest tożsamością}",
+      "condition": "m \\neq 1 \\text{ dla przypadku ogólnego}"
     }
   },
   {
@@ -9388,6 +10279,81 @@
     ],
     "parameters": {
       "domain": "x \\neq 0"
+    }
+  },
+  {
+    "id": "tex_problem_169",
+    "topic": "Równania trygonometryczne",
+    "statement": "\\text{Rozwiaż równanie} R \\cos \\frac{x-|x|}{2}=1.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zanim przejdziesz do rozwiązywania, zas\\tanów się nad wyrażeniem } |x|\\text{. Jak zachowuje się wartość bezwzględna dla liczb dodatnich i ujemnych?}",
+        "expression": "|x| = \\begin{cases} x & \\text{dla } x \\geq 0 \\ -x & \\text{dla } x < 0 \\end{cases}",
+        "explanation": "\\text{Definicja wartości bezwzględnej - kluczowa do analizy wyrażenia } x - |x|"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz oblicz } x - |x| \\text{ dla obu przypadków. Co otrzymasz gdy } x \\geq 0\\text{?}",
+        "expression": "\\text{Dla } x \\geq 0: \\quad x - |x| = x - x = 0",
+        "explanation": "\\text{Gdy } x \\text{ jest nieujemne, } |x| = x\\text{, więc różnica wynosi zero}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{A co się dzieje gdy } x < 0\\text{? Podstaw } |x| = -x \\text{ i oblicz różnicę}",
+        "expression": "\\text{Dla } x < 0: \\quad x - |x| = x - (-x) = x + x = 2x",
+        "explanation": "\\text{Gdy } x \\text{ jest ujemne, } |x| = -x\\text{, więc otrzymujemy } 2x"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw otrzymane wyrażenia do równania. Jak będzie wyglądać równanie dla } x \\geq 0\\text{?}",
+        "expression": "\\text{Dla } x \\geq 0: \\quad R \\cos \\frac{0}{2} = R \\cos 0 = R \\cdot 1 = R = 1",
+        "explanation": "\\text{Ponieważ } \\cos 0 = 1\\text{, równanie sprowadza się do } R = 1"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Czy warunek } R = 1 \\text{ jest spełniony? Jeśli tak, to wszystkie } x \\geq 0 \\text{ są rozwiązaniami tego przypadku}",
+        "expression": "\\text{Jeśli } R = 1\\text{, to dla } x \\geq 0 \\text{ równanie jest spełnione}",
+        "explanation": "\\text{Pierwszy przypadek daje nieskończenie wiele rozwiązań gdy } R = 1"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz rozpatrz przypadek } x < 0\\text{. Jak wygląda równanie po podstawieniu } x - |x| = 2x\\text{?}",
+        "expression": "\\text{Dla } x < 0: \\quad R \\cos \\frac{2x}{2} = R \\cos x = 1",
+        "explanation": "\\text{Upraszczamy ułamek i otrzymujemy równanie z cosinusem}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Przekształć równanie tak, aby wyznaczyć cosinus. Pamiętaj o założeniu } R \\neq 0",
+        "expression": "\\cos x = \\frac{1}{R}",
+        "explanation": "\\text{Dzielimy obie strony przez } R \\text{ (zakładając } R \\neq 0\\text{)}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Aby równanie miało rozwiązania, wartość } \\frac{1}{R} \\text{ musi należeć do dziedziny cosinusa. Jaki warunek musi spełniać } R\\text{?}",
+        "expression": "\\left|\\frac{1}{R}\\right| \\leq 1 \\Rightarrow |R| \\geq 1",
+        "explanation": "\\text{Cosinus przyjmuje wartości z przedziału } [-1, 1]"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Jeśli warunek } |R| \\geq 1 \\text{ jest spełniony, to dla jakich } x < 0 \\text{ cosinus równa się } \\frac{1}{R}\\text{?}",
+        "expression": "x = \\pm \\arc\\cos\\left(\\frac{1}{R}\\right) + 2\\pi k, \\; k \\in \\mathbb{Z}",
+        "explanation": "\\text{Ogólne rozwiązanie równania } \\cos x = a"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Pamiętaj o ograniczeniu } x < 0\\text{. Które z otrzymanych wartości spełniają ten warunek?}",
+        "expression": "x = -\\arc\\cos\\left(\\frac{1}{R}\\right) + 2\\pi k \\text{ dla odpowiednich } k \\text{ takich, że } x < 0",
+        "explanation": "\\text{Wybieramy tylko te rozwiązania, które są ujemne}"
+      }
+    ],
+    "solutions": [
+      "\\text{Jeśli } R = 1\\text{: } x \\geq 0 \\text{ oraz } x = -\\frac{\\pi}{3} + 2\\pi k, \\; k \\in \\mathbb{Z} \\text{ (dla } x < 0\\text{)}",
+      "\\text{Jeśli } |R| > 1\\text{: } x = -\\arc\\cos\\left(\\frac{1}{R}\\right) + 2\\pi k \\text{ dla odpowiednich } k \\text{ takich, że } x < 0",
+      "\\text{Jeśli } |R| < 1\\text{: brak rozwiązań}"
+    ],
+    "parameters": {
+      "domain": "R \\neq 0, \\text{ oraz } |R| \\geq 1 \\text{ dla istnienia rozwiązań w przypadku } x < 0"
     }
   },
   {
