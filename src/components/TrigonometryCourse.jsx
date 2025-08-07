@@ -3,10 +3,11 @@ import ProblemList from './ProblemList';
 import ProblemView from './ProblemView';
 import TrigonometryQuiz from './TrigonometryQuiz';
 import QuizSelector from './QuizSelector';
+import LaTeXChecker from './LaTeXChecker';
 import problemsData from '../data/problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('course'); // 'course' | 'quiz'
+  const [mode, setMode] = useState('course'); // 'course' | 'quiz' | 'checker'
   const [currentProblem, setCurrentProblem] = useState(null);
   const [completedProblems, setCompletedProblems] = useState(new Set());
   const [problems] = useState(problemsData);
@@ -48,6 +49,15 @@ const TrigonometryCourse = () => {
   const handleQuizBack = () => {
     setMode('course');
   };
+
+  const handleCheckerBack = () => {
+    setMode('course');
+  };
+
+  // Render checker mode
+  if (mode === 'checker') {
+    return <LaTeXChecker onBack={handleCheckerBack} />;
+  }
 
   // Render quiz mode
   if (mode === 'quiz') {
