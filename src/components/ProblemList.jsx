@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import MathRenderer from './MathRenderer';
 
-const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set() }) => {
+const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set(), title = "Zadania", subtitle }) => {
   const groupedProblems = useMemo(() => {
     return problems.reduce((acc, problem) => {
       const topic = problem.topic || 'Inne';
@@ -80,10 +80,10 @@ const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set() 
         {/* Header */}
         <header className="mb-8 md:mb-20">
           <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2 md:mb-4">
-            Trygonometria
+            {title}
           </h1>
           <p className="text-gray-400 text-base md:text-lg">
-            {problems.length} zadań
+            {subtitle || `${problems.length} zadań`}
           </p>
         </header>
 

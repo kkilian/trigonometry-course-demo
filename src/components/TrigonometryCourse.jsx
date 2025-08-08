@@ -52,6 +52,28 @@ const TrigonometryCourse = () => {
   };
   
   const problems = getCurrentProblems();
+  
+  // Get section title and subtitle based on mode
+  const getSectionInfo = () => {
+    if (mode === 'sequences') {
+      return {
+        title: 'Ciągi Geometryczne',
+        subtitle: `${problems.length} zadań z rozwiązaniami`
+      };
+    }
+    if (mode === 'sequences-intro') {
+      return {
+        title: 'Ciągi - Wprowadzenie', 
+        subtitle: `${problems.length} zadań wprowadzających`
+      };
+    }
+    return {
+      title: 'Trygonometria',
+      subtitle: `${problems.length} zadań krok po kroku`
+    };
+  };
+  
+  const sectionInfo = getSectionInfo();
 
   // Load completed problems from localStorage
   useEffect(() => {
@@ -180,6 +202,8 @@ const TrigonometryCourse = () => {
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
+          title={sectionInfo.title}
+          subtitle={sectionInfo.subtitle}
         />
       )}
     </>
