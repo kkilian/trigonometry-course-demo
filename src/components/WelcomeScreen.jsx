@@ -38,7 +38,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
     {
       id: 'sequences-intro',
       title: 'Ciągi Wstęp',
-      description: '53 zadania wprowadzające',
+      description: '49 zadań wprowadzających',
       color: 'from-teal-600 to-teal-700',
       hoverBg: 'hover:bg-teal-900/20',
       icon: (

@@ -22,6 +22,7 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
               
               <h2 className="text-lg md:text-xl font-bold text-white">
                 {currentMode === 'sequences' ? 'Ciągi Geometryczne' :
+                 currentMode === 'sequences-intro' ? 'Ciągi Wstęp' :
                  currentMode === 'quiz' ? 'Quiz' :
                  'Trygonometria'}
               </h2>
@@ -32,6 +33,8 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
                 ? 'Ucz się trygonometrii krok po kroku'
                 : currentMode === 'sequences'
                 ? 'Poznaj ciągi geometryczne'
+                : currentMode === 'sequences-intro'
+                ? 'Naucz się podstaw ciągów'
                 : 'Sprawdź swoją wiedzę w teście'
               }
             </div>
@@ -72,6 +75,24 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
                 </svg>
                 <span className="hidden md:inline">Ciągi (34)</span>
                 <span className="md:hidden">Ciągi</span>
+              </div>
+            </button>
+            
+            <button
+              onClick={() => onModeChange('sequences-intro')}
+              className={`flex-1 md:flex-none px-3 md:px-4 py-2 rounded-lg font-medium text-sm md:text-base transition-all whitespace-nowrap ${
+                currentMode === 'sequences-intro'
+                  ? 'bg-teal-600 text-white'
+                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+              }`}
+            >
+              <div className="flex items-center justify-center md:justify-start gap-2">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span className="hidden md:inline">Wstęp (49)</span>
+                <span className="md:hidden">Wstęp</span>
               </div>
             </button>
             

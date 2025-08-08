@@ -6,25 +6,46 @@ import QuizSelector from './QuizSelector';
 import WelcomeScreen from './WelcomeScreen';
 import trigonometryProblems from '../data/problems.json';
 import sequencesProblems from '../data/sequences-problems.json';
+import sequencesIntroProblems from '../data/sequences-intro-problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'quiz'
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'quiz'
+  
+  // Debug: Log mode changes
+  useEffect(() => {
+    console.log('Mode changed to:', mode);
+  }, [mode]);
   const [currentProblem, setCurrentProblem] = useState(null);
   const [completedTrigProblems, setCompletedTrigProblems] = useState(new Set());
   const [completedSeqProblems, setCompletedSeqProblems] = useState(new Set());
+  const [completedSeqIntroProblems, setCompletedSeqIntroProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
-    return mode === 'sequences' ? sequencesProblems : trigonometryProblems;
+    console.log('getCurrentProblems called with mode:', mode);
+    if (mode === 'sequences') {
+      console.log('Returning sequencesProblems:', sequencesProblems.length, 'problems');
+      return sequencesProblems;
+    }
+    if (mode === 'sequences-intro') {
+      console.log('Returning sequencesIntroProblems:', sequencesIntroProblems.length, 'problems');
+      return sequencesIntroProblems;
+    }
+    console.log('Returning trigonometryProblems:', trigonometryProblems.length, 'problems');
+    return trigonometryProblems;
   };
   
   const getCurrentCompleted = () => {
-    return mode === 'sequences' ? completedSeqProblems : completedTrigProblems;
+    if (mode === 'sequences') return completedSeqProblems;
+    if (mode === 'sequences-intro') return completedSeqIntroProblems;
+    return completedTrigProblems;
   };
   
   const setCurrentCompleted = (newSet) => {
     if (mode === 'sequences') {
       setCompletedSeqProblems(newSet);
+    } else if (mode === 'sequences-intro') {
+      setCompletedSeqIntroProblems(newSet);
     } else {
       setCompletedTrigProblems(newSet);
     }
@@ -54,6 +75,16 @@ const TrigonometryCourse = () => {
       }
     }
     
+    // Load sequences-intro progress
+    const savedSeqIntro = localStorage.getItem('completedSeqIntroProblems');
+    if (savedSeqIntro) {
+      try {
+        setCompletedSeqIntroProblems(new Set(JSON.parse(savedSeqIntro)));
+      } catch (e) {
+        console.error('Error loading sequences-intro progress:', e);
+      }
+    }
+    
     // Migrate old data if exists
     const oldSaved = localStorage.getItem('completedProblems');
     if (oldSaved && !savedTrig) {
@@ -75,6 +106,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedSeqProblems', JSON.stringify([...completedSeqProblems]));
   }, [completedSeqProblems]);
+  
+  // Save sequences-intro progress
+  useEffect(() => {
+    localStorage.setItem('completedSeqIntroProblems', JSON.stringify([...completedSeqIntroProblems]));
+  }, [completedSeqIntroProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);
@@ -99,8 +135,10 @@ const TrigonometryCourse = () => {
   };
 
   const handleWelcomeSelect = (selectedMode) => {
+    console.log('handleWelcomeSelect called with selectedMode:', selectedMode);
     setMode(selectedMode);
     setCurrentProblem(null);
+    console.log('Mode set to:', selectedMode);
   };
 
   const handleBackToWelcome = () => {
