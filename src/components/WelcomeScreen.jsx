@@ -36,6 +36,27 @@ const WelcomeScreen = ({ onSelectMode }) => {
       )
     },
     {
+      id: 'sequences-intro',
+      title: 'Ciągi Wstęp',
+      description: '53 zadania wprowadzające',
+      color: 'from-teal-600 to-teal-700',
+      hoverBg: 'hover:bg-teal-900/20',
+      icon: (
+        <svg className="w-12 h-12" fill="none" viewBox="0 0 100 100">
+          <text x="15" y="40" fontSize="20" fill="currentColor" fontFamily="serif">a</text>
+          <text x="25" y="35" fontSize="12" fill="currentColor" fontFamily="serif">1</text>
+          <text x="40" y="40" fontSize="20" fill="currentColor" fontFamily="serif">,</text>
+          <text x="50" y="40" fontSize="20" fill="currentColor" fontFamily="serif">a</text>
+          <text x="60" y="35" fontSize="12" fill="currentColor" fontFamily="serif">2</text>
+          <text x="75" y="40" fontSize="20" fill="currentColor" fontFamily="serif">,...</text>
+          
+          <text x="15" y="65" fontSize="16" fill="currentColor" fontFamily="serif">a</text>
+          <text x="25" y="60" fontSize="10" fill="currentColor" fontFamily="serif">n</text>
+          <text x="35" y="65" fontSize="16" fill="currentColor" fontFamily="serif">=</text>
+        </svg>
+      )
+    },
+    {
       id: 'quiz',
       title: 'Quiz',
       description: 'Test wiedzy - 10 pytań',
