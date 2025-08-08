@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "latex-checker": "REACT_APP_MODE=checker PORT=3001 react-scripts start"
   },
   "eslintConfig": {
     "extends": [

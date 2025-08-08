@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import MathRenderer from './MathRenderer';
-import problemsData from '../data/problems.json';
+import defaultProblemsData from '../data/problems.json';
 
-const LaTeXChecker = ({ onBack }) => {
+const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [problematicIds, setProblematicIds] = useState(new Set());
   const [deletedIds, setDeletedIds] = useState(new Set());
   const [reviewedIds, setReviewedIds] = useState(new Set());
   const [finished, setFinished] = useState(false);
-  const problems = problemsData;
+  const problems = propProblems || defaultProblemsData;
 
   // Load saved state from localStorage
   useEffect(() => {
@@ -277,7 +277,7 @@ const LaTeXChecker = ({ onBack }) => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h1 className="text-2xl font-bold text-white">LaTeX Checker</h1>
+              <h1 className="text-2xl font-bold text-white">{title || 'LaTeX Checker'}</h1>
               <p className="text-gray-400 mt-1">Sprawdzanie poprawności renderowania</p>
             </div>
             <button

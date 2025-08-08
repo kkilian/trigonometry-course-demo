@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import LaTeXCheckerApp from './LaTeXCheckerApp';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// Check if we're in checker mode
-const isCheckerMode = process.env.REACT_APP_MODE === 'checker';
-
 root.render(
   <React.StrictMode>
-    {isCheckerMode ? <LaTeXCheckerApp /> : <App />}
+    <LaTeXCheckerApp />
   </React.StrictMode>
 );
 
