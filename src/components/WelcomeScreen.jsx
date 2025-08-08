@@ -79,6 +79,13 @@ const WelcomeScreen = ({ onSelectMode }) => {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-6">
       <div className="w-full max-w-md">
+        {/* Demo Badge */}
+        <div className="text-center mb-8">
+          <span className="text-gray-400 text-sm tracking-wide" style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
+            @Demo
+          </span>
+        </div>
+        
         <div className="flex flex-col gap-4">
           {modules.map((module) => (
             <button
