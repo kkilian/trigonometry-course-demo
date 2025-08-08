@@ -14,12 +14,9 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
     if (!hintShownSteps.has(stepIndex) && step.hint) {
       setHintShownSteps(new Set([...hintShownSteps, stepIndex]));
     }
-    // Second click (or first if no hint): show expression and explanation
+    // Second click (or first if no hint): show expression, explanation AND mark as completed
     else if (!revealedSteps.has(stepIndex)) {
       setRevealedSteps(new Set([...revealedSteps, stepIndex]));
-    }
-    // Third click: mark as completed
-    else if (!completedSteps.has(stepIndex)) {
       setCompletedSteps(new Set([...completedSteps, stepIndex]));
       
       // Check if all steps are completed
@@ -196,9 +193,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                 <article
                   key={index}
                   onClick={() => handleStepClick(index)}
-                  className={`relative cursor-pointer transition-all duration-200 ${
-                    completedSteps.has(index) ? "opacity-40" : "opacity-100"
-                  }`}
+                  className="relative cursor-pointer transition-all duration-200"
                 >
                   {/* Yellow glow when hint is shown */}
                   {hintShownSteps.has(index) && !revealedSteps.has(index) && (
