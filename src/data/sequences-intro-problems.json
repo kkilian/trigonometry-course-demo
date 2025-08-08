@@ -1,0 +1,3231 @@
+[
+  {
+    "id": "tex_problem_1",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{6}, \\frac{1}{8}, \\frac{1}{10}, \\ldots$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Przyjrzyj się licznikowi każdego ułamka. Co zauważasz?}",
+        "expression": "a_1 = \\frac{1}{2}, \\; a_2 = \\frac{1}{4}, \\; a_3 = \\frac{1}{6}, \\; a_4 = \\frac{1}{8}, \\; a_5 = \\frac{1}{10}",
+        "explanation": "\\text{Wszystkie wyrazy mają licznik równy 1}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz sprawdź mianowniki. Jakie liczby pojawiają się w mianownikach kolejnych wyrazów?}",
+        "expression": "\\text{Mianowniki: } 2, 4, 6, 8, 10, \\ldots",
+        "explanation": "\\text{Wypisujemy mianowniki w kolejności}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Czy widzisz jakąś prawidłowość w ciągu mianowników? Jaka jest różnica między kolejnymi liczbami?}",
+        "expression": "4 - 2 = 2, \\; 6 - 4 = 2, \\; 8 - 6 = 2, \\; 10 - 8 = 2",
+        "explanation": "\\text{Mianowniki tworzą ciąg arytmetyczny o różnicy } r = 2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro mianowniki to liczby parzyste zaczynające od 2, jak możesz je wyrazić za pomocą } n\\text{?}",
+        "expression": "\\text{Mianownik } n\\text{-tego wyrazu: } 2n",
+        "explanation": "\\text{Dla } n = 1: 2 \\cdot 1 = 2, \\text{ dla } n = 2: 2 \\cdot 2 = 4, \\text{ itd.}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź swoją hipotezę dla kilku pierwszych wyrazów. Czy wzór } a_n = \\frac{1}{2n} \\text{ jest poprawny?}",
+        "expression": "a_1 = \\frac{1}{2 \\cdot 1} = \\frac{1}{2} \\checkmark, \\; a_2 = \\frac{1}{2 \\cdot 2} = \\frac{1}{4} \\checkmark, \\; a_3 = \\frac{1}{2 \\cdot 3} = \\frac{1}{6} \\checkmark",
+        "explanation": "\\text{Weryfikujemy wzór dla pierwszych trzech wyrazów}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Kontynuuj sprawdzanie dla pozostałych wyrazów}",
+        "expression": "a_4 = \\frac{1}{2 \\cdot 4} = \\frac{1}{8} \\checkmark, \\; a_5 = \\frac{1}{2 \\cdot 5} = \\frac{1}{10} \\checkmark",
+        "explanation": "\\text{Wzór sprawdza się dla wszystkich podanych wyrazów}"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{1}{2n}, \\; n \\in \\mathbb{N}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_2",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $6,-6,6,-6,6,-6,6, \\ldots$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Przyjrzyj się wartościom w ciągu. Jakie dwie wartości się powtarzają?}",
+        "expression": "a_1 = 6, \\; a_2 = -6, \\; a_3 = 6, \\; a_4 = -6, \\; a_5 = 6, \\; a_6 = -6, \\; \\ldots",
+        "explanation": "\\text{Ciąg składa się z naprzemiennych wartości 6 i -6}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Sprawdź pozycje wyrazów o tej samej wartości. Które indeksy dają wartość 6, a które -6?}",
+        "expression": "\\text{Dla } n \\text{ nieparzystych: } a_n = 6 \\quad \\text{Dla } n \\text{ parzystych: } a_n = -6",
+        "explanation": "\\text{Zauważamy zależność od parzystości indeksu}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jak możesz matematycznie wyrazić zmianę znaku w zależności od parzystości } n\\text{?}",
+        "expression": "(-1)^{n+1} = \\begin{cases} 1 & \\text{dla } n \\text{ nieparzystych} \\ -1 & \\text{dla } n \\text{ parzystych} \\end{cases}",
+        "explanation": "\\text{Wyrażenie } (-1)^{n+1} \\text{ daje odpowiedni znak}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Sprawdź czy wzór } a_n = 6 \\cdot (-1)^{n+1} \\text{ działa dla pierwszych kilku wyrazów}",
+        "expression": "a_1 = 6 \\cdot (-1)^{1+1} = 6 \\cdot (-1)^2 = 6 \\cdot 1 = 6 \\; \\checkmark",
+        "explanation": "\\text{Dla } n = 1 \\text{ otrzymujemy poprawną wartość}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Kontynuuj sprawdzanie dla kolejnych wyrazów}",
+        "expression": "a_2 = 6 \\cdot (-1)^{2+1} = 6 \\cdot (-1)^3 = 6 \\cdot (-1) = -6 \\; \\checkmark",
+        "explanation": "\\text{Dla } n = 2 \\text{ również otrzymujemy poprawną wartość}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Zweryfikuj jeszcze jeden wyraz, aby upewnić się co do wzoru}",
+        "expression": "a_3 = 6 \\cdot (-1)^{3+1} = 6 \\cdot (-1)^4 = 6 \\cdot 1 = 6 \\; \\checkmark",
+        "explanation": "\\text{Wzór działa poprawnie dla wszystkich sprawdzonych wyrazów}"
+      }
+    ],
+    "solutions": [
+      "a_n = 6 \\cdot (-1)^{n+1}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_3",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{2}, \\frac{2}{5}, \\frac{3}{10}, \\frac{4}{17}, \\frac{5}{26}, \\ldots$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Spójrz na liczniki kolejnych ułamków. Czy widzisz jakąś prawidłowość?}",
+        "expression": "\\text{Liczniki: } 1, 2, 3, 4, 5, \\ldots",
+        "explanation": "\\text{Liczniki to kolejne liczby naturalne, więc licznik n-tego wyrazu to } n"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz przyjrzyj się mianownikom. Jakie to są liczby?}",
+        "expression": "\\text{Mianowniki: } 2, 5, 10, 17, 26, \\ldots",
+        "explanation": "\\text{Mianowniki nie tworzą oczywistej progresji arytmetycznej ani geometrycznej}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz różnice między kolejnymi mianownikami. Co zauważasz?}",
+        "expression": "5 - 2 = 3, \\quad 10 - 5 = 5, \\quad 17 - 10 = 7, \\quad 26 - 17 = 9",
+        "explanation": "\\text{Różnice między kolejnymi mianownikami to: } 3, 5, 7, 9, \\ldots"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Czy różnice } 3, 5, 7, 9 \\text{ tworzą jakąś znaną ci progresję?}",
+        "expression": "\\text{Różnice tworzą ciąg arytmetyczny o różnicy } 2: 3, 5, 7, 9, \\ldots",
+        "explanation": "\\text{Każda kolejna różnica jest o 2 większa od poprzedniej}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jeśli różnice między mianownikami to } 2n+1 \\text{, to jak możesz wyrazić n-ty mianownik przez pierwszy mianownik?}",
+        "expression": "a_1 = 2, \\quad a_2 = 2 + 3, \\quad a_3 = 2 + 3 + 5, \\quad a_4 = 2 + 3 + 5 + 7",
+        "explanation": "\\text{Każdy mianownik to suma pierwszego mianownika i wszystkich różnic do tego miejsca}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Zauważ, że różnice to } 3, 5, 7, 9, \\ldots \\text{ Jak można zapisać k-tą różnicę?}",
+        "expression": "\\text{k-ta różnica} = 2k + 1 \\text{ dla } k = 1, 2, 3, \\ldots",
+        "explanation": "\\text{Pierwsza różnica: } 2 \\cdot 1 + 1 = 3\\text{, druga: } 2 \\cdot 2 + 1 = 5\\text{, itd.}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Teraz oblicz sumę pierwszych } (n-1) \\text{ różnic. Pamiętasz wzór na sumę kolejnych liczb nieparzystych?}",
+        "expression": "\\sum_{k=1}^{n-1}(2k+1) = \\sum_{k=1}^{n-1}2k + \\sum_{k=1}^{n-1}1 = 2 \\cdot \\frac{(n-1)n}{2} + (n-1) = (n-1)n + (n-1)",
+        "explanation": "\\text{Rozkładamy sumę i stosujemy wzory na sumę liczb naturalnych}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Uprość wyrażenie } (n-1)n + (n-1) \\text{ wyłączając wspólny czynnik}",
+        "expression": "(n-1)n + (n-1) = (n-1)(n+1) = n^2 - 1",
+        "explanation": "\\text{Wyłączamy } (n-1) \\text{ i otrzymujemy różnicę kwadratów}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Jaki jest więc n-ty mianownik, jeśli pierwszy wynosi 2, a suma różnic to } n^2 - 1\\text{?}",
+        "expression": "\\text{n-ty mianownik} = 2 + (n^2 - 1) = n^2 + 1",
+        "explanation": "\\text{Dodajemy pierwszy mianownik do sumy wszystkich różnic}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Połącz wyniki dla licznika i mianownika. Jaki jest wzór na n-ty wyraz ciągu?}",
+        "expression": "a_n = \\frac{n}{n^2 + 1}",
+        "explanation": "\\text{Licznik to } n\\text{, mianownik to } n^2 + 1"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Sprawdź czy wzór działa dla pierwszych kilku wyrazów}",
+        "expression": "a_1 = \\frac{1}{1^2+1} = \\frac{1}{2}, \\quad a_2 = \\frac{2}{2^2+1} = \\frac{2}{5}, \\quad a_3 = \\frac{3}{3^2+1} = \\frac{3}{10}",
+        "explanation": "\\text{Wzór zgadza się z danymi wyrazami ciągu}"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{n}{n^2 + 1}"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_4",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{4}, \\frac{1}{16}, \\frac{1}{36}, \\frac{1}{64}, \\frac{1}{100}, \\ldots$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Spójrz na mianowniki ułamków: 4, 16, 36, 64, 100. Czy potrafisz rozpoznać wzór w tych liczbach?}",
+        "expression": "\\frac{1}{4}, \\frac{1}{16}, \\frac{1}{36}, \\frac{1}{64}, \\frac{1}{100}",
+        "explanation": "\\text{Analizujemy mianowniki kolejnych wyrazów ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Sprawdź czy te liczby to kwadraty liczb naturalnych. Jakie to mogą być liczby?}",
+        "expression": "4 = 2^2, \\quad 16 = 4^2, \\quad 36 = 6^2, \\quad 64 = 8^2, \\quad 100 = 10^2",
+        "explanation": "\\text{Rozpoznajemy, że mianowniki to kwadraty liczb parzystych}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jakie są kolejne liczby parzyste? Jak można je zapisać za pomocą wzoru z } n\\text{?}",
+        "expression": "2, 4, 6, 8, 10, \\ldots = 2 \\cdot 1, 2 \\cdot 2, 2 \\cdot 3, 2 \\cdot 4, 2 \\cdot 5, \\ldots",
+        "explanation": "\\text{Liczby parzyste to } 2n \\text{ dla } n = 1, 2, 3, 4, 5, \\ldots"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz gdy wiesz, że mianowniki to kwadraty liczb } 2n\\text{, jak zapiszesz ogólny wzór na mianownik?}",
+        "expression": "\\text{Mianownik } n\\text{-tego wyrazu: } (2n)^2 = 4n^2",
+        "explanation": "\\text{Dla } n = 1, 2, 3, \\ldots \\text{ otrzymujemy } 4 \\cdot 1^2 = 4, 4 \\cdot 2^2 = 16, 4 \\cdot 3^2 = 36, \\ldots"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Skoro każdy wyraz ciągu ma licznik równy 1, a mianownik } 4n^2\\text{, jak zapiszesz wzór na } a_n\\text{?}",
+        "expression": "a_n = \\frac{1}{4n^2}",
+        "explanation": "\\text{Ogólny wzór na } n\\text{-ty wyraz ciągu}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź poprawność wzoru podstawiając pierwsze kilka wartości } n\\text{. Czy otrzymujesz dane wyrazy?}",
+        "expression": "a_1 = \\frac{1}{4 \\cdot 1^2} = \\frac{1}{4}, \\quad a_2 = \\frac{1}{4 \\cdot 2^2} = \\frac{1}{16}, \\quad a_3 = \\frac{1}{4 \\cdot 3^2} = \\frac{1}{36}",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność wzoru dla pierwszych trzech wyrazów}"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{1}{4n^2}, \\quad n \\in \\mathbb{N}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_5",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $1, \\frac{1}{9}, \\frac{1}{25}, \\frac{1}{49}, \\frac{1}{81}, \\ldots$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Przyjrzyj się uważnie pierwszym wyrazom ciągu. Co możesz powiedzieć o licznikach wszystkich ułamków?}",
+        "expression": "a_1 = \\frac{1}{1}, \\; a_2 = \\frac{1}{9}, \\; a_3 = \\frac{1}{25}, \\; a_4 = \\frac{1}{49}, \\; a_5 = \\frac{1}{81}",
+        "explanation": "\\text{Przepisujemy pierwsze wyrazy, zwracając uwagę na to, że wszystkie mają licznik równy 1}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Skoro liczniki są takie same, skupmy się na mianownikach. Jakie liczby to są: 1, 9, 25, 49, 81?}",
+        "expression": "1 = 1^2, \\; 9 = 3^2, \\; 25 = 5^2, \\; 49 = 7^2, \\; 81 = 9^2",
+        "explanation": "\\text{Rozpoznajemy, że wszystkie mianowniki to kwadraty liczb naturalnych}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Sprawdź jakie to są liczby: 1, 3, 5, 7, 9. Czy widzisz jakąś prawidłowość w tej sekwencji?}",
+        "expression": "1, 3, 5, 7, 9, \\ldots \\text{ to kolejne liczby nieparzyste}",
+        "explanation": "\\text{Podstawy potęg tworzą ciąg arytmetyczny o różnicy 2}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jak możesz zapisać } n\\text{-tą liczbę nieparzystą za pomocą wzoru ogólnego?}",
+        "expression": "\\text{n-ta liczba nieparzysta} = 2n - 1",
+        "explanation": "\\text{Sprawdzamy: dla } n=1: 2 \\cdot 1 - 1 = 1, \\text{ dla } n=2: 2 \\cdot 2 - 1 = 3, \\text{ itd.}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Skoro mianowniki to kwadraty kolejnych liczb nieparzystych, jak zapiszesz mianownik } n\\text{-tego wyrazu?}",
+        "expression": "\\text{Mianownik } n\\text{-tego wyrazu} = (2n-1)^2",
+        "explanation": "\\text{Łączymy wzór na liczbę nieparzystą z faktem, że mianowniki to kwadraty}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Mając licznik i mianownik, jak zapiszesz wzór ogólny na } n\\text{-ty wyraz ciągu?}",
+        "expression": "a_n = \\frac{1}{(2n-1)^2}",
+        "explanation": "\\text{Łączymy stały licznik 1 z mianownikiem będącym kwadratem } (2n-1)"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź poprawność wzoru dla kilku pierwszych wyrazów. Czy otrzymujesz te same wartości co w zadaniu?}",
+        "expression": "a_1 = \\frac{1}{(2 \\cdot 1-1)^2} = \\frac{1}{1^2} = 1, \\; a_2 = \\frac{1}{(2 \\cdot 2-1)^2} = \\frac{1}{3^2} = \\frac{1}{9}",
+        "explanation": "\\text{Weryfikujemy wzór dla pierwszych dwóch wyrazów - zgadza się z danymi}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Kontynuuj sprawdzenie dla kolejnych wyrazów, aby upewnić się co do poprawności wzoru}",
+        "expression": "a_3 = \\frac{1}{(2 \\cdot 3-1)^2} = \\frac{1}{5^2} = \\frac{1}{25}, \\; a_4 = \\frac{1}{(2 \\cdot 4-1)^2} = \\frac{1}{7^2} = \\frac{1}{49}",
+        "explanation": "\\text{Kolejne sprawdzenia potwierdzają poprawność wzoru ogólnego}"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{1}{(2n-1)^2}, \\; n \\in \\mathbb{N}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_6",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=\\frac{1}{2}(n-4), n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć pierwsze cztery wyrazy ciągu, jakie wartości } n \\text{ powinieneś podstawić do wzoru } a_n = \\frac{1}{2}(n-4)\\text{?}",
+        "expression": "a_1 = \\frac{1}{2}(1-4) = \\frac{1}{2} \\cdot (-3) = -\\frac{3}{2}",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz kolejne wyrazy podstawiając } n = 2, 3, 4",
+        "expression": "a_2 = \\frac{1}{2}(2-4) = \\frac{1}{2} \\cdot (-2) = -1",
+        "explanation": "\\text{Dla } n = 2 \\text{ otrzymujemy drugi wyraz ciągu}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Kontynuuj obliczenia dla pozostałych wyrazów}",
+        "expression": "a_3 = \\frac{1}{2}(3-4) = \\frac{1}{2} \\cdot (-1) = -\\frac{1}{2}",
+        "explanation": "\\text{Dla } n = 3 \\text{ otrzymujemy trzeci wyraz ciągu}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Oblicz ostatni z pierwszych czterech wyrazów}",
+        "expression": "a_4 = \\frac{1}{2}(4-4) = \\frac{1}{2} \\cdot 0 = 0",
+        "explanation": "\\text{Dla } n = 4 \\text{ otrzymujemy czwarty wyraz ciągu}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Aby znaleźć } a_{2k}\\text{, co powinieneś podstawić za } n \\text{ w wzorze ogólnym?}",
+        "expression": "a_{2k} = \\frac{1}{2}(2k-4) = \\frac{1}{2} \\cdot 2(k-2) = k-2",
+        "explanation": "\\text{Podstawiamy } n = 2k \\text{ i upraszczamy wyrażenie}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Podobnie postąp dla } a_{3k}\\text{. Jakie podstawienie wykonasz?}",
+        "expression": "a_{3k} = \\frac{1}{2}(3k-4) = \\frac{3k-4}{2}",
+        "explanation": "\\text{Podstawiamy } n = 3k \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Dla } a_{2k-1}\\text{, jak zapiszesz indeks w postaci wyrażenia z } k\\text{?}",
+        "expression": "a_{2k-1} = \\frac{1}{2}((2k-1)-4) = \\frac{1}{2}(2k-5) = \\frac{2k-5}{2}",
+        "explanation": "\\text{Podstawiamy } n = 2k-1 \\text{ i upraszczamy}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Na koniec oblicz } a_{5k+3}\\text{. Jakie podstawienie za } n \\text{ wykonasz tym razem?}",
+        "expression": "a_{5k+3} = \\frac{1}{2}((5k+3)-4) = \\frac{1}{2}(5k-1) = \\frac{5k-1}{2}",
+        "explanation": "\\text{Podstawiamy } n = 5k+3 \\text{ do wzoru ogólnego}"
+      }
+    ],
+    "solutions": [
+      "\\text{Pierwsze cztery wyrazy: } a_1 = -\\frac{3}{2}, a_2 = -1, a_3 = -\\frac{1}{2}, a_4 = 0",
+      "a_{2k} = k-2",
+      "a_{3k} = \\frac{3k-4}{2}",
+      "a_{2k-1} = \\frac{2k-5}{2}",
+      "a_{5k+3} = \\frac{5k-1}{2}"
+    ],
+    "parameters": {
+      "domain": "k \\in \\mathbb{N}_{+}"
+    }
+  },
+  {
+    "id": "tex_problem_7",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=3-n^{2}, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = 3 - n^2\\text{. Jak obliczysz pierwsze wyrazy ciągu?}",
+        "expression": "a_1 = 3 - 1^2 = 3 - 1 = 2",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Kontynuuj obliczenia dla kolejnych wartości } n",
+        "expression": "a_2 = 3 - 2^2 = 3 - 4 = -1",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz trzeci i czwarty wyraz analogicznie}",
+        "expression": "a_3 = 3 - 3^2 = 3 - 9 = -6, \\quad a_4 = 3 - 4^2 = 3 - 16 = -13",
+        "explanation": "\\text{Podstawiamy kolejno } n = 3 \\text{ i } n = 4"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz przejdź do wyrazów z parametrem } k\\text{. Jak znajdziesz } a_{2k}\\text{?}",
+        "expression": "a_{2k} = 3 - (2k)^2 = 3 - 4k^2",
+        "explanation": "\\text{Podstawiamy } n = 2k \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Analogicznie oblicz } a_{3k}\\text{. Co podstawisz za } n\\text{?}",
+        "expression": "a_{3k} = 3 - (3k)^2 = 3 - 9k^2",
+        "explanation": "\\text{Podstawiamy } n = 3k \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k-1} \\text{ pamiętaj o nawiasach przy podnoszeniu do kwadratu}",
+        "expression": "a_{2k-1} = 3 - (2k-1)^2",
+        "explanation": "\\text{Podstawiamy } n = 2k-1 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Rozwiń kwadrat dwumianu } (2k-1)^2\\text{. Pamiętasz wzór } (a-b)^2\\text{?}",
+        "expression": "(2k-1)^2 = (2k)^2 - 2 \\cdot 2k \\cdot 1 + 1^2 = 4k^2 - 4k + 1",
+        "explanation": "\\text{Stosujemy wzór } (a-b)^2 = a^2 - 2ab + b^2"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw rozwinięty kwadrat do wyrażenia na } a_{2k-1}",
+        "expression": "a_{2k-1} = 3 - (4k^2 - 4k + 1) = 3 - 4k^2 + 4k - 1 = 2 + 4k - 4k^2",
+        "explanation": "\\text{Usuwamy nawiasy i porządkujemy wyrazy}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Na koniec oblicz } a_{5k+3}\\text{. Jaki indeks podstawisz do wzoru?}",
+        "expression": "a_{5k+3} = 3 - (5k+3)^2",
+        "explanation": "\\text{Podstawiamy } n = 5k+3 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Rozwiń kwadrat } (5k+3)^2 \\text{ używając wzoru } (a+b)^2",
+        "expression": "(5k+3)^2 = (5k)^2 + 2 \\cdot 5k \\cdot 3 + 3^2 = 25k^2 + 30k + 9",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^2 = a^2 + 2ab + b^2"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Podstaw rozwinięty kwadrat i uporządkuj końcowe wyrażenie}",
+        "expression": "a_{5k+3} = 3 - (25k^2 + 30k + 9) = 3 - 25k^2 - 30k - 9 = -6 - 30k - 25k^2",
+        "explanation": "\\text{Usuwamy nawiasy i łączymy wyrazy podobne}"
+      }
+    ],
+    "solutions": [
+      "\\text{Cztery początkowe wyrazy: } a_1 = 2, a_2 = -1, a_3 = -6, a_4 = -13",
+      "a_{2k} = 3 - 4k^2",
+      "a_{3k} = 3 - 9k^2",
+      "a_{2k-1} = 2 + 4k - 4k^2",
+      "a_{5k+3} = -6 - 30k - 25k^2"
+    ],
+    "parameters": {
+      "k": "k \\in \\mathbb{N}_{+}"
+    }
+  },
+  {
+    "id": "tex_problem_8",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=2 n^{2}-4 n+1, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć pierwsze cztery wyrazy ciągu, jakie wartości } n \\text{ musisz podstawić do wzoru } a_n = 2n^2 - 4n + 1\\text{?}",
+        "expression": "a_1 = 2 \\cdot 1^2 - 4 \\cdot 1 + 1 = 2 - 4 + 1 = -1",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Kontynuuj obliczenia dla kolejnych wartości naturalnych}",
+        "expression": "a_2 = 2 \\cdot 2^2 - 4 \\cdot 2 + 1 = 2 \\cdot 4 - 8 + 1 = 8 - 8 + 1 = 1",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i obliczamy krok po kroku}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz trzeci i czwarty wyraz analogicznie}",
+        "expression": "a_3 = 2 \\cdot 3^2 - 4 \\cdot 3 + 1 = 2 \\cdot 9 - 12 + 1 = 18 - 12 + 1 = 7",
+        "explanation": "\\text{Podstawiamy } n = 3"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Dokończ obliczanie pierwszych czterech wyrazów}",
+        "expression": "a_4 = 2 \\cdot 4^2 - 4 \\cdot 4 + 1 = 2 \\cdot 16 - 16 + 1 = 32 - 16 + 1 = 17",
+        "explanation": "\\text{Podstawiamy } n = 4"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Teraz przejdź do wyrazów z parametrem } k\\text{. Aby znaleźć } a_{2k}\\text{, co musisz podstawić za } n\\text{?}",
+        "expression": "a_{2k} = 2(2k)^2 - 4(2k) + 1 = 2 \\cdot 4k^2 - 8k + 1 = 8k^2 - 8k + 1",
+        "explanation": "\\text{Podstawiamy } n = 2k \\text{ do wzoru ogólnego i upraszczamy}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Analogicznie oblicz } a_{3k}\\text{. Jakie podstawienie wykonasz?}",
+        "expression": "a_{3k} = 2(3k)^2 - 4(3k) + 1 = 2 \\cdot 9k^2 - 12k + 1 = 18k^2 - 12k + 1",
+        "explanation": "\\text{Podstawiamy } n = 3k \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Dla } a_{2k-1}\\text{, jak wygląda podstawienie za } n\\text{?}",
+        "expression": "a_{2k-1} = 2(2k-1)^2 - 4(2k-1) + 1",
+        "explanation": "\\text{Podstawiamy } n = 2k-1 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Aby rozwinąć } (2k-1)^2\\text{, jaki wzór skróconego mnożenia zastosujemy?}",
+        "expression": "(2k-1)^2 = (2k)^2 - 2 \\cdot 2k \\cdot 1 + 1^2 = 4k^2 - 4k + 1",
+        "explanation": "\\text{Stosujemy wzór } (a-b)^2 = a^2 - 2ab + b^2"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Podstaw rozwinięcie do wyrażenia na } a_{2k-1} \\text{ i uprość}",
+        "expression": "a_{2k-1} = 2(4k^2 - 4k + 1) - 4(2k-1) + 1 = 8k^2 - 8k + 2 - 8k + 4 + 1 = 8k^2 - 16k + 7",
+        "explanation": "\\text{Rozwijamy nawiasy i łączymy wyrazy podobne}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Na koniec oblicz } a_{5k+3}\\text{. Jakie podstawienie wykonasz za } n\\text{?}",
+        "expression": "a_{5k+3} = 2(5k+3)^2 - 4(5k+3) + 1",
+        "explanation": "\\text{Podstawiamy } n = 5k+3 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Rozwiń } (5k+3)^2 \\text{ używając wzoru na kwadrat sumy}",
+        "expression": "(5k+3)^2 = (5k)^2 + 2 \\cdot 5k \\cdot 3 + 3^2 = 25k^2 + 30k + 9",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^2 = a^2 + 2ab + b^2"
+      },
+      {
+        "step": 12,
+        "hint": "\\text{Podstaw rozwinięcie i uprość całe wyrażenie}",
+        "expression": "a_{5k+3} = 2(25k^2 + 30k + 9) - 4(5k+3) + 1 = 50k^2 + 60k + 18 - 20k - 12 + 1 = 50k^2 + 40k + 7",
+        "explanation": "\\text{Rozwijamy nawiasy i łączymy wyrazy podobne}"
+      }
+    ],
+    "solutions": [
+      "\\text{Pierwsze cztery wyrazy: } a_1 = -1, a_2 = 1, a_3 = 7, a_4 = 17",
+      "a_{2k} = 8k^2 - 8k + 1",
+      "a_{3k} = 18k^2 - 12k + 1",
+      "a_{2k-1} = 8k^2 - 16k + 7",
+      "a_{5k+3} = 50k^2 + 40k + 7"
+    ],
+    "parameters": {
+      "domain": "k \\in \\mathbb{N}_{+}"
+    }
+  },
+  {
+    "id": "tex_problem_9",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=\\sqrt{n-1}, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć pierwsze cztery wyrazy ciągu, jakie wartości } n \\text{ powinieneś podstawić do wzoru } a_n = \\sqrt{n-1}\\text{?}",
+        "expression": "a_1 = \\sqrt{1-1} = \\sqrt{0} = 0",
+        "explanation": "\\text{Dla } n = 1 \\text{ obliczamy pierwszy wyraz ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Kontynuuj obliczenia dla kolejnych wartości naturalnych}",
+        "expression": "a_2 = \\sqrt{2-1} = \\sqrt{1} = 1",
+        "explanation": "\\text{Dla } n = 2 \\text{ otrzymujemy drugi wyraz}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz trzeci i czwarty wyraz analogicznie}",
+        "expression": "a_3 = \\sqrt{3-1} = \\sqrt{2}, \\quad a_4 = \\sqrt{4-1} = \\sqrt{3}",
+        "explanation": "\\text{Dla } n = 3 \\text{ i } n = 4 \\text{ otrzymujemy kolejne wyrazy}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Aby obliczyć } a_{2k}\\text{, co powinieneś podstawić za } n \\text{ w wzorze ogólnym?}",
+        "expression": "a_{2k} = \\sqrt{2k-1}",
+        "explanation": "\\text{Podstawiamy } n = 2k \\text{ do wzoru } a_n = \\sqrt{n-1}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Podobnie postępuj z } a_{3k}\\text{. Jaka będzie wartość wyrażenia pod pierwiastkiem?}",
+        "expression": "a_{3k} = \\sqrt{3k-1}",
+        "explanation": "\\text{Podstawiamy } n = 3k \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k-1} \\text{ podstaw } n = 2k-1 \\text{ do wzoru. Co otrzymasz pod pierwiastkiem?}",
+        "expression": "a_{2k-1} = \\sqrt{(2k-1)-1} = \\sqrt{2k-2}",
+        "explanation": "\\text{Po podstawieniu i uproszczeniu otrzymujemy wyrażenie z } k"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Czy możesz uprościć wyrażenie } \\sqrt{2k-2}\\text{? Spróbuj wyłączyć wspólny czynnik}",
+        "expression": "a_{2k-1} = \\sqrt{2(k-1)} = \\sqrt{2}\\sqrt{k-1}",
+        "explanation": "\\text{Wyłączamy 2 spod pierwiastka używając właściwości } \\sqrt{ab} = \\sqrt{a}\\sqrt{b}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Na koniec oblicz } a_{5k+3}\\text{. Jakie wyrażenie otrzymasz po podstawieniu } n = 5k+3\\text{?}",
+        "expression": "a_{5k+3} = \\sqrt{(5k+3)-1} = \\sqrt{5k+2}",
+        "explanation": "\\text{Podstawiamy } n = 5k+3 \\text{ i upraszczamy wyrażenie pod pierwiastkiem}"
+      }
+    ],
+    "solutions": [
+      "\\text{Pierwsze cztery wyrazy: } a_1 = 0, a_2 = 1, a_3 = \\sqrt{2}, a_4 = \\sqrt{3}",
+      "a_{2k} = \\sqrt{2k-1}",
+      "a_{3k} = \\sqrt{3k-1}",
+      "a_{2k-1} = \\sqrt{2}\\sqrt{k-1}",
+      "a_{5k+3} = \\sqrt{5k+2}"
+    ],
+    "parameters": {
+      "domain": "k \\in \\mathbb{N}_{+}, n \\in \\mathbb{N}_{+}"
+    }
+  },
+  {
+    "id": "tex_problem_10",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które $z$ wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $\\therefore a_{n}=\\left(n^{2}-2\\right)\\left(n^{2}-4\\right)(n-3)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy iloczyn kilku czynników równa się zero?}",
+        "expression": "a_n = (n^2 - 2)(n^2 - 4)(n - 3) = 0",
+        "explanation": "\\text{Wyraz ciągu równa się zero, gdy przynajmniej jeden z czynników równa się zero}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Rozpatrz pierwszy czynnik. Dla jakich wartości } n \\text{ wyrażenie } n^2 - 2 \\text{ równa się zero?}",
+        "expression": "n^2 - 2 = 0 \\Rightarrow n^2 = 2 \\Rightarrow n = \\pm\\sqrt{2}",
+        "explanation": "\\text{Przenosimy 2 na prawą stronę i wyciągamy pierwiastek}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Czy wartości } n = \\pm\\sqrt{2} \\text{ należą do dziedziny naturalnej ciągu?}",
+        "expression": "n = \\pm\\sqrt{2} \\notin \\mathbb{N}",
+        "explanation": "\\text{Ponieważ } \\sqrt{2} \\text{ jest liczbą niewymierną, nie otrzymujemy numerów wyrazów ciągu}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Przejdź do drugiego czynnika. Jak rozłożyć wyrażenie } n^2 - 4\\text{?}",
+        "expression": "n^2 - 4 = (n - 2)(n + 2) = 0",
+        "explanation": "\\text{Używamy wzoru na różnicę kwadratów: } a^2 - b^2 = (a-b)(a+b)"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Z rozłożenia } (n - 2)(n + 2) = 0 \\text{ wynikają dwa przypadki. Jakie to są wartości?}",
+        "expression": "n - 2 = 0 \\Rightarrow n = 2 \\quad \\text{lub} \\quad n + 2 = 0 \\Rightarrow n = -2",
+        "explanation": "\\text{Każdy z czynników może się zerować niezależnie}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Które z wartości } n = 2 \\text{ i } n = -2 \\text{ są dopuszczalne dla ciągu o wyrazach naturalnych?}",
+        "expression": "n = 2 \\in \\mathbb{N}, \\quad n = -2 \\notin \\mathbb{N}",
+        "explanation": "\\text{Tylko } n = 2 \\text{ jest liczbą naturalną}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Rozpatrz trzeci czynnik. Dla jakiej wartości } n \\text{ wyrażenie } n - 3 \\text{ równa się zero?}",
+        "expression": "n - 3 = 0 \\Rightarrow n = 3",
+        "explanation": "\\text{Przenosimy 3 na prawą stronę równania}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Czy } n = 3 \\text{ należy do dziedziny naturalnej?}",
+        "expression": "n = 3 \\in \\mathbb{N}",
+        "explanation": "\\text{Wartość } n = 3 \\text{ jest liczbą naturalną}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź obliczenia dla znalezionych wartości. Czy rzeczywiście dają zero?}",
+        "expression": "a_2 = (4-2)(4-4)(2-3) = 2 \\cdot 0 \\cdot (-1) = 0",
+        "explanation": "\\text{Dla } n = 2 \\text{ drugi czynnik zeruje całe wyrażenie}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź drugi przypadek}",
+        "expression": "a_3 = (9-2)(9-4)(3-3) = 7 \\cdot 5 \\cdot 0 = 0",
+        "explanation": "\\text{Dla } n = 3 \\text{ trzeci czynnik zeruje całe wyrażenie}"
+      }
+    ],
+    "solutions": [
+      "a_2 = 0",
+      "a_3 = 0"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_11",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które $z$ wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{2}-4 n-21}{n^{2}+1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek równa się zero? Co musi być prawdziwe dla licznika i mianownika?}",
+        "expression": "\\frac{n^{2}-4 n-21}{n^{2}+1} = 0",
+        "explanation": "\\text{Ułamek równa się zero, gdy licznik równa się zero, a mianownik jest różny od zera}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Sprawdź najpierw mianownik. Czy wyrażenie } n^{2}+1 \\text{ może kiedykolwiek równać się zero dla liczb rzeczywistych?}",
+        "expression": "n^{2}+1 > 0 \\text{ dla wszystkich } n \\in \\mathbb{R}",
+        "explanation": "\\text{Ponieważ } n^{2} \\geq 0\\text{, więc } n^{2}+1 \\geq 1 > 0\\text{. Mianownik nigdy nie zeruje się}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Skoro mianownik jest zawsze różny od zera, na czym musisz się skupić? Co musi być prawdziwe dla licznika?}",
+        "expression": "n^{2}-4 n-21 = 0",
+        "explanation": "\\text{Ułamek będzie równy zero dokładnie wtedy, gdy licznik równa się zero}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Masz równanie kwadratowe. Jakie są współczynniki tego równania w postaci } an^2 + bn + c = 0\\text{?}",
+        "expression": "a = 1, \\; b = -4, \\; c = -21",
+        "explanation": "\\text{Identyfikujemy współczynniki równania kwadratowego}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Aby rozwiązać równanie kwadratowe, najpierw oblicz deltę. Jak brzmi wzór na deltę?}",
+        "expression": "\\Delta = b^2 - 4ac = (-4)^2 - 4 \\cdot 1 \\cdot (-21)",
+        "explanation": "\\text{Podstawiamy współczynniki do wzoru na deltę}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Oblicz wartość delty krok po kroku}",
+        "expression": "\\Delta = 16 - 4 \\cdot (-21) = 16 + 84 = 100",
+        "explanation": "\\text{Wykonujemy obliczenia: } 4 \\cdot (-21) = -84\\text{, więc } 16 - (-84) = 16 + 84"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Skoro delta jest dodatnia, równanie ma dwa pierwiastki rzeczywiste. Jak brzmi wzór na pierwiastki?}",
+        "expression": "n = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} = \\frac{4 \\pm \\sqrt{100}}{2 \\cdot 1}",
+        "explanation": "\\text{Podstawiamy do wzoru na pierwiastki równania kwadratowego}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Oblicz pierwiastek z delty i znajdź oba rozwiązania}",
+        "expression": "n = \\frac{4 \\pm 10}{2}",
+        "explanation": "\\text{Ponieważ } \\sqrt{100} = 10"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Oblicz każdy pierwiastek osobno}",
+        "expression": "n_1 = \\frac{4 + 10}{2} = \\frac{14}{2} = 7, \\quad n_2 = \\frac{4 - 10}{2} = \\frac{-6}{2} = -3",
+        "explanation": "\\text{Otrzymujemy dwa rozwiązania równania kwadratowego}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Czy oba otrzymane rozwiązania są liczbami naturalnymi? Pamiętaj, że } n \\text{ to numer wyrazu ciągu}",
+        "expression": "n = 7 \\text{ (liczba naturalna)}, \\quad n = -3 \\text{ (nie jest liczbą naturalną)}",
+        "explanation": "\\text{Numery wyrazów ciągu muszą być liczbami naturalnymi dodatnimi}"
+      }
+    ],
+    "solutions": [
+      "a_7 = 0 \\text{ (siódmy wyraz ciągu jest równy zero)}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_12",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które $z$ wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{4}-256}{n^{2}-n+2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek równa się zero? Co musi być spełnione dla licznika i mianownika?}",
+        "expression": "\\frac{n^4 - 256}{n^2 - n + 2} = 0",
+        "explanation": "\\text{Ułamek równa się zero, gdy licznik równa się zero, a mianownik jest różny od zera}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Najpierw znajdź, dla jakich } n \\text{ licznik się zeruje. Czy rozpoznajesz wzór } a^4 - b^4\\text{?}",
+        "expression": "n^4 - 256 = 0 \\Rightarrow n^4 = 256",
+        "explanation": "\\text{Przyrównujemy licznik do zera}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jaka liczba podniesiona do czwartej potęgi daje 256? Sprawdź } 4^4",
+        "expression": "4^4 = (4^2)^2 = 16^2 = 256",
+        "explanation": "\\text{Sprawdzamy, że } 4^4 = 256"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Równanie } n^4 = 256 \\text{ ma więcej rozwiązań niż tylko } n = 4\\text{. Pamiętaj o liczbach ujemnych!}",
+        "expression": "n^4 = 256 \\Rightarrow n = \\pm 4",
+        "explanation": "\\text{Ponieważ } (-4)^4 = 4^4 = 256\\text{, mamy dwa rozwiązania rzeczywiste}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Teraz sprawdź mianownik. Czy dla } n = 4 \\text{ mianownik jest różny od zera?}",
+        "expression": "\\text{Dla } n = 4: \\quad n^2 - n + 2 = 4^2 - 4 + 2 = 16 - 4 + 2 = 14",
+        "explanation": "\\text{Podstawiamy } n = 4 \\text{ do mianownika}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź drugi kandydat. Czy dla } n = -4 \\text{ mianownik też jest różny od zera?}",
+        "expression": "\\text{Dla } n = -4: \\quad n^2 - n + 2 = (-4)^2 - (-4) + 2 = 16 + 4 + 2 = 22",
+        "explanation": "\\text{Podstawiamy } n = -4 \\text{ do mianownika}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oba mianowniki są różne od zera. Ale czy } n = -4 \\text{ może być numerem wyrazu ciągu?}",
+        "expression": "\\text{Ponieważ } n \\text{ oznacza numer wyrazu ciągu, musi być } n \\in \\mathbb{N}",
+        "explanation": "\\text{Numery wyrazów ciągu to liczby naturalne dodatnie}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Który z kandydatów spełnia warunek bycia numerem wyrazu w ciągu?}",
+        "expression": "\\text{Tylko } n = 4 \\text{ jest liczbą naturalną dodatnią}",
+        "explanation": "\\text{Odrzucamy } n = -4 \\text{ jako niepoprawny numer wyrazu}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź jeszcze raz obliczenie dla } n = 4\\text{. Czy rzeczywiście otrzymasz zero?}",
+        "expression": "a_4 = \\frac{4^4 - 256}{4^2 - 4 + 2} = \\frac{256 - 256}{14} = \\frac{0}{14} = 0",
+        "explanation": "\\text{Potwierdzamy, że czwarty wyraz ciągu równa się zero}"
+      }
+    ],
+    "solutions": [
+      "n = 4"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}, \\; n^2 - n + 2 \\neq 0"
+    }
+  },
+  {
+    "id": "tex_problem_13",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które $z$ wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{3}-7 n^{2}+11 n-5}{3 n+2}$ ?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek równa się zero? Co musi być spełnione dla licznika i mianownika?}",
+        "expression": "a_n = 0 \\Leftrightarrow \\frac{n^3 - 7n^2 + 11n - 5}{3n + 2} = 0",
+        "explanation": "\\text{Ułamek równa się zero, gdy licznik równa się zero, a mianownik jest różny od zera}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jaki warunek musi spełniać licznik, aby cały ułamek był równy zero?}",
+        "expression": "n^3 - 7n^2 + 11n - 5 = 0 \\quad \\text{oraz} \\quad 3n + 2 \\neq 0",
+        "explanation": "\\text{Skupiamy się na znalezieniu pierwiastków wielomianu w liczniku}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Spróbuj znaleźć pierwiastek całkowity tego wielomianu. Które liczby całkowite warto sprawdzić jako potencjalne pierwiastki?}",
+        "expression": "\\text{Sprawdzamy } n = 1: 1^3 - 7 \\cdot 1^2 + 11 \\cdot 1 - 5 = 1 - 7 + 11 - 5 = 0",
+        "explanation": "\\text{Testujemy dzielniki wyrazu wolnego: } \\pm 1, \\pm 5"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro } n = 1 \\text{ jest pierwiastkiem, to } (n-1) \\text{ jest czynnikiem wielomianu. Jak możesz rozłożyć wielomian na czynniki?}",
+        "expression": "n^3 - 7n^2 + 11n - 5 = (n-1)(n^2 - 6n + 5)",
+        "explanation": "\\text{Dzielimy wielomian przez } (n-1) \\text{ lub stosujemy schemat Hornera}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Otrzymałeś iloczyn dwóch czynników. Jak rozłożyć dalej wyrażenie kwadratowe } n^2 - 6n + 5\\text{?}",
+        "expression": "n^2 - 6n + 5 = (n-1)(n-5)",
+        "explanation": "\\text{Szukamy dwóch liczb, które w sumie dają -6, a w iloczynie 5: to -1 i -5}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Jaki jest pełny rozkład licznika na czynniki?}",
+        "expression": "n^3 - 7n^2 + 11n - 5 = (n-1)^2(n-5)",
+        "explanation": "\\text{Łączymy wszystkie czynniki: } (n-1) \\cdot (n-1) \\cdot (n-5)"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Kiedy iloczyn } (n-1)^2(n-5) \\text{ równa się zero? Jakie wartości } n \\text{ zerują poszczególne czynniki?}",
+        "expression": "(n-1)^2(n-5) = 0 \\Rightarrow n = 1 \\text{ lub } n = 5",
+        "explanation": "\\text{Pierwiastek } n = 1 \\text{ ma krotność 2, ale daje tę samą wartość}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź czy znalezione wartości nie zerują mianownika. Dla jakich } n \\text{ mianownik } 3n + 2 \\text{ równa się zero?}",
+        "expression": "3n + 2 = 0 \\Rightarrow n = -\\frac{2}{3}",
+        "explanation": "\\text{Mianownik zeruje się dla } n = -\\frac{2}{3}\\text{, ale to nie jest liczba naturalna}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Które z otrzymanych rozwiązań są liczbami naturalnymi (indeksami wyrazów ciągu)?}",
+        "expression": "n \\in \\{1, 5\\} \\text{ i oba są liczbami naturalnymi}",
+        "explanation": "\\text{Oba pierwiastki są dodatnimi liczbami całkowitymi, więc odpowiadają wyrazom ciągu}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź obliczenia: czy rzeczywiście } a_1 = 0 \\text{ i } a_5 = 0\\text{?}",
+        "expression": "a_1 = \\frac{1-7+11-5}{3+2} = \\frac{0}{5} = 0, \\quad a_5 = \\frac{125-175+55-5}{15+2} = \\frac{0}{17} = 0",
+        "explanation": "\\text{Weryfikujemy nasze rozwiązanie przez podstawienie}"
+      }
+    ],
+    "solutions": [
+      "a_1 = 0",
+      "a_5 = 0"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}, \\; 3n + 2 \\neq 0"
+    }
+  },
+  {
+    "id": "tex_problem_14",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=2 n+2, x=18$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz ciąg } a_n = 2n + 2 \\text{ i liczbę } x = 18\\text{. Jakie warunki musi spełniać } n\\text{, aby wyraz ciągu był większy od } x\\text{?}",
+        "expression": "a_n > x \\Rightarrow 2n + 2 > 18",
+        "explanation": "\\text{Zapisujemy nierówność określającą, kiedy wyraz ciągu jest większy od danej liczby}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak rozwiązać tę nierówność liniową? Zacznij od przeniesienia stałej na prawą stronę}",
+        "expression": "2n + 2 > 18 \\Rightarrow 2n > 18 - 2",
+        "explanation": "\\text{Odejmujemy 2 od obu stron nierówności}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz różnicę po prawej stronie}",
+        "expression": "2n > 16",
+        "explanation": "\\text{Wykonujemy odejmowanie: } 18 - 2 = 16"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jak wyznaczyć } n \\text{ z nierówności } 2n > 16\\text{? Przez co należy podzielić obie strony?}",
+        "expression": "n > \\frac{16}{2} = 8",
+        "explanation": "\\text{Dzielimy obie strony przez 2 (znak nierówności się nie zmienia, bo dzielimy przez liczbę dodatnią)}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Pamiętaj, że } n \\text{ to numer wyrazu ciągu. Jakie wartości może przyjmować?}",
+        "expression": "n \\in \\mathbb{N} \\text{ i } n > 8",
+        "explanation": "\\text{Numer wyrazu ciągu musi być liczbą naturalną dodatnią}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Które liczby naturalne są większe od 8? Wymień kilka pierwszych}",
+        "expression": "n \\in \\{9, 10, 11, 12, \\ldots\\}",
+        "explanation": "\\text{Najmniejszą liczbą naturalną większą od 8 jest 9}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź dla pierwszych wartości: czy } a_9 > 18\\text{? Oblicz } a_9",
+        "expression": "a_9 = 2 \\cdot 9 + 2 = 18 + 2 = 20 > 18 \\text{ ✓}",
+        "explanation": "\\text{Potwierdzamy, że dziewiąty wyraz rzeczywiście jest większy od 18}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź jeszcze jeden przykład: czy } a_8 \\leq 18\\text{? Oblicz } a_8",
+        "expression": "a_8 = 2 \\cdot 8 + 2 = 16 + 2 = 18 \\not> 18",
+        "explanation": "\\text{Ósmy wyraz równa się dokładnie 18, więc nie jest większy od 18}"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazy ciągu większe od 18 to: } a_n \\text{ dla } n \\geq 9",
+      "\\text{Czyli: } a_9, a_{10}, a_{11}, a_{12}, \\ldots",
+      "\\text{Konkretnie: } 20, 22, 24, 26, \\ldots"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_15",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=(n-3)^{2}, x=5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć wyrazy większe od } x\\text{, jaką nierówność musisz rozwiązać?}",
+        "expression": "a_n > x \\Rightarrow (n-3)^2 > 5",
+        "explanation": "\\text{Podstawiamy wzór na } a_n \\text{ i wartość } x"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak rozwiązać nierówność z kwadratem? Pamiętaj, że } |u| > \\sqrt{c} \\text{ oznacza } u > \\sqrt{c} \\text{ lub } u < -\\sqrt{c}",
+        "expression": "|n-3| > \\sqrt{5}",
+        "explanation": "\\text{Wyciągamy pierwiastek z obu stron nierówności}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Oblicz dokładną wartość } \\sqrt{5} \\text{ i przybliż ją dziesiętnie}",
+        "expression": "\\sqrt{5} \\approx 2{,}236",
+        "explanation": "\\text{Potrzebujemy przybliżenia, aby określić konkretne wartości } n"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Nierówność z wartością bezwzględną } |n-3| > 2{,}236 \\text{ oznacza dwa przypadki. Jakie?}",
+        "expression": "n-3 > 2{,}236 \\quad \\text{lub} \\quad n-3 < -2{,}236",
+        "explanation": "\\text{Rozpatrujemy oba przypadki dla wartości bezwzględnej}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Rozwiąż pierwszy przypadek. Co otrzymasz po dodaniu 3 do obu stron?}",
+        "expression": "n > 3 + 2{,}236 = 5{,}236",
+        "explanation": "\\text{Przenosimy 3 na prawą stronę}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Rozwiąż drugi przypadek podobnie}",
+        "expression": "n < 3 - 2{,}236 = 0{,}764",
+        "explanation": "\\text{Przenosimy 3 na prawą stronę w drugim przypadku}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Pamiętaj, że } n \\text{ to numer wyrazu ciągu, więc musi być liczbą naturalną. Które liczby naturalne spełniają warunki?}",
+        "expression": "n \\geq 6 \\quad \\text{lub} \\quad n = 0 \\text{ (jeśli przyjmujemy } n \\geq 0\\text{)}",
+        "explanation": "\\text{Dla } n > 5{,}236 \\text{ najmniejszą liczbą naturalną jest 6, dla } n < 0{,}764 \\text{ nie ma liczb naturalnych dodatnich}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź kilka pierwszych przypadków. Czy } a_6 > 5\\text{?}",
+        "expression": "a_6 = (6-3)^2 = 3^2 = 9 > 5 \\quad \\checkmark",
+        "explanation": "\\text{Weryfikujemy pierwszy wyraz spełniający warunek}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź również przypadki graniczne. Czy } a_5 > 5\\text{?}",
+        "expression": "a_5 = (5-3)^2 = 2^2 = 4 < 5 \\quad \\text{nie spełnia}",
+        "explanation": "\\text{Potwierdzamy, że } n = 5 \\text{ nie należy do rozwiązania}"
+      }
+    ],
+    "solutions": [
+      "n \\geq 6, \\; n \\in \\mathbb{N}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_16",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=\\frac{2 n+3}{2 n-1}, x=2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć wyrazy większe od } x = 2\\text{, jaką nierówność musisz rozwiązać?}",
+        "expression": "\\frac{2n + 3}{2n - 1} > 2",
+        "explanation": "\\text{Szukamy wartości } n\\text{, dla których } a_n > x"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Masz nierówność z ułamkiem. Co się stanie, gdy przerzucisz prawą stronę na lewą?}",
+        "expression": "\\frac{2n + 3}{2n - 1} - 2 > 0",
+        "explanation": "\\text{Sprowadzamy nierówność do postaci z zerem po prawej stronie}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Aby odjąć liczbę od ułamka, jak musisz ją zapisać? Pamiętaj o wspólnym mianowniku}",
+        "expression": "\\frac{2n + 3}{2n - 1} - \\frac{2(2n - 1)}{2n - 1} > 0",
+        "explanation": "\\text{Zapisujemy } 2 \\text{ jako ułamek o tym samym mianowniku}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz możesz połączyć ułamki. Jak wygląda licznik po odjęciu?}",
+        "expression": "\\frac{2n + 3 - 2(2n - 1)}{2n - 1} > 0",
+        "explanation": "\\text{Łączymy ułamki o tym samym mianowniku}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Rozwiń nawias w liczniku i uprość wyrażenie}",
+        "expression": "\\frac{2n + 3 - 4n + 2}{2n - 1} > 0",
+        "explanation": "\\text{Mnożymy } 2(2n - 1) = 4n - 2"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Połącz podobne wyrazy w liczniku}",
+        "expression": "\\frac{-2n + 5}{2n - 1} > 0",
+        "explanation": "\\text{Mamy } 2n - 4n = -2n \\text{ i } 3 + 2 = 5"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Kiedy ułamek jest dodatni? Zas\\tanów się nad znakami licznika i mianownika}",
+        "expression": "\\text{Ułamek dodatni gdy: } (-2n + 5) \\text{ i } (2n - 1) \\text{ mają ten sam znak}",
+        "explanation": "\\text{Ułamek dodatni gdy oba czynniki dodatnie lub oba ujemne}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Znajdź miejsca zerowe licznika i mianownika. Dla jakich } n \\text{ każdy z nich równa się zero?}",
+        "expression": "-2n + 5 = 0 \\Rightarrow n = \\frac{5}{2} = 2.5, \\quad 2n - 1 = 0 \\Rightarrow n = \\frac{1}{2} = 0.5",
+        "explanation": "\\text{Miejsca zerowe dzielą oś liczbową na przedziały}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź znaki wyrażeń w przedziałach: } n < 0.5\\text{, } 0.5 < n < 2.5\\text{, } n > 2.5",
+        "expression": "\\begin{cases} n < 0.5: & (-2n + 5) > 0, \\; (2n - 1) < 0 \\Rightarrow \\text{ułamek ujemny} \\ 0.5 < n < 2.5: & (-2n + 5) > 0, \\; (2n - 1) > 0 \\Rightarrow \\text{ułamek dodatni} \\ n > 2.5: & (-2n + 5) < 0, \\; (2n - 1) > 0 \\Rightarrow \\text{ułamek ujemny} \\end{cases}",
+        "explanation": "\\text{Analizujemy znak ułamka w każdym przedziale}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Pamiętaj, że } n \\text{ to numer wyrazu ciągu. Jakie ograniczenia to nakłada na wartości } n\\text{?}",
+        "expression": "n \\in \\mathbb{N} \\text{ i } 0.5 < n < 2.5",
+        "explanation": "\\text{Numery wyrazów ciągu to liczby naturalne, więc } n \\geq 1"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Które liczby naturalne mieszczą się w przedziale } (0.5, 2.5)\\text{?}",
+        "expression": "n \\in \\{1, 2\\}",
+        "explanation": "\\text{Jedyne liczby naturalne w przedziale } (0.5, 2.5) \\text{ to } 1 \\text{ i } 2"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazy } a_1 \\text{ i } a_2 \\text{ są większe od } x = 2",
+      "a_1 = \\frac{2 \\cdot 1 + 3}{2 \\cdot 1 - 1} = \\frac{5}{1} = 5",
+      "a_2 = \\frac{2 \\cdot 2 + 3}{2 \\cdot 2 - 1} = \\frac{7}{3} \\approx 2.33"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}, \\; 2n - 1 \\neq 0"
+    }
+  },
+  {
+    "id": "tex_problem_17",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=\\sqrt{3 n+1}, x=4$ ?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć wyrazy większe od } x = 4\\text{, jaką nierówność musisz rozwiązać?}",
+        "expression": "a_n > x \\Rightarrow \\sqrt{3n + 1} > 4",
+        "explanation": "\\text{Szukamy wartości } n\\text{, dla których wyraz ciągu jest większy od 4}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak możesz pozbyć się pierwiastka z lewej strony nierówności? Pamiętaj o założeniach!}",
+        "expression": "3n + 1 > 16",
+        "explanation": "\\text{Podnosimy obie strony do kwadratu. Ponieważ obie strony są dodatnie, znak nierówności się nie zmienia}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Rozwiąż otrzymaną nierówność liniową. Co musisz zrobić z wyrazem } 1\\text{?}",
+        "expression": "3n > 16 - 1 \\Rightarrow 3n > 15",
+        "explanation": "\\text{Przenosimy 1 na prawą stronę}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Aby wyznaczyć } n\\text{, przez co musisz podzielić obie strony?}",
+        "expression": "n > \\frac{15}{3} \\Rightarrow n > 5",
+        "explanation": "\\text{Dzielimy obie strony przez 3}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Pamiętaj, że } n \\text{ to numer wyrazu ciągu. Jakie wartości może przyjmować?}",
+        "expression": "n \\in \\{6, 7, 8, 9, 10, \\ldots\\}",
+        "explanation": "\\text{Ponieważ } n \\text{ musi być liczbą naturalną większą od 5}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź swój wynik dla granicznych wartości. Czy } a_5 \\text{ i } a_6 \\text{ potwierdzają rozwiązanie?}",
+        "expression": "a_5 = \\sqrt{3 \\cdot 5 + 1} = \\sqrt{16} = 4, \\quad a_6 = \\sqrt{3 \\cdot 6 + 1} = \\sqrt{19} > 4",
+        "explanation": "\\text{Sprawdzenie: } a_5 = 4 \\text{ (nie większe), } a_6 > 4 \\text{ (większe)}"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazy } a_n \\text{ większe od } x = 4 \\text{ to } a_6, a_7, a_8, \\ldots",
+      "\\text{Odpowiedź: wszystkie wyrazy o numerach } n \\geq 6"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}"
+    }
+  },
+  {
+    "id": "tex_problem_18",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=n^{2}-10, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy wyrazy ciągu będą ujemne? Jaki warunek musi spełniać } a_n\\text{?}",
+        "expression": "a_n < 0",
+        "explanation": "\\text{Szukamy wartości } n \\text{, dla których wyrazy ciągu są ujemne}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Podstaw wzór na } a_n \\text{ do nierówności}",
+        "expression": "n^2 - 10 < 0",
+        "explanation": "\\text{Zastępujemy } a_n \\text{ jego wzorem}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jak możesz przekształcić tę nierówność, żeby wyizolować } n^2\\text{?}",
+        "expression": "n^2 < 10",
+        "explanation": "\\text{Przenosimy 10 na prawą stronę nierówności}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Aby pozbyć się kwadratu, co musisz zrobić z obiema stronami nierówności?}",
+        "expression": "|n| < \\sqrt{10}",
+        "explanation": "\\text{Pierwiastkujemy obie strony, pamiętając o wartości bezwzględnej}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz przybliżoną wartość } \\sqrt{10}\\text{. Między jakimi liczbami całkowitymi się znajduje?}",
+        "expression": "\\sqrt{10} \\approx 3{,}16",
+        "explanation": "\\text{Ponieważ } 3^2 = 9 \\text{ i } 4^2 = 16\\text{, więc } 3 < \\sqrt{10} < 4"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Pamiętaj, że } n \\in \\mathbb{N}_+\\text{. Jakie dodatnie liczby naturalne spełniają } n < \\sqrt{10}\\text{?}",
+        "expression": "-\\sqrt{10} < n < \\sqrt{10} \\text{ i } n \\in \\mathbb{N}_+",
+        "explanation": "\\text{Rozpisujemy warunek } |n| < \\sqrt{10} \\text{ i uwzględniamy dziedzinę}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Które konkretne liczby naturalne dodatnie są mniejsze od } 3{,}16\\text{?}",
+        "expression": "n \\in \\{1, 2, 3\\}",
+        "explanation": "\\text{Jedyne dodatnie liczby naturalne mniejsze od } \\sqrt{10} \\approx 3{,}16"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź przez podstawienie: czy rzeczywiście te wyrazy są ujemne?}",
+        "expression": "a_1 = 1 - 10 = -9, \\; a_2 = 4 - 10 = -6, \\; a_3 = 9 - 10 = -1",
+        "explanation": "\\text{Weryfikujemy nasze rozwiązanie przez obliczenie konkretnych wartości}"
+      }
+    ],
+    "solutions": [
+      "\\text{Ujemne są wyrazy } a_1, a_2, a_3 \\text{ (dla } n \\in \\{1, 2, 3\\}\\text{)}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_19",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=-n^{2}+10 n+11, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy wyraz ciągu jest ujemny? Jaki warunek musi spełniać } a_n\\text{?}",
+        "expression": "a_n < 0 \\Rightarrow -n^2 + 10n + 11 < 0",
+        "explanation": "\\text{Szukamy wartości } n \\text{, dla których wzór ogólny jest ujemny}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak możesz przekształcić nierówność, żeby łatwiej ją rozwiązać?}",
+        "expression": "n^2 - 10n - 11 > 0",
+        "explanation": "\\text{Mnożymy obie strony przez } -1 \\text{ i zmieniamy znak nierówności}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Co ci przypomina wyrażenie } n^2 - 10n - 11\\text{? Jak znajdziesz jego miejsca zerowe?}",
+        "expression": "\\Delta = (-10)^2 - 4 \\cdot 1 \\cdot (-11) = 100 + 44 = 144",
+        "explanation": "\\text{Obliczamy dyskryminantę dla równania kwadratowego } n^2 - 10n - 11 = 0"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Zastosuj wzór na pierwiastki równania kwadratowego}",
+        "expression": "n = \\frac{10 \\pm \\sqrt{144}}{2} = \\frac{10 \\pm 12}{2}",
+        "explanation": "\\text{Ponieważ } \\sqrt{144} = 12"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz oba pierwiastki osobno}",
+        "expression": "n_1 = \\frac{10 + 12}{2} = \\frac{22}{2} = 11, \\quad n_2 = \\frac{10 - 12}{2} = \\frac{-2}{2} = -1",
+        "explanation": "\\text{Otrzymujemy miejsca zerowe funkcji kwadratowej}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Jak wygląda wykres paraboli } y = n^2 - 10n - 11\\text{? Kiedy jest ona dodatnia?}",
+        "expression": "n^2 - 10n - 11 > 0 \\text{ dla } n \\in (-\\infty, -1) \\cup (11, +\\infty)",
+        "explanation": "\\text{Parabola o dodatnim współczynniku przy } n^2 \\text{ jest dodatnia poza przedziałem między pierwiastkami}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Pamiętaj o dziedzinie zadania! Które z otrzymanych wartości należą do } \\mathbb{N}_+\\text{?}",
+        "expression": "n \\in \\mathbb{N}_+ \\cap (11, +\\infty) = \\{12, 13, 14, 15, \\ldots\\}",
+        "explanation": "\\text{Przecięcie z liczbami naturalnymi dodatnimi daje } n \\geq 12"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź swój wynik dla kilku pierwszych wartości. Czy } a_{12} \\text{ rzeczywiście jest ujemne?}",
+        "expression": "a_{12} = -12^2 + 10 \\cdot 12 + 11 = -144 + 120 + 11 = -13 < 0",
+        "explanation": "\\text{Weryfikujemy poprawność rozwiązania}"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazy ujemne to } a_n \\text{ dla } n \\geq 12, \\text{ czyli } a_{12}, a_{13}, a_{14}, \\ldots"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_20",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=\\frac{n-6}{n+3}, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek jest ujemny? Zas\\tanów się nad znakami licznika i mianownika}",
+        "expression": "a_n = \\frac{n-6}{n+3} < 0",
+        "explanation": "\\text{Szukamy warunków, dla których wyrazy ciągu są ujemne}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Sprawdź znak mianownika. Czy dla } n \\in \\mathbb{N}_+ \\text{ wyrażenie } n+3 \\text{ może być ujemne?}",
+        "expression": "n + 3 > 0 \\text{ dla wszystkich } n \\in \\mathbb{N}_+",
+        "explanation": "\\text{Ponieważ } n \\geq 1\\text{, to } n + 3 \\geq 4 > 0\\text{, więc mianownik jest zawsze dodatni}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Skoro mianownik jest dodatni, to kiedy cały ułamek będzie ujemny?}",
+        "expression": "\\frac{n-6}{n+3} < 0 \\Leftrightarrow n - 6 < 0",
+        "explanation": "\\text{Ułamek z dodatnim mianownikiem jest ujemny wtedy i tylko wtedy, gdy licznik jest ujemny}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Rozwiąż nierówność z licznikiem. Dla jakich wartości } n \\text{ wyrażenie } n-6 \\text{ jest ujemne?}",
+        "expression": "n - 6 < 0 \\Rightarrow n < 6",
+        "explanation": "\\text{Przenosimy 6 na prawą stronę nierówności}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Pamiętaj o dziedzinie zadania. Które liczby naturalne dodatnie spełniają warunek } n < 6\\text{?}",
+        "expression": "n \\in \\{1, 2, 3, 4, 5\\} \\cap \\mathbb{N}_+",
+        "explanation": "\\text{Przecięcie warunków } n < 6 \\text{ i } n \\in \\mathbb{N}_+"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź kilka pierwszych wyrazów, aby potwierdzić wynik}",
+        "expression": "a_1 = \\frac{1-6}{1+3} = \\frac{-5}{4} < 0, \\quad a_5 = \\frac{5-6}{5+3} = \\frac{-1}{8} < 0, \\quad a_6 = \\frac{6-6}{6+3} = 0",
+        "explanation": "\\text{Weryfikujemy: wyrazy dla } n = 1, 2, 3, 4, 5 \\text{ są ujemne, a } a_6 = 0"
+      }
+    ],
+    "solutions": [
+      "\\text{Ujemne są wyrazy } a_1, a_2, a_3, a_4, a_5",
+      "\\text{Czyli wyrazy o numerach } n \\in \\{1, 2, 3, 4, 5\\}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_21",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=\\frac{9-n}{7-3 n}, n \\in \\boldsymbol{N}_{+}$?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek jest ujemny? Jakie warunki muszą spełniać licznik i mianownik?}",
+        "expression": "a_n < 0 \\Leftrightarrow \\frac{9-n}{7-3n} < 0",
+        "explanation": "\\text{Ułamek jest ujemny, gdy licznik i mianownik mają przeciwne znaki}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jakie są możliwe przypadki, gdy ułamek ma znak ujemny?}",
+        "expression": "\\begin{cases} 9-n > 0 \\text{ i } 7-3n < 0 \\ \\text{lub} \\ 9-n < 0 \\text{ i } 7-3n > 0 \\end{cases}",
+        "explanation": "\\text{Rozpatrujemy dwa przypadki: licznik dodatni i mianownik ujemny, lub odwrotnie}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Rozwiąż pierwszą nierówność z pierwszego przypadku. Dla jakich } n \\text{ licznik jest dodatni?}",
+        "expression": "9-n > 0 \\Rightarrow n < 9",
+        "explanation": "\\text{Przenosimy } n \\text{ na prawą stronę i zmieniamy znak nierówności}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Rozwiąż drugą nierówność z pierwszego przypadku. Dla jakich } n \\text{ mianownik jest ujemny?}",
+        "expression": "7-3n < 0 \\Rightarrow 7 < 3n \\Rightarrow n > \\frac{7}{3}",
+        "explanation": "\\text{Przenosimy } 3n \\text{ na prawą stronę, a } 7 \\text{ na lewą, następnie dzielimy przez } 3"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jaki jest wspólny przedział dla pierwszego przypadku? Pamiętaj, że } \\frac{7}{3} \\approx 2{,}33",
+        "expression": "\\text{Przypadek 1: } n < 9 \\text{ i } n > \\frac{7}{3} \\Rightarrow \\frac{7}{3} < n < 9",
+        "explanation": "\\text{Część wspólna przedziałów daje nam zakres dla pierwszego przypadku}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Rozpatrz drugi przypadek. Dla jakich } n \\text{ licznik jest ujemny?}",
+        "expression": "9-n < 0 \\Rightarrow n > 9",
+        "explanation": "\\text{Przenosimy } n \\text{ na prawą stronę}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Dla jakich } n \\text{ mianownik jest dodatni w drugim przypadku?}",
+        "expression": "7-3n > 0 \\Rightarrow n < \\frac{7}{3}",
+        "explanation": "\\text{Rozwiązujemy analogicznie jak wcześniej}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Czy istnieje wspólny przedział dla drugiego przypadku? Sprawdź warunki } n > 9 \\text{ i } n < \\frac{7}{3}",
+        "expression": "\\text{Przypadek 2: } n > 9 \\text{ i } n < \\frac{7}{3} \\Rightarrow \\emptyset",
+        "explanation": "\\text{Nie ma liczb większych od 9 i jednocześnie mniejszych od } \\frac{7}{3} \\text{, więc ten przypadek jest pusty}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Pamiętaj o dziedzinie zadania. Które liczby naturalne dodatnie spełniają warunek } \\frac{7}{3} < n < 9\\text{?}",
+        "expression": "\\frac{7}{3} < n < 9 \\text{ i } n \\in \\mathbb{N}_+ \\Rightarrow n \\in \\{3, 4, 5, 6, 7, 8\\}",
+        "explanation": "\\text{Ponieważ } \\frac{7}{3} \\approx 2{,}33\\text{, to najmniejszą liczbą naturalną większą od } \\frac{7}{3} \\text{ jest } 3"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź jeszcze, czy mianownik nie zeruje się dla żadnej z tych wartości}",
+        "expression": "7-3n \\neq 0 \\Rightarrow n \\neq \\frac{7}{3}",
+        "explanation": "\\text{Ponieważ } \\frac{7}{3} \\notin \\mathbb{N}_+\\text{, wszystkie znalezione wartości są dopuszczalne}"
+      }
+    ],
+    "solutions": [
+      "n \\in \\{3, 4, 5, 6, 7, 8\\}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+, \\; n \\neq \\frac{7}{3}"
+    }
+  },
+  {
+    "id": "tex_problem_22",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=2 n-7, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy wyraz ciągu jest dodatni? Jaki warunek musi spełniać } a_n\\text{?}",
+        "expression": "a_n > 0",
+        "explanation": "\\text{Szukamy wartości } n\\text{, dla których wyraz ciągu jest większy od zera}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Podstaw wzór na } a_n \\text{ do nierówności}",
+        "expression": "2n - 7 > 0",
+        "explanation": "\\text{Zastępujemy } a_n \\text{ jego wzorem jawnym}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jak rozwiązać tę prostą nierówność liniową? Co należy przenieść na drugą stronę?}",
+        "expression": "2n > 7",
+        "explanation": "\\text{Przenosimy } -7 \\text{ na prawą stronę, zmieniając znak}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Aby wyznaczyć } n\\text{, przez co należy podzielić obie strony nierówności?}",
+        "expression": "n > \\frac{7}{2}",
+        "explanation": "\\text{Dzielimy obie strony przez 2 (liczba dodatnia, więc znak nierówności się nie zmienia)}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz dokładną wartość ułamka } \\frac{7}{2}",
+        "expression": "n > 3{,}5",
+        "explanation": "\\text{Ponieważ } \\frac{7}{2} = 3{,}5"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Pamiętaj, że } n \\in \\mathbb{N}_+\\text{. Które liczby naturalne dodatnie są większe od 3,5?}",
+        "expression": "n \\geq 4, \\quad n \\in \\mathbb{N}_+",
+        "explanation": "\\text{Najmniejszą liczbą naturalną większą od 3,5 jest 4}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź swój wynik: czy } a_3 \\text{ i } a_4 \\text{ mają odpowiednie znaki?}",
+        "expression": "a_3 = 2 \\cdot 3 - 7 = -1 < 0, \\quad a_4 = 2 \\cdot 4 - 7 = 1 > 0",
+        "explanation": "\\text{Weryfikacja potwierdza, że od } n = 4 \\text{ wyrazy są dodatnie}"
+      }
+    ],
+    "solutions": [
+      "\\text{Dodatnie są wyrazy } a_n \\text{ dla } n \\geq 4, \\text{ gdzie } n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_23",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{n+5}{0,5-n}, n \\in N$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek jest dodatni? Jakie warunki muszą spełniać licznik i mianownik?}",
+        "expression": "a_n > 0 \\Leftrightarrow \\frac{n+5}{0{,}5-n} > 0",
+        "explanation": "\\text{Szukamy wartości } n \\text{, dla których wyrazy ciągu są dodatnie}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Ułamek jest dodatni, gdy licznik i mianownik mają ten sam znak. Jakie są możliwe przypadki?}",
+        "expression": "\\begin{cases} n+5 > 0 \\text{ i } 0{,}5-n > 0 \\ \\text{lub} \\ n+5 < 0 \\text{ i } 0{,}5-n < 0 \\end{cases}",
+        "explanation": "\\text{Rozpatrujemy przypadki: oba dodatnie lub oba ujemne}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Rozwiąż pierwszą nierówność z licznika. Dla jakich } n \\text{ wyrażenie } n+5 \\text{ jest dodatnie?}",
+        "expression": "n + 5 > 0 \\Rightarrow n > -5",
+        "explanation": "\\text{Przenosimy 5 na prawą stronę}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Rozwiąż pierwszą nierówność z mianownika. Dla jakich } n \\text{ wyrażenie } 0{,}5-n \\text{ jest dodatnie?}",
+        "expression": "0{,}5 - n > 0 \\Rightarrow 0{,}5 > n \\Rightarrow n < 0{,}5",
+        "explanation": "\\text{Przenosimy } n \\text{ na prawą stronę i zmieniamy znak nierówności}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Połącz warunki z pierwszego przypadku. Jakie } n \\text{ spełniają jednocześnie } n > -5 \\text{ i } n < 0{,}5\\text{?}",
+        "expression": "\\text{Przypadek I: } n > -5 \\text{ i } n < 0{,}5 \\Rightarrow n \\in (-5; 0{,}5)",
+        "explanation": "\\text{Część wspólna przedziałów daje nam pierwszy zbiór rozwiązań}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Przejdź do drugiego przypadku. Kiedy licznik } n+5 \\text{ jest ujemny?}",
+        "expression": "n + 5 < 0 \\Rightarrow n < -5",
+        "explanation": "\\text{Rozwiązujemy nierówność dla ujemnego licznika}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Kiedy mianownik } 0{,}5-n \\text{ jest ujemny?}",
+        "expression": "0{,}5 - n < 0 \\Rightarrow 0{,}5 < n \\Rightarrow n > 0{,}5",
+        "explanation": "\\text{Rozwiązujemy nierówność dla ujemnego mianownika}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Czy istnieją liczby, które jednocześnie są mniejsze od -5 i większe od 0,5?}",
+        "expression": "\\text{Przypadek II: } n < -5 \\text{ i } n > 0{,}5 \\Rightarrow \\emptyset",
+        "explanation": "\\text{Te warunki są sprzeczne, więc drugi przypadek nie daje rozwiązań}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Pamiętaj o dziedzinie zadania. Które liczby naturalne należą do przedziału } (-5; 0{,}5)\\text{?}",
+        "expression": "n \\in \\mathbb{N} \\text{ i } n \\in (-5; 0{,}5) \\Rightarrow \\text{brak rozwiązań}",
+        "explanation": "\\text{Liczby naturalne to } \\{1, 2, 3, ...\\}\\text{, a żadna z nich nie należy do } (-5; 0{,}5)"
+      }
+    ],
+    "solutions": [
+      "\\text{Żaden wyraz ciągu nie jest dodatni}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}, \\; n \\neq 0{,}5"
+    }
+  },
+  {
+    "id": "tex_problem_24",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{10-n}{3 n-16}, n \\in \\boldsymbol{N}_{+}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy ułamek jest dodatni? Co musi być prawdą dla licznika i mianownika?}",
+        "expression": "a_n > 0 \\Leftrightarrow \\frac{10-n}{3n-16} > 0",
+        "explanation": "\\text{Ułamek jest dodatni, gdy licznik i mianownik mają ten sam znak}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jakie są miejsca zerowe licznika i mianownika? Te punkty podzielą dziedzinę na przedziały}",
+        "expression": "\\text{Licznik: } 10-n = 0 \\Rightarrow n = 10 \\text{, Mianownik: } 3n-16 = 0 \\Rightarrow n = \\frac{16}{3} \\approx 5{,}33",
+        "explanation": "\\text{Znajdujemy punkty, w których wyrażenie zmienia znak}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Które z tych punktów należą do dziedziny } \\mathbb{N}_+\\text{? Pamiętaj o ograniczeniach}",
+        "expression": "\\text{Dziedzina: } n \\in \\mathbb{N}_+ \\text{ oraz } n \\neq \\frac{16}{3} \\text{ (mianownik } \\neq 0\\text{)}",
+        "explanation": "\\text{Ponieważ } \\frac{16}{3} \\notin \\mathbb{N}_+\\text{, jedynym punktem krytycznym jest } n = 10"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Punkt } n = 10 \\text{ dzieli liczby naturalne na dwa przedziały. Jakie to przedziały?}",
+        "expression": "\\text{Przedział I: } n \\in \\{1, 2, 3, ..., 9\\} \\text{, Przedział II: } n \\in \\{11, 12, 13, ...\\}",
+        "explanation": "\\text{Badamy znak wyrażenia w każdym przedziale}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź znak licznika i mianownika dla } n < 10\\text{. Wybierz przykładową wartość, np. } n = 1",
+        "expression": "\\text{Dla } n = 1: \\text{ licznik } = 10-1 = 9 > 0\\text{, mianownik } = 3 \\cdot 1 - 16 = -13 < 0",
+        "explanation": "\\text{W przedziale } n < 10 \\text{ licznik dodatni, mianownik ujemny, więc ułamek ujemny}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź znak licznika i mianownika dla } n > 10\\text{. Wybierz przykładową wartość, np. } n = 11",
+        "expression": "\\text{Dla } n = 11: \\text{ licznik } = 10-11 = -1 < 0\\text{, mianownik } = 3 \\cdot 11 - 16 = 17 > 0",
+        "explanation": "\\text{W przedziale } n > 10 \\text{ licznik ujemny, mianownik dodatni, więc ułamek ujemny}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Co możesz powiedzieć o znaku wyrażenia w obu przedziałach? Czy istnieją dodatnie wyrazy?}",
+        "expression": "\\text{Dla } n \\in \\{1, 2, ..., 9\\}: a_n < 0\\text{, Dla } n \\in \\{11, 12, ...\\}: a_n < 0",
+        "explanation": "\\text{W obu przedziałach ułamek jest ujemny}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź jeszcze raz: czy istnieje taka liczba naturalna } n\\text{, dla której oba czynniki mają ten sam znak?}",
+        "expression": "\\text{Nie istnieje } n \\in \\mathbb{N}_+ \\text{ takie, że } a_n > 0",
+        "explanation": "\\text{Licznik i mianownik nigdy nie mają tego samego znaku dla liczb naturalnych dodatnich}"
+      }
+    ],
+    "solutions": [
+      "\\text{Żaden wyraz ciągu nie jest dodatni}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+, \\; n \\neq \\frac{16}{3}"
+    }
+  },
+  {
+    "id": "tex_problem_25",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{n^{2}-16 n+39}{n+4}, n \\in \\boldsymbol{N}$ ?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Kiedy wyrazy ciągu są dodatnie? Co musi być spełnione dla ułamka } \\frac{n^2 - 16n + 39}{n + 4}\\text{?}",
+        "expression": "a_n > 0 \\Leftrightarrow \\frac{n^2 - 16n + 39}{n + 4} > 0",
+        "explanation": "\\text{Szukamy wartości } n \\text{, dla których wyrazy ciągu są dodatnie}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Kiedy ułamek jest dodatni? Jakie muszą być znaki licznika i mianownika?}",
+        "expression": "\\text{Ułamek dodatni gdy: licznik i mianownik mają ten sam znak}",
+        "explanation": "\\text{Analizujemy znaki licznika } (n^2 - 16n + 39) \\text{ i mianownika } (n + 4)"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Sprawdź znak mianownika. Dla jakich wartości } n \\in \\mathbb{N} \\text{ mianownik jest dodatni?}",
+        "expression": "n + 4 > 0 \\text{ dla } n \\geq 1 \\text{ (bo } n \\in \\mathbb{N}\\text{)}",
+        "explanation": "\\text{Mianownik jest zawsze dodatni dla liczb naturalnych}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro mianownik jest zawsze dodatni, jaki musi być znak licznika? Co to oznacza dla nierówności?}",
+        "expression": "\\frac{n^2 - 16n + 39}{n + 4} > 0 \\Leftrightarrow n^2 - 16n + 39 > 0",
+        "explanation": "\\text{Wystarczy zbadać, kiedy licznik jest dodatni}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Masz nierówność kwadratową. Jak znajdziesz miejsca zerowe funkcji } f(n) = n^2 - 16n + 39\\text{?}",
+        "expression": "\\Delta = (-16)^2 - 4 \\cdot 1 \\cdot 39 = 256 - 156 = 100",
+        "explanation": "\\text{Obliczamy dyskryminantę dla równania } n^2 - 16n + 39 = 0"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Zastosuj wzór na pierwiastki równania kwadratowego}",
+        "expression": "n = \\frac{16 \\pm \\sqrt{100}}{2} = \\frac{16 \\pm 10}{2}",
+        "explanation": "\\text{Ponieważ } \\sqrt{100} = 10"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oblicz oba pierwiastki osobno}",
+        "expression": "n_1 = \\frac{16 - 10}{2} = \\frac{6}{2} = 3, \\quad n_2 = \\frac{16 + 10}{2} = \\frac{26}{2} = 13",
+        "explanation": "\\text{Funkcja kwadratowa ma miejsca zerowe w punktach } n = 3 \\text{ i } n = 13"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Parabola o współczynniku przy } n^2 \\text{ dodatnim ma kształt } \\cup\\text{. Gdzie funkcja jest dodatnia względem miejsc zerowych?}",
+        "expression": "n^2 - 16n + 39 > 0 \\text{ dla } n < 3 \\text{ lub } n > 13",
+        "explanation": "\\text{Funkcja kwadratowa z } a = 1 > 0 \\text{ jest dodatnia poza przedziałem między pierwiastkami}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Pamiętaj o dziedzinie zadania. Które liczby naturalne spełniają warunki } n < 3 \\text{ lub } n > 13\\text{?}",
+        "expression": "n \\in \\{1, 2\\} \\cup \\{14, 15, 16, ...\\}",
+        "explanation": "\\text{Przecięcie z liczbami naturalnymi daje nam odpowiedź}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź obliczenia dla kilku pierwszych wartości, aby potwierdzić wynik}",
+        "expression": "a_1 = \\frac{1 - 16 + 39}{5} = \\frac{24}{5} > 0, \\quad a_3 = \\frac{9 - 48 + 39}{7} = \\frac{0}{7} = 0",
+        "explanation": "\\text{Weryfikacja potwierdza, że } a_1 > 0, a_3 = 0 \\text{, zgodnie z naszą analizą}"
+      }
+    ],
+    "solutions": [
+      "n \\in \\{1, 2\\} \\cup \\{14, 15, 16, 17, ...\\}",
+      "\\text{Wyrazy dodatnie to: } a_1, a_2, a_{14}, a_{15}, a_{16}, \\ldots"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}",
+      "zeros": "n = 3, n = 13"
+    }
+  },
+  {
+    "id": "tex_problem_26",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu o wyrazie ogólnym $a_{n}=\\frac{n^{2}+11 n+8}{n}, n \\in N_{-}$, równają 17? Jakie jeszcze wyrazy w tym ciągu są liczbami naturalnymi?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby znaleźć wyrazy równe 17, co musisz zrobić z wyrażeniem } a_n = \\frac{n^2 + 11n + 8}{n}\\text{?}",
+        "expression": "\\frac{n^2 + 11n + 8}{n} = 17",
+        "explanation": "\\text{Przyrównujemy wzór ogólny do 17}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak możesz uprościć ułamek po lewej stronie? Spróbuj podzielić każdy składnik licznika przez mianownik}",
+        "expression": "\\frac{n^2}{n} + \\frac{11n}{n} + \\frac{8}{n} = 17",
+        "explanation": "\\text{Rozbijamy ułamek na sumę trzech ułamków}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Które z tych ułamków możesz uprościć?}",
+        "expression": "n + 11 + \\frac{8}{n} = 17",
+        "explanation": "\\text{Upraszczamy: } \\frac{n^2}{n} = n \\text{ i } \\frac{11n}{n} = 11"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Przenieś stałe na prawą stronę równania}",
+        "expression": "n + \\frac{8}{n} = 17 - 11 = 6",
+        "explanation": "\\text{Odejmujemy 11 od obu stron}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jak pozbyć się ułamka? Przez co możesz pomnożyć obie strony?}",
+        "expression": "n^2 + 8 = 6n",
+        "explanation": "\\text{Mnożymy obie strony przez } n \\text{ (przy założeniu } n \\neq 0\\text{)}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać równanie kwadratowe}",
+        "expression": "n^2 - 6n + 8 = 0",
+        "explanation": "\\text{Przenosimy } 6n \\text{ na lewą stronę}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Czy potrafisz rozłożyć to równanie kwadratowe na czynniki? Szukaj dwóch liczb, które dają w sumie -6, a w iloczynie 8}",
+        "expression": "(n - 2)(n - 4) = 0",
+        "explanation": "\\text{Rozkładamy na czynniki: } -2 + (-4) = -6 \\text{ i } (-2) \\cdot (-4) = 8"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Kiedy iloczyn dwóch czynników równa się zero?}",
+        "expression": "n = 2 \\text{ lub } n = 4",
+        "explanation": "\\text{Każdy z czynników może być równy zero}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź czy te wartości należą do dziedziny } \\mathbb{N}_+\\text{. Które wyrazy ciągu równają się 17?}",
+        "expression": "a_2 = \\frac{4 + 22 + 8}{2} = \\frac{34}{2} = 17, \\quad a_4 = \\frac{16 + 44 + 8}{4} = \\frac{68}{4} = 17",
+        "explanation": "\\text{Oba rozwiązania są liczbami naturalnymi dodatnimi}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Aby znaleźć wszystkie wyrazy będące liczbami naturalnymi, kiedy } \\frac{8}{n} \\text{ jest liczbą całkowitą?}",
+        "expression": "n + 11 + \\frac{8}{n} \\in \\mathbb{N} \\Leftrightarrow \\frac{8}{n} \\in \\mathbb{Z}",
+        "explanation": "\\text{Ponieważ } n \\text{ i } 11 \\text{ są już naturalne, potrzebujemy by } \\frac{8}{n} \\text{ było całkowite}"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Jakie liczby naturalne dzielą 8? Znajdź wszystkie dzielniki liczby 8}",
+        "expression": "n \\in \\{1, 2, 4, 8\\}",
+        "explanation": "\\text{Dzielnikami liczby 8 są: 1, 2, 4, 8}"
+      },
+      {
+        "step": 12,
+        "hint": "\\text{Oblicz wartości wyrazu dla każdego z tych dzielników}",
+        "expression": "a_1 = 1 + 11 + 8 = 20, \\; a_2 = 2 + 11 + 4 = 17, \\; a_4 = 4 + 11 + 2 = 17, \\; a_8 = 8 + 11 + 1 = 20",
+        "explanation": "\\text{Podstawiamy kolejno } n = 1, 2, 4, 8 \\text{ do uproszczonego wzoru}"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazy równe 17: } a_2 \\text{ i } a_4",
+      "\\text{Wszystkie wyrazy będące liczbami naturalnymi: } a_1 = 20, a_2 = 17, a_4 = 17, a_8 = 20"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_27",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Które wyrazy ciągu o wyrazie ogólnym $a_{n}=\\frac{3 n^{2}-2 n-12}{n}, n \\in N_{\\text {+ }}$, są liczba naturalnymi? Czy jakiś wyraz ciągu jest równy 14 ?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby wyraz ciągu był liczbą naturalną, musi być liczbą całkowitą dodatnią. Co możesz zrobić z ułamkiem, żeby łatwiej sprawdzić kiedy jest liczbą całkowitą?}",
+        "expression": "a_n = \\frac{3n^2 - 2n - 12}{n} = \\frac{3n^2}{n} - \\frac{2n}{n} - \\frac{12}{n} = 3n - 2 - \\frac{12}{n}",
+        "explanation": "\\text{Dzielimy każdy składnik licznika przez mianownik osobno}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz masz } a_n = 3n - 2 - \\frac{12}{n}\\text{. Kiedy taka liczba będzie całkowita? Na co musisz zwrócić uwagę?}",
+        "expression": "a_n = 3n - 2 - \\frac{12}{n} \\in \\mathbb{N} \\Leftrightarrow \\frac{12}{n} \\in \\mathbb{N}",
+        "explanation": "\\text{Ponieważ } 3n - 2 \\text{ jest zawsze całkowite dla } n \\in \\mathbb{N}_+\\text{, warunkiem jest całkowitość } \\frac{12}{n}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Kiedy } \\frac{12}{n} \\text{ jest liczbą całkowitą? Jakie } n \\text{ spełniają ten warunek?}",
+        "expression": "\\frac{12}{n} \\in \\mathbb{N} \\Leftrightarrow n \\text{ jest dzielnikiem liczby } 12",
+        "explanation": "\\text{Ułamek } \\frac{12}{n} \\text{ jest liczbą naturalną wtedy i tylko wtedy, gdy } n \\text{ dzieli } 12"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Znajdź wszystkie dzielniki naturalne liczby 12. Jak można to zrobić systematycznie?}",
+        "expression": "12 = 2^2 \\cdot 3^1 \\Rightarrow \\text{dzielniki: } 1, 2, 3, 4, 6, 12",
+        "explanation": "\\text{Rozkładamy 12 na czynniki pierwsze i znajdujemy wszystkie dzielniki}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Teraz oblicz wartości } a_n \\text{ dla każdego znalezionego dzielnika. Które z nich są liczbami naturalnymi?}",
+        "expression": "\\begin{align} a_1 &= 3 \\cdot 1 - 2 - 12 = -11 \\ a_2 &= 3 \\cdot 2 - 2 - 6 = -2 \\ a_3 &= 3 \\cdot 3 - 2 - 4 = 3 \\ a_4 &= 3 \\cdot 4 - 2 - 3 = 7 \\ a_6 &= 3 \\cdot 6 - 2 - 2 = 14 \\ a_{12} &= 3 \\cdot 12 - 2 - 1 = 33 \\end{align}",
+        "explanation": "\\text{Podstawiamy każdy dzielnik do wzoru } a_n = 3n - 2 - \\frac{12}{n}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Które z obliczonych wartości są liczbami naturalnymi (dodatnimi)?}",
+        "expression": "a_3 = 3, \\quad a_4 = 7, \\quad a_6 = 14, \\quad a_{12} = 33",
+        "explanation": "\\text{Odrzucamy wartości ujemne, zostają tylko liczby naturalne}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź czy wśród obliczonych wartości znajduje się liczba 14}",
+        "expression": "a_6 = 14",
+        "explanation": "\\text{Wyraz } a_6 \\text{ jest równy 14, więc odpowiedź na drugie pytanie jest twierdząca}"
+      }
+    ],
+    "solutions": [
+      "\\text{Wyrazami naturalnymi są: } a_3 = 3, a_4 = 7, a_6 = 14, a_{12} = 33",
+      "\\text{Tak, wyraz } a_6 = 14"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_28",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Zbadaj, które wyrazy ciągu ( $a_{n}$ ), gdzie $n \\in N_{+}$, są liczbami naturainy Wyznacz te wyrazy. $a_{n}=2-\\frac{6}{n}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby wyraz ciągu był liczbą naturalną, co musi być spełnione dla wyrażenia } a_n = 2 - \\frac{6}{n}\\text{?}",
+        "expression": "a_n = 2 - \\frac{6}{n} \\in \\mathbb{N}",
+        "explanation": "\\text{Szukamy warunków, dla których } a_n \\text{ jest liczbą naturalną dodatnią}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jakie warunki musi spełniać liczba naturalna? Przypomnij sobie definicję zbioru } \\mathbb{N}\\text{.}",
+        "expression": "a_n \\geq 1 \\text{ oraz } a_n \\in \\mathbb{Z}",
+        "explanation": "\\text{Liczba naturalna musi być całkowita i dodatnia (przyjmujemy } \\mathbb{N} = \\{1, 2, 3, ...\\}\\text{)}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Sprawdź pierwszy warunek. Kiedy } 2 - \\frac{6}{n} \\geq 1\\text{?}",
+        "expression": "2 - \\frac{6}{n} \\geq 1 \\Rightarrow 1 \\geq \\frac{6}{n} \\Rightarrow n \\geq 6",
+        "explanation": "\\text{Po przeniesieniu } \\frac{6}{n} \\text{ na prawą stronę i odwróceniu nierówności otrzymujemy } n \\geq 6"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz sprawdź drugi warunek. Kiedy } 2 - \\frac{6}{n} \\text{ jest liczbą całkowitą?}",
+        "expression": "2 - \\frac{6}{n} \\in \\mathbb{Z} \\Leftrightarrow \\frac{6}{n} \\in \\mathbb{Z}",
+        "explanation": "\\text{Ponieważ 2 jest całkowite, to } a_n \\text{ jest całkowite wtedy i tylko wtedy, gdy } \\frac{6}{n} \\text{ jest całkowite}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Kiedy ułamek } \\frac{6}{n} \\text{ jest liczbą całkowitą? Co to oznacza dla } n\\text{?}",
+        "expression": "\\frac{6}{n} \\in \\mathbb{Z} \\Leftrightarrow n \\text{ jest dzielnikiem liczby } 6",
+        "explanation": "\\text{Ułamek jest całkowity, gdy mianownik dzieli licznik}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Jakie są wszystkie dzielniki dodatnie liczby 6?}",
+        "expression": "\\text{Dzielniki liczby } 6: \\{1, 2, 3, 6\\}",
+        "explanation": "\\text{Znajdujemy wszystkie liczby naturalne, które dzielą 6}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Które z dzielników spełniają warunek } n \\geq 6\\text{?}",
+        "expression": "n \\in \\{1, 2, 3, 6\\} \\cap \\{n: n \\geq 6\\} = \\{6\\}",
+        "explanation": "\\text{Tylko } n = 6 \\text{ spełnia oba warunki jednocześnie}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Oblicz wartość } a_6 \\text{ i sprawdź, czy rzeczywiście jest liczbą naturalną}",
+        "expression": "a_6 = 2 - \\frac{6}{6} = 2 - 1 = 1",
+        "explanation": "\\text{Podstawiamy } n = 6 \\text{ do wzoru na } a_n"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Czy istnieją inne wartości } n > 6\\text{, dla których } a_n \\text{ mogłoby być liczbą naturalną?}",
+        "expression": "\\text{Dla } n > 6: \\frac{6}{n} < 1, \\text{ więc } \\frac{6}{n} \\notin \\mathbb{Z}",
+        "explanation": "\\text{Dla } n > 6 \\text{ ułamek } \\frac{6}{n} \\text{ nie może być liczbą całkowitą}"
+      }
+    ],
+    "solutions": [
+      "n = 6",
+      "a_6 = 1"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_29",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Zbadaj, które wyrazy ciągu ( $a_{n}$ ), gdzie $n \\in N_{+}$, są liczbami naturainy Wyznacz te wyrazy. $a_{n}=\\frac{3 n-6}{n+2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Aby wyraz ciągu był liczbą naturalną, musi być liczbą całkowitą dodatnią. Co to oznacza dla ułamka } \\frac{3n-6}{n+2}\\text{?}",
+        "expression": "a_n = \\frac{3n-6}{n+2} \\in \\mathbb{N}_+",
+        "explanation": "\\text{Szukamy wartości } n \\text{, dla których wyrażenie jest liczbą naturalną}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Czy możesz przekształcić licznik tak, aby łatwiej było wykonać dzielenie? Spróbuj wyłączyć wspólny czynnik}",
+        "expression": "a_n = \\frac{3(n-2)}{n+2}",
+        "explanation": "\\text{Wyłączamy czynnik 3 z licznika: } 3n - 6 = 3(n-2)"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jak możesz przepisać licznik, żeby łatwiej było go podzielić przez mianownik? Pomyśl o dodaniu i odjęciu tej samej wartości}",
+        "expression": "a_n = \\frac{3(n+2) - 3 \\cdot 4}{n+2} = \\frac{3(n+2) - 12}{n+2}",
+        "explanation": "\\text{Przepisujemy } n-2 = (n+2) - 4\\text{, więc } 3(n-2) = 3(n+2) - 12"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Teraz możesz rozdzielić ułamek na dwie części. Jak to zrobić?}",
+        "expression": "a_n = \\frac{3(n+2)}{n+2} - \\frac{12}{n+2} = 3 - \\frac{12}{n+2}",
+        "explanation": "\\text{Dzielimy ułamek na sumę dwóch ułamków}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Aby } a_n \\text{ było liczbą naturalną, } \\frac{12}{n+2} \\text{ musi być liczbą całkowitą. Co to oznacza dla } n+2\\text{?}",
+        "expression": "\\frac{12}{n+2} \\in \\mathbb{Z} \\Rightarrow (n+2) | 12",
+        "explanation": "\\text{Wyrażenie } n+2 \\text{ musi być dzielnikiem liczby 12}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Jakie są wszystkie dzielniki dodatnie liczby 12? Pamiętaj, że } n \\in \\mathbb{N}_+\\text{, więc } n+2 \\geq 3",
+        "expression": "\\text{Dzielniki 12: } \\{1, 2, 3, 4, 6, 12\\}",
+        "explanation": "\\text{Ponieważ } n \\geq 1\\text{, mamy } n+2 \\geq 3\\text{, więc rozważamy dzielniki } \\geq 3"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Dla każdego dopuszczalnego dzielnika znajdź odpowiadającą mu wartość } n \\text{ i sprawdź czy daje liczbę naturalną}",
+        "expression": "\\begin{align} n+2 = 3 &\\Rightarrow n = 1, \\; a_1 = 3 - 4 = -1 \\ n+2 = 4 &\\Rightarrow n = 2, \\; a_2 = 3 - 3 = 0 \\ n+2 = 6 &\\Rightarrow n = 4, \\; a_4 = 3 - 2 = 1 \\ n+2 = 12 &\\Rightarrow n = 10, \\; a_{10} = 3 - 1 = 2 \\end{align}",
+        "explanation": "\\text{Obliczamy } a_n = 3 - \\frac{12}{n+2} \\text{ dla każdego przypadku}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Które z otrzymanych wartości są liczbami naturalnymi (dodatnimi całkowitymi)?}",
+        "expression": "a_4 = 1 \\in \\mathbb{N}_+, \\quad a_{10} = 2 \\in \\mathbb{N}_+",
+        "explanation": "\\text{Odrzucamy } a_1 = -1 \\text{ i } a_2 = 0 \\text{ jako nie będące liczbami naturalnymi}"
+      }
+    ],
+    "solutions": [
+      "a_4 = 1",
+      "a_{10} = 2"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_30",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=\\frac{n+2}{3 n}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = \\frac{n+2}{3n}\\text{. Jak znajdziesz } a_{n+1}\\text{? Co musisz podstawić zamiast } n\\text{?}",
+        "expression": "a_{n+1} = \\frac{(n+1)+2}{3(n+1)} = \\frac{n+3}{3(n+1)} = \\frac{n+3}{3n+3}",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Czy możesz uprościć wyrażenie } \\frac{n+3}{3n+3}\\text{? Sprawdź czy licznik i mianownik mają wspólny czynnik}",
+        "expression": "a_{n+1} = \\frac{n+3}{3(n+1)} = \\frac{n+3}{3(n+1)}",
+        "explanation": "\\text{Wyłączamy 3 z mianownika, ale nie ma dalszego uproszczenia}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Wzór na } a_n \\text{ już masz. Teraz znajdź } a_{2k}\\text{. Jaką wartość podstawisz za } n\\text{?}",
+        "expression": "a_{2k} = \\frac{2k+2}{3 \\cdot 2k} = \\frac{2k+2}{6k}",
+        "explanation": "\\text{Podstawiamy } 2k \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Spójrz na licznik } 2k+2\\text{. Czy możesz wyłączyć wspólny czynnik z licznika i mianownika?}",
+        "expression": "a_{2k} = \\frac{2(k+1)}{6k} = \\frac{2(k+1)}{2 \\cdot 3k} = \\frac{k+1}{3k}",
+        "explanation": "\\text{Wyłączamy 2 z licznika i mianownika, następnie skracamy}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Teraz znajdź } a_{2k+1}\\text{. Jaką wartość podstawisz za } n \\text{ tym razem?}",
+        "expression": "a_{2k+1} = \\frac{(2k+1)+2}{3(2k+1)} = \\frac{2k+3}{3(2k+1)} = \\frac{2k+3}{6k+3}",
+        "explanation": "\\text{Podstawiamy } 2k+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź mianownik } 6k+3\\text{. Czy możesz wyłączyć wspólny czynnik?}",
+        "expression": "a_{2k+1} = \\frac{2k+3}{3(2k+1)}",
+        "explanation": "\\text{Wyłączamy 3 z mianownika } 6k+3 = 3(2k+1)"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Zebrij wszystkie otrzymane wyniki. Które wyrażenia można jeszcze uprościć?}",
+        "expression": "\\begin{align} a_{n+1} &= \\frac{n+3}{3(n+1)} \\ a_n &= \\frac{n+2}{3n} \\ a_{2k} &= \\frac{k+1}{3k} \\ a_{2k+1} &= \\frac{2k+3}{3(2k+1)} \\end{align}",
+        "explanation": "\\text{Podsumowujemy wszystkie wyznaczone wyrazy ciągu}"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = \\frac{n+3}{3(n+1)}",
+      "a_n = \\frac{n+2}{3n}",
+      "a_{2k} = \\frac{k+1}{3k}",
+      "a_{2k+1} = \\frac{2k+3}{3(2k+1)}"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_31",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=\\frac{1-4 n}{3 n+2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = \\frac{1-4n}{3n+2}\\text{. Jak znajdziesz } a_{n+1}\\text{? Co musisz podstawić zamiast } n\\text{?}",
+        "expression": "a_{n+1} = \\frac{1-4(n+1)}{3(n+1)+2}",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Rozwiń wyrażenia w liczniku i mianowniku osobno. Zacznij od licznika}",
+        "expression": "1-4(n+1) = 1-4n-4 = -4n-3",
+        "explanation": "\\text{Mnożymy } -4 \\text{ przez } (n+1) \\text{ i upraszczamy}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz rozwiń mianownik}",
+        "expression": "3(n+1)+2 = 3n+3+2 = 3n+5",
+        "explanation": "\\text{Mnożymy } 3 \\text{ przez } (n+1) \\text{ i dodajemy } 2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Połącz wyniki z kroków 2 i 3}",
+        "expression": "a_{n+1} = \\frac{-4n-3}{3n+5}",
+        "explanation": "\\text{Otrzymujemy wzór na } a_{n+1} \\text{ w postaci uproszczonej}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Teraz znajdź } a_{2k}\\text{. Co podstawisz zamiast } n \\text{ we wzorze ogólnym?}",
+        "expression": "a_{2k} = \\frac{1-4(2k)}{3(2k)+2}",
+        "explanation": "\\text{Podstawiamy } 2k \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Uprość licznik i mianownik dla } a_{2k}",
+        "expression": "a_{2k} = \\frac{1-8k}{6k+2}",
+        "explanation": "\\text{Obliczamy } 4 \\cdot 2k = 8k \\text{ i } 3 \\cdot 2k = 6k"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Czy możesz wyłączyć wspólny czynnik z mianownika?}",
+        "expression": "a_{2k} = \\frac{1-8k}{2(3k+1)}",
+        "explanation": "\\text{Wyłączamy } 2 \\text{ z mianownika: } 6k+2 = 2(3k+1)"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Teraz znajdź } a_{2k+1}\\text{. Jakie podstawienie wykonasz tym razem?}",
+        "expression": "a_{2k+1} = \\frac{1-4(2k+1)}{3(2k+1)+2}",
+        "explanation": "\\text{Podstawiamy } 2k+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Rozwiń licznik dla } a_{2k+1}",
+        "expression": "1-4(2k+1) = 1-8k-4 = -8k-3",
+        "explanation": "\\text{Mnożymy } -4 \\text{ przez } (2k+1) \\text{ i upraszczamy}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Rozwiń mianownik dla } a_{2k+1}",
+        "expression": "3(2k+1)+2 = 6k+3+2 = 6k+5",
+        "explanation": "\\text{Mnożymy } 3 \\text{ przez } (2k+1) \\text{ i dodajemy } 2"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Zapisz końcowy wzór na } a_{2k+1}",
+        "expression": "a_{2k+1} = \\frac{-8k-3}{6k+5}",
+        "explanation": "\\text{Łączymy wyniki z kroków 9 i 10}"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = \\frac{-4n-3}{3n+5}",
+      "a_{2k} = \\frac{1-8k}{2(3k+1)}",
+      "a_{2k+1} = \\frac{-8k-3}{6k+5}"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_32",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=-4 n^{2}+3 n$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = -4n^2 + 3n\\text{. Jak znajdziesz } a_{n+1}\\text{? Co musisz podstawić za } n\\text{?}",
+        "expression": "a_{n+1} = -4(n+1)^2 + 3(n+1)",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Rozwiń wyrażenie } (n+1)^2\\text{. Pamiętasz wzór na kwadrat sumy?}",
+        "expression": "a_{n+1} = -4(n^2 + 2n + 1) + 3n + 3",
+        "explanation": "\\text{Używamy wzoru } (a+b)^2 = a^2 + 2ab + b^2"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Wymnóż } -4 \\text{ przez każdy składnik w nawiasie i uprość całe wyrażenie}",
+        "expression": "a_{n+1} = -4n^2 - 8n - 4 + 3n + 3 = -4n^2 - 5n - 1",
+        "explanation": "\\text{Rozwijamy nawias i łączymy podobne składniki: } -8n + 3n = -5n \\text{ oraz } -4 + 3 = -1"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Dla } a_{2k}\\text{, co podstawisz za } n \\text{ we wzorze ogólnym?}",
+        "expression": "a_{2k} = -4(2k)^2 + 3(2k)",
+        "explanation": "\\text{Podstawiamy } 2k \\text{ w miejsce } n"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz } (2k)^2 \\text{ i uprość całe wyrażenie}",
+        "expression": "a_{2k} = -4 \\cdot 4k^2 + 6k = -16k^2 + 6k",
+        "explanation": "\\text{Ponieważ } (2k)^2 = 4k^2 \\text{ oraz } 3 \\cdot 2k = 6k"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k+1}\\text{, jaka wartość zastąpi } n\\text{?}",
+        "expression": "a_{2k+1} = -4(2k+1)^2 + 3(2k+1)",
+        "explanation": "\\text{Podstawiamy } 2k+1 \\text{ w miejsce } n"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Rozwiń } (2k+1)^2\\text{. Jak wygląda kwadrat tej sumy?}",
+        "expression": "a_{2k+1} = -4(4k^2 + 4k + 1) + 6k + 3",
+        "explanation": "\\text{Używamy wzoru } (a+b)^2 = a^2 + 2ab + b^2\\text{, gdzie } a = 2k, b = 1"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Rozwiń nawias z } -4 \\text{ i połącz wszystkie podobne składniki}",
+        "expression": "a_{2k+1} = -16k^2 - 16k - 4 + 6k + 3 = -16k^2 - 10k - 1",
+        "explanation": "\\text{Łączymy podobne: } -16k + 6k = -10k \\text{ oraz } -4 + 3 = -1"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = -4n^2 - 5n - 1",
+      "a_n = -4n^2 + 3n",
+      "a_{2k} = -16k^2 + 6k",
+      "a_{2k+1} = -16k^2 - 10k - 1"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_33",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=(2 n-1)(2 n+1)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = (2n-1)(2n+1)\\text{. Co otrzymasz, gdy podstawisz } n+1 \\text{ zamiast } n\\text{?}",
+        "expression": "a_{n+1} = (2(n+1)-1)(2(n+1)+1)",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ do wzoru ogólnego ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Uprość wyrażenia w nawiasach. Co otrzymasz po wykonaniu działań w każdym nawiasie?}",
+        "expression": "a_{n+1} = (2n+2-1)(2n+2+1) = (2n+1)(2n+3)",
+        "explanation": "\\text{Wykonujemy działania: } 2(n+1) = 2n+2\\text{, następnie } 2n+2-1 = 2n+1 \\text{ i } 2n+2+1 = 2n+3"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz znajdź } a_n\\text{. Czy możesz rozłożyć wyrażenie } (2n-1)(2n+1) \\text{ na czynniki w inny sposób?}",
+        "expression": "a_n = (2n-1)(2n+1) = (2n)^2 - 1^2 = 4n^2 - 1",
+        "explanation": "\\text{Rozpoznajemy wzór skróconego mnożenia } (a-b)(a+b) = a^2 - b^2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Dla } a_{2k}\\text{, co się stanie gdy podstawisz } n = 2k \\text{ do wzoru ogólnego?}",
+        "expression": "a_{2k} = (2 \\cdot 2k - 1)(2 \\cdot 2k + 1) = (4k-1)(4k+1)",
+        "explanation": "\\text{Podstawiamy } n = 2k \\text{ do wzoru } a_n = (2n-1)(2n+1)"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Czy możesz uprościć } (4k-1)(4k+1) \\text{ używając wzoru skróconego mnożenia?}",
+        "expression": "a_{2k} = (4k)^2 - 1^2 = 16k^2 - 1",
+        "explanation": "\\text{Ponownie stosujemy wzór } (a-b)(a+b) = a^2 - b^2"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k+1}\\text{, podstaw } n = 2k+1 \\text{ do wzoru ogólnego. Co otrzymasz w nawiasach?}",
+        "expression": "a_{2k+1} = (2(2k+1)-1)(2(2k+1)+1) = (4k+2-1)(4k+2+1)",
+        "explanation": "\\text{Podstawiamy } n = 2k+1 \\text{ i wykonujemy mnożenie } 2(2k+1) = 4k+2"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Uprość wyrażenia w nawiasach dla } a_{2k+1}",
+        "expression": "a_{2k+1} = (4k+1)(4k+3)",
+        "explanation": "\\text{Wykonujemy działania: } 4k+2-1 = 4k+1 \\text{ i } 4k+2+1 = 4k+3"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź czy możesz uprościć } (4k+1)(4k+3) \\text{ do postaci bez nawiasów}",
+        "expression": "a_{2k+1} = (4k+1)(4k+3) = 16k^2 + 12k + 4k + 3 = 16k^2 + 16k + 3",
+        "explanation": "\\text{Wykonujemy mnożenie przez rozbicie: } (4k+1)(4k+3) = 4k \\cdot 4k + 4k \\cdot 3 + 1 \\cdot 4k + 1 \\cdot 3"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = (2n+1)(2n+3)",
+      "a_n = 4n^2 - 1",
+      "a_{2k} = 16k^2 - 1",
+      "a_{2k+1} = 16k^2 + 16k + 3"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_34",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=n^{3}-n^{2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = n^3 - n^2\\text{. Jak znajdziesz } a_{n+1}\\text{? Co musisz podstawić za } n\\text{?}",
+        "expression": "a_{n+1} = (n+1)^3 - (n+1)^2",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz musisz rozwinąć } (n+1)^3\\text{. Czy pamiętasz wzór na sześcian sumy?}",
+        "expression": "(n+1)^3 = n^3 + 3n^2 + 3n + 1",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Podobnie rozwiń } (n+1)^2\\text{. Jaki to będzie wzór?}",
+        "expression": "(n+1)^2 = n^2 + 2n + 1",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^2 = a^2 + 2ab + b^2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw rozwinięcia do wyrażenia na } a_{n+1}\\text{ i wykonaj odejmowanie}",
+        "expression": "a_{n+1} = (n^3 + 3n^2 + 3n + 1) - (n^2 + 2n + 1) = n^3 + 3n^2 + 3n + 1 - n^2 - 2n - 1",
+        "explanation": "\\text{Podstawiamy rozwinięcia i przygotowujemy do uproszczenia}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Pogrupuj podobne składniki i uprość wyrażenie}",
+        "expression": "a_{n+1} = n^3 + (3n^2 - n^2) + (3n - 2n) + (1 - 1) = n^3 + 2n^2 + n",
+        "explanation": "\\text{Łączymy wyrazy podobne: } 3n^2 - n^2 = 2n^2\\text{, } 3n - 2n = n\\text{, } 1 - 1 = 0"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k}\\text{, co musisz podstawić za } n \\text{ we wzorze ogólnym?}",
+        "expression": "a_{2k} = (2k)^3 - (2k)^2",
+        "explanation": "\\text{Podstawiamy } 2k \\text{ w miejsce } n \\text{ we wzorze } a_n = n^3 - n^2"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oblicz potęgi liczby } 2k\\text{. Jak wyglądają } (2k)^3 \\text{ i } (2k)^2\\text{?}",
+        "expression": "(2k)^3 = 8k^3, \\quad (2k)^2 = 4k^2",
+        "explanation": "\\text{Stosujemy wzory: } (ab)^n = a^n b^n"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw obliczone potęgi do wyrażenia na } a_{2k}",
+        "expression": "a_{2k} = 8k^3 - 4k^2 = 4k^2(2k - 1)",
+        "explanation": "\\text{Wyłączamy wspólny czynnik } 4k^2 \\text{ przed nawias}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Dla } a_{2k+1}\\text{, jaką wartość podstawisz za } n\\text{?}",
+        "expression": "a_{2k+1} = (2k+1)^3 - (2k+1)^2",
+        "explanation": "\\text{Podstawiamy } 2k+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Rozwiń } (2k+1)^3 \\text{ używając wzoru na sześcian sumy}",
+        "expression": "(2k+1)^3 = (2k)^3 + 3(2k)^2 \\cdot 1 + 3(2k) \\cdot 1^2 + 1^3 = 8k^3 + 12k^2 + 6k + 1",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Rozwiń } (2k+1)^2 \\text{ używając wzoru na kwadrat sumy}",
+        "expression": "(2k+1)^2 = (2k)^2 + 2 \\cdot 2k \\cdot 1 + 1^2 = 4k^2 + 4k + 1",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^2 = a^2 + 2ab + b^2"
+      },
+      {
+        "step": 12,
+        "hint": "\\text{Podstaw rozwinięcia do wyrażenia na } a_{2k+1} \\text{ i wykonaj odejmowanie}",
+        "expression": "a_{2k+1} = (8k^3 + 12k^2 + 6k + 1) - (4k^2 + 4k + 1)",
+        "explanation": "\\text{Podstawiamy oba rozwinięcia}"
+      },
+      {
+        "step": 13,
+        "hint": "\\text{Usuń nawiasy i pogrupuj podobne składniki}",
+        "expression": "a_{2k+1} = 8k^3 + 12k^2 + 6k + 1 - 4k^2 - 4k - 1 = 8k^3 + 8k^2 + 2k",
+        "explanation": "\\text{Łączymy wyrazy podobne: } 12k^2 - 4k^2 = 8k^2\\text{, } 6k - 4k = 2k\\text{, } 1 - 1 = 0"
+      },
+      {
+        "step": 14,
+        "hint": "\\text{Czy możesz wyłączyć wspólny czynnik z wyrażenia } 8k^3 + 8k^2 + 2k\\text{?}",
+        "expression": "a_{2k+1} = 2k(4k^2 + 4k + 1)",
+        "explanation": "\\text{Wyłączamy wspólny czynnik } 2k \\text{ przed nawias}"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = n^3 + 2n^2 + n",
+      "a_{2k} = 4k^2(2k - 1)",
+      "a_{2k+1} = 2k(4k^2 + 4k + 1)"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_35",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=4 n-n^{3}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór ogólny } a_n = 4n - n^3\\text{. Jak znajdziesz } a_{n+1}\\text{? Co musisz podstawić zamiast } n\\text{?}",
+        "expression": "a_{n+1} = 4(n+1) - (n+1)^3",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Rozwiń wyrażenie } 4(n+1)\\text{. Jak to obliczyć?}",
+        "expression": "4(n+1) = 4n + 4",
+        "explanation": "\\text{Mnożymy 4 przez każdy składnik w nawiasie}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz musisz rozwinąć } (n+1)^3\\text{. Czy pamiętasz wzór na sześcian sumy?}",
+        "expression": "(n+1)^3 = n^3 + 3n^2 + 3n + 1",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\text{ dla } a = n, b = 1"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Połącz wyniki z kroków 2 i 3. Jak wygląda pełne wyrażenie na } a_{n+1}\\text{?}",
+        "expression": "a_{n+1} = 4n + 4 - (n^3 + 3n^2 + 3n + 1)",
+        "explanation": "\\text{Podstawiamy rozwinięte wyrażenia do wzoru na } a_{n+1}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Usuń nawiasy i uporządkuj wyrazy według potęg } n\\text{. Pamiętaj o znakach!}",
+        "expression": "a_{n+1} = 4n + 4 - n^3 - 3n^2 - 3n - 1 = -n^3 - 3n^2 + n + 3",
+        "explanation": "\\text{Łączymy podobne wyrazy: } 4n - 3n = n \\text{ oraz } 4 - 1 = 3"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla } a_{2k}\\text{, co podstawisz w miejsce } n \\text{ we wzorze ogólnym?}",
+        "expression": "a_{2k} = 4(2k) - (2k)^3",
+        "explanation": "\\text{Podstawiamy } 2k \\text{ w miejsce } n \\text{ we wzorze } a_n = 4n - n^3"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oblicz } 4(2k) \\text{ oraz } (2k)^3\\text{. Jak podnieść do sześcianu iloczyn?}",
+        "expression": "4(2k) = 8k \\text{ oraz } (2k)^3 = 2^3 \\cdot k^3 = 8k^3",
+        "explanation": "\\text{Używamy wzoru } (ab)^3 = a^3b^3"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw obliczone wartości do wzoru na } a_{2k}",
+        "expression": "a_{2k} = 8k - 8k^3 = 8k(1 - k^2)",
+        "explanation": "\\text{Wyłączamy wspólny czynnik } 8k"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Dla } a_{2k+1}\\text{, jaką wartość podstawisz w miejsce } n\\text{?}",
+        "expression": "a_{2k+1} = 4(2k+1) - (2k+1)^3",
+        "explanation": "\\text{Podstawiamy } 2k+1 \\text{ w miejsce } n \\text{ we wzorze ogólnym}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Rozwiń } 4(2k+1)\\text{. Jak to obliczyć?}",
+        "expression": "4(2k+1) = 8k + 4",
+        "explanation": "\\text{Mnożymy 4 przez każdy składnik w nawiasie}"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Teraz rozwiń } (2k+1)^3\\text{. Zastosuj wzór na sześcian sumy}",
+        "expression": "(2k+1)^3 = (2k)^3 + 3(2k)^2 \\cdot 1 + 3(2k) \\cdot 1^2 + 1^3",
+        "explanation": "\\text{Stosujemy wzór } (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\text{ dla } a = 2k, b = 1"
+      },
+      {
+        "step": 12,
+        "hint": "\\text{Oblicz każdy składnik w rozwinięciu } (2k+1)^3",
+        "expression": "(2k+1)^3 = 8k^3 + 3 \\cdot 4k^2 + 6k + 1 = 8k^3 + 12k^2 + 6k + 1",
+        "explanation": "\\text{Obliczamy: } (2k)^3 = 8k^3, 3(2k)^2 = 12k^2, 3(2k) = 6k"
+      },
+      {
+        "step": 13,
+        "hint": "\\text{Podstaw wszystkie obliczone wartości do wzoru na } a_{2k+1}",
+        "expression": "a_{2k+1} = 8k + 4 - (8k^3 + 12k^2 + 6k + 1)",
+        "explanation": "\\text{Łączymy wyniki z kroków 10 i 12}"
+      },
+      {
+        "step": 14,
+        "hint": "\\text{Usuń nawiasy i uporządkuj wyrazy. Pamiętaj o znakach przy odejmowaniu!}",
+        "expression": "a_{2k+1} = 8k + 4 - 8k^3 - 12k^2 - 6k - 1 = -8k^3 - 12k^2 + 2k + 3",
+        "explanation": "\\text{Łączymy podobne: } 8k - 6k = 2k \\text{ oraz } 4 - 1 = 3"
+      }
+    ],
+    "solutions": [
+      "a_{n+1} = -n^3 - 3n^2 + n + 3",
+      "a_{2k} = 8k(1 - k^2)",
+      "a_{2k+1} = -8k^3 - 12k^2 + 2k + 3"
+    ],
+    "parameters": {
+      "domain": "n > 1, k \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_36",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=n+4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = n + 4\\text{. Co możesz powiedzieć o kolejnych wyrazach ciągu, podstawiając różne wartości } n\\text{?}",
+        "expression": "a_2 = 1 + 4 = 5, \\quad a_3 = 2 + 4 = 6, \\quad a_4 = 3 + 4 = 7",
+        "explanation": "\\text{Podstawiamy } n = 1, 2, 3 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Spójrz na otrzymane wartości: } a_2 = 5, a_3 = 6, a_4 = 7\\text{. Czy widzisz jakąś prawidłowość?}",
+        "expression": "a_2 = 2 + 3, \\quad a_3 = 3 + 3, \\quad a_4 = 4 + 3",
+        "explanation": "\\text{Każdy wyraz można zapisać jako numer indeksu plus 3}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Na podstawie zauważonej prawidłowości, jak myślisz że wygląda wzór ogólny na } a_n\\text{?}",
+        "expression": "a_n = n + 3 \\text{ dla } n \\geq 2",
+        "explanation": "\\text{Hipoteza: każdy wyraz to jego indeks powiększony o 3}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jak możesz sprawdzić, czy twoja hipoteza jest poprawna? Podstaw ją do wzoru rekurencyjnego}",
+        "expression": "a_{n+1} = (n+1) + 3 = n + 4",
+        "explanation": "\\text{Jeśli } a_n = n + 3\\text{, to } a_{n+1} = (n+1) + 3 = n + 4"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Porównaj otrzymany wynik z danym wzorem rekurencyjnym. Czy są identyczne?}",
+        "expression": "a_{n+1} = n + 4 \\quad \\checkmark",
+        "explanation": "\\text{Wzór się zgadza z danym wzorem rekurencyjnym}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Wzór } a_n = n + 3 \\text{ działa dla } n \\geq 2\\text{. Co z pierwszym wyrazem } a_1\\text{? Czy też pasuje do tego wzoru?}",
+        "expression": "\\text{Jeśli } a_1 = 1 + 3 = 4\\text{, to } a_2 = a_{1+1} = 1 + 4 = 5 \\quad \\checkmark",
+        "explanation": "\\text{Sprawdzamy czy } a_1 = 4 \\text{ jest zgodne z wzorem rekurencyjnym}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Wszystkie sprawdzenia się zgadzają. Jaki jest więc wzór na } n\\text{-ty wyraz ciągu?}",
+        "expression": "a_n = n + 3 \\text{ dla wszystkich } n \\in \\mathbb{N}_+",
+        "explanation": "\\text{Wzór ogólny obowiązuje dla wszystkich dodatnich liczb naturalnych}"
+      }
+    ],
+    "solutions": [
+      "a_n = n + 3, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_37",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=2 n+7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = 2n + 7\\text{. Co możesz powiedzieć o kolejnych wyrazach ciągu, podstawiając różne wartości } n\\text{?}",
+        "expression": "a_2 = 2 \\cdot 1 + 7 = 2 + 7 = 9",
+        "explanation": "\\text{Dla } n = 1 \\text{ otrzymujemy drugi wyraz ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz kilka kolejnych wyrazów. Czy widzisz jakąś prawidłowość?}",
+        "expression": "a_3 = 2 \\cdot 2 + 7 = 4 + 7 = 11, \\quad a_4 = 2 \\cdot 3 + 7 = 6 + 7 = 13",
+        "explanation": "\\text{Dla } n = 2 \\text{ i } n = 3 \\text{ otrzymujemy trzeci i czwarty wyraz}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Sprawdź różnice między kolejnymi wyrazami. Co zauważasz?}",
+        "expression": "a_3 - a_2 = 11 - 9 = 2, \\quad a_4 - a_3 = 13 - 11 = 2",
+        "explanation": "\\text{Różnica między kolejnymi wyrazami jest stała i wynosi 2}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jeśli różnice są stałe, to jaki to rodzaj ciągu? Jak wygląda wzór ogólny takiego ciągu?}",
+        "expression": "a_n = a_1 + (n-1) \\cdot d, \\text{ gdzie } d = 2",
+        "explanation": "\\text{To ciąg arytmetyczny o różnicy } d = 2"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Aby wyznaczyć } a_1\\text{, skorzystaj z faktu, że } a_2 = 9\\text{. Jak to pomoże ci znaleźć pierwszy wyraz?}",
+        "expression": "a_2 = a_1 + (2-1) \\cdot 2 = a_1 + 2 = 9",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ do wzoru ciągu arytmetycznego}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Z równania } a_1 + 2 = 9 \\text{ wyznacz wartość pierwszego wyrazu}",
+        "expression": "a_1 = 9 - 2 = 7",
+        "explanation": "\\text{Odejmujemy 2 od obu stron równania}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Teraz gdy znasz } a_1 = 7 \\text{ i } d = 2\\text{, jak brzmi wzór ogólny na } n\\text{-ty wyraz?}",
+        "expression": "a_n = 7 + (n-1) \\cdot 2 = 7 + 2n - 2 = 2n + 5",
+        "explanation": "\\text{Podstawiamy znane wartości i upraszczamy wyrażenie}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź poprawność wzoru. Czy } a_2 = 2 \\cdot 2 + 5 \\text{ daje oczekiwaną wartość?}",
+        "expression": "a_2 = 2 \\cdot 2 + 5 = 4 + 5 = 9 \\quad \\checkmark",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność wzoru}"
+      }
+    ],
+    "solutions": [
+      "a_n = 2n + 5, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "sequence_type": "\\text{ciąg arytmetyczny}",
+      "first_term": "a_1 = 7",
+      "common_difference": "d = 2"
+    }
+  },
+  {
+    "id": "tex_problem_38",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+2}=-3 n+2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+2} = -3n + 2\\text{. Co możesz powiedzieć o relacji między kolejnymi wyrazami ciągu?}",
+        "expression": "a_{n+2} = -3n + 2",
+        "explanation": "\\text{Analizujemy dany wzór rekurencyjny}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak zmienia się wzór, gdy podstawisz } n+1 \\text{ zamiast } n\\text{? Co to oznacza dla } a_{n+3}\\text{?}",
+        "expression": "a_{n+3} = a_{(n+1)+2} = -3(n+1) + 2 = -3n - 3 + 2 = -3n - 1",
+        "explanation": "\\text{Podstawiamy } n+1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz masz } a_{n+3} \\text{ i } a_{n+2}\\text{. Jaka jest różnica między kolejnymi wyrazami ciągu?}",
+        "expression": "a_{n+3} - a_{n+2} = (-3n - 1) - (-3n + 2) = -3n - 1 + 3n - 2 = -3",
+        "explanation": "\\text{Obliczamy różnicę między wyrazami odległymi o jeden indeks}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro różnica jest stała, co to oznacza dla typu tego ciągu? Jak możesz zapisać wzór ogólny?}",
+        "expression": "a_n = a_1 + (n-1) \\cdot (-3) = a_1 - 3(n-1) = a_1 - 3n + 3",
+        "explanation": "\\text{Ciąg jest arytmetyczny z różnicą } d = -3"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Aby wyznaczyć } a_1\\text{, użyj wzoru rekurencyjnego dla } n = 1\\text{. Co otrzymasz dla } a_3\\text{?}",
+        "expression": "a_3 = a_{1+2} = -3 \\cdot 1 + 2 = -3 + 2 = -1",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Masz } a_3 = -1 \\text{ i wzór } a_n = a_1 - 3n + 3\\text{. Jak możesz znaleźć } a_1\\text{?}",
+        "expression": "a_3 = a_1 - 3 \\cdot 3 + 3 = a_1 - 9 + 3 = a_1 - 6",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ do wzoru ogólnego}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Skoro } a_3 = -1 \\text{ i } a_3 = a_1 - 6\\text{, jak obliczyć } a_1\\text{?}",
+        "expression": "-1 = a_1 - 6 \\Rightarrow a_1 = -1 + 6 = 5",
+        "explanation": "\\text{Rozwiązujemy równanie względem } a_1"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw znalezioną wartość } a_1 \\text{ do wzoru ogólnego. Jaki jest ostateczny wzór na } a_n\\text{?}",
+        "expression": "a_n = 5 - 3n + 3 = 8 - 3n",
+        "explanation": "\\text{Otrzymujemy wzór jawny na n-ty wyraz ciągu}"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Sprawdź poprawność wzoru. Czy } a_3 = 8 - 3 \\cdot 3 \\text{ rzeczywiście równa się } -1\\text{?}",
+        "expression": "a_3 = 8 - 3 \\cdot 3 = 8 - 9 = -1 \\quad \\checkmark",
+        "explanation": "\\text{Weryfikujemy poprawność znalezionego wzoru}"
+      }
+    ],
+    "solutions": [
+      "a_n = 8 - 3n, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "sequence_type": "\\text{ciąg arytmetyczny}",
+      "first_term": "a_1 = 5",
+      "common_difference": "d = -3"
+    }
+  },
+  {
+    "id": "tex_problem_39",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+2}=(n+1)^{2}$\\item Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $\\in \\quad a_{n+3}=\\frac{n+2}{2 n+5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+2} = (n+1)^2\\text{. Co to oznacza dla kolejnych wyrazów ciągu?}",
+        "expression": "a_{n+2} = (n+1)^2",
+        "explanation": "\\text{Wzór łączy wyraz o indeksie } n+2 \\text{ z indeksem } n"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Aby znaleźć wzór na } a_n\\text{, spróbuj podstawić } k = n+2\\text{. Co otrzymasz?}",
+        "expression": "k = n+2 \\Rightarrow n = k-2",
+        "explanation": "\\text{Zmieniamy zmienną, aby wyrazić } a_k \\text{ przez } k"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Podstaw nową zmienną do wzoru rekurencyjnego}",
+        "expression": "a_k = ((k-2)+1)^2 = (k-1)^2",
+        "explanation": "\\text{Po podstawieniu } n = k-2 \\text{ otrzymujemy wzór na } a_k"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro } k \\text{ to dowolny indeks, możesz zastąpić go przez } n\\text{. Jaki jest wzór ogólny?}",
+        "expression": "a_n = (n-1)^2",
+        "explanation": "\\text{Wzór ogólny na n-ty wyraz ciągu}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź poprawność wzoru dla kilku pierwszych wyrazów. Czy } a_3 = a_{1+2} \\text{ zgadza się ze wzorem rekurencyjnym?}",
+        "expression": "a_3 = (3-1)^2 = 4 \\text{ oraz } a_{1+2} = (1+1)^2 = 4 \\checkmark",
+        "explanation": "\\text{Weryfikacja: wzór jest zgodny z relacją rekurencyjną}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz przejdź do drugiego zadania. Masz } a_{n+3} = \\frac{n+2}{2n+5}\\text{. Jak znajdziesz wzór na } a_n\\text{?}",
+        "expression": "a_{n+3} = \\frac{n+2}{2n+5}",
+        "explanation": "\\text{Drugi wzór rekurencyjny łączy wyraz o indeksie } n+3 \\text{ z indeksem } n"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Zastosuj podobne podstawienie jak wcześniej. Jeśli } m = n+3\\text{, to jak wyrazisz } n \\text{ przez } m\\text{?}",
+        "expression": "m = n+3 \\Rightarrow n = m-3",
+        "explanation": "\\text{Zmieniamy zmienną, aby wyrazić } a_m \\text{ przez } m"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw } n = m-3 \\text{ do wzoru rekurencyjnego}",
+        "expression": "a_m = \\frac{(m-3)+2}{2(m-3)+5} = \\frac{m-1}{2m-6+5} = \\frac{m-1}{2m-1}",
+        "explanation": "\\text{Po podstawieniu i uproszczeniu otrzymujemy wzór na } a_m"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Zastąp } m \\text{ przez } n \\text{ w otrzymanym wzorze}",
+        "expression": "a_n = \\frac{n-1}{2n-1}",
+        "explanation": "\\text{Wzór ogólny na n-ty wyraz drugiego ciągu}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź poprawność dla } n = 4\\text{. Czy } a_4 \\text{ obliczone ze wzoru równa się } a_{1+3}\\text{?}",
+        "expression": "a_4 = \\frac{4-1}{2 \\cdot 4-1} = \\frac{3}{7} \\text{ oraz } a_{1+3} = \\frac{1+2}{2 \\cdot 1+5} = \\frac{3}{7} \\checkmark",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność wzoru}"
+      }
+    ],
+    "solutions": [
+      "a_n = (n-1)^2 \\text{ dla pierwszego ciągu}",
+      "a_n = \\frac{n-1}{2n-1} \\text{ dla drugiego ciągu}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_40",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=\\frac{1-3 n}{4 n+1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = \\frac{1-3n}{4n+1}\\text{. Co możesz zrobić, żeby znaleźć pierwszy wyraz ciągu?}",
+        "expression": "a_2 = \\frac{1-3 \\cdot 1}{4 \\cdot 1+1} = \\frac{1-3}{4+1} = \\frac{-2}{5}",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego, aby znaleźć } a_2"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz kolejny wyraz. Co otrzymasz dla } n = 2\\text{?}",
+        "expression": "a_3 = \\frac{1-3 \\cdot 2}{4 \\cdot 2+1} = \\frac{1-6}{8+1} = \\frac{-5}{9}",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ do wzoru, aby znaleźć } a_3"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Sprawdź jeszcze jeden wyraz. Czy widzisz jakiś wzorzec w licznikach i mianownikach?}",
+        "expression": "a_4 = \\frac{1-3 \\cdot 3}{4 \\cdot 3+1} = \\frac{1-9}{12+1} = \\frac{-8}{13}",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ do wzoru, aby znaleźć } a_4"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Przeanalizuj otrzymane wyrazy: } a_2 = \\frac{-2}{5}, a_3 = \\frac{-5}{9}, a_4 = \\frac{-8}{13}\\text{. Jak liczniki i mianowniki zależą od indeksu?}",
+        "expression": "\\text{Liczniki: } -2, -5, -8, \\ldots \\text{ to } -(3n-1) \\text{ dla } n = 2,3,4,\\ldots",
+        "explanation": "\\text{Zauważamy, że licznik dla } a_{n+1} \\text{ to } 1-3n = -(3n-1)"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{A co z mianownikami? Sprawdź wzorzec dla } 5, 9, 13, \\ldots",
+        "expression": "\\text{Mianowniki: } 5, 9, 13, \\ldots \\text{ to } 4n+1 \\text{ dla } n = 1,2,3,\\ldots",
+        "explanation": "\\text{Mianownik dla } a_{n+1} \\text{ to rzeczywiście } 4n+1"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz możesz zapisać wzór ogólny. Jak będzie wyglądał } a_n \\text{ w zależności od } n\\text{?}",
+        "expression": "a_n = \\frac{-(3(n-1)-1)}{4(n-1)+1} = \\frac{-(3n-4)}{4n-3} = \\frac{4-3n}{4n-3}",
+        "explanation": "\\text{Ponieważ } a_{n+1} = \\frac{1-3n}{4n+1}\\text{, to } a_n = \\frac{1-3(n-1)}{4(n-1)+1}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Sprawdź poprawność wzoru. Czy dla } n = 2 \\text{ otrzymasz } a_2 = -\\frac{2}{5}\\text{?}",
+        "expression": "a_2 = \\frac{4-3 \\cdot 2}{4 \\cdot 2-3} = \\frac{4-6}{8-3} = \\frac{-2}{5} \\checkmark",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność wzoru}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Sprawdź jeszcze jeden wyraz dla pewności}",
+        "expression": "a_3 = \\frac{4-3 \\cdot 3}{4 \\cdot 3-3} = \\frac{4-9}{12-3} = \\frac{-5}{9} \\checkmark",
+        "explanation": "\\text{Druga weryfikacja również potwierdza poprawność wzoru}"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{4-3n}{4n-3}, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+, \\; n \\geq 2 \\text{ (dla } n = 1 \\text{ mianownik wynosi 1)}"
+    }
+  },
+  {
+    "id": "tex_problem_41",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=-2 n^{2}+3 n$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = -2n^2 + 3n\\text{. Co możesz powiedzieć o związku między kolejnymi wyrazami ciągu?}",
+        "expression": "a_{n+1} = -2n^2 + 3n",
+        "explanation": "\\text{Wzór podaje wartość wyrazu następnego w zależności od numeru wyrazu obecnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Aby znaleźć wzór na } a_n\\text{, spróbuj podstawić } n-1 \\text{ zamiast } n\\text{ we wzorze rekurencyjnym. Co otrzymasz?}",
+        "expression": "a_n = -2(n-1)^2 + 3(n-1)",
+        "explanation": "\\text{Podstawiając } n-1 \\text{ zamiast } n \\text{ otrzymujemy wzór na } a_n"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz musisz rozwinąć wyrażenie } (n-1)^2\\text{. Jak wygląda kwadrat różnicy?}",
+        "expression": "(n-1)^2 = n^2 - 2n + 1",
+        "explanation": "\\text{Stosujemy wzór } (a-b)^2 = a^2 - 2ab + b^2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Podstaw rozwinięcie kwadratu do wzoru na } a_n\\text{ i uprość pierwszy składnik}",
+        "expression": "a_n = -2(n^2 - 2n + 1) + 3(n-1) = -2n^2 + 4n - 2 + 3n - 3",
+        "explanation": "\\text{Rozmnażamy } -2 \\text{ przez każdy składnik w nawiasie i rozwijamy } 3(n-1)"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Pogrupuj podobne składniki i oblicz końcowy wynik}",
+        "expression": "a_n = -2n^2 + (4n + 3n) + (-2 - 3) = -2n^2 + 7n - 5",
+        "explanation": "\\text{Łączymy wyrazy z } n \\text{ oraz wyrazy stałe}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź poprawność wzoru podstawiając } n = 1\\text{. Czy } a_2 \\text{ obliczone z wzoru zgadza się z wzorem rekurencyjnym?}",
+        "expression": "a_2 = a_{1+1} = -2 \\cdot 1^2 + 3 \\cdot 1 = -2 + 3 = 1",
+        "explanation": "\\text{Ze wzoru rekurencyjnego dla } n = 1"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Teraz sprawdź czy nasz wzór } a_n = -2n^2 + 7n - 5 \\text{ daje ten sam wynik dla } n = 2",
+        "expression": "a_2 = -2 \\cdot 2^2 + 7 \\cdot 2 - 5 = -8 + 14 - 5 = 1",
+        "explanation": "\\text{Wzór jest poprawny, bo oba sposoby dają } a_2 = 1"
+      }
+    ],
+    "solutions": [
+      "a_n = -2n^2 + 7n - 5, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_42",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=5 n^{2}+4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = 5n^2 + 4\\text{. Co możesz powiedzieć o } a_1\\text{, jeśli podstawisz } n = 0\\text{?}",
+        "expression": "a_1 = a_{0+1} = 5 \\cdot 0^2 + 4 = 0 + 4 = 4",
+        "explanation": "\\text{Podstawiamy } n = 0 \\text{ do wzoru rekurencyjnego, aby znaleźć pierwszy wyraz}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz znajdź kolejne wyrazy. Co otrzymasz dla } n = 1, 2, 3\\text{?}",
+        "expression": "a_2 = 5 \\cdot 1^2 + 4 = 5 + 4 = 9 \\ a_3 = 5 \\cdot 2^2 + 4 = 5 \\cdot 4 + 4 = 20 + 4 = 24 \\ a_4 = 5 \\cdot 3^2 + 4 = 5 \\cdot 9 + 4 = 45 + 4 = 49",
+        "explanation": "\\text{Obliczamy kolejne wyrazy podstawiając } n = 1, 2, 3"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Spójrz na wzór } a_{n+1} = 5n^2 + 4\\text{. Jak możesz wyrazić } a_n \\text{ przez } n\\text{?}",
+        "expression": "a_n = 5(n-1)^2 + 4",
+        "explanation": "\\text{Jeśli } a_{n+1} = 5n^2 + 4\\text{, to zastępując } n+1 \\rightarrow n \\text{ otrzymujemy } a_n = 5(n-1)^2 + 4"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Rozwiń wyrażenie } (n-1)^2 \\text{ używając wzoru na kwadrat różnicy}",
+        "expression": "a_n = 5(n^2 - 2n + 1) + 4 = 5n^2 - 10n + 5 + 4",
+        "explanation": "\\text{Stosujemy wzór } (a-b)^2 = a^2 - 2ab + b^2"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Uprość otrzymane wyrażenie łącząc wyrazy podobne}",
+        "expression": "a_n = 5n^2 - 10n + 9",
+        "explanation": "\\text{Dodajemy stałe: } 5 + 4 = 9"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź poprawność wzoru podstawiając kilka pierwszych wartości } n\\text{. Czy otrzymujesz te same wyniki co wcześniej?}",
+        "expression": "a_1 = 5 \\cdot 1^2 - 10 \\cdot 1 + 9 = 5 - 10 + 9 = 4 \\checkmark \\ a_2 = 5 \\cdot 4 - 20 + 9 = 20 - 20 + 9 = 9 \\checkmark \\ a_3 = 5 \\cdot 9 - 30 + 9 = 45 - 30 + 9 = 24 \\checkmark",
+        "explanation": "\\text{Weryfikujemy wzór dla pierwszych wyrazów - wszystkie się zgadzają}"
+      }
+    ],
+    "solutions": [
+      "a_n = 5n^2 - 10n + 9, \\; n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_43",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=3, a_{n+1}=a_{n}-2 n$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = a_n - 2n \\text{ i pierwszy wyraz } a_1 = 3\\text{. Jak znajdziesz drugi wyraz?}",
+        "expression": "a_2 = a_1 - 2 \\cdot 1 = 3 - 2 = 1",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz gdy znasz } a_2\\text{, jak wykorzystasz wzór rekurencyjny do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = a_2 - 2 \\cdot 2 = 1 - 4 = -3",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i używamy wcześniej obliczonej wartości } a_2"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Kontynuuj ten proces. Jaka będzie wartość czwartego wyrazu?}",
+        "expression": "a_4 = a_3 - 2 \\cdot 3 = -3 - 6 = -9",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ i używamy wartości } a_3 = -3"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Analogicznie, jak obliczysz piąty wyraz ciągu?}",
+        "expression": "a_5 = a_4 - 2 \\cdot 4 = -9 - 8 = -17",
+        "explanation": "\\text{Podstawiamy } n = 4 \\text{ i używamy wartości } a_4 = -9"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź czy widzisz jakąś prawidłowość w różnicach między kolejnymi wyrazami}",
+        "expression": "a_2 - a_1 = -2, \\; a_3 - a_2 = -4, \\; a_4 - a_3 = -6, \\; a_5 - a_4 = -8",
+        "explanation": "\\text{Różnice tworzą ciąg arytmetyczny o różnicy } -2\\text{, co potwierdza poprawność obliczeń}"
+      }
+    ],
+    "solutions": [
+      "a_3 = -3",
+      "a_4 = -9",
+      "a_5 = -17"
+    ],
+    "parameters": {
+      "sequence_type": "\\text{Ciąg określony wzorem rekurencyjnym}",
+      "first_term": "a_1 = 3",
+      "recurrence_relation": "a_{n+1} = a_n - 2n"
+    }
+  },
+  {
+    "id": "tex_problem_44",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=\\frac{1}{4}, \\quad a_{n+1}=\\left(a_{n}\\right)^{2} \\cdot 4^{n}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = (a_n)^2 \\cdot 4^n \\text{ i pierwszy wyraz } a_1 = \\frac{1}{4}\\text{. Jak znajdziesz drugi wyraz?}",
+        "expression": "a_2 = a_{1+1} = (a_1)^2 \\cdot 4^1 = \\left(\\frac{1}{4}\\right)^2 \\cdot 4",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz potęgę ułamka i pomnóż przez 4. Jak uprościć to wyrażenie?}",
+        "expression": "a_2 = \\frac{1}{16} \\cdot 4 = \\frac{4}{16} = \\frac{1}{4}",
+        "explanation": "\\text{Wykonujemy obliczenia: } \\left(\\frac{1}{4}\\right)^2 = \\frac{1}{16}\\text{, następnie mnożymy przez 4}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz masz } a_2 = \\frac{1}{4}\\text{. Jak wykorzystasz to do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = a_{2+1} = (a_2)^2 \\cdot 4^2 = \\left(\\frac{1}{4}\\right)^2 \\cdot 16",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ do wzoru, gdzie } 4^2 = 16"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Oblicz wyrażenie dla trzeciego wyrazu. Jaką wartość otrzymasz?}",
+        "expression": "a_3 = \\frac{1}{16} \\cdot 16 = 1",
+        "explanation": "\\text{Ułamek } \\frac{1}{16} \\text{ pomnożony przez 16 daje 1}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Mając } a_3 = 1\\text{, jak znajdziesz czwarty wyraz ciągu?}",
+        "expression": "a_4 = a_{3+1} = (a_3)^2 \\cdot 4^3 = 1^2 \\cdot 64 = 64",
+        "explanation": "\\text{Podstawiamy } n = 3\\text{, gdzie } 1^2 = 1 \\text{ i } 4^3 = 64"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz masz } a_4 = 64\\text{. Jak obliczyć piąty wyraz używając wzoru rekurencyjnego?}",
+        "expression": "a_5 = a_{4+1} = (a_4)^2 \\cdot 4^4 = 64^2 \\cdot 256",
+        "explanation": "\\text{Podstawiamy } n = 4\\text{, gdzie } 4^4 = 256"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Oblicz } 64^2\\text{. Czy pamiętasz, że } 64 = 2^6\\text{?}",
+        "expression": "64^2 = (2^6)^2 = 2^{12} = 4096",
+        "explanation": "\\text{Używamy właścności potęg: } (a^m)^n = a^{mn}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Teraz pomnóż otrzymany wynik przez } 4^4 = 256\\text{. Jaki będzie końcowy wynik?}",
+        "expression": "a_5 = 4096 \\cdot 256 = 1048576",
+        "explanation": "\\text{Mnożymy } 4096 \\cdot 256 \\text{ lub możemy zapisać jako } 2^{12} \\cdot 2^8 = 2^{20} = 1048576"
+      }
+    ],
+    "solutions": [
+      "a_3 = 1",
+      "a_4 = 64",
+      "a_5 = 1048576"
+    ],
+    "parameters": {
+      "sequence_type": "\\text{Ciąg określony wzorem rekurencyjnym}",
+      "first_term": "a_1 = \\frac{1}{4}",
+      "recurrence_formula": "a_{n+1} = (a_n)^2 \\cdot 4^n"
+    }
+  },
+  {
+    "id": "tex_problem_45",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=5, a_{n+1}=\\sqrt{a_{n}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = \\sqrt{a_n} \\text{ i pierwszy wyraz } a_1 = 5\\text{. Jak znajdziesz drugi wyraz?}",
+        "expression": "a_2 = \\sqrt{a_1} = \\sqrt{5}",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz gdy znasz } a_2\\text{, jak wykorzystasz wzór rekurencyjny do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = \\sqrt{a_2} = \\sqrt{\\sqrt{5}} = \\sqrt[4]{5} = 5^{1/4}",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i używamy właściwości pierwiastków: } \\sqrt{\\sqrt{x}} = \\sqrt[4]{x}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Widzisz już wzorzec? Jak będzie wyglądał czwarty wyraz, jeśli zastosujesz wzór do } a_3\\text{?}",
+        "expression": "a_4 = \\sqrt{a_3} = \\sqrt{5^{1/4}} = 5^{1/8}",
+        "explanation": "\\text{Używamy właściwości: } \\sqrt{x^a} = x^{a/2}\\text{, więc } \\sqrt{5^{1/4}} = 5^{(1/4)/2} = 5^{1/8}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Kontynuując ten wzorzec, jaki będzie piąty wyraz ciągu?}",
+        "expression": "a_5 = \\sqrt{a_4} = \\sqrt{5^{1/8}} = 5^{1/16}",
+        "explanation": "\\text{Ponownie stosujemy właściwość: } 5^{(1/8)/2} = 5^{1/16}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Czy potrafisz zauważyć ogólny wzorzec dla wykładników potęg liczby 5?}",
+        "expression": "a_n = 5^{1/2^{n-1}} \\text{ dla } n \\geq 1",
+        "explanation": "\\text{Wykładniki tworzą ciąg: } 1, \\frac{1}{2}, \\frac{1}{4}, \\frac{1}{8}, \\frac{1}{16}, \\ldots = \\frac{1}{2^{n-1}}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprawdź czy możesz zapisać otrzymane wyniki w postaci dziesiętnej dla lepszego zobrazowania}",
+        "expression": "a_3 = 5^{1/4} \\approx 1.495, \\quad a_4 = 5^{1/8} \\approx 1.221, \\quad a_5 = 5^{1/16} \\approx 1.105",
+        "explanation": "\\text{Wartości przybliżone pokazują, że ciąg jest malejący i dąży do 1}"
+      }
+    ],
+    "solutions": [
+      "a_3 = 5^{1/4} = \\sqrt[4]{5}",
+      "a_4 = 5^{1/8}",
+      "a_5 = 5^{1/16}"
+    ],
+    "parameters": {
+      "general_term": "a_n = 5^{1/2^{n-1}} \\text{ dla } n \\geq 1"
+    }
+  },
+  {
+    "id": "tex_problem_46",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=2, a_{n+1}=0,25\\left(4 a_{n}-1\\right)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = 0{,}25(4a_n - 1) \\text{ i pierwszy wyraz } a_1 = 2\\text{. Jak znajdziesz drugi wyraz?}",
+        "expression": "a_2 = 0{,}25(4 \\cdot a_1 - 1) = 0{,}25(4 \\cdot 2 - 1)",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz wartość w nawiasie, a następnie pomnóż przez } 0{,}25",
+        "expression": "a_2 = 0{,}25(8 - 1) = 0{,}25 \\cdot 7 = 1{,}75",
+        "explanation": "\\text{Wykonujemy obliczenia: } 4 \\cdot 2 = 8\\text{, następnie } 8 - 1 = 7\\text{, na koniec } 0{,}25 \\cdot 7 = 1{,}75"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz gdy znasz } a_2\\text{, jak wykorzystasz wzór rekurencyjny do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = 0{,}25(4 \\cdot a_2 - 1) = 0{,}25(4 \\cdot 1{,}75 - 1)",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i używamy obliczonej wartości } a_2 = 1{,}75"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Wykonaj obliczenia dla trzeciego wyrazu}",
+        "expression": "a_3 = 0{,}25(7 - 1) = 0{,}25 \\cdot 6 = 1{,}5",
+        "explanation": "\\text{Obliczamy: } 4 \\cdot 1{,}75 = 7\\text{, następnie } 7 - 1 = 6\\text{, na koniec } 0{,}25 \\cdot 6 = 1{,}5"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Kontynuuj ten sam proces dla czwartego wyrazu. Jaka będzie wartość } a_4\\text{?}",
+        "expression": "a_4 = 0{,}25(4 \\cdot a_3 - 1) = 0{,}25(4 \\cdot 1{,}5 - 1)",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ i używamy } a_3 = 1{,}5"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Oblicz wartość czwartego wyrazu}",
+        "expression": "a_4 = 0{,}25(6 - 1) = 0{,}25 \\cdot 5 = 1{,}25",
+        "explanation": "\\text{Wykonujemy: } 4 \\cdot 1{,}5 = 6\\text{, następnie } 6 - 1 = 5\\text{, na koniec } 0{,}25 \\cdot 5 = 1{,}25"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Na koniec oblicz piąty wyraz ciągu używając tego samego wzoru}",
+        "expression": "a_5 = 0{,}25(4 \\cdot a_4 - 1) = 0{,}25(4 \\cdot 1{,}25 - 1)",
+        "explanation": "\\text{Podstawiamy } n = 4 \\text{ i używamy } a_4 = 1{,}25"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Wykonaj końcowe obliczenia dla piątego wyrazu}",
+        "expression": "a_5 = 0{,}25(5 - 1) = 0{,}25 \\cdot 4 = 1",
+        "explanation": "\\text{Obliczamy: } 4 \\cdot 1{,}25 = 5\\text{, następnie } 5 - 1 = 4\\text{, na koniec } 0{,}25 \\cdot 4 = 1"
+      }
+    ],
+    "solutions": [
+      "a_3 = 1{,}5",
+      "a_4 = 1{,}25",
+      "a_5 = 1"
+    ],
+    "parameters": {
+      "sequence_formula": "a_{n+1} = 0{,}25(4a_n - 1)",
+      "initial_term": "a_1 = 2"
+    }
+  },
+  {
+    "id": "tex_problem_47",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=-3, a_{n+1}=1+\\frac{1}{a_{n}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = 1 + \\frac{1}{a_n} \\text{ i pierwszy wyraz } a_1 = -3\\text{. Jak obliczysz drugi wyraz?}",
+        "expression": "a_2 = 1 + \\frac{1}{a_1} = 1 + \\frac{1}{-3}",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Oblicz wartość ułamka i dodaj do jedynki}",
+        "expression": "a_2 = 1 + \\frac{1}{-3} = 1 - \\frac{1}{3} = \\frac{3}{3} - \\frac{1}{3} = \\frac{2}{3}",
+        "explanation": "\\text{Sprowadzamy do wspólnego mianownika i wykonujemy odejmowanie}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Teraz gdy znasz } a_2\\text{, jak wykorzystasz wzór rekurencyjny do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = 1 + \\frac{1}{a_2} = 1 + \\frac{1}{\\frac{2}{3}}",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i używamy obliczonej wartości } a_2"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Jak podzielić przez ułamek? Pamiętaj o regule odwracania}",
+        "expression": "a_3 = 1 + \\frac{1}{\\frac{2}{3}} = 1 + \\frac{3}{2} = \\frac{2}{2} + \\frac{3}{2} = \\frac{5}{2}",
+        "explanation": "\\text{Dzielenie przez ułamek to mnożenie przez jego odwrotność, następnie dodajemy do 1}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Kontynuuj ten proces. Jak obliczysz czwarty wyraz używając } a_3 = \\frac{5}{2}\\text{?}",
+        "expression": "a_4 = 1 + \\frac{1}{a_3} = 1 + \\frac{1}{\\frac{5}{2}} = 1 + \\frac{2}{5}",
+        "explanation": "\\text{Podstawiamy } a_3 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Sprowadź do wspólnego mianownika i wykonaj dodawanie}",
+        "expression": "a_4 = 1 + \\frac{2}{5} = \\frac{5}{5} + \\frac{2}{5} = \\frac{7}{5}",
+        "explanation": "\\text{Otrzymujemy czwarty wyraz ciągu}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Na koniec oblicz piąty wyraz. Jaka będzie wartość } \\frac{1}{a_4}\\text{?}",
+        "expression": "a_5 = 1 + \\frac{1}{a_4} = 1 + \\frac{1}{\\frac{7}{5}} = 1 + \\frac{5}{7}",
+        "explanation": "\\text{Podstawiamy } a_4 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Wykonaj ostatnie dodawanie, pamiętając o wspólnym mianowniku}",
+        "expression": "a_5 = 1 + \\frac{5}{7} = \\frac{7}{7} + \\frac{5}{7} = \\frac{12}{7}",
+        "explanation": "\\text{Otrzymujemy piąty wyraz ciągu}"
+      }
+    ],
+    "solutions": [
+      "a_3 = \\frac{5}{2}",
+      "a_4 = \\frac{7}{5}",
+      "a_5 = \\frac{12}{7}"
+    ],
+    "parameters": {
+      "sequence_type": "\\text{ciąg rekurencyjny}",
+      "first_term": "a_1 = -3",
+      "recurrence_formula": "a_{n+1} = 1 + \\frac{1}{a_n}"
+    }
+  },
+  {
+    "id": "tex_problem_48",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=1, a_{n+1}=2 a_{n}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+1} = 2a_n \\text{ i pierwszy wyraz } a_1 = 1\\text{. Jak znajdziesz drugi wyraz?}",
+        "expression": "a_2 = 2 \\cdot a_1 = 2 \\cdot 1 = 2",
+        "explanation": "\\text{Podstawiamy } n = 1 \\text{ do wzoru rekurencyjnego}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Teraz gdy znasz } a_2\\text{, jak wykorzystasz wzór rekurencyjny do znalezienia trzeciego wyrazu?}",
+        "expression": "a_3 = 2 \\cdot a_2 = 2 \\cdot 2 = 4",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ i używamy wcześniej obliczonej wartości } a_2"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Kontynuuj ten sam proces. Jaki będzie czwarty wyraz ciągu?}",
+        "expression": "a_4 = 2 \\cdot a_3 = 2 \\cdot 4 = 8",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ i używamy wartości } a_3 = 4"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Zastosuj wzór rekurencyjny jeszcze raz dla piątego wyrazu}",
+        "expression": "a_5 = 2 \\cdot a_4 = 2 \\cdot 8 = 16",
+        "explanation": "\\text{Podstawiamy } n = 4 \\text{ i używamy wartości } a_4 = 8"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Spójrz na otrzymane wartości: } 1, 2, 4, 8, 16\\text{. Czy widzisz jakiś wzorzec w tych liczbach?}",
+        "expression": "a_n = 2^{n-1} \\text{ dla } n \\geq 1",
+        "explanation": "\\text{Każdy wyraz to potęga liczby 2: } a_1 = 2^0, a_2 = 2^1, a_3 = 2^2, a_4 = 2^3, a_5 = 2^4"
+      }
+    ],
+    "solutions": [
+      "a_3 = 4",
+      "a_4 = 8",
+      "a_5 = 16"
+    ],
+    "parameters": {
+      "general_formula": "a_n = 2^{n-1}"
+    }
+  },
+  {
+    "id": "tex_problem_49",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Niech $S_{n}$ oznacza sumę $n$ początkowych wyrazów ciągu $\\left(a_{n}\\right)$ :$=a_{1}+a_{2}+a_{3}+\\ldots+a_{n}$. Wiadomo, że $S_{n}=\\frac{n}{4 n+1}$, gdzie $n \\in \\boldsymbol{N}_{+}$. Oblicz:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór na sumę } S_n = \\frac{n}{4n+1}\\text{. Jak możesz znaleźć pierwszy wyraz } a_1\\text{?}",
+        "expression": "a_1 = S_1 = \\frac{1}{4 \\cdot 1 + 1} = \\frac{1}{5}",
+        "explanation": "\\text{Pierwszy wyraz to suma jednego wyrazu, więc } a_1 = S_1"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jak znajdziesz drugi wyraz, znając } S_1 \\text{ i } S_2\\text{?}",
+        "expression": "S_2 = \\frac{2}{4 \\cdot 2 + 1} = \\frac{2}{9}",
+        "explanation": "\\text{Podstawiamy } n = 2 \\text{ do wzoru na sumę}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Pamiętaj, że } a_2 = S_2 - S_1\\text{. Oblicz tę różnicę}",
+        "expression": "a_2 = S_2 - S_1 = \\frac{2}{9} - \\frac{1}{5} = \\frac{10 - 9}{45} = \\frac{1}{45}",
+        "explanation": "\\text{Sprowadzamy do wspólnego mianownika: } \\frac{2}{9} = \\frac{10}{45}\\text{, } \\frac{1}{5} = \\frac{9}{45}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Znajdź trzeci wyraz używając tej samej metody. Najpierw oblicz } S_3",
+        "expression": "S_3 = \\frac{3}{4 \\cdot 3 + 1} = \\frac{3}{13}",
+        "explanation": "\\text{Podstawiamy } n = 3 \\text{ do wzoru na sumę}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Oblicz } a_3 = S_3 - S_2\\text{. Pamiętaj o wspólnym mianowniku}",
+        "expression": "a_3 = S_3 - S_2 = \\frac{3}{13} - \\frac{2}{9} = \\frac{27 - 26}{117} = \\frac{1}{117}",
+        "explanation": "\\text{Wspólny mianownik: } \\frac{3}{13} = \\frac{27}{117}\\text{, } \\frac{2}{9} = \\frac{26}{117}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Dla ogólnego przypadku, jak wyrazisz } a_n \\text{ przez } S_n \\text{ i } S_{n-1}\\text{?}",
+        "expression": "a_n = S_n - S_{n-1} = \\frac{n}{4n+1} - \\frac{n-1}{4(n-1)+1}",
+        "explanation": "\\text{Dla } n \\geq 2 \\text{ wyraz ciągu to różnica kolejnych sum}"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Uprość mianownik w drugim ułamku}",
+        "expression": "a_n = \\frac{n}{4n+1} - \\frac{n-1}{4n-3}",
+        "explanation": "\\text{Ponieważ } 4(n-1)+1 = 4n-4+1 = 4n-3"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Aby odjąć ułamki, potrzebujesz wspólnego mianownika. Jaki to będzie?}",
+        "expression": "a_n = \\frac{n(4n-3) - (n-1)(4n+1)}{(4n+1)(4n-3)}",
+        "explanation": "\\text{Wspólny mianownik to iloczyn } (4n+1)(4n-3)"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Rozwiń licznik. Najpierw } n(4n-3)",
+        "expression": "n(4n-3) = 4n^2 - 3n",
+        "explanation": "\\text{Mnożymy } n \\text{ przez każdy składnik w nawiasie}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Teraz rozwiń } (n-1)(4n+1)",
+        "expression": "(n-1)(4n+1) = 4n^2 + n - 4n - 1 = 4n^2 - 3n - 1",
+        "explanation": "\\text{Używamy wzoru } (a-b)(c+d) = ac + ad - bc - bd"
+      },
+      {
+        "step": 11,
+        "hint": "\\text{Oblicz różnicę w liczniku}",
+        "expression": "4n^2 - 3n - (4n^2 - 3n - 1) = 4n^2 - 3n - 4n^2 + 3n + 1 = 1",
+        "explanation": "\\text{Większość wyrazów się skraca, zostaje tylko 1}"
+      },
+      {
+        "step": 12,
+        "hint": "\\text{Jaki jest końcowy wzór na } a_n\\text{?}",
+        "expression": "a_n = \\frac{1}{(4n+1)(4n-3)} \\text{ dla } n \\geq 2",
+        "explanation": "\\text{Po uproszczeniu licznika otrzymujemy prosty wzór}"
+      },
+      {
+        "step": 13,
+        "hint": "\\text{Sprawdź czy wzór działa też dla } n = 1\\text{. Podstaw i porównaj z } a_1 = \\frac{1}{5}",
+        "expression": "\\text{Dla } n = 1: \\frac{1}{(4 \\cdot 1 + 1)(4 \\cdot 1 - 3)} = \\frac{1}{5 \\cdot 1} = \\frac{1}{5} = a_1",
+        "explanation": "\\text{Wzór jest poprawny również dla } n = 1"
+      }
+    ],
+    "solutions": [
+      "a_n = \\frac{1}{(4n+1)(4n-3)} \\text{ dla } n \\in \\mathbb{N}_+"
+    ],
+    "parameters": {
+      "sequence_formula": "S_n = \\frac{n}{4n+1}",
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  }
+]
