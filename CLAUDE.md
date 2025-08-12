@@ -9,24 +9,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm test` - Run tests in watch mode
 - `npm test -- --coverage` - Run tests with coverage report
 - `npm test -- --watchAll=false` - Run tests once without watch mode
+- `npm run latex-checker` - Run LaTeX checker tool on port 3001
+- `npm run solution-reviewer` - Run solution reviewer tool on port 3002
 
 ## Architecture
 
-This is a React 19.1.1 application for an online trigonometry course featuring 194 step-by-step problems and 93 quiz questions. Built with Create React App 5.0.1 and styled with Tailwind CSS 3.4.17.
+This is a React 19.1.1 multi-app educational platform built with Create React App 5.0.1 and styled with Tailwind CSS 3.4.17. The platform includes:
+- **Main Course App**: Interactive trigonometry and sequences courses with step-by-step problem solving
+- **LaTeX Checker**: Development tool for validating LaTeX rendering across all problems
+- **Solution Reviewer**: Tool for reviewing problem solutions and checking completeness
+
+The app mode is determined by the `REACT_APP_MODE` environment variable in `src/index.js`.
 
 ### Component Hierarchy
 
 ```
-App.js
-└── TrigonometryCourse (main container, manages mode switching)
-    ├── QuizSelector (toggle between course/quiz modes)
-    ├── ProblemList (course mode - lists all problems)
-    │   └── MathRenderer (LaTeX rendering)
-    ├── ProblemView (individual problem with step-by-step revelation)
-    │   └── MathRenderer
-    └── TrigonometryQuiz (quiz mode with 10 random questions)
-        ├── StudentReport (performance analysis and recommendations)
-        └── MathRenderer
+index.js (mode router based on REACT_APP_MODE)
+├── App.js → TrigonometryCourse (default mode)
+│   ├── WelcomeScreen (course selection menu)
+│   ├── QuizSelector (toggle between course/quiz modes)
+│   ├── ProblemList (course mode - lists all problems)
+│   │   └── MathRenderer (LaTeX rendering)
+│   ├── ProblemView (individual problem with step-by-step revelation)
+│   │   └── MathRenderer
+│   └── TrigonometryQuiz (quiz mode with 10 random questions)
+│       ├── StudentReport (performance analysis and recommendations)
+│       └── MathRenderer
+├── LaTeXCheckerApp.js (checker mode)
+│   └── LaTeXChecker (validates LaTeX rendering)
+└── SolutionReviewerApp.js (reviewer mode)
+    └── SolutionReviewer (reviews problem solutions)
 ```
 
 ### Math Rendering System
@@ -54,9 +66,18 @@ The `MathRenderer.jsx` component implements a sophisticated LaTeX parsing pipeli
 - **Timed Mode**: 30-minute timer with auto-submission
 - **Detailed Reporting**: Shows correct/incorrect answers with explanations
 
+### Course Content
+
+The platform contains three problem sets:
+- **Trigonometry** (`problems.json`): 175 problems covering basic to advanced trigonometry
+- **Sequences** (`sequences-problems.json`): 27 problems on mathematical sequences
+- **Sequences Introduction** (`sequences-intro-problems.json`): 32 introductory sequence problems
+
+Total: 234 interactive problems across all courses
+
 ### Data Structures
 
-**Problems** (`src/data/problems.json` - 194 items):
+**Problems** (JSON format):
 ```json
 {
   "id": "tex_problem_1",
@@ -86,8 +107,12 @@ The `MathRenderer.jsx` component implements a sophisticated LaTeX parsing pipeli
 ### State Management
 
 - **Component State**: React hooks for UI interactions (current problem, revealed steps, quiz answers)
-- **Persistence**: localStorage for completed problems (survives browser sessions)
+- **Persistence**: localStorage stores completed problems separately for each course:
+  - Trigonometry problems: tracked in `completedTrigProblems`
+  - Sequences problems: tracked in `completedSeqProblems`
+  - Sequences intro problems: tracked in `completedSeqIntroProblems`
 - **No Global State**: Simple prop drilling sufficient for app size
+- **Mode Switching**: Handled by `TrigonometryCourse` component with states: 'welcome', 'trigonometry', 'sequences', 'sequences-intro', 'quiz'
 
 ### Performance Optimizations
 

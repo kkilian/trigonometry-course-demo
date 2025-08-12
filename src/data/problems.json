@@ -519,63 +519,7 @@
       "given_sides": "AB = 5, AC = 3"
     }
   },
-  {
-    "id": "tex_problem_15",
-    "topic": "Równania trygonometryczne",
-    "statement": "\\text{Półprosta } p \\text{ ma początek w punkcie } (0,0), \\text{ przechodzi przez punkt } A \\text{ i jest ramieniem wypukłego kąta } \\alpha, \\text{ którego drugie ramię zawiera się w dodatniej półosi osi } OX",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "\\text{Masz półprostą wychodzącą z początku układu współrzędnych. Jak można opisać położenie punktu } A \\text{ względem osi } OX\\text{?}",
-        "expression": "\\text{Punkt } A \\text{ ma współrzędne } (x_A, y_A)",
-        "explanation": "\\text{Określamy położenie punktu } A \\text{ w układzie współrzędnych}"
-      },
-      {
-        "step": 2,
-        "hint": "\\text{Kąt } \\alpha \\text{ jest mierzony od dodatniej półosi } OX \\text{ do półprostej } p\\text{. Jak definiuje się funkcje trygonometryczne w układzie współrzędnych?}",
-        "expression": "\\cos \\alpha = \\frac{x_A}{|OA|}, \\quad \\sin \\alpha = \\frac{y_A}{|OA|}",
-        "explanation": "\\text{Używamy definicji funkcji trygonometrycznych w układzie współrzędnych}"
-      },
-      {
-        "step": 3,
-        "hint": "\\text{Jak obliczysz odległość punktu } A \\text{ od początku układu współrzędnych?}",
-        "expression": "|OA| = \\sqrt{x_A^2 + y_A^2}",
-        "explanation": "\\text{Stosujemy wzór na odległość między dwoma punktami}"
-      },
-      {
-        "step": 4,
-        "hint": "\\text{Podstaw wyrażenie na } |OA| \\text{ do definicji funkcji trygonometrycznych}",
-        "expression": "\\cos \\alpha = \\frac{x_A}{\\sqrt{x_A^2 + y_A^2}}, \\quad \\sin \\alpha = \\frac{y_A}{\\sqrt{x_A^2 + y_A^2}}",
-        "explanation": "\\text{Otrzymujemy wzory na cosinus i sinus kąta } \\alpha \\text{ przez współrzędne punktu } A"
-      },
-      {
-        "step": 5,
-        "hint": "\\text{Jak wyraża się tangens przez sinus i cosinus? Co otrzymasz po podstawieniu?}",
-        "expression": "\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{\\frac{y_A}{\\sqrt{x_A^2 + y_A^2}}}{\\frac{x_A}{\\sqrt{x_A^2 + y_A^2}}}",
-        "explanation": "\\text{Używamy definicji tangensa jako ilorazu sinusa i cosinusa}"
-      },
-      {
-        "step": 6,
-        "hint": "\\text{Zauważ, że w liczniku i mianowniku masz ten sam czynnik. Jak można uprościć ten ułamek?}",
-        "expression": "\\tan \\alpha = \\frac{y_A}{x_A} \\quad \\text{(przy założeniu } x_A \\neq 0\\text{)}",
-        "explanation": "\\text{Po skróceniu } \\sqrt{x_A^2 + y_A^2} \\text{ otrzymujemy prostą zależność}"
-      },
-      {
-        "step": 7,
-        "hint": "\\text{Co oznacza geometrycznie iloraz } \\frac{y_A}{x_A}\\text{? Jak to się ma do prostej przechodzącej przez początek układu?}",
-        "expression": "\\tan \\alpha = \\text{współczynnik kierunkowy prostej } OA",
-        "explanation": "\\text{Tangens kąta nachylenia prostej do osi } OX \\text{ równa się współczynnikowi kierunkowemu tej prostej}"
-      }
-    ],
-    "solutions": [
-      "\\cos \\alpha = \\frac{x_A}{\\sqrt{x_A^2 + y_A^2}}",
-      "\\sin \\alpha = \\frac{y_A}{\\sqrt{x_A^2 + y_A^2}}",
-      "\\tan \\alpha = \\frac{y_A}{x_A} \\text{ (dla } x_A \\neq 0\\text{)}"
-    ],
-    "parameters": {
-      "domain": "x_A \\neq 0 \\text{ dla tangensa}, \\; \\alpha \\in [0, \\pi) \\text{ dla kąta wypukłego}"
-    }
-  },
+ 
   {
     "id": "tex_problem_16",
     "topic": "Równania trygonometryczne",

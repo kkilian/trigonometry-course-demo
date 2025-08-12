@@ -303,6 +303,11 @@ const MathRenderer = ({ content, className = '' }) => {
                 maxSize: 10, // Limit size to prevent memory issues
                 maxExpand: 100 // Limit macro expansion
               });
+              // Make all math bold
+              span.style.fontWeight = 'bold';
+              span.querySelectorAll('*').forEach(el => {
+                el.style.fontWeight = 'bold';
+              });
               fragment.appendChild(span);
             } catch (error) {
               // Fallback to plain text if LaTeX fails
@@ -328,7 +333,7 @@ const MathRenderer = ({ content, className = '' }) => {
     return () => {
       isMounted = false;
     };
-  }, [content, segments]);
+  }, [content, segments, className]);
   
   return <span ref={containerRef} className={className} />;
 };
@@ -354,6 +359,14 @@ export const MathExpression = ({ content, block = false, className = '' }) => {
           maxSize: 10, // Limit size to prevent memory issues
           maxExpand: 100 // Limit macro expansion
         });
+        
+        // Make all math bold
+        if (containerRef.current) {
+          containerRef.current.style.fontWeight = 'bold';
+          containerRef.current.querySelectorAll('*').forEach(el => {
+            el.style.fontWeight = 'bold';
+          });
+        }
       } catch (error) {
         console.error('Math rendering error:', error);
         if (isMounted && containerRef.current) {
@@ -367,7 +380,7 @@ export const MathExpression = ({ content, block = false, className = '' }) => {
     return () => {
       isMounted = false;
     };
-  }, [content, block]);
+  }, [content, block, className]);
   
   return <span ref={containerRef} className={className} />;
 };

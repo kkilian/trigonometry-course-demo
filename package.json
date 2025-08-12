@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "puppeteer": "^24.16.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-scripts": "5.0.1",
@@ -17,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "latex-checker": "REACT_APP_MODE=checker PORT=3001 react-scripts start"
+    "latex-checker": "REACT_APP_MODE=checker PORT=3001 react-scripts start",
+    "solution-reviewer": "REACT_APP_MODE=reviewer PORT=3002 react-scripts start"
   },
   "eslintConfig": {
     "extends": [

@@ -4,7 +4,6 @@ import MathRenderer from './MathRenderer';
 import StudentReport from './StudentReport';
 
 const TrigonometryQuiz = ({ onBack }) => {
-  const [quiz, setQuiz] = useState(null);
   const [questions, setQuestions] = useState([]);
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -13,14 +12,12 @@ const TrigonometryQuiz = ({ onBack }) => {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [quizStartTime, setQuizStartTime] = useState(null);
-  const [showReport, setShowReport] = useState(false);
 
   useEffect(() => {
     // Generuj quiz przy pierwszym załadowaniu
     const newQuiz = generateQuiz({
       shuffle: true  // domyślnie 10 pytań (3+3+4 z różnych poziomów)
     });
-    setQuiz(newQuiz);
     setQuestions(newQuiz.questions);
     setQuizStartTime(Date.now());
   }, []);
@@ -52,9 +49,6 @@ const TrigonometryQuiz = ({ onBack }) => {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setShowResult(false);
-    } else {
-      // Quiz zakończony - pokaż raport
-      setShowReport(true);
     }
   };
 
@@ -62,7 +56,6 @@ const TrigonometryQuiz = ({ onBack }) => {
     const newQuiz = generateQuiz({
       shuffle: true
     });
-    setQuiz(newQuiz);
     setQuestions(newQuiz.questions);
     setCurrentQuestion(0);
     setSelectedAnswer(null);
@@ -70,7 +63,6 @@ const TrigonometryQuiz = ({ onBack }) => {
     setScore(0);
     setAnswers([]);
     setQuizStartTime(Date.now());
-    setShowReport(false);
   };
 
   if (questions.length === 0) {

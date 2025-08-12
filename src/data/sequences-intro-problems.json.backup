@@ -2,7 +2,7 @@
   {
     "id": "tex_problem_1",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{6}, \\frac{1}{8}, \\frac{1}{10}, \\ldots$",
+    "statement": "Podaj ogólny wyraz \\(a_{n}\\) następujących ciągów:\\\\ \\(\\frac{1}{2}, \\frac{1}{4}, \\frac{1}{6}, \\frac{1}{8}, \\frac{1}{10}, \\ldots\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -51,7 +51,7 @@
   {
     "id": "tex_problem_2",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $6,-6,6,-6,6,-6,6, \\ldots$",
+    "statement": "Podaj ogólny wyraz \\(a_{n}\\) następujących ciągów:\\\\ \\(6,-6,6,-6,6,-6,6, \\ldots\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -100,7 +100,7 @@
   {
     "id": "tex_problem_3",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{2}, \\frac{2}{5}, \\frac{3}{10}, \\frac{4}{17}, \\frac{5}{26}, \\ldots$",
+    "statement": "Podaj ogólny wyraz \\(a_{n}\\) następujących ciągów:\\\\ \\(\\frac{1}{2}, \\frac{2}{5}, \\frac{3}{10}, \\frac{4}{17}, \\frac{5}{26}, \\ldots\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -177,7 +177,7 @@
   {
     "id": "tex_problem_4",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $\\frac{1}{4}, \\frac{1}{16}, \\frac{1}{36}, \\frac{1}{64}, \\frac{1}{100}, \\ldots$",
+    "statement": "Podaj ogólny wyraz \\(a_{n}\\) następujących ciągów:\\\\ \\(\\frac{1}{4}, \\frac{1}{16}, \\frac{1}{36}, \\frac{1}{64}, \\frac{1}{100}, \\ldots\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -226,7 +226,7 @@
   {
     "id": "tex_problem_5",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Podaj ogólny wyraz $a_{n}$ następujących ciągów: $1, \\frac{1}{9}, \\frac{1}{25}, \\frac{1}{49}, \\frac{1}{81}, \\ldots$",
+    "statement": "Podaj ogólny wyraz \\(a_{n}\\) następujących ciągów:\\\\ \\(1, \\frac{1}{9}, \\frac{1}{25}, \\frac{1}{49}, \\frac{1}{81}, \\ldots\\)",
     "steps": [
       {
         "step": 1,
@@ -287,7 +287,7 @@
   {
     "id": "tex_problem_6",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=\\frac{1}{2}(n-4), n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( \\(a_{n}\\) ). Napisz cztery początkowe i. yrazy tego ciągu. Następnie oblicz \\(a_{2 k}, a_{3 k}, a_{2 k-1}\\) oraz \\(a_{5 k+3}\\), gdzie \\(k \\in \\boldsymbol{N}_{+}\\).\\\\ \\(a_{n}=\\frac{1}{2}(n-4), n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -352,7 +352,7 @@
   {
     "id": "tex_problem_7",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=3-n^{2}, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( \\(a_{n}\\) ). Napisz cztery początkowe i. yrazy tego ciągu. Następnie oblicz \\(a_{2 k}, a_{3 k}, a_{2 k-1}\\) oraz \\(a_{5 k+3}\\), gdzie \\(k \\in \\boldsymbol{N}_{+}\\).\\\\ \\(a_{n}=3-n^{2}, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -435,7 +435,7 @@
   {
     "id": "tex_problem_8",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=2 n^{2}-4 n+1, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( \\(a_{n}\\) ). Napisz cztery początkowe i. yrazy tego ciągu. Następnie oblicz \\(a_{2 k}, a_{3 k}, a_{2 k-1}\\) oraz \\(a_{5 k+3}\\), gdzie \\(k \\in \\boldsymbol{N}_{+}\\).\\\\ \\(a_{n}=2 n^{2}-4 n+1, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -524,7 +524,7 @@
   {
     "id": "tex_problem_9",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( $a_{n}$ ). Napisz cztery początkowe wyrazy tego ciągu. Następnie oblicz $a_{2 k}, a_{3 k}, a_{2 k-1}$ oraz $a_{5 k+3}$, gdzie $k \\in \\boldsymbol{N}_{+}$. $a_{n}=\\sqrt{n-1}, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Dany jest wyraz ogólny nieskończonego ciągu ( \\(a_{n}\\) ). Napisz cztery początkowe i. yrazy tego ciągu. Następnie oblicz \\(a_{2 k}, a_{3 k}, a_{2 k-1}\\) oraz \\(a_{5 k+3}\\), gdzie \\(k \\in \\boldsymbol{N}_{+}\\).\\\\ \\(a_{n}=\\sqrt{n-1}, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -589,7 +589,7 @@
   {
     "id": "tex_problem_10",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które $z$ wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $\\therefore a_{n}=\\left(n^{2}-2\\right)\\left(n^{2}-4\\right)(n-3)$",
+    "statement": "Które \\(z\\) wyrazów ciągu \\(\\left(a_{n}\\right)\\) są równe zeru, jeśli:\\\\ \\(\\therefore a_{n}=\\left(n^{2}-2\\right)\\left(n^{2}-4\\right)(n-3)\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -663,7 +663,7 @@
   {
     "id": "tex_problem_11",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które z wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{2}-4 n-21}{n^{2}+1}$",
+    "statement": "Które \\(z\\) wyrazów ciągu \\(\\left(a_{n}\\right)\\) są równe zeru, jeśli:\\\\ \\(a_{n}=\\frac{n^{2}-4 n-21}{n^{2}+1}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -736,7 +736,7 @@
   {
     "id": "tex_problem_12",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które z wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{4}-256}{n^{2}-n+2}$",
+    "statement": "Które \\(z\\) wyrazów ciągu \\(\\left(a_{n}\\right)\\) są równe zeru, jeśli:\\\\ \\(a_{n}=\\frac{n^{4}-256}{n^{2}-n+2}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -803,7 +803,7 @@
   {
     "id": "tex_problem_13",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które z wyrazów ciągu $\\left(a_{n}\\right)$ są równe zeru, jeśli: $a_{n}=\\frac{n^{3}-7 n^{2}+11 n-5}{3 n+2}$ ?",
+    "statement": "Które \\(z\\) wyrazów ciągu \\(\\left(a_{n}\\right)\\) są równe zeru, jeśli:\\\\ \\(a_{n}=\\frac{n^{3}-7 n^{2}+11 n-5}{3 n+2}\\) ?\\\\",
     "steps": [
       {
         "step": 1,
@@ -877,7 +877,7 @@
   {
     "id": "tex_problem_14",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=2 n+2, x=18$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są większe od liczby \\(x\\) :\\\\ \\(a_{n}=2 n+2, x=18\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -940,7 +940,7 @@
   {
     "id": "tex_problem_15",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=(n-3)^{2}, x=5$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są większe od liczby \\(x\\) :\\\\ \\(a_{n}=(n-3)^{2}, x=5\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1007,7 +1007,7 @@
   {
     "id": "tex_problem_16",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=\\frac{2 n+3}{2 n-1}, x=2$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są większe od liczby \\(x\\) :\\\\ \\(a_{n}=\\frac{2 n+3}{2 n-1}, x=2\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1088,7 +1088,7 @@
   {
     "id": "tex_problem_17",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są większe od liczby $x$ : $a_{n}=\\sqrt{3 n+1}, x=4$ ?",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są większe od liczby \\(x\\) :\\\\ \\(a_{n}=\\sqrt{3 n+1}, x=4\\) ?\\\\",
     "steps": [
       {
         "step": 1,
@@ -1138,7 +1138,7 @@
   {
     "id": "tex_problem_18",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=n^{2}-10, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są ujemne, jeśli:\\\\ \\(a_{n}=n^{2}-10, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1199,7 +1199,7 @@
   {
     "id": "tex_problem_19",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=-n^{2}+10 n+11, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są ujemne, jeśli:\\\\ \\(a_{n}=-n^{2}+10 n+11, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1260,7 +1260,7 @@
   {
     "id": "tex_problem_20",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=\\frac{n-6}{n+3}, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są ujemne, jeśli:\\\\ \\(a_{n}=\\frac{n-6}{n+3}, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1310,7 +1310,7 @@
   {
     "id": "tex_problem_21",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są ujemne, jeśli: $a_{n}=\\frac{9-n}{7-3 n}, n \\in \\boldsymbol{N}_{+}$?",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są ujemne, jeśli:\\\\ \\(a_{n}=\\frac{9-n}{7-3 n}, n \\in \\boldsymbol{N}_{+}\\)?\\\\",
     "steps": [
       {
         "step": 1,
@@ -1383,7 +1383,7 @@
   {
     "id": "tex_problem_22",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=2 n-7, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są dodatnie, jeśli:\\\\ \\(a_{n}=2 n-7, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1438,7 +1438,7 @@
   {
     "id": "tex_problem_23",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{n+5}{0,5-n}, n \\in N$.",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są dodatnie, jeśli:\\\\ \\(a_{n}=\\frac{n+5}{0,5-n}, n \\in N\\).\\\\",
     "steps": [
       {
         "step": 1,
@@ -1505,7 +1505,7 @@
   {
     "id": "tex_problem_24",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{10-n}{3 n-16}, n \\in \\boldsymbol{N}_{+}$",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są dodatnie, jeśli:\\\\ \\(a_{n}=\\frac{10-n}{3 n-16}, n \\in \\boldsymbol{N}_{+}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1566,7 +1566,7 @@
   {
     "id": "tex_problem_25",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu ( $a_{n}$ ) są dodatnie, jeśli: $a_{n}=\\frac{n^{2}-16 n+39}{n+4}, n \\in \\boldsymbol{N}$ ?",
+    "statement": "Które wyrazy ciągu ( \\(a_{n}\\) ) są dodatnie, jeśli:\\\\ \\(a_{n}=\\frac{n^{2}-16 n+39}{n+4}, n \\in \\boldsymbol{N}\\) ?\\\\",
     "steps": [
       {
         "step": 1,
@@ -1641,7 +1641,7 @@
   {
     "id": "tex_problem_26",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu o wyrazie ogólnym $a_{n}=\\frac{n^{2}+11 n+8}{n}, n \\in N_{-}$, równają 17? Jakie jeszcze wyrazy w tym ciągu są liczbami naturalnymi?",
+    "statement": "Które wyrazy ciągu o wyrazie ogólnym \\(a_{n}=\\frac{n^{2}+11 n+8}{n}, n \\in N_{-}\\), równają 17? Jakie jeszcze wyrazy w tym ciągu są liczbami naturalnymi?\\\\",
     "steps": [
       {
         "step": 1,
@@ -1727,7 +1727,7 @@
   {
     "id": "tex_problem_27",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Które wyrazy ciągu o wyrazie ogólnym $a_{n}=\\frac{3 n^{2}-2 n-12}{n}, n \\in N_{\\text {+ }}$, są liczba naturalnymi? Czy jakiś wyraz ciągu jest równy 14 ?",
+    "statement": "Które wyrazy ciągu o wyrazie ogólnym \\(a_{n}=\\frac{3 n^{2}-2 n-12}{n}, n \\in N_{\\text {+ }}\\), są liczba naturalnymi? Czy jakiś wyraz ciągu jest równy 14 ?\\\\",
     "steps": [
       {
         "step": 1,
@@ -1783,7 +1783,7 @@
   {
     "id": "tex_problem_28",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Zbadaj, które wyrazy ciągu ( $a_{n}$ ), gdzie $n \\in N_{+}$, są liczbami naturainy Wyznacz te wyrazy. $a_{n}=2-\\frac{6}{n}$",
+    "statement": "Zbadaj, które wyrazy ciągu ( \\(a_{n}\\) ), gdzie \\(n \\in N_{+}\\), są liczbami naturainy Wyznacz te wyrazy.\\\\ \\(a_{n}=2-\\frac{6}{n}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1851,7 +1851,7 @@
   {
     "id": "tex_problem_29",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Zbadaj, które wyrazy ciągu ( $a_{n}$ ), gdzie $n \\in N_{+}$, są liczbami naturainy Wyznacz te wyrazy. $a_{n}=\\frac{3 n-6}{n+2}$",
+    "statement": "Zbadaj, które wyrazy ciągu ( \\(a_{n}\\) ), gdzie \\(n \\in N_{+}\\), są liczbami naturainy Wyznacz te wyrazy.\\\\ \\(a_{n}=\\frac{3 n-6}{n+2}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1913,7 +1913,7 @@
   {
     "id": "tex_problem_30",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=\\frac{n+2}{3 n}$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=\\frac{n+2}{3 n}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -1971,7 +1971,7 @@
   {
     "id": "tex_problem_31",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=\\frac{1-4 n}{3 n+2}$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=\\frac{1-4 n}{3 n+2}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2052,7 +2052,7 @@
   {
     "id": "tex_problem_32",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=-4 n^{2}+3 n$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=-4 n^{2}+3 n\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2116,7 +2116,7 @@
   {
     "id": "tex_problem_33",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=(2 n-1)(2 n+1)$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=(2 n-1)(2 n+1)\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2180,7 +2180,7 @@
   {
     "id": "tex_problem_34",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=n^{3}-n^{2}$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=n^{3}-n^{2}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2279,7 +2279,7 @@
   {
     "id": "tex_problem_35",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Dany jest nieskończony ciąg ( $a_{n}$ ). Dla $n>1, k \\geq 1$ wyznacz wyrazy: $a_{n+1}, a_{n}$ $a_{2 k}, a_{2 k+1}$, jeśli: $a_{n}=4 n-n^{3}$",
+    "statement": "Dany jest nieskończony ciąg ( \\(a_{n}\\) ). Dla \\(n>1, k \\geq 1\\) wyznacz wyrazy: \\(a_{n+1}, a_{n}\\) \\(a_{2 k}, a_{2 k+1}\\), jeśli:\\\\ \\(a_{n}=4 n-n^{3}\\)",
     "steps": [
       {
         "step": 1,
@@ -2378,7 +2378,7 @@
   {
     "id": "tex_problem_36",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=n+4$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+1}=n+4\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2431,7 +2431,7 @@
   {
     "id": "tex_problem_37",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=2 n+7$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+1}=2 n+7\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2494,7 +2494,7 @@
   {
     "id": "tex_problem_38",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+2}=-3 n+2$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+2}=-3 n+2\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2560,11 +2560,84 @@
       "common_difference": "d = -3"
     }
   },
- 
+  {
+    "id": "tex_problem_39",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+2}=(n+1)^{2}\\)\\\\\\item Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(\\in \\quad a_{n+3}=\\frac{n+2}{2 n+5}\\)\\\\",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Masz wzór rekurencyjny } a_{n+2} = (n+1)^2\\text{. Co to oznacza dla kolejnych wyrazów ciągu?}",
+        "expression": "a_{n+2} = (n+1)^2",
+        "explanation": "\\text{Wzór łączy wyraz o indeksie } n+2 \\text{ z indeksem } n"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Aby znaleźć wzór na } a_n\\text{, spróbuj podstawić } k = n+2\\text{. Co otrzymasz?}",
+        "expression": "k = n+2 \\Rightarrow n = k-2",
+        "explanation": "\\text{Zmieniamy zmienną, aby wyrazić } a_k \\text{ przez } k"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Podstaw nową zmienną do wzoru rekurencyjnego}",
+        "expression": "a_k = ((k-2)+1)^2 = (k-1)^2",
+        "explanation": "\\text{Po podstawieniu } n = k-2 \\text{ otrzymujemy wzór na } a_k"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Skoro } k \\text{ to dowolny indeks, możesz zastąpić go przez } n\\text{. Jaki jest wzór ogólny?}",
+        "expression": "a_n = (n-1)^2",
+        "explanation": "\\text{Wzór ogólny na n-ty wyraz ciągu}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź poprawność wzoru dla kilku pierwszych wyrazów. Czy } a_3 = a_{1+2} \\text{ zgadza się ze wzorem rekurencyjnym?}",
+        "expression": "a_3 = (3-1)^2 = 4 \\text{ oraz } a_{1+2} = (1+1)^2 = 4 \\checkmark",
+        "explanation": "\\text{Weryfikacja: wzór jest zgodny z relacją rekurencyjną}"
+      },
+      {
+        "step": 6,
+        "hint": "\\text{Teraz przejdź do drugiego zadania. Masz } a_{n+3} = \\frac{n+2}{2n+5}\\text{. Jak znajdziesz wzór na } a_n\\text{?}",
+        "expression": "a_{n+3} = \\frac{n+2}{2n+5}",
+        "explanation": "\\text{Drugi wzór rekurencyjny łączy wyraz o indeksie } n+3 \\text{ z indeksem } n"
+      },
+      {
+        "step": 7,
+        "hint": "\\text{Zastosuj podobne podstawienie jak wcześniej. Jeśli } m = n+3\\text{, to jak wyrazisz } n \\text{ przez } m\\text{?}",
+        "expression": "m = n+3 \\Rightarrow n = m-3",
+        "explanation": "\\text{Zmieniamy zmienną, aby wyrazić } a_m \\text{ przez } m"
+      },
+      {
+        "step": 8,
+        "hint": "\\text{Podstaw } n = m-3 \\text{ do wzoru rekurencyjnego}",
+        "expression": "a_m = \\frac{(m-3)+2}{2(m-3)+5} = \\frac{m-1}{2m-6+5} = \\frac{m-1}{2m-1}",
+        "explanation": "\\text{Po podstawieniu i uproszczeniu otrzymujemy wzór na } a_m"
+      },
+      {
+        "step": 9,
+        "hint": "\\text{Zastąp } m \\text{ przez } n \\text{ w otrzymanym wzorze}",
+        "expression": "a_n = \\frac{n-1}{2n-1}",
+        "explanation": "\\text{Wzór ogólny na n-ty wyraz drugiego ciągu}"
+      },
+      {
+        "step": 10,
+        "hint": "\\text{Sprawdź poprawność dla } n = 4\\text{. Czy } a_4 \\text{ obliczone ze wzoru równa się } a_{1+3}\\text{?}",
+        "expression": "a_4 = \\frac{4-1}{2 \\cdot 4-1} = \\frac{3}{7} \\text{ oraz } a_{1+3} = \\frac{1+2}{2 \\cdot 1+5} = \\frac{3}{7} \\checkmark",
+        "explanation": "\\text{Weryfikacja potwierdza poprawność wzoru}"
+      }
+    ],
+    "solutions": [
+      "a_n = (n-1)^2 \\text{ dla pierwszego ciągu}",
+      "a_n = \\frac{n-1}{2n-1} \\text{ dla drugiego ciągu}"
+    ],
+    "parameters": {
+      "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
   {
     "id": "tex_problem_40",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=\\frac{1-3 n}{4 n+1}$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+1}=\\frac{1-3 n}{4 n+1}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2625,7 +2698,7 @@
   {
     "id": "tex_problem_41",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=-2 n^{2}+3 n$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+1}=-2 n^{2}+3 n\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2680,7 +2753,7 @@
   {
     "id": "tex_problem_42",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz $a_{n}$, jeśli o ciągu $\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}$, wiadomo, że $a_{n+1}=5 n^{2}+4$",
+    "statement": "Wyznacz \\(a_{n}\\), jeśli o ciągu \\(\\left(a_{n}\\right), n \\in \\boldsymbol{N}_{+}\\), wiadomo, że\\\\ \\(a_{n+1}=5 n^{2}+4\\)",
     "steps": [
       {
         "step": 1,
@@ -2729,7 +2802,7 @@
   {
     "id": "tex_problem_43",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=3, a_{n+1}=a_{n}-2 n$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=3, a_{n+1}=a_{n}-2 n\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2776,7 +2849,7 @@
   {
     "id": "tex_problem_44",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=\\frac{1}{4}, \\quad a_{n+1}=\\left(a_{n}\\right)^{2} \\cdot 4^{n}$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=\\frac{1}{4}, \\quad a_{n+1}=\\left(a_{n}\\right)^{2} \\cdot 4^{n}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2841,7 +2914,7 @@
   {
     "id": "tex_problem_45",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=5, a_{n+1}=\\sqrt{a_{n}}$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=5, a_{n+1}=\\sqrt{a_{n}}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2892,7 +2965,7 @@
   {
     "id": "tex_problem_46",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=2, a_{n+1}=0,25\\left(4 a_{n}-1\\right)$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=2, a_{n+1}=0,25\\left(4 a_{n}-1\\right)\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -2956,7 +3029,7 @@
   {
     "id": "tex_problem_47",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=-3, a_{n+1}=1+\\frac{1}{a_{n}}$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=-3, a_{n+1}=1+\\frac{1}{a_{n}}\\)\\\\",
     "steps": [
       {
         "step": 1,
@@ -3021,7 +3094,7 @@
   {
     "id": "tex_problem_48",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym: $a_{1}=1, a_{n+1}=2 a_{n}$",
+    "statement": "Wyznacz trzeci, czwarty i piąty wyraz ciągu określonego wzorem rekurencyjnym:\\\\ \\(a_{1}=1, a_{n+1}=2 a_{n}\\)",
     "steps": [
       {
         "step": 1,
@@ -3066,7 +3139,7 @@
   {
     "id": "tex_problem_49",
     "topic": "Ciągi - wprowadzenie",
-    "statement": "Niech $S_{n}$ oznacza sumę $n$ początkowych wyrazów ciągu $\\left(a_{n}\\right)$ :$=a_{1}+a_{2}+a_{3}+\\ldots+a_{n}$. Wiadomo, że $S_{n}=\\frac{n}{4 n+1}$, gdzie $n \\in \\boldsymbol{N}_{+}$. Oblicz:",
+    "statement": "Niech \\(S_{n}\\) oznacza sumę \\(n\\) początkowych wyrazów ciągu \\(\\left(a_{n}\\right)\\) :\\\\\\(=a_{1}+a_{2}+a_{3}+\\ldots+a_{n}\\). Wiadomo, że \\(S_{n}=\\frac{n}{4 n+1}\\), gdzie \\(n \\in \\boldsymbol{N}_{+}\\). Oblicz:\\\\",
     "steps": [
       {
         "step": 1,
@@ -3153,6 +3226,160 @@
     "parameters": {
       "sequence_formula": "S_n = \\frac{n}{4n+1}",
       "domain": "n \\in \\mathbb{N}_+"
+    }
+  },
+  {
+    "id": "tex_problem_50",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Niech \\(S_{n}\\) oznacza sumę \\(n\\) początkowych wyrazów ciągu \\(\\left(a_{n}\\right)\\) :\\\\\\(S_{2}\\)\\\\",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zadanie wydaje się niekompletne. Czy masz pełne sformułowanie? Co oznacza } S_n \\text{ i jaki jest ciąg } (a_n)\\text{?}",
+        "expression": "\\text{Brak danych o ciągu } (a_n) \\text{ i definicji sumy } S_n",
+        "explanation": "\\text{Nie można rozwiązać zadania bez pełnych informacji o ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Czy ciąg } (a_n) \\text{ ma jakąś szczególną właściwość? Czy jest arytmetyczny, geometryczny, czy ma inną strukturę?}",
+        "expression": "\\text{Potrzebne informacje: wzór ogólny } a_n \\text{ lub relacja rekurencyjna}",
+        "explanation": "\\text{Suma } S_n \\text{ zależy od rodzaju ciągu}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Jeśli } S_n \\text{ to suma } n \\text{ początkowych wyrazów, to jak wyraża się } S_2\\text{?}",
+        "expression": "S_2 = a_1 + a_2",
+        "explanation": "\\text{Suma dwóch pierwszych wyrazów ciągu}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Czy masz dodatkowe warunki lub wzory dotyczące ciągu? Może wartości konkretnych wyrazów?}",
+        "expression": "\\text{Bez dodatkowych danych nie można obliczyć } S_2",
+        "explanation": "\\text{Potrzebne są wartości } a_1 \\text{ i } a_2 \\text{ lub wzór na } a_n"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Sprawdź czy w zadaniu nie brakuje części z definicją ciągu lub dodatkowymi warunkami}",
+        "expression": "\\text{Zadanie wymaga uzupełnienia danych}",
+        "explanation": "\\text{Proszę podać pełne sformułowanie zadania z definicją ciągu } (a_n)"
+      }
+    ],
+    "solutions": [
+      "\\text{Zadanie niekompletne - brak definicji ciągu } (a_n)"
+    ],
+    "parameters": {
+      "note": "\\text{Wymagane uzupełnienie treści zadania}"
+    }
+  },
+  {
+    "id": "tex_problem_51",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Niech \\(S_{n}\\) oznacza sumę \\(n\\) początkowych wyrazów ciągu \\(\\left(a_{n}\\right)\\) :\\\\\\(a_{2}\\)\\\\",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zadanie wydaje się niekompletne. Czy możesz sprawdzić, czy podano wszystkie informacje o ciągu } (a_n) \\text{ i jego sumie } S_n\\text{?}",
+        "expression": "\\text{Brak danych: definicja ciągu } (a_n) \\text{ oraz pełne sformułowanie zadania}",
+        "explanation": "\\text{Nie można rozwiązać zadania bez pełnych danych o ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jakie informacje są potrzebne do wyznaczenia sumy } S_n\\text{? Czy masz wzór na } a_n \\text{ lub relację rekurencyjną?}",
+        "expression": "\\text{Potrzebne: wzór ogólny na } a_n \\text{ lub relacja między wyrazami}",
+        "explanation": "\\text{Suma } S_n \\text{ zależy od postaci wyrazów ciągu}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Co oznacza zapis } a_2 \\text{ na końcu zadania? Czy to ma być wartość drugiego wyrazu?}",
+        "expression": "\\text{Niejasne znaczenie symbolu } a_2 \\text{ w kontekście zadania}",
+        "explanation": "\\text{Symbol może oznaczać wartość wyrazu lub być częścią niekompletnego wzoru}"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Czy zadanie dotyczy konkretnego typu ciągu? Sprawdź czy nie ma dodatkowych warunków}",
+        "expression": "\\text{Brak informacji o typie ciągu: arytmetyczny, geometryczny, czy inny}",
+        "explanation": "\\text{Typ ciągu determinuje sposób obliczania sumy}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Proszę o podanie pełnego sformułowania zadania z wszystkimi danymi}",
+        "expression": "\\text{Zadanie wymaga uzupełnienia danych wejściowych}",
+        "explanation": "\\text{Bez pełnych informacji nie można przeprowadzić obliczeń}"
+      }
+    ],
+    "solutions": [
+      "\\text{Zadanie niekompletne - brak danych do rozwiązania}"
+    ],
+    "parameters": {
+      "note": "\\text{Wymagane uzupełnienie treści zadania}"
+    }
+  },
+  {
+    "id": "tex_problem_52",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Niech \\(S_{n}\\) oznacza sumę \\(n\\) początkowych wyrazów ciągu \\(\\left(a_{n}\\right)\\) :\\\\\\(a_{6}\\)\\\\",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zadanie wydaje się niekompletne. Czy masz pełne treści zadania z definicją ciągu } (a_n) \\text{ i wzorem na } S_n\\text{?}",
+        "expression": "\\text{Brak danych: nie podano wzoru na ciąg } (a_n) \\text{ ani definicji sumy } S_n",
+        "explanation": "\\text{Aby wyznaczyć } a_6\\text{, potrzebujemy więcej informacji o ciągu}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Jeśli masz wzór na sumę } S_n\\text{, pamiętasz jak wyrazić } a_n \\text{ przez sumy częściowe?}",
+        "expression": "a_n = S_n - S_{n-1} \\text{ dla } n \\geq 2",
+        "explanation": "\\text{Ogólna zależność między wyrazem ciągu a sumami częściowymi}"
+      },
+      {
+        "step": 3,
+        "hint": "\\text{Dla szóstego wyrazu, jakie sumy częściowe będziesz potrzebować?}",
+        "expression": "a_6 = S_6 - S_5",
+        "explanation": "\\text{Stosujemy wzór dla } n = 6"
+      },
+      {
+        "step": 4,
+        "hint": "\\text{Bez konkretnego wzoru na } S_n \\text{ nie możemy obliczyć wartości liczbowej. Czy możesz podać pełną treść zadania?}",
+        "expression": "\\text{Wynik zależy od wzoru na } S_n \\text{ lub } a_n",
+        "explanation": "\\text{Potrzebujemy dodatkowych danych do rozwiązania}"
+      },
+      {
+        "step": 5,
+        "hint": "\\text{Jeśli ciąg jest arytmetyczny lub geometryczny, jakie wzory na } S_n \\text{ znasz?}",
+        "expression": "\\text{Ciąg arytmetyczny: } S_n = \\frac{n}{2}(2a_1 + (n-1)d)\\text{, geometryczny: } S_n = a_1\\frac{1-q^n}{1-q}",
+        "explanation": "\\text{Przykłady wzorów, które mogą być użyteczne po podaniu pełnych danych}"
+      }
+    ],
+    "solutions": [
+      "\\text{Nie można wyznaczyć } a_6 \\text{ bez pełnej treści zadania}"
+    ],
+    "parameters": {
+      "note": "\\text{Zadanie wymaga uzupełnienia o wzór na ciąg lub sumę częściową}"
+    }
+  },
+  {
+    "id": "tex_problem_53",
+    "topic": "Ciągi - wprowadzenie",
+    "statement": "Niech \\(S_{n}\\) oznacza sumę \\(n\\) początkowych wyrazów ciągu \\(\\left(a_{n}\\right)\\) :\\\\\\(a_{n}\\)\\\\",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "\\text{Zadanie wydaje się niekompletne. Czy masz pełne sformułowanie? Brakuje definicji ciągu } (a_n) \\text{ oraz pytania o konkretną wartość lub wzór}",
+        "expression": "S_n = a_1 + a_2 + a_3 + \\ldots + a_n",
+        "explanation": "\\text{Definicja sumy częściowej ciągu, ale potrzebujemy więcej informacji}"
+      },
+      {
+        "step": 2,
+        "hint": "\\text{Aby rozwiązać zadanie dotyczące sumy } S_n\\text{, potrzebuję znać wzór na wyraz ogólny } a_n \\text{ lub inne warunki. Czy możesz podać pełne treść zadania?}",
+        "expression": "\\text{Brak danych do kontynuacji}",
+        "explanation": "\\text{Nie można kontynuować bez kompletnego sformułowania zadania}"
+      }
+    ],
+    "solutions": [
+      "\\text{Zadanie wymaga uzupełnienia - brak definicji ciągu } (a_n) \\text{ i konkretnego pytania}"
+    ],
+    "parameters": {
+      "note": "\\text{Treść zadania jest niekompletna}"
     }
   }
 ]
