@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import MathRenderer, { MathExpression } from './MathRenderer';
+import NextProblemSuggestion from './NextProblemSuggestion';
 
-const ProblemView = ({ problem, onBack, onComplete }) => {
+const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set() }) => {
   const [revealedSteps, setRevealedSteps] = useState(new Set());
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [hintShownSteps, setHintShownSteps] = useState(new Set());
   const [showSolution, setShowSolution] = useState(false);
+  const startTimeRef = useRef(Date.now());
+  const solveDurationRef = useRef(null);
 
   const handleStepClick = (stepIndex) => {
     const step = problem.steps[stepIndex];
@@ -22,6 +25,9 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
       // Check if all steps are completed
       if (completedSteps.size + 1 === problem.steps.length) {
         setShowSolution(true);
+        // Track solve duration
+        solveDurationRef.current = Math.floor((Date.now() - startTimeRef.current) / 1000);
+        // Removed feedback modal
         if (onComplete) {
           onComplete(problem.id);
         }
@@ -30,6 +36,20 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
   };
 
   const progress = (completedSteps.size / (problem.steps?.length || 1)) * 100;
+
+  // Reset timer when problem changes
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+  }, [problem.id]);
+
+  // Reset all UI states when problem changes
+  useEffect(() => {
+    setRevealedSteps(new Set());
+    setCompletedSteps(new Set());
+    setHintShownSteps(new Set());
+    setShowSolution(false);
+    solveDurationRef.current = null;
+  }, [problem.id]);
 
   const StepCheckbox = ({ isCompleted, stepNumber }) => (
     <div className="flex items-center">
@@ -145,7 +165,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                       {/* Step content */}
                       <div className="bg-gray-900/50 rounded-lg p-4 space-y-3">
                         {step.expression && (
-                          <div className="text-lg text-white">
+                          <div className="text-lg text-white text-center">
                             <MathExpression content={step.expression} block={true} />
                           </div>
                         )}
@@ -228,7 +248,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                         <div className={`transition-all duration-500 ${
                           revealedSteps.has(index) ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                         }`}>
-                          <div className="text-base md:text-xl text-white font-medium">
+                          <div className="text-base md:text-xl text-white font-medium text-center">
                             <MathExpression content={step.expression} block={true} />
                           </div>
                         </div>
@@ -255,7 +275,7 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
                 <h3 className="text-base md:text-lg font-semibold text-green-400 mb-4 md:mb-6">Odpowiedź końcowa</h3>
                 <div className="space-y-3 md:space-y-4">
                   {problem.solutions.map((solution, index) => (
-                    <div key={index} className="text-white text-lg md:text-xl font-medium">
+                    <div key={index} className="text-white text-lg md:text-xl font-medium text-center">
                       <MathExpression content={solution} block={true} />
                     </div>
                   ))}
@@ -264,8 +284,18 @@ const ProblemView = ({ problem, onBack, onComplete }) => {
             </div>
           )}
 
+          {/* Next Problem Suggestion - Only show when problem is completed */}
+          {showSolution && (
+            <NextProblemSuggestion 
+              currentProblem={problem}
+              completedProblems={completedProblems}
+              onSelectProblem={onSelectProblem}
+              solveDuration={solveDurationRef.current}
+            />
+          )}
+
           {/* Parameters */}
-          {problem.parameters && (
+          {problem.parameters && Object.keys(problem.parameters).length > 0 && (
             <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl">
               <h3 className="text-sm font-medium text-gray-400 mb-4">Parametry</h3>
               <div className="space-y-2">

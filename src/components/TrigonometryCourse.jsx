@@ -9,7 +9,7 @@ import sequencesProblems from '../data/sequences-problems.json';
 import sequencesIntroProblems from '../data/sequences-intro-problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'quiz'
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'quiz' | 'adaptive-learning'
   
   // Debug: Log mode changes
   useEffect(() => {
@@ -183,6 +183,24 @@ const TrigonometryCourse = () => {
     );
   }
 
+  // Render adaptive learning mode (placeholder)
+  if (mode === 'adaptive-learning') {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center p-6">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Adaptacyjne uczenie z AI</h1>
+          <p className="text-gray-400 mb-8">Ta funkcja będzie wkrótce dostępna!</p>
+          <button
+            onClick={handleBackToWelcome}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+          >
+            Powrót do menu głównego
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   // Render course mode (trigonometry or sequences)
   return (
     <>
@@ -196,6 +214,8 @@ const TrigonometryCourse = () => {
           problem={currentProblem}
           onBack={handleBack}
           onComplete={handleComplete}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
         />
       ) : (
         <ProblemList
