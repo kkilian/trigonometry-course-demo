@@ -7,9 +7,10 @@ import WelcomeScreen from './WelcomeScreen';
 import trigonometryProblems from '../data/problems.json';
 import sequencesProblems from '../data/sequences-problems.json';
 import sequencesIntroProblems from '../data/sequences-intro-problems.json';
+// import wielomianyProblems from '../data/wielomiany_solutions.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'quiz' | 'adaptive-learning'
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'wielomiany' | 'quiz' | 'adaptive-learning'
   
   // Debug: Log mode changes
   useEffect(() => {
@@ -19,6 +20,7 @@ const TrigonometryCourse = () => {
   const [completedTrigProblems, setCompletedTrigProblems] = useState(new Set());
   const [completedSeqProblems, setCompletedSeqProblems] = useState(new Set());
   const [completedSeqIntroProblems, setCompletedSeqIntroProblems] = useState(new Set());
+  const [completedWielomianyProblems, setCompletedWielomianyProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -31,6 +33,10 @@ const TrigonometryCourse = () => {
       console.log('Returning sequencesIntroProblems:', sequencesIntroProblems.length, 'problems');
       return sequencesIntroProblems;
     }
+    // if (mode === 'wielomiany') {
+    //   console.log('Returning wielomianyProblems:', wielomianyProblems.length, 'problems');
+    //   return wielomianyProblems;
+    // }
     console.log('Returning trigonometryProblems:', trigonometryProblems.length, 'problems');
     return trigonometryProblems;
   };
@@ -38,6 +44,7 @@ const TrigonometryCourse = () => {
   const getCurrentCompleted = () => {
     if (mode === 'sequences') return completedSeqProblems;
     if (mode === 'sequences-intro') return completedSeqIntroProblems;
+    if (mode === 'wielomiany') return completedWielomianyProblems;
     return completedTrigProblems;
   };
   
@@ -46,6 +53,8 @@ const TrigonometryCourse = () => {
       setCompletedSeqProblems(newSet);
     } else if (mode === 'sequences-intro') {
       setCompletedSeqIntroProblems(newSet);
+    } else if (mode === 'wielomiany') {
+      setCompletedWielomianyProblems(newSet);
     } else {
       setCompletedTrigProblems(newSet);
     }
@@ -65,6 +74,12 @@ const TrigonometryCourse = () => {
       return {
         title: 'Ciągi - Wprowadzenie', 
         subtitle: `${problems.length} zadań wprowadzających`
+      };
+    }
+    if (mode === 'wielomiany') {
+      return {
+        title: 'Wielomiany',
+        subtitle: `${problems.length} zadań krok po kroku`
       };
     }
     return {
@@ -107,6 +122,16 @@ const TrigonometryCourse = () => {
       }
     }
     
+    // Load wielomiany progress
+    const savedWielomiany = localStorage.getItem('completedWielomianyProblems');
+    if (savedWielomiany) {
+      try {
+        setCompletedWielomianyProblems(new Set(JSON.parse(savedWielomiany)));
+      } catch (e) {
+        console.error('Error loading wielomiany progress:', e);
+      }
+    }
+    
     // Migrate old data if exists
     const oldSaved = localStorage.getItem('completedProblems');
     if (oldSaved && !savedTrig) {
@@ -133,6 +158,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedSeqIntroProblems', JSON.stringify([...completedSeqIntroProblems]));
   }, [completedSeqIntroProblems]);
+  
+  // Save wielomiany progress
+  useEffect(() => {
+    localStorage.setItem('completedWielomianyProblems', JSON.stringify([...completedWielomianyProblems]));
+  }, [completedWielomianyProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);

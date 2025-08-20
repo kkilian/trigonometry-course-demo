@@ -1,31 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import LaTeXCheckerApp from './LaTeXCheckerApp';
-import SolutionReviewerApp from './SolutionReviewerApp';
 import TagReviewerApp from './TagReviewerApp';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// Check app mode
-const appMode = process.env.REACT_APP_MODE;
-
-let AppComponent;
-if (appMode === 'checker') {
-  AppComponent = LaTeXCheckerApp;
-} else if (appMode === 'reviewer') {
-  AppComponent = SolutionReviewerApp;
-} else if (appMode === 'tag-reviewer') {
-  AppComponent = TagReviewerApp;
-} else {
-  AppComponent = App;
-}
-
 root.render(
   <React.StrictMode>
-    <AppComponent />
+    <TagReviewerApp />
   </React.StrictMode>
 );
 

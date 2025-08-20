@@ -382,7 +382,8 @@ export const MathExpression = ({ content, block = false, className = '' }) => {
     };
   }, [content, block, className]);
   
-  return <span ref={containerRef} className={className} />;
+  const wrapperClass = block ? `block text-center ${className}` : className;
+  return <span ref={containerRef} className={wrapperClass} />;
 };
 
 export default MathRenderer;

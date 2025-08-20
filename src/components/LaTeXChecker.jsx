@@ -8,6 +8,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
   const [deletedIds, setDeletedIds] = useState(new Set());
   const [reviewedIds, setReviewedIds] = useState(new Set());
   const [finished, setFinished] = useState(false);
+  const [viewMode, setViewMode] = useState('statement'); // 'statement' or 'steps'
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const problems = propProblems || defaultProblemsData;
 
   // Load saved state from localStorage
@@ -39,6 +41,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
   const currentProblem = problems[currentIndex];
   const progress = ((reviewedIds.size / problems.length) * 100).toFixed(1);
+  const hasSteps = currentProblem?.steps && currentProblem.steps.length > 0;
+  const currentStep = hasSteps && viewMode === 'steps' ? currentProblem.steps[currentStepIndex] : null;
 
   const markAsOk = useCallback(() => {
     const newReviewed = new Set(reviewedIds);
@@ -56,6 +60,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
     if (currentIndex < problems.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setCurrentStepIndex(0); // Reset step index
+      setViewMode('statement'); // Reset to statement view
     } else {
       setFinished(true);
     }
@@ -77,6 +83,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
     if (currentIndex < problems.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setCurrentStepIndex(0); // Reset step index
+      setViewMode('statement'); // Reset to statement view
     } else {
       setFinished(true);
     }
@@ -98,6 +106,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
     if (currentIndex < problems.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setCurrentStepIndex(0); // Reset step index
+      setViewMode('statement'); // Reset to statement view
     } else {
       setFinished(true);
     }
@@ -106,6 +116,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
   const goToPrevious = useCallback(() => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      setCurrentStepIndex(0); // Reset step index when changing problem
+      setViewMode('statement'); // Reset to statement view
       setFinished(false);
     }
   }, [currentIndex]);
@@ -113,14 +125,41 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
   const goToNext = useCallback(() => {
     if (currentIndex < problems.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setCurrentStepIndex(0); // Reset step index when changing problem
+      setViewMode('statement'); // Reset to statement view
       setFinished(false);
     }
   }, [currentIndex, problems.length]);
+
+  const goToPreviousStep = useCallback(() => {
+    if (currentStepIndex > 0) {
+      setCurrentStepIndex(currentStepIndex - 1);
+    }
+  }, [currentStepIndex]);
+
+  const goToNextStep = useCallback(() => {
+    if (currentProblem?.steps && currentStepIndex < currentProblem.steps.length - 1) {
+      setCurrentStepIndex(currentStepIndex + 1);
+    }
+  }, [currentStepIndex, currentProblem]);
 
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (finished) return;
+      
+      // If in steps mode and using arrow up/down, navigate steps
+      if (viewMode === 'steps' && hasSteps) {
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          goToPreviousStep();
+          return;
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          goToNextStep();
+          return;
+        }
+      }
       
       switch (e.key) {
         case '1':
@@ -143,6 +182,13 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
           e.preventDefault();
           goToNext();
           break;
+        case 's':
+        case 'S':
+          e.preventDefault();
+          if (hasSteps) {
+            setViewMode(viewMode === 'statement' ? 'steps' : 'statement');
+          }
+          break;
         default:
           break;
       }
@@ -150,7 +196,7 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [finished, markAsOk, markAsProblematic, markAsDeleted, goToPrevious, goToNext]);
+  }, [finished, markAsOk, markAsProblematic, markAsDeleted, goToPrevious, goToNext, viewMode, hasSteps, goToPreviousStep, goToNextStep]);
 
   const copyProblematicToClipboard = () => {
     const problemsList = [...problematicIds].join('\n');
@@ -168,6 +214,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
   const resetChecker = () => {
     setCurrentIndex(0);
+    setCurrentStepIndex(0);
+    setViewMode('statement');
     setProblematicIds(new Set());
     setDeletedIds(new Set());
     setReviewedIds(new Set());
@@ -180,6 +228,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
     const unreviewed = problems.findIndex(p => !reviewedIds.has(p.id));
     if (unreviewed !== -1) {
       setCurrentIndex(unreviewed);
+      setCurrentStepIndex(0); // Reset step index
+      setViewMode('statement'); // Reset to statement view
       setFinished(false);
     }
   };
@@ -318,11 +368,108 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
             </div>
           </div>
 
-          {/* Statement display */}
-          <div className="bg-gray-900 rounded-2xl p-12 mb-8 min-h-[300px] flex items-center justify-center">
-            <div className="text-2xl md:text-3xl text-white text-center leading-relaxed">
-              <MathRenderer content={currentProblem.statement || ''} />
+          {/* View mode toggle */}
+          {hasSteps && (
+            <div className="mb-6 flex justify-center gap-2">
+              <button
+                onClick={() => { setViewMode('statement'); setCurrentStepIndex(0); }}
+                className={`px-4 py-2 rounded-lg transition-colors ${
+                  viewMode === 'statement' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                }`}
+              >
+                Polecenie
+              </button>
+              <button
+                onClick={() => setViewMode('steps')}
+                className={`px-4 py-2 rounded-lg transition-colors ${
+                  viewMode === 'steps' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                }`}
+              >
+                Kroki ({currentProblem.steps.length})
+              </button>
             </div>
+          )}
+
+          {/* Content display */}
+          <div className="bg-gray-900 rounded-2xl p-12 mb-8 min-h-[300px]">
+            {viewMode === 'statement' ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-2xl md:text-3xl text-white text-center leading-relaxed">
+                  <MathRenderer content={currentProblem.statement || ''} />
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Step navigation info */}
+                {currentStep && (
+                  <>
+                    <div className="text-center text-sm text-gray-400 mb-4">
+                      Krok {currentStepIndex + 1} z {currentProblem.steps.length}
+                    </div>
+                    
+                    {/* Step content */}
+                    <div className="space-y-4">
+                      {currentStep.hint && (
+                        <div className="p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                          <div className="text-xs text-yellow-400 mb-2 uppercase tracking-wider">Wskazówka:</div>
+                          <div className="text-lg text-yellow-300">
+                            <MathRenderer content={currentStep.hint} />
+                          </div>
+                        </div>
+                      )}
+                      
+                      {currentStep.expression && (
+                        <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                          <div className="text-xs text-blue-400 mb-2 uppercase tracking-wider">Wyrażenie:</div>
+                          <div className="text-xl text-white text-center">
+                            <MathRenderer content={currentStep.expression} />
+                          </div>
+                        </div>
+                      )}
+                      
+                      {currentStep.explanation && (
+                        <div className="p-4 bg-gray-800 rounded-lg">
+                          <div className="text-xs text-gray-400 mb-2 uppercase tracking-wider">Wyjaśnienie:</div>
+                          <div className="text-base text-gray-300">
+                            <MathRenderer content={currentStep.explanation} />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Step navigation */}
+                    <div className="flex justify-between mt-6">
+                      <button
+                        onClick={goToPreviousStep}
+                        disabled={currentStepIndex === 0}
+                        className={`px-3 py-1 rounded text-sm ${
+                          currentStepIndex === 0 
+                            ? 'bg-gray-800 text-gray-600 cursor-not-allowed' 
+                            : 'bg-gray-700 text-white hover:bg-gray-600'
+                        }`}
+                      >
+                        ← Poprzedni krok (↑)
+                      </button>
+                      <button
+                        onClick={goToNextStep}
+                        disabled={currentStepIndex === currentProblem.steps.length - 1}
+                        className={`px-3 py-1 rounded text-sm ${
+                          currentStepIndex === currentProblem.steps.length - 1
+                            ? 'bg-gray-800 text-gray-600 cursor-not-allowed' 
+                            : 'bg-gray-700 text-white hover:bg-gray-600'
+                        }`}
+                      >
+                        Następny krok (↓) →
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Status badges */}
@@ -403,7 +550,10 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
           {/* Keyboard shortcuts help */}
           <div className="mt-8 text-center text-sm text-gray-600">
-            Skróty klawiszowe: 1 = OK | 2 = LaTeX źle | 3 = Usuń | ← = Wstecz | → = Pomiń
+            <div>Skróty klawiszowe: 1 = OK | 2 = LaTeX źle | 3 = Usuń | ← = Wstecz | → = Pomiń</div>
+            {hasSteps && (
+              <div className="mt-1">S = Przełącz tryb{viewMode === 'steps' && ' | ↑↓ = Nawiguj kroki'}</div>
+            )}
           </div>
         </div>
       </div>
