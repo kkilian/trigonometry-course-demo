@@ -1,0 +1,969 @@
+[
+  {
+    "id": "polynomial_equality_1",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = x^3 - 2x^2 + x - 1$ oraz $P(x) = (x-1)(x^2 - x + 1)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby porównać wielomiany, musimy je sprowadzić do tej samej postaci. Który wielomian wymaga przekształcenia?",
+        "expression": "$P(x) = (x-1)(x^2 - x + 1)$",
+        "explanation": "Musimy rozwinąć iloczyn w wielomianie $P(x)$ przez mnożenie"
+      },
+      {
+        "step": 2,
+        "hint": "Jak pomnożyć pierwszy nawias przez pierwszy wyraz drugiego nawiasu?",
+        "expression": "$P(x) = x \\cdot x^2 - 1 \\cdot x^2$",
+        "explanation": "Mnożymy $x$ przez $x^2$ oraz $-1$ przez $x^2$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak pomnożyć pierwszy nawias przez drugi wyraz drugiego nawiasu?",
+        "expression": "$P(x) = x^3 - x^2 + (-x \\cdot (-x))$",
+        "explanation": "Dodajemy iloczyn $x$ przez $-x$ oraz $-1$ przez $-x$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak pomnożyć pierwszy nawias przez ostatni wyraz drugiego nawiasu?",
+        "expression": "$P(x) = x^3 - x^2 + x^2 + (x \\cdot 1 - 1 \\cdot 1)$",
+        "explanation": "Dodajemy iloczyn $x$ przez $1$ oraz $-1$ przez $1$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uporządkować podobne wyrazy?",
+        "expression": "$P(x) = x^3 - x^2 + x^2 + x - 1$",
+        "explanation": "Grupujemy wyrazy z tymi samymi potęgami $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymamy po redukcji wyrazów podobnych?",
+        "expression": "$P(x) = x^3 + (-x^2 + x^2) + x - 1 = x^3 + x - 1$",
+        "explanation": "Redukujemy wyrazy z $x^2$, które się znoszą"
+      },
+      {
+        "step": 7,
+        "hint": "Porównaj otrzymany wielomian z wielomianem $W(x)$. Czy są identyczne?",
+        "expression": "$W(x) = x^3 - 2x^2 + x - 1$ oraz $P(x) = x^3 + x - 1$",
+        "explanation": "Wielomiany różnią się wyrazem $-2x^2$, który występuje tylko w $W(x)$"
+      }
+    ],
+    "solutions": [
+      "Wielomiany nie są równe, ponieważ $W(x)$ zawiera wyraz $-2x^2$, którego nie ma w $P(x)$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_comparison",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = 2x^4 - 3x^3 + x^2 - 5$ oraz $P(x) = 2x^4 - 3x^3 + x^2 + x - 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co trzeba sprawdzić?",
+        "expression": "$W(x) - P(x) = (2x^4 - 3x^3 + x^2 - 5) - (2x^4 - 3x^3 + x^2 + x - 5)$",
+        "explanation": "Odejmujemy wielomiany stronami, aby sprawdzić czy różnica jest tożsamościowo równa zero"
+      },
+      {
+        "step": 2,
+        "hint": "Jak można uprościć różnicę tych wielomianów? Które wyrazy się redukują?",
+        "expression": "$W(x) - P(x) = 2x^4 - 3x^3 + x^2 - 5 - 2x^4 + 3x^3 - x^2 - x + 5$",
+        "explanation": "Zapisujemy wszystkie wyrazy, aby je pogrupować"
+      },
+      {
+        "step": 3,
+        "hint": "Pogrupuj podobne wyrazy. Co zostaje po redukcji?",
+        "expression": "$W(x) - P(x) = (2x^4 - 2x^4) + (-3x^3 + 3x^3) + (x^2 - x^2) + (-x) + (-5 + 5)$",
+        "explanation": "Grupujemy wyrazy o tych samych potęgach"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymujesz po uproszczeniu wszystkich nawiasów?",
+        "expression": "$W(x) - P(x) = 0 + 0 + 0 - x + 0 = -x$",
+        "explanation": "Po redukcji zostaje nam tylko wyraz $-x$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy otrzymana różnica jest tożsamościowo równa zero?",
+        "expression": "$W(x) - P(x) = -x \\neq 0$",
+        "explanation": "Różnica wielomianów nie jest tożsamościowo równa zero"
+      }
+    ],
+    "solutions": [
+      "Wielomiany nie są równe, ponieważ ich różnica $W(x) - P(x) = -x$ nie jest tożsamościowo równa zero"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality_1",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = (x+2)^3$ oraz $P(x) = x^3 + 6x^2 + 12x + 8$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak rozwinąć sześcian sumy $(x+2)^3$? Przypomnij sobie wzór na trzecią potęgę",
+        "expression": "$(x+2)^3 = x^3 + 3x^2 \\cdot 2 + 3x \\cdot 2^2 + 2^3$",
+        "explanation": "Stosujemy wzór $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz każdy składnik osobno. Zacznij od drugiego wyrazu",
+        "expression": "$3x^2 \\cdot 2 = 6x^2$",
+        "explanation": "Mnożymy współczynnik przez potęgę dwójki"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz trzeci wyraz. Ile wynosi $2^2$?",
+        "expression": "$3x \\cdot 2^2 = 3x \\cdot 4 = 12x$",
+        "explanation": "Mnożymy współczynnik przez kwadrat dwójki"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz ostatni wyraz. Ile wynosi $2^3$?",
+        "expression": "$2^3 = 8$",
+        "explanation": "Obliczamy sześcian liczby 2"
+      },
+      {
+        "step": 5,
+        "hint": "Połącz wszystkie obliczone wyrazy",
+        "expression": "$W(x) = x^3 + 6x^2 + 12x + 8$",
+        "explanation": "Zapisujemy pełne rozwinięcie wielomianu $W(x)$"
+      },
+      {
+        "step": 6,
+        "hint": "Porównaj otrzymany wielomian z wielomianem $P(x)$",
+        "expression": "$W(x) = x^3 + 6x^2 + 12x + 8 = P(x)$",
+        "explanation": "Widzimy, że współczynniki przy odpowiednich potęgach są identyczne"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $W(x)$ i $P(x)$ są równe"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality_1",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = x^3 - 1$ oraz $P(x) = (x-1)(x^2+x+1)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby porównać wielomiany, musimy je sprowadzić do tej samej postaci. Jak rozwinąć iloczyn w wielomianie P(x)?",
+        "expression": "$P(x) = (x-1)(x^2+x+1)$",
+        "explanation": "Zastosujemy mnożenie wielomianów przez rozkładanie nawiasów"
+      },
+      {
+        "step": 2,
+        "hint": "Pomnóż pierwszy wyraz pierwszego nawiasu przez wszystkie wyrazy drugiego nawiasu",
+        "expression": "$P(x) = x(x^2+x+1) - 1(x^2+x+1)$",
+        "explanation": "Rozkładamy mnożenie na dwa człony"
+      },
+      {
+        "step": 3,
+        "hint": "Rozwiń pierwszy nawias. Co otrzymasz mnożąc x przez każdy składnik?",
+        "expression": "$P(x) = x^3 + x^2 + x - (x^2+x+1)$",
+        "explanation": "Mnożymy x przez każdy składnik i zapisujemy odejmowanie drugiego nawiasu"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zmienią się znaki wyrazów w nawiasie przy odejmowaniu?",
+        "expression": "$P(x) = x^3 + x^2 + x - x^2 - x - 1$",
+        "explanation": "Zmieniamy znaki wszystkich wyrazów w odejmowanym nawiasie"
+      },
+      {
+        "step": 5,
+        "hint": "Które wyrazy są podobne? Jak można je zredukować?",
+        "expression": "$P(x) = x^3 + (x^2 - x^2) + (x - x) - 1$",
+        "explanation": "Grupujemy wyrazy podobne"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz po uproszczeniu wyrazów podobnych?",
+        "expression": "$P(x) = x^3 + 0 + 0 - 1 = x^3 - 1$",
+        "explanation": "Wyrazy podobne znoszą się, zostaje $x^3 - 1$"
+      },
+      {
+        "step": 7,
+        "hint": "Porównaj otrzymany wynik z wielomianem W(x)",
+        "expression": "$W(x) = x^3 - 1 = P(x)$",
+        "explanation": "Oba wielomiany mają tę samą postać"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $W(x)$ i $P(x)$ są równe, gdyż po przekształceniu $P(x) = x^3 - 1 = W(x)$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = 3x^2 - 12x + 12$ oraz $P(x) = 3(x-2)^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby porównać wielomiany, musimy je sprowadzić do tej samej postaci. Który wielomian wymaga przekształcenia?",
+        "expression": "$P(x) = 3(x-2)^2$",
+        "explanation": "Rozwijamy wyrażenie $P(x)$ do postaci kanonicznej jak $W(x)$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwinąć kwadrat dwumianu $(x-2)^2$?",
+        "expression": "$P(x) = 3(x^2 - 4x + 4)$",
+        "explanation": "Stosujemy wzór $(a-b)^2 = a^2 - 2ab + b^2$"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymamy po usunięciu nawiasu w $P(x)$?",
+        "expression": "$P(x) = 3x^2 - 12x + 12$",
+        "explanation": "Mnożymy każdy składnik w nawiasie przez 3"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj współczynniki przy tych samych potęgach $x$ w obu wielomianach",
+        "expression": "$W(x) = 3x^2 - 12x + 12$ oraz $P(x) = 3x^2 - 12x + 12$",
+        "explanation": "Zestawiamy odpowiadające sobie współczynniki"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie wnioski możemy wyciągnąć z porównania?",
+        "expression": "$W(x) = P(x)$ dla każdego $x$",
+        "explanation": "Wszystkie współczynniki są identyczne, więc wielomiany są równe"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $W(x)$ i $P(x)$ są równe"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = x^3 + ax^2 - 2x + 3$ oraz $P(x) = x^3 + 5x^2 - 2x + 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co musi zachodzić dla ich współczynników?",
+        "expression": "$x^3 + ax^2 - 2x + 3 = x^3 + 5x^2 - 2x + 3$",
+        "explanation": "Wielomiany są równe, gdy odpowiadające sobie współczynniki są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy tych samych potęgach. Co widzisz przy $x^3$?",
+        "expression": "przy $x^3$: $1 = 1$",
+        "explanation": "Współczynniki przy $x^3$ są równe, więc to równanie jest spełnione"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz porównując współczynniki przy $x^2$?",
+        "expression": "przy $x^2$: $a = 5$",
+        "explanation": "Z porównania współczynników przy $x^2$ otrzymujemy wartość parametru $a$"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź pozostałe współczynniki. Co widzisz przy $x^1$?",
+        "expression": "przy $x^1$: $-2 = -2$",
+        "explanation": "Współczynniki przy $x$ są równe, więc to równanie jest spełnione"
+      },
+      {
+        "step": 5,
+        "hint": "A co z wyrazami wolnymi?",
+        "expression": "przy $x^0$: $3 = 3$",
+        "explanation": "Wyrazy wolne są równe, więc to równanie jest spełnione"
+      },
+      {
+        "step": 6,
+        "hint": "Czy wszystkie warunki są spełnione dla znalezionej wartości $a$?",
+        "expression": "$W(x) = x^3 + 5x^2 - 2x + 3 = P(x)$",
+        "explanation": "Po podstawieniu $a = 5$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = 5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = 2x^2 + ax - 7$ oraz $P(x) = 2x^2 - 3x - 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co musi zachodzić dla ich współczynników?",
+        "expression": "$2x^2 + ax - 7 = 2x^2 - 3x - 7$",
+        "explanation": "Wielomiany są równe, gdy odpowiadające sobie współczynniki są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na współczynniki przy $x^2$. Czy są one równe?",
+        "expression": "$2x^2 = 2x^2$ (współczynniki przy $x^2$)",
+        "explanation": "Współczynniki przy najwyższej potędze są takie same: 2 = 2"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o wyrazach wolnych w obu wielomianach?",
+        "expression": "$-7 = -7$ (wyrazy wolne)",
+        "explanation": "Wyrazy wolne są identyczne: -7 = -7"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie musi być a, aby współczynniki przy x były równe?",
+        "expression": "$ax = -3x$ (współczynniki przy $x$)",
+        "explanation": "Porównujemy współczynniki przy $x$: $a = -3$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy znalezione a spełnia równość wielomianów",
+        "expression": "$W(x) = 2x^2 - 3x - 7 = P(x)$",
+        "explanation": "Po podstawieniu $a = -3$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = -3$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = x^4 - ax^3 + 2x^2 - x + 1$ oraz $P(x) = x^4 + 3x^3 + 2x^2 - x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co musi zachodzić dla ich współczynników?",
+        "expression": "$x^4 - ax^3 + 2x^2 - x + 1 = x^4 + 3x^3 + 2x^2 - x + 1$",
+        "explanation": "Wielomiany są równe, gdy odpowiadające sobie współczynniki są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy tych samych potęgach. Przy której potędze występuje parametr a?",
+        "expression": "$x^4: 1 = 1$ \n$x^3: -a = 3$ \n$x^2: 2 = 2$ \n$x^1: -1 = -1$ \n$x^0: 1 = 1$",
+        "explanation": "Wypisujemy równości współczynników przy kolejnych potęgach x"
+      },
+      {
+        "step": 3,
+        "hint": "Które z tych równań zawiera niewiadomą a?",
+        "expression": "$-a = 3$",
+        "explanation": "Tylko równanie przy $x^3$ zawiera parametr a"
+      },
+      {
+        "step": 4,
+        "hint": "Jak przekształcić równanie -a = 3, aby wyznaczyć a?",
+        "expression": "$a = -3$",
+        "explanation": "Mnożymy obie strony przez -1"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy znaleziona wartość a spełnia równość wielomianów",
+        "expression": "$W(x) = x^4 + 3x^3 + 2x^2 - x + 1 = P(x)$",
+        "explanation": "Po podstawieniu $a = -3$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = -3$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = (x-a)^2$ oraz $P(x) = x^2 - 6x + 9$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak rozwinąć kwadrat dwumianu $(x-a)^2$?",
+        "expression": "$W(x) = (x-a)^2 = x^2 - 2ax + a^2$",
+        "explanation": "Stosujemy wzór na kwadrat różnicy: $(p-q)^2 = p^2 - 2pq + q^2$"
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach?",
+        "expression": "$x^2 - 2ax + a^2 = x^2 - 6x + 9$",
+        "explanation": "Wielomiany są równe, gdy odpowiadające sobie współczynniki są równe"
+      },
+      {
+        "step": 3,
+        "hint": "Porównaj współczynniki przy $x^2$ w obu wielomianach. Co zauważasz?",
+        "expression": "przy $x^2$: $1 = 1$",
+        "explanation": "Współczynniki przy $x^2$ są równe, więc to równanie jest spełnione"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj współczynniki przy $x$ w obu wielomianach. Jakie równanie otrzymujesz?",
+        "expression": "przy $x$: $-2a = -6$",
+        "explanation": "Z porównania współczynników przy $x$ dostajemy pierwsze równanie z niewiadomą $a$"
+      },
+      {
+        "step": 5,
+        "hint": "Rozwiąż równanie względem parametru $a$",
+        "expression": "$-2a = -6 \\Rightarrow a = 3$",
+        "explanation": "Dzielimy obie strony przez $-2$"
+      },
+      {
+        "step": 6,
+        "hint": "Porównaj wyrazy wolne. Czy otrzymana wartość $a$ spełnia to równanie?",
+        "expression": "dla $a = 3$: $a^2 = 9$",
+        "explanation": "Sprawdzamy, czy wyraz wolny $a^2 = 9$ zgadza się z wyrazem wolnym w drugim wielomianie"
+      }
+    ],
+    "solutions": [
+      "$a = 3$"
+    ],
+    "parameters": {
+      "verification": "Dla $a = 3$ oba wielomiany są identyczne: $x^2 - 6x + 9$"
+    }
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = ax^3 - 2x^2 + x - 4$ oraz $P(x) = 5x^3 - 2x^2 + x - 4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$ax^3 - 2x^2 + x - 4 = 5x^3 - 2x^2 + x - 4$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy odpowiadających potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy $x^3$ w obu wielomianach. Co otrzymasz?",
+        "expression": "$ax^3 = 5x^3$",
+        "explanation": "Przy najwyższej potędze mamy współczynniki $a$ i $5$"
+      },
+      {
+        "step": 3,
+        "hint": "Co to oznacza dla parametru $a$?",
+        "expression": "$a = 5$",
+        "explanation": "Współczynniki przy $x^3$ muszą być równe"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź pozostałe współczynniki. Czy zgadzają się przy $x^2$?",
+        "expression": "$-2x^2 = -2x^2$",
+        "explanation": "Współczynniki przy $x^2$ są równe w obu wielomianach"
+      },
+      {
+        "step": 5,
+        "hint": "A co z wyrazami pierwszego stopnia?",
+        "expression": "$x = x$",
+        "explanation": "Współczynniki przy $x$ są równe"
+      },
+      {
+        "step": 6,
+        "hint": "Na koniec sprawdź wyrazy wolne",
+        "expression": "$-4 = -4$",
+        "explanation": "Wyrazy wolne też są równe"
+      }
+    ],
+    "solutions": [
+      "$a = 5$"
+    ],
+    "parameters": {
+      "verification": "Wszystkie współczynniki się zgadzają dla $a = 5$"
+    }
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = x^3 + ax^2 + bx - 5$ oraz $P(x) = x^3 - 2x^2 + 3x - 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możemy powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$x^3 + ax^2 + bx - 5 = x^3 - 2x^2 + 3x - 5$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na współczynniki przy $x^3$. Co możesz o nich powiedzieć?",
+        "expression": "Przy $x^3$: $1 = 1$",
+        "explanation": "Współczynniki przy najwyższej potędze są równe"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o współczynnikach przy $x^2$?",
+        "expression": "Przy $x^2$: $a = -2$",
+        "explanation": "Znajdujemy pierwszą wartość: parametr $a$ musi być równy $-2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaką wartość musi mieć parametr b, patrząc na współczynniki przy x?",
+        "expression": "Przy $x$: $b = 3$",
+        "explanation": "Znajdujemy drugą wartość: parametr $b$ musi być równy $3$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź wyrazy wolne. Czy się zgadzają?",
+        "expression": "Wyrazy wolne: $-5 = -5$",
+        "explanation": "Wyrazy wolne są równe, co potwierdza poprawność rozwiązania"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw znalezione wartości do pierwotnego wielomianu W(x). Czy otrzymasz P(x)?",
+        "expression": "$W(x) = x^3 - 2x^2 + 3x - 5 = P(x)$",
+        "explanation": "Po podstawieniu $a = -2$ i $b = 3$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = -2$",
+      "$b = 3$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametry $a$ i $b$, aby wielomiany były równe: $W(x) = 2x^2 + ax + b$ oraz $P(x) = 2x^2 - 4x + 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$2x^2 + ax + b = 2x^2 - 4x + 7$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na współczynniki przy $x^2$. Co możesz zauważyć?",
+        "expression": "$2 = 2$ przy $x^2$",
+        "explanation": "Współczynniki przy najwyższej potędze są już równe"
+      },
+      {
+        "step": 3,
+        "hint": "Jaką zależność otrzymasz porównując współczynniki przy $x$?",
+        "expression": "$a = -4$ przy $x$",
+        "explanation": "Z porównania współczynników przy $x$ otrzymujemy wartość parametru $a$"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz porównując wyrazy wolne?",
+        "expression": "$b = 7$ przy $x^0$",
+        "explanation": "Z porównania wyrazów wolnych otrzymujemy wartość parametru $b$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy po podstawieniu znalezionych wartości wielomiany są rzeczywiście równe",
+        "expression": "$W(x) = 2x^2 - 4x + 7 = P(x)$",
+        "explanation": "Po podstawieniu $a = -4$ i $b = 7$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = -4$",
+      "$b = 7$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = x^4 + ax^3 + bx^2 - x + 2$ oraz $P(x) = x^4 + 3x^3 - 5x^2 - x + 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$x^4 + ax^3 + bx^2 - x + 2 = x^4 + 3x^3 - 5x^2 - x + 2$",
+        "explanation": "Wielomiany są równe wtedy i tylko wtedy, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy $x^4$. Co zauważasz?",
+        "expression": "przy $x^4$: $1 = 1$",
+        "explanation": "Współczynniki przy najwyższej potędze są równe, więc to równanie jest spełnione"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz porównując współczynniki przy $x^3$?",
+        "expression": "przy $x^3$: $a = 3$",
+        "explanation": "Znaleźliśmy pierwszą wartość - parametr $a$ musi wynosić 3"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj współczynniki przy $x^2$. Co to daje?",
+        "expression": "przy $x^2$: $b = -5$",
+        "explanation": "Znaleźliśmy drugą wartość - parametr $b$ musi wynosić -5"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź pozostałe współczynniki. Czy wszystko się zgadza?",
+        "expression": "przy $x^1$: $-1 = -1$\nprzy $x^0$: $2 = 2$",
+        "explanation": "Współczynniki przy $x$ i wyrazie wolnym są identyczne w obu wielomianach"
+      },
+      {
+        "step": 6,
+        "hint": "Zapisz końcowe wartości parametrów",
+        "expression": "$a = 3$ oraz $b = -5$",
+        "explanation": "Te wartości sprawiają, że wielomiany $W(x)$ i $P(x)$ są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = 3$",
+      "$b = -5$"
+    ],
+    "parameters": {
+      "verification": "Po podstawieniu $a = 3$ i $b = -5$ wielomiany $W(x)$ i $P(x)$ są identyczne"
+    }
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Równość wielomianów",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = (x-a)(x-b)$ oraz $P(x) = x^2 - 5x + 6$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak rozwinąć iloczyn $(x-a)(x-b)$?",
+        "expression": "$W(x) = x^2 - ax - bx + ab = x^2 - (a+b)x + ab$",
+        "explanation": "Mnożymy dwumian przez dwumian, grupując wyrazy"
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy dwa wielomiany są równe?",
+        "expression": "$x^2 - (a+b)x + ab = x^2 - 5x + 6$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy tych samych potęgach są równe"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równania otrzymasz porównując współczynniki?",
+        "expression": "$\\begin{cases} -(a+b) = -5 \\\\ ab = 6 \\end{cases}$",
+        "explanation": "Porównujemy współczynniki przy $x$ oraz wyrazy wolne"
+      },
+      {
+        "step": 4,
+        "hint": "Co wynika z pierwszego równania?",
+        "expression": "$a + b = 5$",
+        "explanation": "Upraszczamy pierwsze równanie"
+      },
+      {
+        "step": 5,
+        "hint": "Masz układ równań. Jaką metodę możesz zastosować?",
+        "expression": "$\\begin{cases} a + b = 5 \\\\ ab = 6 \\end{cases}$",
+        "explanation": "To układ równań, gdzie suma i iloczyn są znane"
+      },
+      {
+        "step": 6,
+        "hint": "Co przypomina ci ten układ równań? Przypomnij sobie wzory Viete'a",
+        "expression": "$t^2 - 5t + 6 = 0$",
+        "explanation": "Liczby $a$ i $b$ są pierwiastkami tego równania kwadratowego"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwiązać to równanie kwadratowe?",
+        "expression": "$\\Delta = 25 - 24 = 1$",
+        "explanation": "Obliczamy wyróżnik równania kwadratowego"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są pierwiastki tego równania?",
+        "expression": "$t_{1,2} = \\frac{5 \\pm \\sqrt{1}}{2} = \\frac{5 \\pm 1}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      }
+    ],
+    "solutions": [
+      "$a = 2$ i $b = 3$",
+      "lub",
+      "$a = 3$ i $b = 2$"
+    ],
+    "parameters": {
+      "method": "Wzory Viete'a"
+    }
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = ax^3 + bx^2 - 3x + 1$ oraz $P(x) = 2x^3 - x^2 - 3x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o współczynnikach przy tych samych potęgach?",
+        "expression": "$ax^3 + bx^2 - 3x + 1 = 2x^3 - x^2 - 3x + 1$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na wyrazy z $x^3$. Co możesz powiedzieć o parametrze a?",
+        "expression": "$ax^3 = 2x^3 \\Rightarrow a = 2$",
+        "explanation": "Porównując współczynniki przy $x^3$ otrzymujemy wartość parametru a"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz przyjrzyj się wyrazom z $x^2$. Co możesz powiedzieć o parametrze b?",
+        "expression": "$bx^2 = -x^2 \\Rightarrow b = -1$",
+        "explanation": "Porównując współczynniki przy $x^2$ otrzymujemy wartość parametru b"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź wyrazy z $x^1$. Czy się zgadzają?",
+        "expression": "$-3x = -3x$",
+        "explanation": "Współczynniki przy $x$ są takie same"
+      },
+      {
+        "step": 5,
+        "hint": "Na koniec sprawdź wyrazy wolne. Czy się zgadzają?",
+        "expression": "$1 = 1$",
+        "explanation": "Wyrazy wolne są równe"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw znalezione wartości do wielomianu W(x). Czy otrzymasz P(x)?",
+        "expression": "$W(x) = 2x^3 - x^2 - 3x + 1 = P(x)$",
+        "explanation": "Po podstawieniu $a = 2$ i $b = -1$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = 2$",
+      "$b = -1$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality_1",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = (x^2+1)^2$ oraz $P(x) = x^4 + 2x^2 + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak możesz rozwinąć pierwszy wielomian $(x^2+1)^2$? Przypomnij sobie wzór na kwadrat sumy",
+        "expression": "$(x^2+1)^2 = (x^2+1)(x^2+1)$",
+        "explanation": "Przygotowujemy się do rozwinięcia kwadratu dwumianu"
+      },
+      {
+        "step": 2,
+        "hint": "Jak pomnożysz te dwa nawiasy używając wzoru $(a+b)(a+b) = a^2 + 2ab + b^2$?",
+        "expression": "$(x^2+1)^2 = (x^2)^2 + 2x^2 \\cdot 1 + 1^2$",
+        "explanation": "Stosujemy wzór na kwadrat sumy, gdzie $a = x^2$ i $b = 1$"
+      },
+      {
+        "step": 3,
+        "hint": "Uprość potęgowanie potęgi w pierwszym składniku",
+        "expression": "$(x^2)^2 + 2x^2 \\cdot 1 + 1 = x^4 + 2x^2 + 1$",
+        "explanation": "$(x^2)^2 = x^4$ oraz upraszczamy $2x^2 \\cdot 1 = 2x^2$"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj otrzymany wynik z drugim wielomianem. Czy współczynniki przy tych samych potęgach są równe?",
+        "expression": "$W(x) = x^4 + 2x^2 + 1 = P(x)$",
+        "explanation": "Otrzymaliśmy dokładnie tę samą postać co drugi wielomian"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są współczynniki przy kolejnych potęgach w obu wielomianach?",
+        "expression": "$x^4: 1 = 1$, $x^3: 0 = 0$, $x^2: 2 = 2$, $x^1: 0 = 0$, $x^0: 1 = 1$",
+        "explanation": "Porównujemy współczynniki przy wszystkich potęgach od 0 do 4"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $W(x)$ i $P(x)$ są równe, ponieważ po rozwinięciu mają identyczne współczynniki przy wszystkich potęgach"
+    ],
+    "parameters": {
+      "degree": 4,
+      "coefficients": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametr a, aby wielomiany były równe: $W(x) = x^3 + (a-1)x^2 + ax - 2$ oraz $P(x) = x^3 + 4x^2 + 5x - 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$x^3 + (a-1)x^2 + ax - 2 = x^3 + 4x^2 + 5x - 2$",
+        "explanation": "Wielomiany są równe, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy $x^3$. Co zauważasz?",
+        "expression": "Przy $x^3$: $1 = 1$",
+        "explanation": "Współczynniki przy najwyższej potędze są równe"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz porównując współczynniki przy $x^2$?",
+        "expression": "Przy $x^2$: $a-1 = 4$",
+        "explanation": "Otrzymujemy pierwsze równanie z parametrem $a$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak możesz przekształcić równanie $a-1 = 4$, aby wyznaczyć $a$?",
+        "expression": "$a-1 = 4 \\Rightarrow a = 5$",
+        "explanation": "Dodajemy 1 do obu stron równania"
+      },
+      {
+        "step": 5,
+        "hint": "Porównaj współczynniki przy $x$. Czy otrzymana wartość $a$ spełnia to równanie?",
+        "expression": "Przy $x$: $a = 5$",
+        "explanation": "Sprawdzamy czy $a = 5$ zgadza się z równością współczynników przy $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Porównaj wyrazy wolne. Czy wszystko się zgadza?",
+        "expression": "Wyrazy wolne: $-2 = -2$",
+        "explanation": "Wyrazy wolne są równe, więc wszystkie warunki są spełnione"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź, czy znaleziona wartość $a$ spełnia wszystkie równania",
+        "expression": "$W(x) = x^3 + 4x^2 + 5x - 2 = P(x)$",
+        "explanation": "Dla $a = 5$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = 5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = x^3 + (a+b)x^2 + abx - 8$ oraz $P(x) = x^3 + 7x^2 + 12x - 8$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o współczynnikach przy tych samych potęgach?",
+        "expression": "$x^3 + (a+b)x^2 + abx - 8 = x^3 + 7x^2 + 12x - 8$",
+        "explanation": "Porównujemy współczynniki przy odpowiadających sobie potęgach $x$"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie równanie otrzymasz z porównania współczynników przy $x^2$?",
+        "expression": "$a + b = 7$",
+        "explanation": "Z porównania współczynników przy $x^2$ mamy pierwsze równanie"
+      },
+      {
+        "step": 3,
+        "hint": "Co daje porównanie współczynników przy $x$?",
+        "expression": "$ab = 12$",
+        "explanation": "Z porównania współczynników przy $x$ mamy drugie równanie"
+      },
+      {
+        "step": 4,
+        "hint": "Masz układ równań: $a + b = 7$ oraz $ab = 12$. Co przypomina drugie równanie?",
+        "expression": "$\\begin{cases} a + b = 7 \\\\ ab = 12 \\end{cases}$",
+        "explanation": "To układ równań, gdzie drugie równanie to iloczyn zmiennych"
+      },
+      {
+        "step": 5,
+        "hint": "Jeśli $a$ i $b$ są pierwiastkami pewnego wielomianu, jaką postać ma ten wielomian?",
+        "expression": "$t^2 - 7t + 12 = 0$",
+        "explanation": "Podstawiając $t = a$ lub $t = b$ otrzymujemy równanie kwadratowe"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwiązać to równanie kwadratowe? Najpierw oblicz wyróżnik",
+        "expression": "$\\Delta = 49 - 48 = 1$",
+        "explanation": "Wyróżnik równania $t^2 - 7t + 12 = 0$ wynosi $\\Delta = (-7)^2 - 4 \\cdot 1 \\cdot 12$"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są pierwiastki tego równania kwadratowego?",
+        "expression": "$t = \\frac{7 \\pm \\sqrt{1}}{2} = \\frac{7 \\pm 1}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie wartości przyjmują parametry $a$ i $b$?",
+        "expression": "$a = 4$ oraz $b = 3$ lub $a = 3$ oraz $b = 4$",
+        "explanation": "Otrzymujemy dwie pary liczb spełniające układ równań"
+      }
+    ],
+    "solutions": [
+      "$a = 3$ i $b = 4$",
+      "$a = 4$ i $b = 3$"
+    ],
+    "parameters": {
+      "verification": "$a + b = 7$ oraz $ab = 12$"
+    }
+  },
+  {
+    "id": "polynomial_equality_1",
+    "topic": "Wielomiany",
+    "statement": "Sprawdź, czy wielomiany są równe: $W(x) = x^4 - 16$ oraz $P(x) = (x^2-4)(x^2+4)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby sprawdzić równość wielomianów, co musimy zrobić z drugim wielomianem?",
+        "expression": "$P(x) = (x^2-4)(x^2+4)$",
+        "explanation": "Musimy rozmnożyć nawias, aby porównać współczynniki przy tych samych potęgach"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozmnożyć dwa dwumiany? Mnożymy każdy wyraz pierwszego przez każdy wyraz drugiego",
+        "expression": "$P(x) = x^2(x^2+4) - 4(x^2+4)$",
+        "explanation": "Najpierw grupujemy względem pierwszego nawiasu"
+      },
+      {
+        "step": 3,
+        "hint": "Rozmnóż każdy nawias osobno",
+        "expression": "$P(x) = x^4 + 4x^2 - 4x^2 - 16$",
+        "explanation": "Otrzymujemy cztery wyrazy po rozmnożeniu"
+      },
+      {
+        "step": 4,
+        "hint": "Czy widzisz podobne wyrazy? Co możesz z nimi zrobić?",
+        "expression": "$P(x) = x^4 + (4x^2 - 4x^2) - 16 = x^4 - 16$",
+        "explanation": "Wyrazy $4x^2$ i $-4x^2$ znoszą się"
+      },
+      {
+        "step": 5,
+        "hint": "Porównaj otrzymany wynik z pierwszym wielomianem",
+        "expression": "$W(x) = x^4 - 16 = P(x)$",
+        "explanation": "Oba wielomiany mają dokładnie taką samą postać"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $W(x)$ i $P(x)$ są równe"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "polynomial_equality",
+    "topic": "Wielomiany",
+    "statement": "Znajdź parametry a i b, aby wielomiany były równe: $W(x) = ax^4 + bx^3 - 2x^2 + x - 3$ oraz $P(x) = 3x^4 - 4x^3 - 2x^2 + x - 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co możesz powiedzieć o ich współczynnikach przy tych samych potęgach?",
+        "expression": "$ax^4 + bx^3 - 2x^2 + x - 3 = 3x^4 - 4x^3 - 2x^2 + x - 3$",
+        "explanation": "Wielomiany są równe wtedy i tylko wtedy, gdy współczynniki przy odpowiednich potęgach są równe"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy najwyższej potędze $x^4$. Co otrzymasz?",
+        "expression": "$ax^4 = 3x^4 \\Rightarrow a = 3$",
+        "explanation": "Z porównania współczynników przy $x^4$ otrzymujemy wartość parametru $a$"
+      },
+      {
+        "step": 3,
+        "hint": "Porównaj współczynniki przy $x^3$. Co otrzymasz?",
+        "expression": "$bx^3 = -4x^3 \\Rightarrow b = -4$",
+        "explanation": "Z porównania współczynników przy $x^3$ otrzymujemy wartość parametru $b$"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź, czy pozostałe współczynniki się zgadzają. Co z wyrazami przy $x^2$?",
+        "expression": "$-2x^2 = -2x^2$ (zgodne)",
+        "explanation": "Współczynniki przy $x^2$ są takie same w obu wielomianach"
+      },
+      {
+        "step": 5,
+        "hint": "A co z wyrazami przy $x^1$ i wyrazami wolnymi?",
+        "expression": "$x = x$ oraz $-3 = -3$ (zgodne)",
+        "explanation": "Współczynniki przy $x^1$ i wyrazy wolne są takie same w obu wielomianach"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw znalezione wartości do pierwotnego wielomianu W(x). Czy otrzymasz P(x)?",
+        "expression": "$W(x) = 3x^4 - 4x^3 - 2x^2 + x - 3 = P(x)$",
+        "explanation": "Po podstawieniu $a = 3$ i $b = -4$ wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "$a = 3$",
+      "$b = -4$"
+    ],
+    "parameters": {}
+  }
+]
