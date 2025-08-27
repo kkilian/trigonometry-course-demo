@@ -1,0 +1,582 @@
+[
+  {
+    "id": "exponents_1",
+    "topic": "Potęgowanie",
+    "statement": "Oblicz: $2^3 \\cdot 2^4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką mamy podstawę potęgowania? Czy jest taka sama w obu czynnikach?",
+        "expression": "$2^3 \\cdot 2^4$",
+        "explanation": "Widzimy iloczyn potęg o tej samej podstawie 2"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest reguła mnożenia potęg o tej samej podstawie?",
+        "expression": "$2^{3+4}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi suma wykładników?",
+        "expression": "$2^7$",
+        "explanation": "Otrzymujemy potęgę o wykładniku $3 + 4 = 7$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak możemy rozłożyć tę potęgę na mniejsze potęgi?",
+        "expression": "$2^4 \\cdot 2^2 \\cdot 2^1$",
+        "explanation": "Rozkładamy na potęgi, które łatwiej obliczyć: $16 \\cdot 4 \\cdot 2$"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz najpierw $2^4$, potem $2^2$, a na końcu pomnóż przez $2^1$",
+        "expression": "$16 \\cdot 4 \\cdot 2 = 64 \\cdot 2 = 128$",
+        "explanation": "Obliczamy kolejno: $2^4 = 16$, $2^2 = 4$, $2^1 = 2$"
+      }
+    ],
+    "solutions": [
+      "$128$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_multiplication",
+    "topic": "Działania na potęgach",
+    "statement": "Oblicz: $5^2 \\cdot 5^3 \\cdot 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak możemy zapisać ostatnią liczbę 5 jako potęgę?",
+        "expression": "$5^2 \\cdot 5^3 \\cdot 5^1$",
+        "explanation": "Każdą liczbę można zapisać jako potęgę pierwszą"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest reguła mnożenia potęg o tej samej podstawie?",
+        "expression": "$5^{2+3+1}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi suma wykładników?",
+        "expression": "$5^6$",
+        "explanation": "Obliczamy $2 + 3 + 1 = 6$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak możemy rozłożyć obliczanie tej potęgi na mniejsze kroki?",
+        "expression": "$5^6 = 5^2 \\cdot 5^4 = 25 \\cdot 625$",
+        "explanation": "Rozkładamy na iloczyn mniejszych potęg: $5^2 = 25$ i $5^4 = 625$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest wynik końcowy?",
+        "expression": "$25 \\cdot 625 = 15625$",
+        "explanation": "Mnożymy otrzymane liczby"
+      }
+    ],
+    "solutions": [
+      "$15625$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_simplification_1",
+    "topic": "Potęgi - działania",
+    "statement": "Uprość wyrażenie: $x^4 \\cdot x^{-2} \\cdot x^3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką własność mnożenia potęg o tej samej podstawie znasz?",
+        "expression": "$x^4 \\cdot x^{-2} \\cdot x^3 = x^{4 + (-2) + 3}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 2,
+        "hint": "Jak możesz uprościć sumę wykładników w nawiasie?",
+        "expression": "$x^{4 + (-2) + 3} = x^{4 - 2 + 3}$",
+        "explanation": "Zapisujemy odejmowanie zamiast dodawania liczby ujemnej"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie działanie wykonasz najpierw zgodnie z kolejnością działań?",
+        "expression": "$x^{4 - 2 + 3} = x^{2 + 3}$",
+        "explanation": "Najpierw wykonujemy odejmowanie: $4 - 2 = 2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest wynik dodawania w wykładniku?",
+        "expression": "$x^{2 + 3} = x^5$",
+        "explanation": "Obliczamy sumę w wykładniku: $2 + 3 = 5$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy można jeszcze uprościć otrzymane wyrażenie?",
+        "expression": "$x^5$",
+        "explanation": "To jest najprostsza postać wyrażenia - pojedyncza potęga"
+      }
+    ],
+    "solutions": [
+      "$x^5$"
+    ],
+    "parameters": {
+      "domain": "$x \\neq 0$ (ze względu na ujemny wykładnik)"
+    }
+  },
+  {
+    "id": "exponents_negative_calculation",
+    "topic": "Działania na potęgach",
+    "statement": "Oblicz: $3^{-2} \\cdot 3^5 \\cdot 3^{-1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką własność potęg możemy zastosować przy mnożeniu potęg o tej samej podstawie?",
+        "expression": "$3^{-2} \\cdot 3^5 \\cdot 3^{-1} = 3^{(-2 + 5 + (-1))}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 2,
+        "hint": "Jak możemy uprościć sumę wykładników w nawiasie?",
+        "expression": "$3^{(-2 + 5 + (-1))} = 3^{-2 + 5 - 1}$",
+        "explanation": "Usuwamy zbędne nawiasy i porządkujemy znaki"
+      },
+      {
+        "step": 3,
+        "hint": "Wykonaj działania w wykładniku. Co otrzymasz?",
+        "expression": "$3^{-2 + 5 - 1} = 3^2$",
+        "explanation": "Obliczamy: $-2 + 5 - 1 = 2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest wynik potęgowania?",
+        "expression": "$3^2 = 3 \\cdot 3 = 9$",
+        "explanation": "Obliczamy wartość potęgi przez mnożenie"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy wynik jest poprawny. Czy można go jeszcze uprościć?",
+        "expression": "$3^{-2} \\cdot 3^5 \\cdot 3^{-1} = 9$",
+        "explanation": "Otrzymujemy wynik końcowy"
+      }
+    ],
+    "solutions": [
+      "$9$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "algebraic_expression_1",
+    "topic": "Potęgowanie i mnożenie wyrażeń algebraicznych",
+    "statement": "Uprość wyrażenie $(a^2b^{-1})^3 \\cdot (a^{-1}b^2)^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zastosować regułę potęgowania potęgi do pierwszego nawiasu?",
+        "expression": "$(a^2b^{-1})^3 = a^{2 \\cdot 3}b^{-1 \\cdot 3} = a^6b^{-3}$",
+        "explanation": "Wykładniki mnożymy przez potęgę zewnętrzną"
+      },
+      {
+        "step": 2,
+        "hint": "Podobnie, jak uprościć drugi nawias używając reguły potęgowania potęgi?",
+        "expression": "$(a^{-1}b^2)^2 = a^{-1 \\cdot 2}b^{2 \\cdot 2} = a^{-2}b^4$",
+        "explanation": "Znów mnożymy każdy wykładnik przez potęgę zewnętrzną"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać całe wyrażenie po uproszczeniu nawiasów?",
+        "expression": "$a^6b^{-3} \\cdot a^{-2}b^4$",
+        "explanation": "Łączymy uproszczone wyrażenia znakiem mnożenia"
+      },
+      {
+        "step": 4,
+        "hint": "Jaką regułę stosujemy przy mnożeniu potęg o tej samej podstawie?",
+        "expression": "$a^{6-2}b^{-3+4}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć wykładniki po ich dodaniu?",
+        "expression": "$a^4b^1 = a^4b$",
+        "explanation": "Obliczamy: $6-2=4$ oraz $-3+4=1$, a potęga pierwsza może być pominięta"
+      }
+    ],
+    "solutions": [
+      "$a^4b$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_division_1",
+    "topic": "Działania na potęgach",
+    "statement": "Oblicz: $\\frac{7^6}{7^3}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie regułę dzielenia potęg o tej samej podstawie. Co dzieje się z wykładnikami?",
+        "expression": "$\\frac{7^6}{7^3} = 7^{6-3}$",
+        "explanation": "Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki wykładnik otrzymamy po odjęciu?",
+        "expression": "$7^{6-3} = 7^3$",
+        "explanation": "Obliczamy różnicę wykładników: $6-3=3$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozpisać $7^3$ jako iloczyn trzech siódemek?",
+        "expression": "$7^3 = 7 \\cdot 7 \\cdot 7$",
+        "explanation": "Rozkładamy potęgę na iloczyn czynników"
+      },
+      {
+        "step": 4,
+        "hint": "Najpierw pomnóż pierwsze dwie siódemki",
+        "expression": "$7 \\cdot 7 \\cdot 7 = 49 \\cdot 7$",
+        "explanation": "Obliczamy pierwszy etap mnożenia: $7 \\cdot 7 = 49$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki będzie końcowy wynik mnożenia?",
+        "expression": "$49 \\cdot 7 = 343$",
+        "explanation": "Wykonujemy ostatnie mnożenie: $49 \\cdot 7 = 343$"
+      }
+    ],
+    "solutions": [
+      "$343$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_division_2",
+    "topic": "Działania na potęgach",
+    "statement": "Oblicz: $\\frac{2^8}{2^5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie regułę dzielenia potęg o tej samej podstawie. Co dzieje się z wykładnikami?",
+        "expression": "$\\frac{2^8}{2^5} = 2^{8-5}$",
+        "explanation": "Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki"
+      },
+      {
+        "step": 2,
+        "hint": "Jaką potęgę otrzymaliśmy po odjęciu wykładników?",
+        "expression": "$2^{8-5} = 2^3$",
+        "explanation": "Obliczamy różnicę wykładników: $8 - 5 = 3$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozpisać $2^3$ jako iloczyn?",
+        "expression": "$2^3 = 2 \\cdot 2 \\cdot 2$",
+        "explanation": "Rozkładamy potęgę na iloczyn trzech dwójek"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz najpierw iloczyn pierwszych dwóch liczb",
+        "expression": "$2 \\cdot 2 \\cdot 2 = 4 \\cdot 2$",
+        "explanation": "Mnożymy pierwsze dwie liczby: $2 \\cdot 2 = 4$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$4 \\cdot 2 = 8$",
+        "explanation": "Mnożymy $4 \\cdot 2$ aby otrzymać wynik końcowy"
+      }
+    ],
+    "solutions": [
+      "$8$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponent_simplification_1",
+    "topic": "Potęgi - upraszczanie wyrażeń",
+    "statement": "Uprość wyrażenie $\\frac{x^5}{x^{-3}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie, co oznacza ujemny wykładnik w mianowniku?",
+        "expression": "$\\frac{x^5}{x^{-3}} = x^5 \\cdot (x^3)$",
+        "explanation": "Ujemny wykładnik w mianowniku zamienia się na dodatni w liczniku"
+      },
+      {
+        "step": 2,
+        "hint": "Jak możesz zapisać iloczyn potęg o tej samej podstawie?",
+        "expression": "$x^5 \\cdot x^3 = x^{5+3}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie wykładniki dodajemy"
+      },
+      {
+        "step": 3,
+        "hint": "Wykonaj dodawanie wykładników",
+        "expression": "$x^{5+3} = x^8$",
+        "explanation": "Obliczamy sumę wykładników: $5 + 3 = 8$"
+      },
+      {
+        "step": 4,
+        "hint": "Czy możesz jeszcze bardziej uprościć to wyrażenie?",
+        "expression": "$x^8$",
+        "explanation": "To jest najprostsza postać wyrażenia"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie założenie jest konieczne dla poprawności tego przekształcenia?",
+        "expression": "$x^8$, gdzie $x \\neq 0$",
+        "explanation": "Dzielenie przez potęgę wymaga założenia o niezerowości podstawy"
+      }
+    ],
+    "solutions": [
+      "$x^8$, gdzie $x \\neq 0$"
+    ],
+    "parameters": {
+      "domain": "$x \\neq 0$"
+    }
+  },
+  {
+    "id": "negative_exponents_1",
+    "topic": "Potęgi o wykładnikach ujemnych",
+    "statement": "Oblicz: $\\frac{5^{-2}}{5^{-7}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie, co oznacza ujemny wykładnik potęgi. Jak zapisać $5^{-2}$ inaczej?",
+        "expression": "$\\frac{5^{-2}}{5^{-7}} = \\frac{\\frac{1}{5^2}}{\\frac{1}{5^7}}$",
+        "explanation": "Ujemny wykładnik oznacza odwrotność potęgi o dodatnim wykładniku"
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć dzielenie przez ułamek?",
+        "expression": "$\\frac{\\frac{1}{5^2}}{\\frac{1}{5^7}} = \\frac{1}{5^2} \\cdot \\frac{5^7}{1}$",
+        "explanation": "Dzielenie przez ułamek to mnożenie przez jego odwrotność"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz zrobić z potęgami o tej samej podstawie?",
+        "expression": "$\\frac{1}{5^2} \\cdot 5^7 = 5^{7-2}$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 4,
+        "hint": "Jaką potęgę otrzymasz po odjęciu wykładników?",
+        "expression": "$5^{7-2} = 5^5$",
+        "explanation": "Obliczamy różnicę wykładników: $7 - 2 = 5$"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz wartość otrzymanej potęgi",
+        "expression": "$5^5 = 5 \\cdot 5 \\cdot 5 \\cdot 5 \\cdot 5 = 3125$",
+        "explanation": "Mnożymy 5 przez siebie 5 razy"
+      }
+    ],
+    "solutions": [
+      "$3125$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_simplification_complex",
+    "topic": "Potęgi o wykładnikach całkowitych",
+    "statement": "Uprość wyrażenie: $\\frac{a^3b^{-2}}{a^{-1}b^4}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie, jak dzielimy wyrażenia z potęgami. Co dzieje się z wykładnikami przy tej samej podstawie?",
+        "expression": "$\\frac{a^3b^{-2}}{a^{-1}b^4} = a^{3-(-1)}b^{-2-4}$",
+        "explanation": "Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na wykładnik przy a. Jak uprościć odejmowanie liczby ujemnej?",
+        "expression": "$a^{3-(-1)} = a^{3+1} = a^4$",
+        "explanation": "Odejmowanie liczby ujemnej zamienia się na dodawanie liczby dodatniej"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć wykładnik przy b? Wykonaj działanie w wykładniku",
+        "expression": "$b^{-2-4} = b^{-6}$",
+        "explanation": "Dodajemy wykładniki: $-2 + (-4) = -6$"
+      },
+      {
+        "step": 4,
+        "hint": "Czy możesz zapisać potęgę o wykładniku ujemnym w inny sposób?",
+        "expression": "$a^4b^{-6} = a^4 \\cdot \\frac{1}{b^6}$",
+        "explanation": "Potęga o wykładniku ujemnym to odwrotność potęgi o wykładniku dodatnim"
+      },
+      {
+        "step": 5,
+        "hint": "Zapisz ostateczną postać wyrażenia",
+        "expression": "$\\frac{a^4}{b^6}$",
+        "explanation": "Łączymy licznik i mianownik w jeden ułamek"
+      }
+    ],
+    "solutions": [
+      "$\\frac{a^4}{b^6}$"
+    ],
+    "parameters": {
+      "domain": "$a \\neq 0$, $b \\neq 0$"
+    }
+  },
+  {
+    "id": "exponents_power_of_power",
+    "topic": "Potęgowanie",
+    "statement": "Oblicz: $(3^2)^3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza zapis $3^2$? Oblicz najpierw tę potęgę",
+        "expression": "$3^2 = 9$",
+        "explanation": "Obliczamy wewnętrzną potęgę: 3 razy 3"
+      },
+      {
+        "step": 2,
+        "hint": "Teraz mamy $(3^2)^3 = 9^3$. Jak rozpisać trzecią potęgę?",
+        "expression": "$9^3 = 9 \\cdot 9 \\cdot 9$",
+        "explanation": "Rozkładamy potęgę na iloczyn trzech dziewiątek"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz najpierw iloczyn pierwszych dwóch czynników",
+        "expression": "$9 \\cdot 9 = 81$",
+        "explanation": "Mnożymy pierwsze dwie liczby"
+      },
+      {
+        "step": 4,
+        "hint": "Zostało nam $81 \\cdot 9$. Jak najłatwiej to pomnożyć?",
+        "expression": "$81 \\cdot 9 = 81 \\cdot (10 - 1) = 810 - 81$",
+        "explanation": "Rozkładamy 9 jako różnicę 10 i 1, by ułatwić mnożenie"
+      },
+      {
+        "step": 5,
+        "hint": "Wykonaj ostatnie odejmowanie",
+        "expression": "$810 - 81 = 729$",
+        "explanation": "Otrzymujemy wynik końcowy"
+      }
+    ],
+    "solutions": [
+      "$729$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "power_calculation",
+    "topic": "Potęgowanie",
+    "statement": "Oblicz: $(2 \\cdot 3)^4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co możesz najpierw obliczyć w nawiasie?",
+        "expression": "$2 \\cdot 3 = 6$",
+        "explanation": "Wykonujemy najpierw mnożenie w nawiasie"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozpisać potęgę czwartą jako iloczyn?",
+        "expression": "$6^4 = 6 \\cdot 6 \\cdot 6 \\cdot 6$",
+        "explanation": "Rozkładamy potęgę na iloczyn czterech szóstek"
+      },
+      {
+        "step": 3,
+        "hint": "Może łatwiej będzie obliczać parami? Najpierw dwie pierwsze liczby",
+        "expression": "$6 \\cdot 6 = 36$",
+        "explanation": "Mnożymy pierwsze dwie szóstki"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymamy mnożąc pozostałe dwie liczby?",
+        "expression": "$6 \\cdot 6 = 36$",
+        "explanation": "Mnożymy kolejne dwie szóstki"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie będzie końcowe mnożenie?",
+        "expression": "$36 \\cdot 36 = 1296$",
+        "explanation": "Mnożymy otrzymane wyniki: $36 \\cdot 36$"
+      }
+    ],
+    "solutions": [
+      "$1296$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "negative_power_1",
+    "topic": "Potęgi o wykładniku ujemnym",
+    "statement": "Uprość wyrażenie $\\left(\\frac{2}{3}\\right)^{-2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza ujemny wykładnik potęgi?",
+        "expression": "$\\left(\\frac{2}{3}\\right)^{-2} = \\left(\\frac{3}{2}\\right)^2$",
+        "explanation": "Ujemny wykładnik oznacza odwrotność liczby z dodatnim wykładnikiem"
+      },
+      {
+        "step": 2,
+        "hint": "Jak podnieść ułamek do kwadratu?",
+        "expression": "$\\left(\\frac{3}{2}\\right)^2 = \\frac{3^2}{2^2}$",
+        "explanation": "Podnosimy licznik i mianownik osobno do kwadratu"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi 3 do kwadratu?",
+        "expression": "$\\frac{3^2}{2^2} = \\frac{9}{2^2}$",
+        "explanation": "Obliczamy $3^2 = 9$"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi 2 do kwadratu?",
+        "expression": "$\\frac{9}{2^2} = \\frac{9}{4}$",
+        "explanation": "Obliczamy $2^2 = 4$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy można jeszcze uprościć otrzymany ułamek?",
+        "expression": "$\\frac{9}{4} = 2.25$",
+        "explanation": "Ułamek $\\frac{9}{4}$ można zapisać w postaci dziesiętnej"
+      }
+    ],
+    "solutions": [
+      "$\\frac{9}{4}$ lub $2.25$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "exponents_negative_complex",
+    "topic": "Potęgi o wykładnikach ujemnych",
+    "statement": "Oblicz: $(2^{-1} \\cdot 3^2)^{-1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza potęga o wykładniku ujemnym?",
+        "expression": "$2^{-1} = \\frac{1}{2}$",
+        "explanation": "Potęga o wykładniku -1 to odwrotność liczby"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć $3^2$?",
+        "expression": "$3^2 = 9$",
+        "explanation": "Obliczamy potęgę w nawiasie"
+      },
+      {
+        "step": 3,
+        "hint": "Jak pomnożyć ułamek przez liczbę?",
+        "expression": "$2^{-1} \\cdot 3^2 = \\frac{1}{2} \\cdot 9 = \\frac{9}{2}$",
+        "explanation": "Mnożymy otrzymane wartości"
+      },
+      {
+        "step": 4,
+        "hint": "Co oznacza potęga -1 dla ułamka?",
+        "expression": "$(\\frac{9}{2})^{-1} = \\frac{2}{9}$",
+        "explanation": "Odwracamy ułamek (licznik staje się mianownikiem i odwrotnie)"
+      },
+      {
+        "step": 5,
+        "hint": "Czy można uprościć otrzymany wynik?",
+        "expression": "$\\frac{2}{9}$",
+        "explanation": "Ułamek jest już w najprostszej postaci"
+      }
+    ],
+    "solutions": [
+      "$\\frac{2}{9}$"
+    ],
+    "parameters": {}
+  }
+]

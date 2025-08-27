@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import MathRenderer, { MathExpression } from './MathRenderer';
+import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
 
 const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set() }) => {
@@ -104,7 +104,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
               </div>
             </div>
             
-            <h1 className="text-lg md:text-2xl font-bold text-white leading-relaxed mb-2">
+            <h1 className="text-xl md:text-3xl font-bold text-white leading-relaxed mb-2">
               <MathRenderer content={problem.statement} />
             </h1>
           </header>
@@ -165,12 +165,12 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                       {/* Step content */}
                       <div className="bg-gray-900/50 rounded-lg p-4 space-y-3">
                         {step.expression && (
-                          <div className="text-lg text-white text-center">
-                            <MathExpression content={step.expression} block={true} />
+                          <div className="text-xl md:text-2xl text-white text-center font-medium">
+                            <MathRenderer content={step.expression} />
                           </div>
                         )}
                         {step.explanation && (
-                          <div className="text-sm text-gray-400">
+                          <div className="text-base md:text-lg text-gray-400">
                             <MathRenderer content={step.explanation} />
                           </div>
                         )}
@@ -191,7 +191,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                             
                             {/* Hint content */}
                             <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-4 pl-6">
-                              <p className="text-sm text-yellow-300/90">
+                              <p className="text-base md:text-lg text-yellow-300/90">
                                 <MathRenderer content={step.hint} />
                               </p>
                             </div>
@@ -236,7 +236,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                         <div className="relative">
                           <div className="absolute inset-0 bg-yellow-500/10 blur-xl"></div>
                           <div className="relative p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-lg">
-                            <p className="text-sm text-yellow-500/80 leading-relaxed">
+                            <p className="text-base md:text-lg text-yellow-500/80 leading-relaxed">
                               <MathRenderer content={step.hint} />
                             </p>
                           </div>
@@ -248,15 +248,15 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                         <div className={`transition-all duration-500 ${
                           revealedSteps.has(index) ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                         }`}>
-                          <div className="text-base md:text-xl text-white font-medium text-center">
-                            <MathExpression content={step.expression} block={true} />
+                          <div className="text-xl md:text-2xl text-white font-medium text-center">
+                            <MathRenderer content={step.expression} />
                           </div>
                         </div>
                       )}
                       
                       {/* Explanation shown with expression */}
                       {step.explanation && revealedSteps.has(index) && (
-                        <div className="text-sm text-gray-400 leading-relaxed">
+                        <div className="text-base md:text-lg text-gray-400 leading-relaxed">
                           <MathRenderer content={step.explanation} />
                         </div>
                       )}
@@ -275,8 +275,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                 <h3 className="text-base md:text-lg font-semibold text-green-400 mb-4 md:mb-6">Odpowiedź końcowa</h3>
                 <div className="space-y-3 md:space-y-4">
                   {problem.solutions.map((solution, index) => (
-                    <div key={index} className="text-white text-lg md:text-xl font-medium text-center">
-                      <MathExpression content={solution} block={true} />
+                    <div key={index} className="text-white text-xl md:text-2xl font-medium text-center">
+                      <MathRenderer content={solution} />
                     </div>
                   ))}
                 </div>

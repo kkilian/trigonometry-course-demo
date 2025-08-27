@@ -41,7 +41,7 @@ const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set(),
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="flex-1 min-w-0">
-              <div className="text-gray-100 text-sm md:text-base leading-relaxed">
+              <div className="text-gray-100 text-base md:text-lg leading-relaxed font-medium">
                 <MathRenderer content={item.statement || ''} />
               </div>
             </div>

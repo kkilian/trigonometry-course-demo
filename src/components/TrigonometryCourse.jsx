@@ -7,10 +7,11 @@ import WelcomeScreen from './WelcomeScreen';
 import trigonometryProblems from '../data/problems.json';
 import sequencesProblems from '../data/sequences-problems.json';
 import sequencesIntroProblems from '../data/sequences-intro-problems.json';
-// import wielomianyProblems from '../data/wielomiany_solutions.json';
+import wielomianyProblems from '../data/wielomiany_solutions.json';
+import powersProblems from '../data/powers-problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'wielomiany' | 'quiz' | 'adaptive-learning'
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'trigonometry' | 'sequences' | 'sequences-intro' | 'wielomiany' | 'powers' | 'quiz' | 'adaptive-learning'
   
   // Debug: Log mode changes
   useEffect(() => {
@@ -21,6 +22,7 @@ const TrigonometryCourse = () => {
   const [completedSeqProblems, setCompletedSeqProblems] = useState(new Set());
   const [completedSeqIntroProblems, setCompletedSeqIntroProblems] = useState(new Set());
   const [completedWielomianyProblems, setCompletedWielomianyProblems] = useState(new Set());
+  const [completedPowersProblems, setCompletedPowersProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -33,10 +35,14 @@ const TrigonometryCourse = () => {
       console.log('Returning sequencesIntroProblems:', sequencesIntroProblems.length, 'problems');
       return sequencesIntroProblems;
     }
-    // if (mode === 'wielomiany') {
-    //   console.log('Returning wielomianyProblems:', wielomianyProblems.length, 'problems');
-    //   return wielomianyProblems;
-    // }
+    if (mode === 'wielomiany') {
+      console.log('Returning wielomianyProblems:', wielomianyProblems.length, 'problems');
+      return wielomianyProblems;
+    }
+    if (mode === 'powers') {
+      console.log('Returning powersProblems:', powersProblems.length, 'problems');
+      return powersProblems;
+    }
     console.log('Returning trigonometryProblems:', trigonometryProblems.length, 'problems');
     return trigonometryProblems;
   };
@@ -45,6 +51,7 @@ const TrigonometryCourse = () => {
     if (mode === 'sequences') return completedSeqProblems;
     if (mode === 'sequences-intro') return completedSeqIntroProblems;
     if (mode === 'wielomiany') return completedWielomianyProblems;
+    if (mode === 'powers') return completedPowersProblems;
     return completedTrigProblems;
   };
   
@@ -55,6 +62,8 @@ const TrigonometryCourse = () => {
       setCompletedSeqIntroProblems(newSet);
     } else if (mode === 'wielomiany') {
       setCompletedWielomianyProblems(newSet);
+    } else if (mode === 'powers') {
+      setCompletedPowersProblems(newSet);
     } else {
       setCompletedTrigProblems(newSet);
     }
@@ -79,6 +88,12 @@ const TrigonometryCourse = () => {
     if (mode === 'wielomiany') {
       return {
         title: 'Wielomiany',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'powers') {
+      return {
+        title: 'Potęgi i pierwiastki',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -132,6 +147,16 @@ const TrigonometryCourse = () => {
       }
     }
     
+    // Load powers progress
+    const savedPowers = localStorage.getItem('completedPowersProblems');
+    if (savedPowers) {
+      try {
+        setCompletedPowersProblems(new Set(JSON.parse(savedPowers)));
+      } catch (e) {
+        console.error('Error loading powers progress:', e);
+      }
+    }
+    
     // Migrate old data if exists
     const oldSaved = localStorage.getItem('completedProblems');
     if (oldSaved && !savedTrig) {
@@ -163,6 +188,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedWielomianyProblems', JSON.stringify([...completedWielomianyProblems]));
   }, [completedWielomianyProblems]);
+  
+  // Save powers progress
+  useEffect(() => {
+    localStorage.setItem('completedPowersProblems', JSON.stringify([...completedPowersProblems]));
+  }, [completedPowersProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);
