@@ -428,7 +428,7 @@ export class SimilarityCalculator {
   }
 }
 
-export default {
+const similarityUtils = {
   dotProduct,
   magnitude,
   cosineSimilarity,
@@ -443,3 +443,5 @@ export default {
   analyzeSimilarityDistribution,
   SimilarityCalculator
 };
+
+export default similarityUtils;

@@ -209,7 +209,7 @@ export function tokenize(text) {
   // Split on whitespace and common punctuation, but preserve mathematical notation
   const tokens = text
     .toLowerCase()
-    .split(/[\s\.,;:\(\)\[\]]+/)
+    .split(/[\s.,;:()\[\]]+/)
     .filter(token => token.length > 0);
   
   // Filter out stopwords but keep mathematical terms
@@ -220,7 +220,7 @@ export function tokenize(text) {
     }
     
     // Keep numbers and single letters (variables)
-    if (/^[\d.,\/]+$/.test(token) || /^[a-z]$/i.test(token)) {
+    if (/^[\d.,/]+$/.test(token) || /^[a-z]$/i.test(token)) {
       return true;
     }
     
@@ -294,7 +294,7 @@ export function debugTextProcessing(text) {
   return steps;
 }
 
-export default {
+const textProcessorUtils = {
   cleanLatex,
   normalizeMathTerms,
   extractMathEntities,
@@ -303,3 +303,5 @@ export default {
   calculateTermFrequency,
   debugTextProcessing
 };
+
+export default textProcessorUtils;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import MathRenderer from './MathRenderer';
-import taggedProblems from '../data/tagged-problems-sample.json';
-import originalProblems from '../data/problems.json';
+import taggedProblems from '../data/powers-problems.json';
+import originalProblems from '../data/powers-problems.json';
 
 const categories = [
   { value: "przeliczanie_jednostek", label: "Przeliczanie jednostek" },

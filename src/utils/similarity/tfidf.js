@@ -327,7 +327,7 @@ export class TFIDFProcessor {
   }
 }
 
-export default {
+const tfidfUtils = {
   calculateTF,
   calculateIDF,
   calculateTFIDF,
@@ -341,3 +341,5 @@ export default {
   analyzeTFIDFStatistics,
   TFIDFProcessor
 };
+
+export default tfidfUtils;

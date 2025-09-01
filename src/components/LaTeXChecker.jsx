@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import MathRenderer from './MathRenderer';
-import defaultProblemsData from '../data/problems.json';
+import defaultProblemsData from '../data/powers-problems.json';
 
-const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
+const LaTeXChecker = ({ onBack, problems: propProblems, title, storageKey = 'latexCheckerState' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [problematicIds, setProblematicIds] = useState(new Set());
   const [deletedIds, setDeletedIds] = useState(new Set());
@@ -14,7 +14,7 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
 
   // Load saved state from localStorage
   useEffect(() => {
-    const savedState = localStorage.getItem('latexCheckerState');
+    const savedState = localStorage.getItem(storageKey);
     if (savedState) {
       try {
         const state = JSON.parse(savedState);
@@ -26,7 +26,7 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
         console.error('Error loading checker state:', e);
       }
     }
-  }, []);
+  }, [storageKey]);
 
   // Save state to localStorage
   useEffect(() => {
@@ -36,8 +36,8 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
       deletedIds: [...deletedIds],
       reviewedIds: [...reviewedIds]
     };
-    localStorage.setItem('latexCheckerState', JSON.stringify(state));
-  }, [currentIndex, problematicIds, deletedIds, reviewedIds]);
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  }, [currentIndex, problematicIds, deletedIds, reviewedIds, storageKey]);
 
   const currentProblem = problems[currentIndex];
   const progress = ((reviewedIds.size / problems.length) * 100).toFixed(1);
@@ -220,7 +220,7 @@ const LaTeXChecker = ({ onBack, problems: propProblems, title }) => {
     setDeletedIds(new Set());
     setReviewedIds(new Set());
     setFinished(false);
-    localStorage.removeItem('latexCheckerState');
+    localStorage.removeItem(storageKey);
   };
 
   const continueChecking = () => {

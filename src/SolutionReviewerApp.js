@@ -1,12 +1,10 @@
 import React from 'react';
 import SolutionReviewer from './components/SolutionReviewer';
-import trigonometryProblems from './data/problems.json';
-import sequencesProblems from './data/sequences-problems.json';
-import sequencesIntroProblems from './data/sequences-intro-problems.json';
+import powersProblems from './data/powers-problems.json';
 import './App.css';
 
 function SolutionReviewerApp() {
-  const allProblems = [...trigonometryProblems, ...sequencesProblems, ...sequencesIntroProblems];
+  const allProblems = [...powersProblems];
   
   const handleBack = () => {
     if (window.confirm('Czy na pewno chcesz zamknąć Solution Reviewer?')) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MathRenderer, { MathExpression } from './MathRenderer';
+import MathRenderer from './MathRenderer';
 
 // Component for individual step with feedback
 const StepWithFeedback = ({ step, index, stepFeedback, updateFeedback, problemId }) => {
@@ -56,7 +56,7 @@ const StepWithFeedback = ({ step, index, stepFeedback, updateFeedback, problemId
         
         {step.expression && (
           <div className="mb-3 text-white">
-            <MathExpression content={step.expression} block={true} />
+            <MathRenderer content={step.expression} />
           </div>
         )}
         
@@ -549,7 +549,7 @@ const SolutionReviewer = ({ onBack, problems: propProblems, title }) => {
               <h3 className="text-lg font-semibold text-green-400 mb-4">Odpowiedź końcowa</h3>
               {currentProblem.solutions.map((solution, index) => (
                 <div key={index} className="text-white">
-                  <MathExpression content={solution} block={true} />
+                  <MathRenderer content={solution} />
                 </div>
               ))}
             </div>

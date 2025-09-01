@@ -3,7 +3,7 @@ import { preprocessMathText } from '../utils/similarity/textProcessor.js';
 import { TFIDFProcessor } from '../utils/similarity/tfidf.js';
 import { SimilarityCalculator } from '../utils/similarity/cosineSimilarity.js';
 import MathRenderer from './MathRenderer';
-import problems from '../data/problems.json';
+import problems from '../data/powers-problems.json';
 
 const NextProblemSuggestion = ({ 
   currentProblem, 

@@ -1,0 +1,1720 @@
+{
+  "metadata": {
+    "timestamp": "2025-08-25T11:23:25.592Z",
+    "conversionTime": 26,
+    "originalFile": "problems.json",
+    "convertedFile": "problems.converted.json",
+    "backupFile": "problems.backup-2025-08-25T11-23-25-558Z.json"
+  },
+  "conversionResults": {
+    "stats": {
+      "total": 174,
+      "converted": 174,
+      "failed": 0
+    },
+    "errors": []
+  },
+  "validationResults": {
+    "stats": {
+      "total": 174,
+      "valid": 0,
+      "invalid": 174,
+      "totalIssues": 2121
+    },
+    "summary": [
+      {
+        "problemId": "tex_problem_2",
+        "issueCount": 3,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[3].expression: Possible nested $ signs - \"$18°$=$, $ $\\frac{18\\pi}{180}$\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{18}{180} =$ $, $ $\\frac{1}{10}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_3",
+        "issueCount": 7,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[1].expression: Possible nested $ signs - \"$1° = \\frac{2\\pi}{360°} rad$= $\"",
+          "step[3].expression: Possible nested $ signs - \"$5° = \\frac{5\\pi}{180} rad$= $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_4",
+        "issueCount": 3,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ w mierze stopniowej i 2$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi}{180} =$ $\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{360\\pi}{180} =$ $, $\\pi =$\\frac{2}{1} \\cdot$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_5",
+        "issueCount": 5,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[1].expression: Possible nested $ signs - \"$1° = \\frac{2\\pi}{360°} rad$= $\"",
+          "step[3].expression: Possible nested $ signs - \"$90° = \\frac{90\\pi}{180} rad$= $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_7",
+        "issueCount": 4,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\pi$ radianó$, $\\cdot$\\frac{180°}{\\pi}$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\pi$\\cdot$, $3 \\cdot$\\frac{\\pi \\cdot 180°}{\\pi}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi \\cdot 180°}{\\pi} =$3 \\cdot$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_9",
+        "issueCount": 9,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\pi$ radianó$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\pi$radianów to$, $, to ile stopni to $\\pi$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\pi$ radianó$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_10",
+        "issueCount": 4,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\frac{5\\pi}{6} \\cdot$ $\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{5\\pi}{6} \\cdot$ $, $ $\\frac{5 \\cdot 180°}{6}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{5 \\cdot 180°}{6} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_11",
+        "issueCount": 6,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\pi$ radianó$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\pi}{18} radianów$=$, $ $\\frac{180°}{\\pi}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi}{18} \\cdot$ $, $ $\\frac{\\pi \\cdot 180°}{18 \\cdot \\pi}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_12",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_12.statement: Contains LaTeX math outside $ delimiters - \"Przyprostokątne AB i AC trójkąta prostokątnego ABC mają długości równe odpowiednio 5 i 3 . Oblicz \\tan kąta ABC\"",
+          "step[1].expression: Possible nested $ signs - \"$AC = 3$, przyprostokątna przyległa to $\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"BC = \\sqrt{34}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_13",
+        "issueCount": 5,
+        "issues": [
+          "tex_problem_13.statement: Contains LaTeX math outside $ delimiters - \"Przyprostokątne AB i AC trójkąta prostokątnego ABC mają długości równe odpowiednio 5 i 3 . Oblicz \\tan kąta ACB\"",
+          "step[1].expression: Possible nested $ signs - \"$AB = 5$i$\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"|BC| = \\sqrt{34}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_14",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_14.statement: Contains LaTeX math outside $ delimiters - \"Przyprostokątne AB i AC trójkąta prostokątnego ABC mają długości równe odpowiednio 5 i 3 . Oblicz \\sin kąta ABC\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"BC = \\sqrt{34}\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Przeciwprostokątna ma długość \\sqrt{34}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_16",
+        "issueCount": 3,
+        "issues": [
+          "tex_problem_16.statement: Possible nested $ signs - \"$\\alpha$, którego drugie ramię zawiera się w dodatniej półosi osi OX \\\\ Oblicz \\tg $\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{przeciwprostokątna}{przyprostokątna} =$ $\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{7}{3} >$0 i punkt A leży w I ćwiartce, kąt$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_17",
+        "issueCount": 3,
+        "issues": [
+          "tex_problem_17.statement: Possible nested $ signs - \"$\\alpha$, którego drugie ramię zawiera się w dodatniej półosi osi OX \\\\ Oblicz \\cos $\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"|OA| = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169}\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"|OA| = \\sqrt{169} = 13\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_18",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_18.statement: Possible nested $ signs - \"$\\alpha$, którego drugie ramię zawiera się w dodatniej półosi osi OX \\\\ Oblicz \\tg $\"",
+          "step[0].expression: Possible nested $ signs - \"$\\beta$, gdzie \\tan \\beta = $, $ -$\\frac{3}{4}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\beta = 180°$ - \\arc\\tan\\left($, $\\right) = $\\pi$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_19",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_19.statement: Possible nested $ signs - \"$\\alpha$, którego drugie ramię zawiera się w dodatniej półosi osi OX \\\\ Oblicz \\sin $, $i \\cos$\\alpha$\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"r = \\sqrt{24^2 + (-7)^2} = \\sqrt{576 + 49} = \\sqrt{625}\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"r = \\sqrt{625} = 25\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_20",
+        "issueCount": 4,
+        "issues": [
+          "tex_problem_20.statement: Possible nested $ signs - \"$\\alpha$, \\cos $, $, \\tg $\\alpha$, $\\alpha$\\in(0 ;$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\in (0;$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\alpha$> 0 dla$, $\\in (0;$\\frac{\\pi}{2}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_21",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_21.statement: Possible nested $ signs - \"$\\alpha$, \\cos $, $, \\tg $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\pi$\\approx$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{2} \\approx$ $, $< 2 < 3 <$\\pi$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_22",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_22.statement: Possible nested $ signs - \"$\\alpha$, \\cos $, $, \\tg $\\alpha$, $\\alpha$ \\in($, $;$\\frac{3}{2} \\pi)$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$ \\in ($, $; $\\frac{3\\pi}{2}$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha$znajduje się między$, $a$270°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_23",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_23.statement: Possible nested $ signs - \"$\\alpha$, \\cos $, $, \\tg $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\pi$\\approx$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$ < 6 < 2$, $\\approx$6.28$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_25",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_25.statement: Possible nested $ signs - \"$\\beta$)(1-\\sin $\"",
+          "step[0].hint: Possible nested $ signs - \"$\\beta$)(1-\\sin $\"",
+          "step[0].expression: Possible nested $ signs - \"$\\beta$)(1-\\sin $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_26",
+        "issueCount": 7,
+        "issues": [
+          "tex_problem_26.statement: Contains LaTeX math outside $ delimiters - \"Sprowadź podane wyrażenie do najprostszej postaci \\cos^{2} x \\cdot \\sin x+\\sin^{3} x\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\cos^{2} x \\cdot \\sin x + \\sin^{3} x\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\sin x (\\cos^{2} x + \\sin^{2} x)\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_27",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_27.statement: Possible nested $ signs - \"$\\beta$}{$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\beta$}{$\"",
+          "step[1].hint: Possible nested $ signs - \"$90°$-$, $) przez funkcje kąta $\\beta$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_28",
+        "issueCount": 5,
+        "issues": [
+          "step[1].explanation: Possible nested $ signs - \"$\\frac{\\sin x}{\\cos x} =$ $, $ $\\frac{\\sin x}{\\cos x}$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\cos x + \\sin x}{\\cos x} \\cdot$ $\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\cos x + \\sin x}{\\cos x} \\cdot$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_29",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_29.statement: Possible nested $ signs - \"$\\gamma$+\\sin^{2} $, $\\cos^{2}$\\gamma$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\gamma$+\\sin^{2} $, $\\cos^{2}$\\gamma$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\gamma$(\\sin^{2} $, $+ \\cos^{2}$\\gamma$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_30",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_30.statement: Contains LaTeX math outside $ delimiters - \"Sprowadź podane wyrażenie do najprostszej postaci \\frac{1-2 \\cos^{2} x}{2 \\sin^{2} x-1}\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na licznik wyrażenia. Czy pamiętasz podstawową tożsamość trygonometryczną łączącą \\sin^2 x i \\cos^2 x?\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\sin^2 x + \\cos^2 x - 2\\cos^2 x}{2\\sin^2 x-1} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_31",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_31.statement: Contains LaTeX math outside $ delimiters - \"Sprowadź podane wyrażenie do najprostszej postaci \\frac{\\sin^{2} x}{1-\\cos x}\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz ułamek z \\sin^2 x w liczniku i 1 - \\cos x w mianowniku. Czy pamiętasz podstawową tożsamość łączącą \\sin^2 x z \\cos x?\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin^2 x}{1 - \\cos x} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_32",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_32.statement: Possible nested $ signs - \"$111°$)^{2}+(\\sin $\"",
+          "step[0].hint: Possible nested $ signs - \"$111°$)^{2}+(\\sin $\"",
+          "step[0].expression: Possible nested $ signs - \"$111°$)^{2}+(\\sin $, $)^{2} = \\cos^2 $111°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_33",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_33.statement: Possible nested $ signs - \"$34°$-\\sin $\"",
+          "step[0].hint: Possible nested $ signs - \"$34°$i$\"",
+          "step[0].expression: Possible nested $ signs - \"$34°$+$, $=$90°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_34",
+        "issueCount": 18,
+        "issues": [
+          "tex_problem_34.statement: Possible nested $ signs - \"$55°$\\cdot \\cos$, $\\cdot \\tg$55°$\"",
+          "step[0].hint: Possible nested $ signs - \"$55°$\\cdot \\cos$\"",
+          "step[0].expression: Possible nested $ signs - \"$55°$\\cos$, $=$\\frac{1}{2}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_35",
+        "issueCount": 4,
+        "issues": [
+          "tex_problem_35.statement: Possible nested $ signs - \"$77°$}{\\cos^{2} $\"",
+          "step[0].expression: Possible nested $ signs - \"$77°$}{\\cos^{2} $\"",
+          "step[1].expression: Possible nested $ signs - \"$77°$}{\\cos^{2} $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_36",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_36.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość (\\sin$, $+\\cos $\\alpha$, $\\alpha$-\\cos $\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos$, $)^$2 = \\sin$, $\\alpha$+ 2\\sin$, $\\cos$\\alpha$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$- \\cos$, $)^$2 = \\sin$, $\\alpha$- 2\\sin$, $\\cos$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_37",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_37.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość (1+\\tg^{2}$, $) \\cdot \\cos^{2} $\\alpha=1$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin^2 \\alpha}{\\cos^2 \\alpha}$) \\cdot \\cos^2 $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\cos^2 \\alpha + \\sin^2 \\alpha}{\\cos^2 \\alpha}$) \\cdot \\cos^2 $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_38",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_38.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość \\frac{\\cos^{2}$, $-1}{\\sin^{2} $\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$i \\cos^2$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$- 1 = -(1 - \\cos^2$, $) = -\\sin^2 $\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_39",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_39.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość$, $ $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\tan \\alpha}{1+\\tan^{2} \\alpha}$=$, $}{1+\\tan^{2} $\\alpha$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\alpha$. Czy pamiętasz jak wyrazić \\tan^2 $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_40",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_40.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość \\cos^{4}$, $-\\sin^{4} $\\alpha=\\cos^{2}$, $\\alpha$-\\sin^{2} $\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$- \\sin^4$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$- \\sin^4$, $ $\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_41",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_41.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość$, $+$\\frac{1+\\cos \\alpha}{\\sin \\alpha}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin \\alpha}{1+\\cos \\alpha}$+$, $ $\\frac{\\sin^2 \\alpha + (1+\\cos \\alpha)^2}{(1+\\cos \\alpha)\\sin \\alpha}$\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\alpha$)^2 = 1 + 2\\cos $, $+ \\cos^2$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_43",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_43.statement: Possible nested $ signs - \"$\\alpha$, tzn, tangens oraz sinus albo kosinus, wiedząc, że \\cos $\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\"",
+          "step[2].hint: Possible nested $ signs - \"$\\frac{a}{b}$)^2 = $, $ (\\sqrt{c})^$2 = c$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_46",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_46.statement: Possible nested $ signs - \"$\\alpha$taki, że \\sin$, $i$90°$, $\\alpha$<$, $. Oblicz \\cos $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\"",
+          "step[2].hint: Possible nested $ signs - \"$\\frac{a}{b}$)^2 = $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_47",
+        "issueCount": 10,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\frac{24}{25}$, \\quad $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 1$- \\sin^2$, $ - \\left($\\frac{24}{25}$\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_49",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_49.statement: Possible nested $ signs - \"$\\alpha$i \\cos$, $, jeżeli \\tg $\\alpha=-2$, $\\alpha$ \\in($, $;$\\pi$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = -2$\\cos$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_50",
+        "issueCount": 19,
+        "issues": [
+          "tex_problem_50.statement: Possible nested $ signs - \"$40°$-\\cos $\"",
+          "step[0].hint: Possible nested $ signs - \"$40°$czy \\cos$\"",
+          "step[0].expression: Possible nested $ signs - \"$40°$i \\cos$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_51",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_51.statement: Possible nested $ signs - \"$100°$-\\sin $\"",
+          "step[0].hint: Possible nested $ signs - \"$100°$i$\"",
+          "step[0].expression: Possible nested $ signs - \"$100°$ \\in ($, $, $180°$, $200°$ \\in ($, $, $270°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_52",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_52.statement: Contains LaTeX math outside $ delimiters - \"Analizując wykresy odpowiednich funkcji trygonometrycznych, określ znak liczby \\tan 2+\\cos 3\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\pi}{2} \\approx$ $, $< 2 <$\\pi$\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\tan 2 < 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_53",
+        "issueCount": 8,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\pi = \\cos$ $\"",
+          "step[2].hint: Contains LaTeX math outside $ delimiters - \"Teraz musisz określić znak \\tan 1. W której ćwiartce leży kąt 1 radian? Ile to w przybliżeniu stopni?\"",
+          "step[2].explanation: Possible nested $ signs - \"$\\frac{\\pi}{2} \\approx$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_54",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_54.statement: Possible nested $ signs - \"$\\pi$;$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Jaka jest dziedzina i zbiór wartości funkcji \\cos x? Przypomnij sobie podstawowe własności cosinusa\"",
+          "step[0].expression: Possible nested $ signs - \"$\\pi$, $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_55",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_55.statement: Possible nested $ signs - \"$\\pi$;$, $], f(x)=\\sin \\left(x-$\\frac{\\pi}{4}$\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"Dla każdego t \\in \\mathbb{R}: \\quad -1 \\leq \\sin t \\leq 1\"",
+          "step[2].expression: Possible nested $ signs - \"$\\pi$) = \\sin\\left(-$, $-$\\frac{\\pi}{4}$, $\\frac{5\\pi}{4}$\\right) = \\sin\\left($\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_56",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_56.statement: Possible nested $ signs - \"$\\pi$;$, $]-\\left\\{-$\\frac{\\pi}{2}$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na wyrażenie pod pierwiastkiem. Czy pamiętasz tożsamość łączącą 1 z \\tan^2 x?\"",
+          "step[0].expression: Possible nested $ signs - \"$x = 1$+$, $ $\\frac{\\cos^2 x + \\sin^2 x}{\\cos^2 x}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_58",
+        "issueCount": 7,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$105°$=$, $+$45°$\"",
+          "step[1].expression: Possible nested $ signs - \"$105°$=$, $ $60°$, $45°$- \\sin$, $\\sin$45°$\"",
+          "step[2].hint: Possible nested $ signs - \"$60°$i$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_59",
+        "issueCount": 16,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$105°$=$\"",
+          "step[0].explanation: Possible nested $ signs - \"$105°$=$, $+$45°$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\tan(60° + 45°) = \\frac{\\tan$ $, $+ \\tan$45°$, $60°$\\cdot \\tan$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_61",
+        "issueCount": 5,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$ - 3$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\pi$, to jak możesz przepisać 3$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\pi = 3$\\cdot$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_62",
+        "issueCount": 8,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\sin(\\pi - \\alpha) = \\sin$ $, $\\cos$\\alpha$, $\\pi$\\sin$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\pi = 0$oraz \\cos$\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\pi$to$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_65",
+        "issueCount": 11,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$\\frac{3}{2}\\pi$+$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{3}{2}\\pi$+$, $\\right) = \\cos\\left($\\pi$, $\\frac{\\pi}{2} +$ $\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\frac{3\\pi}{2} =$ $, $+$\\frac{\\pi}{2}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_66",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_66.statement: Possible nested $ signs - \"$\\alpha$-$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\sin(\\alpha - \\frac{\\pi}{2}) = \\sin$ $, $\\cos$\\frac{\\pi}{2} -$, $\\alpha$\\sin$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{2} =$0 \\quad i \\quad \\sin$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_69",
+        "issueCount": 10,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\frac{3}{4}$\\pi = $, $ $180°$\"",
+          "step[1].expression: Possible nested $ signs - \"$135°$=$, $-$45°$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{3}{4}\\pi = \\pi$-$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_70",
+        "issueCount": 8,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$330°$to kąt większy niż$\"",
+          "step[0].expression: Possible nested $ signs - \"$330°$=$, $-$30°$\"",
+          "step[0].explanation: Possible nested $ signs - \"$330°$leży w IV ćwiartce, możemy go zapisać jako$, $-$30°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_71",
+        "issueCount": 12,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$\\frac{4}{3}\\pi$ a pełnym obrotem 2$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{4}{3}$\\pi = $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{4\\pi}{3} =$ $, $+$\\frac{\\pi}{3}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_72",
+        "issueCount": 4,
+        "issues": [
+          "step[1].hint: Possible nested $ signs - \"$\\sin(120°)$. W której ćwiartce leży kąt $\"",
+          "step[1].expression: Possible nested $ signs - \"$120°$=$, $-$60°$\"",
+          "step[1].explanation: Possible nested $ signs - \"$120°$leży w II ćwiartce i można go zapisać jako$, $-$60°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_75",
+        "issueCount": 8,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz obliczyć \\cos 2x znając \\cos x. Czy pamiętasz wzór na cosinus podwójnego kąta?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\cos 2x = \\cos^2 x - \\sin^2 x\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Znasz wartość cosinusa, ale potrzebujesz też sinusa. Jakie równanie łączy \\sin^2 x i \\cos^2 x?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_76",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_76.statement: Possible nested $ signs - \"$\\frac{24}{25} i$ x \\in\\left($, $;$\\pi$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Jaki wzór łączy \\sin 2x z funkcjami kąta pojedynczego?\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Znasz już wartość sinusa. Co musisz wyznaczyć, żeby obliczyć \\sin 2x?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_77",
+        "issueCount": 8,
+        "issues": [
+          "step[1].explanation: Possible nested $ signs - \"$\\tan(\\alpha + \\beta) = \\frac{\\tan$ $, $+ \\tan$\\beta$, $\\alpha$\\tan$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{2 \\cdot 3}{1 - 3^2} =$ $, $ $\\frac{6}{-8} =$\"",
+          "step[4].hint: Possible nested $ signs - \"$\\frac{3}{4} i$\\tan$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_78",
+        "issueCount": 7,
+        "issues": [
+          "tex_problem_78.statement: Possible nested $ signs - \"$45°$większa od miary kąta nachylenia do osi Ox prostej o równaniu$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$_$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\alpha$_$, $+$45°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_79",
+        "issueCount": 5,
+        "issues": [
+          "tex_problem_79.statement: Contains LaTeX math outside $ delimiters - \"Sprawdź, czy podane równości są tożsamościami trygonometrycznymi. 1-\\sin 2 x=(\\sin x-\\cos x)^{2}\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\sin^2 x + \\cos^2 x. Czy znasz podstawową tożsamość trygonometryczną łączącą te wyrażenia?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\sin^2 x - 2\\sin x \\cos x + \\cos^2 x = (\\sin^2 x + \\cos^2 x) - 2\\sin x \\cos x\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_80",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_80.statement: Possible nested $ signs - \"$\\frac{1}{\\cos x+\\sin x}$+$, $=$\\frac{2 \\cos x}{\\cos 2 x}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1}{\\cos x+\\sin x}$+$, $ $\\frac{(\\cos x-\\sin x) + (\\cos x+\\sin x)}{(\\cos x+\\sin x)(\\cos x-\\sin x)}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\cos x - \\sin x + \\cos x + \\sin x}{(\\cos x+\\sin x)(\\cos x-\\sin x)} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_81",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_81.statement: Possible nested $ signs - \"$\\frac{\\pi}{6}$\\right) \\sin \\left(x-$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz iloczyn dwóch sinusów z różnymi argumentami. Czy znasz wzór na iloczyn \\sin A \\sin B?\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\pi}{6}$\\right) \\sin \\left(x-$, $\\right) = 4 \\cdot $\\frac{1}{2}$, $\\cos((x+\\frac{\\pi}{6})-(x-\\frac{\\pi}{6}))$-$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_82",
+        "issueCount": 10,
+        "issues": [
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Jak możesz rozpisać \\cos 3x używając funkcji kąta pojedynczego? Pamiętaj wzór na cosinus potrójnego kąta\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"\\cos x - (4\\cos^3 x - 3\\cos x) = 4\\sin^2 x \\cos x\"",
+          "step[2].explanation: Contains LaTeX math outside $ delimiters - \"Zastępujemy \\cos 3x jego rozwinięciem\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_83",
+        "issueCount": 5,
+        "issues": [
+          "step[1].explanation: Possible nested $ signs - \"$\\pi$] sinus zeruje się dla $, $i x =$\\pi$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\pi$-$\"",
+          "step[4].hint: Possible nested $ signs - \"$\\pi$ k, 2$, $(k+1)] są dwa zera różniące się o $\\pi$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_84",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_84.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\cos x=-1\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie \\cos x = -1. Przypomnij sobie wykres funkcji cosinus - w jakich punktach osiąga ona wartość -1?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\cos x = -1\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_85",
+        "issueCount": 12,
+        "issues": [
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\sin x = \\cos x\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Po pomnożeniu przez \\cos x otrzymujemy równanie, przy założeniu \\cos x \\neq 0\"",
+          "step[2].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie \\sin x = \\cos x. Czy znasz wzór wiążący te funkcje z tangensem połowy kąta lub inną metodę?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_86",
+        "issueCount": 12,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$\\frac{1}{2}$. Czy pamiętasz dla jakich kątów w przedziale [0, 2$, $] sinus przyjmuje wartość $\\frac{1}{2}$\"",
+          "step[1].hint: Possible nested $ signs - \"$30°$-$, $-$90°$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{6} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_87",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_87.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\cos x=\\frac{\\sqrt{2}}{2}\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie \\cos x = \\frac{\\sqrt{2}}{2}. Czy rozpoznajesz tę wartość? Dla jakiego znanego kąta cosinus ma taką wartość?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\cos x = \\frac{\\sqrt{2}}{2}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_88",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_88.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\sin x=-\\frac{\\sqrt{3}}{2}\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie \\sin x = -\\frac{\\sqrt{3}}{2}. Czy pamiętasz dla jakich kątów podstawowych sinus ma wartość \\frac{\\sqrt{3}}{2}?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sin x = -\\frac{\\sqrt{3}}{2}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_89",
+        "issueCount": 9,
+        "issues": [
+          "step[1].hint: Possible nested $ signs - \"$\\frac{1}{2}$? To pomoże ci znaleźć kąty z cosinusem -$\"",
+          "step[1].expression: Possible nested $ signs - \"$60° = \\cos$ $, $ $\\frac{1}{2}$\"",
+          "step[2].expression: Possible nested $ signs - \"$1 = \\pi$-$, $ $\\frac{3\\pi - \\pi}{3} =$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_90",
+        "issueCount": 7,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 1$\\Rightarrow \\alpha =$, $ 2$\\pi$\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\frac{\\pi}{2} i$ jego wielokrotności o 2$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\pi}{2} +$ 2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_91",
+        "issueCount": 14,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie z tangensem. Dla jakiej wartości kąta tangens równa się \\sqrt{3}?\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Przypomnij sobie wartości tangensa dla kątów szczególnych. Który kąt ma tangens równy \\sqrt{3}?\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{3}$\\right) = \\tan$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_92",
+        "issueCount": 17,
+        "issues": [
+          "tex_problem_92.statement: Possible nested $ signs - \"$x=1$w zbiorze (0 ;$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\frac{\\pi}{4} =$1? Jak wygląda ogólne rozwiązanie równania \\tan$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{4} +$ k$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_93",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_93.statement: Possible nested $ signs - \"$\\frac{\\pi}{3}$\\right)=1 w zbiorze [0 ; 2 $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{3} =$ 2$\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\alpha = 1$jest spełniony gdy$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_94",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_94.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie 2 \\sin ^{2} x+\\sin x-1=0\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"2\\sin^2 x + \\sin x - 1 = 0\"",
+          "step[0].explanation: Contains LaTeX math outside $ delimiters - \"Rozpoznajemy równanie kwadratowe względem \\sin x\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_95",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_95.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\sin ^{2} x-3 \\cos x-3=0\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu dwie różne funkcje trygonometryczne. Czy znasz wzór łączący \\sin^2 x z \\cos^2 x?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"1 - \\cos^2 x - 3\\cos x - 3 = 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_96",
+        "issueCount": 23,
+        "issues": [
+          "tex_problem_96.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\tan^{4} x-4 \\tan^{2} x+3=0\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\tan^4 x - 4\\tan^2 x + 3 = 0\"",
+          "step[0].explanation: Contains LaTeX math outside $ delimiters - \"Rozpoznajemy równanie dwukwadratowe względem \\tan x\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_97",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_97.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie (\\sin x+\\cos x)^{2}=1\"",
+          "step[0].expression: Possible nested $ signs - \"$2 = \\sin$^2 x + 2\\sin x \\cos x + \\cos^2 $\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\sin^2 x + \\cos^2 x. Czy znasz podstawową tożsamość trygonometryczną?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_98",
+        "issueCount": 7,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Jak możesz rozpisać \\sin 2x używając funkcji kąta pojedynczego?\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"2\\sin x(\\cos x - 1) = 0\"",
+          "step[2].explanation: Contains LaTeX math outside $ delimiters - \"Wyłączamy 2\\sin x przed nawias\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_100",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_100.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\cos 2 x+2 \\cos x+1=0\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Jak możesz rozpisać \\cos 2x używając funkcji kąta pojedynczego?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"2\\cos^2 x - 1 + 2\\cos x + 1 = 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_101",
+        "issueCount": 12,
+        "issues": [
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Mnożymy obie strony przez \\cos x , przy założeniu \\cos x \\neq 0\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"\\sin x(1 - 2\\cos x) = 0\"",
+          "step[3].explanation: Contains LaTeX math outside $ delimiters - \"Wyłączamy \\sin x przed nawias\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_102",
+        "issueCount": 8,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin x}{\\cos x} +$\\sin$\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Skracamy \\cos x w pierwszym składniku, przy założeniu \\cos x \\neq 0\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"\\sin x(R + 1) = 2\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_103",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_103.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie x=\\cos 3 x\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz równanie x = \\cos 3x. Czy potrafisz rozpisać \\cos 3x używając wzoru na cosinus potrójnego kąta?\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha = 4$\\cos^3 $, $- 3\\cos$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_104",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_104.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie w \\cos x \\cdot \\cos 2 x\"",
+          "step[0].expression: Possible nested $ signs - \"$x = 0$ \\quad lub \\quad \\cos 2$\"",
+          "step[1].expression: Possible nested $ signs - \"$x = 0$\\Rightarrow x =$, $ k$\\pi$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_105",
+        "issueCount": 18,
+        "issues": [
+          "tex_problem_105.statement: Possible nested $ signs - \"$x=1$; \\quad b) w \\sin 5 x+\\sin$\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"(\\sin x + \\cos x)^2 = 1^2\"",
+          "step[2].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\sin^2 x + \\cos^2 x. Czy znasz podstawową tożsamość trygonometryczną?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_106",
+        "issueCount": 14,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\pi}{3} -$\\sin x \\sin$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\frac{\\pi}{3} i$\\sin$\"",
+          "step[1].explanation: Possible nested $ signs - \"$60°$=$, $\\sin$60° = \\frac$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_108",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_108.statement: Contains LaTeX math outside $ delimiters - \"Zbadaj dla jakich wartości parametru m istnieją rozwiązania równania \\cos x=m\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\cos x \\in [-1, 1]\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Skoro równanie \\cos x = m ma mieć rozwiązania, co to oznacza dla parametru m?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_109",
+        "issueCount": 3,
+        "issues": [
+          "step[3].expression: Possible nested $ signs - \"$\\frac{-4}{2} \\leq$ $\"",
+          "step[5].expression: Possible nested $ signs - \"$\\frac{2m}{2} \\leq$ $\"",
+          "step[7].expression: Possible nested $ signs - \"$\\sin(4x + 1) = -1,$\\quad dla m = -1:$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_110",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_110.statement: Contains LaTeX math outside $ delimiters - \"Zbadaj dla jakich wartości parametru m istnieją rozwiązania równania \\sqrt{3} \\sin x+\\cos x=m\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz wyrażenie \\sqrt{3} \\sin x + \\cos x. Czy przypomina ci to jakąś znaną postać funkcji trygonometrycznej?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sqrt{3} \\sin x + \\cos x = m\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_111",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_111.statement: Contains LaTeX math outside $ delimiters - \"Uzasadnij, że liczby \\sqrt[3]{3^{3 \\sin 3^{\\circ}}}, 3^{\\sqrt{1-\\cos ^{2} 3^{\\circ}}},\\left(3^{\\cos 3^{\\circ}}\\right)^{\\tan 3^{\\circ}} są równe\"",
+          "step[0].expression: Possible nested $ signs - \"$3°$}} = 3^{\\sqrt{\\sin^2 $\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_112",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_112.statement: Possible nested $ signs - \"$\\alpha$jest równy \\sqrt{\\sqrt{2}-1}. Uzasadnij, że tangens kąta$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 1$- \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_113",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_113.statement: Possible nested $ signs - \"$\\alpha$jest ostry i tg$, $. Oblicz $\\frac{\\sin \\alpha-\\cos \\alpha}{\\sin \\alpha+\\cos \\alpha}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 2$\\cos $\"",
+          "step[2].hint: Possible nested $ signs - \"$\\alpha = 2$\\cos $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_114",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_114.statement: Possible nested $ signs - \"$\\alpha$-3 \\cos ^{2} $, $i$\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$i \\cos^2$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$- 3\\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_115",
+        "issueCount": 20,
+        "issues": [
+          "tex_problem_115.statement: Possible nested $ signs - \"$\\alpha$jest o 77 \\% mniejszy od kosinusa tego kąta. Oblicz tangens kąta$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha = \\cos$ $, $-$0.77$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = \\cos$ $, $(1 - $0.77$, $0.23$\\cos$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_116",
+        "issueCount": 19,
+        "issues": [
+          "tex_problem_116.statement: Possible nested $ signs - \"$\\alpha$jest o \\frac{\\sqrt{2}}{2} większy od kosinusa tego kąta. Oblicz \\cos$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Jak możesz zapisać warunek \"sinus jest o \\frac{\\sqrt{2}}{2} większy od kosinusa\" w postaci równania?\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha = \\cos$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_117",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_117.statement: Possible nested $ signs - \"$\\alpha$jest ostry i spełnia równość tg$, $+$\\frac{1}{\\tan \\alpha}$, $\\frac{7}{2}$. Oblicz wartość wyrażenia \\sin $, $\\cdot \\cos$\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+$, $ $\\frac{\\sin \\alpha}{\\cos \\alpha} +$, $\\frac{\\cos \\alpha}{\\sin \\alpha} =$ $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\sin^2 \\alpha + \\cos^2 \\alpha}{\\sin \\alpha \\cos \\alpha} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_118",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_118.statement: Contains LaTeX math outside $ delimiters - \"Uzasadnij, że liczba \\frac{80+\\sin ^{2} 80^{\\circ}+\\sin ^{2} 10^{\\circ}}{10-\\cos ^{2} 10^{\\circ}-\\cos ^{2} 80^{\\circ}} jest całkowita\"",
+          "step[0].hint: Possible nested $ signs - \"$80°$i$\"",
+          "step[0].expression: Possible nested $ signs - \"$80°$+$, $=$90°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_119",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_119.statement: Possible nested $ signs - \"$\\alpha$jest kątem ostrym, to \\sin$, $\\cdot(\\sin$\\alpha$, $\\alpha$+\\cos $, $)=\\tan $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\cdot (\\sin$, $\\cdot \\tan$\\alpha$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$\\cdot \\sin$, $\\cdot \\tan$\\alpha$, $\\alpha$\\cdot \\cos$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_120",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_120.statement: Possible nested $ signs - \"$\\alpha$, $, $ spełniających warunki 0^{\\circ}<$\\alpha$, $\\beta$<180^{\\circ} zachodzi równość \\sin ^{2} $, $\\cos ^{2}$\\beta$, $\\beta$\\cos ^{2}$, $^{2}$\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\cos^2$, $- \\sin^2$\\beta$\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Czy pamiętasz podstawową tożsamość trygonometryczną łączącą \\sin^2 i \\cos^2? Jak możesz ją wykorzystać?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_121",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_121.statement: Possible nested $ signs - \"$\\alpha$jest kątem ostrym, to$, $ $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\sin$, $)(\\cos $\\alpha$, $\\alpha$) = \\cos^2 $, $- \\sin^2$\\alpha$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\cos^2 \\alpha - \\sin^2 \\alpha}{\\cos^2 \\alpha} =$ $, $ $\\frac{\\sin^2 \\alpha}{\\cos^2 \\alpha}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_122",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_122.statement: Possible nested $ signs - \"$\\alpha$. wyrażenie \\left($, $-\\sin $\\alpha$, $\\frac{1}{\\cos \\alpha}$-\\cos $, $\\right)\\left($\\frac{1}{\\tan \\alpha}$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\frac{1}{\\sin \\alpha} -$\\sin$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1}{\\sin \\alpha} -$\\sin \\alpha =$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_123",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_123.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość \\frac{\\tan^{2}$, $-\\sin ^{2} $\\alpha$, $\\alpha$\\cos ^{2}$, $}=\\tan^{4} $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$-\\sin ^{2} $, $}{1-\\tan^{2} $\\alpha$, $\\alpha$} = $, $-\\sin ^{2} $\\alpha$, $\\frac{\\sin^2 \\alpha}{\\cos^2 \\alpha} \\cos$^{2}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\frac{\\sin^2 \\alpha}{\\cos^2 \\alpha}$-\\sin ^{2} $, $}{1-\\frac{\\sin^2 $\\alpha$, $\\alpha$}{\\cos^2 $, $}} = $\\frac{\\frac{\\sin^2 \\alpha}{\\cos^2 \\alpha}$, $\\alpha$}{1-\\sin^2 $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_124",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_124.statement: Possible nested $ signs - \"$\\alpha$jest kạtem ostrym, to$, $-$\\frac{\\cos \\alpha}{1+\\sin \\alpha}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1}{\\cos \\alpha} -$ $, $ $\\frac{1 + \\sin \\alpha}{\\cos \\alpha (1 + \\sin \\alpha)} -$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha$(1 + \\sin$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_125",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_125.statement: Possible nested $ signs - \"$\\alpha$}}{1+\\cos $, $}+\\frac{1+\\sqrt{1-\\sin ^{2} $\\alpha$, $\\alpha$}\\right) \\cdot \\sqrt{1-\\cos ^{2} $, $}, gdzie 0^{\\circ}<$\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$} i \\sqrt{1-\\sin^2 $\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$} = \\sqrt{\\sin^2 $, $} = |\\sin $\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_126",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_126.statement: Possible nested $ signs - \"$\\alpha$jest kątem ostrym, jaki tworzy prosta o równaniu$, $x+5 z osią O X. Oblicz wartość wyrażenia$\\frac{\\sin \\alpha(\\cos \\alpha+\\sin \\alpha)}{\\cos ^{2} \\alpha}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$+ 1 =$, $1 =$\\frac{\\sin^2 \\alpha + \\cos^2 \\alpha}{\\cos^2 \\alpha} =$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{1}{\\cos^2 \\alpha} \\Rightarrow$4 + 1 =$, $ $\\frac{1}{\\cos^2 \\alpha} =$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_127",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_127.statement: Possible nested $ signs - \"$\\alpha$jest równy 0,3 \\sqrt{11}. Oblicz wartość wyrażenia \\log (\\sin$, $+\\cos $\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 1$- \\sin^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_128",
+        "issueCount": 20,
+        "issues": [
+          "tex_problem_128.statement: Possible nested $ signs - \"$\\sin (6 \\pi+\\alpha)$>0 i $, $oblicz tg$\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\sin(6\\pi + \\alpha)$. Czy pamiętasz jak zachowują się funkcje trygonometryczne przy dodaniu wielokrotności 2$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\sin(6\\pi + \\alpha) = \\sin(3$ \\cdot 2$, $+$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_129",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_129.statement: Possible nested $ signs - \"$\\alpha$zachodzi równość \\sin 3$, $\\sin$\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$10°$jest pierwiastkiem wielomianu W(x) = 8x^3 - 6x + 1. Co to oznacza dla wartości W(\\sin$\"",
+          "step[0].expression: Possible nested $ signs - \"$10°$) = 8\\sin^3 $, $- 6\\sin$10°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_130",
+        "issueCount": 22,
+        "issues": [
+          "tex_problem_130.statement: Possible nested $ signs - \"$\\alpha$jest ostry i zachodzi równość \\sin$, $+\\cos $\\alpha=\\frac{\\sqrt{7}}{2}.$, $\\alpha$-\\cos $\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$+ \\cos$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos$, $)^$2 = \\left$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_131",
+        "issueCount": 20,
+        "issues": [
+          "tex_problem_131.statement: Possible nested $ signs - \"$\\alpha$jest taki, że \\cos$, $+\\sin \\alpha=$\\frac{4}{3}$, $\\alpha$-\\sin $\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$+ \\sin \\alpha =$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\sin$, $)^$2 = \\left$, $\\frac{4}{3}$\\right)^2 = $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_132",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_132.statement: Contains LaTeX math outside $ delimiters - \"Sprawdź, czy równość \\frac{1-\\tan^{2} x}{1+\\tan^{2} x}=\\cos 2 x jest tożsamoscią trygonometryczną\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1-\\frac{\\sin^2 x}{\\cos^2 x}$}{1+$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\frac{\\cos^2 x - \\sin^2 x}{\\cos^2 x}$}{$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_133",
+        "issueCount": 21,
+        "issues": [
+          "tex_problem_133.statement: Possible nested $ signs - \"$\\alpha$prawdziwa jest tożsamość \\sin ^{4}$, $+\\cos ^{4} $\\alpha=\\frac{1+\\cos$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$+ \\cos^4$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^4$, $ $\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_134",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_134.statement: Possible nested $ signs - \"$\\alpha$+8 \\sin ^{2} $, $\\cdot \\cos ^{2}$\\frac{1}{2} \\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\alpha}{2} \\cos$ $, $ $\\frac{1}{2}$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\beta = 2$\\sin $, $\\cos$\\beta$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_135",
+        "issueCount": 24,
+        "issues": [
+          "tex_problem_135.statement: Possible nested $ signs - \"$\\alpha$}{1+\\sin 2 $, $}=$\\frac{1-\\tan \\alpha}{1+\\tan \\alpha}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha = \\cos$ 2$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha = 1$- 2\\sin^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_136",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_136.statement: Possible nested $ signs - \"$\\frac{\\sin 2 \\alpha}{1+\\cos 2 \\alpha} \\cdot$ $, $=\\tan $\\frac{1}{2} \\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin 2\\alpha}{1 + \\cos 2\\alpha} =$ $\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha = 2$\\sin $, $\\cos$\\alpha$, $\\alpha = 2$\\cos^2 $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_137",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_137.statement: Contains LaTeX math outside $ delimiters - \"Uzasadnij, że liczba \\sin 10^{\\circ} \\cdot \\cos 10^{\\circ} \\cdot \\cos 20^{\\circ} \\cdot \\cos 40^{\\circ} jest 8 razy mniejsza od liczby \\sin 80^{\\circ}\"",
+          "step[0].hint: Possible nested $ signs - \"$10°$\\cdot \\cos$\"",
+          "step[0].expression: Possible nested $ signs - \"$10°$\\cos$, $=$\\frac{1}{2}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_138",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_138.statement: Possible nested $ signs - \"$\\sin (x+y)$\\cdot$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\sin(x+y)$\\cdot$\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"= (\\sin x \\cos y)^2 - (\\cos x \\sin y)^2\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_139",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_139.statement: Possible nested $ signs - \"$\\alpha$, $, $zachodzi równość (\\cos$\\alpha$, $\\beta$)^{2}+(\\sin $, $+\\sin $\\beta$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos$, $)^2 + (\\sin $\\alpha$, $\\beta$)^$, $^2 $\\alpha$, $\\alpha$\\cos$, $+ \\cos^2$\\beta$, $\\alpha$+ 2\\sin$, $\\sin$\\beta$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha$+ \\sin^2$, $) + (\\cos^2 $\\beta$, $\\beta$) + 2(\\cos $, $\\cos$\\beta$, $\\alpha$\\sin$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_140",
+        "issueCount": 28,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na lewą stronę równania. Czy zauważasz, że masz sumę trzech sinusów podwójnych kątów? Jak możesz przekształcić \\sin 2x i \\sin 2y?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sin 2x + \\sin 2y + \\sin 2(x+y) = 2\\sin x \\cos x + 2\\sin y \\cos y + \\sin 2(x+y)\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha = 2$\\sin $, $\\cos$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_141",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_141.statement: Contains LaTeX math outside $ delimiters - \"Wyznacz zbiór wartości funkcji f(x)=4 \\sin ^{2} x-4 \\sin x+5\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na strukturę funkcji. Co ci przypomina wyrażenie 4\\sin^2 x - 4\\sin x + 5?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"f(x) = 4\\sin^2 x - 4\\sin x + 5\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_142",
+        "issueCount": 10,
+        "issues": [
+          "tex_problem_142.statement: Contains LaTeX math outside $ delimiters - \"Znajdź najmniejszą i największą wartość funkcji f(x)=-\\cos ^{2} x-4 \\cos x+5\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na strukturę funkcji. Co ci przypomina wyrażenie -\\cos^2 x - 4\\cos x + 5?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"f(x) = -\\cos^2 x - 4\\cos x + 5\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_143",
+        "issueCount": 15,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu \\cos 2x i \\cos x. Czy pamiętasz wzór łączący cosinus podwójnego kąta z cosinusem pojedynczym?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"2\\cos^2 x - 1 + 3\\cos x = -2\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Otrzymujemy równanie tylko z funkcją \\cos x\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_144",
+        "issueCount": 16,
+        "issues": [
+          "tex_problem_144.statement: Possible nested $ signs - \"$x=24$\\sin x-3 dla x \\in[0 ; 2$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu \\cos 2x i \\cos^2 x. Czy pamiętasz wzór łączący cosinus podwójnego kąta z cosinusem zwykłym?\"",
+          "step[3].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\cos^2 x i \\sin x. Jakie równanie wiąże \\cos^2 x z \\sin^2 x?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_145",
+        "issueCount": 13,
+        "issues": [
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Mnożymy całe równanie przez \\cos x , przy założeniu \\cos x \\neq 0\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"\\sin x(2\\cos x + \\sqrt{3}) = 0\"",
+          "step[2].explanation: Contains LaTeX math outside $ delimiters - \"Wyłączamy \\sin x przed nawias\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_146",
+        "issueCount": 22,
+        "issues": [
+          "tex_problem_146.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\tan^{4} x-2 \\tan^{3} x-2 \\tan^{2} x+6 \\tan x-3=0\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\tan^{4} x - 2\\tan^{3} x - 2\\tan^{2} x + 6\\tan x - 3 = 0\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\tan^{3} x(\\tan x - 2) - (2\\tan^{2} x - 6\\tan x + 3) = 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_147",
+        "issueCount": 17,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin x}{\\cos x} =$ $\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Mnożymy całe równanie przez \\cos x , przy założeniu \\cos x \\neq 0\"",
+          "step[2].expression: Possible nested $ signs - \"$2.5$\\sin x \\cos$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_148",
+        "issueCount": 21,
+        "issues": [
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sin x - \\cos x = \\sin x \\cos x - 1\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Lewa strona przypomina różnicę dwóch funkcji. Czy znasz sposób na przekształcenie \\sin x - \\cos x do postaci z jedną funkcją trygonometryczną?\"",
+          "step[1].explanation: Possible nested $ signs - \"$\\sin(x + \\phi)$dla$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_149",
+        "issueCount": 17,
+        "issues": [
+          "tex_problem_149.statement: Contains LaTeX math outside $ delimiters - \"Rozwiaż równanie \\sin x \\cdot \\tan x-\\sqrt{3}=\\tan x-\\sqrt{3} \\sin x\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Pogrupuj wyrazy tak, aby wyłonić wspólne czynniki. Które wyrazy zawierają \\tan x, a które \\sin x?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"\\sin x \\cdot \\tan x - \\tan x + \\sqrt{3} \\sin x - \\sqrt{3} = 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_150",
+        "issueCount": 27,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na prawą stronę równania. Czy możesz rozłożyć iloczyn 2\\sin^2 x \\cdot (2\\cos x + 1)?\"",
+          "step[0].explanation: Contains LaTeX math outside $ delimiters - \"Rozmnażamy 2\\sin^2 x przez każdy składnik w nawiasie\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Jak możesz rozpisać \\sin 2x używając funkcji kąta pojedynczego?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_151",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_151.statement: Possible nested $ signs - \"$\\frac{1}{\\cos x}$\\right)^{2}+\\left($\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1}{\\cos x}$\\right)^{2}+\\left($, $-\\tan x\\right)^{2} = 2\\left(\\tan^2 x + $\\frac{1}{\\cos^2 x}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\sin^2 x}{\\cos^2 x} +$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_152",
+        "issueCount": 28,
+        "issues": [
+          "tex_problem_152.statement: Possible nested $ signs - \"$\\frac{\\sin x}{\\cos x}$+$, $=$\\frac{8 \\sin 2 x}{3}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\sin x}{\\cos x} +$ $, $ $\\frac{8 \\sin 2x}{3}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} =$ $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_153",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_153.statement: Possible nested $ signs - \"$\\frac{\\cos x}{1-\\sin x}$+$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\cos x}{1-\\sin x}$+$\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Sprowadzamy do wspólnego mianownika (1-\\sin x)\\cos x\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_154",
+        "issueCount": 18,
+        "issues": [
+          "tex_problem_154.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie 2(\\sin x+\\cos x)=\\tan x+1.\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"2(\\sin x + \\cos x) \\cos x = \\sin x + \\cos x\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Mnożymy obie strony przez \\cos x , przy założeniu \\cos x \\neq 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_155",
+        "issueCount": 21,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na wyrażenie (\\cos x - \\sin x)^2. Jak możesz je rozwinąć używając wzoru na kwadrat różnicy?\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\cos^2 x + \\sin^2 x. Czy pamiętasz podstawową tożsamość trygonometryczną?\"",
+          "step[3].explanation: Contains LaTeX math outside $ delimiters - \"Mnożymy całe równanie przez \\cos x \\neq 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_156",
+        "issueCount": 34,
+        "issues": [
+          "tex_problem_156.statement: Contains LaTeX math outside $ delimiters - \"Rozwiaż równanie (1-\\tan x) \\cdot(1+\\sin 2 x)=1+\\tan x.\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"(1-\\tan x) \\cdot (1+\\sin 2x) - (1+\\tan x) = 0\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Rozwiń pierwszy nawias. Co otrzymasz po pomnożeniu (1-\\tan x) przez (1+\\sin 2x)?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_157",
+        "issueCount": 24,
+        "issues": [
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sin^3 x + \\cos^3 x = (\\sin x + \\cos x)(\\sin^2 x - \\sin x \\cos x + \\cos^2 x)\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"(\\sin x + \\cos x)(\\sin^2 x + \\cos^2 x - \\sin x \\cos x) = (\\sin x + \\cos x)(1 - \\sin x \\cos x)\"",
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"(\\sin x + \\cos x)(1 - \\sin x \\cos x) = 1\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_158",
+        "issueCount": 22,
+        "issues": [
+          "tex_problem_158.statement: Possible nested $ signs - \"$x=2$\\sin 3 x+1 w przedziale [0,$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Zauważ, że masz \\sin 6x i \\sin 3x. Czy pamiętasz wzór na sinus podwójnego kąta? Jak możesz rozpisać \\sin 6x?\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha = 2$\\sin $, $\\cos$\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_159",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_159.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\cos 2 x+\\sin 2 x+1=0.\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu \\cos 2x i \\sin 2x. Czy znasz wzory na funkcje podwójnego kąta?\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"(\\cos^2 x - \\sin^2 x) + 2\\sin x \\cos x + 1 = 0\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_160",
+        "issueCount": 6,
+        "issues": [
+          "step[2].explanation: Contains LaTeX math outside $ delimiters - \"Przenosimy \\cos 8x na prawą stronę\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{2\\pi k}{8} =$ $\"",
+          "step[5].expression: Contains LaTeX math outside $ delimiters - \"1 + \\tan x \\neq 0 \\Rightarrow \\tan x \\neq -1\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_161",
+        "issueCount": 30,
+        "issues": [
+          "tex_problem_161.statement: Possible nested $ signs - \"$\\frac{\\pi}{4}$\\right)+\\cos \\left(x+$, $\\right)=1 w przedziale [0 ; 2 $\\pi$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\pi}{4} -$\\cos x \\sin$, $\\right) + \\left(\\cos x \\cos $\\frac{\\pi}{4} -$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\sin(a-b) = \\sin$a \\cos b - \\cos a \\sin b i$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_162",
+        "issueCount": 15,
+        "issues": [
+          "tex_problem_162.statement: Possible nested $ signs - \"$\\frac{\\pi}{3}$\\right)+\\sin \\left(x+$, $\\right)\\right] \\cos x=$\\frac{1}{2} \\sin$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\frac{\\pi}{3} i$ x+$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{\\pi}{3}$\\right) + \\sin\\left(x+$, $\\right) = 2\\sin x \\cos$\\frac{\\pi}{3}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_163",
+        "issueCount": 21,
+        "issues": [
+          "tex_problem_163.statement: Possible nested $ signs - \"$x=2$\\sin 9 x-1 w predziale [0 ;$\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu iloczyn \\sin 7x \\cos 2x. Czy znasz wzór, który pozwala przekształcić iloczyn sinusa i cosinusa na sumę?\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1}{2}$[$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_164",
+        "issueCount": 14,
+        "issues": [
+          "tex_problem_164.statement: Possible nested $ signs - \"$x=1$+\\sin x w przedziale [0 ; 2 $\"",
+          "step[0].explanation: Contains LaTeX math outside $ delimiters - \"Przenosimy \\sin x na lewą stronę, aby zgrupować funkcje trygonometryczne\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"R = \\sqrt{(\\sqrt{3})^2 + (-1)^2} = \\sqrt{3 + 1} = \\sqrt{4} = 2\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_165",
+        "issueCount": 16,
+        "issues": [
+          "tex_problem_165.statement: Contains LaTeX math outside $ delimiters - \"Rozwiazać równanie \\sin 3 x+\\sin x=\\sin 2 x.\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu \\sin 3x i \\sin 2x. Czy znasz wzory na sinus wielokrotności kąta?\"",
+          "step[0].expression: Possible nested $ signs - \"$x = 3$\\sin x - 4\\sin^3 x i \\sin 2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_166",
+        "issueCount": 19,
+        "issues": [
+          "tex_problem_166.statement: Possible nested $ signs - \"$\\sin (6 x)+\\sqrt{3}$\\cdot$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\sin(6x) + \\sqrt{3}$ $\"",
+          "step[1].expression: Possible nested $ signs - \"$\\sin(6x) + \\sin(4x)]$+ \\sqrt{3}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_167",
+        "issueCount": 23,
+        "issues": [
+          "tex_problem_167.statement: Contains LaTeX math outside $ delimiters - \"Rozwiązać równanie \\sin ^{2} x+\\sin ^{2} 2 x=\\sin ^{2} 3 x.\"",
+          "step[0].expression: Possible nested $ signs - \"$\\frac{1 - \\cos 2x}{2}$, \\quad \\sin^2 2x = $, $, \\quad \\sin^2 3x = $\\frac{1 - \\cos 6x}{2}$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{1 - \\cos 2x}{2} +$ $, $ $\\frac{1 - \\cos 6x}{2}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_168",
+        "issueCount": 11,
+        "issues": [
+          "step[2].expression: Possible nested $ signs - \"$x = 1$\\Rightarrow x =$, $ 2$\\pi$\"",
+          "step[2].explanation: Possible nested $ signs - \"$90°$+$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi}{2} +$ 2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_170",
+        "issueCount": 25,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz w równaniu wartość bezwzględną z cosinusa. Kiedy |\\cos x| = \\cos x a kiedy |\\cos x| = -\\cos x?\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"|\\cos x| = \\begin{cases} \\cos x & gdy \\cos x \\geq 0 \\ -\\cos x & gdy \\cos x < 0 \\end{cases}\"",
+          "step[1].expression: Possible nested $ signs - \"$\\frac{\\pi}{2}$] \\cup [$, $, 2$\\pi$, $\\frac{\\pi}{2}$, $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_171",
+        "issueCount": 1,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\cos(\\pi \\log x) = 1$\\Leftrightarrow$, $\\log$x = 2\\pi$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_172",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_172.statement: Possible nested $ signs - \"$\\alpha$\\cdot x^{2}+2 \\sin$, $\\cdot x=\\cos$\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\cdot x^2 + 2\\sin$, $\\cdot x - \\cos$\\alpha = 0$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha$, $, $\\sin $\\alpha$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_173",
+        "issueCount": 24,
+        "issues": [
+          "tex_problem_173.statement: Possible nested $ signs - \"$\\alpha$\\cdot x^{2}+2 \\sin$, $\\cdot x=\\cos$\\alpha$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\cdot x^2 + 2\\sin$, $\\cdot x - \\cos$\\alpha = 0$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\alpha$)^2 - 4 \\cdot \\cos $, $\\cdot (-\\cos$\\alpha$, $\\alpha$+ 4\\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_174",
+        "issueCount": 20,
+        "issues": [
+          "tex_problem_174.statement: Possible nested $ signs - \"$\\alpha$\\cdot x+\\sin$, $+3. Wyznacz te wartości parametru $\\alpha$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$\\cdot x + \\sin$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$\\cdot x + \\sin$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_175",
+        "issueCount": 18,
+        "issues": [
+          "tex_problem_175.statement: Possible nested $ signs - \"$\\alpha$suma kwadratów różnych pierwiastków równania x^{2}-2 x \\sin$, $-\\cos ^{2} $\\alpha=0$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$)^2 - 4 \\cdot 1 \\cdot (-\\cos^2 $, $) = 4\\sin^2 $\\alpha$\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\alpha$- \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_176",
+        "issueCount": 5,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\frac{2k+3}{k-3} \\geq$-1 \\quad i \\quad$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{2k+3}{k-3} +$1 \\geq 0 \\Rightarrow$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{2k+3+k-3}{k-3} \\geq$0 \\Rightarrow$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_177",
+        "issueCount": 11,
+        "issues": [
+          "tex_problem_177.statement: Contains LaTeX math outside $ delimiters - \"Znajdź te wartości parametru m, dla których równanie (1-\\sin x) m^{2}+2 m+4 \\sin x-8=0 ma rozwiązania.\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"(1-\\sin x) m^2 + 2m + (4\\sin x - 8) = 0\"",
+          "step[2].explanation: Possible nested $ signs - \"$x = 1$otrzymujemy równanie liniowe z rozwiązaniem$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_178",
+        "issueCount": 10,
+        "issues": [
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Spójrz na strukturę równania. Co ci przypomina wyrażenie \\sin^2 x + \\sin x + m?\"",
+          "step[0].explanation: Contains LaTeX math outside $ delimiters - \"Rozpoznajemy równanie kwadratowe względem \\sin x\"",
+          "step[1].explanation: Contains LaTeX math outside $ delimiters - \"Po podstawieniu t = \\sin x otrzymujemy równanie kwadratowe\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_179",
+        "issueCount": 12,
+        "issues": [
+          "tex_problem_179.statement: Contains LaTeX math outside $ delimiters - \"Dla jakich wartości parametru m równanie \\cos x+\\sqrt{3} \\sin x=\\log m^{2} ma rozwiązania?\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Masz wyrażenie \\cos x + \\sqrt{3} \\sin x. Czy pamiętasz wzór na sumę funkcji trygonometrycznych z różnymi współczynnikami?\"",
+          "step[0].explanation: Possible nested $ signs - \"$\\sin(x + \\phi)$lub R$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_180",
+        "issueCount": 11,
+        "issues": [
+          "step[0].hint: Possible nested $ signs - \"$30°$i \\tan$\"",
+          "step[0].expression: Possible nested $ signs - \"$30° = \\frac${\\sqrt{3}}{2}, \\quad \\tan $, $=$\\frac{\\sin 30°}{\\cos 30°}$\"",
+          "step[1].expression: Possible nested $ signs - \"$30°$=$, $, \\quad \\cos $30° = \\frac$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_181",
+        "issueCount": 6,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$30°$=$, $ $\\frac{1/2}{\\sqrt{3}$\"",
+          "step[1].explanation: Possible nested $ signs - \"$30°$=$\"",
+          "step[2].explanation: Contains LaTeX math outside $ delimiters - \"Upraszczamy współczynnik przy x: 2 \\cdot \\frac{\\sqrt{3}}{2} = \\sqrt{3}\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_182",
+        "issueCount": 15,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$30°$\\cdot x + \\tan$\"",
+          "step[1].hint: Possible nested $ signs - \"$30°$i \\tan$\"",
+          "step[1].expression: Possible nested $ signs - \"$30° = \\frac${\\sqrt{3}}{2}, \\quad \\tan $, $=$\\frac{\\sin 30°}{\\cos 30°} =$, $\\frac{1/2}{\\sqrt{3}$/2} = $\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_183",
+        "issueCount": 16,
+        "issues": [
+          "tex_problem_183.statement: Possible nested $ signs - \"$\\alpha$i$, $, wiedząc, że $\\sin (\\alpha-\\beta)=\\frac{1}{2}$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\sin(\\alpha - \\beta) = \\frac{1}{2}$i$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\sin(\\alpha - \\beta) = \\frac{1}{2}$\\Rightarrow$, $-$\\beta = 30°$, $\\alpha$-$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_184",
+        "issueCount": 6,
+        "issues": [
+          "tex_problem_184.statement: Possible nested $ signs - \"$\\frac{2}{3} jest$sinusem kąta ostrego$, $ i rozwiązaniem równania 9 x^{2}+b x+$c=0$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$taki, że \\sin \\alpha =$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_185",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_185.statement: Possible nested $ signs - \"$\\frac{2}{3} jest$sinusem kąta ostrego$, $ i rozwiązaniem równania 9 x^{2}+b x+$c=0$\"",
+          "step[0].hint: Possible nested $ signs - \"$\\alpha$taki, że \\sin \\alpha =$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_186",
+        "issueCount": 9,
+        "issues": [
+          "tex_problem_186.statement: Possible nested $ signs - \"$\\frac{2}{3} jest$sinusem kąta ostrego$, $ i rozwiązaniem równania 9 x^{2}+b x+$c=0$\"",
+          "step[0].expression: Possible nested $ signs - \"$\\alpha$+ \\cos^2$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\alpha = 1$- \\sin^2$, $ - \\left($\\frac{2}{3}$, $\\frac{4}{9} =$ $, $ $\\frac{5}{9}$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_187",
+        "issueCount": 16,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$1/3$} \\cdot 128^{$, $}}{32^{$1/2$\"",
+          "step[3].expression: Possible nested $ signs - \"$1/3$} \\cdot (2^7)^{$, $}}{(2^5)^{$1/2$, $4/3$} \\cdot 2^{$, $}}{2^{$5/2$\"",
+          "step[4].expression: Possible nested $ signs - \"$c = 2$^{$, $+$7/6$, $5/2$} = 2^{$, $+$7/6$, $15/6$} = 2^{$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_188",
+        "issueCount": 20,
+        "issues": [
+          "tex_problem_188.statement: Contains LaTeX math outside $ delimiters - \"Obliczyć bez użycia tablic \\frac{9 \\sin 140^{\\circ}-4 \\cos 230^{\\circ}+12 \\sin 580^{\\circ}}{3 \\sin 40^{\\circ}-2 \\cos 410^{\\circ}}.\"",
+          "step[0].expression: Possible nested $ signs - \"$580°$=$, $ $220°$\"",
+          "step[1].expression: Possible nested $ signs - \"$410°$=$, $ $50°$\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_189",
+        "issueCount": 21,
+        "issues": [
+          "tex_problem_189.statement: Contains LaTeX math outside $ delimiters - \"Rozwiąż równanie \\sin ^{2} 5 x=k, gdzie k jest rozwiązaniem równania 4 x^{3}-5 x^{2}-7 x+2=0.\"",
+          "step[2].explanation: Possible nested $ signs - \"$c = 0$mamy$, $, $b = 3$\"",
+          "step[3].explanation: Contains LaTeX math outside $ delimiters - \"Ponieważ \\sqrt{25} = 5\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_190",
+        "issueCount": 8,
+        "issues": [
+          "tex_problem_190.statement: Contains LaTeX math outside $ delimiters - \"Wykaż, że największe wartości funkcji y=\\left(\\log _{2} 3\\right)^{\\sin x} oraz y=\\left(\\log _{3} 2\\right)^{\\cos x} są sobie równe.\"",
+          "step[0].hint: Contains LaTeX math outside $ delimiters - \"Aby znaleźć największe wartości funkcji, zas\\tanów się: kiedy funkcja a^{f(x)} osiąga maksimum dla a > 1?\"",
+          "step[2].hint: Contains LaTeX math outside $ delimiters - \"Jakie są największe wartości funkcji \\sin x i \\cos x? Przypomnij sobie ich zakresy\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_191",
+        "issueCount": 13,
+        "issues": [
+          "tex_problem_191.statement: Contains LaTeX math outside $ delimiters - \"Wyznacz dziedzinę funkcji f(x)=\\frac{\\log _{x-1} \\sqrt{16-x^{2}}}{\\tan x}.\"",
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"f(x) = \\frac{\\log_{x-1} \\sqrt{16-x^2}}{\\tan x}\"",
+          "step[1].hint: Contains LaTeX math outside $ delimiters - \"Zacznij od pierwiastka w liczniku logarytmu. Kiedy \\sqrt{16-x^2} jest określony?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_192",
+        "issueCount": 17,
+        "issues": [
+          "step[0].expression: Contains LaTeX math outside $ delimiters - \"\\sin^8 x + \\cos^8 x = (\\sin^4 x)^2 + (\\cos^4 x)^2\"",
+          "step[1].expression: Contains LaTeX math outside $ delimiters - \"(\\sin^4 x)^2 + (\\cos^4 x)^2 = (\\sin^4 x + \\cos^4 x)^2 - 2\\sin^4 x \\cos^4 x\"",
+          "step[2].hint: Contains LaTeX math outside $ delimiters - \"Teraz musisz uprościć \\sin^4 x + \\cos^4 x. Czy możesz przepisać to jako kwadraty drugich potęg?\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_193",
+        "issueCount": 3,
+        "issues": [
+          "step[2].expression: Contains LaTeX math outside $ delimiters - \"\\cos t = t^2 + 1\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"-1 \\leq \\cos t \\leq 1 \\Rightarrow -1 \\leq t^2 + 1 \\leq 1\"",
+          "step[6].expression: Contains LaTeX math outside $ delimiters - \"\\cos 0 = 0^2 + 1 \\Rightarrow 1 = 1 \\checkmark\""
+        ]
+      },
+      {
+        "problemId": "tex_problem_194",
+        "issueCount": 10,
+        "issues": [
+          "step[3].expression: Possible nested $ signs - \"$\\frac{1}{|t|} \\geq$2\\sqrt{|t| \\cdot$\"",
+          "step[5].expression: Contains LaTeX math outside $ delimiters - \"\\cos x \\in [-1, 1] \\Rightarrow 2\\cos x \\in [-2, 2]\"",
+          "step[7].expression: Possible nested $ signs - \"$x = 1$\\Rightarrow$\""
+        ]
+      }
+    ],
+    "detailedIssues": [
+      {
+        "index": 0,
+        "problemId": "tex_problem_2",
+        "isValid": false,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[3].expression: Possible nested $ signs - \"$18°$=$, $ $\\frac{18\\pi}{180}$\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{18}{180} =$ $, $ $\\frac{1}{10}$\""
+        ]
+      },
+      {
+        "index": 1,
+        "problemId": "tex_problem_3",
+        "isValid": false,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[1].expression: Possible nested $ signs - \"$1° = \\frac{2\\pi}{360°} rad$= $\"",
+          "step[3].expression: Possible nested $ signs - \"$5° = \\frac{5\\pi}{180} rad$= $\"",
+          "step[3].explanation: Possible nested $ signs - \"$\\frac{5}{180} =$ $, $ $\\frac{1}{36}$\"",
+          "step[4].hint: Possible nested $ signs - \"$\\frac{\\pi}{36} to$mała część pełnego obrotu, jak powinno być dla$\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{\\pi}{36} \\approx$ $, $ $0.087$\"",
+          "step[4].explanation: Possible nested $ signs - \"$\\pi$\\approx$\""
+        ]
+      },
+      {
+        "index": 2,
+        "problemId": "tex_problem_4",
+        "isValid": false,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ w mierze stopniowej i 2$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi}{180} =$ $\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{360\\pi}{180} =$ $, $\\pi =$\\frac{2}{1} \\cdot$\""
+        ]
+      },
+      {
+        "index": 3,
+        "problemId": "tex_problem_5",
+        "isValid": false,
+        "issues": [
+          "step[0].explanation: Possible nested $ signs - \"$360°$ lub 2$\"",
+          "step[1].expression: Possible nested $ signs - \"$1° = \\frac{2\\pi}{360°} rad$= $\"",
+          "step[3].expression: Possible nested $ signs - \"$90° = \\frac{90\\pi}{180} rad$= $\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{90\\pi}{180} =$ $, $ $\\frac{\\pi}{2}$\"",
+          "step[5].explanation: Possible nested $ signs - \"$\\frac{2\\pi}{4} =$ $\""
+        ]
+      },
+      {
+        "index": 4,
+        "problemId": "tex_problem_7",
+        "isValid": false,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\pi$ radianó$, $\\cdot$\\frac{180°}{\\pi}$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\pi$\\cdot$, $3 \\cdot$\\frac{\\pi \\cdot 180°}{\\pi}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi \\cdot 180°}{\\pi} =$3 \\cdot$\"",
+          "step[4].expression: Possible nested $ signs - \"$180°$=$\""
+        ]
+      },
+      {
+        "index": 5,
+        "problemId": "tex_problem_9",
+        "isValid": false,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\pi$ radianó$\"",
+          "step[1].hint: Possible nested $ signs - \"$\\pi$radianów to$, $, to ile stopni to $\\pi$\"",
+          "step[1].expression: Possible nested $ signs - \"$\\pi$ radianó$\"",
+          "step[2].hint: Possible nested $ signs - \"$\\frac{\\pi}{3}$. Jak możesz wykorzystać fakt, że $\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\pi}{3} =$ $\"",
+          "step[2].explanation: Possible nested $ signs - \"$\\pi = 180°$do wyrażenia$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{180°}{3} =$ $\"",
+          "step[4].hint: Possible nested $ signs - \"$60°$to rozsądna wartość dla kąta$\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{\\pi}{3} =$ $\""
+        ]
+      },
+      {
+        "index": 6,
+        "problemId": "tex_problem_10",
+        "isValid": false,
+        "issues": [
+          "step[1].expression: Possible nested $ signs - \"$\\frac{5\\pi}{6} \\cdot$ $\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{5\\pi}{6} \\cdot$ $, $ $\\frac{5 \\cdot 180°}{6}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{5 \\cdot 180°}{6} =$ $\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{900°}{6} =$ $\""
+        ]
+      },
+      {
+        "index": 7,
+        "problemId": "tex_problem_11",
+        "isValid": false,
+        "issues": [
+          "step[0].expression: Possible nested $ signs - \"$\\pi$ radianó$\"",
+          "step[2].expression: Possible nested $ signs - \"$\\frac{\\pi}{18} radianów$=$, $ $\\frac{180°}{\\pi}$\"",
+          "step[3].expression: Possible nested $ signs - \"$\\frac{\\pi}{18} \\cdot$ $, $ $\\frac{\\pi \\cdot 180°}{18 \\cdot \\pi}$\"",
+          "step[4].expression: Possible nested $ signs - \"$\\frac{\\pi \\cdot 180°}{18 \\cdot \\pi} =$ $\"",
+          "step[5].expression: Possible nested $ signs - \"$\\frac{180°}{18} =$ $\"",
+          "tex_problem_11.solutions[0]: Possible nested $ signs - \"$\\frac{\\pi}{18} radianów$=$\""
+        ]
+      },
+      {
+        "index": 8,
+        "problemId": "tex_problem_12",
+        "isValid": false,
+        "issues": [
+          "tex_problem_12.statement: Contains LaTeX math outside $ delimiters - \"Przyprostokątne AB i AC trójkąta prostokątnego ABC mają długości równe odpowiednio 5 i 3 . Oblicz \\tan kąta ABC\"",
+          "step[1].expression: Possible nested $ signs - \"$AC = 3$, przyprostokątna przyległa to $\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"BC = \\sqrt{34}\"",
+          "step[3].explanation: Contains LaTeX math outside $ delimiters - \"Przeciwprostokątna ma długość \\sqrt{34}\"",
+          "step[6].expression: Possible nested $ signs - \"$\\tan(\\angle ABC) = \\frac{AC}{AB}$=$\"",
+          "step[6].explanation: Possible nested $ signs - \"$AC = 3$, przyległa $\""
+        ]
+      },
+      {
+        "index": 9,
+        "problemId": "tex_problem_13",
+        "isValid": false,
+        "issues": [
+          "tex_problem_13.statement: Contains LaTeX math outside $ delimiters - \"Przyprostokątne AB i AC trójkąta prostokątnego ABC mają długości równe odpowiednio 5 i 3 . Oblicz \\tan kąta ACB\"",
+          "step[1].expression: Possible nested $ signs - \"$AB = 5$i$\"",
+          "step[3].expression: Contains LaTeX math outside $ delimiters - \"|BC| = \\sqrt{34}\"",
+          "step[3].explanation: Contains LaTeX math outside $ delimiters - \"Długość przeciwprostokątnej wynosi \\sqrt{34}\"",
+          "step[6].expression: Possible nested $ signs - \"$\\tan(\\angle ACB) = \\frac{|AB|}{|AC|}$=$\""
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    "✅ Wszystkie konwersje przeszły pomyślnie",
+    "❌ Wysokie błędy walidacji - wymagane poprawki",
+    "🔧 WYMAGANE: Poprawki przed przejściem do kolejnej fazy"
+  ]
+}
