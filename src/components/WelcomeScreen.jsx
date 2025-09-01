@@ -16,9 +16,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
     }
   ];
 
-  // Proporcje oparte na liczbie e (e ≈ 2.718)
-  const moduleHeight = 200;
-  const moduleWidth = Math.round(moduleHeight * Math.E); // 200 * 2.718 ≈ 544
+  // Responsywne wymiary z zachowaniem proporcji opartych na liczbie e
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-6">
@@ -38,14 +36,15 @@ const WelcomeScreen = ({ onSelectMode }) => {
               className={`group relative bg-gray-950 border rounded-3xl 
                          transition-all duration-200 
                          focus:outline-none focus:ring-2 focus:ring-gray-600
-                         flex flex-col items-center justify-center ${
+                         flex flex-col items-center justify-center
+                         w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg
+                         h-28 sm:h-32 md:h-36 lg:h-40 ${
                            module.highlight === 'blue'
                            ? 'border-blue-600 hover:border-blue-500 hover:bg-blue-900/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'
                            : module.highlight === 'red'
                            ? 'border-red-600 hover:border-red-500 hover:bg-red-900/20 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]'
                            : 'border-gray-800 hover:border-gray-700 hover:bg-gray-900/50 hover:shadow-[0_0_30px_rgba(255,193,7,0.3)]'
                          }`}
-              style={{ width: `${moduleWidth}px`, height: `${moduleHeight}px` }}
             >
               <div className="text-center flex flex-col items-center gap-4">
                 <div className={`text-4xl ${
