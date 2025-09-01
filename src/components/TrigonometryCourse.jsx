@@ -38,7 +38,7 @@ const TrigonometryCourse = () => {
   const getSectionInfo = () => {
     if (mode === 'powers') {
       return {
-        title: 'Potęgi i pierwiastki',
+        title: 'Trygonometria',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
