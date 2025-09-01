@@ -285,7 +285,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
           )}
 
           {/* Next Problem Suggestion - Only show when problem is completed */}
-          {showSolution && (
+          {false && showSolution && (
             <NextProblemSuggestion 
               currentProblem={problem}
               completedProblems={completedProblems}
