@@ -1,7 +1,7 @@
 [
   {
     "id": "tex_problem_1",
-    "topic": "Równania trygonometryczne",
+    "topic": "Definicja wielomianu",
     "statement": "Które z podanych wyrażeń jest wielomianem jednej zmiennej $x$? $3x^2 + 2x - 5$, $\\frac{2}{x} + x$, $\\sqrt{x} + 1$",
     "steps": [
       {
@@ -96,7 +96,7 @@
   },
   {
     "id": "tex_problem_2",
-    "topic": "Równania trygonometryczne",
+    "topic": "Definicja wielomianu",
     "statement": "Rozpoznaj, które wyrażenie to wielomian: $2x^3 - x^{-1} + 4$, $x^2 + 3x + 1$, $\\sin(x) + x^2$",
     "steps": [
       {
@@ -170,7 +170,7 @@
   },
   {
     "id": "tex_problem_3",
-    "topic": "Równania trygonometryczne",
+    "topic": "Definicja wielomianu",
     "statement": "Określ, które z wyrażeń: $5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$, $x^{\\frac{3}{2}} + x$, $e^x - 2x + 1$ jest wielomianem.",
     "steps": [
       {
@@ -266,7 +266,7 @@
   },
   {
     "id": "tex_problem_4",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Znajdź stopień jednomianu $-7x^5$ i podaj jego współczynnik.",
     "steps": [
       {
@@ -333,7 +333,7 @@
   },
   {
     "id": "tex_problem_5",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Określ stopień wielomianu $3x^4 - 2x^2 + x - 8$ i wymień wszystkie jego współczynniki",
     "steps": [
       {
@@ -387,7 +387,7 @@
   },
   {
     "id": "tex_problem_6",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Dla wielomianu $-2x^6 + 4x^5 - x^3 + 7x^2 - 3x + 1$ podaj stopień oraz współczynnik przy $x^5$",
     "steps": [
       {
@@ -447,7 +447,7 @@
   },
   {
     "id": "tex_problem_8",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Napisz wielomian $x^2 - 4x^5 + 2x + 7x^3 - 1$ w porządku malejących potęg",
     "steps": [
       {
@@ -506,7 +506,7 @@
   },
   {
     "id": "tex_problem_9",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Uporządkuj według malejących potęg wielomian $-3x + x^7 - 2x^4 + 6 + x^2 - x^6$",
     "steps": [
       {
@@ -571,7 +571,7 @@
   },
   {
     "id": "tex_problem_10",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Wyznacz wyraz wolny i współczynnik przy najwyższej potędze wielomianu $2x^3 - 5x + 7$",
     "steps": [
       {
@@ -625,7 +625,7 @@
   },
   {
     "id": "tex_problem_11",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Dla wielomianu $-x^4 + 3x^2 - 2x + 8$ podaj wyraz wolny i współczynnik dominujący.",
     "steps": [
       {
@@ -679,7 +679,7 @@
   },
   {
     "id": "tex_problem_12",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "W wielomianie $a_n x^n + a_{n-1} x^{n-1} + \\ldots + a_1 x + a_0$, gdzie $a_n \\neq 0$, które wyrazy to wyraz wolny i współczynnik przy najwyższej potędze?",
     "steps": [
       {
@@ -741,7 +741,7 @@
   },
   {
     "id": "tex_problem_13",
-    "topic": "Równania trygonometryczne",
+    "topic": "Stopień i współczynniki",
     "statement": "Oblicz wartość wielomianu $P(x) = 2x^2 - 3x + 1$ dla $x = 2$",
     "steps": [
       {
@@ -866,7 +866,7 @@
   },
   {
     "id": "tex_problem_15",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Oblicz wartość wielomianu $Q(x) = -x^4 + 2x^3 - x^2 + 5x - 7$ w punkcie $x = -2$",
     "steps": [
       {
@@ -919,7 +919,7 @@
   },
   {
     "id": "tex_problem_16",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Wyznacz współczynnik $a$ w wielomianie $P(x) = ax^2 + 3x - 2$, jeśli $P(1) = 5$",
     "steps": [
       {
@@ -978,7 +978,7 @@
   },
   {
     "id": "tex_problem_17",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Dla wielomianu $W(x) = x^3 + bx^2 + cx + d$ wiadomo, że $W(0) = 2$, $W(1) = 4$. Wyznacz $d$ i związek między $b$ i $c$.",
     "steps": [
       {
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "tex_problem_18",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Znajdź współczynniki $a$ i $b$ w wielomianie $Q(x) = x^2 + ax + b$, jeśli $Q(-1) = 3$ i $Q(2) = 0$",
     "steps": [
       {
@@ -1167,7 +1167,7 @@
   },
   {
     "id": "tex_problem_19",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Oblicz sumę wszystkich współczynników wielomianu $P(x) = 3x^4 - 2x^3 + x^2 - 5x + 7$",
     "steps": [
       {
@@ -1234,7 +1234,7 @@
   },
   {
     "id": "tex_problem_21",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wartości wielomianu",
     "statement": "Dla wielomianu $Q(x) = ax^n + a_{n-1}x^{n-1} + \\ldots + a_1x + a_0$ podaj wzór na sumę jego współczynników.",
     "steps": [
       {
@@ -1300,7 +1300,7 @@
   },
   {
     "id": "tex_problem_23",
-    "topic": "Równania trygonometryczne",
+    "topic": "Suma współczynników",
     "statement": "Określ, czy wielomiany $A(x) = x^3 + 2x - 5$ i $B(x) = x^3 + 0x^2 + 2x - 5$ są równe.",
     "steps": [
       {
@@ -1368,7 +1368,7 @@
   },
   {
     "id": "tex_problem_24",
-    "topic": "Równania trygonometryczne",
+    "topic": "Suma współczynników",
     "statement": "Zbadaj równość wielomianów $F(x) = (x+1)^2 - 1$ i $G(x) = x^2 + 2x$",
     "steps": [
       {
@@ -1452,7 +1452,7 @@
   },
   {
     "id": "tex_problem_25",
-    "topic": "Równania trygonometryczne",
+    "topic": "Suma współczynników",
     "statement": "Dla jakich wartości parametru $a$ wielomiany $P(x) = ax^2 + 3x - 2$ i $Q(x) = 2x^2 + 3x + a$ są równe?",
     "steps": [
       {
@@ -1535,7 +1535,7 @@
   },
   {
     "id": "tex_problem_26",
-    "topic": "Równania trygonometryczne",
+    "topic": "Suma współczynników",
     "statement": "Wyznacz parametry $a$ i $b$, dla których wielomiany $W(x) = x^3 + ax + b$ i $V(x) = x^3 + 2x + 5$ są równe.",
     "steps": [
       {
@@ -1595,7 +1595,7 @@
   },
   {
     "id": "tex_problem_27",
-    "topic": "Równania trygonometryczne",
+    "topic": "Równość wielomianów",
     "statement": "Znajdź wszystkie wartości $m$ i $n$, przy których wielomiany $A(x) = mx^2 + 3x + n$ i $B(x) = x^2 + 3x - 4$ są równe.",
     "steps": [
       {
@@ -1684,7 +1684,7 @@
   },
   {
     "id": "tex_problem_28",
-    "topic": "Równania trygonometryczne",
+    "topic": "Równość wielomianów",
     "statement": "Wykaż, że wielomian $P(x) = 0 \\cdot x^3 + 0 \\cdot x^2 + 0 \\cdot x + 0$ jest wielomianem zerowym.",
     "steps": [
       {
@@ -1756,7 +1756,7 @@
   },
   {
     "id": "tex_problem_29",
-    "topic": "Równania trygonometryczne",
+    "topic": "Równość wielomianów",
     "statement": "Sprawdź, czy wielomian $(x-1)(x+1) - (x^2-1)$ jest wielomianem zerowym.",
     "steps": [
       {
@@ -1822,7 +1822,7 @@
   },
   {
     "id": "tex_problem_30",
-    "topic": "Równania trygonometryczne",
+    "topic": "Równość wielomianów",
     "statement": "Dla jakich wartości parametru $k$ wielomian $W(x) = kx^2 + (k-1)x + (2k-2)$ jest wielomianem zerowym?",
     "steps": [
       {
@@ -1893,7 +1893,7 @@
   },
   {
     "id": "tex_problem_31",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wzory skróconego mnożenia",
     "statement": "Oblicz sumę wielomianów $P(x) = 2x^2 + 3x - 1$ i $Q(x) = x^2 - 2x + 4$",
     "steps": [
       {
@@ -1971,7 +1971,7 @@
   },
   {
     "id": "tex_problem_32",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wzory skróconego mnożenia",
     "statement": "Wyznacz różnicę wielomianów $A(x) = 3x^3 - 2x + 5$ i $B(x) = x^3 + x^2 - 3x + 1$",
     "steps": [
       {
@@ -2030,7 +2030,7 @@
   },
   {
     "id": "tex_problem_34",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wzory skróconego mnożenia",
     "statement": "Wymnóż wielomiany $P(x) = x + 2$ i $Q(x) = x^2 - 3x + 1$",
     "steps": [
       {
@@ -2089,7 +2089,7 @@
   },
   {
     "id": "tex_problem_35",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wzory skróconego mnożenia",
     "statement": "Oblicz iloczyn $(2x^2 - x + 3)(x^2 + 2x - 1)$ metodą pisemną",
     "steps": [
       {
@@ -2160,7 +2160,7 @@
   },
   {
     "id": "tex_problem_36",
-    "topic": "Równania trygonometryczne",
+    "topic": "Wzory skróconego mnożenia",
     "statement": "Wyznacz iloczyn wielomianów $(x^3 - 2x + 1)(x^2 + x - 2)$",
     "steps": [
       {
@@ -2302,7 +2302,7 @@
   },
   {
     "id": "tex_problem_40",
-    "topic": "Równania trygonometryczne",
+    "topic": "Zastosowanie wzorów",
     "statement": "Zastosuj wzór $(a+b)^2 = a^2 + 2ab + b^2$ do obliczenia $(2x + 3)^2$",
     "steps": [
       {
