@@ -1,0 +1,2362 @@
+[
+  {
+    "id": "tex_problem_1",
+    "topic": "Równania trygonometryczne",
+    "statement": "Które z podanych wyrażeń jest wielomianem jednej zmiennej $x$? $3x^2 + 2x - 5$, $\\frac{2}{x} + x$, $\\sqrt{x} + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie definicję wielomianu. Jakie warunki musi spełniać wyrażenie, żeby być wielomianem jednej zmiennej?",
+        "expression": "Wielomian jednej zmiennej $x$ to wyrażenie postaci $a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0$",
+        "explanation": "Wielomian składa się z sumy jednomianów, gdzie każdy jednomian ma postać $a_k x^k$ z wykładnikiem będącym liczbą naturalną"
+      },
+      {
+        "step": 2,
+        "hint": "Sprawdź pierwsze wyrażenie. Czy wszystkie składniki mają zmienną $x$ podniesioną do potęgi będącej liczbą naturalną?",
+        "expression": "$3x^2 + 2x - 5 = 3x^2 + 2x^1 + (-5)x^0$",
+        "explanation": "Przepisujemy wyrażenie w standardowej postaci wielomianu"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są wykładniki przy zmiennej $x$ w pierwszym wyrażeniu? Czy są to liczby naturalne?",
+        "expression": "Wykładniki: $2$, $1$, $0$ - wszystkie są liczbami naturalnymi",
+        "explanation": "Pierwsze wyrażenie spełnia warunki definicji wielomianu"
+      },
+      {
+        "step": 4,
+        "hint": "Przeanalizuj drugie wyrażenie. Jak możesz przepisać $\\frac{2}{x}$ używając potęg?",
+        "expression": "$\\frac{2}{x} + x = 2x^{-1} + x^1$",
+        "explanation": "Ułamek $\\frac{2}{x}$ to $2x^{-1}$, czyli zmienna z wykładnikiem ujemnym"
+      },
+      {
+        "step": 5,
+        "hint": "Czy wykładnik $-1$ jest liczbą naturalną? Co to oznacza dla drugiego wyrażenia?",
+        "expression": "Wykładnik $-1$ nie jest liczbą naturalną",
+        "explanation": "Drugie wyrażenie nie jest wielomianem, bo zawiera zmienną z wykładnikiem ujemnym"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź trzecie wyrażenie. Jak możesz przepisać $\\sqrt{x}$ używając potęg?",
+        "expression": "$\\sqrt{x} + 1 = x^{\\frac{1}{2}} + 1$",
+        "explanation": "Pierwiastek kwadratowy to potęga $\\frac{1}{2}$"
+      },
+      {
+        "step": 7,
+        "hint": "Czy wykładnik $\\frac{1}{2}$ jest liczbą naturalną? Co to oznacza dla trzeciego wyrażenia?",
+        "expression": "Wykładnik $\\frac{1}{2}$ nie jest liczbą naturalną",
+        "explanation": "Trzecie wyrażenie nie jest wielomianem, bo zawiera zmienną z wykładnikiem ułamkowym"
+      }
+    ],
+    "solutions": [
+      "Wielomianem jednej zmiennej $x$ jest tylko wyrażenie $3x^2 + 2x - 5$"
+    ],
+    "parameters": {
+      "polynomial_degree": 2,
+      "coefficients": [
+        3,
+        2,
+        -5
+      ]
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 4,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Przeanalizuj drugie wyrażenie. Jak możesz przepisać $\\frac{2}{x}$ używając potęg?",
+          "vagueWords": [
+            "może"
+          ]
+        },
+        {
+          "type": "vague_hint",
+          "step": 6,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Sprawdź trzecie wyrażenie. Jak możesz przepisać $\\sqrt{x}$ używając potęg?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9,
+      "metrics": {
+        "avgExplanationLength": 73,
+        "maxExplanationLength": 122,
+        "vagueWordsCount": 2,
+        "problematicStepsPercentage": 29,
+        "warningTypeCounts": {
+          "vague_hint": 2
+        }
+      },
+      "timestamp": "2025-09-01T09:40:37.004Z"
+    }
+  },
+  {
+    "id": "tex_problem_2",
+    "topic": "Równania trygonometryczne",
+    "statement": "Rozpoznaj, które wyrażenie to wielomian: $2x^3 - x^{-1} + 4$, $x^2 + 3x + 1$, $\\sin(x) + x^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie definicję wielomianu. Jakie warunki musi spełniać wyrażenie, żeby było wielomianem?",
+        "expression": "Wielomian to wyrażenie postaci $a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0$",
+        "explanation": "Wielomian składa się tylko z potęg zmiennej o wykładnikach całkowitych nieujemnych"
+      },
+      {
+        "step": 2,
+        "hint": "Sprawdź pierwsze wyrażenie: $2x^3 - x^{-1} + 4$. Czy wszystkie wykładniki są całkowite i nieujemne?",
+        "expression": "$2x^3 - x^{-1} + 4 = 2x^3 - \\frac{1}{x} + 4$",
+        "explanation": "Składnik $x^{-1} = \\frac{1}{x}$ ma wykładnik ujemny, więc to nie jest wielomian"
+      },
+      {
+        "step": 3,
+        "hint": "Przeanalizuj drugie wyrażenie: $x^2 + 3x + 1$. Jakie wykładniki występują przy zmiennej $x$?",
+        "expression": "$x^2 + 3x + 1 = 1 \\cdot x^2 + 3 \\cdot x^1 + 1 \\cdot x^0$",
+        "explanation": "Wszystkie wykładniki (2, 1, 0) są całkowite i nieujemne"
+      },
+      {
+        "step": 4,
+        "hint": "Czy wyrażenie $x^2 + 3x + 1$ zawiera tylko potęgi zmiennej z liczbowymi współczynnikami?",
+        "expression": "Współczynniki: $a_2 = 1$, $a_1 = 3$, $a_0 = 1$",
+        "explanation": "To jest wielomian stopnia drugiego o współczynnikach rzeczywistych"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź trzecie wyrażenie: $\\sin(x) + x^2$. Czy funkcja sinus może występować w wielomianie?",
+        "expression": "$\\sin(x) + x^2$",
+        "explanation": "Funkcja $\\sin(x)$ nie jest potęgą zmiennej, więc całe wyrażenie nie jest wielomianem"
+      },
+      {
+        "step": 6,
+        "hint": "Porównaj wszystkie trzy wyrażenia z definicją wielomianu. Które spełnia wszystkie warunki?",
+        "expression": "Tylko $x^2 + 3x + 1$ ma postać $a_n x^n + ... + a_1 x + a_0$",
+        "explanation": "Pierwsze zawiera potęgę ujemną, trzecie zawiera funkcję trygonometryczną"
+      }
+    ],
+    "solutions": [
+      "Wielomianem jest wyrażenie $x^2 + 3x + 1$"
+    ],
+    "parameters": {
+      "reasoning": "Wielomian może zawierać tylko potęgi zmiennej o wykładnikach całkowitych nieujemnych"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Sprawdź trzecie wyrażenie: $\\sin(x) + x^2$. Czy funkcja sinus może występować w wielomianie?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 10,
+      "metrics": {
+        "avgExplanationLength": 73,
+        "maxExplanationLength": 84,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 17,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:40:50.147Z"
+    }
+  },
+  {
+    "id": "tex_problem_3",
+    "topic": "Równania trygonometryczne",
+    "statement": "Określ, które z wyrażeń: $5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$, $x^{\\frac{3}{2}} + x$, $e^x - 2x + 1$ jest wielomianem.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie definicję wielomianu. Jakie warunki musi spełniać wyrażenie, żeby było wielomianem?",
+        "expression": "Wielomian to wyrażenie postaci $a_n x^n + a_{n-1} x^{n-1} + \\ldots + a_1 x + a_0$",
+        "explanation": "Wielomian składa się z sumy jednomianów, gdzie wykładniki są liczbami naturalnymi lub zerem"
+      },
+      {
+        "step": 2,
+        "hint": "Sprawdź pierwsze wyrażenie. Jakie są wykładniki przy zmiennej $x$ w wyrażeniu $5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$?",
+        "expression": "$5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7 = 5x^4 + (-2)x^3 + \\frac{1}{2}x^2 + 0x^1 + (-7)x^0$",
+        "explanation": "Przepisujemy w standardowej postaci wielomianu, uwzględniając wszystkie potęgi"
+      },
+      {
+        "step": 3,
+        "hint": "Czy wszystkie wykładniki w pierwszym wyrażeniu są liczbami naturalnymi lub zerem? Czy współczynniki są liczbami rzeczywistymi?",
+        "expression": "Wykładniki: $4, 3, 2, 1, 0$ - wszystkie są liczbami naturalnymi",
+        "explanation": "Pierwsze wyrażenie spełnia warunki definicji wielomianu"
+      },
+      {
+        "step": 4,
+        "hint": "Przeanalizuj drugie wyrażenie $x^{\\frac{3}{2}} + x$. Jaki jest wykładnik przy pierwszym składniku?",
+        "expression": "$x^{\\frac{3}{2}} + x = x^{1.5} + x^1$",
+        "explanation": "Wykładnik $\\frac{3}{2} = 1.5$ nie jest liczbą naturalną ani zerem"
+      },
+      {
+        "step": 5,
+        "hint": "Czy wyrażenie z wykładnikiem ułamkowym może być wielomianem? Co mówi o tym definicja?",
+        "expression": "Drugie wyrażenie NIE jest wielomianem",
+        "explanation": "Wykładnik $\\frac{3}{2}$ nie jest liczbą naturalną, więc narusza definicję wielomianu"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź trzecie wyrażenie $e^x - 2x + 1$. Czy funkcja wykładnicza $e^x$ może wystąpić w wielomianie?",
+        "expression": "$e^x - 2x + 1$ zawiera funkcję wykładniczą $e^x$",
+        "explanation": "Funkcja $e^x$ nie jest potęgą zmiennej $x$ z wykładnikiem naturalnym"
+      },
+      {
+        "step": 7,
+        "hint": "Porównaj strukturę trzeciego wyrażenia z definicją wielomianu. Czy $e^x$ można zapisać jako $a \\cdot x^n$?",
+        "expression": "Trzecie wyrażenie NIE jest wielomianem",
+        "explanation": "Składnik $e^x$ nie ma postaci $ax^n$, gdzie $n$ jest liczbą naturalną"
+      },
+      {
+        "step": 8,
+        "hint": "Podsumuj analizę wszystkich trzech wyrażeń. Które spełniają definicję wielomianu?",
+        "expression": "Wielomianem jest tylko: $5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$",
+        "explanation": "Tylko pierwsze wyrażenie ma wszystkie wykładniki będące liczbami naturalnymi lub zerem"
+      }
+    ],
+    "solutions": [
+      "Wielomianem jest wyrażenie $5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$"
+    ],
+    "parameters": {
+      "reasoning": "Wielomian musi mieć wykładniki będące liczbami naturalnymi lub zerem oraz nie może zawierać funkcji transcendentnych"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Czy wyrażenie z wykładnikiem ułamkowym może być wielomianem? Co mówi o tym definicja?",
+          "vagueWords": [
+            "może"
+          ]
+        },
+        {
+          "type": "vague_hint",
+          "step": 6,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Sprawdź trzecie wyrażenie $e^x - 2x + 1$. Czy funkcja wykładnicza $e^x$ może wystąpić w wielomianie?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9,
+      "metrics": {
+        "avgExplanationLength": 75,
+        "maxExplanationLength": 91,
+        "vagueWordsCount": 2,
+        "problematicStepsPercentage": 25,
+        "warningTypeCounts": {
+          "vague_hint": 2
+        }
+      },
+      "timestamp": "2025-09-01T09:41:08.598Z"
+    }
+  },
+  {
+    "id": "tex_problem_4",
+    "topic": "Równania trygonometryczne",
+    "statement": "Znajdź stopień jednomianu $-7x^5$ i podaj jego współczynnik.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wyrażenie $-7x^5$. Czy rozpoznajesz strukturę jednomianu? Co składa się na jednomian?",
+        "expression": "$-7x^5$",
+        "explanation": "Jednomian to iloczyn liczby i zmiennych podniesionych do potęg naturalnych"
+      },
+      {
+        "step": 2,
+        "hint": "W jednomianie $-7x^5$ możesz wyróżnić dwie części. Która część to współczynnik liczbowy?",
+        "expression": "Współczynnik = $-7$",
+        "explanation": "Współczynnik to liczba stojąca przed zmienną, w tym przypadku $-7$"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz spójrz na część zmienną $x^5$. Co oznacza wykładnik potęgi przy zmiennej?",
+        "expression": "Zmienna: $x^5$",
+        "explanation": "Zmienna $x$ jest podniesiona do piątej potęgi"
+      },
+      {
+        "step": 4,
+        "hint": "Pamiętasz definicję stopnia jednomianu? Jak wyznacza się stopień gdy mamy jedną zmienną?",
+        "expression": "Stopień = wykładnik przy $x$ = $5$",
+        "explanation": "Stopień jednomianu jednej zmiennej to wykładnik tej zmiennej"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź jeszcze raz swoje odpowiedzi. Czy współczynnik i stopień są poprawnie wyznaczone?",
+        "expression": "Współczynnik: $-7$, Stopień: $5$",
+        "explanation": "Jednomian $-7x^5$ ma współczynnik $-7$ i stopień $5$"
+      }
+    ],
+    "solutions": [
+      "Współczynnik: $-7$",
+      "Stopień: $5$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "W jednomianie $-7x^5$ możesz wyróżnić dwie części. Która część to współczynnik liczbowy?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 59,
+        "maxExplanationLength": 74,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:41:18.959Z"
+    }
+  },
+  {
+    "id": "tex_problem_5",
+    "topic": "Równania trygonometryczne",
+    "statement": "Określ stopień wielomianu $3x^4 - 2x^2 + x - 8$ i wymień wszystkie jego współczynniki",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wielomian i znajdź wszystkie występujące w nim potęgi zmiennej $x$. Które potęgi widzisz?",
+        "expression": "$3x^4 - 2x^2 + x - 8 = 3x^4 + 0x^3 - 2x^2 + 1x + (-8)$",
+        "explanation": "Przepisujemy wielomian w postaci standardowej, uwzględniając brakujący składnik $x^3$"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest najwyższa potęga zmiennej $x$ występująca w wielomianie?",
+        "expression": "Najwyższa potęga: $x^4$",
+        "explanation": "Stopień wielomianu to najwyższa potęga zmiennej"
+      },
+      {
+        "step": 3,
+        "hint": "Czy współczynnik przy najwyższej potędze jest różny od zera?",
+        "expression": "Stopień wielomianu = $4$",
+        "explanation": "Ponieważ współczynnik przy $x^4$ wynosi $3 \\neq 0$, stopień wielomianu to $4$"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz znajdź wszystkie współczynniki. Jaka jest liczba stojąca przy każdej potędze $x$?",
+        "expression": "$a_4 = 3$, $a_3 = 0$, $a_2 = -2$, $a_1 = 1$, $a_0 = -8$",
+        "explanation": "Wypisujemy współczynniki przy kolejnych potęgach $x$, od najwyższej do najniższej"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź jeszcze raz wszystkie współczynniki, pamiętając o znakach",
+        "expression": "Współczynnik przy $x^4$: $3$, przy $x^3$: $0$, przy $x^2$: $-2$, przy $x^1$: $1$, wyraz wolny: $-8$",
+        "explanation": "Kompletna lista wszystkich współczynników wielomianu"
+      }
+    ],
+    "solutions": [
+      "Stopień wielomianu: $4$",
+      "Współczynniki: $a_4 = 3$, $a_3 = 0$, $a_2 = -2$, $a_1 = 1$, $a_0 = -8$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 68,
+        "maxExplanationLength": 85,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:41:29.785Z"
+    }
+  },
+  {
+    "id": "tex_problem_6",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla wielomianu $-2x^6 + 4x^5 - x^3 + 7x^2 - 3x + 1$ podaj stopień oraz współczynnik przy $x^5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wielomian. Jak rozpoznać stopień wielomianu? Na co powinieneś zwrócić uwagę?",
+        "expression": "$-2x^6 + 4x^5 - x^3 + 7x^2 - 3x + 1$",
+        "explanation": "Analizujemy dany wielomian, zwracając uwagę na wykładniki przy zmiennej $x$"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie wykładniki występują przy zmiennej $x$ w poszczególnych składnikach?",
+        "expression": "Wykładniki: $6, 5, 3, 2, 1, 0$",
+        "explanation": "Wypisujemy wszystkie wykładniki występujące w wielomianie"
+      },
+      {
+        "step": 3,
+        "hint": "Który z wykładników jest największy? To będzie kluczowe dla określenia stopnia",
+        "expression": "Największy wykładnik: $6$",
+        "explanation": "Stopień wielomianu to najwyższy wykładnik zmiennej występujący w wielomianie"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest stopień tego wielomianu?",
+        "expression": "Stopień wielomianu = $6$",
+        "explanation": "Ponieważ najwyższym wykładnikiem jest $6$, stopień wielomianu wynosi $6$"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz znajdź składnik z $x^5$. Jaka liczba stoi przed tym składnikiem?",
+        "expression": "Składnik z $x^5$: $4x^5$",
+        "explanation": "Identyfikujemy składnik zawierający $x^5$ w wielomianie"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest współczynnik przy $x^5$?",
+        "expression": "Współczynnik przy $x^5$ = $4$",
+        "explanation": "Współczynnik to liczba stojąca przed zmienną, w tym przypadku $4$"
+      }
+    ],
+    "solutions": [
+      "Stopień wielomianu: $6$",
+      "Współczynnik przy $x^5$: $4$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 67,
+        "maxExplanationLength": 76,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:41:39.745Z"
+    }
+  },
+  {
+    "id": "tex_problem_8",
+    "topic": "Równania trygonometryczne",
+    "statement": "Napisz wielomian $x^2 - 4x^5 + 2x + 7x^3 - 1$ w porządku malejących potęg",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby uporządkować wielomian, najpierw musisz zidentyfikować wszystkie składniki. Jakie potęgi zmiennej $x$ występują w tym wielomianie?",
+        "expression": "$x^2 - 4x^5 + 2x + 7x^3 - 1$",
+        "explanation": "Identyfikujemy składniki: $-4x^5$, $7x^3$, $x^2$, $2x$, $-1$"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest stopień każdego składnika? Wypisz potęgi w kolejności od największej do najmniejszej",
+        "expression": "Potęgi: $5, 3, 2, 1, 0$",
+        "explanation": "Składnik $-1$ to $-1 \\cdot x^0$, więc ma stopień $0$"
+      },
+      {
+        "step": 3,
+        "hint": "Zacznij od składnika o najwyższej potędze. Który składnik ma potęgę $5$?",
+        "expression": "$-4x^5$",
+        "explanation": "Najwyższa potęga to $5$, odpowiadający jej składnik to $-4x^5$"
+      },
+      {
+        "step": 4,
+        "hint": "Kontynuuj z kolejnymi malejącymi potęgami. Jaki składnik ma potęgę $3$?",
+        "expression": "$-4x^5 + 7x^3$",
+        "explanation": "Dodajemy składnik z potęgą $3$: $7x^3$"
+      },
+      {
+        "step": 5,
+        "hint": "Dopisz składnik z potęgą $2$, następnie z potęgą $1$, a na końcu wyraz wolny",
+        "expression": "$-4x^5 + 7x^3 + x^2 + 2x - 1$",
+        "explanation": "Kolejno dopisujemy: $x^2$ (potęga $2$), $2x$ (potęga $1$), $-1$ (potęga $0$)"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź czy wszystkie składniki z oryginalnego wielomianu zostały uwzględnione i czy są w odpowiedniej kolejności",
+        "expression": "$-4x^5 + 7x^3 + x^2 + 2x - 1$",
+        "explanation": "Wielomian jest teraz zapisany w porządku malejących potęg: od $x^5$ do $x^0$"
+      }
+    ],
+    "solutions": [
+      "$-4x^5 + 7x^3 + x^2 + 2x - 1$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 61,
+        "maxExplanationLength": 76,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:42:05.352Z"
+    }
+  },
+  {
+    "id": "tex_problem_9",
+    "topic": "Równania trygonometryczne",
+    "statement": "Uporządkuj według malejących potęg wielomian $-3x + x^7 - 2x^4 + 6 + x^2 - x^6$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby uporządkować wielomian według malejących potęg, musisz najpierw zidentyfikować wszystkie składniki. Jakie potęgi zmiennej $x$ występują w tym wielomianie?",
+        "expression": "$-3x + x^7 - 2x^4 + 6 + x^2 - x^6$",
+        "explanation": "Identyfikujemy składniki: $x^7$, $-x^6$, $-2x^4$, $x^2$, $-3x$, $6$"
+      },
+      {
+        "step": 2,
+        "hint": "Który składnik ma najwyższą potęgę? Od niego powinieneś zacząć uporządkowany wielomian",
+        "expression": "$x^7$",
+        "explanation": "Najwyższa potęga to $7$, więc zaczynamy od składnika $x^7$"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest kolejna najwyższa potęga po $x^7$? Znajdź odpowiedni składnik",
+        "expression": "$x^7 - x^6$",
+        "explanation": "Druga najwyższa potęga to $6$, dodajemy składnik $-x^6$"
+      },
+      {
+        "step": 4,
+        "hint": "Kontynuuj w kolejności malejącej. Jaka potęga następuje po $x^6$? Czy w wielomianie jest składnik z $x^5$?",
+        "expression": "$x^7 - x^6 - 2x^4$",
+        "explanation": "Nie ma składnika z $x^5$, więc przechodzimy do $x^4$ i dodajemy $-2x^4$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź czy występuje składnik z $x^3$. Jaka jest następna potęga w kolejności malejącej?",
+        "expression": "$x^7 - x^6 - 2x^4 + x^2$",
+        "explanation": "Nie ma składnika z $x^3$, więc dodajemy składnik z $x^2$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki składnik ma potęgę $x^1$? Dodaj go do uporządkowanego wielomianu",
+        "expression": "$x^7 - x^6 - 2x^4 + x^2 - 3x$",
+        "explanation": "Składnik $-3x$ ma potęgę $1$, dodajemy go na odpowiednie miejsce"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki składnik nie zawiera zmiennej $x$? To będzie wyraz wolny o potędze $x^0$",
+        "expression": "$x^7 - x^6 - 2x^4 + x^2 - 3x + 6$",
+        "explanation": "Wyraz wolny $6$ ma potęgę $0$, więc umieszczamy go na końcu"
+      }
+    ],
+    "solutions": [
+      "$x^7 - x^6 - 2x^4 + x^2 - 3x + 6$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 61,
+        "maxExplanationLength": 71,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:42:28.205Z"
+    }
+  },
+  {
+    "id": "tex_problem_10",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wyznacz wyraz wolny i współczynnik przy najwyższej potędze wielomianu $2x^3 - 5x + 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wielomian. Jak rozpoznać najwyższą potęgę zmiennej?",
+        "expression": "$2x^3 - 5x + 7$",
+        "explanation": "Identyfikujemy wszystkie składniki wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Które wyrazy zawierają zmienną $x$ i jakie mają potęgi?",
+        "expression": "$2x^3$ ma potęgę $3$, $-5x$ ma potęgę $1$, $7$ ma potęgę $0$",
+        "explanation": "Analizujemy potęgi przy każdym składniku"
+      },
+      {
+        "step": 3,
+        "hint": "Która z tych potęg jest największa? To będzie stopień wielomianu",
+        "expression": "Najwyższa potęga to $3$",
+        "explanation": "Stopień wielomianu wynosi $3$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest współczynnik przy składniku z najwyższą potęgą?",
+        "expression": "Współczynnik przy $x^3$ to $2$",
+        "explanation": "Współczynnik przy najwyższej potędze nazywamy współczynnikiem wiodącym"
+      },
+      {
+        "step": 5,
+        "hint": "Który składnik nie zawiera zmiennej $x$? To będzie wyraz wolny",
+        "expression": "Wyraz wolny to $7$",
+        "explanation": "Wyraz wolny to składnik bez zmiennej, czyli stały składnik wielomianu"
+      }
+    ],
+    "solutions": [
+      "Współczynnik przy najwyższej potędze: $2$",
+      "Wyraz wolny: $7$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 51,
+        "maxExplanationLength": 70,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:42:36.567Z"
+    }
+  },
+  {
+    "id": "tex_problem_11",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla wielomianu $-x^4 + 3x^2 - 2x + 8$ podaj wyraz wolny i współczynnik dominujący.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wielomian. Jak są uporządkowane jego wyrazy?",
+        "expression": "$-x^4 + 3x^2 - 2x + 8$",
+        "explanation": "Wielomian jest zapisany w porządku malejącym potęg zmiennej $x$"
+      },
+      {
+        "step": 2,
+        "hint": "Który wyraz ma najwyższą potęgę zmiennej? Co to oznacza dla współczynnika dominującego?",
+        "expression": "$-x^4$ jest wyrazem o najwyższej potędze",
+        "explanation": "Wyraz $-x^4$ ma potęgę 4, która jest najwyższa w tym wielomianie"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest współczynnik przy najwyższej potędze zmiennej?",
+        "expression": "Współczynnik dominujący = $-1$",
+        "explanation": "Przy $x^4$ stoi współczynnik $-1$, więc współczynnik dominujący to $-1$"
+      },
+      {
+        "step": 4,
+        "hint": "Który wyraz nie zawiera zmiennej $x$? Co to oznacza dla wyrazu wolnego?",
+        "expression": "$8$ jest wyrazem bez zmiennej $x$",
+        "explanation": "Wyraz wolny to składnik wielomianu, który nie zawiera zmiennej"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest wartość wyrazu wolnego w tym wielomianie?",
+        "expression": "Wyraz wolny = $8$",
+        "explanation": "Wyraz wolny to stały składnik wielomianu, który wynosi $8$"
+      }
+    ],
+    "solutions": [
+      "Współczynnik dominujący: $-1$",
+      "Wyraz wolny: $8$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 64,
+        "maxExplanationLength": 71,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:42:45.375Z"
+    }
+  },
+  {
+    "id": "tex_problem_12",
+    "topic": "Równania trygonometryczne",
+    "statement": "W wielomianie $a_n x^n + a_{n-1} x^{n-1} + \\ldots + a_1 x + a_0$, gdzie $a_n \\neq 0$, które wyrazy to wyraz wolny i współczynnik przy najwyższej potędze?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na ogólną postać wielomianu. Jak nazywamy składniki tego wyrażenia?",
+        "expression": "$a_n x^n + a_{n-1} x^{n-1} + \\ldots + a_1 x + a_0$",
+        "explanation": "Wielomian składa się z wyrazów, gdzie każdy wyraz ma postać $a_i x^i$"
+      },
+      {
+        "step": 2,
+        "hint": "Który wyraz ma najwyższą potęgę zmiennej $x$? Jaki jest jego współczynnik?",
+        "expression": "$a_n x^n$ - wyraz z najwyższą potęgą",
+        "explanation": "Pierwszy wyraz $a_n x^n$ ma najwyższą potęgę $n$, więc $a_n$ to współczynnik przy najwyższej potędze"
+      },
+      {
+        "step": 3,
+        "hint": "Dlaczego w definicji wielomianu zapisano warunek $a_n \\neq 0$?",
+        "expression": "$a_n \\neq 0$ - warunek na współczynnik wiodący",
+        "explanation": "Warunek $a_n \\neq 0$ zapewnia, że stopień wielomianu rzeczywiście wynosi $n$"
+      },
+      {
+        "step": 4,
+        "hint": "Który wyraz nie zawiera zmiennej $x$? Co to oznacza dla potęgi przy $x$?",
+        "expression": "$a_0$ - wyraz bez zmiennej $x$",
+        "explanation": "Wyraz $a_0$ można zapisać jako $a_0 x^0 = a_0 \\cdot 1 = a_0$, więc ma potęgę zero"
+      },
+      {
+        "step": 5,
+        "hint": "Jak nazywamy wyraz, który nie zależy od zmiennej? Dlaczego ma taką nazwę?",
+        "expression": "$a_0$ - wyraz wolny",
+        "explanation": "Wyraz $a_0$ nazywamy wyrazem wolnym, bo jest 'wolny' od zmiennej $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Podsumuj swoje obserwacje. Które konkretnie wyrazy odpowiadają na pytanie zadania?",
+        "expression": "Współczynnik przy najwyższej potędze: $a_n$, Wyraz wolny: $a_0$",
+        "explanation": "Współczynnik $a_n$ stoi przy najwyższej potędze $x^n$, a $a_0$ to wyraz wolny (niezależny od $x$)"
+      }
+    ],
+    "solutions": [
+      "Współczynnik przy najwyższej potędze to $a_n$",
+      "Wyraz wolny to $a_0$"
+    ],
+    "parameters": {
+      "condition": "$a_n \\neq 0$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 82,
+        "maxExplanationLength": 100,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:42:58.445Z"
+    }
+  },
+  {
+    "id": "tex_problem_13",
+    "topic": "Równania trygonometryczne",
+    "statement": "Oblicz wartość wielomianu $P(x) = 2x^2 - 3x + 1$ dla $x = 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby obliczyć wartość wielomianu dla konkretnej wartości x, co musisz zrobić z tą wartością?",
+        "expression": "$P(2) = 2 \\cdot 2^2 - 3 \\cdot 2 + 1$",
+        "explanation": "Podstawiamy $x = 2$ do wzoru wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Zacznij od obliczenia potęgi. Ile wynosi $2^2$?",
+        "expression": "$P(2) = 2 \\cdot 4 - 3 \\cdot 2 + 1$",
+        "explanation": "Obliczamy $2^2 = 4$"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz wykonaj mnożenia w każdym składniku osobno",
+        "expression": "$P(2) = 8 - 6 + 1$",
+        "explanation": "Obliczamy $2 \\cdot 4 = 8$ i $3 \\cdot 2 = 6$"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj działania od lewej do prawej. Najpierw odejmowanie",
+        "expression": "$P(2) = 2 + 1$",
+        "explanation": "Obliczamy $8 - 6 = 2$"
+      },
+      {
+        "step": 5,
+        "hint": "Dokończ obliczenie dodając ostatni składnik",
+        "expression": "$P(2) = 3$",
+        "explanation": "Obliczamy $2 + 1 = 3$"
+      }
+    ],
+    "solutions": [
+      "$P(2) = 3$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 29,
+        "maxExplanationLength": 43,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:43:06.272Z"
+    }
+  },
+  {
+    "id": "polynomial_evaluation_1",
+    "topic": "Wartości wielomianu",
+    "statement": "Wyznacz $W(1)$ i $W(-1)$ dla wielomianu $W(x) = x^3 + 2x^2 - 4x + 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby wyznaczyć wartość wielomianu w punkcie, co musisz zrobić z daną liczbą?",
+        "expression": "$W(1) = 1^3 + 2 \\cdot 1^2 - 4 \\cdot 1 + 3$",
+        "explanation": "Podstawiamy $x = 1$ do wzoru wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz kolejno potęgi liczby 1. Ile wynosi $1^3$ i $1^2$?",
+        "expression": "$W(1) = 1 + 2 \\cdot 1 - 4 \\cdot 1 + 3$",
+        "explanation": "Ponieważ $1^3 = 1$ i $1^2 = 1$"
+      },
+      {
+        "step": 3,
+        "hint": "Wykonaj mnożenia w każdym składniku",
+        "expression": "$W(1) = 1 + 2 - 4 + 3$",
+        "explanation": "Obliczamy $2 \\cdot 1 = 2$ i $4 \\cdot 1 = 4$"
+      },
+      {
+        "step": 4,
+        "hint": "Dodaj i odejmij liczby od lewej do prawej",
+        "expression": "$W(1) = 3 - 4 + 3 = -1 + 3 = 2$",
+        "explanation": "Wykonujemy działania: $1 + 2 = 3$, następnie $3 - 4 = -1$, na koniec $-1 + 3 = 2$"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz podstaw $x = -1$. Pamiętaj o znakach przy potęgowaniu liczb ujemnych",
+        "expression": "$W(-1) = (-1)^3 + 2 \\cdot (-1)^2 - 4 \\cdot (-1) + 3$",
+        "explanation": "Podstawiamy $x = -1$ do wzoru wielomianu"
+      },
+      {
+        "step": 6,
+        "hint": "Oblicz potęgi liczby $-1$. Jaki znak ma nieparzysta potęga liczby ujemnej?",
+        "expression": "$W(-1) = -1 + 2 \\cdot 1 - 4 \\cdot (-1) + 3$",
+        "explanation": "Ponieważ $(-1)^3 = -1$ i $(-1)^2 = 1$"
+      },
+      {
+        "step": 7,
+        "hint": "Wykonaj mnożenia, zwracając uwagę na znak przy $-4 \\cdot (-1)$",
+        "expression": "$W(-1) = -1 + 2 + 4 + 3$",
+        "explanation": "Obliczamy $2 \\cdot 1 = 2$ i $-4 \\cdot (-1) = 4$"
+      },
+      {
+        "step": 8,
+        "hint": "Zsumuj wszystkie składniki",
+        "expression": "$W(-1) = 1 + 4 + 3 = 8$",
+        "explanation": "Wykonujemy działania: $-1 + 2 = 1$, następnie $1 + 4 = 5$, na koniec $5 + 3 = 8$"
+      }
+    ],
+    "solutions": [
+      "$W(1) = 2$",
+      "$W(-1) = 8$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 50,
+        "maxExplanationLength": 81,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:43:20.406Z"
+    }
+  },
+  {
+    "id": "tex_problem_15",
+    "topic": "Równania trygonometryczne",
+    "statement": "Oblicz wartość wielomianu $Q(x) = -x^4 + 2x^3 - x^2 + 5x - 7$ w punkcie $x = -2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby obliczyć wartość wielomianu w danym punkcie, co musisz zrobić z każdym wystąpieniem zmiennej x?",
+        "expression": "$Q(-2) = -(-2)^4 + 2(-2)^3 - (-2)^2 + 5(-2) - 7$",
+        "explanation": "Podstawiamy $x = -2$ do wzoru wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz kolejno potęgi liczby $-2$. Zacznij od najwyższej potęgi",
+        "expression": "$(-2)^4 = 16$, $(-2)^3 = -8$, $(-2)^2 = 4$",
+        "explanation": "Pamiętaj o znakach: parzyste potęgi dają wynik dodatni, nieparzyste zachowują znak podstawy"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw obliczone potęgi do wyrażenia i oblicz pozostałe iloczyny",
+        "expression": "$Q(-2) = -16 + 2(-8) - 4 + 5(-2) - 7$",
+        "explanation": "Zastępujemy potęgi ich wartościami"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj mnożenia w każdym składniku",
+        "expression": "$Q(-2) = -16 - 16 - 4 - 10 - 7$",
+        "explanation": "Obliczamy: $2(-8) = -16$ i $5(-2) = -10$"
+      },
+      {
+        "step": 5,
+        "hint": "Dodaj wszystkie składniki. Zauważ, że wszystkie są ujemne",
+        "expression": "$Q(-2) = -16 - 16 - 4 - 10 - 7 = -53$",
+        "explanation": "Sumujemy wszystkie składniki: $16 + 16 + 4 + 10 + 7 = 53$, więc wynik to $-53$"
+      }
+    ],
+    "solutions": [
+      "$Q(-2) = -53$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 57,
+        "maxExplanationLength": 91,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:43:30.866Z"
+    }
+  },
+  {
+    "id": "tex_problem_16",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wyznacz współczynnik $a$ w wielomianie $P(x) = ax^2 + 3x - 2$, jeśli $P(1) = 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza zapis $P(1) = 5$? Jak to wykorzystać do znalezienia współczynnika $a$?",
+        "expression": "$P(1) = a \\cdot 1^2 + 3 \\cdot 1 - 2 = 5$",
+        "explanation": "Podstawiamy $x = 1$ do wzoru wielomianu i przyrównujemy do wartości $5$"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz wartości liczbowe w wyrażeniu. Czemu równa się $1^2$?",
+        "expression": "$a \\cdot 1 + 3 - 2 = 5$",
+        "explanation": "Upraszczamy: $1^2 = 1$ oraz $3 \\cdot 1 = 3$"
+      },
+      {
+        "step": 3,
+        "hint": "Wykonaj działania z liczbami, które nie zawierają $a$",
+        "expression": "$a + 1 = 5$",
+        "explanation": "Obliczamy: $3 - 2 = 1$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wyizolować $a$ z tego równania?",
+        "expression": "$a = 5 - 1$",
+        "explanation": "Przenosimy $1$ na prawą stronę równania"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz końcową wartość współczynnika $a$",
+        "expression": "$a = 4$",
+        "explanation": "Wykonujemy odejmowanie: $5 - 1 = 4$"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź poprawność wyniku podstawiając $a = 4$ do wzoru wielomianu",
+        "expression": "$P(x) = 4x^2 + 3x - 2$, więc $P(1) = 4 \\cdot 1^2 + 3 \\cdot 1 - 2 = 4 + 3 - 2 = 5$ ✓",
+        "explanation": "Weryfikujemy: wielomian z $a = 4$ rzeczywiście daje $P(1) = 5$"
+      }
+    ],
+    "solutions": [
+      "$a = 4$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 45,
+        "maxExplanationLength": 71,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:43:43.034Z"
+    }
+  },
+  {
+    "id": "tex_problem_17",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla wielomianu $W(x) = x^3 + bx^2 + cx + d$ wiadomo, że $W(0) = 2$, $W(1) = 4$. Wyznacz $d$ i związek między $b$ i $c$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Masz wielomian i znasz jego wartości w dwóch punktach. Co otrzymasz, gdy podstawisz $x = 0$ do wzoru wielomianu?",
+        "expression": "$W(0) = 0^3 + b \\cdot 0^2 + c \\cdot 0 + d = d$",
+        "explanation": "Wszystkie wyrazy z $x$ znikają, zostaje tylko wyraz wolny"
+      },
+      {
+        "step": 2,
+        "hint": "Skoro $W(0) = 2$ i właśnie obliczyłeś że $W(0) = d$, to jaka jest wartość parametru $d$?",
+        "expression": "$d = 2$",
+        "explanation": "Z równania $W(0) = d = 2$ wynika bezpośrednio wartość $d$"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw $x = 1$ do wzoru wielomianu. Pamiętaj o wartości $d$, którą właśnie wyznaczyłeś",
+        "expression": "$W(1) = 1^3 + b \\cdot 1^2 + c \\cdot 1 + 2 = 1 + b + c + 2$",
+        "explanation": "Podstawiamy $x = 1$ i $d = 2$ do wzoru wielomianu"
+      },
+      {
+        "step": 4,
+        "hint": "Uprość wyrażenie które otrzymałeś w poprzednim kroku",
+        "expression": "$W(1) = 3 + b + c$",
+        "explanation": "Dodajemy wyrazy liczbowe: $1 + 2 = 3$"
+      },
+      {
+        "step": 5,
+        "hint": "Skoro z warunków zadania $W(1) = 4$, to jakie równanie możesz zapisać?",
+        "expression": "$3 + b + c = 4$",
+        "explanation": "Przyrównujemy obliczoną wartość $W(1)$ do danej wartości 4"
+      },
+      {
+        "step": 6,
+        "hint": "Rozwiąż równanie względem sumy $b + c$. Co otrzymasz po przeniesieniu 3 na prawą stronę?",
+        "expression": "$b + c = 4 - 3 = 1$",
+        "explanation": "To jest szukany związek między parametrami $b$ i $c$"
+      }
+    ],
+    "solutions": [
+      "$d = 2$",
+      "$b + c = 1$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Skoro z warunków zadania $W(1) = 4$, to jakie równanie możesz zapisać?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 10,
+      "metrics": {
+        "avgExplanationLength": 52,
+        "maxExplanationLength": 58,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 17,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:44:02.593Z"
+    }
+  },
+  {
+    "id": "tex_problem_18",
+    "topic": "Równania trygonometryczne",
+    "statement": "Znajdź współczynniki $a$ i $b$ w wielomianie $Q(x) = x^2 + ax + b$, jeśli $Q(-1) = 3$ i $Q(2) = 0$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Masz wielomian $Q(x) = x^2 + ax + b$ i znasz jego wartości w dwóch punktach. Co otrzymasz, gdy podstawisz $x = -1$?",
+        "expression": "$Q(-1) = (-1)^2 + a(-1) + b = 1 - a + b$",
+        "explanation": "Podstawiamy $x = -1$ do wzoru wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Wykorzystaj warunek $Q(-1) = 3$. Jakie równanie otrzymasz?",
+        "expression": "$1 - a + b = 3$",
+        "explanation": "Przyrównujemy obliczoną wartość do danej wartości funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Uprość pierwsze równanie. Co otrzymasz po przeniesieniu 1 na prawą stronę?",
+        "expression": "$-a + b = 2$",
+        "explanation": "Odejmujemy 1 od obu stron równania"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz podstaw drugi punkt. Co otrzymasz, gdy podstawisz $x = 2$ do wielomianu?",
+        "expression": "$Q(2) = 2^2 + a(2) + b = 4 + 2a + b$",
+        "explanation": "Podstawiamy $x = 2$ do wzoru wielomianu"
+      },
+      {
+        "step": 5,
+        "hint": "Wykorzystaj warunek $Q(2) = 0$. Jakie drugie równanie otrzymasz?",
+        "expression": "$4 + 2a + b = 0$",
+        "explanation": "Przyrównujemy obliczoną wartość do danej wartości funkcji"
+      },
+      {
+        "step": 6,
+        "hint": "Uprość drugie równanie. Co otrzymasz po przeniesieniu 4 na prawą stronę?",
+        "expression": "$2a + b = -4$",
+        "explanation": "Odejmujemy 4 od obu stron równania"
+      },
+      {
+        "step": 7,
+        "hint": "Masz teraz układ dwóch równań z dwiema niewiadomymi. Jak możesz wyeliminować jedną ze zmiennych?",
+        "expression": "$\\begin{cases} -a + b = 2 \\\\ 2a + b = -4 \\end{cases}$",
+        "explanation": "Zapisujemy układ równań w przejrzystej formie"
+      },
+      {
+        "step": 8,
+        "hint": "Odejmij pierwsze równanie od drugiego. Co się stanie z $b$?",
+        "expression": "$(2a + b) - (-a + b) = -4 - 2$",
+        "explanation": "Odejmujemy równania stronami, aby wyeliminować $b$"
+      },
+      {
+        "step": 9,
+        "hint": "Uprość lewą stronę równania. Pamiętaj o znakach przy odejmowaniu",
+        "expression": "$2a + b + a - b = -6$",
+        "explanation": "Rozpisujemy odejmowanie jako dodawanie liczby przeciwnej"
+      },
+      {
+        "step": 10,
+        "hint": "Połącz podobne wyrazy po lewej stronie",
+        "expression": "$3a = -6$",
+        "explanation": "Wyrazy z $b$ się skracają, zostaje $3a$"
+      },
+      {
+        "step": 11,
+        "hint": "Podziel obie strony przez 3, aby wyznaczyć $a$",
+        "expression": "$a = -2$",
+        "explanation": "Dzielimy równanie przez 3"
+      },
+      {
+        "step": 12,
+        "hint": "Podstaw znalezioną wartość $a$ do pierwszego równania, aby wyznaczyć $b$",
+        "expression": "$-(-2) + b = 2 \\Rightarrow 2 + b = 2$",
+        "explanation": "Podstawiamy $a = -2$ do równania $-a + b = 2$"
+      },
+      {
+        "step": 13,
+        "hint": "Wyznacz wartość $b$ z ostatniego równania",
+        "expression": "$b = 0$",
+        "explanation": "Odejmujemy 2 od obu stron równania"
+      }
+    ],
+    "solutions": [
+      "$a = -2$, $b = 0$"
+    ],
+    "parameters": {
+      "polynomial": "$Q(x) = x^2 - 2x$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 7,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Masz teraz układ dwóch równań z dwiema niewiadomymi. Jak możesz wyeliminować jedną ze zmiennych?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 43,
+        "maxExplanationLength": 57,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 8,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:44:20.107Z"
+    }
+  },
+  {
+    "id": "tex_problem_19",
+    "topic": "Równania trygonometryczne",
+    "statement": "Oblicz sumę wszystkich współczynników wielomianu $P(x) = 3x^4 - 2x^3 + x^2 - 5x + 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak możesz obliczyć sumę wszystkich współczynników wielomianu? Zastanów się, co się stanie gdy podstawisz konkretną wartość dla $x$",
+        "expression": "$P(x) = 3x^4 - 2x^3 + x^2 - 5x + 7$",
+        "explanation": "Mamy wielomian czwartego stopnia z pięcioma współczynnikami"
+      },
+      {
+        "step": 2,
+        "hint": "Jaką wartość $x$ warto podstawić, żeby wszystkie potęgi zmiennej stały się równe 1?",
+        "expression": "$P(1) = 3 \\cdot 1^4 - 2 \\cdot 1^3 + 1^2 - 5 \\cdot 1 + 7$",
+        "explanation": "Podstawiamy $x = 1$, ponieważ $1^n = 1$ dla każdego $n$"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz wartość każdej potęgi jedynki",
+        "expression": "$P(1) = 3 \\cdot 1 - 2 \\cdot 1 + 1 - 5 \\cdot 1 + 7$",
+        "explanation": "Wszystkie potęgi jedynki równają się 1"
+      },
+      {
+        "step": 4,
+        "hint": "Uprość wyrażenie, wykonując mnożenia",
+        "expression": "$P(1) = 3 - 2 + 1 - 5 + 7$",
+        "explanation": "Pomnożyliśmy każdy współczynnik przez odpowiednią potęgę jedynki"
+      },
+      {
+        "step": 5,
+        "hint": "Wykonaj dodawanie i odejmowanie od lewej do prawej",
+        "expression": "$P(1) = 1 + 1 - 5 + 7 = 2 - 5 + 7 = -3 + 7 = 4$",
+        "explanation": "Obliczamy krok po kroku: $3 - 2 = 1$, $1 + 1 = 2$, $2 - 5 = -3$, $-3 + 7 = 4$"
+      }
+    ],
+    "solutions": [
+      "Suma wszystkich współczynników wielomianu wynosi $4$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 1,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Jak możesz obliczyć sumę wszystkich współczynników wielomianu? Zastanów się, co się stanie gdy podstawisz konkretną wartość dla $x$",
+          "vagueWords": [
+            "zastanów się",
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 59,
+        "maxExplanationLength": 77,
+        "vagueWordsCount": 2,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:44:57.389Z"
+    }
+  },
+  {
+    "id": "tex_problem_21",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla wielomianu $Q(x) = ax^n + a_{n-1}x^{n-1} + \\ldots + a_1x + a_0$ podaj wzór na sumę jego współczynników.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czym jest suma współczynników wielomianu? To znaczy, co chcemy obliczyć?",
+        "expression": "$a + a_{n-1} + a_{n-2} + \\ldots + a_1 + a_0$",
+        "explanation": "Suma współczynników to suma wszystkich liczb stojących przy potęgach zmiennej"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na wzór wielomianu. Co się stanie, gdy podstawisz $x = 1$?",
+        "expression": "$Q(1) = a \\cdot 1^n + a_{n-1} \\cdot 1^{n-1} + \\ldots + a_1 \\cdot 1 + a_0$",
+        "explanation": "Podstawiamy $x = 1$ do wzoru wielomianu"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi każda potęga liczby 1? Uprość wyrażenie",
+        "expression": "$Q(1) = a \\cdot 1 + a_{n-1} \\cdot 1 + \\ldots + a_1 \\cdot 1 + a_0$",
+        "explanation": "Ponieważ $1^k = 1$ dla każdego $k$"
+      },
+      {
+        "step": 4,
+        "hint": "Co możesz teraz wyłączyć przed nawias w każdym składniku?",
+        "expression": "$Q(1) = a + a_{n-1} + a_{n-2} + \\ldots + a_1 + a_0$",
+        "explanation": "Mnożenie przez 1 nie zmienia wartości współczynników"
+      },
+      {
+        "step": 5,
+        "hint": "Porównaj otrzymane wyrażenie z tym, czego szukaliśmy w kroku 1. Co zauważasz?",
+        "expression": "Suma współczynników = $Q(1)$",
+        "explanation": "Wartość wielomianu dla $x = 1$ jest równa sumie wszystkich jego współczynników"
+      }
+    ],
+    "solutions": [
+      "Suma współczynników wielomianu $Q(x)$ wynosi $Q(1)$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 4,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Co możesz teraz wyłączyć przed nawias w każdym składniku?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 56,
+        "maxExplanationLength": 78,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:45:18.880Z"
+    }
+  },
+  {
+    "id": "tex_problem_23",
+    "topic": "Równania trygonometryczne",
+    "statement": "Określ, czy wielomiany $A(x) = x^3 + 2x - 5$ i $B(x) = x^3 + 0x^2 + 2x - 5$ są równe.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dwa wielomiany są równe? Co musi być prawdziwe dla ich współczynników?",
+        "expression": "$A(x) = x^3 + 2x - 5$ i $B(x) = x^3 + 0x^2 + 2x - 5$",
+        "explanation": "Dwa wielomiany są równe, gdy mają identyczne współczynniki przy odpowiadających sobie potęgach zmiennej"
+      },
+      {
+        "step": 2,
+        "hint": "Zapisz oba wielomiany w postaci standardowej, uwzględniając wszystkie potęgi od najwyższej do najniższej",
+        "expression": "$A(x) = 1 \\cdot x^3 + 0 \\cdot x^2 + 2 \\cdot x + (-5)$",
+        "explanation": "Uzupełniamy brakujący składnik $x^2$ w wielomianie $A(x)$ ze współczynnikiem 0"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz zapisz drugi wielomian w tej samej postaci standardowej",
+        "expression": "$B(x) = 1 \\cdot x^3 + 0 \\cdot x^2 + 2 \\cdot x + (-5)$",
+        "explanation": "Wielomian $B(x)$ już ma jawnie zapisany współczynnik przy $x^2$"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj współczynniki przy odpowiadających sobie potęgach. Co zauważasz?",
+        "expression": "Współczynnik przy $x^3$: $1 = 1$ ✓\nWspółczynnik przy $x^2$: $0 = 0$ ✓\nWspółczynnik przy $x^1$: $2 = 2$ ✓\nWyraz wolny: $-5 = -5$ ✓",
+        "explanation": "Wszystkie odpowiadające sobie współczynniki są identyczne"
+      },
+      {
+        "step": 5,
+        "hint": "Na podstawie porównania współczynników, jaki możesz wyciągnąć wniosek o równości wielomianów?",
+        "expression": "$A(x) = B(x)$",
+        "explanation": "Ponieważ wszystkie współczynniki przy odpowiadających sobie potęgach są równe, wielomiany są identyczne"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $A(x)$ i $B(x)$ są równe"
+    ],
+    "parameters": {
+      "note": "Jawne zapisanie współczynnika 0 przy $x^2$ w wielomianie $B(x)$ nie zmienia jego wartości"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Na podstawie porównania współczynników, jaki możesz wyciągnąć wniosek o równości wielomianów?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 81,
+        "maxExplanationLength": 103,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:45:51.338Z"
+    }
+  },
+  {
+    "id": "tex_problem_24",
+    "topic": "Równania trygonometryczne",
+    "statement": "Zbadaj równość wielomianów $F(x) = (x+1)^2 - 1$ i $G(x) = x^2 + 2x$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby zbadać równość wielomianów, musisz je porównać. Który z nich jest już w postaci standardowej?",
+        "expression": "$G(x) = x^2 + 2x$",
+        "explanation": "Wielomian $G(x)$ jest już rozwinięty w postaci standardowej"
+      },
+      {
+        "step": 2,
+        "hint": "Spójrz na wielomian $F(x)$. Jak możesz rozwinąć wyrażenie $(x+1)^2$?",
+        "expression": "$(x+1)^2 = x^2 + 2x + 1$",
+        "explanation": "Stosujemy wzór skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw rozwinięte wyrażenie do wzoru na $F(x)$",
+        "expression": "$F(x) = (x^2 + 2x + 1) - 1$",
+        "explanation": "Zastępujemy $(x+1)^2$ jego rozwinięciem"
+      },
+      {
+        "step": 4,
+        "hint": "Uprość wyrażenie wykonując działania na liczbach",
+        "expression": "$F(x) = x^2 + 2x + 1 - 1 = x^2 + 2x$",
+        "explanation": "Odejmujemy 1 od 1, co daje 0"
+      },
+      {
+        "step": 5,
+        "hint": "Porównaj teraz oba wielomiany w postaci standardowej. Co możesz powiedzieć o ich współczynnikach?",
+        "expression": "$F(x) = x^2 + 2x = G(x)$",
+        "explanation": "Oba wielomiany mają identyczne współczynniki przy odpowiednich potęgach $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź czy równość zachodzi dla wszystkich wartości $x$. Co to oznacza dla wielomianów?",
+        "expression": "$F(x) = G(x)$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Wielomiany są identyczne, więc równość zachodzi w całej dziedzinie"
+      }
+    ],
+    "solutions": [
+      "Wielomiany $F(x)$ i $G(x)$ są równe: $F(x) = G(x) = x^2 + 2x$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R}$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Spójrz na wielomian $F(x)$. Jak możesz rozwinąć wyrażenie $(x+1)^2$?",
+          "vagueWords": [
+            "może"
+          ]
+        },
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Porównaj teraz oba wielomiany w postaci standardowej. Co możesz powiedzieć o ich współczynnikach?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9,
+      "metrics": {
+        "avgExplanationLength": 55,
+        "maxExplanationLength": 75,
+        "vagueWordsCount": 2,
+        "problematicStepsPercentage": 33,
+        "warningTypeCounts": {
+          "vague_hint": 2
+        }
+      },
+      "timestamp": "2025-09-01T09:46:03.276Z"
+    }
+  },
+  {
+    "id": "tex_problem_25",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla jakich wartości parametru $a$ wielomiany $P(x) = ax^2 + 3x - 2$ i $Q(x) = 2x^2 + 3x + a$ są równe?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dwa wielomiany są równe? Jak to zapisać matematycznie?",
+        "expression": "$P(x) = Q(x)$",
+        "explanation": "Wielomiany są równe, gdy mają identyczne wartości dla wszystkich $x$"
+      },
+      {
+        "step": 2,
+        "hint": "Podstaw definicje wielomianów do równania",
+        "expression": "$ax^2 + 3x - 2 = 2x^2 + 3x + a$",
+        "explanation": "Zapisujemy warunek równości przez przyrównanie wyrażeń"
+      },
+      {
+        "step": 3,
+        "hint": "Przenieś wszystkie wyrazy na jedną stronę równania",
+        "expression": "$ax^2 + 3x - 2 - 2x^2 - 3x - a = 0$",
+        "explanation": "Przygotowujemy do uporządkowania według potęg $x$"
+      },
+      {
+        "step": 4,
+        "hint": "Pogrupuj wyrazy według potęg zmiennej $x$. Co otrzymasz?",
+        "expression": "$(a - 2)x^2 + (3 - 3)x + (-2 - a) = 0$",
+        "explanation": "Zbieramy współczynniki przy odpowiednich potęgach $x$"
+      },
+      {
+        "step": 5,
+        "hint": "Uprość wyrażenie. Zwróć uwagę na współczynnik przy $x$",
+        "expression": "$(a - 2)x^2 + 0 \\cdot x + (-2 - a) = 0$",
+        "explanation": "Współczynnik przy $x$ wynosi $3 - 3 = 0$"
+      },
+      {
+        "step": 6,
+        "hint": "Kiedy wielomian jest tożsamościowo równy zero? Co musi być prawdą dla wszystkich współczynników?",
+        "expression": "$(a - 2)x^2 - 2 - a = 0$ dla wszystkich $x$",
+        "explanation": "To równanie musi być spełnione dla każdej wartości $x$"
+      },
+      {
+        "step": 7,
+        "hint": "Aby wielomian był tożsamościowo równy zero, wszystkie jego współczynniki muszą być równe zero. Jakie warunki to daje?",
+        "expression": "$a - 2 = 0$ i $-2 - a = 0$",
+        "explanation": "Współczynnik przy $x^2$ i wyraz wolny muszą być równe zero"
+      },
+      {
+        "step": 8,
+        "hint": "Rozwiąż pierwszy warunek",
+        "expression": "$a - 2 = 0 \\Rightarrow a = 2$",
+        "explanation": "Z pierwszego równania otrzymujemy wartość parametru $a$"
+      },
+      {
+        "step": 9,
+        "hint": "Rozwiąż drugi warunek i sprawdź zgodność",
+        "expression": "$-2 - a = 0 \\Rightarrow a = -2$",
+        "explanation": "Z drugiego równania otrzymujemy inną wartość parametru $a$"
+      },
+      {
+        "step": 10,
+        "hint": "Porównaj otrzymane wartości. Czy istnieje wartość $a$ spełniająca oba warunki jednocześnie?",
+        "expression": "$a = 2$ i $a = -2$ - sprzeczność",
+        "explanation": "Nie ma wartości $a$, która spełniałaby oba warunki równocześnie"
+      }
+    ],
+    "solutions": [
+      "Nie istnieje wartość parametru $a$, dla której wielomiany $P(x)$ i $Q(x)$ są równe"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 55,
+        "maxExplanationLength": 68,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:46:29.089Z"
+    }
+  },
+  {
+    "id": "tex_problem_26",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wyznacz parametry $a$ i $b$, dla których wielomiany $W(x) = x^3 + ax + b$ i $V(x) = x^3 + 2x + 5$ są równe.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dwa wielomiany są równe? Jak muszą się mieć do siebie ich współczynniki?",
+        "expression": "$W(x) = V(x) \\Rightarrow x^3 + ax + b = x^3 + 2x + 5$",
+        "explanation": "Dwa wielomiany są równe, gdy mają identyczne współczynniki przy odpowiadających sobie potęgach zmiennej"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki przy tej samej potędze $x$. Zacznij od najwyższej potęgi",
+        "expression": "Współczynnik przy $x^3$: $1 = 1$ ✓",
+        "explanation": "Współczynniki przy $x^3$ w obu wielomianach są równe 1"
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź współczynniki przy $x^2$. Czy oba wielomiany mają składnik z $x^2$?",
+        "expression": "Współczynnik przy $x^2$: $0 = 0$ ✓",
+        "explanation": "W obu wielomianach brak składnika z $x^2$, więc współczynniki wynoszą 0"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz porównaj współczynniki przy pierwszej potędze $x$. Co to daje ci dla parametru $a$?",
+        "expression": "Współczynnik przy $x$: $a = 2$",
+        "explanation": "Przyrównując współczynniki przy $x$ otrzymujemy wartość parametru $a$"
+      },
+      {
+        "step": 5,
+        "hint": "Na koniec porównaj wyrazy wolne (bez $x$). Co to oznacza dla parametru $b$?",
+        "expression": "Wyraz wolny: $b = 5$",
+        "explanation": "Przyrównując wyrazy wolne otrzymujemy wartość parametru $b$"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź poprawność rozwiązania podstawiając znalezione wartości do wielomianu $W(x)$",
+        "expression": "$W(x) = x^3 + 2x + 5 = V(x)$ ✓",
+        "explanation": "Po podstawieniu $a = 2$ i $b = 5$ wielomian $W(x)$ staje się identyczny z $V(x)$"
+      }
+    ],
+    "solutions": [
+      "$a = 2$",
+      "$b = 5$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 73,
+        "maxExplanationLength": 103,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:46:42.414Z"
+    }
+  },
+  {
+    "id": "tex_problem_27",
+    "topic": "Równania trygonometryczne",
+    "statement": "Znajdź wszystkie wartości $m$ i $n$, przy których wielomiany $A(x) = mx^2 + 3x + n$ i $B(x) = x^2 + 3x - 4$ są równe.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dwa wielomiany są równe? Jak to zapisać matematycznie?",
+        "expression": "$A(x) = B(x)$",
+        "explanation": "Dwa wielomiany są równe, gdy mają identyczne wartości dla wszystkich argumentów"
+      },
+      {
+        "step": 2,
+        "hint": "Podstaw definicje wielomianów do równania równości",
+        "expression": "$mx^2 + 3x + n = x^2 + 3x - 4$",
+        "explanation": "Wstawiamy wyrażenia dla $A(x)$ i $B(x)$"
+      },
+      {
+        "step": 3,
+        "hint": "Przenieś wszystkie wyrazy na jedną stronę równania",
+        "expression": "$mx^2 + 3x + n - x^2 - 3x + 4 = 0$",
+        "explanation": "Odejmujemy prawą stronę od lewej, aby otrzymać wielomian zerowy"
+      },
+      {
+        "step": 4,
+        "hint": "Pogrupuj wyrazy o tych samych potęgach zmiennej $x$",
+        "expression": "$(m - 1)x^2 + (3 - 3)x + (n + 4) = 0$",
+        "explanation": "Łączymy współczynniki przy $x^2$, przy $x$ i wyrazy wolne"
+      },
+      {
+        "step": 5,
+        "hint": "Uprość wyrażenie, szczególnie współczynnik przy $x$",
+        "expression": "$(m - 1)x^2 + 0 \\cdot x + (n + 4) = 0$",
+        "explanation": "Ponieważ $3 - 3 = 0$, współczynnik przy $x$ wynosi zero"
+      },
+      {
+        "step": 6,
+        "hint": "Kiedy wielomian jest tożsamościowo równy zero? Co musi być prawdą dla wszystkich jego współczynników?",
+        "expression": "$(m - 1)x^2 + (n + 4) = 0$ dla wszystkich $x \\in \\mathbb{R}$",
+        "explanation": "Wielomian jest zerowy dla wszystkich wartości $x$ tylko wtedy, gdy wszystkie jego współczynniki równają się zero"
+      },
+      {
+        "step": 7,
+        "hint": "Zapisz warunki na współczynniki. Co musi być prawdą dla współczynnika przy $x^2$?",
+        "expression": "$m - 1 = 0$",
+        "explanation": "Współczynnik przy $x^2$ musi równać się zero"
+      },
+      {
+        "step": 8,
+        "hint": "Rozwiąż pierwsze równanie, aby znaleźć wartość $m$",
+        "expression": "$m = 1$",
+        "explanation": "Dodajemy 1 do obu stron równania"
+      },
+      {
+        "step": 9,
+        "hint": "Co musi być prawdą dla wyrazu wolnego?",
+        "expression": "$n + 4 = 0$",
+        "explanation": "Wyraz wolny również musi równać się zero"
+      },
+      {
+        "step": 10,
+        "hint": "Rozwiąż drugie równanie, aby znaleźć wartość $n$",
+        "expression": "$n = -4$",
+        "explanation": "Odejmujemy 4 od obu stron równania"
+      },
+      {
+        "step": 11,
+        "hint": "Sprawdź wynik podstawiając znalezione wartości do oryginalnych wielomianów",
+        "expression": "$A(x) = 1 \\cdot x^2 + 3x + (-4) = x^2 + 3x - 4 = B(x)$",
+        "explanation": "Potwierdzamy, że dla $m = 1$ i $n = -4$ wielomiany są rzeczywiście równe"
+      }
+    ],
+    "solutions": [
+      "$m = 1$ i $n = -4$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 57,
+        "maxExplanationLength": 112,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:46:58.449Z"
+    }
+  },
+  {
+    "id": "tex_problem_28",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wykaż, że wielomian $P(x) = 0 \\cdot x^3 + 0 \\cdot x^2 + 0 \\cdot x + 0$ jest wielomianem zerowym.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na współczynniki przy wszystkich potęgach zmiennej $x$. Co możesz o nich powiedzieć?",
+        "expression": "$P(x) = 0 \\cdot x^3 + 0 \\cdot x^2 + 0 \\cdot x + 0$",
+        "explanation": "Wszystkie współczynniki wielomianu są równe zero"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje gdy mnożysz dowolną liczbę przez zero? Zastosuj tę właściwość do każdego składnika",
+        "expression": "$P(x) = 0 + 0 + 0 + 0$",
+        "explanation": "Każdy iloczyn z zerem daje zero, więc $0 \\cdot x^k = 0$ dla dowolnego $k$"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest wynik dodawania samych zer?",
+        "expression": "$P(x) = 0$",
+        "explanation": "Suma zer równa się zero"
+      },
+      {
+        "step": 4,
+        "hint": "Czy wartość wielomianu zależy od wartości zmiennej $x$? Sprawdź dla dowolnej wartości",
+        "expression": "$P(x) = 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Wielomian przyjmuje wartość zero niezależnie od wartości $x$"
+      },
+      {
+        "step": 5,
+        "hint": "Przypomnij sobie definicję wielomianu zerowego. Jakie warunki musi spełniać?",
+        "expression": "Wielomian zerowy to wielomian, którego wszystkie współczynniki są równe zero",
+        "explanation": "Definicja wielomianu zerowego jest spełniona"
+      },
+      {
+        "step": 6,
+        "hint": "Porównaj współczynniki danego wielomianu z definicją wielomianu zerowego",
+        "expression": "$a_3 = 0$, $a_2 = 0$, $a_1 = 0$, $a_0 = 0$",
+        "explanation": "Wszystkie współczynniki spełniają warunek $a_i = 0$"
+      }
+    ],
+    "solutions": [
+      "Wielomian $P(x) = 0 \\cdot x^3 + 0 \\cdot x^2 + 0 \\cdot x + 0$ jest wielomianem zerowym, ponieważ wszystkie jego współczynniki są równe zero"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 1,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Spójrz na współczynniki przy wszystkich potęgach zmiennej $x$. Co możesz o nich powiedzieć?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 10,
+      "metrics": {
+        "avgExplanationLength": 50,
+        "maxExplanationLength": 73,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 17,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:47:10.857Z"
+    }
+  },
+  {
+    "id": "tex_problem_29",
+    "topic": "Równania trygonometryczne",
+    "statement": "Sprawdź, czy wielomian $(x-1)(x+1) - (x^2-1)$ jest wielomianem zerowym.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na pierwszy składnik wyrażenia. Czy rozpoznajesz wzór skróconego mnożenia?",
+        "expression": "$(x-1)(x+1) = x^2 - 1$",
+        "explanation": "Stosujemy wzór na różnicę kwadratów: $(a-b)(a+b) = a^2 - b^2$"
+      },
+      {
+        "step": 2,
+        "hint": "Podstaw otrzymany wynik do całego wyrażenia",
+        "expression": "$(x-1)(x+1) - (x^2-1) = (x^2 - 1) - (x^2-1)$",
+        "explanation": "Zastępujemy pierwszy składnik jego rozwinięciem"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz, gdy od wyrażenia odejmujesz to samo wyrażenie?",
+        "expression": "$(x^2 - 1) - (x^2-1) = x^2 - 1 - x^2 + 1$",
+        "explanation": "Usuwamy nawiasy, pamiętając o zmianie znaku przy odejmowaniu"
+      },
+      {
+        "step": 4,
+        "hint": "Pogrupuj wyrazy podobne. Które wyrazy się znoszą?",
+        "expression": "$x^2 - x^2 - 1 + 1 = 0$",
+        "explanation": "Wyrazy $x^2$ i $-x^2$ oraz $-1$ i $+1$ wzajemnie się znoszą"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki wniosek możesz wyciągnąć z otrzymanego wyniku?",
+        "expression": "$(x-1)(x+1) - (x^2-1) = 0$",
+        "explanation": "Wielomian jest tożsamościowo równy zero dla wszystkich wartości $x$"
+      }
+    ],
+    "solutions": [
+      "Tak, wielomian $(x-1)(x+1) - (x^2-1)$ jest wielomianem zerowym"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 5,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Jaki wniosek możesz wyciągnąć z otrzymanego wyniku?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 59,
+        "maxExplanationLength": 67,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:47:21.726Z"
+    }
+  },
+  {
+    "id": "tex_problem_30",
+    "topic": "Równania trygonometryczne",
+    "statement": "Dla jakich wartości parametru $k$ wielomian $W(x) = kx^2 + (k-1)x + (2k-2)$ jest wielomianem zerowym?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że wielomian jest wielomianem zerowym? Jakie warunki muszą spełniać wszystkie jego współczynniki?",
+        "expression": "$W(x) = kx^2 + (k-1)x + (2k-2) = 0 \\cdot x^2 + 0 \\cdot x + 0$",
+        "explanation": "Wielomian zerowy to wielomian, w którym wszystkie współczynniki równają się zero"
+      },
+      {
+        "step": 2,
+        "hint": "Porównaj współczynniki po obu stronach równania. Jaki warunek musi spełniać współczynnik przy $x^2$?",
+        "expression": "$k = 0$",
+        "explanation": "Współczynnik przy $x^2$ musi być równy zero"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki warunek musi spełniać współczynnik przy $x$?",
+        "expression": "$k - 1 = 0$",
+        "explanation": "Współczynnik przy $x$ również musi być równy zero"
+      },
+      {
+        "step": 4,
+        "hint": "Rozwiąż równanie z kroku 3. Jaką wartość przyjmuje $k$?",
+        "expression": "$k - 1 = 0 \\Rightarrow k = 1$",
+        "explanation": "Przenosimy 1 na prawą stronę równania"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki warunek musi spełniać wyraz wolny?",
+        "expression": "$2k - 2 = 0$",
+        "explanation": "Wyraz wolny także musi być równy zero"
+      },
+      {
+        "step": 6,
+        "hint": "Rozwiąż równanie z kroku 5. Jaką wartość otrzymujesz dla $k$?",
+        "expression": "$2k - 2 = 0 \\Rightarrow 2k = 2 \\Rightarrow k = 1$",
+        "explanation": "Przenosimy 2 na prawą stronę i dzielimy przez 2"
+      },
+      {
+        "step": 7,
+        "hint": "Porównaj wszystkie otrzymane warunki. Czy istnieje wartość $k$, która spełnia jednocześnie wszystkie równania?",
+        "expression": "$k = 0$ i $k = 1$ i $k = 1$",
+        "explanation": "Mamy sprzeczne warunki: z pierwszego równania $k = 0$, a z pozostałych $k = 1$"
+      },
+      {
+        "step": 8,
+        "hint": "Co oznacza sytuacja, gdy system równań nie ma rozwiązania?",
+        "expression": "Brak rozwiązania",
+        "explanation": "Nie istnieje wartość $k$, która jednocześnie spełniałaby wszystkie warunki"
+      }
+    ],
+    "solutions": [
+      "Nie istnieje wartość parametru $k$, dla której wielomian $W(x)$ jest wielomianem zerowym"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 56,
+        "maxExplanationLength": 80,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:47:33.692Z"
+    }
+  },
+  {
+    "id": "tex_problem_31",
+    "topic": "Równania trygonometryczne",
+    "statement": "Oblicz sumę wielomianów $P(x) = 2x^2 + 3x - 1$ i $Q(x) = x^2 - 2x + 4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Aby dodać dwa wielomiany, co musisz zrobić z ich wyrażeniami?",
+        "expression": "$P(x) + Q(x) = (2x^2 + 3x - 1) + (x^2 - 2x + 4)$",
+        "explanation": "Zapisujemy sumę wielomianów jako sumę ich wyrażeń w nawiasach"
+      },
+      {
+        "step": 2,
+        "hint": "Nawiasy możesz usunąć, ale pamiętaj o znakach przed drugim wielomianem",
+        "expression": "$P(x) + Q(x) = 2x^2 + 3x - 1 + x^2 - 2x + 4$",
+        "explanation": "Usuwamy nawiasy zachowując wszystkie znaki"
+      },
+      {
+        "step": 3,
+        "hint": "Które wyrazy mają tę samą potęgę zmiennej $x$? Pogrupuj je razem",
+        "expression": "$P(x) + Q(x) = (2x^2 + x^2) + (3x - 2x) + (-1 + 4)$",
+        "explanation": "Grupujemy wyrazy podobne: kwadratowe, liniowe i wyrazy wolne"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz sumę współczynników przy $x^2$",
+        "expression": "$2x^2 + x^2 = (2 + 1)x^2 = 3x^2$",
+        "explanation": "Dodajemy współczynniki przy tej samej potędze"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz sumę współczynników przy $x$",
+        "expression": "$3x - 2x = (3 - 2)x = 1x = x$",
+        "explanation": "Odejmujemy współczynniki przy $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Oblicz sumę wyrazów wolnych",
+        "expression": "$-1 + 4 = 3$",
+        "explanation": "Dodajemy wyrazy stałe"
+      },
+      {
+        "step": 7,
+        "hint": "Połącz wszystkie obliczone części w jeden wielomian",
+        "expression": "$P(x) + Q(x) = 3x^2 + x + 3$",
+        "explanation": "Zapisujemy wynik jako wielomian w porządku malejących potęg"
+      }
+    ],
+    "solutions": [
+      "$P(x) + Q(x) = 3x^2 + x + 3$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Nawiasy możesz usunąć, ale pamiętaj o znakach przed drugim wielomianem",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 10,
+      "metrics": {
+        "avgExplanationLength": 46,
+        "maxExplanationLength": 61,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 14,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-01T09:47:43.827Z"
+    }
+  },
+  {
+    "id": "tex_problem_32",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wyznacz różnicę wielomianów $A(x) = 3x^3 - 2x + 5$ i $B(x) = x^3 + x^2 - 3x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zapisuje się różnicę dwóch wielomianów? Co oznacza $A(x) - B(x)$?",
+        "expression": "$A(x) - B(x) = (3x^3 - 2x + 5) - (x^3 + x^2 - 3x + 1)$",
+        "explanation": "Zapisujemy różnicę jako odejmowanie drugiego wielomianu od pierwszego"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje ze znakami wyrazów, gdy usuwasz nawias poprzedzony minusem?",
+        "expression": "$A(x) - B(x) = 3x^3 - 2x + 5 - x^3 - x^2 + 3x - 1$",
+        "explanation": "Usuwamy nawiasy, zmieniając znaki wszystkich wyrazów w drugim wielomianie"
+      },
+      {
+        "step": 3,
+        "hint": "Które wyrazy mają te same potęgi zmiennej $x$? Jak je pogrupować?",
+        "expression": "$A(x) - B(x) = (3x^3 - x^3) + (-x^2) + (-2x + 3x) + (5 - 1)$",
+        "explanation": "Grupujemy wyrazy o tych samych potęgach: $x^3$, $x^2$, $x^1$ i wyrazy wolne"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz każdą grupę osobno. Zacznij od najwyższej potęgi",
+        "expression": "$3x^3 - x^3 = 2x^3$",
+        "explanation": "Dla wyrazów z $x^3$: $3 - 1 = 2$"
+      },
+      {
+        "step": 5,
+        "hint": "Kontynuuj obliczenia dla pozostałych grup wyrazów",
+        "expression": "$-x^2 = -x^2$, $-2x + 3x = x$, $5 - 1 = 4$",
+        "explanation": "Obliczamy współczynniki przy kolejnych potęgach i wyraz wolny"
+      },
+      {
+        "step": 6,
+        "hint": "Zapisz końcowy wynik, układając wyrazy według malejących potęg",
+        "expression": "$A(x) - B(x) = 2x^3 - x^2 + x + 4$",
+        "explanation": "Łączymy wszystkie obliczone wyrazy w wielomian wynikowy"
+      }
+    ],
+    "solutions": [
+      "$A(x) - B(x) = 2x^3 - x^2 + x + 4$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 61,
+        "maxExplanationLength": 75,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:47:56.243Z"
+    }
+  },
+  {
+    "id": "tex_problem_34",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wymnóż wielomiany $P(x) = x + 2$ i $Q(x) = x^2 - 3x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zapisać iloczyn dwóch wielomianów? Pamiętaj o nawiasach",
+        "expression": "$P(x) \\cdot Q(x) = (x + 2)(x^2 - 3x + 1)$",
+        "explanation": "Zapisujemy iloczyn wielomianów w postaci iloczynu wyrażeń w nawiasach"
+      },
+      {
+        "step": 2,
+        "hint": "Każdy składnik pierwszego nawiasu musisz pomnożyć przez każdy składnik drugiego. Zacznij od pierwszego składnika",
+        "expression": "$x \\cdot (x^2 - 3x + 1) = x^3 - 3x^2 + x$",
+        "explanation": "Mnożymy $x$ przez każdy składnik wielomianu $x^2 - 3x + 1$"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz pomnóż drugi składnik pierwszego nawiasu przez cały drugi nawias",
+        "expression": "$2 \\cdot (x^2 - 3x + 1) = 2x^2 - 6x + 2$",
+        "explanation": "Mnożymy $2$ przez każdy składnik wielomianu $x^2 - 3x + 1$"
+      },
+      {
+        "step": 4,
+        "hint": "Masz już wszystkie składniki iloczynu. Co teraz musisz zrobić?",
+        "expression": "$(x + 2)(x^2 - 3x + 1) = x^3 - 3x^2 + x + 2x^2 - 6x + 2$",
+        "explanation": "Dodajemy wszystkie otrzymane składniki"
+      },
+      {
+        "step": 5,
+        "hint": "Spójrz na otrzymane wyrażenie. Czy widzisz składniki podobne, które można połączyć?",
+        "expression": "$x^3 + (-3x^2 + 2x^2) + (x - 6x) + 2$",
+        "explanation": "Grupujemy składniki o tych samych potęgach zmiennej $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj dodawanie w każdej grupie składników podobnych",
+        "expression": "$x^3 - x^2 - 5x + 2$",
+        "explanation": "Obliczamy: $-3x^2 + 2x^2 = -x^2$ oraz $x - 6x = -5x$"
+      }
+    ],
+    "solutions": [
+      "$P(x) \\cdot Q(x) = x^3 - x^2 - 5x + 2$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 55,
+        "maxExplanationLength": 69,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:48:24.626Z"
+    }
+  },
+  {
+    "id": "tex_problem_35",
+    "topic": "Równania trygonometryczne",
+    "statement": "Oblicz iloczyn $(2x^2 - x + 3)(x^2 + 2x - 1)$ metodą pisemną",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak mnożysz dwa wielomiany metodą pisemną? Każdy składnik pierwszego nawiasu musisz pomnożyć przez każdy składnik drugiego",
+        "expression": "$(2x^2 - x + 3)(x^2 + 2x - 1) = 2x^2 \\cdot (x^2 + 2x - 1) - x \\cdot (x^2 + 2x - 1) + 3 \\cdot (x^2 + 2x - 1)$",
+        "explanation": "Rozkładamy mnożenie na trzy części zgodnie z własnością rozdzielności"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz pierwszy iloczyn: $2x^2$ razy każdy składnik drugiego wielomianu",
+        "expression": "$2x^2 \\cdot (x^2 + 2x - 1) = 2x^2 \\cdot x^2 + 2x^2 \\cdot 2x + 2x^2 \\cdot (-1) = 2x^4 + 4x^3 - 2x^2$",
+        "explanation": "Mnożymy $2x^2$ przez każdy składnik: $x^2$, $2x$ i $-1$"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz drugi iloczyn: $-x$ razy każdy składnik drugiego wielomianu",
+        "expression": "$-x \\cdot (x^2 + 2x - 1) = -x \\cdot x^2 + (-x) \\cdot 2x + (-x) \\cdot (-1) = -x^3 - 2x^2 + x$",
+        "explanation": "Mnożymy $-x$ przez każdy składnik, pamiętając o znakach"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz trzeci iloczyn: $3$ razy każdy składnik drugiego wielomianu",
+        "expression": "$3 \\cdot (x^2 + 2x - 1) = 3 \\cdot x^2 + 3 \\cdot 2x + 3 \\cdot (-1) = 3x^2 + 6x - 3$",
+        "explanation": "Mnożymy stałą $3$ przez każdy składnik drugiego wielomianu"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz dodaj wszystkie otrzymane wyrażenia. Zapisz je w jednej linii",
+        "expression": "$(2x^4 + 4x^3 - 2x^2) + (-x^3 - 2x^2 + x) + (3x^2 + 6x - 3)$",
+        "explanation": "Łączymy wszystkie trzy części w jedno wyrażenie"
+      },
+      {
+        "step": 6,
+        "hint": "Usuń nawiasy i pogrupuj wyrazy o tych samych potęgach $x$",
+        "expression": "$2x^4 + 4x^3 - 2x^2 - x^3 - 2x^2 + x + 3x^2 + 6x - 3$",
+        "explanation": "Przepisujemy bez nawiasów, zachowując wszystkie znaki"
+      },
+      {
+        "step": 7,
+        "hint": "Uporządkuj wyrazy według malejących potęg i połącz podobne",
+        "expression": "$2x^4 + (4x^3 - x^3) + (-2x^2 - 2x^2 + 3x^2) + (x + 6x) - 3$",
+        "explanation": "Grupujemy wyrazy o tej samej potędze: $x^4$, $x^3$, $x^2$, $x$ i wyraz wolny"
+      },
+      {
+        "step": 8,
+        "hint": "Oblicz sumy w każdej grupie",
+        "expression": "$2x^4 + 3x^3 + (-1x^2) + 7x - 3 = 2x^4 + 3x^3 - x^2 + 7x - 3$",
+        "explanation": "Wykonujemy działania: $4-1=3$, $-2-2+3=-1$, $1+6=7$"
+      }
+    ],
+    "solutions": [
+      "$2x^4 + 3x^3 - x^2 + 7x - 3$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 58,
+        "maxExplanationLength": 76,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:48:41.342Z"
+    }
+  },
+  {
+    "id": "tex_problem_36",
+    "topic": "Równania trygonometryczne",
+    "statement": "Wyznacz iloczyn wielomianów $(x^3 - 2x + 1)(x^2 + x - 2)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak pomnożyć dwa wielomiany? Pamiętaj, że każdy składnik pierwszego wielomianu musi być pomnożony przez każdy składnik drugiego",
+        "expression": "$(x^3 - 2x + 1)(x^2 + x - 2) = x^3(x^2 + x - 2) - 2x(x^2 + x - 2) + 1(x^2 + x - 2)$",
+        "explanation": "Rozkładamy mnożenie na trzy części według składników pierwszego wielomianu"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz pierwszy iloczyn: $x^3$ razy każdy składnik drugiego wielomianu",
+        "expression": "$x^3(x^2 + x - 2) = x^3 \\cdot x^2 + x^3 \\cdot x + x^3 \\cdot (-2) = x^5 + x^4 - 2x^3$",
+        "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz drugi iloczyn: $-2x$ razy każdy składnik drugiego wielomianu",
+        "expression": "$-2x(x^2 + x - 2) = -2x \\cdot x^2 - 2x \\cdot x - 2x \\cdot (-2) = -2x^3 - 2x^2 + 4x$",
+        "explanation": "Pamiętaj o znakach przy mnożeniu przez składnik ujemny"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz trzeci iloczyn: $1$ razy każdy składnik drugiego wielomianu",
+        "expression": "$1(x^2 + x - 2) = x^2 + x - 2$",
+        "explanation": "Mnożenie przez 1 nie zmienia wyrażenia"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz dodaj wszystkie otrzymane wyrażenia. Pamiętaj o grupowaniu składników o tych samych potęgach",
+        "expression": "$x^5 + x^4 - 2x^3 + (-2x^3 - 2x^2 + 4x) + (x^2 + x - 2)$",
+        "explanation": "Zapisujemy sumę wszystkich trzech iloczynów"
+      },
+      {
+        "step": 6,
+        "hint": "Usuń nawiasy i pogrupuj składniki według potęg zmiennej $x$",
+        "expression": "$x^5 + x^4 + (-2x^3 - 2x^3) + (-2x^2 + x^2) + (4x + x) + (-2)$",
+        "explanation": "Grupujemy składniki o tej samej potędze aby je uprościć"
+      },
+      {
+        "step": 7,
+        "hint": "Wykonaj dodawanie składników podobnych w każdej grupie",
+        "expression": "$x^5 + x^4 - 4x^3 - x^2 + 5x - 2$",
+        "explanation": "Otrzymujemy wielomian stopnia piątego w postaci standardowej"
+      }
+    ],
+    "solutions": [
+      "$x^5 + x^4 - 4x^3 - x^2 + 5x - 2$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 55,
+        "maxExplanationLength": 74,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:48:59.090Z"
+    }
+  },
+  {
+    "id": "binomial_theorem_1",
+    "topic": "Wzór dwumianu Newtona",
+    "statement": "Wyznacz $(2x - 1)^4$ używając wzoru dwumianu Newtona",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie wzór dwumianu Newtona. Jak wygląda rozwinięcie $(a + b)^n$?",
+        "expression": "$(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k$",
+        "explanation": "Wzór dwumianu Newtona pozwala rozwinąć potęgę sumy dwóch składników"
+      },
+      {
+        "step": 2,
+        "hint": "Zidentyfikuj składniki w wyrażeniu $(2x - 1)^4$. Co to jest $a$, $b$ i $n$?",
+        "expression": "$a = 2x$, $b = -1$, $n = 4$",
+        "explanation": "Przepisujemy $(2x - 1)^4$ jako $(2x + (-1))^4$ aby dopasować do wzoru"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw zidentyfikowane wartości do wzoru dwumianu Newtona",
+        "expression": "$(2x - 1)^4 = \\sum_{k=0}^{4} \\binom{4}{k} (2x)^{4-k} (-1)^k$",
+        "explanation": "Zastępujemy $a$, $b$ i $n$ w ogólnym wzorze"
+      },
+      {
+        "step": 4,
+        "hint": "Rozpisz sumę dla wszystkich wartości $k$ od 0 do 4. Ile składników będziesz miał?",
+        "expression": "$(2x - 1)^4 = \\binom{4}{0}(2x)^4(-1)^0 + \\binom{4}{1}(2x)^3(-1)^1 + \\binom{4}{2}(2x)^2(-1)^2 + \\binom{4}{3}(2x)^1(-1)^3 + \\binom{4}{4}(2x)^0(-1)^4$",
+        "explanation": "Rozpisujemy wszystkie 5 składników sumy dla $k = 0, 1, 2, 3, 4$"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz współczynniki dwumianowe. Pamiętasz wzór na $\\binom{n}{k}$?",
+        "expression": "$\\binom{4}{0} = 1$, $\\binom{4}{1} = 4$, $\\binom{4}{2} = 6$, $\\binom{4}{3} = 4$, $\\binom{4}{4} = 1$",
+        "explanation": "Używamy wzoru $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$ lub trójkąta Pascala"
+      },
+      {
+        "step": 6,
+        "hint": "Oblicz potęgi składnika $(2x)$. Pamiętaj o potęgowaniu iloczynu",
+        "expression": "$(2x)^4 = 16x^4$, $(2x)^3 = 8x^3$, $(2x)^2 = 4x^2$, $(2x)^1 = 2x$, $(2x)^0 = 1$",
+        "explanation": "Dla $(2x)^k$ mamy $2^k \\cdot x^k$"
+      },
+      {
+        "step": 7,
+        "hint": "Oblicz potęgi składnika $(-1)$. Zwróć uwagę na znaki",
+        "expression": "$(-1)^0 = 1$, $(-1)^1 = -1$, $(-1)^2 = 1$, $(-1)^3 = -1$, $(-1)^4 = 1$",
+        "explanation": "Potęgi parzyste dają $+1$, nieparzyste dają $-1$"
+      },
+      {
+        "step": 8,
+        "hint": "Podstaw wszystkie obliczone wartości do każdego składnika",
+        "expression": "$(2x - 1)^4 = 1 \\cdot 16x^4 \\cdot 1 + 4 \\cdot 8x^3 \\cdot (-1) + 6 \\cdot 4x^2 \\cdot 1 + 4 \\cdot 2x \\cdot (-1) + 1 \\cdot 1 \\cdot 1$",
+        "explanation": "Mnożymy współczynnik dwumianowy, potęgę $(2x)$ i potęgę $(-1)$ w każdym składniku"
+      },
+      {
+        "step": 9,
+        "hint": "Wykonaj mnożenia w każdym składniku osobno",
+        "expression": "$(2x - 1)^4 = 16x^4 - 32x^3 + 24x^2 - 8x + 1$",
+        "explanation": "Upraszczamy: $16x^4 + (-32x^3) + 24x^2 + (-8x) + 1$"
+      }
+    ],
+    "solutions": [
+      "$(2x - 1)^4 = 16x^4 - 32x^3 + 24x^2 - 8x + 1$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 58,
+        "maxExplanationLength": 81,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:49:31.204Z"
+    }
+  },
+  {
+    "id": "tex_problem_40",
+    "topic": "Równania trygonometryczne",
+    "statement": "Zastosuj wzór $(a+b)^2 = a^2 + 2ab + b^2$ do obliczenia $(2x + 3)^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wyrażenie $(2x + 3)^2$. Co odpowiada składnikom $a$ i $b$ we wzorze $(a+b)^2$?",
+        "expression": "$a = 2x$, $b = 3$",
+        "explanation": "Identyfikujemy składniki wzoru kwadrat sumy"
+      },
+      {
+        "step": 2,
+        "hint": "Teraz zastosuj wzór $(a+b)^2 = a^2 + 2ab + b^2$. Co otrzymasz po podstawieniu?",
+        "expression": "$(2x + 3)^2 = (2x)^2 + 2 \\cdot (2x) \\cdot 3 + 3^2$",
+        "explanation": "Podstawiamy $a = 2x$ i $b = 3$ do wzoru"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz pierwszy składnik. Jak podnosisz do kwadratu iloczyn dwóch czynników?",
+        "expression": "$(2x)^2 = 2^2 \\cdot x^2 = 4x^2$",
+        "explanation": "Stosujemy regułę $(ab)^2 = a^2b^2$"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz środkowy składnik. Pamiętaj o kolejności działań",
+        "expression": "$2 \\cdot (2x) \\cdot 3 = 2 \\cdot 2x \\cdot 3 = 12x$",
+        "explanation": "Mnożymy wszystkie czynniki: $2 \\cdot 2 \\cdot 3 = 12$"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz trzeci składnik",
+        "expression": "$3^2 = 9$",
+        "explanation": "Podnosimy liczbę 3 do kwadratu"
+      },
+      {
+        "step": 6,
+        "hint": "Połącz wszystkie obliczone składniki w jeden wielomian",
+        "expression": "$(2x + 3)^2 = 4x^2 + 12x + 9$",
+        "explanation": "Zapisujemy wynik jako wielomian w porządku malejącym potęg"
+      }
+    ],
+    "solutions": [
+      "$(2x + 3)^2 = 4x^2 + 12x + 9$"
+    ],
+    "parameters": {},
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 43,
+        "maxExplanationLength": 58,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-01T09:50:01.357Z"
+    }
+  }
+]
