@@ -17,8 +17,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
   ];
 
   // Proporcje oparte na liczbie e (e ≈ 2.718)
-  const moduleHeight = 280;
-  const moduleWidth = Math.round(moduleHeight * Math.E); // 280 * 2.718 ≈ 761
+  const moduleHeight = 200;
+  const moduleWidth = Math.round(moduleHeight * Math.E); // 200 * 2.718 ≈ 544
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-6">
