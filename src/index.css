@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark mode globals */
+/* E-ink mode globals */
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-stone-100 text-stone-900;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   
-  /* Better font rendering for dark mode */
+  /* Better font rendering for e-ink aesthetic */
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* Force KaTeX math to be black and bold */
+.katex {
+  color: black !important;
+  font-weight: 600 !important;
+}
+
+.katex .mord {
+  color: black !important;
+}
+
+.katex .minner {
+  color: black !important;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
   return (
-    <div className="bg-gray-900/50 border-b border-gray-800">
+    <div className="bg-white border-b border-stone-200">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-3 md:py-4">
         <div className="flex flex-col gap-3">
           {/* Subject selector */}
@@ -11,7 +11,7 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
               {/* Back to Welcome button */}
               <button
                 onClick={onBackToWelcome}
-                className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all"
+                className="p-2 rounded-lg bg-stone-100 text-stone-600 hover:bg-stone-200 hover:text-stone-900 transition-all"
                 title="Powrót do menu głównego"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,7 +20,7 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
                 </svg>
               </button>
               
-              <h2 className="text-lg md:text-xl font-bold text-white">
+              <h2 className="text-lg md:text-xl font-bold text-stone-900">
                 {currentMode === 'sequences' ? 'Ciągi Geometryczne' :
                  currentMode === 'sequences-intro' ? 'Ciągi Wstęp' :
                  currentMode === 'quiz' ? 'Quiz' :
@@ -28,7 +28,7 @@ const QuizSelector = ({ currentMode, onModeChange, onBackToWelcome }) => {
               </h2>
             </div>
             
-            <div className="text-xs md:text-sm text-gray-400 md:block">
+            <div className="text-xs md:text-sm text-stone-600 md:block">
               Ucz się trygonometrii krok po kroku
             </div>
           </div>

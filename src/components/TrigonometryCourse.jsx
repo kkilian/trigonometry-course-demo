@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import ProblemList from './ProblemList';
 import ProblemView from './ProblemView';
 import WelcomeScreen from './WelcomeScreen';
+import PolynomialTopics from './PolynomialTopics';
 import powersProblems from '../data/powers-problems.json';
 import polynomialsIntroProblems from '../data/polynomials-intro-problems.json';
+import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
+import polynomialOperationsProblems from '../data/polynomial-operations-problems.json';
+import polynomialFormulasProblems from '../data/polynomial-formulas-problems.json';
+import polynomialSubstitutionProblems from '../data/polynomial-substitution-problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials-intro'
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'polynomials-intro' | 'polynomial-definition' | etc
   
   // Debug: Log mode changes
   useEffect(() => {
@@ -15,6 +20,10 @@ const TrigonometryCourse = () => {
   const [currentProblem, setCurrentProblem] = useState(null);
   const [completedPowersProblems, setCompletedPowersProblems] = useState(new Set());
   const [completedPolynomialsIntroProblems, setCompletedPolynomialsIntroProblems] = useState(new Set());
+  const [completedPolynomialDefinitionProblems, setCompletedPolynomialDefinitionProblems] = useState(new Set());
+  const [completedPolynomialOperationsProblems, setCompletedPolynomialOperationsProblems] = useState(new Set());
+  const [completedPolynomialFormulasProblems, setCompletedPolynomialFormulasProblems] = useState(new Set());
+  const [completedPolynomialSubstitutionProblems, setCompletedPolynomialSubstitutionProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -27,17 +36,41 @@ const TrigonometryCourse = () => {
       console.log('Returning polynomialsIntroProblems:', polynomialsIntroProblems.length, 'problems');
       return polynomialsIntroProblems;
     }
+    if (mode === 'polynomial-definition') {
+      return polynomialDefinitionProblems;
+    }
+    if (mode === 'polynomial-operations') {
+      return polynomialOperationsProblems;
+    }
+    if (mode === 'polynomial-formulas') {
+      return polynomialFormulasProblems;
+    }
+    if (mode === 'polynomial-substitution') {
+      return polynomialSubstitutionProblems;
+    }
     return [];
   };
   
   const getCurrentCompleted = () => {
     if (mode === 'polynomials-intro') return completedPolynomialsIntroProblems;
+    if (mode === 'polynomial-definition') return completedPolynomialDefinitionProblems;
+    if (mode === 'polynomial-operations') return completedPolynomialOperationsProblems;
+    if (mode === 'polynomial-formulas') return completedPolynomialFormulasProblems;
+    if (mode === 'polynomial-substitution') return completedPolynomialSubstitutionProblems;
     return completedPowersProblems;
   };
   
   const setCurrentCompleted = (newSet) => {
     if (mode === 'polynomials-intro') {
       setCompletedPolynomialsIntroProblems(newSet);
+    } else if (mode === 'polynomial-definition') {
+      setCompletedPolynomialDefinitionProblems(newSet);
+    } else if (mode === 'polynomial-operations') {
+      setCompletedPolynomialOperationsProblems(newSet);
+    } else if (mode === 'polynomial-formulas') {
+      setCompletedPolynomialFormulasProblems(newSet);
+    } else if (mode === 'polynomial-substitution') {
+      setCompletedPolynomialSubstitutionProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -56,6 +89,30 @@ const TrigonometryCourse = () => {
     if (mode === 'polynomials-intro') {
       return {
         title: 'Wielomiany Wstęp',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'polynomial-definition') {
+      return {
+        title: 'Co to jest wielomian?',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'polynomial-operations') {
+      return {
+        title: 'Podstawowe działania',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'polynomial-formulas') {
+      return {
+        title: 'Wzory skróconego mnożenia',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'polynomial-substitution') {
+      return {
+        title: 'Podstawianie wartości',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -121,14 +178,38 @@ const TrigonometryCourse = () => {
     console.log('Mode set to:', selectedMode);
   };
 
+  const handlePolynomialTopicSelect = (topicId) => {
+    setMode(topicId);
+    setCurrentProblem(null);
+  };
+
+  const handleBackToPolynomialTopics = () => {
+    setMode('polynomials');
+    setCurrentProblem(null);
+  };
+
+  const handleBackToWelcome = () => {
+    setMode('welcome');
+    setCurrentProblem(null);
+  };
+
 
   // Render welcome screen
   if (mode === 'welcome') {
     return <WelcomeScreen onSelectMode={handleWelcomeSelect} />;
   }
 
+  // Render polynomial topics menu
+  if (mode === 'polynomials') {
+    return (
+      <PolynomialTopics 
+        onSelectTopic={handlePolynomialTopicSelect}
+        onBack={handleBackToWelcome}
+      />
+    );
+  }
 
-  // Render course mode (powers)
+  // Render course mode (powers, polynomial topics, etc)
   return (
     <>
       {currentProblem ? (
@@ -146,6 +227,9 @@ const TrigonometryCourse = () => {
           completedProblems={getCurrentCompleted()}
           title={sectionInfo.title}
           subtitle={sectionInfo.subtitle}
+          onBack={
+            mode.startsWith('polynomial-') ? handleBackToPolynomialTopics : handleBackToWelcome
+          }
         />
       )}
     </>

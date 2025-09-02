@@ -4,61 +4,76 @@ const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
     {
       id: 'powers',
-      title: 'TRYGONOMETRIA',
-      icon: '∑ sin θ',
-      highlight: 'blue'
+      title: 'Trygonometria',
+      description: 'Funkcje trygonometryczne, tożsamości, równania',
+      problemCount: 175
+    },
+    {
+      id: 'polynomials',
+      title: 'Wielomiany',
+      description: 'Fundamenty - start od zera',
+      problemCount: 0,
+      hasSubmenu: true
     },
     {
       id: 'polynomials-intro',
-      title: 'WIELOMIANY WSTĘP',
-      icon: 'f(x) = xⁿ',
-      highlight: 'red'
+      title: 'Wielomiany - Wprowadzenie',
+      description: 'Podstawy wielomianów, działania, rozkład',
+      problemCount: 32
     }
   ];
 
-  // Responsywne wymiary z zachowaniem proporcji opartych na liczbie e
-
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-6">
-      <div className="w-full max-w-4xl">
-        {/* Demo Badge */}
-        <div className="text-center mb-8">
-          <span className="text-gray-400 text-sm tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-            @Demo
-          </span>
-        </div>
-        
-        <div className="flex flex-col items-center gap-6">
+    <div className="min-h-screen bg-stone-100">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16">
+        {/* Modules List */}
+        <div className="space-y-2 md:space-y-4">
+          {/* Category Header */}
+          <div className="px-4 md:px-8 py-3 md:py-4">
+            <h2 className="text-xs font-medium text-stone-600 uppercase tracking-wider">
+              Dostępne kursy ({modules.length})
+            </h2>
+          </div>
+          
+          {/* Module Items */}
           {modules.map((module) => (
-            <button
-              key={module.id}
-              onClick={() => onSelectMode(module.id)}
-              className={`group relative bg-gray-950 border rounded-3xl 
-                         transition-all duration-200 
-                         focus:outline-none focus:ring-2 focus:ring-gray-600
-                         flex flex-col items-center justify-center
-                         w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg
-                         h-28 sm:h-32 md:h-36 lg:h-40 ${
-                           module.highlight === 'blue'
-                           ? 'border-blue-600 hover:border-blue-500 hover:bg-blue-900/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'
-                           : module.highlight === 'red'
-                           ? 'border-red-600 hover:border-red-500 hover:bg-red-900/20 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]'
-                           : 'border-gray-800 hover:border-gray-700 hover:bg-gray-900/50 hover:shadow-[0_0_30px_rgba(255,193,7,0.3)]'
-                         }`}
-            >
-              <div className="text-center flex flex-col items-center gap-4">
-                <div className={`text-4xl ${
-                  module.highlight === 'blue' ? 'text-blue-400'
-                  : module.highlight === 'red' ? 'text-red-400'
-                  : 'text-gray-400'
-                }`}>{module.icon}</div>
-                <h2 className={`text-2xl font-bold ${
-                  module.highlight === 'blue' ? 'text-blue-100'
-                  : module.highlight === 'red' ? 'text-red-100'
-                  : 'text-gray-100'
-                }`} style={{ fontFamily: 'Inter, sans-serif' }}>{module.title}</h2>
-              </div>
-            </button>
+            <div className="px-4 md:px-8" key={module.id}>
+              <button
+                onClick={() => onSelectMode(module.id)}
+                className="w-full text-left p-4 md:p-6 bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 rounded-xl transition-all group"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-stone-900 text-base md:text-lg leading-relaxed font-medium mb-1">
+                      {module.title}
+                    </h3>
+                    <p className="text-stone-600 text-sm">
+                      {module.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between md:justify-end gap-3 md:gap-6 flex-shrink-0">
+                    {module.hasSubmenu ? (
+                      <div className="bg-yellow-100 px-3 py-1 rounded-full">
+                        <span className="text-xs md:text-sm text-yellow-700">
+                          4 tematy
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="bg-stone-100 px-3 py-1 rounded-full">
+                        <span className="text-xs md:text-sm text-stone-600">
+                          {module.problemCount} zadań
+                        </span>
+                      </div>
+                    )}
+                    <div className="w-8 h-8 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
+                      <svg className="w-4 h-4 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
           ))}
         </div>
       </div>

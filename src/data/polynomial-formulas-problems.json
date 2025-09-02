@@ -1,0 +1,15 @@
+[
+  {
+    "id": "poly_form_1",
+    "topic": "Wzory skróconego mnożenia",
+    "statement": "Przykładowe zadanie - do uzupełnienia",
+    "steps": [
+      {
+        "hint": "Wskazówka do kroku 1",
+        "expression": "$(a + b)^2 = a^2 + 2ab + b^2$",
+        "explanation": "Wyjaśnienie kroku 1"
+      }
+    ],
+    "solutions": ["$Rozwiązanie$"]
+  }
+]

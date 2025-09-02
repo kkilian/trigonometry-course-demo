@@ -1,0 +1,15 @@
+[
+  {
+    "id": "poly_def_1",
+    "topic": "Definicja wielomianu",
+    "statement": "Przykładowe zadanie - do uzupełnienia",
+    "steps": [
+      {
+        "hint": "Wskazówka do kroku 1",
+        "expression": "$W(x) = a_nx^n + ... + a_1x + a_0$",
+        "explanation": "Wyjaśnienie kroku 1"
+      }
+    ],
+    "solutions": ["$Rozwiązanie$"]
+  }
+]

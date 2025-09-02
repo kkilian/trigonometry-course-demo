@@ -67,11 +67,11 @@ const TrigonometryQuiz = ({ onBack }) => {
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-screen bg-black text-white p-4">
+      <div className="min-h-screen bg-stone-100 text-stone-900 p-4">
         <div className="flex gap-4 mb-4">
           <button
             onClick={onBack}
-            className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+            className="px-4 py-2 bg-white border border-stone-200 hover:bg-stone-50 rounded-lg transition-colors"
           >
             ← Powrót
           </button>
@@ -109,11 +109,11 @@ const TrigonometryQuiz = ({ onBack }) => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-4">
+    <div className="min-h-screen bg-stone-100 text-stone-900 p-4">
       <div className="flex gap-4 mb-4">
         <button
           onClick={onBack}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-6-6 6-6" />
@@ -126,26 +126,26 @@ const TrigonometryQuiz = ({ onBack }) => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-3xl font-bold">Quiz Trygonometryczny</h1>
-            <div className="text-lg text-gray-400">
+            <div className="text-lg text-stone-600">
               Pytanie {currentQuestion + 1} z {questions.length}
             </div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-2 mb-4">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded transition-all duration-500" 
+          <div className="bg-stone-200 rounded-lg p-2 mb-4">
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded transition-all duration-500" 
                  style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
             />
           </div>
         </div>
 
         {!isComplete ? (
-          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-6">
+          <div className="bg-white border border-stone-200 rounded-lg p-6 mb-6">
             <div className="mb-6">
               {/* Poziom pytania */}
               <div className="mb-4">
                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  question.level === 1 ? 'bg-green-600 text-white' :
-                  question.level === 2 ? 'bg-yellow-600 text-white' : 'bg-red-600 text-white'
+                  question.level === 1 ? 'bg-stone-200 text-stone-700' :
+                  question.level === 2 ? 'bg-stone-300 text-stone-800' : 'bg-stone-400 text-stone-900'
                 }`}>
                   Poziom {question.level === 1 ? 'Podstawowy' : 
                           question.level === 2 ? 'Średni' : 'Zaawansowany'}
@@ -166,30 +166,30 @@ const TrigonometryQuiz = ({ onBack }) => {
                       ? key === question.correctAnswer
                         ? 'relative'
                         : key === selectedAnswer
-                        ? 'bg-red-900/50 border border-red-600'
-                        : 'bg-gray-800 border border-gray-700'
+                        ? 'bg-stone-200 border border-stone-400'
+                        : 'bg-stone-50 border border-stone-200'
                       : selectedAnswer === key
-                      ? 'bg-blue-900/50 border border-blue-600'
-                      : 'bg-gray-800 border border-gray-700 hover:bg-gray-700'
+                      ? 'bg-stone-200 border border-stone-400'
+                      : 'bg-stone-50 border border-stone-200 hover:bg-stone-100'
                   }`}
                 >
                   {/* Poprawna odpowiedź z żółtym efektem i wyjaśnieniem */}
                   {showResult && key === question.correctAnswer ? (
                     <div className="relative">
                       <div className="absolute -inset-4 bg-yellow-500/10 blur-2xl rounded-2xl animate-pulse"></div>
-                      <div className="relative p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-lg ring-2 ring-yellow-500/30 animate-pulse shadow-lg shadow-yellow-500/20">
+                      <div className="relative p-4 bg-yellow-50 border border-yellow-300 rounded-lg ring-2 ring-yellow-400/30 animate-pulse shadow-lg shadow-yellow-300/20">
                         <div className="flex items-start gap-3 mb-3">
-                          <span className="font-semibold text-yellow-500/80">
+                          <span className="font-semibold text-yellow-700">
                             {key}.
                           </span>
-                          <div className="text-yellow-500/80 flex-1">
+                          <div className="text-yellow-700 flex-1">
                             <MathRenderer content={value} />
                           </div>
-                          <span className="text-green-400 text-sm font-semibold">✓ Poprawna</span>
+                          <span className="text-green-600 text-sm font-semibold">✓ Poprawna</span>
                         </div>
-                        <div className="border-t border-yellow-500/20 pt-3">
-                          <div className="text-yellow-500/70 text-sm font-semibold mb-1">Wyjaśnienie:</div>
-                          <div className="text-yellow-500/80 leading-relaxed text-sm">
+                        <div className="border-t border-yellow-200 pt-3">
+                          <div className="text-yellow-700 text-sm font-semibold mb-1">Wyjaśnienie:</div>
+                          <div className="text-yellow-600 leading-relaxed text-sm">
                             <MathRenderer content={question.explanation} />
                           </div>
                         </div>
@@ -208,7 +208,7 @@ const TrigonometryQuiz = ({ onBack }) => {
                         <MathRenderer content={value} />
                       </div>
                       {showResult && key === selectedAnswer && key !== question.correctAnswer && (
-                        <span className="text-red-400 text-sm">✗ Błędna</span>
+                        <span className="text-stone-500 text-sm">✗ Błędna</span>
                       )}
                     </button>
                   )}
@@ -223,8 +223,8 @@ const TrigonometryQuiz = ({ onBack }) => {
                   disabled={selectedAnswer === null}
                   className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     selectedAnswer === null
-                      ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                      ? 'bg-stone-200 text-stone-400 cursor-not-allowed'
+                      : 'bg-stone-700 hover:bg-stone-800 text-white'
                   }`}
                 >
                   Sprawdź odpowiedź
@@ -232,21 +232,21 @@ const TrigonometryQuiz = ({ onBack }) => {
               ) : (
                 <div className="flex items-center gap-4">
                   <span className={`text-lg font-semibold ${
-                    selectedAnswer === question.correctAnswer ? 'text-green-400' : 'text-red-400'
+                    selectedAnswer === question.correctAnswer ? 'text-stone-700' : 'text-stone-500'
                   }`}>
                     {selectedAnswer === question.correctAnswer ? 'Dobrze!' : 'Źle!'}
                   </span>
                   {!isLastQuestion ? (
                     <button
                       onClick={handleNextQuestion}
-                      className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+                      className="px-6 py-3 bg-stone-700 hover:bg-stone-800 text-white rounded-lg font-semibold transition-colors"
                     >
                       Następne pytanie
                     </button>
                   ) : (
                     <button
                       onClick={handleNextQuestion}
-                      className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors"
+                      className="px-6 py-3 bg-stone-700 hover:bg-stone-800 text-white rounded-lg font-semibold transition-colors"
                     >
                       Zakończ quiz
                     </button>
@@ -254,7 +254,7 @@ const TrigonometryQuiz = ({ onBack }) => {
                 </div>
               )}
               
-              <div className="text-lg text-gray-400">
+              <div className="text-lg text-stone-600">
                 Wynik: {score}/{answers.length}
               </div>
             </div>

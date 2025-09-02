@@ -1,0 +1,15 @@
+[
+  {
+    "id": "poly_sub_1",
+    "topic": "Podstawianie wartości",
+    "statement": "Przykładowe zadanie - do uzupełnienia",
+    "steps": [
+      {
+        "hint": "Wskazówka do kroku 1",
+        "expression": "$W(2) = 3 \\cdot 2^2 + 2 \\cdot 2 - 1$",
+        "explanation": "Wyjaśnienie kroku 1"
+      }
+    ],
+    "solutions": ["$Rozwiązanie$"]
+  }
+]

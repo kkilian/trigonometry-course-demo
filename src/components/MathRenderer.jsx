@@ -102,21 +102,22 @@ const MathRenderer = ({ content, className = '' }) => {
     <span className={className}>
       {segments.map((segment, index) => {
         if (segment.type === 'text') {
-          // Regular text - just return as text node
-          return <span key={index}>{segment.content}</span>;
+          // Regular text - apply very light gray color
+          return <span key={index} className="text-stone-400">{segment.content}</span>;
         } else {
-          // Math content - use react-katex
+          // Math content - use react-katex with black color and semibold
           try {
             return (
-              <InlineMath 
-                key={index} 
-                math={segment.content}
-                renderError={(error) => {
-                  // Fallback to plain text if LaTeX fails
-                  console.warn('KaTeX render error:', error.message, 'for content:', segment.content);
-                  return <span>{segment.content}</span>;
-                }}
-              />
+              <span key={index} className="text-black font-bold" style={{ color: 'black' }}>
+                <InlineMath 
+                  math={segment.content}
+                  renderError={(error) => {
+                    // Fallback to plain text if LaTeX fails
+                    console.warn('KaTeX render error:', error.message, 'for content:', segment.content);
+                    return <span>{segment.content}</span>;
+                  }}
+                />
+              </span>
             );
           } catch (error) {
             // Fallback to plain text if component fails
