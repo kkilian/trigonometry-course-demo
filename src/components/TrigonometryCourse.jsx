@@ -4,22 +4,25 @@ import ProblemView from './ProblemView';
 import WelcomeScreen from './WelcomeScreen';
 import PolynomialTopics from './PolynomialTopics';
 import powersProblems from '../data/powers-problems.json';
-import polynomialsIntroProblems from '../data/polynomials-intro-problems.json';
+import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
 import polynomialOperationsProblems from '../data/polynomial-operations-problems.json';
 import polynomialFormulasProblems from '../data/polynomial-formulas-problems.json';
 import polynomialSubstitutionProblems from '../data/polynomial-substitution-problems.json';
 
 const TrigonometryCourse = () => {
-  const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'polynomials-intro' | 'polynomial-definition' | etc
+  const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
   
-  // Debug: Log mode changes
+  // Debug: Log mode changes and problems count
   useEffect(() => {
     console.log('Mode changed to:', mode);
+    if (mode === 'algebraic-fractions-intro') {
+      console.log('Algebraic fractions problems loaded:', algebraicFractionsIntroProblems.length);
+    }
   }, [mode]);
   const [currentProblem, setCurrentProblem] = useState(null);
   const [completedPowersProblems, setCompletedPowersProblems] = useState(new Set());
-  const [completedPolynomialsIntroProblems, setCompletedPolynomialsIntroProblems] = useState(new Set());
+  const [completedAlgebraicFractionsIntroProblems, setCompletedAlgebraicFractionsIntroProblems] = useState(new Set());
   const [completedPolynomialDefinitionProblems, setCompletedPolynomialDefinitionProblems] = useState(new Set());
   const [completedPolynomialOperationsProblems, setCompletedPolynomialOperationsProblems] = useState(new Set());
   const [completedPolynomialFormulasProblems, setCompletedPolynomialFormulasProblems] = useState(new Set());
@@ -32,9 +35,9 @@ const TrigonometryCourse = () => {
       console.log('Returning powersProblems:', powersProblems.length, 'problems');
       return powersProblems;
     }
-    if (mode === 'polynomials-intro') {
-      console.log('Returning polynomialsIntroProblems:', polynomialsIntroProblems.length, 'problems');
-      return polynomialsIntroProblems;
+    if (mode === 'algebraic-fractions-intro') {
+      console.log('Returning algebraicFractionsIntroProblems:', algebraicFractionsIntroProblems.length, 'problems');
+      return algebraicFractionsIntroProblems;
     }
     if (mode === 'polynomial-definition') {
       return polynomialDefinitionProblems;
@@ -52,7 +55,7 @@ const TrigonometryCourse = () => {
   };
   
   const getCurrentCompleted = () => {
-    if (mode === 'polynomials-intro') return completedPolynomialsIntroProblems;
+    if (mode === 'algebraic-fractions-intro') return completedAlgebraicFractionsIntroProblems;
     if (mode === 'polynomial-definition') return completedPolynomialDefinitionProblems;
     if (mode === 'polynomial-operations') return completedPolynomialOperationsProblems;
     if (mode === 'polynomial-formulas') return completedPolynomialFormulasProblems;
@@ -61,8 +64,8 @@ const TrigonometryCourse = () => {
   };
   
   const setCurrentCompleted = (newSet) => {
-    if (mode === 'polynomials-intro') {
-      setCompletedPolynomialsIntroProblems(newSet);
+    if (mode === 'algebraic-fractions-intro') {
+      setCompletedAlgebraicFractionsIntroProblems(newSet);
     } else if (mode === 'polynomial-definition') {
       setCompletedPolynomialDefinitionProblems(newSet);
     } else if (mode === 'polynomial-operations') {
@@ -86,9 +89,9 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
-    if (mode === 'polynomials-intro') {
+    if (mode === 'algebraic-fractions-intro') {
       return {
-        title: 'Wielomiany Wstęp',
+        title: 'Ułamki algebraiczne - Wprowadzenie',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -136,13 +139,13 @@ const TrigonometryCourse = () => {
       }
     }
     
-    // Load polynomials-intro progress
-    const savedPolynomialsIntro = localStorage.getItem('completedPolynomialsIntroProblems');
-    if (savedPolynomialsIntro) {
+    // Load algebraic-fractions-intro progress
+    const savedAlgebraicFractionsIntro = localStorage.getItem('completedAlgebraicFractionsIntroProblems');
+    if (savedAlgebraicFractionsIntro) {
       try {
-        setCompletedPolynomialsIntroProblems(new Set(JSON.parse(savedPolynomialsIntro)));
+        setCompletedAlgebraicFractionsIntroProblems(new Set(JSON.parse(savedAlgebraicFractionsIntro)));
       } catch (e) {
-        console.error('Error loading polynomials-intro progress:', e);
+        console.error('Error loading algebraic-fractions-intro progress:', e);
       }
     }
   }, []);
@@ -152,10 +155,10 @@ const TrigonometryCourse = () => {
     localStorage.setItem('completedPowersProblems', JSON.stringify([...completedPowersProblems]));
   }, [completedPowersProblems]);
 
-  // Save polynomials-intro progress
+  // Save algebraic-fractions-intro progress
   useEffect(() => {
-    localStorage.setItem('completedPolynomialsIntroProblems', JSON.stringify([...completedPolynomialsIntroProblems]));
-  }, [completedPolynomialsIntroProblems]);
+    localStorage.setItem('completedAlgebraicFractionsIntroProblems', JSON.stringify([...completedAlgebraicFractionsIntroProblems]));
+  }, [completedAlgebraicFractionsIntroProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);

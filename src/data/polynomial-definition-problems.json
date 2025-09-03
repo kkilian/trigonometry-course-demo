@@ -1,15 +1,1816 @@
+
 [
   {
-    "id": "poly_def_1",
-    "topic": "Definicja wielomianu",
-    "statement": "Przykładowe zadanie - do uzupełnienia",
+    "id": "algebraic_fractions_1",
+    "topic": "Ułamki algebraiczne",
+    "statement": "Wśród wyrażeń $\\frac{0,5 x^{3}+8 x+1}{x^{2}}$, $\\frac{2 x-5}{3}$, $\\frac{2|x|}{x^{3}-8}$, $\\sqrt{\\frac{x}{x+2}}$, $\\frac{3}{x^{3}-8 x^{2}+6}$, $\\frac{7-\\sqrt{x}}{x^{2}+1}$ wskaż ułamki algebraiczne",
     "steps": [
       {
-        "hint": "Wskazówka do kroku 1",
-        "expression": "$W(x) = a_nx^n + ... + a_1x + a_0$",
-        "explanation": "Wyjaśnienie kroku 1"
+        "step": 1,
+        "hint": "Co charakteryzuje ułamek algebraiczny? Jakie warunki musi spełniać?",
+        "expression": "Ułamek algebraiczny to wyrażenie postaci $\\frac{P(x)}{Q(x)}$, gdzie $P(x)$ i $Q(x)$ są wielomianami, a $Q(x) \\neq 0$",
+        "explanation": "Kluczowe cechy: licznik i mianownik to wielomiany, mianownik różny od zera"
+      },
+      {
+        "step": 2,
+        "hint": "Sprawdź pierwszy ułamek. Czy licznik i mianownik są wielomianami?",
+        "expression": "$\\frac{0,5 x^{3}+8 x+1}{x^{2}}$",
+        "explanation": "Licznik $0,5 x^{3}+8 x+1$ jest wielomianem, mianownik $x^{2}$ jest wielomianem. To ułamek algebraiczny."
+      },
+      {
+        "step": 3,
+        "hint": "Drugi ułamek - czy spełnia warunki ułamka algebraicznego?",
+        "expression": "$\\frac{2 x-5}{3}$",
+        "explanation": "Licznik $2x-5$ jest wielomianem, mianownik $3$ jest stałą. To ułamek algebraiczny."
+      },
+      {
+        "step": 4,
+        "hint": "Trzeci ułamek zawiera wartość bezwzględną. Czy to wyklucza go z ułamków algebraicznych?",
+        "expression": "$\\frac{2|x|}{x^{3}-8}$",
+        "explanation": "Wartość bezwzględna nie wyklucza bycia ułamkiem algebraicznym. Licznik $2|x|$ nie jest wielomianem, więc NIE jest ułamkiem algebraicznym."
+      },
+      {
+        "step": 5,
+        "hint": "Czwarty ułamek zawiera pierwiastek. Czy to ułamek algebraiczny?",
+        "expression": "$\\sqrt{\\frac{x}{x+2}}$",
+        "explanation": "Obecność pierwiastka oznacza, że to NIE jest ułamek algebraiczny."
+      },
+      {
+        "step": 6,
+        "hint": "Piąty ułamek - sprawdź jego strukturę",
+        "expression": "$\\frac{3}{x^{3}-8 x^{2}+6}$",
+        "explanation": "Licznik $3$ jest stałą, mianownik $x^{3}-8 x^{2}+6$ jest wielomianem. To ułamek algebraiczny."
+      },
+      {
+        "step": 7,
+        "hint": "Ostatni ułamek - czy zawiera elementy niebędące wielomianem?",
+        "expression": "$\\frac{7-\\sqrt{x}}{x^{2}+1}$",
+        "explanation": "Obecność pierwiastka $\\sqrt{x}$ oznacza, że to NIE jest ułamek algebraiczny."
       }
     ],
-    "solutions": ["$Rozwiązanie$"]
+    "solutions": [
+      "$\\frac{0,5 x^{3}+8 x+1}{x^{2}}$",
+      "$\\frac{2 x-5}{3}$",
+      "$\\frac{3}{x^{3}-8 x^{2}+6}$"
+    ],
+    "parameters": {
+      "algebraic_fractions": 3
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 90,
+        "maxExplanationLength": 137,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:17:47.514Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{9x}{5x-10}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$5x - 10 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, inaczej ułamek będzie nieokreślony"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwiążesz nierówność w mianowniku?",
+        "expression": "$5x - 10 \\neq 0 \\Rightarrow 5x \\neq 10$",
+        "explanation": "Przenosimy 10 na prawą stronę"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościsz tę nierówność?",
+        "expression": "$5x \\neq 10 \\Rightarrow x \\neq 2$",
+        "explanation": "Dzielimy obie strony przez 5"
+      },
+      {
+        "step": 4,
+        "hint": "Co to oznacza dla dziedziny?",
+        "expression": "$x \\in \\mathbb{R} \\setminus \\{2\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem 2"
+      }
+    ],
+    "solutions": [
+      "$\\mathbb{R} \\setminus \\{2\\}$"
+    ],
+    "parameters": {
+      "excluded_point": 2
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "step_count_low",
+          "message": "Za mało kroków (4). Minimum to 5 kroków.",
+          "severity": "warning",
+          "stepCount": 4
+        }
+      ],
+      "qualityScore": 8.5,
+      "metrics": {
+        "avgExplanationLength": 45,
+        "maxExplanationLength": 69,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {
+          "step_count_low": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:17:54.499Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznej",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{1}{(x+1)(5-x)}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x \\neq -1$ oraz $x \\neq 5$",
+        "explanation": "Mianownik nie może być równy zero, więc wykluczamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozumiesz warunek, że mianownik nie może być równy zero?",
+        "expression": "$(x+1) \\neq 0$ oraz $(5-x) \\neq 0$",
+        "explanation": "Rozbijamy warunek na dwa osobne równoważne warunki"
+      },
+      {
+        "step": 3,
+        "hint": "Co oznacza pierwszy warunek $(x+1) \\neq 0$?",
+        "expression": "$x \\neq -1$",
+        "explanation": "Rozwiązujemy pierwszy czynnik mianownika"
+      },
+      {
+        "step": 4,
+        "hint": "Co oznacza drugi warunek $(5-x) \\neq 0$?",
+        "expression": "$x \\neq 5$",
+        "explanation": "Rozwiązujemy drugi czynnik mianownika"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapiszesz dziedzinę, łącząc oba warunki?",
+        "expression": "$x \\in \\mathbb{R} \\setminus \\{-1, 5\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyłączeniem -1 i 5"
+      }
+    ],
+    "solutions": [
+      "$x \\in \\mathbb{R} \\setminus \\{-1, 5\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        -1,
+        5
+      ]
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Jak rozumiesz warunek, że mianownik nie może być równy zero?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 54,
+        "maxExplanationLength": 83,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:18:03.007Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznej",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{4x+2}{x^{2}+4}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^{2}+4 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, inaczej ułamek będzie nieokreślony"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwiązać nierówność $x^{2}+4 \\neq 0$?",
+        "expression": "$x^{2} \\neq -4$",
+        "explanation": "Zauważamy, że suma kwadratów jest zawsze nieujemna"
+      },
+      {
+        "step": 3,
+        "hint": "Czy w ogóle istnieje liczba rzeczywista, która spełnia $x^{2} = -4$?",
+        "expression": "Nie istnieje liczba rzeczywista $x$ taka, że $x^{2} = -4$",
+        "explanation": "Kwadrat liczby rzeczywistej jest zawsze nieujemny"
+      },
+      {
+        "step": 4,
+        "hint": "Skoro $x^{2}+4$ jest zawsze dodatnie, co to oznacza dla dziedziny?",
+        "expression": "$x \\in \\mathbb{R}$",
+        "explanation": "Ułamek jest określony dla wszystkich liczb rzeczywistych"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy licznik ma jakieś ograniczenia?",
+        "expression": "$4x+2$ jest określony dla dowolnego $x$",
+        "explanation": "Licznik jest liniowy i nie wprowadza dodatkowych ograniczeń"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $\\mathbb{R}$ (wszystkie liczby rzeczywiste)"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R}$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 57,
+        "maxExplanationLength": 69,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:18:12.363Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-7}{9x^2-81}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza dziedzina ułamka algebraicznego?",
+        "expression": "$D = \\{x \\in \\mathbb{R} : \text{mianownik} \\neq 0\\}$",
+        "explanation": "Szukamy wartości, dla których mianownik jest różny od zera"
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć mianownik? Czy widzisz jakiś wspólny czynnik?",
+        "expression": "$9x^2 - 81 = 9(x^2 - 9) = 9(x+3)(x-3)$",
+        "explanation": "Rozkładamy mianownik na czynniki metodą grupowania"
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich wartości x mianownik będzie równy zero?",
+        "expression": "$9(x+3)(x-3) = 0 \\Rightarrow x = -3 \\lor x = 3$",
+        "explanation": "Zerowanie się iloczynu następuje dla $x = -3$ i $x = 3$"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie wartości x są niedozwolone w ułamku?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{-3, 3\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem -3 i 3"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy licznik ma jakieś ograniczenia?",
+        "expression": "$3x-7$ jest określony dla wszystkich $x \\in \\mathbb{R}$",
+        "explanation": "Licznik nie wprowadza dodatkowych ograniczeń"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{-3, 3\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        -3,
+        3
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 53,
+        "maxExplanationLength": 60,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:18:21.897Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-5}{x^2+2x+1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^2+2x+1 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, aby ułamek był określony"
+      },
+      {
+        "step": 2,
+        "hint": "Czy rozpoznajesz postać wielomianu w mianowniku?",
+        "expression": "$x^2+2x+1 = (x+1)^2$",
+        "explanation": "Mianownik jest kwadratem dwumianu $(x+1)$"
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakiej wartości $(x+1)^2$ będzie równy zero?",
+        "expression": "$(x+1)^2 = 0 \\Rightarrow x+1 = 0 \\Rightarrow x = -1$",
+        "explanation": "Jedyny punkt, dla którego mianownik jest równy zero"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapiszesz dziedzinę tego ułamka?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{-1\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem -1"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź wartość licznika dla $x = -1$, aby potwierdzić wynik",
+        "expression": "Dla $x = -1$: $\\frac{3(-1)-5}{(-1)^2+2(-1)+1} = \\frac{-3-5}{1-2+1} = \\frac{-8}{0}$",
+        "explanation": "Potwierdza, że $x = -1$ nie należy do dziedziny"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{-1\\}$"
+    ],
+    "parameters": {
+      "domain": "Wszystkie liczby rzeczywiste oprócz -1"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 51,
+        "maxExplanationLength": 59,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:18:32.035Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznej",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{3}-1}{x^{3}+8}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^{3}+8 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, inaczej ułamek będzie nieokreślony"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwiązać równanie $x^{3}+8 = 0$?",
+        "expression": "$x^{3} = -8$",
+        "explanation": "Przenosimy 8 na lewą stronę, aby znaleźć wartości zerujące mianownik"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są rozwiązania równania $x^{3} = -8$?",
+        "expression": "$x = -2$",
+        "explanation": "Rozwiązanie równania $x^{3} = -8$ to $-2$ (jedyny rzeczywisty pierwiastek)"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapiszesz dziedzinę funkcji, eliminując wartość $-2$?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{-2\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem $-2$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy wartość licznika ma wpływ na dziedzinę?",
+        "expression": "$x^{3}-1$ może przyjmować dowolne wartości",
+        "explanation": "Licznik nie ogranicza dziedziny, więc rozwiązanie z mianownika pozostaje aktualne"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{-2\\}$"
+    ],
+    "parameters": {
+      "excluded_point": "$-2$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 70,
+        "maxExplanationLength": 81,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:18:41.536Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+x+4}{x^{2}-5x+6}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza dziedzina ułamka algebraicznego?",
+        "expression": "Dziedzina to zbiór wartości x, dla których mianownik jest różny od zera",
+        "explanation": "Musimy znaleźć wartości x, które nie zerują mianownika $x^{2}-5x+6$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwiązać równanie kwadratowe w mianowniku?",
+        "expression": "$x^{2}-5x+6 = 0$",
+        "explanation": "Rozwiązujemy równanie kwadratowe metodą klasyczną"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz deltę równania kwadratowego",
+        "expression": "$\\Delta = (-5)^{2} - 4(1)(6) = 25 - 24 = 1$",
+        "explanation": "Delta dodatnia, więc równanie ma dwa różne pierwiastki rzeczywiste"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć pierwiastki równania kwadratowego?",
+        "expression": "$x = \\frac{5 \\pm \\sqrt{1}}{2(1)} = \\frac{5 \\pm 1}{2}$",
+        "explanation": "Stosujemy wzór $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są konkretne wartości pierwiastków?",
+        "expression": "$x_1 = \\frac{5 + 1}{2} = 3$, $x_2 = \\frac{5 - 1}{2} = 2$",
+        "explanation": "Pierwiastki to 2 i 3, które zerują mianownik"
+      },
+      {
+        "step": 6,
+        "hint": "Jak zapiszesz dziedzinę ułamka?",
+        "expression": "Dziedzina: $\\mathbb{R} \\setminus \\{2, 3\\}$",
+        "explanation": "Zbiór liczb rzeczywistych bez wartości 2 i 3"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $\\mathbb{R} \\setminus \\{2, 3\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        2,
+        3
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 54,
+        "maxExplanationLength": 67,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:18:52.137Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x+1}{x^{3}-4x^{2}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza dziedzina ułamka algebraicznego?",
+        "expression": "Dziedzina to zbiór wartości x, dla których mianownik jest różny od zera",
+        "explanation": "Musimy znaleźć wartości x, które nie zerują mianownika $x^{3}-4x^{2}$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć mianownik? Czy widzisz wspólny czynnik?",
+        "expression": "$x^{3}-4x^{2} = x^{2}(x-4)$",
+        "explanation": "Wyłączamy $x^{2}$ przed nawias, co pomoże w dalszej analizie"
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy wyrażenie algebraiczne równa się zero?",
+        "expression": "$x^{2}(x-4) = 0 \\Rightarrow x = 0$ lub $x = 4$",
+        "explanation": "Rozwiązujemy równanie mianownika, które zeruje się dla tych wartości"
+      },
+      {
+        "step": 4,
+        "hint": "Co oznacza zero w mianowniku dla dziedziny ułamka?",
+        "expression": "Wartości $x = 0$ i $x = 4$ nie należą do dziedziny",
+        "explanation": "Dla tych wartości ułamek jest nieokreślony (dzielenie przez zero)"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapiszesz dziedzinę ułamka?",
+        "expression": "Dziedzina: $x \\in \\mathbb{R} \\setminus \\{0, 4\\}$",
+        "explanation": "Wszystkie liczby rzeczywiste z wyjątkiem 0 i 4"
+      }
+    ],
+    "solutions": [
+      "$x \\in \\mathbb{R} \\setminus \\{0, 4\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        0,
+        4
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 62,
+        "maxExplanationLength": 69,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:01.700Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznej",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^3 + 8x + 5}{8x^4 - x}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy ułamek algebraiczny jest niedozwolony?",
+        "expression": "$8x^4 - x \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości x, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Czy widzisz wspólny czynnik w mianowniku?",
+        "expression": "$x(8x^3 - 1) = 0$",
+        "explanation": "Rozkładamy mianownik na czynniki"
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich wartości x równanie się zeruje?",
+        "expression": "$x = 0$ lub $8x^3 - 1 = 0$",
+        "explanation": "Rozpatrujemy dwa przypadki zerowania się mianownika"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać równanie $8x^3 = 1$?",
+        "expression": "$x^3 = \frac{1}{8} \\Rightarrow x = \frac{1}{2}$",
+        "explanation": "Bierzemy pierwiastek sześcienny z obu stron"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są zatem wartości wyłączone z dziedziny?",
+        "expression": "$x \\neq 0, x \\neq \frac{1}{2}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyłączeniem 0 i $\\frac{1}{2}$"
+      }
+    ],
+    "solutions": [
+      "$\\mathbb{R} \\setminus \\{0, \\frac{1}{2}\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        0,
+        0.5
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 56,
+        "maxExplanationLength": 82,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:16.448Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+5}{x^{3}-9x^{2}+x-9}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^{3}-9x^{2}+x-9 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Jak można rozłożyć mianownik na czynniki?",
+        "expression": "$x^{3}-9x^{2}+x-9 = (x-3)(x^{2}-6x+3)$",
+        "explanation": "Rozkładamy mianownik na czynniki metodą grupowania lub przewidywania"
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich wartości x czynniki się zerują?",
+        "expression": "$(x-3) = 0$ lub $(x^{2}-6x+3) = 0$",
+        "explanation": "Pierwszy czynnik zeruje się dla $x = 3$, drugi wymaga dalszego rozwiązania"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać równanie kwadratowe $x^{2}-6x+3 = 0$?",
+        "expression": "$\\Delta = (-6)^{2} - 4(1)(3) = 36 - 12 = 24$",
+        "explanation": "Obliczamy deltę równania kwadratowego"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie będą rozwiązania równania kwadratowego?",
+        "expression": "$x = \\frac{6 \\pm \\sqrt{24}}{2(1)} = \\frac{6 \\pm 2\\sqrt{6}}{2} = 3 \\pm \\sqrt{6}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wartości x powodują, że mianownik jest równy zero?",
+        "expression": "$x \\in \\{3, 3+\\sqrt{6}, 3-\\sqrt{6}\\}$",
+        "explanation": "Wartości, które zerują mianownik, są wykluczone z dziedziny"
+      }
+    ],
+    "solutions": [
+      "$\\mathbb{R} \\setminus \\{3, 3+\\sqrt{6}, 3-\\sqrt{6}\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        "$x = 3$",
+        "$x = 3+\\sqrt{6}$",
+        "$x = 3-\\sqrt{6}$"
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 62,
+        "maxExplanationLength": 80,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:28.116Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x-7}{x^4+x^2-20}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^4+x^2-20 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozłożyć wielomian mianownika na czynniki?",
+        "expression": "$x^4+x^2-20 = (x^2+5)(x^2-4)$",
+        "explanation": "Rozkładamy wielomian na czynniki metodą grupowania"
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich wartości czynniki się zerują?",
+        "expression": "$x^2+5 = 0$ lub $x^2-4 = 0$",
+        "explanation": "Szukamy wartości zerujących poszczególne czynniki"
+      },
+      {
+        "step": 4,
+        "hint": "Rozwiąż równania dla każdego czynnika",
+        "expression": "$x^2+5 = 0 \\Rightarrow x = \\pm i\\sqrt{5}$",
+        "explanation": "Pierwszy czynnik daje wartości urojone, więc nie wpływa na dziedzinę rzeczywistą"
+      },
+      {
+        "step": 5,
+        "hint": "Dla drugiego czynnika - jakie wartości zerują $x^2-4$?",
+        "expression": "$x^2-4 = 0 \\Rightarrow x = \\pm 2$",
+        "explanation": "Drugi czynnik zeruje się dla $x = 2$ i $x = -2$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak zapisać dziedzinę ułamka algebraicznego?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{-2, 2\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem $-2$ i $2$"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{-2, 2\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        -2,
+        2
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 62,
+        "maxExplanationLength": 80,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:38.305Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x^3 - 5x + 3}{x^3 - 3x^2 + 3x - 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza dziedzina ułamka algebraicznego?",
+        "expression": "Dziedzina = zbiór wartości x, dla których mianownik $\\neq 0$",
+        "explanation": "Musimy znaleźć wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozwiązać równanie $x^3 - 3x^2 + 3x - 1 = 0$?",
+        "expression": "Rozpatrzmy wielomian $x^3 - 3x^2 + 3x - 1$",
+        "explanation": "Musimy znaleźć pierwiastki tego wielomianu"
+      },
+      {
+        "step": 3,
+        "hint": "Czy widzisz jakieś naturalne podstawienie, które uprości obliczenia?",
+        "expression": "Zauważmy, że $x^3 - 3x^2 + 3x - 1 = (x-1)^3$",
+        "explanation": "Wielomian jest sześcianem różnicy $(x-1)$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest jedyny pierwiastek tego wielomianu?",
+        "expression": "$(x-1)^3 = 0 \\Rightarrow x = 1$",
+        "explanation": "Jedyny punkt, który zeruje mianownik to $x = 1$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapiszesz dziedzinę ułamka?",
+        "expression": "Dziedzina = $\\mathbb{R} \\setminus \\{1\\}$",
+        "explanation": "Wszystkie liczby rzeczywiste z wyjątkiem 1"
+      }
+    ],
+    "solutions": [
+      "Dziedzina = $\\mathbb{R} \\setminus \\{1\\}$"
+    ],
+    "parameters": {
+      "excluded_point": 1
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 44,
+        "maxExplanationLength": 47,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:47.739Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{-7x+2}{x^3+4x+5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^3 + 4x + 5 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprawdzić, czy wielomian ma pierwiastki?",
+        "expression": "Rozwiążemy równanie $x^3 + 4x + 5 = 0$",
+        "explanation": "Musimy sprawdzić, czy wielomian trzeciego stopnia ma rzeczywiste pierwiastki"
+      },
+      {
+        "step": 3,
+        "hint": "Czy widzisz jakieś proste sposoby na znalezienie pierwiastków?",
+        "expression": "Zauważmy, że nie ma prostych pierwiastków całkowitych",
+        "explanation": "Wielomian nie ma oczywistych pierwiastków całkowitych"
+      },
+      {
+        "step": 4,
+        "hint": "Jak można udowodnić, że wielomian nie ma rzeczywistych pierwiastków?",
+        "expression": "Zbadajmy wartości wielomianu dla różnych liczb",
+        "explanation": "Sprawdzimy wartości wielomianu dla kilku punktów"
+      },
+      {
+        "step": 5,
+        "hint": "Co nam mówi zachowanie wielomianu w różnych punktach?",
+        "expression": "$f(0) = 5 > 0$, $f(1) = 1^3 + 4(1) + 5 = 10 > 0$, $f(-1) = (-1)^3 + 4(-1) + 5 = -1 + (-4) + 5 = 0$",
+        "explanation": "Wielomian nie ma rzeczywistych pierwiastków, więc jest zawsze dodatni (z wyjątkiem jednego punktu)"
+      },
+      {
+        "step": 6,
+        "hint": "Jak ostatecznie określić dziedzinę ułamka?",
+        "expression": "Dziedzina: $D = \\mathbb{R}$",
+        "explanation": "Wielomian $x^3 + 4x + 5$ jest zawsze różny od zera, więc ułamek jest określony dla wszystkich liczb rzeczywistych"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $D = \\mathbb{R}$"
+    ],
+    "parameters": {
+      "domain": "Wszystkie liczby rzeczywiste"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 78,
+        "maxExplanationLength": 113,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:19:59.332Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x-3}{5x^3 - 15x^2 - 5x + 15}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że ułamek algebraiczny jest niedozwolony?",
+        "expression": "$5x^3 - 15x^2 - 5x + 15 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Czy widzisz jakieś wspólne czynniki w mianowniku?",
+        "expression": "$5(x^3 - 3x^2 - x + 3) = 0$",
+        "explanation": "Wyłączamy wspólny czynnik 5 przed nawias"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwiązać równanie $x^3 - 3x^2 - x + 3 = 0$?",
+        "expression": "$x^3 - 3x^2 - x + 3 = (x - 3)(x^2 + 0x - 1)$",
+        "explanation": "Rozkładamy wielomian metodą grupowania"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są pierwiastki tego wielomianu?",
+        "expression": "$x = 3$ lub $x = \\pm\\sqrt{1}$",
+        "explanation": "Pierwszy czynnik daje $x = 3$, drugi daje $x = 1$ i $x = -1$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapiszesz dziedzinę ułamka?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{3, 1, -1\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyłączeniem 3, 1 i -1"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{3, 1, -1\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        3,
+        1,
+        -1
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 57,
+        "maxExplanationLength": 80,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:20:08.906Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina ułamka algebraicznego",
+    "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^2 - 2x + 1}{x^5 + 3x^3 - 4x^2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy ułamek algebraiczny jest niedozwolony?",
+        "expression": "$x^5 + 3x^3 - 4x^2 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero, więc szukamy wartości, które zerują mianownik"
+      },
+      {
+        "step": 2,
+        "hint": "Czy widzisz wspólny czynnik w mianowniku?",
+        "expression": "$x^2(x^3 + 3x - 4) \\neq 0$",
+        "explanation": "Wyłączamy $x^2$ przed nawias, co pozwoli nam łatwiej znaleźć pierwiastki"
+      },
+      {
+        "step": 3,
+        "hint": "Jak sprawdzić pierwiastki wielomianu $x^3 + 3x - 4$?",
+        "expression": "Wielomian $x^3 + 3x - 4$ może mieć pierwiastki metodą prób",
+        "explanation": "Sprawdzamy wartości całkowite, które mogą być pierwiastkami"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie wartości całkowite mogą być pierwiastkami?",
+        "expression": "Dla $x = 1$: $1^3 + 3(1) - 4 = 1 + 3 - 4 = 0$",
+        "explanation": "Zauważamy, że $x = 1$ jest pierwiastkiem wielomianu"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są wszystkie wartości zerujące mianownik?",
+        "expression": "$x = 0$ lub $x = 1$",
+        "explanation": "Mianownik zeruje się dla $x = 0$ i $x = 1$"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $\\mathbb{R} \\setminus \\{0, 1\\}$"
+    ],
+    "parameters": {
+      "excluded_points": [
+        0,
+        1
+      ]
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 61,
+        "maxExplanationLength": 80,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:20:18.758Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dziedziną jest cały zbiór liczb rzeczywistych?",
+        "expression": "$f(x) = \\frac{x^2 + 1}{x^2 + 1}$",
+        "explanation": "Funkcja, która nie ma żadnych ograniczeń wartości mianownika"
+      },
+      {
+        "step": 2,
+        "hint": "Dlaczego mianownik nie może być równy zero?",
+        "expression": "$mianownik = x^2 + 1 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Kwadrat plus 1 zawsze jest dodatni, więc nigdy nie będzie równy zero"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wygląda taka funkcja algebraiczna?",
+        "expression": "$f(x) = 1$",
+        "explanation": "Ułamek $\\frac{x^2 + 1}{x^2 + 1}$ redukuje się do stałej 1"
+      },
+      {
+        "step": 4,
+        "hint": "Czy ta funkcja ma jakiekolwiek ograniczenia?",
+        "expression": "$domena = \\mathbb{R}$",
+        "explanation": "Funkcja jest określona dla wszystkich liczb rzeczywistych"
+      },
+      {
+        "step": 5,
+        "hint": "Co decyduje o dziedzinie ułamka algebraicznego?",
+        "expression": "$warunek dziedziny: x^2 + 1 \\neq 0$",
+        "explanation": "Mianownik nigdy nie może być równy zero"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 + 1}{x^2 + 1} = 1$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R}$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Dlaczego mianownik nie może być równy zero?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 56,
+        "maxExplanationLength": 68,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:20:27.317Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{1\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dziedziną jest zbiór wszystkich liczb rzeczywistych z wyjątkiem 1?",
+        "expression": "$f(x) = \\frac{x^2 - 1}{x - 1}$",
+        "explanation": "Konstruujemy ułamek, który jest nieokreślony dla $x = 1$"
+      },
+      {
+        "step": 2,
+        "hint": "Czy widzisz, dlaczego mianownik będzie zerowy dla $x = 1$?",
+        "expression": "$f(x) = \\frac{(x+1)(x-1)}{x-1}$",
+        "explanation": "Rozkładamy licznik na czynniki, aby uprościć ułamek"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie, gdy uprościsz ten ułamek?",
+        "expression": "$f(x) = x + 1$, dla $x \\neq 1$",
+        "explanation": "Czynnik $(x-1)$ skraca się w liczniku i mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są konsekwencje tego uproszczenia dla dziedziny?",
+        "expression": "Domena: $\\mathbb{R} - \\{1\\}$",
+        "explanation": "Funkcja jest określona dla wszystkich liczb rzeczywistych z wyjątkiem 1"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, co się dzieje dla różnych wartości x",
+        "expression": "$f(0) = 1$, $f(2) = 3$, $f(-1) = 0$",
+        "explanation": "Funkcja jest ciągła i określona dla wszystkich liczb różnych od 1"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 - 1}{x - 1}$",
+      "$f(x) = x + 1$, dla $x \\neq 1$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{1\\}$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 59,
+        "maxExplanationLength": 71,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:20:37.186Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{0\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co powoduje, że mianownik ułamka może być równy zero?",
+        "expression": "$f(x) = \\frac{x^2 - 1}{x}$",
+        "explanation": "Zauważmy, że mianownik $x$ zeruje się dla $x = 0$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć ten ułamek? Czy można wyłączyć wspólny czynnik?",
+        "expression": "$f(x) = \\frac{x^2 - 1}{x} = \\frac{(x+1)(x-1)}{x}$",
+        "explanation": "Rozkładamy licznik na czynniki"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie, gdy uprościmy ułamek?",
+        "expression": "$f(x) = x + 1 \\cdot \\frac{x-1}{x}$",
+        "explanation": "Zauważamy, że dla $x \\neq 0$ ułamek można uprościć"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie wartości są dozwolone dla tej funkcji?",
+        "expression": "Dziedzina: $\\mathbb{R} - \\{0\\}$",
+        "explanation": "Funkcja jest określona dla wszystkich liczb rzeczywistych z wyjątkiem zera"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź wartości funkcji dla różnych x",
+        "expression": "$f(1) = 2$, $f(2) = 3$, $f(-1) = 0$",
+        "explanation": "Funkcja przyjmuje różne wartości dla różnych argumentów"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 - 1}{x}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{0\\}$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 1,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Co powoduje, że mianownik ułamka może być równy zero?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 52,
+        "maxExplanationLength": 74,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:20:45.985Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{0,3\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zdefiniować ułamek algebraiczny, który będzie miał ograniczoną dziedzinę?",
+        "expression": "$f(x) = \\frac{x^2 - 9}{x(x-3)}$",
+        "explanation": "Konstruujemy ułamek z wielomianu w liczniku i mianowniku"
+      },
+      {
+        "step": 2,
+        "hint": "Dlaczego ten mianownik ogranicza dziedzinę funkcji?",
+        "expression": "Mianownik $x(x-3)$ jest równy zero dla $x = 0$ i $x = 3$",
+        "explanation": "Te wartości powodują, że ułamek jest nieokreślony"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć ten ułamek, aby sprawdzić jego własności?",
+        "expression": "$f(x) = \\frac{(x+3)(x-3)}{x(x-3)} = \\frac{x+3}{x}$",
+        "explanation": "Skracamy wspólny czynnik $(x-3)$ w liczniku i mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie wartości są niedozwolone po uproszczeniu?",
+        "expression": "Funkcja jest nieokreślona dla $x = 0$ i $x = 3$",
+        "explanation": "Potwierdzamy, że dziedzina to $\\mathbb{R} - \\{0,3\\}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak sprawdzić, że funkcja jest określona dla wszystkich innych wartości?",
+        "expression": "Dla $x \\neq 0$ i $x \\neq 3$ funkcja jest ciągła i różnowartościowa",
+        "explanation": "Weryfikujemy poprawność doboru dziedziny"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 - 9}{x(x-3)}$",
+      "$f(x) = \\frac{x+3}{x}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{0,3\\}$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 51,
+        "maxExplanationLength": 56,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:20:56.280Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{-2, 3\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że zbiór $\\mathbb{R} - \\{-2, 3\\}$ jest dziedziną funkcji?",
+        "expression": "$f(x) = \\frac{p(x)}{q(x)}$",
+        "explanation": "Funkcja jest określona dla wszystkich wartości z $\\mathbb{R}$ z wyjątkiem $-2$ i $3$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak skonstruować mianownik, aby wyzerować się tylko dla $-2$ i $3$?",
+        "expression": "$q(x) = (x+2)(x-3)$",
+        "explanation": "Mianownik będzie zerowy dokładnie dla $x = -2$ i $x = 3$"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki wielomian w liczniku zapewni, że funkcja będzie określona dla wszystkich innych wartości?",
+        "expression": "$p(x) = x^2 + x - 6$",
+        "explanation": "Wielomian nie ma dodatkowych zer poza tymi z mianownika"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wygląda pełny ułamek spełniający warunki zadania?",
+        "expression": "$f(x) = \\frac{x^2 + x - 6}{(x+2)(x-3)}$",
+        "explanation": "Funkcja jest określona dla $x \\in \\mathbb{R} - \\{-2, 3\\}$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy funkcja spełnia wszystkie wymagania",
+        "expression": "$f(-2) = niedefiniowalny$, $f(3) = niedefiniowalny$",
+        "explanation": "Funkcja nie jest określona dla $-2$ i $3$, co zgadza się z warunkiem zadania"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 + x - 6}{(x+2)(x-3)}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{-2, 3\\}$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 66,
+        "maxExplanationLength": 84,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:21:06.765Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{-\\sqrt{2}, \\sqrt{2}\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zdefiniować ułamek, aby mianownik był zerem dla dokładnie tych dwóch wartości?",
+        "expression": "$f(x) = \\frac{x^2 - 2}{x^2 - 4}$",
+        "explanation": "Konstruujemy mianownik, który zeruje się dla $x = -\\sqrt{2}$ i $x = \\sqrt{2}$"
+      },
+      {
+        "step": 2,
+        "hint": "Rozłóż mianownik na czynniki. Co ci to da?",
+        "expression": "$f(x) = \\frac{x^2 - 2}{(x+\\sqrt{2})(x-\\sqrt{2})}$",
+        "explanation": "Rozkładamy mianownik na czynniki liniowe, które zerują się dla $\\pm\\sqrt{2}$"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości x spowodują, że mianownik będzie równy zero?",
+        "expression": "Mianownik = $0$ dla $x = -\\sqrt{2}$ oraz $x = \\sqrt{2}$",
+        "explanation": "Potwierdzamy, że tylko te dwie wartości są wyłączone z dziedziny"
+      },
+      {
+        "step": 4,
+        "hint": "Czy funkcja jest określona dla wszystkich innych liczb rzeczywistych?",
+        "expression": "Dziedzina: $\\mathbb{R} - \\{-\\sqrt{2}, \\sqrt{2}\\}$",
+        "explanation": "Sprawdzamy, że funkcja jest zdefiniowana dla wszystkich liczb rzeczywistych poza $\\pm\\sqrt{2}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć ten ułamek, zachowując jego własności?",
+        "expression": "$f(x) = \\frac{x^2 - 2}{(x+\\sqrt{2})(x-\\sqrt{2})} = \\frac{1}{x+\\sqrt{2}}$",
+        "explanation": "Upraszczamy ułamek, zachowując tę samą dziedzinę"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 - 2}{x^2 - 4}$",
+      "$f(x) = \\frac{1}{x+\\sqrt{2}}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{-\\sqrt{2}, \\sqrt{2}\\}$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 72,
+        "maxExplanationLength": 94,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:21:17.899Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Dziedzina funkcji algebraicznych",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{-1,1,2,4\\}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zdefiniować ułamek algebraiczny, który będzie miał ograniczoną dziedzinę?",
+        "expression": "$f(x) = \\frac{x^2 - 5x + 6}{(x+1)(x-1)(x-2)(x-4)}$",
+        "explanation": "Konstruujemy licznik i mianownik tak, aby wykluczyć podane wartości"
+      },
+      {
+        "step": 2,
+        "hint": "Dlaczego mianownik nie może być równy zero?",
+        "expression": "Mianownik $= (x+1)(x-1)(x-2)(x-4)$",
+        "explanation": "Zerowanie się dowolnego czynnika powoduje niedozwoloną wartość funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź, czy faktycznie dla $x = -1, 1, 2, 4$ mianownik będzie równy zero",
+        "expression": "$f(-1) = niedozwolone$, $f(1) = niedozwolone$, $f(2) = niedozwolone$, $f(4) = niedozwolone$",
+        "explanation": "Podstawienie tych wartości zeruje mianownik"
+      },
+      {
+        "step": 4,
+        "hint": "Czy licznik ma jakieś dodatkowe ograniczenia?",
+        "expression": "Licznik $= x^2 - 5x + 6 = (x-2)(x-3)$",
+        "explanation": "Licznik nie wprowadza dodatkowych ograniczeń dziedziny"
+      },
+      {
+        "step": 5,
+        "hint": "Jak opisać dziedzinę tego ułamka?",
+        "expression": "Dziedzina = $\\mathbb{R} - \\{-1,1,2,4\\}$",
+        "explanation": "Wszystkie liczby rzeczywiste z wyłączeniem podanych czterech wartości"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 - 5x + 6}{(x+1)(x-1)(x-2)(x-4)}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{-1,1,2,4\\}$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "vague_hint",
+          "step": 2,
+          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
+          "severity": "warning",
+          "hint": "Dlaczego mianownik nie może być równy zero?",
+          "vagueWords": [
+            "może"
+          ]
+        }
+      ],
+      "qualityScore": 9.5,
+      "metrics": {
+        "avgExplanationLength": 61,
+        "maxExplanationLength": 70,
+        "vagueWordsCount": 1,
+        "problematicStepsPercentage": 20,
+        "warningTypeCounts": {
+          "vague_hint": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:21:36.740Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_1",
+    "topic": "Ułamki algebraiczne",
+    "statement": "Oblicz wartość ułamka algebraicznego $\\frac{2x^2+1}{x^3-1}$ dla $x = 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie, gdy podstawisz x = 2 do licznika i mianownika?",
+        "expression": "$\\frac{2(2)^2+1}{(2)^3-1}$",
+        "explanation": "Podstawiamy $x = 2$ do obu części ułamka"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczysz wartość w liczniku? Pamiętaj o kolejności działań!",
+        "expression": "$\\frac{2 \\cdot 4 + 1}{8-1}$",
+        "explanation": "Najpierw potęgowanie, potem mnożenie i dodawanie"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi licznik po wykonaniu działań?",
+        "expression": "$\\frac{8 + 1}{8-1} = \\frac{9}{7}$",
+        "explanation": "Dodajemy 8 i 1 w liczniku, w mianowniku odejmujemy 8 - 1"
+      },
+      {
+        "step": 4,
+        "hint": "Czy ułamek można jeszcze uprościć?",
+        "expression": "$\\frac{9}{7}$",
+        "explanation": "Ułamek jest już w najprostszej postaci"
+      }
+    ],
+    "solutions": [
+      "$\\frac{9}{7}$"
+    ],
+    "parameters": {
+      "domain": "$x \\neq 1$"
+    },
+    "feedback": {
+      "warnings": [
+        {
+          "type": "step_count_low",
+          "message": "Za mało kroków (4). Minimum to 5 kroków.",
+          "severity": "warning",
+          "stepCount": 4
+        }
+      ],
+      "qualityScore": 8.5,
+      "metrics": {
+        "avgExplanationLength": 46,
+        "maxExplanationLength": 56,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {
+          "step_count_low": 1
+        }
+      },
+      "timestamp": "2025-09-03T05:22:00.762Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_1",
+    "topic": "Obliczanie wartości wyrażeń algebraicznych",
+    "statement": "Oblicz wartość ułamka algebraicznego $\\frac{32-x^{2}}{2x^{3}+8x^{2}+5x+20}$ dla $x = -3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie będzie podstawienie wartości $x = -3$ do licznika?",
+        "expression": "$32 - (-3)^{2} = 32 - 9 = 23$",
+        "explanation": "Obliczamy wartość licznika, pamiętając o kwadracie liczby ujemnej"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozłożyć mianownik na czynniki, podstawiając $x = -3$?",
+        "expression": "$2(-3)^{3} + 8(-3)^{2} + 5(-3) + 20$",
+        "explanation": "Podstawiamy $x = -3$ do każdego składnika mianownika"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz kolejno każdy składnik mianownika",
+        "expression": "$2(-27) + 8(9) + 5(-3) + 20$",
+        "explanation": "Obliczamy wartości potęg i mnożymy przez współczynniki"
+      },
+      {
+        "step": 4,
+        "hint": "Zsumuj wszystkie składniki mianownika",
+        "expression": "$-54 + 72 - 15 + 20 = 23$",
+        "explanation": "Dodajemy wszystkie obliczone wartości"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć wartość całego ułamka?",
+        "expression": "$\\frac{23}{23} = 1$",
+        "explanation": "Dzielimy licznik przez mianownik"
+      }
+    ],
+    "solutions": [
+      "$1$"
+    ],
+    "parameters": {
+      "input": "$x = -3$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 48,
+        "maxExplanationLength": 65,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:22:09.353Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_1",
+    "topic": "Ułamki algebraiczne",
+    "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x}{x-2}$ dla $x = 3\\sqrt{2}+2$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest dana wartość x? Podstaw ją do całego wyrażenia",
+        "expression": "$\\frac{3\\sqrt{2}+2}{(3\\sqrt{2}+2)-2}$",
+        "explanation": "Podstawiamy $x = 3\\sqrt{2}+2$ do licznika i mianownika"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie w mianowniku po odjęciu 2?",
+        "expression": "$\\frac{3\\sqrt{2}+2}{3\\sqrt{2}}$",
+        "explanation": "Upraszczamy mianownik przez odjęcie 2"
+      },
+      {
+        "step": 3,
+        "hint": "Jak można uprościć ten ułamek? Zwróć uwagę na wspólny czynnik",
+        "expression": "$\\frac{3\\sqrt{2}+2}{3\\sqrt{2}} = 1 + \\frac{2}{3\\sqrt{2}}$",
+        "explanation": "Dzielimy licznik przez mianownik, otrzymując 1 i resztę"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć ułamek $\\frac{2}{3\\sqrt{2}}$? Co się stanie, gdy pomnożysz licznik i mianownik przez $\\sqrt{2}$?",
+        "expression": "$1 + \\frac{2\\sqrt{2}}{3 \\cdot 2} = 1 + \\frac{2\\sqrt{2}}{6} = 1 + \\frac{\\sqrt{2}}{3}$",
+        "explanation": "Mnożymy licznik i mianownik przez $\\sqrt{2}$, aby pozbyć się pierwiastka w mianowniku"
+      },
+      {
+        "step": 5,
+        "hint": "Czy wynik jest już w żądanej postaci $a+b\\sqrt{c}$?",
+        "expression": "$1 + \\frac{\\sqrt{2}}{3} = \\frac{3}{3} + \\frac{\\sqrt{2}}{3} = \\frac{3+\\sqrt{2}}{3}$",
+        "explanation": "Przedstawiamy wynik jako ułamek, co pozwala łatwo zidentyfikować współczynniki"
+      }
+    ],
+    "solutions": [
+      "$\\frac{3+\\sqrt{2}}{3}$",
+      "$1 + \\frac{\\sqrt{2}}{3}$"
+    ],
+    "parameters": {
+      "form": "$a+b\\sqrt{c}$, gdzie $a = 1$, $b = \\frac{1}{3}$, $c = 2$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 62,
+        "maxExplanationLength": 85,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:22:21.848Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_1",
+    "topic": "Ułamki algebraiczne",
+    "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x+1}{x-2}$ dla $x = 1-\\sqrt{3}$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Podstaw daną wartość x do ułamka. Jakie będą kolejne przekształcenia?",
+        "expression": "$\\frac{(1-\\sqrt{3})+1}{(1-\\sqrt{3})-2}$",
+        "explanation": "Podstawiamy $x = 1-\\sqrt{3}$ do licznika i mianownika"
+      },
+      {
+        "step": 2,
+        "hint": "Uprość licznik. Jak rozłożysz wyrażenie $(1-\\sqrt{3})+1$?",
+        "expression": "$\\frac{1-\\sqrt{3}+1}{1-\\sqrt{3}-2}$",
+        "explanation": "Dodajemy składniki w liczniku"
+      },
+      {
+        "step": 3,
+        "hint": "Kontynuuj upraszczanie. Co się stanie z liczbami w liczniku i mianowniku?",
+        "expression": "$\\frac{2-\\sqrt{3}}{-1-\\sqrt{3}}$",
+        "explanation": "Upraszczamy licznik do $2-\\sqrt{3}$ i mianownik do $-1-\\sqrt{3}$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak poradzisz sobie z mianownikiem zawierającym pierwiastek? Przypomnij sobie metodę racjonalizacji",
+        "expression": "$\\frac{(2-\\sqrt{3})(-1+\\sqrt{3})}{(-1-\\sqrt{3})(-1+\\sqrt{3})}$",
+        "explanation": "Mnożymy licznik i mianownik przez wyrażenie sprzężone $-1+\\sqrt{3}$"
+      },
+      {
+        "step": 5,
+        "hint": "Rozwiń iloczyny w liczniku i mianowniku. Uważaj na znaki!",
+        "expression": "$\\frac{-2+2\\sqrt{3}+\\sqrt{3}-3}{1-3}$",
+        "explanation": "Rozwijamy iloczyny, pamiętając o kolejnych znakach"
+      },
+      {
+        "step": 6,
+        "hint": "Uprość wyrażenia w liczniku i mianowniku",
+        "expression": "$\\frac{-5+3\\sqrt{3}}{-2}$",
+        "explanation": "Grupujemy składniki w liczniku i upraszczamy mianownik"
+      },
+      {
+        "step": 7,
+        "hint": "Podziel licznik przez mianownik. Jak wygląda końcowy wynik?",
+        "expression": "$\\frac{5}{2} - \\frac{3\\sqrt{3}}{2}$",
+        "explanation": "Dzielimy każdy składnik przez -2"
+      }
+    ],
+    "solutions": [
+      "$\\frac{5}{2} - \\frac{3\\sqrt{3}}{2}$"
+    ],
+    "parameters": {
+      "form": "$a+b\\sqrt{c}$, gdzie $a = \\frac{5}{2}$, $b = -\\frac{3}{2}$, $c = 3$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 50,
+        "maxExplanationLength": 67,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:22:35.570Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_1",
+    "topic": "Ułamki algebraiczne",
+    "statement": "Oblicz wartość ułamka algebraicznego $\\frac{1}{x^{2}+\\sqrt[3]{3}}$ dla $x = \\sqrt[3]{3}-1$. Wynik przedstaw w postaci ułamka o wymiernym mianowniku.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką wartość przyjmie x w podstawieniu? Podstaw dokładnie $x = \\sqrt[3]{3}-1$",
+        "expression": "$x = \\sqrt[3]{3}-1$",
+        "explanation": "Zapamiętujemy dokładną wartość x przed podstawieniem"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie, gdy podstawisz tę wartość do mianownika ułamka? Rozwiń wyrażenie $x^2$",
+        "expression": "$x^2 = (\\sqrt[3]{3}-1)^2 = \\sqrt[3]{3}^2 - 2\\sqrt[3]{3} + 1$",
+        "explanation": "Kwadrat różnicy rozwija się według wzoru $(a-b)^2 = a^2 - 2ab + b^2$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościsz $\\sqrt[3]{3}^2$? Pamiętaj o potęgowaniu pierwiastków",
+        "expression": "$x^2 = \\sqrt[3]{3}^2 - 2\\sqrt[3]{3} + 1 = \\sqrt[3]{9} - 2\\sqrt[3]{3} + 1$",
+        "explanation": "Korzystamy z własności potęgowania pierwiastków: $\\sqrt[3]{3}^2 = \\sqrt[3]{9}$"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz podstaw całe wyrażenie do mianownika ułamka. Co się stanie z $\\sqrt[3]{3}$?",
+        "expression": "$\\frac{1}{x^2 + \\sqrt[3]{3}} = \\frac{1}{\\sqrt[3]{9} - 2\\sqrt[3]{3} + 1 + \\sqrt[3]{3}}$",
+        "explanation": "Dodajemy i odejmujemy $\\sqrt[3]{3}$ w mianowniku, aby uprościć wyrażenie"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościsz mianownik? Grupuj podobne wyrazy",
+        "expression": "$\\frac{1}{\\sqrt[3]{9} - 2\\sqrt[3]{3} + 1 + \\sqrt[3]{3}} = \\frac{1}{\\sqrt[3]{9} + 1 - 2\\sqrt[3]{3}}$",
+        "explanation": "Przestawiamy wyrazy, aby uprościć mianownik"
+      },
+      {
+        "step": 6,
+        "hint": "Czy rozpoznajesz strukturę tego wyrażenia? Co się stanie, gdy dodasz i odejmiesz te same wartości?",
+        "expression": "$\\frac{1}{\\sqrt[3]{9} + 1 - 2\\sqrt[3]{3}} = \\frac{1}{(\\sqrt[3]{3} + 1)^2}$",
+        "explanation": "Korzystamy z rozpoznania struktury wyrażenia: $a^2 - 2ab + b^2 = (a-b)^2$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościsz ułamek, gdy masz kwadrat w mianowniku?",
+        "expression": "$\\frac{1}{(\\sqrt[3]{3} + 1)^2} = \\frac{1}{4}$",
+        "explanation": "Bezpośrednie uproszczenie ułamka przez odwrócenie kwadratu mianownika"
+      }
+    ],
+    "solutions": [
+      "$\\frac{1}{4}$"
+    ],
+    "parameters": {
+      "domain": "$x \\neq 0$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 65,
+        "maxExplanationLength": 78,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:24:10.290Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Funkcje algebraiczne",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest $\\mathbb{R} - \\{0\\}$ i który dla liczby 1 przyjmuje wartość 3",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zbudować ułamek algebraiczny, który ma specyficzną wartość dla konkretnego argumentu?",
+        "expression": "$f(x) = \\frac{x^2 + 2x - 3}{x}$",
+        "explanation": "Konstruujemy funkcję, która ma licznik zależny od $x$, a mianownik to $x$"
+      },
+      {
+        "step": 2,
+        "hint": "Sprawdź, czy funkcja spełnia warunek dziedziny. Co oznacza $x \\neq 0$?",
+        "expression": "Dziedziną jest $\\mathbb{R} - \\{0\\}$, bo mianownik nie może być zerem",
+        "explanation": "Unikamy dzielenia przez zero, więc $x$ nie może być równe 0"
+      },
+      {
+        "step": 3,
+        "hint": "Jak sprawdzić, czy funkcja przyjmuje wartość 3 dla $x = 1$?",
+        "expression": "$f(1) = \\frac{1^2 + 2(1) - 3}{1} = \\frac{1 + 2 - 3}{1} = \\frac{0}{1} = 3$",
+        "explanation": "Podstawiamy $x = 1$ i wykonujemy obliczenia"
+      },
+      {
+        "step": 4,
+        "hint": "Czy potrafisz rozpisać funkcję, aby zobaczyć jej zachowanie?",
+        "expression": "$f(x) = \\frac{x^2 + 2x - 3}{x} = x + 2 - \\frac{3}{x}$",
+        "explanation": "Rozbijamy ułamek na składniki, co pomaga w analizie"
+      },
+      {
+        "step": 5,
+        "hint": "Jak udowodnić, że funkcja faktycznie przyjmuje wartość 3 dla $x = 1$?",
+        "expression": "$f(1) = 1 + 2 - \\frac{3}{1} = 3 - 3 = 3$",
+        "explanation": "Alternatywny sposób obliczenia wartości funkcji potwierdza poprzedni wynik"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x^2 + 2x - 3}{x}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} - \\{0\\}$",
+      "value_at_1": "3"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 10.5,
+      "metrics": {
+        "avgExplanationLength": 60,
+        "maxExplanationLength": 74,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:24:21.862Z"
+    }
+  },
+  {
+    "id": "algebraic_fraction_domain",
+    "topic": "Funkcje algebraiczne",
+    "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest $\\mathbb{R} \\setminus \\{2,3\\}$ i który dla liczby $-1$ przyjmuje wartość $5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zbudować ułamek algebraiczny, który ma wyłączone konkretne wartości w mianowniku?",
+        "expression": "$f(x) = \\frac{x+4}{x-2}$",
+        "explanation": "Konstruujemy ułamek z mianownikiem $(x-2)$, co automatycznie wyklucza $2$ z dziedziny"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprawdzić, czy ten ułamek będzie miał jeszcze inną wartość wyłączoną z dziedziny?",
+        "expression": "Zauważmy, że $f(x)$ jest zdefiniowana dla $x \\neq 2$",
+        "explanation": "Mianownik $(x-2)$ powoduje, że $2$ jest wyłączone z dziedziny"
+      },
+      {
+        "step": 3,
+        "hint": "Jak sprawdzić, czy dla $x = -1$ funkcja przyjmuje wartość $5$?",
+        "expression": "$f(-1) = \\frac{-1+4}{-1-2} = \\frac{3}{-3} = -1 \\cdot \\frac{1}{1} = -1$",
+        "explanation": "Podstawienie $-1$ nie daje wartości $5$, więc musimy zmodyfikować licznik"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zmienić licznik, aby dla $x = -1$ otrzymać wartość $5$?",
+        "expression": "$f(x) = \\frac{x+4+6}{x-2} = \\frac{x+10}{x-2}$",
+        "explanation": "Dodajemy $6$ do licznika, aby zmienić wartość funkcji"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdźmy, czy nowa funkcja spełnia wszystkie warunki",
+        "expression": "$f(-1) = \\frac{-1+10}{-1-2} = \\frac{9}{-3} = -3 \\cdot (-1) = 5$",
+        "explanation": "Dla $x = -1$ funkcja przyjmuje wartość $5$"
+      },
+      {
+        "step": 6,
+        "hint": "Czy funkcja ma jeszcze jakieś ograniczenia w dziedzinie?",
+        "expression": "Dziedzina: $\\mathbb{R} \\setminus \\{2\\}$",
+        "explanation": "Funkcja jest zdefiniowana dla wszystkich liczb rzeczywistych z wyjątkiem $2$"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{x+10}{x-2}$"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} \\setminus \\{2\\}$",
+      "value_at_-1": "$5$"
+    },
+    "feedback": {
+      "warnings": [],
+      "qualityScore": 11,
+      "metrics": {
+        "avgExplanationLength": 65,
+        "maxExplanationLength": 85,
+        "vagueWordsCount": 0,
+        "problematicStepsPercentage": 0,
+        "warningTypeCounts": {}
+      },
+      "timestamp": "2025-09-03T05:24:34.662Z"
+    }
   }
 ]
+
+
