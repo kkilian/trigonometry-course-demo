@@ -37,7 +37,11 @@ const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set(),
       <div className="px-4 md:px-8" key={`problem-${item.id}`}>
         <button
           onClick={() => onSelectProblem(item)}
-          className="w-full text-left p-4 md:p-6 bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 rounded-xl transition-all group"
+          className={`w-full text-left p-4 md:p-6 rounded-xl transition-all group relative ${
+            completedProblems.has(item.id) 
+              ? 'bg-orange-50 border-2 border-orange-200 hover:border-orange-300 shadow-lg shadow-orange-200/40' 
+              : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50'
+          }`}
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="flex-1 min-w-0">

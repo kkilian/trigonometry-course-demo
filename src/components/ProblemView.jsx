@@ -82,22 +82,22 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
 
   return (
     <div className="min-h-screen bg-stone-100">
-      {/* Back Button */}
-      <div className="p-4">
-        <button 
-          onClick={onBack}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-6-6 6-6" />
-          </svg>
-          Zadania
-        </button>
-      </div>
-
-      {/* Sticky Header */}
+      {/* Sticky Header with Back Button */}
       <div className="sticky top-0 z-40 bg-stone-100 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
+          {/* Back Button */}
+          <div className="mb-4">
+            <button 
+              onClick={onBack}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-6-6 6-6" />
+              </svg>
+              Zadania
+            </button>
+          </div>
+          
           {/* Header */}
           <header>
             <div className="mb-2 flex items-center justify-between">
