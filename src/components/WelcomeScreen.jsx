@@ -1,4 +1,6 @@
 import React from 'react';
+import powersProblems from '../data/powers-problems.json';
+import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -6,7 +8,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       id: 'powers',
       title: 'Trygonometria',
       description: 'Funkcje trygonometryczne, tożsamości, równania',
-      problemCount: 175
+      problemCount: powersProblems.length
     },
     {
       id: 'polynomials',
@@ -16,10 +18,10 @@ const WelcomeScreen = ({ onSelectMode }) => {
       hasSubmenu: true
     },
     {
-      id: 'polynomials-intro',
-      title: 'Wielomiany - Wprowadzenie',
-      description: 'Podstawy wielomianów, działania, rozkład',
-      problemCount: 32
+      id: 'algebraic-fractions-intro',
+      title: 'Ułamki algebraiczne - Wprowadzenie',
+      description: 'Podstawy ułamków algebraicznych, działania, upraszczanie',
+      problemCount: algebraicFractionsIntroProblems.length
     }
   ];
 
