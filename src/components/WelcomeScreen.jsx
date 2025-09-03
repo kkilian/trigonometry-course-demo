@@ -15,7 +15,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
       title: 'Wielomiany',
       description: 'Fundamenty - start od zera',
       problemCount: 0,
-      hasSubmenu: true
+      hasSubmenu: true,
+      disabled: true
     },
     {
       id: 'algebraic-fractions-intro',
@@ -41,22 +42,35 @@ const WelcomeScreen = ({ onSelectMode }) => {
           {modules.map((module) => (
             <div className="px-4 md:px-8" key={module.id}>
               <button
-                onClick={() => onSelectMode(module.id)}
-                className="w-full text-left p-4 md:p-6 bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 rounded-xl transition-all group"
+                onClick={() => !module.disabled && onSelectMode(module.id)}
+                disabled={module.disabled}
+                className={`w-full text-left p-4 md:p-6 rounded-xl transition-all ${
+                  module.disabled 
+                    ? 'bg-stone-50 border border-stone-100 cursor-not-allowed opacity-60' 
+                    : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
+                }`}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-stone-900 text-base md:text-lg leading-relaxed font-medium mb-1">
+                    <h3 className={`text-base md:text-lg leading-relaxed font-medium mb-1 ${
+                      module.disabled ? 'text-stone-400' : 'text-stone-900'
+                    }`}>
                       {module.title}
                     </h3>
-                    <p className="text-stone-600 text-sm">
+                    <p className={`text-sm ${
+                      module.disabled ? 'text-stone-400' : 'text-stone-600'
+                    }`}>
                       {module.description}
                     </p>
                   </div>
                   <div className="flex items-center justify-between md:justify-end gap-3 md:gap-6 flex-shrink-0">
                     {module.hasSubmenu ? (
-                      <div className="bg-yellow-100 px-3 py-1 rounded-full">
-                        <span className="text-xs md:text-sm text-yellow-700">
+                      <div className={`px-3 py-1 rounded-full ${
+                        module.disabled ? 'bg-stone-100' : 'bg-yellow-100'
+                      }`}>
+                        <span className={`text-xs md:text-sm ${
+                          module.disabled ? 'text-stone-400' : 'text-yellow-700'
+                        }`}>
                           4 tematy
                         </span>
                       </div>
@@ -67,8 +81,16 @@ const WelcomeScreen = ({ onSelectMode }) => {
                         </span>
                       </div>
                     )}
-                    <div className="w-8 h-8 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
-                      <svg className="w-4 h-4 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      module.disabled 
+                        ? 'bg-stone-100' 
+                        : 'bg-stone-100 group-hover:bg-stone-200'
+                    }`}>
+                      <svg className={`w-4 h-4 transition-colors ${
+                        module.disabled 
+                          ? 'text-stone-400' 
+                          : 'text-stone-600 group-hover:text-stone-700'
+                      }`} fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
                       </svg>
                     </div>

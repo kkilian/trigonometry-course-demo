@@ -558,11 +558,11 @@
       },
       {
         "step": 3,
-        "hint": "Spróbuj rozłożyć trójmian na czynniki. Jakie dwie liczby dają w sumie $-5$, a w iloczynie $6$?",
-        "expression": "$x^{2}-5 x+6 = (x-2)(x-3)$",
-        "explanation": "Rozkładamy trójmian: $-2 + (-3) = -5$ i $(-2) \\cdot (-3) = 6$"
-      },
-      {
+        "hint": "Rozłóż trójmian $x^2 - 5x + 6$ na czynniki za pomocą delty. Oblicz deltę i pierwiastki, a następnie zapisz postać iloczynową.",
+        "expression": "$\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$, $x_1 = \\frac{5 - 1}{2} = 2$, $x_2 = \\frac{5 + 1}{2} = 3$, więc $x^2 - 5x + 6 = (x - 2)(x - 3)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 1$. Pierwiastki: $x_1 = 2$, $x_2 = 3$. Trójmian rozkładamy: $(x - 2)(x - 3)$"
+      
+      },{
         "step": 4,
         "hint": "Kiedy iloczyn dwóch czynników równa się zero? Rozpatrz wszystkie możliwości",
         "expression": "$(x-2)(x-3) = 0 \\Rightarrow x-2 = 0$ lub $x-3 = 0$",
@@ -2105,9 +2105,9 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Zacznij od licznika. Co ci przypomina wyrażenie $x^2 - 5x + 6$? Czy możesz je rozłożyć na czynniki?",
-        "expression": "$x^2 - 5x + 6 = (x - 2)(x - 3)$",
-        "explanation": "Rozkładamy trójmian kwadratowy na czynniki, szukając liczb które dają w sumie $-5$ i w iloczynie $6$"
+        "hint": "Zacznij od licznika. Rozłóż trójmian $x^2 - 5x + 6$ na czynniki za pomocą delty. Oblicz deltę i pierwiastki, a następnie zapisz postać iloczynową.",
+        "expression": "$\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$, $x_1 = \\frac{5 - 1}{2} = 2$, $x_2 = \\frac{5 + 1}{2} = 3$, więc $x^2 - 5x + 6 = (x - 2)(x - 3)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 1$. Pierwiastki: $x_1 = 2$, $x_2 = 3$. Trójmian rozkładamy: $(x - 2)(x - 3)$"
       },
       {
         "step": 2,
@@ -4638,9 +4638,9 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz na licznik $x^2 - x - 6$. Co ci przypomina wyrażenie $ax^2 + bx + c$?",
-        "expression": "$x^2 - x - 6 = (x - 3)(x + 2)$",
-        "explanation": "Rozkładamy trójmian kwadratowy na czynniki, szukając liczb których iloczyn to $-6$ a suma to $-1$"
+        "hint": "Spójrz na licznik $x^2 - x - 6$. Rozłóż go na czynniki za pomocą delty.",
+        "expression": "$\\Delta = (-1)^2 - 4 \\cdot 1 \\cdot (-6) = 1 + 24 = 25$, $x_1 = \\frac{1 - 5}{2} = -2$, $x_2 = \\frac{1 + 5}{2} = 3$, więc $x^2 - x - 6 = (x + 2)(x - 3)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 25$. Pierwiastki: $x_1 = -2$, $x_2 = 3$. Trójmian rozkładamy: $(x + 2)(x - 3)$"
       },
       {
         "step": 2,
@@ -4718,9 +4718,9 @@
       },
       {
         "step": 2,
-        "hint": "Teraz zajmij się mianownikiem. Jak rozłożyć trójmian kwadratowy $x^2 + 2x - 15$ na czynniki?",
-        "expression": "$x^2 + 2x - 15 = (x + 5)(x - 3)$",
-        "explanation": "Szukamy dwóch liczb, których iloczyn to $-15$, a suma to $2$. To są liczby $5$ i $-3$"
+        "hint": "Teraz zajmij się mianownikiem. Rozłóż trójmian kwadratowy $x^2 + 2x - 15$ na czynniki za pomocą delty.",
+        "expression": "$\\Delta = 2^2 - 4 \\cdot 1 \\cdot (-15) = 4 + 60 = 64$, $x_1 = \\frac{-2 - 8}{2} = -5$, $x_2 = \\frac{-2 + 8}{2} = 3$, więc $x^2 + 2x - 15 = (x + 5)(x - 3)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 64$. Pierwiastki: $x_1 = -5$, $x_2 = 3$. Trójmian rozkładamy: $(x + 5)(x - 3)$"
       },
       {
         "step": 3,
@@ -4808,15 +4808,15 @@
       },
       {
         "step": 3,
-        "hint": "Teraz masz ułamek $\\frac{-2(x^2 + 7x - 8)}{3(x^2 + 5x - 24)}$. Aby go dalej uprościć, musisz rozłożyć wielomiany kwadratowe na czynniki. Zacznij od licznika - znajdź dwie liczby, które w sumie dają $7$, a w iloczynie $-8$",
-        "expression": "$x^2 + 7x - 8 = (x + 8)(x - 1)$",
-        "explanation": "Rozkładamy trójmian kwadratowy: $8 + (-1) = 7$ i $8 \\cdot (-1) = -8$"
+        "hint": "Teraz masz ułamek $\\frac{-2(x^2 + 7x - 8)}{3(x^2 + 5x - 24)}$. Aby go dalej uprościć, rozłóż wielomiany kwadratowe na czynniki używając delty. Zacznij od licznika.",
+        "expression": "$\\Delta = 7^2 - 4 \\cdot 1 \\cdot (-8) = 49 + 32 = 81$, $x_1 = \\frac{-7 - 9}{2} = -8$, $x_2 = \\frac{-7 + 9}{2} = 1$, więc $x^2 + 7x - 8 = (x + 8)(x - 1)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 81$. Pierwiastki: $x_1 = -8$, $x_2 = 1$. Trójmian rozkładamy: $(x + 8)(x - 1)$"
       },
       {
         "step": 4,
-        "hint": "Teraz rozłóż mianownik. Znajdź dwie liczby, które w sumie dają $5$, a w iloczynie $-24$",
-        "expression": "$x^2 + 5x - 24 = (x + 8)(x - 3)$",
-        "explanation": "Rozkładamy trójmian kwadratowy: $8 + (-3) = 5$ i $8 \\cdot (-3) = -24$"
+        "hint": "Teraz rozłóż mianownik używając delty.",
+        "expression": "$\\Delta = 5^2 - 4 \\cdot 1 \\cdot (-24) = 25 + 96 = 121$, $x_1 = \\frac{-5 - 11}{2} = -8$, $x_2 = \\frac{-5 + 11}{2} = 3$, więc $x^2 + 5x - 24 = (x + 8)(x - 3)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 121$. Pierwiastki: $x_1 = -8$, $x_2 = 3$. Trójmian rozkładamy: $(x + 8)(x - 3)$"
       },
       {
         "step": 5,
@@ -5059,9 +5059,9 @@
       },
       {
         "step": 4,
-        "hint": "Wyrażenie $x^2 - 13x + 30$ to trójmian kwadratowy. Znajdź dwie liczby, które w sumie dają $-13$, a w iloczynie $30$",
-        "expression": "$\\frac{4x^2(x - 10)(x + 10)}{x(x - 3)(x - 10)}$",
-        "explanation": "Rozkładamy $x^2 - 13x + 30 = (x - 3)(x - 10)$, bo $-3 + (-10) = -13$ i $(-3) \\cdot (-10) = 30$"
+        "hint": "Wyrażenie $x^2 - 13x + 30$ to trójmian kwadratowy. Rozłóż go na czynniki za pomocą delty.",
+        "expression": "$\\Delta = (-13)^2 - 4 \\cdot 1 \\cdot 30 = 169 - 120 = 49$, $x_1 = \\frac{13 - 7}{2} = 3$, $x_2 = \\frac{13 + 7}{2} = 10$, więc $x^2 - 13x + 30 = (x - 3)(x - 10)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 49$. Pierwiastki: $x_1 = 3$, $x_2 = 10$. Otrzymujemy $\\frac{4x^2(x - 10)(x + 10)}{x(x - 3)(x - 10)}$"
       },
       {
         "step": 5,
@@ -5126,9 +5126,9 @@
       },
       {
         "step": 4,
-        "hint": "Teraz masz w liczniku wyrażenie kwadratowe $x^2 - x - 12$. Czy potrafisz je rozłożyć na czynniki? Poszukaj dwóch liczb, których iloczyn to $-12$, a suma to $-1$",
-        "expression": "$\\frac{-3x(x - 4)(x + 3)}{x^2 + 6x + 9}$",
-        "explanation": "Rozkładamy $x^2 - x - 12 = (x - 4)(x + 3)$, bo $4 \\cdot (-3) = -12$ i $4 + (-3) = 1$"
+        "hint": "Teraz masz w liczniku wyrażenie kwadratowe $x^2 - x - 12$. Rozłóż je na czynniki za pomocą delty.",
+        "expression": "$\\Delta = (-1)^2 - 4 \\cdot 1 \\cdot (-12) = 1 + 48 = 49$, $x_1 = \\frac{1 - 7}{2} = -3$, $x_2 = \\frac{1 + 7}{2} = 4$, więc $x^2 - x - 12 = (x + 3)(x - 4)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 49$. Pierwiastki: $x_1 = -3$, $x_2 = 4$. Otrzymujemy $\\frac{-3x(x - 4)(x + 3)}{x^2 + 6x + 9}$"
       },
       {
         "step": 5,
@@ -6034,9 +6034,9 @@
       },
       {
         "step": 2,
-        "hint": "Czy potrafisz rozłożyć trójmian kwadratowy $x^2 + 2x - 3$ na czynniki? Poszukaj dwóch liczb, których iloczyn to $-3$, a suma to $2$",
-        "expression": "$\\frac{2(x + 3)(x - 1)}{x^3 - 3x^2 - 9x + 27}$",
-        "explanation": "Rozkładamy $x^2 + 2x - 3 = (x + 3)(x - 1)$ bo $3 \\cdot (-1) = -3$ i $3 + (-1) = 2$"
+        "hint": "Rozłóż trójmian kwadratowy $x^2 + 2x - 3$ na czynniki za pomocą delty.",
+        "expression": "$\\Delta = 2^2 - 4 \\cdot 1 \\cdot (-3) = 4 + 12 = 16$, $x_1 = \\frac{-2 - 4}{2} = -3$, $x_2 = \\frac{-2 + 4}{2} = 1$, więc $x^2 + 2x - 3 = (x + 3)(x - 1)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 16$. Pierwiastki: $x_1 = -3$, $x_2 = 1$. Otrzymujemy $\\frac{2(x + 3)(x - 1)}{x^3 - 3x^2 - 9x + 27}$"
       },
       {
         "step": 3,
@@ -6107,15 +6107,15 @@
       },
       {
         "step": 3,
-        "hint": "Zacznij od licznika. Jak rozłożyć trójmian kwadratowy $t^2 - 8t - 9$ na czynniki?",
-        "expression": "$t^2 - 8t - 9 = (t - 9)(t + 1)$",
-        "explanation": "Szukamy dwóch liczb, których iloczyn to $-9$, a suma to $-8$: to $-9$ i $1$"
+        "hint": "Zacznij od licznika. Rozłóż trójmian kwadratowy $t^2 - 8t - 9$ na czynniki za pomocą delty.",
+        "expression": "$\\Delta = (-8)^2 - 4 \\cdot 1 \\cdot (-9) = 64 + 36 = 100$, $t_1 = \\frac{8 - 10}{2} = -1$, $t_2 = \\frac{8 + 10}{2} = 9$, więc $t^2 - 8t - 9 = (t + 1)(t - 9)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 100$. Pierwiastki: $t_1 = -1$, $t_2 = 9$. Trójmian rozkładamy: $(t + 1)(t - 9)$"
       },
       {
         "step": 4,
-        "hint": "Teraz rozłóż mianownik. Jakie dwie liczby dają w iloczynie $36$, a w sumie $13$?",
-        "expression": "$t^2 - 13t + 36 = (t - 9)(t - 4)$",
-        "explanation": "Szukamy dwóch liczb, których iloczyn to $36$, a suma to $13$: to $9$ i $4$"
+        "hint": "Teraz rozłóż mianownik $t^2 - 13t + 36$ za pomocą delty.",
+        "expression": "$\\Delta = (-13)^2 - 4 \\cdot 1 \\cdot 36 = 169 - 144 = 25$, $t_1 = \\frac{13 - 5}{2} = 4$, $t_2 = \\frac{13 + 5}{2} = 9$, więc $t^2 - 13t + 36 = (t - 4)(t - 9)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 25$. Pierwiastki: $t_1 = 4$, $t_2 = 9$. Trójmian rozkładamy: $(t - 4)(t - 9)$"
       },
       {
         "step": 5,
@@ -6380,9 +6380,9 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Aby skrócić ułamek algebraiczny, musisz rozłożyć licznik i mianownik na czynniki. Zacznij od mianownika - czy możesz go rozłożyć na iloczyn dwóch wyrażeń liniowych?",
-        "expression": "$5x^2 + 9x - 2 = (5x - 1)(x + 2)$",
-        "explanation": "Rozkładamy mianownik na czynniki, szukając dwóch liczb które w iloczynie dają $5 \\cdot (-2) = -10$, a w sumie $9$"
+        "hint": "Aby skrócić ułamek algebraiczny, musisz rozłożyć licznik i mianownik na czynniki. Zacznij od mianownika - rozłóż go za pomocą delty.",
+        "expression": "Dla $5x^2 + 9x - 2$: $\\Delta = 9^2 - 4 \\cdot 5 \\cdot (-2) = 81 + 40 = 121$, $x_1 = \\frac{-9 - 11}{10} = -2$, $x_2 = \\frac{-9 + 11}{10} = \\frac{1}{5}$",
+        "explanation": "Obliczamy deltę: $\\Delta = 121$. Pierwiastki: $x_1 = -2$, $x_2 = \\frac{1}{5}$, więc $5x^2 + 9x - 2 = 5(x + 2)(x - \\frac{1}{5}) = (x + 2)(5x - 1)$"
       },
       {
         "step": 2,
@@ -6648,9 +6648,9 @@
       },
       {
         "step": 8,
-        "hint": "Spróbuj rozłożyć trójmian kwadratowy $3x^2 - 5x - 2$. Poszukaj dwóch liczb, których iloczyn to $3 \\cdot (-2) = -6$, a suma to $-5$",
-        "expression": "$3x^2 - 5x - 2 = 3x^2 - 6x + x - 2 = 3x(x - 2) + 1(x - 2) = (3x + 1)(x - 2)$",
-        "explanation": "Rozkładamy przez grupowanie: $-5x = -6x + x$"
+        "hint": "Rozłóż trójmian kwadratowy $3x^2 - 5x - 2$ za pomocą delty.",
+        "expression": "$\\Delta = (-5)^2 - 4 \\cdot 3 \\cdot (-2) = 25 + 24 = 49$, $x_1 = \\frac{5 - 7}{6} = -\\frac{1}{3}$, $x_2 = \\frac{5 + 7}{6} = 2$, więc $3x^2 - 5x - 2 = 3(x + \\frac{1}{3})(x - 2) = (3x + 1)(x - 2)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 49$. Pierwiastki: $x_1 = -\\frac{1}{3}$, $x_2 = 2$. Trójmian rozkładamy: $(3x + 1)(x - 2)$"
       },
       {
         "step": 9,
@@ -7351,9 +7351,9 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Aby rozszerzyć ułamek, musisz znać związek między obecnym mianownikiem a docelowym. Spróbuj rozłożyć wyrażenie $x^2-x-2$ na czynniki",
-        "expression": "$x^2-x-2 = (x-2)(x+1)$",
-        "explanation": "Rozkładamy trójmian kwadratowy na iloczyn dwóch czynników liniowych"
+        "hint": "Aby rozszerzyć ułamek, musisz znać związek między obecnym mianownikiem a docelowym. Rozłóż wyrażenie $x^2-x-2$ na czynniki za pomocą delty",
+        "expression": "$\\Delta = (-1)^2 - 4 \\cdot 1 \\cdot (-2) = 1 + 8 = 9$, $x_1 = \\frac{1 - 3}{2} = -1$, $x_2 = \\frac{1 + 3}{2} = 2$, więc $x^2-x-2 = (x+1)(x-2)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 9$. Pierwiastki: $x_1 = -1$, $x_2 = 2$. Trójmian rozkładamy: $(x+1)(x-2)$"
       },
       {
         "step": 2,
@@ -7764,9 +7764,9 @@
       },
       {
         "step": 4,
-        "hint": "Rozłóż trójmian kwadratowy na czynniki. Znajdź dwie liczby, których iloczyn to $-4$, a suma to $-3$",
-        "expression": "$t^2-3t-4 = (t-4)(t+1)$",
-        "explanation": "Szukamy liczb: $-4 \\cdot 1 = -4$ i $-4 + 1 = -3$"
+        "hint": "Rozłóż trójmian kwadratowy $t^2-3t-4$ na czynniki za pomocą delty.",
+        "expression": "$\\Delta = (-3)^2 - 4 \\cdot 1 \\cdot (-4) = 9 + 16 = 25$, $t_1 = \\frac{3 - 5}{2} = -1$, $t_2 = \\frac{3 + 5}{2} = 4$, więc $t^2-3t-4 = (t+1)(t-4)$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 25$. Pierwiastki: $t_1 = -1$, $t_2 = 4$. Trójmian rozkładamy: $(t+1)(t-4)$"
       },
       {
         "step": 5,
