@@ -76,7 +76,7 @@ const ProblemList = ({ problems, onSelectProblem, completedProblems = new Set(),
 
   return (
     <div className="min-h-screen bg-stone-100">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Back Button */}
         {onBack && (
           <button

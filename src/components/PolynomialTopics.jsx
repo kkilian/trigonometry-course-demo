@@ -49,7 +49,7 @@ const PolynomialTopics = ({ onSelectTopic, onBack }) => {
 
   return (
     <div className="min-h-screen bg-stone-100">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Header with back button */}
         <div className="mb-8 md:mb-12">
           <button

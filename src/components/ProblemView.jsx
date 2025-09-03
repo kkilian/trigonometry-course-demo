@@ -90,7 +90,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
 
       {/* Sticky Header */}
       <div className="sticky top-0 z-40 bg-stone-100 border-b border-stone-200">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 md:py-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
           {/* Header */}
           <header>
             <div className="mb-2 flex items-center justify-between">
@@ -125,7 +125,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
         </div>
       </div>
       
-      <div className="max-w-6xl mx-auto px-4 md:px-8 pb-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
         {/* Problem Content */}
         <div className="space-y-8 md:space-y-12 pt-6 md:pt-8">
           {/* Completed View - Two Column Layout */}
