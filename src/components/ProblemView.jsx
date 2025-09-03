@@ -37,6 +37,11 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
 
   const progress = (completedSteps.size / (problem.steps?.length || 1)) * 100;
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Reset timer when problem changes
   useEffect(() => {
     startTimeRef.current = Date.now();
@@ -49,6 +54,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     setHintShownSteps(new Set());
     setShowSolution(false);
     solveDurationRef.current = null;
+    // Scroll to top when opening a new problem
+    window.scrollTo(0, 0);
   }, [problem.id]);
 
   const StepCheckbox = ({ isCompleted, stepNumber }) => (
