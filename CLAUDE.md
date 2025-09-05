@@ -129,3 +129,4 @@ The app is deployed to Vercel from GitHub:
 - Build output in `build/` folder
 - No environment variables required
 - Fully static - suitable for CDN deployment
+- nie uzywaj emotek
