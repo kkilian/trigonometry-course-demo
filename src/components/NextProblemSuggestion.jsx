@@ -241,13 +241,6 @@ const NextProblemSuggestion = ({
           ))}
         </div>
 
-        {suggestedProblems.length > 0 && (
-          <div className="mt-4 text-center">
-            <p className="text-xs text-stone-500">
-              💡 Wskazówka: Zadania są posortowane według najlepszego dopasowania do Twojego poziomu
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
