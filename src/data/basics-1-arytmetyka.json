@@ -66,7 +66,7 @@
     }
   },
   {
-    "id": "basics_order_simple_1",
+    "id": "basics_order_simple_2",
     "topic": "Kolejność działań",
     "statement": "Wykonaj działanie: $-8 + 15 - 3$",
     "steps": [
@@ -198,7 +198,7 @@
     }
   },
   {
-    "id": "basics_integers_1",
+    "id": "basics_integers_2",
     "topic": "Działania na liczbach całkowitych",
     "statement": "Wyznacz wartość: $25 - 18 + (-9) - (-4)$",
     "steps": [
@@ -265,7 +265,7 @@
     }
   },
   {
-    "id": "basics_integers_1",
+    "id": "basics_integers_3",
     "topic": "Dodawanie i odejmowanie liczb całkowitych",
     "statement": "Oblicz sumę: $-37 + 42 - 15 + 8 - (-12)$",
     "steps": [
@@ -400,7 +400,7 @@
     }
   },
   {
-    "id": "basics_multiplication_1",
+    "id": "basics_multiplication_2",
     "topic": "Mnożenie i dzielenie liczb ujemnych",
     "statement": "Wykonaj działanie: $(-8) \\cdot (-7) : 4$",
     "steps": [
