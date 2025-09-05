@@ -8,19 +8,22 @@
         "step": 1,
         "hint": "Masz równanie liniowe względem sinusa. Jak wyizolujesz $\\sin x$?",
         "expression": "$2\\sin x = 1$",
-        "explanation": "Przenosimy $-1$ na prawą stronę równania"
+        "explanation": "Przenosimy $-1$ na prawą stronę równania",
+        "why": "Przenoszenie wyrazów na drugą stronę równania zmienia ich znak. To pozwala nam zgrupować wszystkie wyrazy z niewiadomą po jednej stronie, a stałe po drugiej. Jest to pierwszy krok w izolowaniu niewiadomej."
       },
       {
         "step": 2,
         "hint": "Podziel obie strony przez odpowiedni czynnik, aby otrzymać samotny sinus",
         "expression": "$\\sin x = \\frac{1}{2}$",
-        "explanation": "Dzielimy obie strony przez $2$"
+        "explanation": "Dzielimy obie strony przez $2$",
+        "why": "Dzielimy obie strony równania przez 2, ponieważ jest to operacja odwrotna do mnożenia przez 2. To podstawowa własność równań - możemy wykonać tę samą operację po obu stronach równania. Gdybyśmy mieli np. $3\\sin x = 1$, dzielilibyśmy przez 3."
       },
       {
         "step": 3,
         "hint": "Przypomnij sobie wykres sinusa. W których punktach przedziału $[0, 2\\pi]$ sinus osiąga wartość $\\frac{1}{2}$?",
         "expression": "$\\sin x = \\frac{1}{2}$ dla $x = \\frac{\\pi}{6}$ i $x = \\pi - \\frac{\\pi}{6}$",
-        "explanation": "W przedziale $[0, 2\\pi]$ sinus równa się $\\frac{1}{2}$ w pierwszej i drugiej ćwiartce"
+        "explanation": "W przedziale $[0, 2\\pi]$ sinus równa się $\\frac{1}{2}$ w pierwszej i drugiej ćwiartce",
+        "why": "Wartość $\\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$ to jedna z wartości specjalnych wynikających z koła jednostkowego. Drugie rozwiązanie znajdujemy korzystając z symetrii sinusa względem $x = \\frac{\\pi}{2}$, stąd $x = \\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$. Pamiętaj, że sinus jest dodatni w I i II ćwiartce."
       },
       {
         "step": 4,

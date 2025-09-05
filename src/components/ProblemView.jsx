@@ -2,11 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
 
-const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set() }) => {
+const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set(), problems = [] }) => {
   const [revealedSteps, setRevealedSteps] = useState(new Set());
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [hintShownSteps, setHintShownSteps] = useState(new Set());
   const [showSolution, setShowSolution] = useState(false);
+  const [expandedWhy, setExpandedWhy] = useState(new Set());
+  const [showStatementExplanation, setShowStatementExplanation] = useState(false);
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -53,10 +55,26 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     setCompletedSteps(new Set());
     setHintShownSteps(new Set());
     setShowSolution(false);
+    setExpandedWhy(new Set());
+    setShowStatementExplanation(false);
     solveDurationRef.current = null;
     // Scroll to top when opening a new problem
     window.scrollTo(0, 0);
   }, [problem.id]);
+
+  const toggleWhy = (stepIndex) => {
+    const newExpanded = new Set(expandedWhy);
+    if (newExpanded.has(stepIndex)) {
+      newExpanded.delete(stepIndex);
+    } else {
+      newExpanded.add(stepIndex);
+    }
+    setExpandedWhy(newExpanded);
+  };
+  
+  const toggleStatementExplanation = () => {
+    setShowStatementExplanation(!showStatementExplanation);
+  };
 
   const StepCheckbox = ({ isCompleted, stepNumber }) => (
     <div className="flex items-center">
@@ -114,6 +132,34 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
             <h1 className="text-xl md:text-3xl font-bold text-stone-900 leading-relaxed mb-2">
               <MathRenderer content={problem.statement} />
             </h1>
+            
+            {/* Statement explanation button and content */}
+            {problem.statement_explanation && (
+              <div className="mt-4">
+                <button
+                  onClick={toggleStatementExplanation}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
+                >
+                  <span>Wyjaśnij polecenie</span>
+                  <svg 
+                    className={`w-4 h-4 transition-transform ${showStatementExplanation ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {showStatementExplanation && (
+                  <div className="mt-3 pl-4 border-l-2 border-stone-300">
+                    <p className="text-sm text-stone-700 leading-relaxed">
+                      <MathRenderer content={problem.statement_explanation} />
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </header>
 
           {/* Progress */}
@@ -179,6 +225,37 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                         {step.explanation && (
                           <div className="text-base md:text-lg text-stone-600">
                             <MathRenderer content={step.explanation} />
+                          </div>
+                        )}
+                        
+                        {/* Why button and expandable content */}
+                        {step.why && (
+                          <div className="mt-4 border-t border-stone-100 pt-4">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleWhy(index);
+                              }}
+                              className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
+                            >
+                              <span>Dlaczego?</span>
+                              <svg 
+                                className={`w-4 h-4 transition-transform ${expandedWhy.has(index) ? 'rotate-180' : ''}`}
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+                            
+                            {expandedWhy.has(index) && (
+                              <div className="mt-3 pl-4 border-l-2 border-stone-300">
+                                <p className="text-sm text-stone-700 leading-relaxed">
+                                  <MathRenderer content={step.why} />
+                                </p>
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
@@ -267,6 +344,37 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                           <MathRenderer content={step.explanation} />
                         </div>
                       )}
+                      
+                      {/* Why button and expandable content - shown after step is revealed */}
+                      {step.why && revealedSteps.has(index) && (
+                        <div className="mt-4">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleWhy(index);
+                            }}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
+                          >
+                            <span>Dlaczego?</span>
+                            <svg 
+                              className={`w-4 h-4 transition-transform ${expandedWhy.has(index) ? 'rotate-180' : ''}`}
+                              fill="none" 
+                              viewBox="0 0 24 24" 
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          
+                          {expandedWhy.has(index) && (
+                            <div className="mt-3 pl-4 border-l-2 border-stone-300">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                <MathRenderer content={step.why} />
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </article>
@@ -292,29 +400,16 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
           )}
 
           {/* Next Problem Suggestion - Only show when problem is completed */}
-          {false && showSolution && (
+          {showSolution && problems.length > 0 && (
             <NextProblemSuggestion 
               currentProblem={problem}
               completedProblems={completedProblems}
               onSelectProblem={onSelectProblem}
               solveDuration={solveDurationRef.current}
+              problems={problems}
             />
           )}
 
-          {/* Parameters */}
-          {problem.parameters && Object.keys(problem.parameters).length > 0 && (
-            <div className="p-6 bg-white border border-stone-200 rounded-xl">
-              <h3 className="text-sm font-medium text-stone-600 mb-4">Parametry</h3>
-              <div className="space-y-2">
-                {Object.entries(problem.parameters).map(([key, value]) => (
-                  <div key={key} className="flex items-center gap-3 text-sm">
-                    <span className="text-stone-600 font-mono">{key}:</span>
-                    <MathRenderer content={value} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

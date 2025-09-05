@@ -3,13 +3,14 @@ import { preprocessMathText } from '../utils/similarity/textProcessor.js';
 import { TFIDFProcessor } from '../utils/similarity/tfidf.js';
 import { SimilarityCalculator } from '../utils/similarity/cosineSimilarity.js';
 import MathRenderer from './MathRenderer';
-import problems from '../data/powers-problems.json';
+// Import removed - problems now passed as prop
 
 const NextProblemSuggestion = ({ 
   currentProblem, 
   completedProblems, 
   onSelectProblem, 
-  solveDuration = null 
+  solveDuration = null,
+  problems = [] 
 }) => {
 
   // Simple difficulty estimation based on steps count
@@ -53,8 +54,8 @@ const NextProblemSuggestion = ({
     return similarityWeight * simScore + difficultyWeight * diffScore;
   };
   
-  // Calculate suggested next problem
-  const suggestedProblem = useMemo(() => {
+  // Calculate suggested next problems (multiple)
+  const suggestedProblems = useMemo(() => {
     if (!currentProblem || !problems) return null;
 
     try {
@@ -90,14 +91,14 @@ const NextProblemSuggestion = ({
           estimatedDifficulty: estimateDifficulty(problems[index])
         }));
 
-      if (similar.length === 0) return null;
+      if (similar.length === 0) return [];
 
       // Smart progression logic
       const currentDifficulty = estimateDifficulty(currentProblem);
       const targetDifficulty = getTargetDifficulty(currentDifficulty, solveDuration);
       
-      // Sort by best match for progression
-      const bestMatch = similar
+      // Sort by best match for progression and get top 3
+      const bestMatches = similar
         .map(problem => ({
           ...problem,
           progressionScore: calculateProgressionScore(
@@ -106,14 +107,15 @@ const NextProblemSuggestion = ({
             targetDifficulty
           )
         }))
-        .sort((a, b) => b.progressionScore - a.progressionScore)[0];
+        .sort((a, b) => b.progressionScore - a.progressionScore)
+        .slice(0, 3);
 
-      return bestMatch;
+      return bestMatches;
 
     } catch (err) {
       console.error('Error calculating next problem suggestion:', err);
       console.error('Full error details:', err.message, err.stack);
-      return null;
+      return [];
     }
   }, [currentProblem, completedProblems, solveDuration]);
 
@@ -128,40 +130,40 @@ const NextProblemSuggestion = ({
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 1: return 'text-green-400';
-      case 2: return 'text-yellow-400';
-      case 3: return 'text-red-400';
-      default: return 'text-gray-400';
+      case 1: return 'text-green-600';
+      case 2: return 'text-yellow-600';
+      case 3: return 'text-red-600';
+      default: return 'text-stone-600';
     }
   };
 
-  const handleSuggestionClick = () => {
-    if (suggestedProblem && onSelectProblem) {
-      onSelectProblem(suggestedProblem);
+  const handleSuggestionClick = (problem) => {
+    if (problem && onSelectProblem) {
+      onSelectProblem(problem);
     }
   };
 
   console.log('NextProblemSuggestion debug:', {
     currentProblem: currentProblem?.id,
     completedCount: completedProblems.size,
-    suggestedProblem: suggestedProblem?.id,
-    similarity: suggestedProblem?.similarity
+    suggestedCount: suggestedProblems.length,
+    suggestions: suggestedProblems.map(p => ({ id: p.id, similarity: p.similarity }))
   });
 
-  if (!suggestedProblem) {
-    console.log('No suggested problem found');
+  if (!suggestedProblems || suggestedProblems.length === 0) {
+    console.log('No suggested problems found');
     // Fallback - show next sequential problem
     const nextProblem = problems.find(p => !completedProblems.has(p.id) && p.id !== currentProblem.id);
     if (nextProblem) {
       console.log('Using fallback next problem:', nextProblem.id);
       return (
-        <div className="mt-8 bg-yellow-900/20 border border-yellow-500/30 rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-white mb-4">Następne zadanie (fallback)</h3>
+        <div className="mt-8 bg-stone-200/50 border border-stone-300 rounded-xl p-6">
+          <h3 className="text-lg font-semibold text-stone-800 mb-4">Następne zadanie</h3>
           <div 
             onClick={() => onSelectProblem && onSelectProblem(nextProblem)}
-            className="cursor-pointer p-4 bg-gray-800/30 hover:bg-gray-800/60 rounded-lg"
+            className="cursor-pointer p-4 bg-white hover:bg-stone-50 border border-stone-200 rounded-lg transition-all"
           >
-            <div className="text-white">
+            <div className="text-stone-900">
               <MathRenderer content={nextProblem.statement} />
             </div>
           </div>
@@ -172,58 +174,80 @@ const NextProblemSuggestion = ({
   }
 
   return (
-    <div className="mt-8 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl p-6">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-            <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+    <div className="mt-8 animate-fade-in">
+      <div className="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200 rounded-xl p-6">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-stone-900">
+                {suggestedProblems.length === 1 ? 'Sugerowane następne zadanie' : 'Sugerowane następne zadania'}
+              </h3>
+              <p className="text-sm text-stone-600">
+                Wybrane na podstawie podobieństwa treści i poziomu trudności
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-white">Sugerowane następne zadanie</h3>
-            <p className="text-sm text-gray-400">
-              {(suggestedProblem.similarity * 100).toFixed(0)}% podobieństwa • 
-              <span className={`ml-1 ${getDifficultyColor(suggestedProblem.estimatedDifficulty)}`}>
-                {getDifficultyLabel(suggestedProblem.estimatedDifficulty)}
-              </span>
+        </div>
+
+        <div className="space-y-3">
+          {suggestedProblems.map((suggestedProblem, index) => (
+            <div 
+              key={suggestedProblem.id}
+              onClick={() => handleSuggestionClick(suggestedProblem)}
+              className="group cursor-pointer p-4 bg-white hover:bg-stone-50 rounded-lg transition-all duration-200 border border-stone-200 hover:border-yellow-400 hover:shadow-lg"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-stone-100 text-stone-700">
+                    #{index + 1}
+                  </span>
+                  <span className="text-xs text-stone-500 font-mono">{suggestedProblem.id}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-medium text-stone-600">
+                    {(suggestedProblem.similarity * 100).toFixed(0)}% podobieństwa
+                  </span>
+                  <span className={`text-xs font-medium ${getDifficultyColor(suggestedProblem.estimatedDifficulty)}`}>
+                    • {getDifficultyLabel(suggestedProblem.estimatedDifficulty)}
+                  </span>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <div className="text-stone-900 group-hover:text-stone-700 transition-colors">
+                  <MathRenderer content={suggestedProblem.statement} />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-stone-500">
+                  {suggestedProblem.steps?.length || 0} kroków do rozwiązania
+                </div>
+                <div className="flex items-center gap-2 text-yellow-600 group-hover:text-orange-600 transition-colors">
+                  <span className="text-sm font-medium">Przejdź do zadania</span>
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {suggestedProblems.length > 0 && (
+          <div className="mt-4 text-center">
+            <p className="text-xs text-stone-500">
+              💡 Wskazówka: Zadania są posortowane według najlepszego dopasowania do Twojego poziomu
             </p>
           </div>
-        </div>
-      </div>
-
-      <div 
-        onClick={handleSuggestionClick}
-        className="group cursor-pointer p-4 bg-gray-800/30 hover:bg-gray-800/60 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-500/30"
-      >
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs text-gray-500 font-mono">{suggestedProblem.id}</span>
-        </div>
-
-        <div className="mb-4">
-          <div className="text-white group-hover:text-blue-200 transition-colors">
-            <MathRenderer content={suggestedProblem.statement} />
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-400">
-            {suggestedProblem.steps?.length || 0} kroków
-          </div>
-          <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
-            <span className="text-sm font-medium">Rozwiąż zadanie</span>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-4 text-center">
-        <p className="text-xs text-gray-500">
-          Wybrane na podstawie podobieństwa treści i progresji trudności
-        </p>
+        )}
       </div>
     </div>
   );

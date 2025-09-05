@@ -1,9 +1,18 @@
 import React from 'react';
 import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
+import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
+    {
+      id: 'basics',
+      title: 'BASICS - Fundamenty matematyki',
+      description: 'Arytmetyka, algebra, geometria, funkcje - start od zera',
+      problemCount: 0,
+      hasSubmenu: true,
+      topicsCount: 12
+    },
     {
       id: 'powers',
       title: 'Trygonometria',
@@ -23,6 +32,12 @@ const WelcomeScreen = ({ onSelectMode }) => {
       title: 'Ułamki algebraiczne - Wprowadzenie',
       description: 'Podstawy ułamków algebraicznych, działania, upraszczanie',
       problemCount: algebraicFractionsIntroProblems.length
+    },
+    {
+      id: 'systems-of-equations',
+      title: 'Układy równań',
+      description: 'Rozwiązywanie układów równań liniowych różnymi metodami',
+      problemCount: systemsOfEquationsProblems.length
     }
   ];
 
@@ -71,7 +86,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
                         <span className={`text-xs md:text-sm ${
                           module.disabled ? 'text-stone-400' : 'text-yellow-700'
                         }`}>
-                          4 tematy
+                          {module.topicsCount || 4} {module.topicsCount === 1 ? 'temat' : module.topicsCount > 4 ? 'tematów' : 'tematy'}
                         </span>
                       </div>
                     ) : (
