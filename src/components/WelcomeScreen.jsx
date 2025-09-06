@@ -43,7 +43,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
     {
       id: 'ai-chat',
       title: 'MEGA MADRE AI',
-      description: 'Rozmawiaj z AI o matematyce - zadawaj pytania, otrzymuj wyjaśnienia',
+      description: 'AI MAMUSKA CIE NAUCZY',
       isAI: true
     }
   ];

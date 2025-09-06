@@ -34,6 +34,39 @@ const ChatSuggestions = ({
     }
 
     try {
+      // Estimate conversation difficulty based on keywords
+      const getConversationDifficulty = (text) => {
+        const lowerText = text.toLowerCase();
+        
+        // Advanced math keywords = hard
+        if (lowerText.match(/(gauss|macierz|układ|równań|pochodna|całka|logarytm|sinus|cosinus|tangens)/)) {
+          return 3;
+        }
+        
+        // Medium math keywords = medium  
+        if (lowerText.match(/(równanie|funkcja|wykres|pierwiastek|potęga|ułamek)/)) {
+          return 2;
+        }
+        
+        // Basic math keywords = easy
+        if (lowerText.match(/(oblicz|dodaj|odejmij|\+|\-|\*|\/|[0-9])/)) {
+          return 1;
+        }
+        
+        return 2; // default medium
+      };
+
+      // Simple difficulty estimation for problems
+      const estimateProblemDifficulty = (problem) => {
+        const stepsCount = problem.steps?.length || 0;
+        if (stepsCount <= 4) return 1; // Easy
+        if (stepsCount <= 8) return 2; // Medium  
+        return 3; // Hard
+      };
+
+      const conversationDifficulty = getConversationDifficulty(conversationContext);
+      console.log('Conversation difficulty:', conversationDifficulty, 'Context:', conversationContext);
+
       // Preprocess conversation context to tokens
       const conversationTokens = preprocessMathText(conversationContext);
       
@@ -52,15 +85,38 @@ const ChatSuggestions = ({
       calculator.setVectors(vectors);
 
       // Get problems similar to conversation (index 0)
-      const similar = calculator.getMostSimilar(0, allProblems.length)
-        .filter(({ similarity }) => similarity > 0.05) // Lowered threshold for testing
-        .slice(0, 3) // Top 3 suggestions
-        .map(({ index, similarity }) => ({
-          ...allProblems[index - 1], // -1 because conversation is at index 0
-          similarity
-        }));
+      const allSimilar = calculator.getMostSimilar(0, allProblems.length)
+        .map(({ index, similarity }) => {
+          const problem = allProblems[index - 1]; // -1 because conversation is at index 0
+          const problemDifficulty = estimateProblemDifficulty(problem);
+          
+          // Boost score for difficulty match
+          const difficultyMatch = Math.abs(problemDifficulty - conversationDifficulty);
+          const difficultyBonus = difficultyMatch === 0 ? 0.3 : (difficultyMatch === 1 ? 0.1 : -0.2);
+          const adjustedSimilarity = similarity + difficultyBonus;
+          
+          return {
+            ...problem,
+            similarity: adjustedSimilarity,
+            originalSimilarity: similarity,
+            problemDifficulty,
+            difficultyMatch
+          };
+        })
+        .filter(({ similarity }) => similarity > 0.15) // Back to higher threshold
+        .sort((a, b) => b.similarity - a.similarity)
+        .slice(0, 3);
 
-      return similar;
+      console.log('Top suggestions:', allSimilar.map(p => ({
+        id: p.id,
+        statement: p.statement.slice(0, 50),
+        similarity: p.similarity,
+        originalSimilarity: p.originalSimilarity,
+        difficulty: p.problemDifficulty,
+        steps: p.steps?.length
+      })));
+
+      return allSimilar;
     } catch (err) {
       console.error('Error calculating chat suggestions:', err);
       return [];
