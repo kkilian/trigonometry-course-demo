@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+// For Vercel serverless functions
+module.exports = app;
+
 app.use(cors());
 app.use(express.json());
 

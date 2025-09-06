@@ -94,7 +94,7 @@ const AIChat = ({ onBack, onSelectProblem }) => {
       
       console.log('Request body:', requestBody);
       
-      const response = await fetch('http://localhost:3003/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
