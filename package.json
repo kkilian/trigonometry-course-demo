@@ -7,6 +7,8 @@
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "katex": "^0.16.22",
     "puppeteer": "^24.17.0",
     "react": "^19.1.1",
@@ -20,6 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "server": "node server.js",
     "latex-checker": "REACT_APP_MODE=checker PORT=3001 react-scripts start",
     "solution-reviewer": "REACT_APP_MODE=reviewer PORT=3002 react-scripts start",
     "tag-reviewer": "REACT_APP_MODE=tag-reviewer PORT=3004 react-scripts start"

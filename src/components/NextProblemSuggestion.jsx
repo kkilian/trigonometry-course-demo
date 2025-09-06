@@ -10,7 +10,8 @@ const NextProblemSuggestion = ({
   completedProblems, 
   onSelectProblem, 
   solveDuration = null,
-  problems = [] 
+  problems = [],
+  compact = false
 }) => {
 
   // Simple difficulty estimation based on steps count
@@ -150,12 +151,90 @@ const NextProblemSuggestion = ({
     suggestions: suggestedProblems.map(p => ({ id: p.id, similarity: p.similarity }))
   });
 
+  // Compact mode for header - one button with hover showing 2 suggestions
+  if (compact && suggestedProblems && suggestedProblems.length > 0) {
+    const primaryProblem = suggestedProblems[0];
+    const problemsToShow = suggestedProblems.slice(0, 2);
+    
+    return (
+      <div className="relative group animate-fadeInScale">
+        <button
+          onClick={() => onSelectProblem && onSelectProblem(primaryProblem)}
+          className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-orange-400 text-stone-700 hover:bg-orange-50 rounded-lg transition-all animate-pulse-border"
+        >
+          <span className="text-xs font-medium">Następne</span>
+          <svg className="w-3 h-3 text-orange-500" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+          </svg>
+        </button>
+        
+        {/* Hover tooltip with 2 suggested problems */}
+        <div className="absolute top-full right-0 mt-2 w-96 bg-white border border-stone-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div className="p-3 border-b border-stone-100">
+            <h4 className="text-xs font-medium text-stone-600 uppercase tracking-wider">Sugerowane zadania</h4>
+          </div>
+          <div className="space-y-1">
+            {problemsToShow.map((problem, index) => (
+              <div
+                key={problem.id}
+                onClick={() => onSelectProblem && onSelectProblem(problem)}
+                className="p-3 cursor-pointer hover:bg-stone-50 transition-colors border-l-4 border-transparent hover:border-orange-400"
+              >
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <span className={`text-xs font-medium px-2 py-1 rounded ${
+                    index === 0 ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'
+                  }`}>
+                    {index === 0 ? 'Główne' : 'Alternatywa'}
+                  </span>
+                  <span className={`text-xs ${getDifficultyColor(problem.estimatedDifficulty)}`}>
+                    {getDifficultyLabel(problem.estimatedDifficulty)}
+                  </span>
+                </div>
+                <div className="text-sm text-stone-900 mb-1">
+                  <MathRenderer content={problem.statement} />
+                </div>
+                <div className="text-xs text-stone-500">
+                  {problem.steps?.length || 0} kroków
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (!suggestedProblems || suggestedProblems.length === 0) {
     console.log('No suggested problems found');
     // Fallback - show next sequential problem
     const nextProblem = problems.find(p => !completedProblems.has(p.id) && p.id !== currentProblem.id);
     if (nextProblem) {
       console.log('Using fallback next problem:', nextProblem.id);
+      
+      // Compact mode fallback
+      if (compact) {
+        return (
+          <div className="relative group animate-fadeInScale">
+            <button
+              onClick={() => onSelectProblem && onSelectProblem(nextProblem)}
+              className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-blue-400 text-stone-700 hover:bg-blue-50 rounded-lg transition-all animate-pulse-border-blue"
+            >
+              <span className="text-xs font-medium">Następne</span>
+              <svg className="w-3 h-3 text-blue-500" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+              </svg>
+            </button>
+            
+            {/* Hover tooltip with problem preview */}
+            <div className="absolute top-full right-0 mt-2 w-96 p-4 bg-white border border-stone-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="text-sm text-stone-900">
+                <MathRenderer content={nextProblem.statement} />
+              </div>
+            </div>
+          </div>
+        );
+      }
+      
       return (
         <div className="mt-8 bg-stone-200/50 border border-stone-300 rounded-xl p-6">
           <h3 className="text-lg font-semibold text-stone-800 mb-4">Następne zadanie</h3>
@@ -170,77 +249,11 @@ const NextProblemSuggestion = ({
         </div>
       );
     }
-    return null;
+    return compact ? null : null;
   }
 
-  return (
-    <div className="mt-8 animate-fade-in">
-      <div className="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200 rounded-xl p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">@</span>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-stone-900">
-                {suggestedProblems.length === 1 ? 'Sugerowane następne zadanie' : 'Sugerowane następne zadania'}
-              </h3>
-              <p className="text-sm text-stone-600">
-                Wybrane na podstawie podobieństwa treści i poziomu trudności
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="space-y-3">
-          {suggestedProblems.map((suggestedProblem, index) => (
-            <div 
-              key={suggestedProblem.id}
-              onClick={() => handleSuggestionClick(suggestedProblem)}
-              className="group cursor-pointer p-4 bg-white hover:bg-stone-50 rounded-lg transition-all duration-200 border border-stone-200 hover:border-yellow-400 hover:shadow-lg"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-stone-100 text-stone-700">
-                    #{index + 1}
-                  </span>
-                  <span className="text-xs text-stone-500 font-mono">{suggestedProblem.id}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-medium text-stone-600">
-                    {(suggestedProblem.similarity * 100).toFixed(0)}% podobieństwa
-                  </span>
-                  <span className={`text-xs font-medium ${getDifficultyColor(suggestedProblem.estimatedDifficulty)}`}>
-                    • {getDifficultyLabel(suggestedProblem.estimatedDifficulty)}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <div className="text-stone-900 group-hover:text-stone-700 transition-colors">
-                  <MathRenderer content={suggestedProblem.statement} />
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-stone-500">
-                  {suggestedProblem.steps?.length || 0} kroków do rozwiązania
-                </div>
-                <div className="flex items-center gap-2 text-yellow-600 group-hover:text-orange-600 transition-colors">
-                  <span className="text-sm font-medium">Przejdź do zadania</span>
-                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </div>
-  );
+  // Only compact mode is needed now
+  return null;
 };
 
 export default NextProblemSuggestion;

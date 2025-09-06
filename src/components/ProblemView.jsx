@@ -29,6 +29,10 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
         setShowSolution(true);
         // Track solve duration
         solveDurationRef.current = Math.floor((Date.now() - startTimeRef.current) / 1000);
+        // Smooth scroll to top to show next problem button
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 500);
         // Removed feedback modal
         if (onComplete) {
           onComplete(problem.id);
@@ -162,18 +166,34 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
             )}
           </header>
 
-          {/* Progress */}
-          <div className="mt-6">
-            <div className="flex items-center justify-between text-sm text-stone-600 mb-2">
-              <span>Postęp</span>
-              <span>{completedSteps.size} / {problem.steps?.length || 0} kroków</span>
+          {/* Progress and Next Problem */}
+          <div className="mt-6 flex items-start justify-between gap-4">
+            <div className="flex-1">
+              <div className="flex items-center justify-between text-sm text-stone-600 mb-2">
+                <span>Postęp</span>
+                <span>{completedSteps.size} / {problem.steps?.length || 0} kroków</span>
+              </div>
+              <div className="w-full bg-stone-200 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all duration-500"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
             </div>
-            <div className="w-full bg-stone-200 rounded-full h-2">
-              <div 
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all duration-500"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+            
+            {/* Compact Next Problem Suggestion */}
+            {showSolution && problems.length > 0 && (
+              <div className="hidden md:block">
+                <NextProblemSuggestion 
+                  currentProblem={problem}
+                  completedProblems={completedProblems}
+                  onSelectProblem={onSelectProblem}
+                  solveDuration={solveDurationRef.current}
+                  problems={problems}
+                  compact={true}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -183,112 +203,95 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
         <div className="space-y-8 md:space-y-12 pt-6 md:pt-8">
           {/* Completed View - Two Column Layout */}
           {showSolution ? (
-            <div className="space-y-8">
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-200 text-stone-700 rounded-full">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-medium">Zadanie ukończone!</span>
-                </div>
-              </div>
-
-              {/* Headers */}
-              <div className="grid md:grid-cols-[1fr,400px] gap-8 mb-6">
-                <h3 className="text-lg font-semibold text-stone-900">Kroki rozwiązania</h3>
-                <h3 className="text-lg font-semibold text-yellow-700 hidden md:block">Wskazówki</h3>
-              </div>
-
-              {/* Steps with aligned hints */}
-              <div className="space-y-4">
-                {problem.steps?.map((step, index) => (
-                  <div key={index} className="grid md:grid-cols-[1fr,400px] gap-8 items-start">
-                    {/* Left side - Step */}
-                    <div className="relative pl-8">
-                      {/* Step number circle */}
-                      <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-stone-700 text-white text-xs flex items-center justify-center font-bold">
-                        {index + 1}
-                      </div>
-                      
-                      {/* Connecting line */}
-                      {index < problem.steps.length - 1 && (
-                        <div className="absolute left-3 top-8 -bottom-4 w-0.5 bg-stone-300"></div>
+            <div className="space-y-4">
+              {/* Steps with side-by-side hints */}
+              {problem.steps?.map((step, index) => (
+                <div key={index} className="grid md:grid-cols-[1fr,400px] gap-0 items-start">
+                  {/* Left side - Step */}
+                  <div className="relative pl-8">
+                    {/* Step number circle */}
+                    <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-stone-700 text-white text-xs flex items-center justify-center font-bold z-10">
+                      {index + 1}
+                    </div>
+                    
+                    {/* Connecting line */}
+                    {index < problem.steps.length - 1 && (
+                      <div className="absolute left-3 top-8 -bottom-4 w-0.5 bg-stone-300"></div>
+                    )}
+                    
+                    {/* Step content */}
+                    <div className={`bg-white border border-stone-200 p-4 space-y-3 ${
+                      step.hint 
+                        ? 'md:rounded-l-lg md:border-r-0 rounded-lg' 
+                        : 'rounded-lg'
+                    }`}>
+                      {step.expression && (
+                        <div className="text-xl md:text-2xl text-stone-900 text-center font-medium">
+                          <MathRenderer content={step.expression} />
+                        </div>
+                      )}
+                      {step.explanation && (
+                        <div className="text-base md:text-lg text-stone-600">
+                          <MathRenderer content={step.explanation} />
+                        </div>
                       )}
                       
-                      {/* Step content */}
-                      <div className="bg-white border border-stone-200 rounded-lg p-4 space-y-3">
-                        {step.expression && (
-                          <div className="text-xl md:text-2xl text-stone-900 text-center font-medium">
-                            <MathRenderer content={step.expression} />
-                          </div>
-                        )}
-                        {step.explanation && (
-                          <div className="text-base md:text-lg text-stone-600">
-                            <MathRenderer content={step.explanation} />
-                          </div>
-                        )}
-                        
-                        {/* Why button and expandable content */}
-                        {step.why && (
-                          <div className="mt-4 border-t border-stone-100 pt-4">
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleWhy(index);
-                              }}
-                              className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
+                      {/* Why button and expandable content */}
+                      {step.why && (
+                        <div className="mt-4 border-t border-stone-100 pt-4">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleWhy(index);
+                            }}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
+                          >
+                            <span>Dlaczego?</span>
+                            <svg 
+                              className={`w-4 h-4 transition-transform ${expandedWhy.has(index) ? 'rotate-180' : ''}`}
+                              fill="none" 
+                              viewBox="0 0 24 24" 
+                              stroke="currentColor"
                             >
-                              <span>Dlaczego?</span>
-                              <svg 
-                                className={`w-4 h-4 transition-transform ${expandedWhy.has(index) ? 'rotate-180' : ''}`}
-                                fill="none" 
-                                viewBox="0 0 24 24" 
-                                stroke="currentColor"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </button>
-                            
-                            {expandedWhy.has(index) && (
-                              <div className="mt-3 pl-4 border-l-2 border-stone-300">
-                                <p className="text-sm text-stone-700 leading-relaxed">
-                                  <MathRenderer content={step.why} />
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Right side - Hint */}
-                    <div className="relative">
-                      {step.hint ? (
-                        <>
-                          {/* Mobile hint label */}
-                          <h4 className="text-sm font-semibold text-yellow-700 mb-2 md:hidden">Wskazówka</h4>
-                          <div className="relative">
-                            {/* Step reference */}
-                            <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-200 text-yellow-700 text-xs flex items-center justify-center font-bold">
-                              {index + 1}
-                            </div>
-                            
-                            {/* Hint content */}
-                            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 pl-6">
-                              <p className="text-base md:text-lg text-yellow-800">
-                                <MathRenderer content={step.hint} />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          
+                          {expandedWhy.has(index) && (
+                            <div className="mt-3 pl-4 border-l-2 border-stone-300">
+                              <p className="text-sm text-stone-700 leading-relaxed">
+                                <MathRenderer content={step.why} />
                               </p>
                             </div>
-                          </div>
-                        </>
-                      ) : (
-                        /* Empty space for steps without hints */
-                        <div className="hidden md:block"></div>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>
-                ))}
-              </div>
+
+                  {/* Right side - Hint */}
+                  {step.hint ? (
+                    <div className="relative mt-4 md:mt-0">
+                      <div className="bg-yellow-50 border border-yellow-200 md:rounded-r-lg md:border-l-0 rounded-lg p-4">
+                        {/* Step number badge */}
+                        <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-200 text-yellow-700 text-xs flex items-center justify-center font-bold md:block hidden">
+                          {index + 1}
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <p className="text-sm font-semibold text-yellow-700">Wskazówka</p>
+                          <p className="text-base text-yellow-800">
+                            <MathRenderer content={step.hint} />
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Empty space for steps without hints */
+                    <div className="hidden md:block"></div>
+                  )}
+                </div>
+              ))}
             </div>
           ) : (
             /* Interactive Steps View (original) */
@@ -384,30 +387,19 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
 
           {/* Solutions - Only show in completed view */}
           {showSolution && problem.solutions && (
-            <div className="relative mt-8">
-              <div className="absolute inset-0 bg-stone-200/20 blur-2xl rounded-2xl"></div>
-              <div className="relative p-6 md:p-8 bg-white border border-stone-200 rounded-xl">
-                <h3 className="text-base md:text-lg font-semibold text-stone-700 mb-4 md:mb-6">Odpowiedź końcowa</h3>
-                <div className="space-y-3 md:space-y-4">
+            <div className="relative mt-6">
+              <div className="absolute inset-0 bg-stone-200/20 blur-xl rounded-xl"></div>
+              <div className="relative p-4 md:p-5 bg-white border border-stone-200 rounded-lg">
+                <h3 className="text-sm md:text-base font-semibold text-stone-700 mb-3">Odpowiedź końcowa</h3>
+                <div className="space-y-2">
                   {problem.solutions.map((solution, index) => (
-                    <div key={index} className="text-stone-900 text-xl md:text-2xl font-medium text-center">
+                    <div key={index} className="text-stone-900 text-base md:text-lg font-medium text-center">
                       <MathRenderer content={solution} />
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Next Problem Suggestion - Only show when problem is completed */}
-          {showSolution && problems.length > 0 && (
-            <NextProblemSuggestion 
-              currentProblem={problem}
-              completedProblems={completedProblems}
-              onSelectProblem={onSelectProblem}
-              solveDuration={solveDurationRef.current}
-              problems={problems}
-            />
           )}
 
         </div>

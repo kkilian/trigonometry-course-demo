@@ -46,3 +46,112 @@
   animation: fadeIn 0.6s ease-out forwards;
   animation-fill-mode: both;
 }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2s ease-in-out infinite;
+}
+
+@keyframes bounceHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-bounce-horizontal {
+  animation: bounceHorizontal 1s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgb(251 146 60);
+    box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.4);
+  }
+  50% {
+    border-color: rgb(254 215 170);
+    box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.1);
+  }
+}
+
+.animate-pulse-border {
+  animation: pulseBorder 2s ease-in-out infinite;
+}
+
+@keyframes pulseBorderBlue {
+  0%, 100% {
+    border-color: rgb(96 165 250);
+    box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4);
+  }
+  50% {
+    border-color: rgb(191 219 254);
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+  }
+}
+
+.animate-pulse-border-blue {
+  animation: pulseBorderBlue 2s ease-in-out infinite;
+}
+
+@keyframes pulsePink {
+  0%, 100% {
+    background: linear-gradient(135deg, rgb(236 72 153), rgb(219 39 119));
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    background: linear-gradient(135deg, rgb(244 114 182), rgb(236 72 153));
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.8), 0 0 60px rgba(219, 39, 119, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-pink {
+  animation: pulsePink 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseBorderPink {
+  0%, 100% {
+    border-color: rgb(236 72 153);
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0), 
+                0 0 20px rgba(236, 72, 153, 0.8),
+                inset 0 0 20px rgba(236, 72, 153, 0.1);
+  }
+  50% {
+    border-color: rgb(255 20 147);
+    box-shadow: 0 0 0 8px rgba(236, 72, 153, 0.2), 
+                0 0 40px rgba(255, 20, 147, 1),
+                inset 0 0 30px rgba(236, 72, 153, 0.2);
+  }
+}
+
+.animate-pulse-border-pink {
+  animation: pulseBorderPink 1.2s ease-in-out infinite;
+}

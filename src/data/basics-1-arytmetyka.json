@@ -1,608 +1,1699 @@
 [
   {
-    "id": "basics_order_simple_1",
+    "id": "tex_problem_1",
     "topic": "Kolejność działań",
     "statement": "Oblicz: $12 + 7 - 5$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz na działania - co widzisz?",
+        "hint": "Jakie działania widzisz w tym wyrażeniu?",
         "expression": "$12 + 7 - 5$",
-        "explanation": "Mamy do czynienia z dodawaniem i odejmowaniem",
-        "why": "W działaniach z samym dodawaniem i odejmowaniem wykonujemy je po kolei od lewej do prawej"
+        "explanation": "Mamy dodawanie i odejmowanie",
+        "why": "Gdy mamy tylko dodawanie i odejmowanie, wykonujemy je od lewej do prawej - tak jak czytamy"
       },
       {
         "step": 2,
-        "hint": "Zacznij od lewej strony - co robisz najpierw?",
+        "hint": "Które działanie wykonasz najpierw? Spójrz od lewej strony",
         "expression": "$12 + 7 = 19$",
-        "explanation": "Najpierw dodajemy 12 i 7",
-        "why": "Zawsze zaczynamy od lewej strony, gdy mamy tylko dodawanie i odejmowanie"
+        "explanation": "Najpierw wykonujemy dodawanie 12 + 7",
+        "why": "Dodawanie i odejmowanie mają ten sam priorytet, więc robimy je kolejno od lewej do prawej"
       },
       {
         "step": 3,
-        "hint": "Teraz kontynuuj działanie - co zostało?",
+        "hint": "Teraz podstaw wynik i wykonaj pozostałe działanie",
         "expression": "$19 - 5 = 14$",
-        "explanation": "Odejmujemy 5 od wyniku poprzedniego działania"
+        "explanation": "Od wyniku 19 odejmujemy 5"
       },
       {
         "step": 4,
-        "hint": "Sprawdź swój wynik jeszcze raz",
-        "expression": "$12 + 7 - 5 = 14$ ✓",
-        "explanation": "Potwierdzamy poprawność obliczeń",
-        "why": "Zawsze warto sprawdzić swoje rozwiązanie, aby uniknąć głupich błędów"
+        "hint": "Sprawdź swój wynik wykonując obliczenia jeszcze raz",
+        "expression": "$12 + 7 - 5 = 19 - 5 = 14$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny"
       }
     ],
     "solutions": [
       "$14$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "step_count_low",
-          "message": "Za mało kroków (4). Minimum to 5 kroków.",
-          "severity": "warning",
-          "stepCount": 4
-        },
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (3/4). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 8.2,
-      "metrics": {
-        "avgExplanationLength": 37,
-        "stepsWithWhy": 3,
-        "whyPercentage": 75,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "step_count_low": 1,
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:07:21.390Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_order_simple_2",
-    "topic": "Kolejność działań",
+    "id": "tex_problem_2",
+    "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $-8 + 15 - 3$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz na kolejność liczb i znaków. Co widzisz?",
+        "hint": "Spójrz na działanie - jakie znaki widzisz przed liczbami?",
         "expression": "$-8 + 15 - 3$",
-        "explanation": "Mamy do czynienia z dodawaniem i odejmowaniem",
-        "why": "Przy działaniach z dodatnimi i ujemnymi liczbami wykonujemy je po kolei od lewej do prawej"
+        "explanation": "Mamy liczby ujemną (-8) i dodatnie (15, 3) z różnymi działaniami",
+        "why": "Pamiętaj: minus przed liczbą oznacza liczbę ujemną, a minus między liczbami to odejmowanie"
       },
       {
         "step": 2,
-        "hint": "Zacznij od pierwszego działania: -8 + 15",
+        "hint": "Wykonuj działania od lewej do prawej. Zacznij od dodawania -8 + 15",
         "expression": "$-8 + 15 = 7$",
-        "explanation": "Dodajemy -8 i 15",
-        "why": "Pamiętaj: dodawanie liczb o różnych znakach to tak naprawdę odejmowanie ich wartości bezwzględnych"
+        "explanation": "Dodajemy liczbę ujemną do dodatniej",
+        "why": "Gdy dodajesz liczbę ujemną do dodatniej, to jakbyś odejmował: 15 - 8 = 7. Możesz też myśleć o tym jak o termometrze - zaczynasz od -8°C i wzrasta o 15°C"
       },
       {
         "step": 3,
-        "hint": "Teraz wykonaj ostatnie działanie: 7 - 3",
+        "hint": "Teraz od wyniku odejmij 3",
         "expression": "$7 - 3 = 4$",
-        "explanation": "Odejmujemy 3 od 7"
+        "explanation": "Od otrzymanego wyniku odejmujemy 3"
       },
       {
         "step": 4,
-        "hint": "Sprawdź swój wynik, wykonując działanie jeszcze raz",
-        "expression": "$-8 + 15 - 3 = 4$ ✓",
-        "explanation": "Potwierdzamy poprawność wyniku",
-        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów"
+        "hint": "Sprawdź swój wynik wykonując działanie jeszcze raz",
+        "expression": "$-8 + 15 - 3 = 7 - 3 = 4$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny",
+        "why": "Zawsze warto sprawdzić obliczenia - szczególnie gdy mamy liczby ujemne, łatwo o pomyłkę ze znakami"
       }
     ],
     "solutions": [
       "$4$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "step_count_low",
-          "message": "Za mało kroków (4). Minimum to 5 kroków.",
-          "severity": "warning",
-          "stepCount": 4
-        },
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (3/4). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 8.2,
-      "metrics": {
-        "avgExplanationLength": 27,
-        "stepsWithWhy": 3,
-        "whyPercentage": 75,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "step_count_low": 1,
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:07:29.020Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_integers_1",
-    "topic": "Działania na liczbach całkowitych",
+    "id": "tex_problem_3",
+    "topic": "Podstawy matematyki",
     "statement": "Oblicz: $-13 + (-7) - (-5)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz uważnie na znaki. Jak dodawać liczby ujemne?",
+        "hint": "Spójrz na wyrażenie i zidentyfikuj wszystkie znaki. Co oznacza $+(-7)$ i $-(-5)$?",
         "expression": "$-13 + (-7) - (-5)$",
-        "explanation": "Identyfikujemy działania z liczbami ujemnymi",
-        "why": "Dodawanie liczb ujemnych to tak naprawdę ich sumowanie z zachowaniem znaku minus"
+        "explanation": "Mamy trzy składniki: $-13$, $+(-7)$ i $-(-5)$",
+        "why": "Ważne jest rozróżnienie między znakiem liczby a znakiem działania. Minus przed nawiasem to działanie odejmowania"
       },
       {
         "step": 2,
-        "hint": "Co się dzieje, gdy odejmujemy liczbę ujemną?",
-        "expression": "$-13 + (-7) + 5$",
-        "explanation": "Odejmowanie liczby ujemnej to to samo, co dodawanie jej wartości dodatniej",
-        "why": "Częsty błąd: uczniowie zapominają, że minus przed ujemną zamienia ją na dodatnią"
+        "hint": "Co się dzieje gdy dodajesz liczbę ujemną? $+(-7)$ to to samo co...?",
+        "expression": "$-13 + (-7) = -13 - 7$",
+        "explanation": "Dodawanie liczby ujemnej to to samo co odejmowanie liczby dodatniej",
+        "why": "Dodanie $(-7)$ oznacza przesunięcie się o 7 w lewo na osi liczbowej, czyli odejmowanie"
       },
       {
         "step": 3,
-        "hint": "Dodaj kolejno liczby od lewej do prawej",
-        "expression": "$-13 + (-7) = -20$",
-        "explanation": "Najpierw dodajemy -13 i -7",
-        "why": "Dodając dwie liczby ujemne, sumujemy ich wartości bezwzględne i stawiamy minus"
+        "hint": "A co z $-(-5)$? Co się dzieje gdy odejmujesz liczbę ujemną?",
+        "expression": "$-(-5) = +5$",
+        "explanation": "Odejmowanie liczby ujemnej to to samo co dodawanie liczby dodatniej",
+        "why": "Częsty błąd: uczniowie myślą że $-(-5) = -5$. Pamiętaj: minus razy minus daje plus!"
       },
       {
         "step": 4,
-        "hint": "Teraz dodaj ostatnią liczbę",
-        "expression": "$-20 + 5 = -15$",
-        "explanation": "Dodajemy 5 do wyniku poprzedniego działania"
+        "hint": "Teraz przepisz całe wyrażenie używając tylko dodawania i odejmowania",
+        "expression": "$-13 - 7 + 5$",
+        "explanation": "Uprościliśmy wszystkie znaki w wyrażeniu"
       },
       {
         "step": 5,
-        "hint": "Sprawdź swój wynik, wykonując działanie powoli",
-        "expression": "$-13 + (-7) - (-5) = -15$ ✓",
-        "explanation": "Potwierdzamy poprawność rozwiązania",
-        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów przy działaniach na liczbach ujemnych"
+        "hint": "Wykonaj działania od lewej do prawej. Najpierw $-13 - 7$",
+        "expression": "$-13 - 7 = -20$",
+        "explanation": "Odejmujemy 7 od $-13$, czyli idziemy dalej w lewo na osi liczbowej"
+      },
+      {
+        "step": 6,
+        "hint": "Teraz dodaj 5 do otrzymanego wyniku",
+        "expression": "$-20 + 5 = -15$",
+        "explanation": "Dodajemy 5 do $-20$, czyli przesuwamy się o 5 w prawo"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swój wynik podstawiając do wyrażenia wyjściowego",
+        "expression": "$-13 + (-7) - (-5) = -13 - 7 + 5 = -20 + 5 = -15$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny"
       }
     ],
     "solutions": [
       "$-15$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (4/5). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 9.7,
-      "metrics": {
-        "avgExplanationLength": 44,
-        "stepsWithWhy": 4,
-        "whyPercentage": 80,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:07:38.656Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_integers_2",
-    "topic": "Działania na liczbach całkowitych",
+    "id": "tex_problem_4",
+    "topic": "Liczby całkowite",
     "statement": "Wyznacz wartość: $25 - 18 + (-9) - (-4)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz na kolejność działań. Co zrobisz najpierw?",
+        "hint": "Spójrz na wyrażenie - jakie znaki widzisz przed nawiasami?",
         "expression": "$25 - 18 + (-9) - (-4)$",
-        "explanation": "Identyfikujemy wszystkie działania",
-        "why": "Będziemy wykonywać działania od lewej do prawej, pamiętając o regułach dodawania i odejmowania liczb ujemnych"
+        "explanation": "Identyfikujemy wszystkie działania i znaki",
+        "why": "Kluczowe jest rozpoznanie, że mamy dodawanie liczby ujemnej i odejmowanie liczby ujemnej - to różne sytuacje!"
       },
       {
         "step": 2,
-        "hint": "Zacznij od lewej strony: 25 - 18",
-        "expression": "$25 - 18 = 7$",
-        "explanation": "Odejmujemy 18 od 25",
-        "why": "Zawsze zaczynamy od lewej strony, wykonując działania kolejno"
+        "hint": "Co oznacza $+ (-9)$? A co oznacza $- (-4)$?",
+        "expression": "$+ (-9) = -9$ oraz $- (-4) = +4$",
+        "explanation": "Upraszczamy znaki przed nawiasami",
+        "why": "Pamiętaj: plus przed minusem daje minus, a minus przed minusem daje plus. To jak 'wróg mojego wroga jest moim przyjacielem'"
       },
       {
         "step": 3,
-        "hint": "Co zrobić z +(-9)?",
-        "expression": "$7 + (-9) = 7 - 9 = -2$",
-        "explanation": "Dodanie liczby ujemnej to to samo co odejmowanie",
-        "why": "Dodanie liczby ujemnej jest równoważne odejmowaniu - często uczniowie się mylą"
+        "hint": "Przepisz wyrażenie bez nawiasów używając uproszczonych znaków",
+        "expression": "$25 - 18 - 9 + 4$",
+        "explanation": "Otrzymujemy wyrażenie bez nawiasów"
       },
       {
         "step": 4,
-        "hint": "Jak sobie poradzić z - (-4)?",
-        "expression": "$-2 - (-4) = -2 + 4 = 2$",
-        "explanation": "Minus przed ujemną liczbą zamienia ją na dodatnią",
-        "why": "Minus i minus dają plus - to często mylący moment dla uczniów"
+        "hint": "Teraz wykonuj działania od lewej do prawej",
+        "expression": "$25 - 18 = 7$",
+        "explanation": "Najpierw odejmujemy 18 od 25"
       },
       {
         "step": 5,
-        "hint": "Sprawdź swój wynik jeszcze raz krok po kroku",
-        "expression": "$25 - 18 + (-9) - (-4) = 7 - 9 + 4 = 2$",
-        "explanation": "Podwójne sprawdzenie wyniku",
-        "why": "Zawsze warto zrobić kontrolę obliczeń, żeby uniknąć głupich błędów"
+        "hint": "Kontynuuj obliczenia od lewej do prawej",
+        "expression": "$7 - 9 = -2$",
+        "explanation": "Odejmujemy 9 od 7, otrzymujemy liczbę ujemną"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj ostatnie działanie",
+        "expression": "$-2 + 4 = 2$",
+        "explanation": "Dodajemy 4 do -2, otrzymujemy wynik końcowy"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia podstawiając do wyrażenia wyjściowego",
+        "expression": "$25 - 18 + (-9) - (-4) = 25 - 18 - 9 + 4 = 2$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny",
+        "why": "Zawsze warto sprawdzić obliczenia - szczególnie przy liczbach ujemnych, gdzie łatwo o pomyłkę ze znakami"
       }
     ],
     "solutions": [
       "$2$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (5/5). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 9.7,
-      "metrics": {
-        "avgExplanationLength": 35,
-        "stepsWithWhy": 5,
-        "whyPercentage": 100,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:07:48.822Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_integers_3",
-    "topic": "Dodawanie i odejmowanie liczb całkowitych",
+    "id": "tex_problem_5",
+    "topic": "Podstawy matematyki",
     "statement": "Oblicz sumę: $-37 + 42 - 15 + 8 - (-12)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz uważnie na wszystkie liczby. Zauważ, że mamy do czynienia z liczbami ujemnymi i dodatnimi",
+        "hint": "Spójrz na ostatnie działanie. Co oznacza minus przed nawiasem z liczbą ujemną?",
         "expression": "$-37 + 42 - 15 + 8 - (-12)$",
-        "explanation": "Identyfikujemy wszystkie liczby w działaniu",
-        "why": "Kluczowe jest zwrócenie uwagi na znak minus przed (-12) - to zmieni sposób liczenia"
+        "explanation": "Identyfikujemy wszystkie działania, szczególnie zwracając uwagę na $-(-12)$",
+        "why": "Minus przed nawiasem zmienia znak liczby w nawiasie. Więc $-(-12) = +12$"
       },
       {
         "step": 2,
-        "hint": "Co się stanie z (-12) gdy jest poprzedzone znakiem minus?",
+        "hint": "Przepisz wyrażenie zamieniając $-(-12)$ na $+12$",
         "expression": "$-37 + 42 - 15 + 8 + 12$",
-        "explanation": "Minus przed (-12) zamienia się na plus",
-        "why": "Minus przed ujemną liczbą daje plus. To jak podwójne przeczenie w języku - dwa minusy się znoszą"
+        "explanation": "Usuwamy nawiasy i zmieniamy znak",
+        "why": "Częsty błąd: uczniowie czasem myślą, że $-(-12) = -12$. Pamiętaj: minus razy minus daje plus!"
       },
       {
         "step": 3,
-        "hint": "Teraz możesz dodawać i odejmować od lewej do prawej",
-        "expression": "$-37 + 42 = 5$",
-        "explanation": "Najpierw dodajemy -37 i 42"
+        "hint": "Pogrupuj liczby dodatnie i ujemne - tak będzie łatwiej liczyć",
+        "expression": "Liczby dodatnie: $+42 + 8 + 12$, Liczby ujemne: $-37 - 15$",
+        "explanation": "Rozdzielamy liczby dodatnie i ujemne"
       },
       {
         "step": 4,
-        "hint": "Kontynuuj działanie krok po kroku",
-        "expression": "$5 - 15 = -10$",
-        "explanation": "Odejmujemy 15 od 5"
+        "hint": "Oblicz sumę liczb dodatnich",
+        "expression": "$42 + 8 + 12 = 62$",
+        "explanation": "Dodajemy wszystkie liczby dodatnie"
       },
       {
         "step": 5,
-        "hint": "Dodaj kolejną liczbę",
-        "expression": "$-10 + 8 = -2$",
-        "explanation": "Dodajemy 8 do -10"
+        "hint": "Oblicz sumę liczb ujemnych",
+        "expression": "$37 + 15 = 52$, więc $-37 - 15 = -52$",
+        "explanation": "Dodajemy wartości bezwzględne i stawiamy minus",
+        "why": "Przy dodawaniu liczb ujemnych dodajemy ich wartości bezwzględne i wynik jest ujemny"
       },
       {
         "step": 6,
-        "hint": "Wykonaj ostatnie działanie",
-        "expression": "$-2 + 12 = 10$",
-        "explanation": "Dodajemy 12 do -2"
+        "hint": "Teraz oblicz różnicę: liczby dodatnie minus liczby ujemne",
+        "expression": "$62 + (-52) = 62 - 52 = 10$",
+        "explanation": "Odejmujemy mniejszą wartość bezwzględną od większej"
       },
       {
         "step": 7,
-        "hint": "Sprawdź swój wynik, wykonując działanie w przeciwnym kierunku",
-        "expression": "$10 = -37 + 42 - 15 + 8 - (-12)$ ✓",
-        "explanation": "Potwierdzamy poprawność wyniku",
-        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów. Szczególnie przy działaniach z liczbami ujemnymi"
+        "hint": "Sprawdź wynik obliczając krok po kroku od lewej do prawej",
+        "expression": "$-37 + 42 = 5$, potem $5 - 15 = -10$, potem $-10 + 8 = -2$, na koniec $-2 + 12 = 10$ ✓",
+        "explanation": "Sprawdzenie: wykonujemy działania kolejno od lewej do prawej i otrzymujemy ten sam wynik"
       }
     ],
     "solutions": [
       "$10$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [],
-      "qualityScore": 10.5,
-      "metrics": {
-        "avgExplanationLength": 27,
-        "stepsWithWhy": 3,
-        "whyPercentage": 43,
-        "hasVerification": true,
-        "warningTypeCounts": {}
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:08:00.368Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_multiplication_1",
-    "topic": "Mnożenie liczb całkowitych",
+    "id": "tex_problem_6",
+    "topic": "Podstawy matematyki",
     "statement": "Oblicz iloczyn: $6 \\cdot (-4)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Przypomnij sobie zasady mnożenia liczb dodatnich i ujemnych",
+        "hint": "Jakie liczby mnożysz? Jedna jest dodatnia, a druga ujemna",
         "expression": "$6 \\cdot (-4)$",
-        "explanation": "Mamy do czynienia z mnożeniem liczby dodatniej przez liczbę ujemną",
-        "why": "Przy mnożeniu liczb o różnych znakach zawsze otrzymamy wynik ujemny. To jak temperatura: dodatnia × ujemna da zawsze ujemny wynik"
+        "explanation": "Mamy mnożenie liczby dodatniej 6 przez liczbę ujemną -4",
+        "why": "Gdy mnożymy liczby o różnych znakach (jedna dodatnia, druga ujemna), wynik zawsze będzie ujemny"
       },
       {
         "step": 2,
-        "hint": "Najpierw pomnóż wartości bezwzględne liczb",
+        "hint": "Najpierw pomnóż wartości bezwzględne liczb - ile to 6 razy 4?",
         "expression": "$6 \\cdot 4 = 24$",
-        "explanation": "Mnożymy same liczby bez znaków"
+        "explanation": "Mnożymy wartości bezwzględne: 6 i 4",
+        "why": "Wartość bezwzględna to liczba bez znaku. Najpierw liczymy ile to będzie, potem ustalamy znak"
       },
       {
         "step": 3,
-        "hint": "Jaki będzie znak wyniku?",
-        "expression": "$6 \\cdot (-4) = -24$",
-        "explanation": "Liczba dodatnia razy liczba ujemna daje wynik ujemny",
-        "why": "Częsty błąd: zapominanie o zmianie znaku przy mnożeniu liczb o różnych znakach"
+        "hint": "Jaki znak będzie miał wynik? Pamiętaj regułę znaków przy mnożeniu",
+        "expression": "$(+) \\cdot (-) = (-)$",
+        "explanation": "Dodatnia razy ujemna daje ujemną",
+        "why": "Reguła znaków: (+)·(+)=(+), (+)·(-)=(-), (-)·(+)=(-), (-)·(-)=(+). Zapamiętaj: różne znaki = minus!"
       },
       {
         "step": 4,
-        "hint": "Sprawdź swój wynik, wykonując działanie odwrotne",
-        "expression": "$-24 \\div 6 = -4$ ✓",
-        "explanation": "Dzielenie potwierdza poprawność naszego wyniku",
-        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć głupich błędów"
+        "hint": "Połącz wynik mnożenia z odpowiednim znakiem",
+        "expression": "$6 \\cdot (-4) = -24$",
+        "explanation": "Wynik to -24"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik - czy znak jest poprawny?",
+        "expression": "$6 \\cdot (-4) = -24$ ✓",
+        "explanation": "Sprawdzenie: dodatnia × ujemna = ujemna, więc -24 jest poprawne",
+        "why": "Częsty błąd: uczniowie zapominają o znaku minus i podają 24 zamiast -24"
       }
     ],
     "solutions": [
       "$-24$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "step_count_low",
-          "message": "Za mało kroków (4). Minimum to 5 kroków.",
-          "severity": "warning",
-          "stepCount": 4
-        },
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (3/4). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 8.2,
-      "metrics": {
-        "avgExplanationLength": 49,
-        "stepsWithWhy": 3,
-        "whyPercentage": 75,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "step_count_low": 1,
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:08:08.808Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_multiplication_2",
-    "topic": "Mnożenie i dzielenie liczb ujemnych",
+    "id": "tex_problem_7",
+    "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $(-8) \\cdot (-7) : 4$",
     "steps": [
       {
         "step": 1,
-        "hint": "Zacznij od zapamiętania reguły mnożenia liczb ujemnych",
-        "expression": "$(-8) \\cdot (-7)$",
-        "explanation": "Mnożymy dwie liczby ujemne",
-        "why": "Pamiętaj: ujemny razy ujemny daje dodatni. To jak 'podwójne zaprzeczenie' w języku"
+        "hint": "Które działania wykonujemy najpierw? Przypomnij sobie kolejność działań",
+        "expression": "$(-8) \\cdot (-7) : 4$",
+        "explanation": "Mamy mnożenie i dzielenie - wykonujemy je od lewej do prawej",
+        "why": "Mnożenie i dzielenie mają ten sam priorytet, więc wykonujemy je w kolejności od lewej do prawej"
       },
       {
         "step": 2,
-        "hint": "Oblicz mnożenie liczb ujemnych",
-        "expression": "$(-8) \\cdot (-7) = 56$",
-        "explanation": "Mnożymy wartości bezwzględne i pamiętamy o znaku",
-        "why": "Częsty błąd: mylenie znaków przy mnożeniu liczb ujemnych"
+        "hint": "Najpierw oblicz mnożenie liczb ujemnych. Jaki znak będzie miał wynik?",
+        "expression": "$(-8) \\cdot (-7) = +56$",
+        "explanation": "Mnożymy liczby ujemne: minus razy minus daje plus",
+        "why": "Pamiętaj zasadę znaków: (-) · (-) = (+), (-) · (+) = (-), (+) · (-) = (-), (+) · (+) = (+)"
       },
       {
         "step": 3,
-        "hint": "Teraz wykonaj dzielenie przez 4",
+        "hint": "Teraz podziel otrzymany wynik przez 4",
         "expression": "$56 : 4 = 14$",
-        "explanation": "Dzielimy wynik poprzedniego działania przez 4"
+        "explanation": "Dzielimy liczbę dodatnią przez liczbę dodatnią"
       },
       {
         "step": 4,
-        "hint": "Sprawdź swoje obliczenia",
-        "expression": "$(-8) \\cdot (-7) : 4 = 56 : 4 = 14$",
-        "explanation": "Powtarzamy całe działanie, aby upewnić się co do wyniku",
-        "why": "Zawsze warto sprawdzić swoje obliczenia, aby uniknąć głupich błędów"
+        "hint": "Sprawdź swoje obliczenia wykonując działania w odwrotnej kolejności",
+        "expression": "$14 \\cdot 4 = 56$ oraz $56 : (-7) = -8$ ✓",
+        "explanation": "Sprawdzenie potwierdza poprawność wyniku",
+        "why": "Sprawdzenie przez działania odwrotne to dobry sposób na wyłapanie błędów rachunkowych"
       }
     ],
     "solutions": [
       "$14$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "step_count_low",
-          "message": "Za mało kroków (4). Minimum to 5 kroków.",
-          "severity": "warning",
-          "stepCount": 4
-        },
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (3/4). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 8.2,
-      "metrics": {
-        "avgExplanationLength": 44,
-        "stepsWithWhy": 3,
-        "whyPercentage": 75,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "step_count_low": 1,
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:08:16.492Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_multiplication_division_1",
-    "topic": "Mnożenie i dzielenie liczb ujemnych",
+    "id": "tex_problem_8",
+    "topic": "Podstawy matematyki",
     "statement": "Oblicz: $(-15) \\cdot 3 : (-9)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Jakie działania widzisz w tym wyrażeniu?",
+        "hint": "Które działania wykonujemy najpierw? Przypomnij sobie kolejność działań",
         "expression": "$(-15) \\cdot 3 : (-9)$",
-        "explanation": "Mamy do czynienia z mnożeniem i dzieleniem",
-        "why": "Pamiętaj, że mnożenie i dzielenie wykonujemy od lewej do prawej, tak samo jak dodawanie i odejmowanie"
+        "explanation": "Mamy mnożenie i dzielenie - te działania mają ten sam priorytet",
+        "why": "Mnożenie i dzielenie wykonujemy od lewej do prawej, bo mają ten sam priorytet w kolejności działań"
       },
       {
         "step": 2,
-        "hint": "Zacznij od mnożenia -15 przez 3",
+        "hint": "Najpierw wykonaj mnożenie $(-15) \\cdot 3$. Jaki będzie znak wyniku?",
         "expression": "$(-15) \\cdot 3 = -45$",
-        "explanation": "Mnożymy liczby, zachowując zasady mnożenia liczb ujemnych",
-        "why": "Liczba ujemna razy dodatnia daje wynik ujemny. Pamiętaj: minus razy plus = minus"
+        "explanation": "Mnożymy liczby i ustalamy znak wyniku",
+        "why": "Minus razy plus = minus. Pamiętaj: różne znaki przy mnożeniu dają minus, takie same znaki dają plus"
       },
       {
         "step": 3,
-        "hint": "Teraz podziel wynik przez -9",
-        "expression": "$-45 : (-9) = 5$",
-        "explanation": "Dzielimy -45 przez -9",
-        "why": "Liczba ujemna podzielona przez ujemną daje wynik dodatni. To jak 'minus razy minus = plus'"
+        "hint": "Teraz podstaw wynik i wykonaj dzielenie",
+        "expression": "$-45 : (-9)$",
+        "explanation": "Zastępujemy $(-15) \\cdot 3$ wynikiem $-45$"
       },
       {
         "step": 4,
-        "hint": "Sprawdź swój wynik, wykonując działanie odwrotne",
-        "expression": "$5 \\cdot (-9) = -45$ oraz $-45 : 3 = -15$ ✓",
-        "explanation": "Weryfikujemy poprawność wyniku przez odwrócenie działań",
-        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów. To jak podwójne sprawdzenie przepisu w kuchni!"
+        "hint": "Podziel $-45$ przez $(-9)$. Jaki będzie znak wyniku?",
+        "expression": "$-45 : (-9) = +5$",
+        "explanation": "Dzielimy liczby i ustalamy znak wyniku",
+        "why": "Minus dzielone przez minus = plus. Przy dzieleniu: takie same znaki dają plus, różne znaki dają minus"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik wykonując działania w odwrotnej kolejności",
+        "expression": "$5 \\cdot (-9) \\cdot 3 = -45 \\cdot 3 = -135$ oraz $(-15) \\cdot 3 = -45$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że nasze obliczenia są poprawne"
       }
     ],
     "solutions": [
       "$5$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "step_count_low",
-          "message": "Za mało kroków (4). Minimum to 5 kroków.",
-          "severity": "warning",
-          "stepCount": 4
-        },
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (4/4). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 8.2,
-      "metrics": {
-        "avgExplanationLength": 44,
-        "stepsWithWhy": 4,
-        "whyPercentage": 100,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "step_count_low": 1,
-          "too_many_why": 1
-        }
-      },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:08:25.666Z"
-    }
+    "parameters": {}
   },
   {
-    "id": "basics_fraction_multiplication_1",
-    "topic": "Mnożenie ułamków",
+    "id": "tex_problem_9",
+    "topic": "Podstawy matematyki",
     "statement": "Wyznacz wartość: $\\frac{-48}{6} \\cdot \\frac{3}{-4}$",
     "steps": [
       {
         "step": 1,
-        "hint": "Spójrz na liczby - co widzisz w liczniku i mianowniku?",
+        "hint": "Spójrz na znaki w ułamkach. Ile mamy liczb ujemnych?",
         "expression": "$\\frac{-48}{6} \\cdot \\frac{3}{-4}$",
-        "explanation": "Mamy do czynienia z mnożeniem ułamków",
-        "why": "Przy mnożeniu ułamków zawsze mnożymy liczniki i mianowniki osobno"
+        "explanation": "Mamy dwie liczby ujemne: -48 i -4",
+        "why": "Przy mnożeniu ułamków ważne jest najpierw ustalić znak wyniku. Minus razy minus daje plus!"
       },
       {
         "step": 2,
-        "hint": "Jak uprościć liczby przed mnożeniem?",
-        "expression": "$\\frac{-48 \\div 6}{6 \\div 6} \\cdot \\frac{3}{-4}$",
-        "explanation": "Skracamy ułamek pierwszy przez 6",
-        "why": "Upraszczanie przed mnożeniem zmniejsza ryzyko błędów w obliczeniach"
+        "hint": "Jaki będzie znak wyniku? Pamiętaj regułę znaków przy mnożeniu",
+        "expression": "$(-)$ razy $(-)$ daje $(+)$",
+        "explanation": "Wynik będzie dodatni, bo mnożymy dwie liczby ujemne",
+        "why": "Częsty błęd: uczniowie czasem myślą, że dwa minusy to 'bardzo minus', ale to nieprawda - dwa minusy się znoszą"
       },
       {
         "step": 3,
-        "hint": "Jakie są wyniki skracania?",
-        "expression": "$\\frac{-8}{1} \\cdot \\frac{3}{-4}$",
-        "explanation": "Uprościliśmy pierwszy ułamek"
+        "hint": "Teraz możesz uprościć każdy ułamek osobno. Zacznij od pierwszego",
+        "expression": "$\\frac{-48}{6} = \\frac{48}{6} = 8$",
+        "explanation": "Dzielimy 48 przez 6 i pamiętamy o znaku",
+        "why": "Upraszczanie ułamków przed mnożeniem ułatwia obliczenia i zmniejsza ryzyko błędów"
       },
       {
         "step": 4,
-        "hint": "Jak mnożymy liczniki i mianowniki?",
-        "expression": "$\\frac{-8 \\cdot 3}{1 \\cdot (-4)} = \\frac{-24}{-4}$",
-        "explanation": "Mnożymy liczniki i mianowniki",
-        "why": "Pamiętaj: przy mnożeniu liczb ujemnych znak się zmienia - ujemny razy ujemny daje dodatni"
+        "hint": "Teraz uprość drugi ułamek",
+        "expression": "$\\frac{3}{-4} = -\\frac{3}{4}$",
+        "explanation": "Przenosimy znak minus przed ułamek dla czytelności"
       },
       {
         "step": 5,
-        "hint": "Czy można jeszcze uprościć?",
-        "expression": "$\\frac{-24}{-4} = 6$",
-        "explanation": "Dzielimy licznik i mianownik przez -4",
-        "why": "Ujemne przez ujemne daje dodatnie, więc wynik jest dodatni"
+        "hint": "Podstaw uproszczone wartości i wykonaj mnożenie",
+        "expression": "$8 \\cdot \\left(-\\frac{3}{4}\\right) = -\\frac{8 \\cdot 3}{4} = -\\frac{24}{4}$",
+        "explanation": "Mnożymy liczbę całkowitą przez ułamek"
       },
       {
         "step": 6,
-        "hint": "Sprawdź swoje rozumowanie",
-        "expression": "$-48 \\div 6 = -8$, $3 \\div (-4) = -0.75$, $-8 \\cdot (-0.75) = 6$ ✓",
-        "explanation": "Weryfikacja wyniku metodą alternatywną",
-        "why": "Zawsze warto sprawdzić obliczenia innym sposobem, aby uniknąć błędów"
+        "hint": "Uprość wynik końcowy",
+        "expression": "$-\\frac{24}{4} = -6$",
+        "explanation": "Dzielimy 24 przez 4"
+      },
+      {
+        "step": 7,
+        "hint": "Moment! Sprawdź znak wyniku jeszcze raz",
+        "expression": "$(-)$ razy $(-)$ powinno dać $(+)$, więc wynik to $+6$",
+        "explanation": "Poprawiamy znak - wynik jest dodatni",
+        "why": "To częsty błąd - łatwo się pomylić ze znakami w długich obliczeniach. Zawsze warto sprawdzić znak na końcu"
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź obliczenie innym sposobem - pomnóż ułamki bezpośrednio",
+        "expression": "$\\frac{-48 \\cdot 3}{6 \\cdot (-4)} = \\frac{-144}{-24} = \\frac{144}{24} = 6$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik to 6"
       }
     ],
     "solutions": [
       "$6$"
     ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "too_many_why",
-          "message": "Za dużo wyjaśnień \"why\" (5/6). Używaj tylko dla kluczowych kroków.",
-          "severity": "warning"
-        }
-      ],
-      "qualityScore": 9.7,
-      "metrics": {
-        "avgExplanationLength": 34,
-        "stepsWithWhy": 5,
-        "whyPercentage": 83,
-        "hasVerification": true,
-        "warningTypeCounts": {
-          "too_many_why": 1
-        }
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_10",
+    "topic": "Kolejność działań z liczbami ujemnymi",
+    "statement": "Oblicz: $(-2,5) \\cdot 4 : (-0,5) \\cdot (-3)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką kolejność działań stosujemy? Które działania wykonujemy od lewej do prawej?",
+        "expression": "$(-2,5) \\cdot 4 : (-0,5) \\cdot (-3)$",
+        "explanation": "Mamy tylko mnożenie i dzielenie, więc wykonujemy je od lewej do prawej",
+        "why": "Mnożenie i dzielenie mają ten sam priorytet, więc wykonujemy je kolejno od lewej do prawej - nie możemy zmieniać kolejności!"
       },
-      "solverType": "basics",
-      "timestamp": "2025-09-05T13:08:37.095Z"
-    }
+      {
+        "step": 2,
+        "hint": "Zacznij od pierwszego działania: $(-2,5) \\cdot 4$. Jaki będzie znak wyniku?",
+        "expression": "$(-2,5) \\cdot 4 = -10$",
+        "explanation": "Mnożymy liczbę ujemną przez dodatnią",
+        "why": "Minus razy plus = minus. Pamiętaj: różne znaki dają wynik ujemny, takie same znaki dają wynik dodatni"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz mamy $-10 : (-0,5)$. Jaki będzie znak tego dzielenia?",
+        "expression": "$-10 : (-0,5) = +20$",
+        "explanation": "Dzielimy liczbę ujemną przez ujemną",
+        "why": "Minus przez minus = plus. Dzielenie $-10 : (-0,5)$ to to samo co $-10 \\cdot (-2) = 20$, bo $(-0,5) \\cdot (-2) = 1$"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź dzielenie: $-10 : (-0,5)$. Przez co możesz pomnożyć $-0,5$, żeby otrzymać $1$?",
+        "expression": "$-10 : (-0,5) = -10 \\cdot (-2) = 20$",
+        "explanation": "Dzielenie przez $-0,5$ to mnożenie przez $-2$"
+      },
+      {
+        "step": 5,
+        "hint": "Na koniec oblicz $20 \\cdot (-3)$. Jaki będzie znak wyniku?",
+        "expression": "$20 \\cdot (-3) = -60$",
+        "explanation": "Mnożymy liczbę dodatnią przez ujemną",
+        "why": "Plus razy minus = minus"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź całe obliczenie krok po kroku",
+        "expression": "$(-2,5) \\cdot 4 : (-0,5) \\cdot (-3) = -10 : (-0,5) \\cdot (-3) = 20 \\cdot (-3) = -60$",
+        "explanation": "Podsumowujemy wszystkie kroki wykonane od lewej do prawej"
+      }
+    ],
+    "solutions": [
+      "$-60$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_11",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz wartość: $2^5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza zapis $2^5$? Ile razy musisz pomnożyć liczbę 2 przez siebie?",
+        "expression": "$2^5 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2$",
+        "explanation": "Potęga oznacza wielokrotne mnożenie tej samej liczby",
+        "why": "Wykładnik potęgi (tutaj 5) mówi nam ile razy podstawa (tutaj 2) występuje w mnożeniu. To NIE jest 2 · 5 = 10!"
+      },
+      {
+        "step": 2,
+        "hint": "Zacznij od lewej strony - oblicz pierwsze dwa czynniki",
+        "expression": "$2 \\cdot 2 = 4$",
+        "explanation": "Mnożymy pierwsze dwie dwójki"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz pomnóż wynik przez kolejną dwójkę",
+        "expression": "$4 \\cdot 2 = 8$",
+        "explanation": "Mnożymy otrzymany wynik przez trzecią dwójkę"
+      },
+      {
+        "step": 4,
+        "hint": "Kontynuuj mnożenie przez czwartą dwójkę",
+        "expression": "$8 \\cdot 2 = 16$",
+        "explanation": "Mnożymy przez czwartą dwójkę"
+      },
+      {
+        "step": 5,
+        "hint": "Na koniec pomnóż przez ostatnią, piątą dwójkę",
+        "expression": "$16 \\cdot 2 = 32$",
+        "explanation": "Mnożymy przez piątą i ostatnią dwójkę"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź swój wynik - czy rzeczywiście pomnozyłeś 2 przez siebie 5 razy?",
+        "expression": "$2^5 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 4 \\cdot 8 \\cdot 2 = 32$",
+        "explanation": "Sprawdzenie: mamy 5 czynników równych 2, wynik to 32",
+        "why": "Możesz też zapamiętać potęgi dwójki: $2^1=2$, $2^2=4$, $2^3=8$, $2^4=16$, $2^5=32$ - każda następna to poprzednia razy 2"
+      }
+    ],
+    "solutions": [
+      "$32$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_12",
+    "topic": "Podstawy matematyki",
+    "statement": "Wyznacz: $(-3)^4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza potęga czwarta? Ile razy musisz pomnożyć liczbę przez siebie?",
+        "expression": "$(-3)^4 = (-3) \\cdot (-3) \\cdot (-3) \\cdot (-3)$",
+        "explanation": "Potęga czwarta oznacza, że mnożymy liczbę przez siebie 4 razy",
+        "why": "Potęga to skrócony zapis wielokrotnego mnożenia tej samej liczby. Wykładnik 4 oznacza, że podstawa (-3) występuje 4 razy jako czynnik"
+      },
+      {
+        "step": 2,
+        "hint": "Zacznij od pomnożenia pierwszych dwóch liczb. Jaki jest znak iloczynu dwóch liczb ujemnych?",
+        "expression": "$(-3) \\cdot (-3) = +9$",
+        "explanation": "Mnożymy pierwsze dwa czynniki",
+        "why": "Minus razy minus daje plus! To ważna zasada znaków: (-) · (-) = (+)"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz pomnóż wynik przez trzeci czynnik (-3)",
+        "expression": "$9 \\cdot (-3) = -27$",
+        "explanation": "Mnożymy otrzymany wynik przez kolejny czynnik",
+        "why": "Plus razy minus daje minus: (+) · (-) = (-)"
+      },
+      {
+        "step": 4,
+        "hint": "Na koniec pomnóż przez ostatni czynnik (-3)",
+        "expression": "$(-27) \\cdot (-3) = +81$",
+        "explanation": "Mnożymy przez ostatni czynnik",
+        "why": "Znowu minus razy minus daje plus! Zauważ wzór: parzysta liczba minusów zawsze daje wynik dodatni"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik - czy potęga parzysta liczby ujemnej może być ujemna?",
+        "expression": "$(-3)^4 = 81$",
+        "explanation": "Otrzymujemy wynik dodatni",
+        "why": "Ważna zasada: potęga parzysta dowolnej liczby (dodatniej lub ujemnej) jest zawsze dodatnia! Potęga nieparzysta zachowuje znak podstawy"
+      }
+    ],
+    "solutions": [
+      "$81$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_13",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $\\left(\\frac{2}{3}\\right)^3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza potęga trzecia? Ile razy musisz pomnożyć ułamek przez siebie?",
+        "expression": "$\\left(\\frac{2}{3}\\right)^3 = \\frac{2}{3} \\cdot \\frac{2}{3} \\cdot \\frac{2}{3}$",
+        "explanation": "Potęga trzecia oznacza trzykrotne mnożenie przez siebie",
+        "why": "Potęga to skrócony zapis wielokrotnego mnożenia - $a^3$ oznacza $a \\cdot a \\cdot a$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak mnożymy ułamki? Co robimy z licznikami, a co z mianownikami?",
+        "expression": "$\\frac{2}{3} \\cdot \\frac{2}{3} \\cdot \\frac{2}{3} = \\frac{2 \\cdot 2 \\cdot 2}{3 \\cdot 3 \\cdot 3}$",
+        "explanation": "Przy mnożeniu ułamków mnożymy liczniki ze sobą i mianowniki ze sobą",
+        "why": "Częsty błąd: uczniowie czasem dodają liczniki i mianowniki zamiast je mnożyć!"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz iloczyn liczników: $2 \\cdot 2 \\cdot 2$",
+        "expression": "$2 \\cdot 2 \\cdot 2 = 2^3 = 8$",
+        "explanation": "Licznik: trzy dwójki pomnożone przez siebie dają 8"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz iloczyn mianowników: $3 \\cdot 3 \\cdot 3$",
+        "expression": "$3 \\cdot 3 \\cdot 3 = 3^3 = 27$",
+        "explanation": "Mianownik: trzy trójki pomnożone przez siebie dają 27"
+      },
+      {
+        "step": 5,
+        "hint": "Zapisz wynik jako ułamek",
+        "expression": "$\\frac{8}{27}$",
+        "explanation": "Otrzymujemy ułamek z obliczonymi licznikiem i mianownikiem"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź czy można uprościć ten ułamek - czy 8 i 27 mają wspólne dzielniki?",
+        "expression": "$\\frac{8}{27}$ - nie można uprościć",
+        "explanation": "8 = 2³, 27 = 3³, więc nie mają wspólnych dzielników oprócz 1",
+        "why": "Zawsze warto sprawdzić czy wynik można uprościć - tutaj liczby 8 i 27 są względnie pierwsze"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź wynik używając wzoru na potęgę ułamka",
+        "expression": "$\\left(\\frac{a}{b}\\right)^n = \\frac{a^n}{b^n}$, więc $\\left(\\frac{2}{3}\\right)^3 = \\frac{2^3}{3^3} = \\frac{8}{27}$ ✓",
+        "explanation": "Sprawdzenie: wzór potwierdza nasz wynik"
+      }
+    ],
+    "solutions": [
+      "$\\frac{8}{27}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_14",
+    "topic": "Podstawy matematyki",
+    "statement": "Wykonaj działanie: $(-0,2)^4 \\cdot 5^3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania widzisz w tym wyrażeniu? Co wykonujemy najpierw?",
+        "expression": "$(-0,2)^4 \\cdot 5^3$",
+        "explanation": "Mamy potęgowanie i mnożenie - najpierw obliczamy potęgi",
+        "why": "Kolejność działań: potęgowanie wykonujemy przed mnożeniem. Najpierw oblicz każdą potęgę osobno"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz $(-0,2)^4$. Pamiętaj o znaku - co się dzieje gdy podnosimy liczbę ujemną do potęgi parzystej?",
+        "expression": "$(-0,2)^4 = (-0,2) \\cdot (-0,2) \\cdot (-0,2) \\cdot (-0,2)$",
+        "explanation": "Rozkładamy potęgę na iloczyn czterech czynników",
+        "why": "Potęga parzysta liczby ujemnej daje wynik dodatni, bo minus razy minus = plus. Tutaj: (-) · (-) · (-) · (-) = (+)"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz krok po kroku: najpierw $(-0,2) \\cdot (-0,2)$",
+        "expression": "$(-0,2) \\cdot (-0,2) = 0,04$",
+        "explanation": "Mnożymy pierwsze dwa czynniki"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz oblicz $0,04 \\cdot (-0,2) \\cdot (-0,2)$",
+        "expression": "$0,04 \\cdot (-0,2) \\cdot (-0,2) = 0,04 \\cdot 0,04 = 0,0016$",
+        "explanation": "Mnożymy wynik przez pozostałe dwa czynniki",
+        "why": "Możesz też obliczyć $(0,2)^4 = 0,0016$ i pamiętać, że wynik jest dodatni bo potęga jest parzysta"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz oblicz drugą potęgę: $5^3$",
+        "expression": "$5^3 = 5 \\cdot 5 \\cdot 5 = 25 \\cdot 5 = 125$",
+        "explanation": "Obliczamy potęgę trzecią liczby 5"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw obliczone potęgi i wykonaj mnożenie",
+        "expression": "$0,0016 \\cdot 125$",
+        "explanation": "Mnożymy wyniki obu potęg"
+      },
+      {
+        "step": 7,
+        "hint": "Oblicz końcowy wynik",
+        "expression": "$0,0016 \\cdot 125 = 0,2$",
+        "explanation": "Wykonujemy mnożenie liczby dziesiętnej przez liczbę całkowitą",
+        "why": "Możesz sprawdzić: $\\frac{16}{10000} \\cdot 125 = \\frac{16 \\cdot 125}{10000} = \\frac{2000}{10000} = 0,2$"
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź wynik używając własności potęg",
+        "expression": "$(-0,2)^4 \\cdot 5^3 = (0,2)^4 \\cdot 5^3 = \\left(\\frac{1}{5}\\right)^4 \\cdot 5^3 = \\frac{1}{5^4} \\cdot 5^3 = \\frac{5^3}{5^4} = \\frac{1}{5} = 0,2$ ✓",
+        "explanation": "Sprawdzenie: używamy faktu że $0,2 = \\frac{1}{5}$ i własności potęg"
+      }
+    ],
+    "solutions": [
+      "$0,2$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_15",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $\\left(-\\frac{3}{4}\\right)^2 \\cdot 8^2 : 3^3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania wykonujemy najpierw? Spójrz na kolejność działań",
+        "expression": "$\\left(-\\frac{3}{4}\\right)^2 \\cdot 8^2 : 3^3$",
+        "explanation": "Identyfikujemy wszystkie działania: potęgowanie, mnożenie i dzielenie",
+        "why": "Kolejność działań: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie. Najpierw wszystkie potęgi!"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz pierwszą potęgę. Co się dzieje z minusem gdy podnosimy do kwadratu?",
+        "expression": "$\\left(-\\frac{3}{4}\\right)^2 = \\frac{(-3)^2}{4^2} = \\frac{9}{16}$",
+        "explanation": "Podnosimy ułamek do kwadratu - osobno licznik i mianownik",
+        "why": "Minus do kwadratu daje plus! (-3)² = (-3) · (-3) = +9. To częsty błąd - uczniowie zapominają o zmianie znaku"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz drugą potęgę",
+        "expression": "$8^2 = 8 \\cdot 8 = 64$",
+        "explanation": "Podnosimy 8 do kwadratu"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz trzecią potęgę",
+        "expression": "$3^3 = 3 \\cdot 3 \\cdot 3 = 27$",
+        "explanation": "Podnosimy 3 do sześcianu"
+      },
+      {
+        "step": 5,
+        "hint": "Podstaw obliczone potęgi do wyrażenia",
+        "expression": "$\\frac{9}{16} \\cdot 64 : 27$",
+        "explanation": "Mamy teraz mnożenie i dzielenie do wykonania od lewej do prawej"
+      },
+      {
+        "step": 6,
+        "hint": "Najpierw wykonaj mnożenie ułamka przez liczbę całkowitą",
+        "expression": "$\\frac{9}{16} \\cdot 64 = \\frac{9 \\cdot 64}{16} = \\frac{576}{16}$",
+        "explanation": "Mnożymy ułamek przez liczbę całkowitą",
+        "why": "Liczbę całkowitą można zapisać jako ułamek: 64 = 64/1, więc mnożymy liczniki i mianowniki"
+      },
+      {
+        "step": 7,
+        "hint": "Uprość ułamek dzieląc licznik przez mianownik",
+        "expression": "$\\frac{576}{16} = 36$",
+        "explanation": "Dzielimy: 576 ÷ 16 = 36"
+      },
+      {
+        "step": 8,
+        "hint": "Teraz wykonaj dzielenie",
+        "expression": "$36 : 27 = \\frac{36}{27}$",
+        "explanation": "Dzielenie zamieniamy na ułamek"
+      },
+      {
+        "step": 9,
+        "hint": "Uprość ułamek znajdując największy wspólny dzielnik",
+        "expression": "$\\frac{36}{27} = \\frac{36 : 9}{27 : 9} = \\frac{4}{3}$",
+        "explanation": "Dzielimy licznik i mianownik przez NWD(36,27) = 9"
+      },
+      {
+        "step": 10,
+        "hint": "Sprawdź wynik podstawiając do kalkulatora lub wykonując obliczenia ponownie",
+        "expression": "$\\frac{4}{3} = 1\\frac{1}{3} \\approx 1,33$",
+        "explanation": "Możemy zapisać jako liczbę mieszaną lub dziesiętną do sprawdzenia",
+        "why": "Zawsze warto sprawdzić wynik - możesz przeliczyć każdy krok lub użyć kalkulatora do weryfikacji"
+      }
+    ],
+    "solutions": [
+      "$\\frac{4}{3}$ lub $1\\frac{1}{3}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_16",
+    "topic": "Pierwiastki kwadratowe",
+    "statement": "Oblicz: $\\sqrt{144}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza symbol $\\sqrt{144}$? Jakiej liczby szukamy?",
+        "expression": "$\\sqrt{144} = ?$",
+        "explanation": "Szukamy liczby, która podniesiona do kwadratu da 144",
+        "why": "Pierwiastek kwadratowy to odwrotność potęgowania do kwadratu. Pytamy: jaka liczba razy sama siebie = 144?"
+      },
+      {
+        "step": 2,
+        "hint": "Spróbuj pomyśleć o liczbach, które znasz. Ile to $10^2$? A $12^2$?",
+        "expression": "$10^2 = 100$ (za mało), $12^2 = 144$ (dokładnie!)",
+        "explanation": "Sprawdzamy kwadraty liczb naturalnych w okolicy",
+        "why": "Dobrze jest znać kwadraty liczb od 1 do 15 - często się przydają w zadaniach"
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź czy $12^2$ rzeczywiście równa się 144",
+        "expression": "$12^2 = 12 \\cdot 12 = 144$ ✓",
+        "explanation": "Potwierdzamy nasze przypuszczenie przez obliczenie"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest wynik pierwiastka?",
+        "expression": "$\\sqrt{144} = 12$",
+        "explanation": "Ponieważ $12^2 = 144$, to $\\sqrt{144} = 12$"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik - czy $12^2 = 144$?",
+        "expression": "$12^2 = 12 \\cdot 12 = 144$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że nasze rozwiązanie jest prawidłowe",
+        "why": "Zawsze warto sprawdzić wynik pierwiastka przez podniesienie do kwadratu - to najlepszy sposób na upewnienie się"
+      }
+    ],
+    "solutions": [
+      "$12$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_17",
+    "topic": "Podstawy matematyki",
+    "statement": "Wyznacz wartość: $\\sqrt[3]{-125}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza pierwiastek sześcienny? Jakiej liczby szukamy?",
+        "expression": "$\\sqrt[3]{-125} = x$",
+        "explanation": "Szukamy takiej liczby x, że $x^3 = -125$",
+        "why": "Pierwiastek sześcienny to odwrotność potęgowania do trzeciej. Pytamy: jaką liczbę trzeba podnieść do potęgi 3, żeby otrzymać -125?"
+      },
+      {
+        "step": 2,
+        "hint": "Czy pierwiastek sześcienny z liczby ujemnej może być liczbą ujemną?",
+        "expression": "Tak, bo $(-a)^3 = -a^3$",
+        "explanation": "W przeciwieństwie do pierwiastka kwadratowego, pierwiastek sześcienny z liczby ujemnej istnieje",
+        "why": "Liczba ujemna podniesiona do potęgi nieparzystej (jak 3) daje wynik ujemny. Na przykład: $(-2)^3 = -8$"
+      },
+      {
+        "step": 3,
+        "hint": "Spróbuj znaleźć pierwiastek sześcienny z 125 (bez znaku minus)",
+        "expression": "$\\sqrt[3]{125} = 5$, bo $5^3 = 125$",
+        "explanation": "Najpierw znajdujemy pierwiastek z wartości bezwzględnej",
+        "why": "Sprawdźmy: $5^3 = 5 \\cdot 5 \\cdot 5 = 25 \\cdot 5 = 125$ ✓"
+      },
+      {
+        "step": 4,
+        "hint": "Jeśli $5^3 = 125$, to ile wynosi $(-5)^3$?",
+        "expression": "$(-5)^3 = (-5) \\cdot (-5) \\cdot (-5) = -125$",
+        "explanation": "Obliczamy potęgę liczby ujemnej",
+        "why": "Trzy liczby ujemne pomnożone dają wynik ujemny: minus razy minus = plus, ale plus razy minus = minus"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest więc wartość pierwiastka sześciennego z -125?",
+        "expression": "$\\sqrt[3]{-125} = -5$",
+        "explanation": "Ponieważ $(-5)^3 = -125$, to $\\sqrt[3]{-125} = -5$"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź wynik podstawiając do definicji pierwiastka",
+        "expression": "$(-5)^3 = -125$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że nasza odpowiedź jest prawidłowa",
+        "why": "Zawsze warto sprawdzić wynik - podnosimy naszą odpowiedź do potęgi trzeciej i sprawdzamy czy otrzymamy liczbę spod pierwiastka"
+      }
+    ],
+    "solutions": [
+      "$-5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_18",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $\\sqrt{49} + \\sqrt[3]{27} - \\sqrt{16}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na pierwiastki w tym wyrażeniu. Które z nich możesz łatwo obliczyć?",
+        "expression": "$\\sqrt{49} + \\sqrt[3]{27} - \\sqrt{16}$",
+        "explanation": "Mamy pierwiastek kwadratowy z 49, pierwiastek sześcienny z 27 i pierwiastek kwadratowy z 16",
+        "why": "Pierwiastki to odwrotność potęgowania. Pierwiastek kwadratowy pyta: 'jaka liczba do kwadratu da mi ten wynik?'"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka liczba do kwadratu daje 49? Pomyśl: $? \\cdot ? = 49$",
+        "expression": "$\\sqrt{49} = 7$",
+        "explanation": "Obliczamy pierwszy pierwiastek kwadratowy",
+        "why": "Sprawdzenie: $7 \\cdot 7 = 7^2 = 49$ ✓"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz pierwiastek sześcienny z 27. Jaka liczba do sześcianu daje 27?",
+        "expression": "$\\sqrt[3]{27} = 3$",
+        "explanation": "Obliczamy pierwiastek sześcienny",
+        "why": "Pierwiastek sześcienny pyta: 'jaka liczba do trzeciej potęgi da mi 27?' Sprawdzenie: $3^3 = 3 \\cdot 3 \\cdot 3 = 27$ ✓"
+      },
+      {
+        "step": 4,
+        "hint": "Na koniec: jaka liczba do kwadratu daje 16?",
+        "expression": "$\\sqrt{16} = 4$",
+        "explanation": "Obliczamy drugi pierwiastek kwadratowy",
+        "why": "Sprawdzenie: $4 \\cdot 4 = 4^2 = 16$ ✓"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz podstaw obliczone wartości i wykonaj działania",
+        "expression": "$7 + 3 - 4$",
+        "explanation": "Podstawiamy wyniki pierwiastków do wyrażenia"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj dodawanie i odejmowanie od lewej do prawej",
+        "expression": "$7 + 3 - 4 = 10 - 4 = 6$",
+        "explanation": "Najpierw dodajemy 7 + 3 = 10, potem odejmujemy 4"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia podstawiając z powrotem",
+        "expression": "$\\sqrt{49} + \\sqrt[3]{27} - \\sqrt{16} = 7 + 3 - 4 = 6$ ✓",
+        "explanation": "Sprawdzenie: wszystkie pierwiastki obliczyliśmy poprawnie i działania są prawidłowe"
+      }
+    ],
+    "solutions": [
+      "$6$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_19",
+    "topic": "Podstawy matematyki",
+    "statement": "Wykonaj działanie: $2\\sqrt{81} - 3\\sqrt[3]{-8} + \\sqrt{0,25}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na pierwiastki w tym wyrażeniu. Które z nich możesz obliczyć?",
+        "expression": "$2\\sqrt{81} - 3\\sqrt[3]{-8} + \\sqrt{0,25}$",
+        "explanation": "Mamy trzy pierwiastki do obliczenia: kwadratowy z 81, sześcienny z -8 i kwadratowy z 0,25",
+        "why": "Pierwiastki obliczamy przed innymi działaniami. Każdy pierwiastek trzeba rozwiązać osobno"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka liczba podniesiona do kwadratu daje 81?",
+        "expression": "$\\sqrt{81} = 9$",
+        "explanation": "Obliczamy pierwszy pierwiastek kwadratowy",
+        "why": "Pierwiastek kwadratowy z 81 to 9, bo $9^2 = 9 \\cdot 9 = 81$"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka liczba podniesiona do trzeciej potęgi daje -8?",
+        "expression": "$\\sqrt[3]{-8} = -2$",
+        "explanation": "Obliczamy pierwiastek sześcienny z liczby ujemnej",
+        "why": "Pierwiastek sześcienny z -8 to -2, bo $(-2)^3 = (-2) \\cdot (-2) \\cdot (-2) = -8$. Pierwiastki nieparzyste z liczb ujemnych są ujemne"
+      },
+      {
+        "step": 4,
+        "hint": "Zamień 0,25 na ułamek, będzie łatwiej obliczyć pierwiastek",
+        "expression": "$0,25 = \\frac{25}{100} = \\frac{1}{4}$",
+        "explanation": "Zamieniamy liczbę dziesiętną na ułamek zwykły"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz oblicz pierwiastek z ułamka",
+        "expression": "$\\sqrt{0,25} = \\sqrt{\\frac{1}{4}} = \\frac{\\sqrt{1}}{\\sqrt{4}} = \\frac{1}{2} = 0,5$",
+        "explanation": "Obliczamy pierwiastek kwadratowy z ułamka",
+        "why": "Pierwiastek z ułamka to pierwiastek z licznika przez pierwiastek z mianownika"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw obliczone wartości pierwiastków do wyrażenia",
+        "expression": "$2 \\cdot 9 - 3 \\cdot (-2) + 0,5$",
+        "explanation": "Zastępujemy pierwiastki ich wartościami"
+      },
+      {
+        "step": 7,
+        "hint": "Wykonaj mnożenia",
+        "expression": "$18 - (-6) + 0,5 = 18 + 6 + 0,5$",
+        "explanation": "Obliczamy $2 \\cdot 9 = 18$ i $3 \\cdot (-2) = -6$",
+        "why": "Uwaga: $-3 \\cdot (-2) = +6$, bo minus razy minus daje plus!"
+      },
+      {
+        "step": 8,
+        "hint": "Dodaj wszystkie liczby",
+        "expression": "$18 + 6 + 0,5 = 24,5$",
+        "explanation": "Wykonujemy dodawanie od lewej do prawej"
+      },
+      {
+        "step": 9,
+        "hint": "Sprawdź swoje obliczenia podstawiając z powrotem",
+        "expression": "$2\\sqrt{81} - 3\\sqrt[3]{-8} + \\sqrt{0,25} = 2 \\cdot 9 - 3 \\cdot (-2) + 0,5 = 18 + 6 + 0,5 = 24,5$ ✓",
+        "explanation": "Sprawdzenie potwierdza poprawność obliczeń"
+      }
+    ],
+    "solutions": [
+      "$24,5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_20",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $\\sqrt{2,25} \\cdot (-2)^3 + \\sqrt[3]{-0,064} \\cdot 5^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie działania widzisz w tym wyrażeniu? Które wykonujemy najpierw?",
+        "expression": "$\\sqrt{2,25} \\cdot (-2)^3 + \\sqrt[3]{-0,064} \\cdot 5^2$",
+        "explanation": "Identyfikujemy wszystkie działania: pierwiastki, potęgi, mnożenie i dodawanie",
+        "why": "Kolejność działań: pierwiastki i potęgi wykonujemy przed mnożeniem i dodawaniem"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz pierwiastek kwadratowy z 2,25. Jaka liczba podniesiona do kwadratu daje 2,25?",
+        "expression": "$\\sqrt{2,25} = 1,5$",
+        "explanation": "Pierwiastek kwadratowy z 2,25 to 1,5",
+        "why": "Sprawdzenie: $1,5^2 = 1,5 \\cdot 1,5 = 2,25$ ✓. Możesz też myśleć: $2,25 = \\frac{225}{100} = \\frac{15^2}{10^2}$, więc $\\sqrt{2,25} = \\frac{15}{10} = 1,5$"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz $(-2)^3$. Pamiętaj o znaku minus!",
+        "expression": "$(-2)^3 = (-2) \\cdot (-2) \\cdot (-2) = -8$",
+        "explanation": "Potęga trzecia liczby ujemnej jest ujemna",
+        "why": "Nieparzysta potęga liczby ujemnej jest zawsze ujemna. Minus razy minus daje plus, ale plus razy minus daje minus"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz oblicz pierwiastek sześcienny z -0,064. Jaka liczba podniesiona do sześcianu daje -0,064?",
+        "expression": "$\\sqrt[3]{-0,064} = -0,4$",
+        "explanation": "Pierwiastek sześcienny z -0,064 to -0,4",
+        "why": "Sprawdzenie: $(-0,4)^3 = (-0,4) \\cdot (-0,4) \\cdot (-0,4) = -0,064$ ✓. Pierwiastek sześcienny z liczby ujemnej jest ujemny"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz $5^2$",
+        "expression": "$5^2 = 5 \\cdot 5 = 25$",
+        "explanation": "Pięć do kwadratu to dwadzieścia pięć"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw obliczone wartości i wykonaj mnożenia",
+        "expression": "$1,5 \\cdot (-8) + (-0,4) \\cdot 25$",
+        "explanation": "Podstawiamy wszystkie obliczone wartości"
+      },
+      {
+        "step": 7,
+        "hint": "Oblicz pierwsze mnożenie: $1,5 \\cdot (-8)$",
+        "expression": "$1,5 \\cdot (-8) = -12$",
+        "explanation": "Dodatnia razy ujemna daje ujemną"
+      },
+      {
+        "step": 8,
+        "hint": "Oblicz drugie mnożenie: $(-0,4) \\cdot 25$",
+        "expression": "$(-0,4) \\cdot 25 = -10$",
+        "explanation": "Ujemna razy dodatnia daje ujemną"
+      },
+      {
+        "step": 9,
+        "hint": "Teraz dodaj wyniki: $-12 + (-10)$",
+        "expression": "$-12 + (-10) = -12 - 10 = -22$",
+        "explanation": "Dodawanie liczb ujemnych: dodajemy wartości bezwzględne i stawiamy minus"
+      },
+      {
+        "step": 10,
+        "hint": "Sprawdź swoje obliczenia podstawiając do wyrażenia wyjściowego",
+        "expression": "$\\sqrt{2,25} \\cdot (-2)^3 + \\sqrt[3]{-0,064} \\cdot 5^2 = 1,5 \\cdot (-8) + (-0,4) \\cdot 25 = -12 + (-10) = -22$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny"
+      }
+    ],
+    "solutions": [
+      "$-22$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_21",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz przestrzegając kolejności działań: $3 + 4 \\cdot 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Spójrz na wyrażenie i znajdź wszystkie działania. Które działanie wykonujemy najpierw?",
+        "expression": "$3 + 4 \\cdot 5$",
+        "explanation": "Mamy dodawanie i mnożenie w jednym wyrażeniu",
+        "why": "Kolejność działań to: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie (od lewej do prawej). Mnożenie ma wyższy priorytet niż dodawanie!"
+      },
+      {
+        "step": 2,
+        "hint": "Wykonaj najpierw mnożenie $4 \\cdot 5$",
+        "expression": "$4 \\cdot 5 = 20$",
+        "explanation": "Obliczamy mnożenie przed dodawaniem"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw wynik mnożenia do wyrażenia",
+        "expression": "$3 + 20$",
+        "explanation": "Zamieniamy $4 \\cdot 5$ na $20$",
+        "why": "Częsty błąd: niektórzy uczniowie liczą od lewej do prawej i robią $3 + 4 = 7$, a potem $7 \\cdot 5 = 35$. To jest błędne!"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj dodawanie",
+        "expression": "$3 + 20 = 23$",
+        "explanation": "Dodajemy pozostałe liczby"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź jeszcze raz kolejność działań w pierwotnym wyrażeniu",
+        "expression": "$3 + 4 \\cdot 5 = 3 + 20 = 23$",
+        "explanation": "Potwierdzamy: najpierw mnożenie, potem dodawanie",
+        "why": "Zawsze warto sprawdzić czy przestrzegaliśmy kolejności działań - to najczęstszy błąd w takich zadaniach"
+      }
+    ],
+    "solutions": [
+      "$23$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_22",
+    "topic": "Podstawy matematyki",
+    "statement": "Wykonaj działanie: $24 : 6 - 2 \\cdot 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania wykonujemy najpierw? Przypomnij sobie kolejność działań",
+        "expression": "$24 : 6 - 2 \\cdot 3$",
+        "explanation": "Identyfikujemy wszystkie działania w wyrażeniu",
+        "why": "Kolejność działań to: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie (od lewej do prawej)"
+      },
+      {
+        "step": 2,
+        "hint": "Znajdź dzielenie i mnożenie - te działania wykonujemy przed odejmowaniem",
+        "expression": "$24 : 6 = 4$ oraz $2 \\cdot 3 = 6$",
+        "explanation": "Wykonujemy dzielenie i mnożenie",
+        "why": "Częsty błęd: uczniowie czasem wykonują działania od lewej do prawej bez uwzględnienia kolejności, np. 24:6=4, potem 4-2=2, a na końcu 2·3=6"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw wyniki i wykonaj odejmowanie",
+        "expression": "$4 - 6 = -2$",
+        "explanation": "Wykonujemy odejmowanie z otrzymanymi wynikami"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź swoje rozwiązanie wykonując działania ponownie",
+        "expression": "$24 : 6 - 2 \\cdot 3 = 4 - 6 = -2$ ✓",
+        "explanation": "Sprawdzenie: najpierw dzielenie i mnożenie, potem odejmowanie",
+        "why": "Zawsze warto sprawdzić kolejność działań - to najczęstszy błąd w takich zadaniach"
+      }
+    ],
+    "solutions": [
+      "$-2$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_23",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $15 - 3 \\cdot 4 + 8 : 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania wykonujemy najpierw? Przypomnij sobie kolejność działań",
+        "expression": "$15 - 3 \\cdot 4 + 8 : 2$",
+        "explanation": "Identyfikujemy wszystkie działania w wyrażeniu",
+        "why": "Kolejność działań to: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie (od lewej do prawej)"
+      },
+      {
+        "step": 2,
+        "hint": "Znajdź mnożenie i dzielenie - te działania wykonujemy przed odejmowaniem i dodawaniem",
+        "expression": "$3 \\cdot 4 = 12$ oraz $8 : 2 = 4$",
+        "explanation": "Wykonujemy mnożenie i dzielenie",
+        "why": "Częsty błąd: uczniowie czasem liczą od lewej do prawej i robią 15-3=12, ale to nieprawidłowe! Mnożenie i dzielenie mają wyższy priorytet"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw obliczone wartości do wyrażenia",
+        "expression": "$15 - 12 + 4$",
+        "explanation": "Zastępujemy mnożenie i dzielenie ich wynikami"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz wykonaj odejmowanie i dodawanie od lewej do prawej",
+        "expression": "$15 - 12 = 3$",
+        "explanation": "Najpierw wykonujemy odejmowanie"
+      },
+      {
+        "step": 5,
+        "hint": "Dodaj pozostałą liczbę",
+        "expression": "$3 + 4 = 7$",
+        "explanation": "Wykonujemy ostatnie dodawanie"
+      },
+      {
+        "step": 6,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$15 - 3 \\cdot 4 + 8 : 2 = 15 - 12 + 4 = 3 + 4 = 7$ ✓",
+        "explanation": "Weryfikujemy całe rozwiązanie",
+        "why": "Sprawdzenie pomaga wyłapać błędy rachunkowe i upewnić się, że zastosowaliśmy prawidłową kolejność działań"
+      }
+    ],
+    "solutions": [
+      "$7$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_24",
+    "topic": "Podstawy matematyki",
+    "statement": "Wyznacz wartość: $2^3 + 5 \\cdot 3 - 18 : 6$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie działania widzisz w tym wyrażeniu? Które wykonujemy najpierw?",
+        "expression": "$2^3 + 5 \\cdot 3 - 18 : 6$",
+        "explanation": "Identyfikujemy wszystkie działania: potęgowanie, mnożenie, dzielenie, dodawanie i odejmowanie",
+        "why": "Kolejność działań to: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie (od lewej do prawej)"
+      },
+      {
+        "step": 2,
+        "hint": "Znajdź potęgę i oblicz jej wartość",
+        "expression": "$2^3 = 2 \\cdot 2 \\cdot 2 = 8$",
+        "explanation": "Najpierw wykonujemy potęgowanie",
+        "why": "Potęgowanie ma najwyższy priorytet po nawiasach. $2^3$ oznacza trzy razy liczbę 2 pomnożoną przez siebie"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz znajdź mnożenie i dzielenie - wykonaj je od lewej do prawej",
+        "expression": "$5 \\cdot 3 = 15$ oraz $18 : 6 = 3$",
+        "explanation": "Wykonujemy mnożenie i dzielenie",
+        "why": "Mnożenie i dzielenie mają ten sam priorytet, więc wykonujemy je w kolejności od lewej do prawej"
+      },
+      {
+        "step": 4,
+        "hint": "Podstaw obliczone wartości do wyrażenia",
+        "expression": "$8 + 15 - 3$",
+        "explanation": "Zastępujemy wszystkie obliczone działania ich wynikami"
+      },
+      {
+        "step": 5,
+        "hint": "Wykonaj dodawanie i odejmowanie od lewej do prawej",
+        "expression": "$8 + 15 = 23$",
+        "explanation": "Najpierw dodajemy 8 i 15"
+      },
+      {
+        "step": 6,
+        "hint": "Dokończ obliczenia",
+        "expression": "$23 - 3 = 20$",
+        "explanation": "Od wyniku odejmujemy 3"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia wykonując wszystkie działania ponownie",
+        "expression": "$2^3 + 5 \\cdot 3 - 18 : 6 = 8 + 15 - 3 = 20$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny",
+        "why": "Zawsze warto sprawdzić obliczenia - to pomoże wyłapać ewentualne błędy rachunkowe"
+      }
+    ],
+    "solutions": [
+      "$20$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_25",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $36 : 9 \\cdot 2 - 3^2 + 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie działania widzisz w tym wyrażeniu? Przypomnij sobie kolejność działań",
+        "expression": "$36 : 9 \\cdot 2 - 3^2 + 7$",
+        "explanation": "Identyfikujemy wszystkie działania: dzielenie, mnożenie, potęgowanie, odejmowanie i dodawanie",
+        "why": "Kolejność działań: nawiasy, potęgowanie, mnożenie i dzielenie (od lewej do prawej), dodawanie i odejmowanie (od lewej do prawej)"
+      },
+      {
+        "step": 2,
+        "hint": "Które działanie wykonujemy najpierw? Znajdź potęgę",
+        "expression": "$3^2 = 3 \\cdot 3 = 9$",
+        "explanation": "Najpierw obliczamy potęgę",
+        "why": "Potęgowanie ma najwyższy priorytet po nawiasach"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw wynik potęgowania i znajdź dzielenie i mnożenie",
+        "expression": "$36 : 9 \\cdot 2 - 9 + 7$",
+        "explanation": "Podstawiamy $3^2 = 9$ do wyrażenia"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj dzielenie i mnożenie od lewej do prawej. Najpierw $36 : 9$",
+        "expression": "$36 : 9 = 4$",
+        "explanation": "Dzielimy 36 przez 9",
+        "why": "Dzielenie i mnożenie mają ten sam priorytet, więc wykonujemy od lewej do prawej. NIE mnóż 9·2 najpierw!"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz pomnóż wynik przez 2",
+        "expression": "$4 \\cdot 2 = 8$",
+        "explanation": "Mnożymy otrzymany wynik przez 2"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw wyniki i wykonaj dodawanie i odejmowanie od lewej do prawej",
+        "expression": "$8 - 9 + 7$",
+        "explanation": "Mamy już tylko dodawanie i odejmowanie do wykonania"
+      },
+      {
+        "step": 7,
+        "hint": "Najpierw $8 - 9$",
+        "expression": "$8 - 9 = -1$",
+        "explanation": "Odejmujemy 9 od 8"
+      },
+      {
+        "step": 8,
+        "hint": "Na koniec dodaj 7",
+        "expression": "$-1 + 7 = 6$",
+        "explanation": "Dodajemy 7 do wyniku"
+      },
+      {
+        "step": 9,
+        "hint": "Sprawdź swoje obliczenia wykonując wszystko jeszcze raz",
+        "expression": "$36 : 9 \\cdot 2 - 3^2 + 7 = 4 \\cdot 2 - 9 + 7 = 8 - 9 + 7 = 6$ ✓",
+        "explanation": "Sprawdzenie potwierdza, że wynik jest poprawny"
+      }
+    ],
+    "solutions": [
+      "$6$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_26",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz wartość wyrażenia: $(15 - 7) \\cdot 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co widzisz w tym wyrażeniu? Które działanie jest w nawiasach?",
+        "expression": "$(15 - 7) \\cdot 3$",
+        "explanation": "Mamy odejmowanie w nawiasach i mnożenie",
+        "why": "Nawiasy mają najwyższy priorytet w kolejności działań - zawsze wykonujemy je jako pierwsze"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz najpierw to, co jest w nawiasach",
+        "expression": "$15 - 7 = 8$",
+        "explanation": "Wykonujemy odejmowanie w nawiasach"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw wynik i wykonaj mnożenie",
+        "expression": "$8 \\cdot 3$",
+        "explanation": "Po obliczeniu nawiasów zostaje nam proste mnożenie"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz wynik mnożenia",
+        "expression": "$8 \\cdot 3 = 24$",
+        "explanation": "Wykonujemy mnożenie i otrzymujemy końcowy wynik"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$(15 - 7) \\cdot 3 = 8 \\cdot 3 = 24$ ✓",
+        "explanation": "Sprawdzenie: najpierw nawiasy (15-7=8), potem mnożenie (8·3=24)",
+        "why": "Częsty błąd: niektórzy zapominają o nawiasach i liczą 15-7·3=15-21=-6. Pamiętaj - nawiasy zawsze pierwsze!"
+      }
+    ],
+    "solutions": [
+      "$24$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_27",
+    "topic": "Podstawy matematyki",
+    "statement": "Wykonaj działanie: $24 : (8 - 2)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co musisz zrobić najpierw gdy widzisz nawiasy w działaniu?",
+        "expression": "$24 : (8 - 2)$",
+        "explanation": "Identyfikujemy działanie w nawiasach",
+        "why": "Nawiasy mają najwyższy priorytet w kolejności działań - zawsze wykonujemy je jako pierwsze"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz działanie w nawiasach",
+        "expression": "$8 - 2 = 6$",
+        "explanation": "Wykonujemy odejmowanie w nawiasach"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz podstaw wynik z nawiasów do całego działania",
+        "expression": "$24 : 6$",
+        "explanation": "Zamieniamy nawias na obliczoną wartość",
+        "why": "Częsty błęd: niektórzy próbują dzielić 24 przez 8, a potem odejmować 2. Pamiętaj - najpierw nawiasy!"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj dzielenie",
+        "expression": "$24 : 6 = 4$",
+        "explanation": "Dzielimy 24 przez 6"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik mnożąc z powrotem",
+        "expression": "$4 \\cdot 6 = 24$ ✓",
+        "explanation": "Sprawdzenie: jeśli 24 : 6 = 4, to 4 · 6 powinno dać 24",
+        "why": "Dzielenie i mnożenie to działania odwrotne - możemy użyć jednego do sprawdzenia drugiego"
+      }
+    ],
+    "solutions": [
+      "$4$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_28",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $(3 + 5) \\cdot (9 - 6)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co robimy najpierw gdy widzimy nawiasy w wyrażeniu?",
+        "expression": "$(3 + 5) \\cdot (9 - 6)$",
+        "explanation": "Mamy wyrażenie z dwoma parami nawiasów",
+        "why": "Nawiasy mają najwyższy priorytet w kolejności działań - zawsze wykonujemy je jako pierwsze"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz to co jest w pierwszym nawiasie",
+        "expression": "$3 + 5 = 8$",
+        "explanation": "Wykonujemy dodawanie w pierwszym nawiasie"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz oblicz to co jest w drugim nawiasie",
+        "expression": "$9 - 6 = 3$",
+        "explanation": "Wykonujemy odejmowanie w drugim nawiasie"
+      },
+      {
+        "step": 4,
+        "hint": "Podstaw wyniki z nawiasów i wykonaj mnożenie",
+        "expression": "$8 \\cdot 3 = 24$",
+        "explanation": "Mnożymy wyniki otrzymane z nawiasów",
+        "why": "Częsty błąd: niektórzy próbują mnożyć przed obliczeniem nawiasów, np. 5·9, ale to jest nieprawidłowe!"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$(3 + 5) \\cdot (9 - 6) = 8 \\cdot 3 = 24$ ✓",
+        "explanation": "Sprawdzenie: najpierw nawiasy (8 i 3), potem mnożenie",
+        "why": "Zawsze warto sprawdzić obliczenia - upewnij się, że wykonałeś nawiasy przed mnożeniem"
+      }
+    ],
+    "solutions": [
+      "$24$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_29",
+    "topic": "Kolejność działań",
+    "statement": "Wyznacz: $48 : (2 \\cdot 3) + (15 - 9) \\cdot 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania wykonujemy najpierw? Spójrz na nawiasy w wyrażeniu",
+        "expression": "$48 : (2 \\cdot 3) + (15 - 9) \\cdot 2$",
+        "explanation": "Identyfikujemy wszystkie działania i nawiasy",
+        "why": "Kolejność działań: najpierw nawiasy, potem mnożenie i dzielenie, na końcu dodawanie i odejmowanie"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz działania w pierwszym nawiasie: $(2 \\cdot 3)$",
+        "expression": "$2 \\cdot 3 = 6$",
+        "explanation": "Wykonujemy mnożenie w pierwszym nawiasie"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz działanie w drugim nawiasie: $(15 - 9)$",
+        "expression": "$15 - 9 = 6$",
+        "explanation": "Wykonujemy odejmowanie w drugim nawiasie"
+      },
+      {
+        "step": 4,
+        "hint": "Podstaw wyniki z nawiasów do wyrażenia",
+        "expression": "$48 : 6 + 6 \\cdot 2$",
+        "explanation": "Zastępujemy nawiasy obliczonymi wartościami",
+        "why": "Teraz mamy wyrażenie bez nawiasów, więc przechodzimy do mnożenia i dzielenia"
+      },
+      {
+        "step": 5,
+        "hint": "Które działania wykonujemy teraz? Znajdź dzielenie i mnożenie",
+        "expression": "$48 : 6 = 8$ oraz $6 \\cdot 2 = 12$",
+        "explanation": "Wykonujemy dzielenie i mnożenie od lewej do prawej",
+        "why": "Dzielenie i mnożenie mają ten sam priorytet, więc wykonujemy je w kolejności od lewej do prawej"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw wyniki i wykonaj ostatnie działanie",
+        "expression": "$8 + 12 = 20$",
+        "explanation": "Dodajemy otrzymane wyniki"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$48 : (2 \\cdot 3) + (15 - 9) \\cdot 2 = 48 : 6 + 6 \\cdot 2 = 8 + 12 = 20$ ✓",
+        "explanation": "Sprawdzenie: wszystkie kroki prowadzą do wyniku 20",
+        "why": "Sprawdzenie pomaga wyłapać błędy rachunkowe i upewnić się, że zastosowaliśmy prawidłową kolejność działań"
+      }
+    ],
+    "solutions": [
+      "$20$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_30",
+    "topic": "Kolejność działań",
+    "statement": "Oblicz: $[(24 - 16) : 2] \\cdot 3 + 5$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działanie wykonujemy najpierw gdy mamy nawiasy?",
+        "expression": "$[(24 - 16) : 2] \\cdot 3 + 5$",
+        "explanation": "Identyfikujemy wszystkie działania i nawiasy",
+        "why": "Kolejność działań: najpierw nawiasy (od najbardziej wewnętrznych), potem mnożenie i dzielenie, na końcu dodawanie i odejmowanie"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz działanie w najbardziej wewnętrznych nawiasach",
+        "expression": "$24 - 16 = 8$",
+        "explanation": "Wykonujemy odejmowanie w nawiasach okrągłych"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw wynik i oblicz działanie w nawiasach kwadratowych",
+        "expression": "$[8 : 2] \\cdot 3 + 5$",
+        "explanation": "Podstawiamy 8 i mamy dzielenie w nawiasach kwadratowych"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz dzielenie w nawiasach kwadratowych",
+        "expression": "$8 : 2 = 4$",
+        "explanation": "Wykonujemy dzielenie"
+      },
+      {
+        "step": 5,
+        "hint": "Podstaw wynik i sprawdź co zostało do obliczenia",
+        "expression": "$4 \\cdot 3 + 5$",
+        "explanation": "Po wykonaniu działań w nawiasach zostało nam mnożenie i dodawanie",
+        "why": "Teraz stosujemy zwykłą kolejność: mnożenie przed dodawaniem"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj mnożenie",
+        "expression": "$4 \\cdot 3 = 12$",
+        "explanation": "Mnożenie wykonujemy przed dodawaniem"
+      },
+      {
+        "step": 7,
+        "hint": "Wykonaj ostatnie działanie - dodawanie",
+        "expression": "$12 + 5 = 17$",
+        "explanation": "Dodajemy otrzymany wynik do 5"
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$[(24-16):2] \\cdot 3 + 5 = [8:2] \\cdot 3 + 5 = 4 \\cdot 3 + 5 = 12 + 5 = 17$",
+        "explanation": "Sprawdzenie: wszystkie kroki prowadzą do wyniku 17",
+        "why": "Sprawdzenie pomaga wyłapać błędy rachunkowe i upewnić się, że zastosowaliśmy właściwą kolejność działań"
+      }
+    ],
+    "solutions": [
+      "$17$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_31",
+    "topic": "Podstawy matematyki",
+    "statement": "Oblicz: $2^3 \\cdot (5 - 3) + 4^2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie działania widzisz w tym wyrażeniu? Przypomnij sobie kolejność działań",
+        "expression": "$2^3 \\cdot (5 - 3) + 4^2$",
+        "explanation": "Identyfikujemy wszystkie działania: potęgowanie, nawiasy, mnożenie i dodawanie",
+        "why": "Kolejność działań to: nawiasy, potęgowanie, mnożenie i dzielenie, dodawanie i odejmowanie. Najpierw robimy to co w nawiasach i potęgi!"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz najpierw to co jest w nawiasach",
+        "expression": "$(5 - 3) = 2$",
+        "explanation": "Wykonujemy działanie w nawiasach"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz oblicz potęgi. Ile to $2^3$?",
+        "expression": "$2^3 = 2 \\cdot 2 \\cdot 2 = 8$",
+        "explanation": "Obliczamy pierwszą potęgę",
+        "why": "$2^3$ oznacza 2 pomnożone przez siebie 3 razy. To nie jest $2 \\cdot 3 = 6$!"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz drugą potęgę. Ile to $4^2$?",
+        "expression": "$4^2 = 4 \\cdot 4 = 16$",
+        "explanation": "Obliczamy drugą potęgę"
+      },
+      {
+        "step": 5,
+        "hint": "Podstaw obliczone wartości do wyrażenia",
+        "expression": "$8 \\cdot 2 + 16$",
+        "explanation": "Podstawiamy wyniki: $2^3 = 8$, $(5-3) = 2$, $4^2 = 16$"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj mnożenie przed dodawaniem",
+        "expression": "$8 \\cdot 2 = 16$",
+        "explanation": "Mnożenie ma pierwszeństwo przed dodawaniem",
+        "why": "Pamiętaj: mnożenie i dzielenie wykonujemy przed dodawaniem i odejmowaniem!"
+      },
+      {
+        "step": 7,
+        "hint": "Teraz dodaj otrzymane wyniki",
+        "expression": "$16 + 16 = 32$",
+        "explanation": "Wykonujemy ostatnie działanie - dodawanie"
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$2^3 \\cdot (5 - 3) + 4^2 = 8 \\cdot 2 + 16 = 16 + 16 = 32$ ✓",
+        "explanation": "Sprawdzenie: wszystkie kroki są poprawne"
+      }
+    ],
+    "solutions": [
+      "$32$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_32",
+    "topic": "Podstawy matematyki",
+    "statement": "Wykonaj działanie: $(3^2 - 2^3) \\cdot 5 + 7$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działania wykonujemy najpierw? Spójrz na nawiasy i potęgi",
+        "expression": "$(3^2 - 2^3) \\cdot 5 + 7$",
+        "explanation": "Identyfikujemy wszystkie działania w wyrażeniu",
+        "why": "Kolejność działań: nawiasy, potęgi, mnożenie i dzielenie, dodawanie i odejmowanie. Najpierw zajmiemy się tym co w nawiasach!"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz potęgi w nawiasie. Ile to $3^2$?",
+        "expression": "$3^2 = 3 \\cdot 3 = 9$",
+        "explanation": "Obliczamy pierwszą potęgę",
+        "why": "$3^2$ oznacza 3 do potęgi drugiej, czyli 3 razy 3"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz oblicz $2^3$. Ile to będzie?",
+        "expression": "$2^3 = 2 \\cdot 2 \\cdot 2 = 8$",
+        "explanation": "Obliczamy drugą potęgę",
+        "why": "$2^3$ oznacza 2 do potęgi trzeciej, czyli 2 razy 2 razy 2"
+      },
+      {
+        "step": 4,
+        "hint": "Podstaw wyniki potęg i wykonaj odejmowanie w nawiasie",
+        "expression": "$(9 - 8) \\cdot 5 + 7 = 1 \\cdot 5 + 7$",
+        "explanation": "Wykonujemy odejmowanie w nawiasie"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz wykonaj mnożenie. Ile to $1 \\cdot 5$?",
+        "expression": "$1 \\cdot 5 + 7 = 5 + 7$",
+        "explanation": "Mnożenie wykonujemy przed dodawaniem"
+      },
+      {
+        "step": 6,
+        "hint": "Na koniec dodaj pozostałe liczby",
+        "expression": "$5 + 7 = 12$",
+        "explanation": "Wykonujemy ostatnie dodawanie"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia krok po kroku",
+        "expression": "$(3^2 - 2^3) \\cdot 5 + 7 = (9 - 8) \\cdot 5 + 7 = 1 \\cdot 5 + 7 = 5 + 7 = 12$ ✓",
+        "explanation": "Sprawdzenie: wszystkie kroki są poprawne",
+        "why": "Zawsze warto sprawdzić całe rozwiązanie - łatwo pomylić się przy potęgach lub kolejności działań"
+      }
+    ],
+    "solutions": [
+      "$12$"
+    ],
+    "parameters": {}
   }
 ]

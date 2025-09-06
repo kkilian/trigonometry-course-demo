@@ -2,9 +2,58 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Recent UI Improvements and Patterns
+
+### 1. Premium Badge Implementation & Disabled Modules
+- **Premium modules**: Gray border-2, subtle gray "Premium" label in top-right corner
+- **Disabled modules**: Glass effect with `bg-white/40 backdrop-blur-sm opacity-60`
+- Wygaszone kolory dla tekstu, ikon i badge'ów (opacity 70%)
+- Position: `absolute top-1 right-4` with border and padding
+- Shows alert when clicked: "Ta funkcja jest dostępna w wersji Premium"
+- Example: "Wielomiany" moduł ma disabled glass effect
+
+### 2. Progress Bars in BasicsTopics
+- Each topic card shows individual progress based on localStorage data
+- Progress bar: h-1.5 with gradient (blue for in-progress, green for completed)
+- Shows "X z Y zadań" and percentage
+- Calculated from completedBasicsXProblems in localStorage
+
+### 3. Next Problem Suggestion in Header
+- Single "Następne" button in header (orange border with pulse animation)
+- Hover reveals tooltip with 2 suggested problems: "Główne" and "Alternatywa"
+- Smart algorithm: cosine similarity + difficulty progression based on solve time
+- Each suggestion shows full problem preview, difficulty level, steps count
+- Only shows when problem is completed (showSolution === true)
+- Hidden on mobile (hidden md:block)
+- Implementation: NextProblemSuggestion component with compact={true} prop
+
+### 4. Smaller Solution Card
+- Reduced padding: p-4 md:p-5 (from p-6 md:p-8)
+- Smaller font sizes: title text-sm md:text-base, content text-base md:text-lg
+- Reduced border radius: rounded-lg (from rounded-xl)
+- Tighter spacing between elements
+
+### 5. Improved Next Problem Button Visibility
+- Minimalist design with pulsing border animation to catch attention
+- Automatic scroll to top when problem is completed (500ms delay)
+- Custom CSS animations: pulseBorder with color transitions and box-shadow
+- Two variants: orange border for suggested problems, blue for fallback
+- Animation classes: animate-fadeInScale for entrance, animate-pulse-border for attention
+- Compact button: transparent background, colored border that pulses
+
+### 6. AI Chat Integration (Claude Haiku 3.5)
+- **Menu tile**: Pink gradient border with animate-pulse-pink animation (clean "AI" badge without emojis)
+- **Chat interface**: Full-screen layout with sticky header and input area
+- **Messages**: User messages in pink gradient, AI responses in white with "Asystent" label (no emojis)
+- **Features**: Minimalist typing indicator ("Pisze..."), auto-scroll, responsive design
+- **API Integration**: Claude Haiku 3.5 via local proxy server (port 3003) due to CORS restrictions
+- **Architecture**: Express proxy server handles Anthropic API calls, frontend uses localhost:3003/api/chat
+- **Component**: AIChat.jsx with message history, LaTeX rendering support, clean UI design
+
 ## Commands
 
 - `npm start` - Run development server on http://localhost:3000
+- `npm run server` - Run AI Chat proxy server on http://localhost:3003 (requires ANTHROPIC_API_KEY in .env)
 - `npm run build` - Build production bundle to `build/` folder
 - `npm test` - Run tests in watch mode
 - `npm test -- --coverage` - Run tests with coverage report
