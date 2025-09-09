@@ -2,6 +2,7 @@
   {
     "id": "tex_problem_1",
     "topic": "Kolejność działań",
+    "difficulty": 1,
     "statement": "Oblicz: $12 + 7 - 5$",
     "steps": [
       {

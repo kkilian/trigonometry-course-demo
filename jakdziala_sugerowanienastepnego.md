@@ -1,7 +1,7 @@
 # Jak działa algorytm sugerowania następnego zadania
 
 ## Przegląd
-System używa zaawansowanego algorytmu łączącego analizę semantyczną (TF-IDF + Cosine Similarity) z inteligentną progresją trudności opartą na manualnych ocenach i wydajności ucznia.
+System używa zaawansowanego algorytmu łączącego analizę semantyczną (TF-IDF + Cosine Similarity) z inteligentną progresją trudności opartą na **5-poziomowej skali trudności** z manualnych ocen JSON i wydajności ucznia.
 
 ## 1. Określenie trudności zadań
 
@@ -18,45 +18,50 @@ const estimateDifficulty = (problem) => {
 
 ### PO zmianach (nowy system):
 ```javascript
-// Manualne difficulty z JSON + fallback
+// Manualne difficulty z JSON + fallback (5-poziomowy)
 const estimateDifficulty = (problem) => {
   // PRIORYTET: Manualne difficulty z JSON
   if (problem.difficulty !== undefined && problem.difficulty !== null) {
-    return problem.difficulty; // 1, 2, lub 3
+    return problem.difficulty; // 1, 2, 3, 4, lub 5
   }
   
-  // FALLBACK: Stary system (liczba kroków)
+  // FALLBACK: Rozszerzony system (liczba kroków)
   const stepsCount = problem.steps?.length || 0;
-  if (stepsCount <= 3) return 1;
-  if (stepsCount <= 6) return 2;
-  return 3;
+  if (stepsCount <= 3) return 1;  // Easy
+  if (stepsCount <= 6) return 2;  // Medium
+  if (stepsCount <= 9) return 3;  // Hard
+  if (stepsCount <= 12) return 4; // Very hard
+  return 5; // Expert
 };
 ```
 
-### Rozkład trudności w JSON:
-- **Poziom 1 (Łatwe) - 6 zadań:**
-  - `derivative_constant` - pochodna stałej
-  - `derivative_linear` - pochodna x
-  - `linear_derivative_example` - pochodna 3x + 5
+### Rozkład trudności w basics-13-uklady-rownan.json (5-poziomowy):
+
+- **Poziom 1 (Łatwe):**
+  - `derivative_constant_7` - pochodna stałej
+  - `derivative_linear_x` - pochodna x
   - `derivative_x_squared` - pochodna x²
-  - `derivative_x_cubed` - pochodna x³
-  - `power_rule_example` - pochodna 4x⁵
 
-- **Poziom 2 (Średnie) - 10 zadań:**
-  - Wielomiany (derivative_polynomial_basic, polynomial_derivative)
-  - Iloczyny proste (product_derivative_example, derivative_product_example)
-  - Pierwiastki (derivative_sqrt_x, derivative_power_negative)
-  - Proste funkcje złożone (derivative_composite_square, derivative_sqrt_composite)
+- **Poziom 2 (Średnie):**
+  - Wielomiany podstawowe (derivative_polynomial_basic)
+  - Iloczyny proste (product_rule_basic)
+  - Pierwiastki (derivative_sqrt_x)
   - Funkcje wykładnicze (exponential_derivative_example)
-  - Podstawowe trygonometria (derivative_sin_3x)
 
-- **Poziom 3 (Trudne) - 13 zadań:**
-  - Ilorazy (derivative_quotient_rule, derivative_quotient_sqrt, derivative_quotient_product)
-  - Złożone funkcje trygonometryczne (derivative_composite_cos, derivative_tan_composite, composite_trig_derivative)
-  - Logarytmy złożone (derivative_ln_composite, derivative_ln_sqrt)
-  - Kombinacje funkcji (derivative_exponential_logarithm, derivative_product_trig)
-  - Funkcje odwrotne (arctan_composite_derivative)
-  - Zaawansowane złożone (derivative_composite_exponential)
+- **Poziom 3 (Trudne):**
+  - Ilorazy (derivative_quotient_rule)
+  - Złożone funkcje (derivative_composite_square)
+  - Logarytmy (derivative_ln_composite)
+
+- **Poziom 4 (Bardzo trudne):**
+  - Zaawansowane ilorazy (derivative_quotient_product)
+  - Kompleksowe funkcje złożone (derivative_composite_exponential)
+  - Kombinacje wielu reguł
+
+- **Poziom 5 (Eksperckie):**
+  - Najbardziej zaawansowane kombinacje
+  - Wielokrotne aplikacje reguł
+  - Funkcje odwrotne z kompozycjami
 
 ## 2. Analiza wydajności ucznia
 
@@ -64,18 +69,20 @@ const estimateDifficulty = (problem) => {
 const getTargetDifficulty = (currentDifficulty, solveDuration) => {
   if (!solveDuration) return currentDifficulty; // Brak danych → ten sam poziom
   
-  // Oczekiwane czasy rozwiązywania:
+  // Oczekiwane czasy rozwiązywania (5-poziomowy):
   const avgTimeByDifficulty = { 
-    1: 120,  // 2 minuty dla łatwych
-    2: 300,  // 5 minut dla średnich  
-    3: 600   // 10 minut dla trudnych
+    1: 60,   // 1 minuta dla łatwych
+    2: 180,  // 3 minuty dla średnich  
+    3: 420,  // 7 minut dla trudnych
+    4: 600,  // 10 minut dla bardzo trudnych
+    5: 900   // 15 minut dla eksperckich
   };
   
   const expectedTime = avgTimeByDifficulty[currentDifficulty] || 300;
   
   if (solveDuration < expectedTime * 0.7) {
     // Szybko rozwiązał (< 70%) → sugeruj trudniejsze
-    return Math.min(currentDifficulty + 1, 3);
+    return Math.min(currentDifficulty + 1, 5);
   } else if (solveDuration > expectedTime * 1.5) {
     // Wolno rozwiązał (> 150%) → sugeruj łatwiejsze  
     return Math.max(currentDifficulty - 1, 1);
@@ -86,9 +93,11 @@ const getTargetDifficulty = (currentDifficulty, solveDuration) => {
 ```
 
 ### Przykłady:
-- **Zadanie difficulty=2, rozwiązane w 180s:** 180 < 300×0.7=210 → target=3
-- **Zadanie difficulty=2, rozwiązane w 500s:** 500 > 300×1.5=450 → target=1
-- **Zadanie difficulty=2, rozwiązane w 320s:** 210 ≤ 320 ≤ 450 → target=2
+- **Zadanie difficulty=2, rozwiązane w 100s:** 100 < 180×0.7=126 → target=3
+- **Zadanie difficulty=2, rozwiązane w 300s:** 300 > 180×1.5=270 → target=1
+- **Zadanie difficulty=2, rozwiązane w 200s:** 126 ≤ 200 ≤ 270 → target=2
+- **Zadanie difficulty=4, rozwiązane w 400s:** 400 < 600×0.7=420 → target=5
+- **Zadanie difficulty=5, rozwiązane w 1400s:** 1400 > 900×1.5=1350 → target=4
 
 ## 3. Analiza semantyczna (TF-IDF + Cosine Similarity)
 
@@ -131,30 +140,33 @@ const calculateProgressionScore = (similarity, problemDifficulty, targetDifficul
   const simScore = similarity;
   
   // Składnik dopasowania trudności (1=perfect match, 0=worst)
-  const diffScore = 1 - Math.abs(problemDifficulty - targetDifficulty) / 2;
+  // Dzielenie przez 4 dla zakresu 1-5 (max różnica = 4)
+  const diffScore = 1 - Math.abs(problemDifficulty - targetDifficulty) / 4;
   
   return similarityWeight * simScore + difficultyWeight * diffScore;
 };
 ```
 
 ### Przykład scorowania:
-**Aktualne:** `derivative_linear` (diff=1), **Target:** diff=2
+**Aktualne:** `derivative_linear_x` (diff=1), **Target:** diff=2
 
 **Kandydaci:**
-1. `linear_derivative_example` (similarity=0.8, diff=1):
+1. `derivative_constant_7` (similarity=0.8, diff=1):
    - simScore = 0.8
-   - diffScore = 1 - |1-2|/2 = 1 - 0.5 = 0.5  
-   - **Score = 0.6×0.8 + 0.4×0.5 = 0.68**
+   - diffScore = 1 - |1-2|/4 = 1 - 0.25 = 0.75  
+   - **Score = 0.6×0.8 + 0.4×0.75 = 0.78**
 
 2. `derivative_polynomial_basic` (similarity=0.6, diff=2):
    - simScore = 0.6
-   - diffScore = 1 - |2-2|/2 = 1 - 0 = 1.0
-   - **Score = 0.6×0.6 + 0.4×1.0 = 0.76** ← **WYGRYWA**
+   - diffScore = 1 - |2-2|/4 = 1 - 0 = 1.0
+   - **Score = 0.6×0.6 + 0.4×1.0 = 0.76**
 
-3. `derivative_composite_square` (similarity=0.4, diff=2):
+3. `derivative_composite_square` (similarity=0.4, diff=4):
    - simScore = 0.4  
-   - diffScore = 1.0
-   - **Score = 0.6×0.4 + 0.4×1.0 = 0.64**
+   - diffScore = 1 - |4-2|/4 = 1 - 0.5 = 0.5
+   - **Score = 0.6×0.4 + 0.4×0.5 = 0.44**
+
+**Wynik:** `derivative_constant_7` wygrywa z najwyższym score 0.78 (wysokie podobieństwo + nieduża różnica trudności)
 
 ## 5. Finalny ranking i selekcja
 
@@ -192,39 +204,41 @@ if (currentProblem.id && (currentProblem.id.includes('derivative') || currentPro
 
 ## 7. Kompletny przykład działania
 
-**Sytuacja:** Student rozwiązuje `derivative_x_squared` (diff=1) w czasie 80 sekund
+**Sytuacja:** Student rozwiązuje `derivative_x_squared` (diff=1) w czasie 40 sekund
 
 ### Krok po kroku:
 1. **Określenie target difficulty:**
-   - Current: 1, Expected time: 120s
-   - Actual: 80s < 120×0.7=84s → target = min(1+1, 3) = 2
+   - Current: 1, Expected time: 60s
+   - Actual: 40s < 60×0.7=42s → target = min(1+1, 5) = 2
 
 2. **Znajdowanie podobnych zadań (TF-IDF):**
-   - `derivative_x_cubed` (sim=0.85, diff=1)
-   - `power_rule_example` (sim=0.75, diff=1) 
+   - `derivative_linear_x` (sim=0.85, diff=1)
+   - `derivative_constant_7` (sim=0.75, diff=1) 
    - `derivative_polynomial_basic` (sim=0.65, diff=2)
-   - `derivative_composite_square` (sim=0.45, diff=2)
+   - `product_rule_basic` (sim=0.45, diff=4)
 
-3. **Scorowanie:**
-   - `derivative_x_cubed`: 0.6×0.85 + 0.4×0.5 = 0.71
-   - `power_rule_example`: 0.6×0.75 + 0.4×0.5 = 0.65
-   - `derivative_polynomial_basic`: 0.6×0.65 + 0.4×1.0 = **0.79** ← TOP
-   - `derivative_composite_square`: 0.6×0.45 + 0.4×1.0 = 0.67
+3. **Scorowanie (z nowym algorytmem /4):**
+   - `derivative_linear_x`: 0.6×0.85 + 0.4×0.75 = 0.81
+   - `derivative_constant_7`: 0.6×0.75 + 0.4×0.75 = 0.75
+   - `derivative_polynomial_basic`: 0.6×0.65 + 0.4×1.0 = **0.79** 
+   - `product_rule_basic`: 0.6×0.45 + 0.4×0.5 = 0.47
 
 4. **Finalny ranking:**
-   1. `derivative_polynomial_basic` (score=0.79)
-   2. `derivative_x_cubed` (score=0.71) 
-   3. `derivative_composite_square` (score=0.67)
+   1. `derivative_linear_x` (score=0.81) ← **TOP**
+   2. `derivative_polynomial_basic` (score=0.79)
+   3. `derivative_constant_7` (score=0.75)
 
-**Wynik:** System sugeruje `derivative_polynomial_basic` - tematycznie związane z potęgami, ale trudniejsze (wielomian zamiast pojedynczej potęgi).
+**Wynik:** System sugeruje `derivative_linear_x` - bardzo podobne tematycznie, ale lekko trudniejsze (przejście od x² do funkcji liniowych jako kolejny krok).
 
-## Korzyści nowego systemu
+## Korzyści nowego 5-poziomowego systemu
 
-1. **Precyzyjna kontrola trudności** - manualne difficulty zamiast zgadywania po krokach
-2. **Adaptywna progresja** - dostosowanie do wydajności ucznia
+1. **Precyzyjna kontrola trudności** - 5-poziomowa skala difficulty zamiast zgadywania po krokach
+2. **Adaptywna progresja** - dostosowanie do wydajności ucznia z szerszym zakresem (1-5)
 3. **Balans tematyczny** - 60% podobieństwo + 40% progresja
 4. **Matematyczna semantyka** - TF-IDF rozumie kontekst matematyczny
-5. **Fallback safety** - stary system jako backup
+5. **Rozszerzona granularność** - więcej poziomów dla lepszego dopasowania
+6. **Scaling czasowy** - realistyczne czasy dla każdego poziomu (1min → 15min)
+7. **Fallback safety** - rozszerzony system kroków jako backup
 
 ## Pliki zaangażowane
 

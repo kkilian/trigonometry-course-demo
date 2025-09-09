@@ -25,7 +25,9 @@ const NextProblemSuggestion = ({
     const stepsCount = problem.steps?.length || 0;
     if (stepsCount <= 3) return 1; // Easy
     if (stepsCount <= 6) return 2; // Medium
-    return 3; // Hard
+    if (stepsCount <= 9) return 3; // Hard
+    if (stepsCount <= 12) return 4; // Very hard
+    return 5; // Expert
   };
 
   // Determine target difficulty based on performance
@@ -33,12 +35,12 @@ const NextProblemSuggestion = ({
     if (!duration) return currentDifficulty; // No performance data, same level
     
     // Average solve time heuristics (in seconds)
-    const avgTimeByDifficulty = { 1: 120, 2: 300, 3: 600 };
+    const avgTimeByDifficulty = { 1: 60, 2: 180, 3: 420, 4: 600, 5: 900 };
     const expectedTime = avgTimeByDifficulty[currentDifficulty] || 300;
     
     if (duration < expectedTime * 0.7) {
       // Solved quickly, suggest harder
-      return Math.min(currentDifficulty + 1, 3);
+      return Math.min(currentDifficulty + 1, 5);
     } else if (duration > expectedTime * 1.5) {
       // Solved slowly, suggest easier
       return Math.max(currentDifficulty - 1, 1);
@@ -56,7 +58,7 @@ const NextProblemSuggestion = ({
     const simScore = similarity;
     
     // Difficulty match score (1 = perfect match, 0 = worst)
-    const diffScore = 1 - Math.abs(problemDifficulty - targetDifficulty) / 2;
+    const diffScore = 1 - Math.abs(problemDifficulty - targetDifficulty) / 4;
     
     return similarityWeight * simScore + difficultyWeight * diffScore;
   };
@@ -138,13 +140,15 @@ const NextProblemSuggestion = ({
       console.error('Full error details:', err.message, err.stack);
       return [];
     }
-  }, [currentProblem, completedProblems, solveDuration]);
+  }, [currentProblem, completedProblems, solveDuration, problems]);
 
   const getDifficultyLabel = (difficulty) => {
     switch (difficulty) {
       case 1: return 'Łatwe';
       case 2: return 'Średnie';
       case 3: return 'Trudne';
+      case 4: return 'Bardzo trudne';
+      case 5: return 'Eksperckie';
       default: return '';
     }
   };
@@ -154,6 +158,8 @@ const NextProblemSuggestion = ({
       case 1: return 'text-green-600';
       case 2: return 'text-yellow-600';
       case 3: return 'text-red-600';
+      case 4: return 'text-purple-600';
+      case 5: return 'text-violet-800';
       default: return 'text-stone-600';
     }
   };

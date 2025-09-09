@@ -3,6 +3,7 @@
   {
     "id": "algebraic_fractions_1",
     "topic": "Ułamki algebraiczne",
+    "difficulty": 3,
     "statement": "Wśród wyrażeń $\\frac{0,5 x^{3}+8 x+1}{x^{2}}$, $\\frac{2 x-5}{3}$, $\\frac{2|x|}{x^{3}-8}$, $\\sqrt{\\frac{x}{x+2}}$, $\\frac{3}{x^{3}-8 x^{2}+6}$, $\\frac{7-\\sqrt{x}}{x^{2}+1}$ wskaż ułamki algebraiczne",
     "steps": [
       {
@@ -72,6 +73,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 1,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{9x}{5x-10}$",
     "steps": [
       {
@@ -130,6 +132,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznej",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{1}{(x+1)(5-x)}$",
     "steps": [
       {
@@ -201,6 +204,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznej",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{4x+2}{x^{2}+4}$",
     "steps": [
       {
@@ -256,6 +260,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-7}{9x^2-81}$",
     "steps": [
       {
@@ -314,6 +319,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-5}{x^2+2x+1}$",
     "steps": [
       {
@@ -369,6 +375,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznej",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{3}-1}{x^{3}+8}$",
     "steps": [
       {
@@ -424,6 +431,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 3,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+x+4}{x^{2}-5x+6}$",
     "steps": [
       {
@@ -488,6 +496,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x+1}{x^{3}-4x^{2}}$",
     "steps": [
       {
@@ -546,6 +555,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznej",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^3 + 8x + 5}{8x^4 - x}$",
     "steps": [
       {
@@ -604,6 +614,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 3,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+5}{x^{3}-9x^{2}+x-9}$",
     "steps": [
       {
@@ -669,6 +680,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 3,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x-7}{x^4+x^2-20}$",
     "steps": [
       {
@@ -733,6 +745,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x^3 - 5x + 3}{x^3 - 3x^2 + 3x - 1}$",
     "steps": [
       {
@@ -788,6 +801,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 3,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{-7x+2}{x^3+4x+5}$",
     "steps": [
       {
@@ -849,6 +863,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x-3}{5x^3 - 15x^2 - 5x + 15}$",
     "steps": [
       {
@@ -908,6 +923,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina ułamka algebraicznego",
+    "difficulty": 2,
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^2 - 2x + 1}{x^5 + 3x^3 - 4x^2}$",
     "steps": [
       {
@@ -966,6 +982,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznych",
+    "difficulty": 2,
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R}$",
     "steps": [
       {
@@ -1034,6 +1051,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznych",
+    "difficulty": 2,
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{1\\}$",
     "steps": [
       {
@@ -1090,6 +1108,7 @@
   {
     "id": "algebraic_fraction_domain",
     "topic": "Dziedzina funkcji algebraicznych",
+    "difficulty": 2,
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{0\\}$",
     "steps": [
       {
