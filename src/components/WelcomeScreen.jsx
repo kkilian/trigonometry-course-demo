@@ -36,8 +36,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
     },
     {
       id: 'systems-of-equations',
-      title: 'Układy równań',
-      description: 'Rozwiązywanie układów równań liniowych różnymi metodami',
+      title: '@testtesttest',
+      description: '@test',
       problemCount: systemsOfEquationsProblems.length
     },
     {

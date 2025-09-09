@@ -141,7 +141,7 @@ const BasicsTopics = ({ onSelectTopic, onBack }) => {
     {
       id: 'basics-13-uklady-rownan',
       number: '13',
-      title: 'Układy równań',
+      title: 'Test Test Test',
       description: 'Rozwiązywanie układów równań, metody eliminacji, macierze',
       progress: calculateProgress('basics-13-uklady-rownan', '13')
     }

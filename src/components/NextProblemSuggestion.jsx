@@ -14,8 +14,14 @@ const NextProblemSuggestion = ({
   compact = false
 }) => {
 
-  // Simple difficulty estimation based on steps count
+  // Use manual difficulty from JSON or fallback to steps count
   const estimateDifficulty = (problem) => {
+    // First check if manual difficulty is defined
+    if (problem.difficulty !== undefined && problem.difficulty !== null) {
+      return problem.difficulty;
+    }
+    
+    // Fallback to steps count estimation
     const stepsCount = problem.steps?.length || 0;
     if (stepsCount <= 3) return 1; // Easy
     if (stepsCount <= 6) return 2; // Medium
@@ -116,6 +122,13 @@ const NextProblemSuggestion = ({
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('trigonometry-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for trigonometry:', suggestedIds);
+      }
+      
+      // Save suggested problems to localStorage for systems of equations module
+      if (currentProblem.id && (currentProblem.id.includes('derivative') || currentProblem.id.includes('uklady_rownan'))) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('systems-of-equations-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for systems of equations:', suggestedIds);
       }
 
       return bestMatches;
