@@ -5,6 +5,7 @@ import WelcomeScreen from './WelcomeScreen';
 import PolynomialTopics from './PolynomialTopics';
 import BasicsTopics from './BasicsTopics';
 import AIChat from './AIChat';
+import TrigonometryStartHere from './TrigonometryStartHere';
 import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -491,6 +492,14 @@ const TrigonometryCourse = () => {
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
           problems={problems}
+        />
+      ) : mode === 'powers' ? (
+        // Special handling for trigonometry - show start here screen instead of problem list
+        <TrigonometryStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
         />
       ) : (
         <ProblemList

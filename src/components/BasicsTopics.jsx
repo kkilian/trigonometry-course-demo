@@ -11,6 +11,7 @@ import basics9 from '../data/basics-9-logarytmy.json';
 import basics10 from '../data/basics-10-trygonometria-podstawowa.json';
 import basics11 from '../data/basics-11-kombinatoryka-prawdopodobienstwo.json';
 import basics12 from '../data/basics-12-statystyka.json';
+import basics13 from '../data/basics-13-uklady-rownan.json';
 
 const BasicsTopics = ({ onSelectTopic, onBack }) => {
   // Map topic data for progress calculation
@@ -26,7 +27,8 @@ const BasicsTopics = ({ onSelectTopic, onBack }) => {
     'basics-9-logarytmy': basics9,
     'basics-10-trygonometria-podstawowa': basics10,
     'basics-11-kombinatoryka-prawdopodobienstwo': basics11,
-    'basics-12-statystyka': basics12
+    'basics-12-statystyka': basics12,
+    'basics-13-uklady-rownan': basics13
   }), []);
   
   // Calculate progress for each topic
@@ -135,6 +137,13 @@ const BasicsTopics = ({ onSelectTopic, onBack }) => {
       title: 'Podstawy statystyki opisowej',
       description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
       progress: calculateProgress('basics-12-statystyka', '12')
+    },
+    {
+      id: 'basics-13-uklady-rownan',
+      number: '13',
+      title: 'Układy równań',
+      description: 'Rozwiązywanie układów równań, metody eliminacji, macierze',
+      progress: calculateProgress('basics-13-uklady-rownan', '13')
     }
   ];
 

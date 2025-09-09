@@ -111,6 +111,13 @@ const NextProblemSuggestion = ({
         .sort((a, b) => b.progressionScore - a.progressionScore)
         .slice(0, 3);
 
+      // Save suggested problems to localStorage for trigonometry module
+      if (currentProblem.id && currentProblem.id.includes('tex_problem')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('trigonometry-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for trigonometry:', suggestedIds);
+      }
+
       return bestMatches;
 
     } catch (err) {
