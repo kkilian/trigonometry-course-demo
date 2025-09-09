@@ -183,7 +183,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
             
             {/* Compact Next Problem Suggestion */}
             {showSolution && problems.length > 0 && (
-              <div className="hidden md:block">
+              <div>
                 <NextProblemSuggestion 
                   currentProblem={problem}
                   completedProblems={completedProblems}
