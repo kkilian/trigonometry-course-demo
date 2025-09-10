@@ -206,7 +206,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
             <div className="space-y-4">
               {/* Steps with side-by-side hints */}
               {problem.steps?.map((step, index) => (
-                <div key={index} className="grid md:grid-cols-[1fr,400px] gap-0 items-start">
+                <div key={index} className="grid md:grid-cols-[1fr,400px] gap-6 items-start">
                   {/* Left side - Step */}
                   <div className="relative pl-8">
                     {/* Step number circle */}
@@ -220,11 +220,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                     )}
                     
                     {/* Step content */}
-                    <div className={`bg-white border border-stone-200 p-4 space-y-3 ${
-                      step.hint 
-                        ? 'md:rounded-l-lg md:border-r-0 rounded-lg' 
-                        : 'rounded-lg'
-                    }`}>
+                    <div className="bg-white border border-stone-200 p-4 space-y-3 rounded-lg">
                       {step.expression && (
                         <div className="text-xl md:text-2xl text-stone-900 text-center font-medium">
                           <MathRenderer content={step.expression} />
@@ -272,9 +268,9 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                   {/* Right side - Hint */}
                   {step.hint ? (
                     <div className="relative mt-4 md:mt-0">
-                      <div className="bg-yellow-50 border border-yellow-200 md:rounded-r-lg md:border-l-0 rounded-lg p-4">
+                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                         {/* Step number badge */}
-                        <div className="absolute -left-2 -top-2 w-6 h-6 rounded-full bg-yellow-200 text-yellow-700 text-xs flex items-center justify-center font-bold md:block hidden">
+                        <div className="absolute left-3 -top-3 w-7 h-7 rounded-full bg-white border-2 border-yellow-400 text-yellow-700 text-sm flex items-center justify-center font-bold shadow-md">
                           {index + 1}
                         </div>
                         

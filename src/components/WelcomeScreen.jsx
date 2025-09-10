@@ -2,6 +2,7 @@ import React from 'react';
 import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
+import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -11,13 +12,15 @@ const WelcomeScreen = ({ onSelectMode }) => {
       description: 'Arytmetyka, algebra, geometria, funkcje - start od zera',
       problemCount: 0,
       hasSubmenu: true,
-      topicsCount: 13
+      topicsCount: 13,
+      disabled: true
     },
     {
       id: 'powers',
       title: 'Trygonometria',
       description: 'Funkcje trygonometryczne, tożsamości, równania',
-      problemCount: powersProblems.length
+      problemCount: powersProblems.length,
+      disabled: true
     },
     {
       id: 'polynomials',
@@ -32,7 +35,14 @@ const WelcomeScreen = ({ onSelectMode }) => {
       id: 'algebraic-fractions-intro',
       title: 'Ułamki algebraiczne - Wprowadzenie',
       description: 'Podstawy ułamków algebraicznych, działania, upraszczanie',
-      problemCount: algebraicFractionsIntroProblems.length
+      problemCount: algebraicFractionsIntroProblems.length,
+      disabled: true
+    },
+    {
+      id: 'homographic-functions',
+      title: 'Funkcje Homograficzne',
+      description: 'Funkcje postaci f(x) = (ax+b)/(cx+d), ich właściwości i wykresy',
+      problemCount: homographicFunctionsProblems.length
     },
     {
       id: 'systems-of-equations',
@@ -76,7 +86,9 @@ const WelcomeScreen = ({ onSelectMode }) => {
                 className={`w-full text-left p-4 md:p-6 rounded-xl transition-all relative ${
                   module.disabled 
                     ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60' 
-                    : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
+                    : module.id === 'homographic-functions'
+                      ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border'
+                      : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
               >
                 {(module.isPremium || module.isAI) && (

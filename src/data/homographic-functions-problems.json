@@ -1,0 +1,3047 @@
+[
+  {
+    "id": "homographic_function_check",
+    "topic": "Funkcje homograficzne",
+    "difficulty": 2,
+    "statement": "Sprawdź, czy funkcja $f(x) = \\frac{2x + 5}{3x - 1}$ jest funkcją homograficzną. Jeśli tak, podaj wartości współczynników $a$, $b$, $c$, $d$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda ogólna postać funkcji homograficznej?",
+        "expression": "$f(x) = \\frac{ax + b}{cx + d}$, gdzie $c \\neq 0$ i $ad - bc \\neq 0$",
+        "explanation": "Przypominamy definicję funkcji homograficznej",
+        "why": "Warunki są kluczowe: $c \\neq 0$ zapewnia, że mianownik nie jest stały, a $ad - bc \\neq 0$ gwarantuje, że funkcja nie jest stała."
+      },
+      {
+        "step": 2,
+        "hint": "Które części wyrażenia odpowiadają współczynnikom a, b, c, d?",
+        "expression": "$f(x) = \\frac{2x + 5}{3x - 1}$, więc $a = 2$, $b = 5$, $c = 3$, $d = -1$",
+        "explanation": "Porównujemy z wzorem ogólnym i odczytujemy współczynniki"
+      },
+      {
+        "step": 3,
+        "hint": "Czy spełnione są warunki konieczne dla funkcji homograficznej?",
+        "expression": "$c = 3 \\neq 0$ ✓ oraz $ad - bc = 2 \\cdot (-1) - 5 \\cdot 3 = -2 - 15 = -17 \\neq 0$ ✓",
+        "explanation": "Sprawdzamy oba warunki konieczne",
+        "why": "Gdyby $ad - bc = 0$, funkcja byłaby stała. To wyznacznik macierzy transformacji - gdy jest zero, transformacja jest zdegenerowana."
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest ostateczny wniosek o charakterze tej funkcji?",
+        "expression": "Funkcja $f(x) = \\frac{2x + 5}{3x - 1}$ jest funkcją homograficzną",
+        "explanation": "Wszystkie warunki są spełnione"
+      }
+    ],
+    "solutions": [
+      "Tak, funkcja jest homograficzną",
+      "$a = 2$, $b = 5$, $c = 3$, $d = -1$"
+    ],
+    "parameters": {
+      "coefficients": {
+        "a": 2,
+        "b": 5,
+        "c": 3,
+        "d": -1
+      }
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:25:01.352Z"
+  },
+  {
+    "id": "domain_rational_function",
+    "topic": "Dziedzina funkcji wymiernej",
+    "difficulty": 2,
+    "statement": "Wyznacz dziedzinę funkcji $g(x) = \\frac{x + 7}{2x - 8}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co sprawia, że funkcja wymierna może być nieokreślona?",
+        "expression": "$g(x) = \\frac{x + 7}{2x - 8}$",
+        "explanation": "Funkcja wymierna jest nieokreślona gdy mianownik równa się zero",
+        "why": "Dzielenie przez zero jest nieokreślone w matematyce. W funkcjach wymiernych szukamy wartości x, dla których mianownik się zeruje."
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy mianownik $2x - 8$ będzie równy zero?",
+        "expression": "$2x - 8 = 0$",
+        "explanation": "Przyrównujemy mianownik do zera"
+      },
+      {
+        "step": 3,
+        "hint": "Jaką wartość x otrzymasz z tego równania?",
+        "expression": "$2x = 8$, więc $x = 4$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać dziedzinę, wykluczając problematyczną wartość?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{4\\}$ lub $D = (-\\infty, 4) \\cup (4, +\\infty)$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste oprócz x = 4"
+      }
+    ],
+    "solutions": [
+      "$D = \\mathbb{R} \\setminus \\{4\\}$",
+      "$D = (-\\infty, 4) \\cup (4, +\\infty)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:25:11.607Z"
+  },
+  {
+    "id": "rational_function_values",
+    "topic": "Wartości funkcji wymiernej",
+    "difficulty": 2,
+    "statement": "Oblicz wartości funkcji $h(x) = \\frac{3x - 2}{x + 1}$ dla $x = 0$, $x = 2$ i $x = -3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie gdy podstawisz x = 0 do wzoru funkcji?",
+        "expression": "$h(0) = \\frac{3 \\cdot 0 - 2}{0 + 1} = \\frac{-2}{1} = -2$",
+        "explanation": "Podstawiamy x = 0 do wzoru funkcji"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zmieni się wynik gdy x będzie dodatnie i większe od zera?",
+        "expression": "$h(2) = \\frac{3 \\cdot 2 - 2}{2 + 1} = \\frac{6 - 2}{3} = \\frac{4}{3}$",
+        "explanation": "Podstawiamy x = 2 do wzoru funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Co może być problematyczne przy x = -3 w funkcji wymiernej?",
+        "expression": "$h(-3) = \\frac{3 \\cdot (-3) - 2}{(-3) + 1} = \\frac{-9 - 2}{-2} = \\frac{-11}{-2} = \\frac{11}{2}$",
+        "explanation": "Podstawiamy x = -3, zwracając uwagę na znaki",
+        "why": "Przy funkcjach wymiernych zawsze sprawdzamy, czy mianownik nie zeruje się. Tu x + 1 ≠ 0 dla x = -3, więc funkcja jest określona."
+      }
+    ],
+    "solutions": [
+      "$h(0) = -2$",
+      "$h(2) = \\frac{4}{3}$",
+      "$h(-3) = \\frac{11}{2}$"
+    ],
+    "parameters": {
+      "function": "$h(x) = \\frac{3x - 2}{x + 1}$",
+      "values": "$x \\in \\{0, 2, -3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:25:22.448Z"
+  },
+  {
+    "id": "rational_function_zeros",
+    "topic": "Miejsca zerowe funkcji wymiernej",
+    "difficulty": 2,
+    "statement": "Znajdź wszystkie wartości x, dla których funkcja $f(x) = \\frac{4x + 12}{x - 3}$ jest równa zero",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy ułamek jest równy zero?",
+        "expression": "$\\frac{4x + 12}{x - 3} = 0$",
+        "explanation": "Szukamy wartości x, dla których funkcja wymierna równa się zero",
+        "why": "Ułamek jest równy zero tylko wtedy, gdy licznik równa się zero, a mianownik jest różny od zera. To kluczowa zasada dla funkcji wymiernych."
+      },
+      {
+        "step": 2,
+        "hint": "Co musi być prawdą dla licznika, żeby cały ułamek wynosił zero?",
+        "expression": "$4x + 12 = 0$",
+        "explanation": "Przyrównujemy licznik do zera"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyizolować x z tego równania liniowego?",
+        "expression": "$4x = -12$, więc $x = -3$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 4,
+        "hint": "Czy dla x = -3 mianownik jest różny od zera?",
+        "expression": "Sprawdzamy: $x - 3 = -3 - 3 = -6 \\neq 0$",
+        "explanation": "Mianownik nie zeruje się, więc x = -3 jest miejscem zerowym",
+        "why": "Zawsze sprawdzamy dziedzinę! Gdyby mianownik też się zerował dla tej wartości, mielibyśmy wyrażenie nieoznaczone $\\frac{0}{0}$."
+      }
+    ],
+    "solutions": [
+      "$x = -3$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:25:32.497Z"
+  },
+  {
+    "id": "rational_function_domain_zeros",
+    "topic": "Dziedzina i miejsca zerowe funkcji wymiernej",
+    "difficulty": 3,
+    "statement": "Określ dziedzinę i znajdź miejsce zerowe funkcji $g(x) = \\frac{-x + 5}{2x + 6}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy funkcja wymierna nie jest określona?",
+        "expression": "$2x + 6 \\neq 0$",
+        "explanation": "Mianownik nie może być równy zero",
+        "why": "Dzielenie przez zero jest nieokreślone. To podstawowe ograniczenie dla funkcji wymiernych."
+      },
+      {
+        "step": 2,
+        "hint": "Dla jakiej wartości x mianownik staje się zerem?",
+        "expression": "$2x + 6 = 0$, więc $x = -3$",
+        "explanation": "Rozwiązujemy równanie mianownika"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać zbiór wszystkich liczb rzeczywistych oprócz jednej wartości?",
+        "expression": "$D = \\mathbb{R} \\setminus \\{-3\\}$",
+        "explanation": "Dziedzina to wszystkie liczby rzeczywiste z wyjątkiem x = -3"
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy funkcja wymierna równa się zero?",
+        "expression": "$\\frac{-x + 5}{2x + 6} = 0$",
+        "explanation": "Szukamy miejsc zerowych funkcji",
+        "why": "Ułamek równa się zero, gdy licznik równa się zero, a mianownik jest różny od zera."
+      },
+      {
+        "step": 5,
+        "hint": "Co musi być prawdą dla licznika?",
+        "expression": "$-x + 5 = 0$",
+        "explanation": "Przyrównujemy licznik do zera"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka wartość x zeruje licznik?",
+        "expression": "$x = 5$",
+        "explanation": "Rozwiązujemy równanie licznika"
+      },
+      {
+        "step": 7,
+        "hint": "Czy x = 5 należy do dziedziny funkcji?",
+        "expression": "Sprawdzenie: $2 \\cdot 5 + 6 = 16 \\neq 0$",
+        "explanation": "Wartość x = 5 należy do dziedziny, więc jest miejscem zerowym"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $D = \\mathbb{R} \\setminus \\{-3\\}$",
+      "Miejsce zerowe: $x = 5$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:25:45.888Z"
+  },
+  {
+    "id": "rational_function_evaluation",
+    "topic": "Wartości funkcji wymiernej",
+    "difficulty": 2,
+    "statement": "Dla funkcji $h(x) = \\frac{2x - 1}{x + 4}$ oblicz $h(1) + h(-2)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co otrzymasz podstawiając x = 1 do wzoru funkcji?",
+        "expression": "$h(1) = \\frac{2 \\cdot 1 - 1}{1 + 4} = \\frac{2 - 1}{5} = \\frac{1}{5}$",
+        "explanation": "Podstawiamy x = 1 do wzoru funkcji"
+      },
+      {
+        "step": 2,
+        "hint": "Czy x = -2 leży w dziedzinie funkcji?",
+        "expression": "$h(-2) = \\frac{2 \\cdot (-2) - 1}{(-2) + 4} = \\frac{-4 - 1}{2} = \\frac{-5}{2}$",
+        "explanation": "Podstawiamy x = -2 do wzoru funkcji",
+        "why": "Sprawdzamy czy mianownik nie zeruje się: $-2 + 4 = 2 \\neq 0$, więc wartość istnieje."
+      },
+      {
+        "step": 3,
+        "hint": "Jak dodać ułamki o różnych mianownikach?",
+        "expression": "$h(1) + h(-2) = \\frac{1}{5} + \\frac{-5}{2} = \\frac{2}{10} + \\frac{-25}{10} = \\frac{-23}{10}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika i dodajemy"
+      }
+    ],
+    "solutions": [
+      "$h(1) + h(-2) = -\\frac{23}{10}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:25:54.281Z"
+  },
+  {
+    "id": "parameter_point_on_graph",
+    "topic": "Funkcje wymierne - wyznaczanie parametru",
+    "difficulty": 2,
+    "statement": "Wyznacz wartość parametru k, dla którego punkt (2, 3) należy do wykresu funkcji $f(x) = \\frac{kx + 1}{x - 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że punkt należy do wykresu funkcji?",
+        "expression": "Punkt $(2, 3)$ należy do wykresu $\\Leftrightarrow f(2) = 3$",
+        "explanation": "Współrzędne punktu muszą spełniać równanie funkcji",
+        "why": "Jeśli punkt $(a, b)$ leży na wykresie funkcji $f$, to $f(a) = b$. To podstawowa definicja wykresu funkcji."
+      },
+      {
+        "step": 2,
+        "hint": "Jaką wartość przyjmie funkcja dla x = 2?",
+        "expression": "$f(2) = \\frac{k \\cdot 2 + 1}{2 - 1} = \\frac{2k + 1}{1} = 2k + 1$",
+        "explanation": "Podstawiamy x = 2 do wzoru funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równanie otrzymasz przyrównując f(2) do współrzędnej y punktu?",
+        "expression": "$2k + 1 = 3$",
+        "explanation": "Przyrównujemy wartość funkcji do współrzędnej y punktu"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wyizolować k z tego równania?",
+        "expression": "$2k = 2$, więc $k = 1$",
+        "explanation": "Rozwiązujemy równanie liniowe względem k"
+      }
+    ],
+    "solutions": [
+      "$k = 1$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:26:03.316Z"
+  },
+  {
+    "id": "homographic_function_check",
+    "topic": "Funkcje homograficzne",
+    "difficulty": 3,
+    "statement": "Sprawdź, czy funkcja $g(x) = \\frac{x^2 + 3x}{x + 3}$ jest funkcją homograficzną.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest ogólna postać funkcji homograficznej?",
+        "expression": "Funkcja homograficzna ma postać $f(x) = \\frac{ax + b}{cx + d}$, gdzie $ad - bc \\neq 0$",
+        "explanation": "Przypominamy definicję funkcji homograficznej",
+        "why": "Funkcja homograficzną to ułamek dwóch wielomianów stopnia pierwszego. Warunek $ad - bc \\neq 0$ zapewnia, że nie jest to funkcja stała."
+      },
+      {
+        "step": 2,
+        "hint": "Co można zrobić z licznikiem, skoro mianownik to $x + 3$?",
+        "expression": "$x^2 + 3x = x(x + 3)$",
+        "explanation": "Wyłączamy $x$ przed nawias w liczniku",
+        "why": "Zauważamy wspólny czynnik z mianownikiem. To kluczowe dla uproszczenia ułamka."
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprości się ułamek po wyłączeniu wspólnego czynnika?",
+        "expression": "$g(x) = \\frac{x(x + 3)}{x + 3} = x$ dla $x \\neq -3$",
+        "explanation": "Skracamy przez $(x + 3)$, pamiętając o dziedzinie",
+        "why": "Skracanie jest możliwe tylko gdy $x + 3 \\neq 0$, czyli $x \\neq -3$. Funkcja ma lukę w tym punkcie."
+      },
+      {
+        "step": 4,
+        "hint": "Czy funkcja liniowa $f(x) = x$ jest funkcją homograficzną?",
+        "expression": "$g(x) = x = \\frac{1 \\cdot x + 0}{0 \\cdot x + 1}$",
+        "explanation": "Funkcja liniowa to szczególny przypadek funkcji homograficznej",
+        "why": "Gdy $c = 0$ i $d = 1$, funkcja homograficzna staje się liniową. Warunek $ad - bc = 1 \\cdot 1 - 0 \\cdot 0 = 1 \\neq 0$ jest spełniony."
+      }
+    ],
+    "solutions": [
+      "Tak, funkcja $g(x) = \\frac{x^2 + 3x}{x + 3}$ jest funkcją homograficzną, ponieważ po uproszczeniu daje $g(x) = x$ (dla $x \\neq -3$), co jest szczególnym przypadkiem funkcji homograficznej."
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{-3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [
+        "Zbyt wiele kroków z polem \"why\" (4/4). Używaj tylko dla kluczowych kroków."
+      ],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T07:26:20.726Z"
+  },
+  {
+    "id": "vertical_asymptote_rational",
+    "topic": "Asymptoty pionowe funkcji wymiernych",
+    "difficulty": 3,
+    "statement": "Wyznacz równanie asymptoty pionowej funkcji $f(x) = \\frac{x + 3}{2x - 10}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy funkcja wymierna ma asymptotę pionową?",
+        "expression": "Asymptota pionowa występuje gdy mianownik równa się zero, a licznik nie",
+        "explanation": "Szukamy wartości x, dla których mianownik się zeruje",
+        "why": "Gdy mianownik dąży do zera, funkcja dąży do nieskończoności. Jeśli licznik też by się zerował, mielibyśmy symbol nieoznaczony $\\frac{0}{0}$."
+      },
+      {
+        "step": 2,
+        "hint": "Dla jakiej wartości x mianownik $2x - 10$ równa się zero?",
+        "expression": "$2x - 10 = 0$",
+        "explanation": "Przyrównujemy mianownik do zera"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwiązać to proste równanie liniowe?",
+        "expression": "$2x = 10$, więc $x = 5$",
+        "explanation": "Otrzymujemy kandydata na asymptotę pionową"
+      },
+      {
+        "step": 4,
+        "hint": "Co się dzieje z licznikiem gdy $x = 5$?",
+        "expression": "Dla $x = 5$: licznik $= 5 + 3 = 8 \\neq 0$",
+        "explanation": "Licznik nie zeruje się, więc mamy asymptotę pionową",
+        "why": "Gdyby licznik też się zerował, musielibyśmy sprawdzić czy można skrócić ułamek. Tutaj $\\frac{8}{0}$ oznacza rzeczywiście asymptotę."
+      }
+    ],
+    "solutions": [
+      "$x = 5$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:26:30.660Z"
+  },
+  {
+    "id": "horizontal_asymptote_rational",
+    "topic": "Asymptoty poziome funkcji wymiernych",
+    "difficulty": 3,
+    "statement": "Znajdź równanie asymptoty poziomej funkcji $g(x) = \\frac{5x - 7}{3x + 2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są stopnie wielomianów w liczniku i mianowniku?",
+        "expression": "Licznik: $5x - 7$ (stopień 1), Mianownik: $3x + 2$ (stopień 1)",
+        "explanation": "Identyfikujemy stopnie wielomianów"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje z funkcją gdy x dąży do nieskończoności?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{5x - 7}{3x + 2}$",
+        "explanation": "Badamy granicę w nieskończoności",
+        "why": "Asymptota pozioma to wartość, do której funkcja dąży gdy x → ±∞. Dla funkcji wymiernych zależy to od stopni wielomianów."
+      },
+      {
+        "step": 3,
+        "hint": "Które składniki będą dominować dla bardzo dużych wartości x?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{5x - 7}{3x + 2} = \\lim_{x \\to \\infty} \\frac{5x}{3x}$",
+        "explanation": "Dla dużych x dominują składniki najwyższego stopnia",
+        "why": "Gdy x → ∞, składniki -7 i +2 stają się pomijalnie małe w porównaniu z 5x i 3x."
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć ten iloraz?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{5x}{3x} = \\frac{5}{3}$",
+        "explanation": "Skracamy x i otrzymujemy iloraz współczynników przy najwyższych potęgach"
+      },
+      {
+        "step": 5,
+        "hint": "Czy granica dla x → -∞ będzie taka sama?",
+        "expression": "$\\lim_{x \\to -\\infty} \\frac{5x - 7}{3x + 2} = \\frac{5}{3}$",
+        "explanation": "Granica jest taka sama, więc asymptota pozioma to $y = \\frac{5}{3}$"
+      }
+    ],
+    "solutions": [
+      "$y = \\frac{5}{3}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:26:41.928Z"
+  },
+  {
+    "id": "asymptotes_rational_function",
+    "topic": "Asymptoty funkcji wymiernych",
+    "difficulty": 3,
+    "statement": "Wyznacz równania obu asymptot funkcji $h(x) = \\frac{-2x + 6}{x + 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Dla jakich wartości x mianownik staje się zerem?",
+        "expression": "$x + 1 = 0$, więc $x = -1$",
+        "explanation": "Znajdujemy miejsce zerowe mianownika",
+        "why": "Gdy mianownik dąży do zera, funkcja dąży do nieskończoności - to wskazuje na asymptotę pionową."
+      },
+      {
+        "step": 2,
+        "hint": "Co dzieje się z funkcją gdy x zbliża się do -1?",
+        "expression": "Asymptota pionowa: $x = -1$",
+        "explanation": "Ponieważ licznik nie zeruje się w x = -1, mamy asymptotę pionową"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie z funkcją gdy x będzie bardzo duże?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{-2x + 6}{x + 1}$",
+        "explanation": "Badamy zachowanie funkcji dla dużych wartości x"
+      },
+      {
+        "step": 4,
+        "hint": "Które składniki będą dominować w liczniku i mianowniku?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{-2x + 6}{x + 1} = \\lim_{x \\to \\infty} \\frac{-2x}{x} = -2$",
+        "explanation": "Dla dużych x dominują składniki najwyższego stopnia",
+        "why": "W funkcjach wymiernych tego samego stopnia asymptota pozioma to stosunek współczynników przy najwyższych potęgach."
+      },
+      {
+        "step": 5,
+        "hint": "Czy granica będzie taka sama gdy x dąży do minus nieskończoności?",
+        "expression": "Asymptota pozioma: $y = -2$",
+        "explanation": "Granica jest taka sama dla $x \\to +\\infty$ i $x \\to -\\infty$"
+      }
+    ],
+    "solutions": [
+      "Asymptota pionowa: $x = -1$",
+      "Asymptota pozioma: $y = -2$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:26:53.801Z"
+  },
+  {
+    "id": "rational_function_range",
+    "topic": "Zbiór wartości funkcji wymiernej",
+    "difficulty": 4,
+    "statement": "Określ zbiór wartości funkcji $f(x) = \\frac{3x + 4}{x - 2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest dziedzina tej funkcji wymiernej?",
+        "expression": "$D_f = \\mathbb{R} \\setminus \\{2\\}$",
+        "explanation": "Funkcja nie jest określona dla x = 2, bo mianownik zeruje się"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie, jeśli założymy że y jest wartością funkcji?",
+        "expression": "$y = \\frac{3x + 4}{x - 2}$",
+        "explanation": "Szukamy dla jakich y istnieje x spełniające to równanie",
+        "why": "To kluczowa metoda dla funkcji wymiernych - przekształcamy równanie tak, żeby wyrazić x przez y."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyizolować x z tego równania?",
+        "expression": "$y(x - 2) = 3x + 4$",
+        "explanation": "Mnożymy obie strony przez mianownik"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po rozłożeniu nawiasu i przeniesieniu wszystkich składników z x na jedną stronę?",
+        "expression": "$yx - 2y = 3x + 4$",
+        "explanation": "Rozwijamy lewą stronę"
+      },
+      {
+        "step": 5,
+        "hint": "Jak pogrupować składniki zawierające x?",
+        "expression": "$yx - 3x = 2y + 4$",
+        "explanation": "Przenosimy składniki z x na lewą stronę"
+      },
+      {
+        "step": 6,
+        "hint": "Co można wyłączyć przed nawias z lewej strony?",
+        "expression": "$x(y - 3) = 2y + 4$",
+        "explanation": "Wyłączamy x przed nawias"
+      },
+      {
+        "step": 7,
+        "hint": "Kiedy nie można podzielić przez (y - 3)?",
+        "expression": "$x = \\frac{2y + 4}{y - 3}$ dla $y \\neq 3$",
+        "explanation": "Dzielimy przez (y - 3), ale musi być różne od zera",
+        "why": "Gdy y = 3, mianownik zeruje się i nie można wyznaczyć x. To oznacza, że y = 3 nie należy do zbioru wartości."
+      },
+      {
+        "step": 8,
+        "hint": "Czy dla y = 3 istnieje rozwiązanie w równaniu z kroku 6?",
+        "expression": "Dla $y = 3$: $x \\cdot 0 = 6 + 4 = 10$",
+        "explanation": "Równanie sprzeczne - nie ma rozwiązania"
+      }
+    ],
+    "solutions": [
+      "$Z_f = \\mathbb{R} \\setminus \\{3\\}$"
+    ],
+    "parameters": {
+      "asymptote_horizontal": "$y = 3$",
+      "asymptote_vertical": "$x = 2$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:27:09.202Z"
+  },
+  {
+    "id": "asymptote_horizontal_parameter",
+    "topic": "Asymptoty poziome funkcji wymiernych",
+    "difficulty": 3,
+    "statement": "Funkcja $g(x) = \\frac{ax + 5}{2x - 4}$ ma asymptotę poziomą $y = 3$. Wyznacz wartość parametru $a$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co dzieje się z funkcją wymierną gdy x dąży do nieskończoności?",
+        "expression": "$\\lim_{x \\to \\infty} g(x) = \\lim_{x \\to \\infty} \\frac{ax + 5}{2x - 4}$",
+        "explanation": "Asymptota pozioma to granica funkcji przy x dążącym do nieskończoności"
+      },
+      {
+        "step": 2,
+        "hint": "Które składniki dominują w liczniku i mianowniku dla dużych x?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{ax + 5}{2x - 4} = \\lim_{x \\to \\infty} \\frac{ax}{2x}$",
+        "explanation": "Dla dużych wartości x dominują składniki z najwyższą potęgą",
+        "why": "Gdy $x \\to \\infty$, składniki stałe (5 i -4) stają się nieistotne w porównaniu ze składnikami liniowymi. To kluczowa obserwacja przy znajdowaniu asymptot poziomych."
+      },
+      {
+        "step": 3,
+        "hint": "Co można skrócić w tym ułamku?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{ax}{2x} = \\frac{a}{2}$",
+        "explanation": "Skracamy x w liczniku i mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka musi być wartość tej granicy, skoro asymptota to y = 3?",
+        "expression": "$\\frac{a}{2} = 3$",
+        "explanation": "Przyrównujemy granicę do równania asymptoty poziomej"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wyizolować parametr a z tego równania?",
+        "expression": "$a = 6$",
+        "explanation": "Mnożymy obie strony przez 2"
+      }
+    ],
+    "solutions": [
+      "$a = 6$"
+    ],
+    "parameters": {
+      "asymptote": "$y = 3$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:27:21.959Z"
+  },
+  {
+    "id": "asymptotes_intersection",
+    "topic": "Asymptoty funkcji wymiernych",
+    "difficulty": 3,
+    "statement": "Wyznacz współrzędne punktu przecięcia asymptot funkcji $h(x) = \\frac{4x - 8}{3x + 9}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy funkcja wymierna ma asymptotę pionową?",
+        "expression": "$3x + 9 = 0$",
+        "explanation": "Asymptota pionowa występuje gdy mianownik równa się zero",
+        "why": "Mianownik zeruje się gdy funkcja dąży do nieskończoności. Sprawdzamy czy licznik też się nie zeruje - wtedy mogłaby być dziura zamiast asymptoty."
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest równanie asymptoty pionowej?",
+        "expression": "$x = -3$",
+        "explanation": "Rozwiązujemy równanie $3x + 9 = 0$"
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje z funkcją wymierną gdy x dąży do nieskończoności?",
+        "expression": "$\\lim_{x \\to \\infty} \\frac{4x - 8}{3x + 9} = \\lim_{x \\to \\infty} \\frac{4x}{3x} = \\frac{4}{3}$",
+        "explanation": "Dzielimy licznik i mianownik przez najwyższą potęgę x",
+        "why": "Przy dużych x dominują składniki z najwyższą potęgą. Wyrazy stałe stają się nieistotne, więc $\\frac{4x-8}{3x+9} \\approx \\frac{4x}{3x}$."
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest równanie asymptoty poziomej?",
+        "expression": "$y = \\frac{4}{3}$",
+        "explanation": "Asymptota pozioma to granica funkcji w nieskończoności"
+      },
+      {
+        "step": 5,
+        "hint": "Gdzie przecinają się dwie proste: pionowa i pozioma?",
+        "expression": "Punkt przecięcia: $\\left(-3, \\frac{4}{3}\\right)$",
+        "explanation": "Asymptoty przecinają się w punkcie o współrzędnych x asymptoty pionowej i y asymptoty poziomej"
+      }
+    ],
+    "solutions": [
+      "$\\left(-3, \\frac{4}{3}\\right)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:27:34.220Z"
+  },
+  {
+    "id": "rational_function_range_check",
+    "topic": "Zbiór wartości funkcji wymiernej",
+    "difficulty": 4,
+    "statement": "Sprawdź, czy liczba -2 należy do zbioru wartości funkcji $f(x) = \\frac{x + 3}{2x - 5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że liczba należy do zbioru wartości funkcji?",
+        "expression": "Szukamy, czy istnieje $x$ takie, że $f(x) = -2$",
+        "explanation": "Sprawdzamy czy równanie $\\frac{x + 3}{2x - 5} = -2$ ma rozwiązanie",
+        "why": "Liczba należy do zbioru wartości, gdy funkcja może przyjąć tę wartość dla jakiegoś argumentu z dziedziny."
+      },
+      {
+        "step": 2,
+        "hint": "Jak pozbyć się ułamka z równania?",
+        "expression": "$x + 3 = -2(2x - 5)$",
+        "explanation": "Mnożymy obie strony przez mianownik $(2x - 5)$"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po rozwinięciu prawej strony?",
+        "expression": "$x + 3 = -4x + 10$",
+        "explanation": "Rozwijamy prawą stronę równania"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zebrać wszystkie wyrazy z x na jedną stronę?",
+        "expression": "$x + 4x = 10 - 3$",
+        "explanation": "Przenosimy wyrazy z x na lewą stronę, stałe na prawą"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest wartość x?",
+        "expression": "$5x = 7$, więc $x = \\frac{7}{5}$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 6,
+        "hint": "Czy ta wartość x należy do dziedziny funkcji?",
+        "expression": "Sprawdzamy: $2 \\cdot \\frac{7}{5} - 5 = \\frac{14}{5} - 5 = \\frac{14 - 25}{5} = -\\frac{11}{5} \\neq 0$",
+        "explanation": "Mianownik jest różny od zera, więc $x = \\frac{7}{5}$ należy do dziedziny",
+        "why": "Funkcja wymierna jest określona wszędzie oprócz miejsc zerowych mianownika. Tu mianownik zeruje się dla $x = \\frac{5}{2}$."
+      },
+      {
+        "step": 7,
+        "hint": "Co możesz teraz powiedzieć o liczbie -2?",
+        "expression": "$f\\left(\\frac{7}{5}\\right) = \\frac{\\frac{7}{5} + 3}{2 \\cdot \\frac{7}{5} - 5} = \\frac{\\frac{22}{5}}{-\\frac{11}{5}} = -2$",
+        "explanation": "Weryfikujemy: dla $x = \\frac{7}{5}$ funkcja rzeczywiście przyjmuje wartość -2"
+      }
+    ],
+    "solutions": [
+      "Tak, liczba -2 należy do zbioru wartości funkcji, ponieważ $f\\left(\\frac{7}{5}\\right) = -2$"
+    ],
+    "parameters": {
+      "checked_value": "-2",
+      "corresponding_x": "$\\frac{7}{5}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:27:49.862Z"
+  },
+  {
+    "id": "rational_function_parameters",
+    "topic": "Funkcje wymierne - wyznaczanie parametrów",
+    "difficulty": 3,
+    "statement": "Funkcja $g(x) = \\frac{2x + b}{x - 3}$ ma asymptotę pionową $x = 3$ i przechodzi przez punkt $(0, -1)$. Wyznacz wartość $b$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy asymptota pionowa x = 3 daje nam jakąś informację o mianowniku?",
+        "expression": "Asymptota pionowa w $x = 3$ oznacza, że mianownik $x - 3 = 0$ dla $x = 3$",
+        "explanation": "Potwierdzamy, że asymptota pionowa jest już określona przez mianownik",
+        "why": "Asymptota pionowa występuje tam, gdzie mianownik się zeruje, a licznik nie. Gdyby licznik też się zerował w x = 3, mielibyśmy dziurę, nie asymptotę."
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza, że funkcja przechodzi przez punkt (0, -1)?",
+        "expression": "$g(0) = -1$",
+        "explanation": "Podstawiamy współrzędne punktu do równania funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz podstawiając x = 0 do wzoru funkcji?",
+        "expression": "$g(0) = \\frac{2 \\cdot 0 + b}{0 - 3} = \\frac{b}{-3} = -\\frac{b}{3}$",
+        "explanation": "Obliczamy wartość funkcji w punkcie x = 0"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać warunek g(0) = -1 do znalezienia b?",
+        "expression": "$-\\frac{b}{3} = -1$",
+        "explanation": "Przyrównujemy obliczoną wartość do wymaganej wartości funkcji"
+      },
+      {
+        "step": 5,
+        "hint": "Jaką wartość b otrzymasz rozwiązując to równanie?",
+        "expression": "$b = 3$",
+        "explanation": "Mnożymy obie strony przez -3, otrzymując b = 3"
+      }
+    ],
+    "solutions": [
+      "$b = 3$"
+    ],
+    "parameters": {
+      "function": "$g(x) = \\frac{2x + 3}{x - 3}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:28:01.992Z"
+  },
+  {
+    "id": "rational_function_x_intercept",
+    "topic": "Punkt przecięcia funkcji wymiernej z osią OX",
+    "difficulty": 2,
+    "statement": "Znajdź punkt przecięcia wykresu funkcji $f(x) = \\frac{2x + 3}{x - 1}$ z osią OX",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza geometrycznie przecięcie wykresu z osią OX?",
+        "expression": "$f(x) = 0$",
+        "explanation": "Punkt przecięcia z osią OX to miejsce gdzie $y = 0$",
+        "why": "Na osi OX wszystkie punkty mają współrzędną $y = 0$. Szukamy więc $x$ dla których $f(x) = 0$."
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy ułamek równa się zero?",
+        "expression": "$\\frac{2x + 3}{x - 1} = 0$",
+        "explanation": "Podstawiamy warunek $f(x) = 0$",
+        "why": "Ułamek jest zerem tylko gdy licznik równa się zero, a mianownik jest różny od zera."
+      },
+      {
+        "step": 3,
+        "hint": "Co musi się stać z licznikiem, żeby cały ułamek wynosił zero?",
+        "expression": "$2x + 3 = 0$",
+        "explanation": "Przyrównujemy licznik do zera"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać to proste równanie liniowe?",
+        "expression": "$x = -\\frac{3}{2}$",
+        "explanation": "Rozwiązujemy równanie: $2x = -3$, więc $x = -\\frac{3}{2}$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy ta wartość x nie zeruje przypadkiem mianownika?",
+        "expression": "Sprawdzenie: $x - 1 = -\\frac{3}{2} - 1 = -\\frac{5}{2} \\neq 0$ ✓",
+        "explanation": "Mianownik nie zeruje się, więc rozwiązanie jest poprawne"
+      }
+    ],
+    "solutions": [
+      "$\\left(-\\frac{3}{2}, 0\\right)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:28:12.546Z"
+  },
+  {
+    "id": "function_y_intercept",
+    "topic": "Punkt przecięcia z osią OY",
+    "difficulty": 2,
+    "statement": "Wyznacz punkt przecięcia wykresu funkcji $g(x) = \\frac{-x + 4}{2x + 3}$ z osią OY.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest współrzędna x dla każdego punktu na osi OY?",
+        "expression": "Dla punktu na osi OY: $x = 0$",
+        "explanation": "Oś OY to zbiór punktów o współrzędnej x równej zero",
+        "why": "Każdy punkt na osi OY ma postać $(0, y)$. To kluczowa obserwacja - podstawiamy $x = 0$ do wzoru funkcji."
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz podstawiając x = 0 do wzoru funkcji?",
+        "expression": "$g(0) = \\frac{-0 + 4}{2 \\cdot 0 + 3} = \\frac{4}{3}$",
+        "explanation": "Obliczamy wartość funkcji dla x = 0"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są współrzędne punktu przecięcia?",
+        "expression": "Punkt przecięcia: $(0, \\frac{4}{3})$",
+        "explanation": "Punkt ma współrzędne (0, wartość funkcji w x = 0)"
+      }
+    ],
+    "solutions": [
+      "$(0, \\frac{4}{3})$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:28:23.095Z"
+  },
+  {
+    "id": "rational_function_intercepts",
+    "topic": "Punkty przecięcia funkcji wymiernej z osiami",
+    "difficulty": 3,
+    "statement": "Znajdź wszystkie punkty przecięcia wykresu funkcji $h(x) = \\frac{3x - 6}{x + 2}$ z osiami układu współrzędnych.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy wykres funkcji przecina oś OY?",
+        "expression": "Przecięcie z osią OY: podstawiamy $x = 0$",
+        "explanation": "Punkt przecięcia z osią OY ma współrzędne $(0, h(0))$"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka będzie wartość funkcji dla x = 0?",
+        "expression": "$h(0) = \\frac{3 \\cdot 0 - 6}{0 + 2} = \\frac{-6}{2} = -3$",
+        "explanation": "Otrzymujemy punkt przecięcia z osią OY: $(0, -3)$"
+      },
+      {
+        "step": 3,
+        "hint": "Co musi być prawdą, żeby wykres przecinał oś OX?",
+        "expression": "Przecięcie z osią OX: rozwiązujemy równanie $h(x) = 0$",
+        "explanation": "Punkt przecięcia z osią OX ma współrzędne $(x_0, 0)$",
+        "why": "Funkcja wymierna $\\frac{P(x)}{Q(x)} = 0$ wtedy i tylko wtedy, gdy licznik $P(x) = 0$ i mianownik $Q(x) \\neq 0$."
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy ułamek równa się zero?",
+        "expression": "$\\frac{3x - 6}{x + 2} = 0 \\Rightarrow 3x - 6 = 0$",
+        "explanation": "Ułamek jest zerem, gdy licznik równa się zero (a mianownik różny od zera)"
+      },
+      {
+        "step": 5,
+        "hint": "Jaką wartość x otrzymasz z równania 3x - 6 = 0?",
+        "expression": "$3x - 6 = 0 \\Rightarrow 3x = 6 \\Rightarrow x = 2$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 6,
+        "hint": "Czy dla x = 2 mianownik jest różny od zera?",
+        "expression": "Sprawdzenie: $x + 2 = 2 + 2 = 4 \\neq 0$ ✓",
+        "explanation": "Punkt przecięcia z osią OX: $(2, 0)$",
+        "why": "Zawsze sprawdzamy, czy znalezione x nie zeruje mianownika - inaczej funkcja nie byłaby określona w tym punkcie."
+      }
+    ],
+    "solutions": [
+      "Przecięcie z osią OY: $(0, -3)$",
+      "Przecięcie z osią OX: $(2, 0)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:28:37.661Z"
+  },
+  {
+    "id": "rational_inequality_positive",
+    "topic": "Nierówności wymierne",
+    "difficulty": 3,
+    "statement": "Określ, dla jakich wartości x funkcja $f(x) = \\frac{4x + 8}{x - 5}$ przyjmuje wartości dodatnie.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy ułamek jest dodatni?",
+        "expression": "$\\frac{4x + 8}{x - 5} > 0$",
+        "explanation": "Szukamy wartości x, dla których funkcja jest większa od zera",
+        "why": "Ułamek jest dodatni gdy licznik i mianownik mają ten sam znak (oba dodatnie lub oba ujemne)."
+      },
+      {
+        "step": 2,
+        "hint": "Gdzie funkcja nie istnieje?",
+        "expression": "$x \\neq 5$",
+        "explanation": "Mianownik nie może być równy zero",
+        "why": "Dzielenie przez zero jest nieokreślone. To punkt, gdzie funkcja ma asymptotę pionową."
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich x licznik równa się zero?",
+        "expression": "$4x + 8 = 0 \\Rightarrow x = -2$",
+        "explanation": "Znajdujemy miejsce zerowe licznika"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie punkty dzielą dziedzinę na przedziały?",
+        "expression": "Punkty krytyczne: $x = -2$ (zero licznika) i $x = 5$ (zero mianownika)",
+        "explanation": "Te punkty dzielą dziedzinę na przedziały o stałym znaku"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki znak ma funkcja w każdym przedziale?",
+        "expression": "Dla $x < -2$: $\\frac{(-)}{(-)} = (+)$\nDla $-2 < x < 5$: $\\frac{(+)}{(-)} = (-)$\nDla $x > 5$: $\\frac{(+)}{(+)} = (+)$",
+        "explanation": "Sprawdzamy znaki licznika i mianownika w każdym przedziale",
+        "why": "Wystarczy sprawdzić jeden punkt z każdego przedziału. Np. dla x = -3: licznik ujemny, mianownik ujemny, więc ułamek dodatni."
+      },
+      {
+        "step": 6,
+        "hint": "W których przedziałach funkcja jest dodatnia?",
+        "expression": "$x \\in (-\\infty, -2) \\cup (5, +\\infty)$",
+        "explanation": "Funkcja jest dodatnia tam, gdzie ułamek ma znak dodatni"
+      }
+    ],
+    "solutions": [
+      "$x \\in (-\\infty, -2) \\cup (5, +\\infty)$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{5\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:28:51.050Z"
+  },
+  {
+    "id": "monotonicity_rational_function",
+    "topic": "Monotoniczność funkcji wymiernej",
+    "difficulty": 4,
+    "statement": "Zbadaj monotoniczność funkcji $g(x) = \\frac{2x - 3}{x + 1}$ w jej przedziałach ciągłości.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Dla jakich wartości x funkcja wymierna nie istnieje?",
+        "expression": "Dziedzina: $D = \\mathbb{R} \\setminus \\{-1\\}$",
+        "explanation": "Funkcja nie istnieje gdy mianownik równa się zero",
+        "why": "Punkt $x = -1$ dzieli dziedzinę na przedziały $(-\\infty, -1)$ i $(-1, +\\infty)$. W każdym badamy monotoniczność osobno."
+      },
+      {
+        "step": 2,
+        "hint": "Którą regułę wybierzesz do różniczkowania ilorazu dwóch funkcji?",
+        "expression": "$g'(x) = \\frac{(2x - 3)' \\cdot (x + 1) - (2x - 3) \\cdot (x + 1)'}{(x + 1)^2}$",
+        "explanation": "Stosujemy regułę ilorazu dla pochodnej",
+        "why": "Reguła ilorazu: $(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$. Alternatywa: przekształcenie do postaci $g(x) = 2 - \\frac{5}{x+1}$."
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po obliczeniu pochodnych licznika i mianownika?",
+        "expression": "$g'(x) = \\frac{2(x + 1) - (2x - 3) \\cdot 1}{(x + 1)^2} = \\frac{2x + 2 - 2x + 3}{(x + 1)^2}$",
+        "explanation": "Podstawiamy pochodne i rozwijamy wyrażenia"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć licznik po rozwinięciu?",
+        "expression": "$g'(x) = \\frac{5}{(x + 1)^2}$",
+        "explanation": "Licznik upraszcza się do stałej 5"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki znak ma pochodna dla wszystkich x z dziedziny?",
+        "expression": "$g'(x) = \\frac{5}{(x + 1)^2} > 0$ dla $x \\neq -1$",
+        "explanation": "Pochodna jest zawsze dodatnia w dziedzinie funkcji",
+        "why": "Licznik 5 > 0, mianownik $(x+1)^2 > 0$ dla $x \\neq -1$. Dodatnia pochodna oznacza funkcję rosnącą."
+      },
+      {
+        "step": 6,
+        "hint": "Co oznacza stale dodatnia pochodna dla monotoniczności?",
+        "expression": "Funkcja $g(x)$ jest rosnąca w przedziałach $(-\\infty, -1)$ i $(-1, +\\infty)$",
+        "explanation": "W każdym przedziale ciągłości funkcja jest ściśle rosnąca"
+      }
+    ],
+    "solutions": [
+      "Funkcja jest rosnąca w przedziale $(-\\infty, -1)$",
+      "Funkcja jest rosnąca w przedziale $(-1, +\\infty)$"
+    ],
+    "parameters": {
+      "domain": "$D = \\mathbb{R} \\setminus \\{-1\\}$",
+      "derivative": "$g'(x) = \\frac{5}{(x + 1)^2}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:29:07.825Z"
+  },
+  {
+    "id": "rational_functions_intersection",
+    "topic": "Przecięcie wykresów funkcji wymiernych",
+    "difficulty": 4,
+    "statement": "Znajdź współrzędne punktu przecięcia wykresów funkcji $f(x) = \\frac{x + 2}{x - 1}$ i $g(x) = \\frac{2x - 1}{x + 3}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza geometrycznie przecięcie dwóch wykresów?",
+        "expression": "$f(x) = g(x)$",
+        "explanation": "W punkcie przecięcia obie funkcje mają taką samą wartość",
+        "why": "Punkt przecięcia to miejsce gdzie wykresy się spotykają, więc wartości funkcji muszą być równe dla tego samego argumentu x."
+      },
+      {
+        "step": 2,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$\\frac{x + 2}{x - 1} = \\frac{2x - 1}{x + 3}$",
+        "explanation": "Podstawiamy wzory funkcji do równania"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz mnożąc na krzyż liczniki i mianowniki?",
+        "expression": "$(x + 2)(x + 3) = (2x - 1)(x - 1)$",
+        "explanation": "Mnożymy na krzyż, aby pozbyć się ułamków",
+        "why": "Mnożenie na krzyż to skuteczny sposób na rozwiązanie równania z ułamkami. Pamiętaj o założeniach: $x \\neq 1$ i $x \\neq -3$."
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwinąć te iloczyny?",
+        "expression": "$x^2 + 3x + 2x + 6 = 2x^2 - 2x - x + 1$",
+        "explanation": "Rozwijamy nawiasy po obu stronach równania"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po uporządkowaniu podobnych składników?",
+        "expression": "$x^2 + 5x + 6 = 2x^2 - 3x + 1$",
+        "explanation": "Łączymy podobne składniki"
+      },
+      {
+        "step": 6,
+        "hint": "Jak przekształcić to w standardową postać równania kwadratowego?",
+        "expression": "$0 = x^2 - 8x - 5$",
+        "explanation": "Przenosimy wszystko na prawą stronę",
+        "why": "Równanie kwadratowe w postaci $ax^2 + bx + c = 0$ łatwiej rozwiązać znanymi metodami."
+      },
+      {
+        "step": 7,
+        "hint": "Czy delta będzie dodatnia dla tego równania?",
+        "expression": "$\\Delta = (-8)^2 - 4 \\cdot 1 \\cdot (-5) = 64 + 20 = 84$",
+        "explanation": "Obliczamy deltę dla równania $x^2 - 8x - 5 = 0$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć $\\sqrt{84}$?",
+        "expression": "$x = \\frac{8 \\pm \\sqrt{84}}{2} = \\frac{8 \\pm 2\\sqrt{21}}{2} = 4 \\pm \\sqrt{21}$",
+        "explanation": "Używamy wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 9,
+        "hint": "Jak znaleźć współrzędne y punktów przecięcia?",
+        "expression": "Dla $x_1 = 4 + \\sqrt{21}$: $y_1 = f(4 + \\sqrt{21}) = \\frac{6 + \\sqrt{21}}{3 + \\sqrt{21}}$",
+        "explanation": "Podstawiamy x do jednej z funkcji, aby otrzymać współrzędną y"
+      },
+      {
+        "step": 10,
+        "hint": "Czy warto uprościć te wyrażenia z pierwiastkami?",
+        "expression": "Dla $x_2 = 4 - \\sqrt{21}$: $y_2 = f(4 - \\sqrt{21}) = \\frac{6 - \\sqrt{21}}{3 - \\sqrt{21}}$",
+        "explanation": "Analogicznie dla drugiego rozwiązania"
+      }
+    ],
+    "solutions": [
+      "$(4 + \\sqrt{21}, \\frac{6 + \\sqrt{21}}{3 + \\sqrt{21}})$",
+      "$(4 - \\sqrt{21}, \\frac{6 - \\sqrt{21}}{3 - \\sqrt{21}})$"
+    ],
+    "parameters": {
+      "assumptions": "$x \\neq 1, x \\neq -3$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:29:27.942Z"
+  },
+  {
+    "id": "rational_function_decomposition",
+    "topic": "Rozkład funkcji wymiernej",
+    "difficulty": 3,
+    "statement": "Przedstaw funkcję $h(x) = \\frac{3x + 5}{x - 2}$ w postaci $h(x) = A + \\frac{B}{x - 2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie, gdy podzielisz wielomian przez wielomian?",
+        "expression": "$\\frac{3x + 5}{x - 2} = \\frac{3(x - 2) + 6 + 5}{x - 2}$",
+        "explanation": "Przekształcamy licznik tak, aby pojawił się mianownik $(x - 2)$",
+        "why": "Chcemy wydzielić część całkowitą z ułamka. Przepisujemy licznik jako wielokrotność mianownika plus reszta."
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć wyrażenie z $(x - 2)$ w liczniku i mianowniku?",
+        "expression": "$\\frac{3(x - 2) + 11}{x - 2} = \\frac{3(x - 2)}{x - 2} + \\frac{11}{x - 2}$",
+        "explanation": "Rozbijamy ułamek na sumę dwóch ułamków"
+      },
+      {
+        "step": 3,
+        "hint": "Co zostanie po skróceniu pierwszego ułamka?",
+        "expression": "$3 + \\frac{11}{x - 2}$",
+        "explanation": "Pierwszy ułamek upraszcza się do 3",
+        "why": "To standardowa postać funkcji wymiernej: część całkowita plus ułamek właściwy. Tutaj $A = 3$ i $B = 11$."
+      }
+    ],
+    "solutions": [
+      "$h(x) = 3 + \\frac{11}{x - 2}$"
+    ],
+    "parameters": {
+      "A": 3,
+      "B": 11
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:29:37.588Z"
+  },
+  {
+    "id": "center_symmetry_rational",
+    "topic": "Środek symetrii funkcji wymiernej",
+    "difficulty": 4,
+    "statement": "Znajdź środek symetrii wykresu funkcji $f(x) = \\frac{2x - 7}{3x + 6}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przekształcić funkcję wymierną do postaci ułatwiającej znajdowanie asymptot?",
+        "expression": "$f(x) = \\frac{2x - 7}{3x + 6} = \\frac{2x - 7}{3(x + 2)}$",
+        "explanation": "Wyłączamy 3 z mianownika dla czytelności"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie z funkcją gdy x dąży do nieskończoności?",
+        "expression": "$\\lim_{x \\to \\infty} f(x) = \\lim_{x \\to \\infty} \\frac{2x - 7}{3x + 6} = \\frac{2}{3}$",
+        "explanation": "Asymptota pozioma to $y = \\frac{2}{3}$",
+        "why": "Dla funkcji wymiernych o równych stopniach licznika i mianownika, asymptota pozioma to stosunek współczynników przy najwyższych potęgach."
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakiej wartości x mianownik zeruje się?",
+        "expression": "$3x + 6 = 0 \\Rightarrow x = -2$",
+        "explanation": "Asymptota pionowa to $x = -2$"
+      },
+      {
+        "step": 4,
+        "hint": "Gdzie przecinają się asymptoty i dlaczego to ważne?",
+        "expression": "Punkt przecięcia asymptot: $(-2, \\frac{2}{3})$",
+        "explanation": "To kandydat na środek symetrii",
+        "why": "Dla funkcji homograficznych postaci $\\frac{ax+b}{cx+d}$ środek symetrii zawsze leży w punkcie przecięcia asymptot."
+      },
+      {
+        "step": 5,
+        "hint": "Jak sprawdzić czy punkt jest rzeczywiście środkiem symetrii?",
+        "expression": "$f(-2+h) + f(-2-h) = 2 \\cdot \\frac{2}{3}$",
+        "explanation": "Sprawdzamy warunek symetrii punktowej względem $(-2, \\frac{2}{3})$",
+        "why": "Punkt $(a,b)$ jest środkiem symetrii gdy $f(a+h) + f(a-h) = 2b$ dla każdego h z dziedziny."
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz podstawiając konkretne wartości do sprawdzenia?",
+        "expression": "$f(-2+h) = \\frac{2(-2+h) - 7}{3(-2+h) + 6} = \\frac{2h - 11}{3h}$",
+        "explanation": "Obliczamy $f(-2+h)$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki będzie wynik dla f(-2-h)?",
+        "expression": "$f(-2-h) = \\frac{2(-2-h) - 7}{3(-2-h) + 6} = \\frac{-2h - 11}{-3h} = \\frac{2h + 11}{3h}$",
+        "explanation": "Obliczamy $f(-2-h)$"
+      },
+      {
+        "step": 8,
+        "hint": "Co się stanie gdy dodasz te dwa wyrażenia?",
+        "expression": "$f(-2+h) + f(-2-h) = \\frac{2h - 11}{3h} + \\frac{2h + 11}{3h} = \\frac{4h}{3h} = \\frac{4}{3}$",
+        "explanation": "Suma równa się $2 \\cdot \\frac{2}{3} = \\frac{4}{3}$, więc warunek jest spełniony"
+      }
+    ],
+    "solutions": [
+      "$(-2, \\frac{2}{3})$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:29:54.261Z"
+  },
+  {
+    "id": "inverse_rational_function",
+    "topic": "Funkcje odwrotne",
+    "difficulty": 4,
+    "statement": "Wyznacz funkcję odwrotną do funkcji $g(x) = \\frac{x + 3}{2x - 5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczysz funkcję odwrotną i co z nią zrobisz?",
+        "expression": "$y = \\frac{x + 3}{2x - 5}$",
+        "explanation": "Zastępujemy g(x) przez y dla ułatwienia obliczeń"
+      },
+      {
+        "step": 2,
+        "hint": "Co musisz zrobić z równaniem, żeby wyrazić x przez y?",
+        "expression": "$y(2x - 5) = x + 3$",
+        "explanation": "Mnożymy obie strony przez mianownik",
+        "why": "To kluczowy krok - pozbycie się ułamka ułatwi wyizolowanie x. Pamiętaj o założeniu $2x - 5 \\neq 0$."
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozłożysz lewą stronę i uporządkujesz wyrazy z x?",
+        "expression": "$2xy - 5y = x + 3$",
+        "explanation": "Rozwijamy nawias po lewej stronie"
+      },
+      {
+        "step": 4,
+        "hint": "Które wyrazy z x przeniesiesz na jedną stronę?",
+        "expression": "$2xy - x = 5y + 3$",
+        "explanation": "Przenosimy wszystkie wyrazy z x na lewą stronę"
+      },
+      {
+        "step": 5,
+        "hint": "Co możesz wyłączyć przed nawias z lewej strony?",
+        "expression": "$x(2y - 1) = 5y + 3$",
+        "explanation": "Wyłączamy x przed nawias",
+        "why": "Wyłączenie wspólnego czynnika to standardowa technika. Sprawdź: $x(2y - 1) = 2xy - x$ ✓"
+      },
+      {
+        "step": 6,
+        "hint": "Jak teraz wyizolujesz x?",
+        "expression": "$x = \\frac{5y + 3}{2y - 1}$",
+        "explanation": "Dzielimy obie strony przez $(2y - 1)$"
+      },
+      {
+        "step": 7,
+        "hint": "Co oznacza zamiana miejscami x i y w kontekście funkcji odwrotnej?",
+        "expression": "$g^{-1}(x) = \\frac{5x + 3}{2x - 1}$",
+        "explanation": "Zamieniamy x z y, aby otrzymać funkcję odwrotną",
+        "why": "Zamiana x ↔ y to geometryczne odbicie względem prostej y = x. Sprawdzenie: czy $g(g^{-1}(x)) = x$?"
+      }
+    ],
+    "solutions": [
+      "$g^{-1}(x) = \\frac{5x + 3}{2x - 1}$"
+    ],
+    "parameters": {
+      "domain_restriction": "Dziedzina $g^{-1}$: $x \\neq \\frac{1}{2}$, dziedzina $g$: $x \\neq \\frac{5}{2}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:30:09.590Z"
+  },
+  {
+    "id": "inverse_function_intersection",
+    "topic": "Funkcje odwrotne i ich wykresy",
+    "difficulty": 4,
+    "statement": "Sprawdź, czy funkcja $h(x) = \\frac{4x - 1}{x + 2}$ i jej funkcja odwrotna mają wspólny punkt na wykresie.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza geometrycznie wspólny punkt funkcji i jej odwrotnej?",
+        "expression": "Szukamy punktu $(a, b)$ takiego, że $h(a) = b$ i $h^{-1}(a) = b$",
+        "explanation": "Wspólny punkt to miejsce przecięcia wykresów funkcji i jej odwrotnej",
+        "why": "Jeśli $(a,b)$ leży na wykresie $h$, to $(b,a)$ leży na wykresie $h^{-1}$. Wspólny punkt oznacza, że $a = b$, więc szukamy punktów gdzie $h(x) = x$."
+      },
+      {
+        "step": 2,
+        "hint": "Jakie równanie musimy rozwiązać, aby znaleźć punkty przecięcia z prostą y = x?",
+        "expression": "$\\frac{4x - 1}{x + 2} = x$",
+        "explanation": "Przyrównujemy funkcję do argumentu - szukamy punktów stałych",
+        "why": "Punkty stałe funkcji to miejsca gdzie wykres przecina prostą $y = x$. To właśnie tam funkcja i jej odwrotna się przecinają."
+      },
+      {
+        "step": 3,
+        "hint": "Jak pozbyć się ułamka z równania?",
+        "expression": "$4x - 1 = x(x + 2)$",
+        "explanation": "Mnożymy obie strony przez $(x + 2)$, zakładając $x \\neq -2$"
+      },
+      {
+        "step": 4,
+        "hint": "Do jakiej postaci sprowadzi się równanie po rozwinięciu prawej strony?",
+        "expression": "$4x - 1 = x^2 + 2x$",
+        "explanation": "Rozwijamy prawą stronę równania"
+      },
+      {
+        "step": 5,
+        "hint": "Jak przekształcić to w standardowe równanie kwadratowe?",
+        "expression": "$x^2 - 2x + 1 = 0$",
+        "explanation": "Przenosimy wszystkie składniki na jedną stronę"
+      },
+      {
+        "step": 6,
+        "hint": "Czy rozpoznajesz wzór skróconego mnożenia w tym równaniu?",
+        "expression": "$(x - 1)^2 = 0$",
+        "explanation": "Równanie to kwadrat różnicy",
+        "why": "Wzór $(a-b)^2 = a^2 - 2ab + b^2$. Można też użyć delty: $\\Delta = 4 - 4 = 0$, więc jeden pierwiastek podwójny."
+      },
+      {
+        "step": 7,
+        "hint": "Jaki punkt otrzymujemy i czy należy do dziedziny funkcji?",
+        "expression": "$x = 1$, więc $h(1) = \\frac{4 \\cdot 1 - 1}{1 + 2} = \\frac{3}{3} = 1$",
+        "explanation": "Punkt $(1, 1)$ jest wspólnym punktem funkcji i jej odwrotnej"
+      }
+    ],
+    "solutions": [
+      "Tak, funkcja i jej odwrotna mają wspólny punkt $(1, 1)$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{-2\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:30:28.615Z"
+  },
+  {
+    "id": "rational_function_decomposition",
+    "topic": "Rozkład funkcji wymiernej",
+    "difficulty": 3,
+    "statement": "Przedstaw funkcję $f(x) = \\frac{-2x + 8}{x - 4}$ jako sumę funkcji stałej i funkcji wymiernej prostej.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie gdy podzielisz wielomian w liczniku przez wielomian w mianowniku?",
+        "expression": "$\\frac{-2x + 8}{x - 4}$",
+        "explanation": "Wykonujemy dzielenie wielomianów, bo stopień licznika równa się stopniowi mianownika"
+      },
+      {
+        "step": 2,
+        "hint": "Jak przepisać licznik, żeby łatwiej było dzielić przez $(x - 4)$?",
+        "expression": "$-2x + 8 = -2(x - 4) + (-2) \\cdot (-4) + 8 = -2(x - 4) + 8 - 8 = -2(x - 4) + 0$",
+        "explanation": "Przekształcamy licznik tak, aby wyodrębnić czynnik $(x - 4)$",
+        "why": "Szukamy postaci $a(x-4) + b$, gdzie $a$ to iloraz, a $b$ to reszta z dzielenia. To kluczowy krok rozkładu."
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz gdy podzielisz $-2(x-4)$ przez $(x-4)$?",
+        "expression": "$\\frac{-2x + 8}{x - 4} = \\frac{-2(x - 4)}{x - 4} = -2$",
+        "explanation": "Dzielenie daje nam część stałą równą $-2$"
+      },
+      {
+        "step": 4,
+        "hint": "Czy możemy sprawdzić wynik przez pomnożenie?",
+        "expression": "$f(x) = -2 + \\frac{0}{x - 4} = -2$",
+        "explanation": "Funkcja upraszcza się do funkcji stałej $f(x) = -2$",
+        "why": "Sprawdzenie: $-2(x-4) = -2x + 8$ ✓. Reszta wynosi 0, więc nie ma części wymiernej prostej."
+      }
+    ],
+    "solutions": [
+      "$f(x) = -2$"
+    ],
+    "parameters": {
+      "note": "Funkcja jest już funkcją stałą po uproszczeniu"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:30:41.385Z"
+  },
+  {
+    "id": "rational_equation_basic",
+    "topic": "Równania wymierne",
+    "difficulty": 2,
+    "statement": "Rozwiąż równanie $\\frac{x + 5}{x - 2} = 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie ograniczenia nakłada mianownik na dziedzinę?",
+        "expression": "$x \\neq 2$",
+        "explanation": "Mianownik nie może być równy zero",
+        "why": "To kluczowe ograniczenie - nawet jeśli $x = 2$ wyjdzie z obliczeń, nie może być rozwiązaniem!"
+      },
+      {
+        "step": 2,
+        "hint": "Jak pozbyć się ułamka z równania?",
+        "expression": "$(x + 5) = 3(x - 2)$",
+        "explanation": "Mnożymy obie strony przez $(x - 2)$"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po rozwinięciu prawej strony?",
+        "expression": "$x + 5 = 3x - 6$",
+        "explanation": "Rozwijamy nawias po prawej stronie"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zgrupować wyrazy z x na jednej stronie?",
+        "expression": "$5 + 6 = 3x - x$",
+        "explanation": "Przenosimy wszystkie wyrazy z x na prawą stronę, liczby na lewą"
+      },
+      {
+        "step": 5,
+        "hint": "Czy otrzymane rozwiązanie spełnia warunki dziedziny?",
+        "expression": "$11 = 2x$, więc $x = \\frac{11}{2}$",
+        "explanation": "Ponieważ $\\frac{11}{2} \\neq 2$, rozwiązanie jest poprawne"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{11}{2}$"
+    ],
+    "parameters": {
+      "domain": "$x \\neq 2$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:30:51.166Z"
+  },
+  {
+    "id": "rational_equation_example",
+    "topic": "Równania wymierne",
+    "difficulty": 3,
+    "statement": "Znajdź rozwiązania równania $\\frac{2x - 1}{x + 3} = \\frac{x + 4}{x - 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wartości x mogą sprawić problemy w tym równaniu?",
+        "expression": "Dziedzina: $x \\neq -3$ i $x \\neq 1$",
+        "explanation": "Mianowniki nie mogą być równe zero",
+        "why": "Zawsze najpierw sprawdzamy dziedzinę! Wartości wykluczające nie mogą być rozwiązaniami, nawet jeśli algebraicznie wyjdą."
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie gdy pomnożymy obie strony przez $(x + 3)(x - 1)$?",
+        "expression": "$(2x - 1)(x - 1) = (x + 4)(x + 3)$",
+        "explanation": "Mnożymy krzyżowo, aby pozbyć się ułamków"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwinąć te iloczyny?",
+        "expression": "$2x^2 - 2x - x + 1 = x^2 + 3x + 4x + 12$",
+        "explanation": "Rozwijamy nawiasy po obu stronach"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po uproszczeniu każdej strony?",
+        "expression": "$2x^2 - 3x + 1 = x^2 + 7x + 12$",
+        "explanation": "Porządkujemy wyrazy podobne"
+      },
+      {
+        "step": 5,
+        "hint": "Jak przekształcić to w standardową postać równania kwadratowego?",
+        "expression": "$x^2 - 10x - 11 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę",
+        "why": "Równanie wymierne sprowadziliśmy do kwadratowego. Teraz możemy użyć delty lub rozkładu na czynniki."
+      },
+      {
+        "step": 6,
+        "hint": "Czy da się rozłożyć $x^2 - 10x - 11$ na czynniki?",
+        "expression": "$(x - 11)(x + 1) = 0$",
+        "explanation": "Szukamy dwóch liczb o iloczynie $-11$ i sumie $-10$: to $-11$ i $1$"
+      },
+      {
+        "step": 7,
+        "hint": "Które wartości x należą do dziedziny?",
+        "expression": "$x = 11$ lub $x = -1$",
+        "explanation": "Oba rozwiązania są różne od $-3$ i $1$, więc należą do dziedziny"
+      }
+    ],
+    "solutions": [
+      "$x = -1$",
+      "$x = 11$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{-3, 1\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T07:31:10.314Z"
+  },
+  {
+    "id": "rational_equation_example",
+    "topic": "Równania wymierne",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $\\frac{3x + 2}{x - 1} + \\frac{x - 5}{x + 2} = 4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wartości x mogą sprawić problemy w tym równaniu?",
+        "expression": "Dziedzina: $x \\neq 1$ i $x \\neq -2$",
+        "explanation": "Mianowniki nie mogą być równe zero",
+        "why": "Zawsze sprawdzamy dziedzinę przed rozwiązywaniem! Jeśli rozwiązanie będzie spoza dziedziny, odrzucamy je."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki wspólny mianownik pozwoli pozbyć się ułamków?",
+        "expression": "$(x - 1)(x + 2) \\cdot \\left[\\frac{3x + 2}{x - 1} + \\frac{x - 5}{x + 2}\\right] = 4 \\cdot (x - 1)(x + 2)$",
+        "explanation": "Mnożymy obie strony przez wspólny mianownik $(x - 1)(x + 2)$",
+        "why": "To standardowy sposób na pozbycie się ułamków. Pamiętaj: mnożymy CAŁĄ równość, nie tylko lewą stronę!"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po skróceniu ułamków z lewej strony?",
+        "expression": "$(3x + 2)(x + 2) + (x - 5)(x - 1) = 4(x - 1)(x + 2)$",
+        "explanation": "Ułamki się skracają, otrzymujemy równanie bez mianowników"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiniesz każdy z trzech iloczynów?",
+        "expression": "$(3x + 2)(x + 2) = 3x^2 + 6x + 2x + 4 = 3x^2 + 8x + 4$",
+        "explanation": "Rozwijamy pierwszy iloczyn"
+      },
+      {
+        "step": 5,
+        "hint": "Co da rozwinięcie drugiego iloczynu $(x - 5)(x - 1)$?",
+        "expression": "$(x - 5)(x - 1) = x^2 - x - 5x + 5 = x^2 - 6x + 5$",
+        "explanation": "Rozwijamy drugi iloczyn"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki będzie wynik mnożenia $4(x - 1)(x + 2)$?",
+        "expression": "$4(x - 1)(x + 2) = 4(x^2 + x - 2) = 4x^2 + 4x - 8$",
+        "explanation": "Rozwijamy prawą stronę równania"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz po podstawieniu wszystkich rozwinięć do równania?",
+        "expression": "$3x^2 + 8x + 4 + x^2 - 6x + 5 = 4x^2 + 4x - 8$",
+        "explanation": "Podstawiamy rozwinięte wyrażenia"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć lewą stronę przez zebranie podobnych składników?",
+        "expression": "$4x^2 + 2x + 9 = 4x^2 + 4x - 8$",
+        "explanation": "Łączymy podobne składniki po lewej stronie"
+      },
+      {
+        "step": 9,
+        "hint": "Co się stanie gdy przeniesiesz wszystko na jedną stronę?",
+        "expression": "$4x^2 + 2x + 9 - 4x^2 - 4x + 8 = 0$",
+        "explanation": "Przenosimy wszystkie składniki na lewą stronę"
+      },
+      {
+        "step": 10,
+        "hint": "Do jakiego prostego równania sprowadza się problem?",
+        "expression": "$-2x + 17 = 0$",
+        "explanation": "Po uproszczeniu otrzymujemy równanie liniowe",
+        "why": "Składniki z $x^2$ się skracają! To częste w równaniach wymiernych - pozornie skomplikowane równanie może się uprościć."
+      },
+      {
+        "step": 11,
+        "hint": "Jaka wartość x rozwiązuje równanie $-2x + 17 = 0$?",
+        "expression": "$x = \\frac{17}{2}$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 12,
+        "hint": "Czy otrzymane rozwiązanie należy do dziedziny?",
+        "expression": "$x = \\frac{17}{2} = 8.5 \\neq 1$ i $\\neq -2$",
+        "explanation": "Sprawdzamy czy rozwiązanie jest w dziedzinie - tak, więc je przyjmujemy"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{17}{2}$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{-2, 1\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:31:33.875Z"
+  },
+  {
+    "id": "rational_equation_example",
+    "topic": "Równania wymierne",
+    "difficulty": 3,
+    "statement": "Wyznacz wszystkie rozwiązania równania $\\frac{2}{x - 3} + \\frac{1}{x + 1} = \\frac{3x + 7}{(x - 3)(x + 1)}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wartości x sprawiają, że mianowniki równają się zero?",
+        "expression": "Dziedzina: $x \\neq 3$ i $x \\neq -1$",
+        "explanation": "Określamy dziedzinę równania - wartości, dla których mianowniki są różne od zera",
+        "why": "W równaniach wymiernych zawsze najpierw sprawdzamy dziedzinę. Wartości zerujące mianowniki nigdy nie mogą być rozwiązaniami!"
+      },
+      {
+        "step": 2,
+        "hint": "Do jakiego wspólnego mianownika sprowadzisz ułamki po lewej stronie?",
+        "expression": "$\\frac{2(x + 1)}{(x - 3)(x + 1)} + \\frac{1(x - 3)}{(x + 1)(x - 3)} = \\frac{3x + 7}{(x - 3)(x + 1)}$",
+        "explanation": "Sprowadzamy ułamki po lewej stronie do wspólnego mianownika $(x - 3)(x + 1)$"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po rozwinięciu nawiasów w liczniku po lewej stronie?",
+        "expression": "$\\frac{2(x + 1) + 1(x - 3)}{(x - 3)(x + 1)} = \\frac{3x + 7}{(x - 3)(x + 1)}$",
+        "explanation": "Łączymy ułamki po lewej stronie w jeden ułamek"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć licznik $2(x + 1) + 1(x - 3)$?",
+        "expression": "$\\frac{2x + 2 + x - 3}{(x - 3)(x + 1)} = \\frac{3x + 7}{(x - 3)(x + 1)}$",
+        "explanation": "Rozwijamy nawiasy i porządkujemy licznik"
+      },
+      {
+        "step": 5,
+        "hint": "Co możesz zrobić z równaniem, gdy mianowniki są identyczne?",
+        "expression": "$\\frac{3x - 1}{(x - 3)(x + 1)} = \\frac{3x + 7}{(x - 3)(x + 1)}$",
+        "explanation": "Upraszczamy licznik po lewej stronie: $2x + 2 + x - 3 = 3x - 1$",
+        "why": "Gdy mianowniki są równe i różne od zera, możemy przyrównać liczniki. To znacznie upraszcza równanie!"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie równanie otrzymasz po przyrównaniu liczników?",
+        "expression": "$3x - 1 = 3x + 7$",
+        "explanation": "Przyrównujemy liczniki, bo mianowniki są identyczne"
+      },
+      {
+        "step": 7,
+        "hint": "Co się stanie, gdy odejmiemy $3x$ od obu stron?",
+        "expression": "$-1 = 7$",
+        "explanation": "Otrzymujemy sprzeczność matematyczną",
+        "why": "Równanie $-1 = 7$ jest zawsze fałszywe. To oznacza, że nasze równanie nie ma rozwiązań w żadnym punkcie dziedziny."
+      }
+    ],
+    "solutions": [
+      "Równanie nie ma rozwiązań"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{-1, 3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:31:50.149Z"
+  },
+  {
+    "id": "rational_equation_parameter",
+    "topic": "Równania wymierne z parametrem",
+    "difficulty": 3,
+    "statement": "Dla jakiej wartości parametru m równanie $\\frac{2x + m}{x - 1} = 2$ ma rozwiązanie równe $x = 3$?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że x = 3 jest rozwiązaniem równania?",
+        "expression": "$\\frac{2 \\cdot 3 + m}{3 - 1} = 2$",
+        "explanation": "Podstawiamy x = 3 do równania",
+        "why": "Jeśli x = 3 jest rozwiązaniem, to po podstawieniu równanie musi być prawdziwe. To kluczowa idea zadań z parametrem."
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć mianownik po podstawieniu x = 3?",
+        "expression": "$\\frac{6 + m}{2} = 2$",
+        "explanation": "Obliczamy wartości liczbowe: 2·3 = 6 i 3-1 = 2"
+      },
+      {
+        "step": 3,
+        "hint": "Jak pozbyć się ułamka z równania?",
+        "expression": "$6 + m = 4$",
+        "explanation": "Mnożymy obie strony przez 2"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka wartość m sprawi, że równanie będzie spełnione?",
+        "expression": "$m = 4 - 6 = -2$",
+        "explanation": "Wyznaczamy wartość parametru m"
+      }
+    ],
+    "solutions": [
+      "$m = -2$"
+    ],
+    "parameters": {
+      "condition": "x = 3 jest rozwiązaniem równania"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T07:32:00.389Z"
+  },
+  {
+    "id": "rational_inequality_intervals",
+    "topic": "Nierówności wymierne - metoda przedziałów",
+    "difficulty": 3,
+    "statement": "Rozwiąż nierówność $\\frac{x + 2}{x - 4} > 0$ metodą przedziałów",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy ułamek może być równy zero lub nie istnieć?",
+        "expression": "Licznik: $x + 2 = 0 \\Rightarrow x = -2$\nMianownik: $x - 4 = 0 \\Rightarrow x = 4$",
+        "explanation": "Znajdujemy miejsca zerowe licznika i mianownika",
+        "why": "Miejsca zerowe licznika to potencjalne rozwiązania, miejsca zerowe mianownika to punkty, gdzie funkcja nie istnieje. Te punkty dzielą dziedzinę na przedziały."
+      },
+      {
+        "step": 2,
+        "hint": "Na jakie przedziały dzielą prostą znalezione punkty?",
+        "expression": "Przedziały: $(-\\infty, -2)$, $(-2, 4)$, $(4, +\\infty)$",
+        "explanation": "Punkty $x = -2$ i $x = 4$ dzielą dziedzinę na trzy przedziały"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki znak ma wyrażenie w każdym przedziale? Wystarczy sprawdzić jeden punkt z każdego.",
+        "expression": "Dla $x = -3$: $\\frac{-3 + 2}{-3 - 4} = \\frac{-1}{-7} = \\frac{1}{7} > 0$ ✓\nDla $x = 0$: $\\frac{0 + 2}{0 - 4} = \\frac{2}{-4} = -\\frac{1}{2} < 0$\nDla $x = 5$: $\\frac{5 + 2}{5 - 4} = \\frac{7}{1} = 7 > 0$ ✓",
+        "explanation": "Sprawdzamy znak wyrażenia w każdym przedziale",
+        "why": "W każdym przedziale wyrażenie ma stały znak (nie zmienia się). Wystarczy sprawdzić jeden punkt reprezentatywny z każdego przedziału."
+      },
+      {
+        "step": 4,
+        "hint": "Które przedziały spełniają warunek nierówności ostrej?",
+        "expression": "Wyrażenie dodatnie dla $x \\in (-\\infty, -2) \\cup (4, +\\infty)$",
+        "explanation": "Wybieramy przedziały gdzie wyrażenie jest większe od zera",
+        "why": "Nierówność ostra ($>$) oznacza, że nie uwzględniamy punktów gdzie wyrażenie równa się zero. Punkt $x = -2$ nie należy do rozwiązania, a $x = 4$ nie należy do dziedziny."
+      }
+    ],
+    "solutions": [
+      "$x \\in (-\\infty, -2) \\cup (4, +\\infty)$"
+    ],
+    "parameters": {
+      "method": "metoda przedziałów",
+      "domain": "$x \\in \\mathbb{R} \\setminus \\{4\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T07:32:14.006Z"
+  },
+  {
+    "id": "rational_inequality_example",
+    "topic": "Nierówności wymierne",
+    "difficulty": 4,
+    "statement": "Znajdź zbiór rozwiązań nierówności $\\frac{3x - 6}{2x + 4} \\leq 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie gdy przeniesiemy 1 na lewą stronę?",
+        "expression": "$\\frac{3x - 6}{2x + 4} - 1 \\leq 0$",
+        "explanation": "Przenosimy wszystko na jedną stronę nierówności"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprowadzić do wspólnego mianownika?",
+        "expression": "$\\frac{3x - 6}{2x + 4} - \\frac{2x + 4}{2x + 4} \\leq 0$",
+        "explanation": "Rozszerzamy 1 przez mianownik ułamka",
+        "why": "Nie możemy mnożyć przez mianownik, bo nie wiemy czy jest dodatni czy ujemny. Musimy zachować strukturę ułamka."
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz odejmując liczniki?",
+        "expression": "$\\frac{3x - 6 - 2x - 4}{2x + 4} \\leq 0$",
+        "explanation": "Łączymy ułamki o tym samym mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć licznik?",
+        "expression": "$\\frac{x - 10}{2x + 4} \\leq 0$",
+        "explanation": "Upraszczamy licznik: $3x - 6 - 2x - 4 = x - 10$"
+      },
+      {
+        "step": 5,
+        "hint": "Kiedy ułamek jest ujemny lub równy zero?",
+        "expression": "Miejsca zerowe: $x - 10 = 0 \\Rightarrow x = 10$\nMiejsca nieokreślone: $2x + 4 = 0 \\Rightarrow x = -2$",
+        "explanation": "Wyznaczamy punkty krytyczne funkcji wymiernej",
+        "why": "Ułamek równa się zero gdy licznik = 0 (i mianownik ≠ 0). Jest nieokreślony gdy mianownik = 0."
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest znak ułamka w każdym przedziale?",
+        "expression": "Przedziały: $(-\\infty, -2)$, $(-2, 10)$, $(10, +\\infty)$\nZnaki: $\\frac{(-)}{(-)} = (+)$, $\\frac{(-)}{(+)} = (-)$, $\\frac{(+)}{(+)} = (+)$",
+        "explanation": "Badamy znak wyrażenia metodą przedziałów",
+        "why": "Dla $x < -2$: licznik ujemny, mianownik ujemny. Dla $-2 < x < 10$: licznik ujemny, mianownik dodatni. Dla $x > 10$: oba dodatnie."
+      },
+      {
+        "step": 7,
+        "hint": "Które przedziały spełniają warunek $\\leq 0$?",
+        "expression": "$\\frac{x - 10}{2x + 4} \\leq 0$ dla $x \\in (-2, 10]$",
+        "explanation": "Wybieramy przedziały gdzie wyrażenie jest ujemne lub zero",
+        "why": "Uwzględniamy $x = 10$ (licznik = 0), ale wykluczamy $x = -2$ (mianownik = 0, funkcja nieokreślona)."
+      }
+    ],
+    "solutions": [
+      "$x \\in (-2, 10]$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T07:32:35.520Z"
+  },
+  {
+    "id": "rational_inequality_parameter",
+    "topic": "Nierówności wymierne z parametrem",
+    "difficulty": 5,
+    "statement": "Dla jakich wartości parametru $p$ nierówność $\\frac{px + 3}{x - 2} > 1$ jest spełniona dla wszystkich $x \\in (2, +\\infty)$?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie gdy przeniesiemy 1 na lewą stronę?",
+        "expression": "$\\frac{px + 3}{x - 2} - 1 > 0$",
+        "explanation": "Przekształcamy nierówność do postaci standardowej"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprowadzić to do jednego ułamka?",
+        "expression": "$\\frac{px + 3 - (x - 2)}{x - 2} > 0$",
+        "explanation": "Sprowadzamy do wspólnego mianownika",
+        "why": "Zawsze sprowadzamy nierówności wymierne do postaci $\\frac{f(x)}{g(x)} > 0$. Pamiętaj o nawiasach przy odejmowaniu!"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po uproszczeniu licznika?",
+        "expression": "$\\frac{px + 3 - x + 2}{x - 2} > 0$, czyli $\\frac{(p-1)x + 5}{x - 2} > 0$",
+        "explanation": "Upraszczamy licznik grupując wyrazy z $x$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest znak mianownika dla $x \\in (2, +\\infty)$?",
+        "expression": "Dla $x > 2$: $x - 2 > 0$",
+        "explanation": "Mianownik jest zawsze dodatni w naszej dziedzinie",
+        "why": "To kluczowe! Gdy mianownik ma stały znak, nierówność sprowadza się do znaku licznika."
+      },
+      {
+        "step": 5,
+        "hint": "Co musi być prawdą o liczniku, żeby cały ułamek był dodatni?",
+        "expression": "$(p-1)x + 5 > 0$ dla wszystkich $x \\in (2, +\\infty)$",
+        "explanation": "Skoro mianownik dodatni, licznik też musi być dodatni"
+      },
+      {
+        "step": 6,
+        "hint": "Czy funkcja liniowa może być zawsze dodatnia na przedziale nieograniczonym?",
+        "expression": "Rozważamy przypadki: $p - 1 > 0$, $p - 1 = 0$, $p - 1 < 0$",
+        "explanation": "Analizujemy zachowanie funkcji liniowej $(p-1)x + 5$",
+        "why": "Funkcja liniowa $ax + b$ na przedziale $(a, +\\infty)$ może być zawsze dodatnia tylko gdy $a \\geq 0$ i spełnia dodatkowe warunki."
+      },
+      {
+        "step": 7,
+        "hint": "Co się dzieje gdy współczynnik przy $x$ jest ujemny?",
+        "expression": "Jeśli $p - 1 < 0$, to $(p-1)x + 5 \\to -\\infty$ gdy $x \\to +\\infty$",
+        "explanation": "Funkcja malejąca nie może być zawsze dodatnia na $(2, +\\infty)$",
+        "why": "Gdy $a < 0$, funkcja $ax + b$ jest malejąca i dla dostatecznie dużych $x$ staje się ujemna."
+      },
+      {
+        "step": 8,
+        "hint": "A gdy współczynnik przy $x$ wynosi zero?",
+        "expression": "Jeśli $p - 1 = 0$, czyli $p = 1$, to $(p-1)x + 5 = 5 > 0$",
+        "explanation": "Funkcja stała $5$ jest zawsze dodatnia"
+      },
+      {
+        "step": 9,
+        "hint": "Kiedy rosnąca funkcja liniowa jest dodatnia na całym przedziale $(2, +\\infty)$?",
+        "expression": "Jeśli $p - 1 > 0$, to potrzeba $(p-1) \\cdot 2 + 5 \\geq 0$",
+        "explanation": "Sprawdzamy wartość w punkcie $x = 2$ (granicy przedziału)",
+        "why": "Funkcja rosnąca jest dodatnia na $(a, +\\infty)$ wtedy i tylko wtedy, gdy jej granica w punkcie $a$ jest nieujemna."
+      },
+      {
+        "step": 10,
+        "hint": "Jakie ograniczenie na $p$ daje nam warunek z poprzedniego kroku?",
+        "expression": "$2(p-1) + 5 \\geq 0$, czyli $2p - 2 + 5 \\geq 0$, więc $p \\geq -\\frac{3}{2}$",
+        "explanation": "Rozwiązujemy nierówność dla przypadku $p > 1$"
+      },
+      {
+        "step": 11,
+        "hint": "Które warunki muszą być spełnione jednocześnie?",
+        "expression": "$p > 1$ i $p \\geq -\\frac{3}{2}$, czyli $p > 1$",
+        "explanation": "Łączymy warunki z przypadku funkcji rosnącej"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są wszystkie możliwe wartości parametru $p$?",
+        "expression": "$p = 1$ lub $p > 1$, czyli $p \\geq 1$",
+        "explanation": "Łączymy wszystkie przypadki dające rozwiązanie"
+      }
+    ],
+    "solutions": [
+      "$p \\geq 1$"
+    ],
+    "parameters": {
+      "domain": "$x \\in (2, +\\infty)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 5
+      }
+    },
+    "timestamp": "2025-09-10T07:33:04.624Z"
+  },
+  {
+    "id": "composite_function_equation",
+    "topic": "Funkcje złożone i równania parametryczne",
+    "difficulty": 5,
+    "statement": "Dane są funkcje $f(x) = \\frac{x + 1}{x - 1}$ i $g(x) = \\frac{2x - 3}{x + 2}$. Znajdź wszystkie wartości parametru $a$, dla których równanie $(f \\circ g)(x) = a$ ma dokładnie dwa różne rozwiązania.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza zapis $(f \\circ g)(x)$ i jak go obliczyć?",
+        "expression": "$(f \\circ g)(x) = f(g(x)) = f\\left(\\frac{2x - 3}{x + 2}\\right)$",
+        "explanation": "Funkcja złożona oznacza podstawienie $g(x)$ w miejsce $x$ w funkcji $f$"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz podstawiając $\\frac{2x - 3}{x + 2}$ do wzoru funkcji $f$?",
+        "expression": "$(f \\circ g)(x) = \\frac{\\frac{2x - 3}{x + 2} + 1}{\\frac{2x - 3}{x + 2} - 1}$",
+        "explanation": "Podstawiamy $g(x)$ w miejsce zmiennej w definicji $f$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć ułamek, który ma ułamki w liczniku i mianowniku?",
+        "expression": "$(f \\circ g)(x) = \\frac{\\frac{2x - 3 + x + 2}{x + 2}}{\\frac{2x - 3 - x - 2}{x + 2}} = \\frac{3x - 1}{x - 5}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika i upraszczamy",
+        "why": "Przy dodawaniu ułamków o tym samym mianowniku dodajemy liczniki. Ułamek złożony dzielimy przez pomnożenie przez odwrotność mianownika."
+      },
+      {
+        "step": 4,
+        "hint": "Jakie równanie musisz rozwiązać, aby znaleźć $x$ dla danego $a$?",
+        "expression": "$\\frac{3x - 1}{x - 5} = a$",
+        "explanation": "To jest równanie, które musi mieć dokładnie dwa rozwiązania"
+      },
+      {
+        "step": 5,
+        "hint": "Co się stanie po przemnożeniu obu stron przez $(x - 5)$?",
+        "expression": "$3x - 1 = a(x - 5)$",
+        "explanation": "Mnożymy obie strony przez mianownik, pamiętając o założeniu $x \\neq 5$"
+      },
+      {
+        "step": 6,
+        "hint": "Do jakiej postaci możesz przekształcić to równanie?",
+        "expression": "$3x - 1 = ax - 5a$, czyli $(3 - a)x = 5a - 1$",
+        "explanation": "Przenosimy wszystkie składniki z $x$ na jedną stronę"
+      },
+      {
+        "step": 7,
+        "hint": "Kiedy równanie liniowe ma dokładnie jedno rozwiązanie, a kiedy nie ma lub ma nieskończenie wiele?",
+        "expression": "Jeśli $a \\neq 3$: $x = \\frac{5a - 1}{3 - a}$",
+        "explanation": "Dla $a \\neq 3$ mamy dokładnie jedno rozwiązanie",
+        "why": "Równanie $(3-a)x = 5a-1$ ma jedno rozwiązanie gdy $3-a \\neq 0$, czyli $a \\neq 3$. Dla $a = 3$ sprawdzamy osobno."
+      },
+      {
+        "step": 8,
+        "hint": "Co się dzieje z rozwiązaniem gdy $a = 3$?",
+        "expression": "Dla $a = 3$: $0 \\cdot x = 14$, więc brak rozwiązań",
+        "explanation": "Gdy $a = 3$, równanie staje się sprzeczne"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie ograniczenia nakłada dziedzina funkcji $(f \\circ g)(x)$?",
+        "expression": "Dziedzina: $x \\neq -2$ (z $g$) i $x \\neq 5$ (z $f \\circ g$)",
+        "explanation": "Musimy wykluczyć wartości, dla których funkcje nie są określone",
+        "why": "Funkcja $g(x)$ nie jest określona dla $x = -2$, a $(f \\circ g)(x)$ dodatkowo dla $x = 5$ (gdy $g(x) = 1$)."
+      },
+      {
+        "step": 10,
+        "hint": "Kiedy rozwiązanie $x = \\frac{5a - 1}{3 - a}$ będzie niedopuszczalne?",
+        "expression": "Sprawdzamy: $\\frac{5a - 1}{3 - a} = -2$ lub $\\frac{5a - 1}{3 - a} = 5$",
+        "explanation": "Rozwiązanie nie może być równe wartościom wykluczonym z dziedziny"
+      },
+      {
+        "step": 11,
+        "hint": "Dla jakich wartości $a$ otrzymasz $x = -2$?",
+        "expression": "$\\frac{5a - 1}{3 - a} = -2 \\Rightarrow 5a - 1 = -2(3 - a) \\Rightarrow a = -\\frac{5}{7}$",
+        "explanation": "Dla $a = -\\frac{5}{7}$ rozwiązanie jest niedopuszczalne"
+      },
+      {
+        "step": 12,
+        "hint": "Dla jakich wartości $a$ otrzymasz $x = 5$?",
+        "expression": "$\\frac{5a - 1}{3 - a} = 5 \\Rightarrow 5a - 1 = 5(3 - a) \\Rightarrow a = \\frac{8}{5}$",
+        "explanation": "Dla $a = \\frac{8}{5}$ rozwiązanie jest niedopuszczalne"
+      },
+      {
+        "step": 13,
+        "hint": "Ile rozwiązań ma równanie dla różnych wartości parametru $a$?",
+        "expression": "• $a \\neq 3, a \\neq -\\frac{5}{7}, a \\neq \\frac{8}{5}$: jedno rozwiązanie\n• $a = 3$: brak rozwiązań\n• $a = -\\frac{5}{7}$ lub $a = \\frac{8}{5}$: brak rozwiązań",
+        "explanation": "Analizujemy wszystkie przypadki",
+        "why": "Równanie $(f \\circ g)(x) = a$ to w rzeczywistości równanie wymiernicze stopnia 1, więc może mieć co najwyżej jedno rozwiązanie. Aby miało dokładnie dwa, musimy rozważyć inne podejście."
+      },
+      {
+        "step": 14,
+        "hint": "Czy może istnieć sytuacja, gdy równanie ma dwa rozwiązania?",
+        "expression": "Równanie $(f \\circ g)(x) = a$ po przekształceniu daje równanie liniowe, które ma co najwyżej jedno rozwiązanie",
+        "explanation": "Nie istnieją wartości $a$, dla których równanie ma dokładnie dwa rozwiązania"
+      }
+    ],
+    "solutions": [
+      "Brak takich wartości parametru $a$"
+    ],
+    "parameters": {
+      "note": "Równanie $(f \\circ g)(x) = a$ po przekształceniu jest równaniem liniowym względem $x$, więc nie może mieć dokładnie dwóch rozwiązań"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 14,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:06:05.855Z"
+  },
+  {
+    "id": "involution_function_proof",
+    "topic": "Funkcje inwolutywne",
+    "difficulty": 5,
+    "statement": "Wykaż, że jeśli funkcja $h(x) = \\frac{ax + b}{cx + d}$ spełnia warunek $h(h(x)) = x$ dla wszystkich $x$ z dziedziny, to $a + d = 0$ lub $a + d = \\pm 2\\sqrt{bc}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza warunek $h(h(x)) = x$ dla funkcji?",
+        "expression": "$h(h(x)) = x$ oznacza, że funkcja $h$ jest swoją własną odwrotnością",
+        "explanation": "Funkcja spełniająca ten warunek nazywa się inwolucją",
+        "why": "Inwolucja to funkcja będąca swoją własną odwrotnością. Przykłady: $f(x) = -x$, $f(x) = \\frac{1}{x}$. To kluczowa własność do dalszego dowodu."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wygląda złożenie $h(h(x))$ dla naszej funkcji wymiernej?",
+        "expression": "$h(h(x)) = h\\left(\\frac{ax + b}{cx + d}\\right) = \\frac{a \\cdot \\frac{ax + b}{cx + d} + b}{c \\cdot \\frac{ax + b}{cx + d} + d}$",
+        "explanation": "Podstawiamy $h(x)$ w miejsce $x$ w definicji funkcji $h$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć licznik tego złożonego ułamka?",
+        "expression": "Licznik: $a \\cdot \\frac{ax + b}{cx + d} + b = \\frac{a(ax + b) + b(cx + d)}{cx + d} = \\frac{a^2x + ab + bcx + bd}{cx + d}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika i rozwijamy nawiasy"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć mianownik tego złożonego ułamka?",
+        "expression": "Mianownik: $c \\cdot \\frac{ax + b}{cx + d} + d = \\frac{c(ax + b) + d(cx + d)}{cx + d} = \\frac{acx + bc + dcx + d^2}{cx + d}$",
+        "explanation": "Podobnie sprowadzamy mianownik do wspólnej postaci"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymamy po podzieleniu licznika przez mianownik?",
+        "expression": "$h(h(x)) = \\frac{\\frac{a^2x + ab + bcx + bd}{cx + d}}{\\frac{acx + bc + dcx + d^2}{cx + d}} = \\frac{a^2x + ab + bcx + bd}{acx + bc + dcx + d^2}$",
+        "explanation": "Dzielenie ułamków to mnożenie przez odwrotność, $(cx + d)$ się skraca"
+      },
+      {
+        "step": 6,
+        "hint": "Jak pogrupować wyrazy ze względu na potęgi $x$?",
+        "expression": "$h(h(x)) = \\frac{(a^2 + bc)x + (ab + bd)}{(ac + dc)x + (bc + d^2)} = \\frac{(a^2 + bc)x + b(a + d)}{c(a + d)x + (bc + d^2)}$",
+        "explanation": "Grupujemy wyrazy z $x$ i wyrazy wolne, wyłączamy wspólne czynniki"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie warunki musi spełniać wyrażenie, aby $h(h(x)) = x$?",
+        "expression": "$\\frac{(a^2 + bc)x + b(a + d)}{c(a + d)x + (bc + d^2)} = x$",
+        "explanation": "To równanie musi być tożsamością dla wszystkich $x$ z dziedziny",
+        "why": "Tożsamość oznacza równość dla wszystkich wartości zmiennej. Współczynniki przy odpowiednich potęgach $x$ muszą być równe po obu stronach."
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymamy po przemnożeniu krzyżowo i porównaniu współczynników?",
+        "expression": "$(a^2 + bc)x + b(a + d) = x[c(a + d)x + (bc + d^2)]$",
+        "explanation": "Mnożymy krzyżowo i porządkujemy według potęg $x$"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie równania otrzymamy porównując współczynniki przy $x^2$, $x^1$ i $x^0$?",
+        "expression": "Współczynnik przy $x^2$: $0 = c(a + d)$\nWspółczynnik przy $x^1$: $a^2 + bc = bc + d^2$\nWspółczynnik przy $x^0$: $b(a + d) = 0$",
+        "explanation": "Lewa strona to wielomian stopnia 1, prawa to wielomian stopnia 2, więc współczynniki muszą się zgadzać"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie przypadki wynikają z równania $c(a + d) = 0$?",
+        "expression": "Przypadek 1: $c = 0$\nPrzypadek 2: $a + d = 0$",
+        "explanation": "Iloczyn równa się zero, gdy przynajmniej jeden z czynników jest zerem"
+      },
+      {
+        "step": 11,
+        "hint": "Co się dzieje gdy $c = 0$ i wykorzystamy równanie $b(a + d) = 0$?",
+        "expression": "Jeśli $c = 0$, to z $b(a + d) = 0$ mamy: $b = 0$ lub $a + d = 0$\nJeśli $b = 0$, to $h(x) = \\frac{ax}{d}$ i z $a^2 = d^2$ otrzymujemy $a = \\pm d$",
+        "explanation": "Analizujemy podprzypadki gdy $c = 0$"
+      },
+      {
+        "step": 12,
+        "hint": "Co otrzymamy z równania $a^2 + bc = d^2$ gdy $a + d \\neq 0$?",
+        "expression": "Z $a^2 + bc = d^2$ mamy: $bc = d^2 - a^2 = (d-a)(d+a)$\nJeśli $a + d \\neq 0$, to $bc = (d-a)(a+d)$",
+        "explanation": "Używamy wzoru na różnicę kwadratów"
+      },
+      {
+        "step": 13,
+        "hint": "Jak rozwiązać równanie $(a + d)^2 = 4bc$ które wynika z poprzednich kroków?",
+        "expression": "Z analizy przypadków otrzymujemy: $(a + d)^2 = 4bc$\nStąd: $a + d = \\pm 2\\sqrt{bc}$",
+        "explanation": "To końcowy warunek dla przypadku gdy $a + d \\neq 0$",
+        "why": "Równanie kwadratowe $(a+d)^2 = 4bc$ ma rozwiązania $a+d = \\pm 2\\sqrt{bc}$ pod warunkiem, że $bc \\geq 0$. To drugi możliwy przypadek obok $a + d = 0$."
+      }
+    ],
+    "solutions": [
+      "$a + d = 0$ lub $a + d = \\pm 2\\sqrt{bc}$"
+    ],
+    "parameters": {
+      "condition": "$h(h(x)) = x$ dla wszystkich $x$ z dziedziny"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T08:06:44.996Z"
+  },
+  {
+    "id": "system_rational_equations",
+    "topic": "Układy równań wymiernych",
+    "difficulty": 4,
+    "statement": "Rozwiąż w liczbach rzeczywistych układ równań: $\\begin{cases} \\frac{x + 2y}{x - y} = 3 \\\\ \\frac{2x - y}{x + y} = \\frac{1}{2} \\end{cases}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie warunki muszą spełniać x i y, żeby ułamki miały sens?",
+        "expression": "Założenia: $x - y \\neq 0$ oraz $x + y \\neq 0$",
+        "explanation": "Mianowniki nie mogą być równe zero",
+        "why": "To kluczowe ograniczenie - rozwiązania nie mogą naruszać tych warunków. Często o tym zapominamy!"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie, gdy pomnożysz pierwsze równanie przez mianownik?",
+        "expression": "$x + 2y = 3(x - y)$",
+        "explanation": "Mnożymy pierwsze równanie przez $(x - y)$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć to równanie do postaci standardowej?",
+        "expression": "$x + 2y = 3x - 3y$, czyli $-2x + 5y = 0$",
+        "explanation": "Przenosimy wszystkie składniki na jedną stronę"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po podobnym przekształceniu drugiego równania?",
+        "expression": "$2(2x - y) = x + y$",
+        "explanation": "Mnożymy drugie równanie przez $2(x + y)$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć drugie równanie?",
+        "expression": "$4x - 2y = x + y$, czyli $3x - 3y = 0$",
+        "explanation": "Otrzymujemy drugie równanie liniowe"
+      },
+      {
+        "step": 6,
+        "hint": "Co możesz wyciągnąć z równania $3x - 3y = 0$?",
+        "expression": "$x = y$",
+        "explanation": "Z drugiego równania wynika prosta zależność",
+        "why": "To znacznie upraszcza problem - możemy podstawić $x = y$ do pierwszego równania."
+      },
+      {
+        "step": 7,
+        "hint": "Co się stanie, gdy podstawisz $x = y$ do pierwszego równania?",
+        "expression": "$-2y + 5y = 0$, więc $3y = 0$",
+        "explanation": "Podstawiamy $x = y$ do równania $-2x + 5y = 0$"
+      },
+      {
+        "step": 8,
+        "hint": "Czy rozwiązanie $x = y = 0$ spełnia nasze założenia?",
+        "expression": "Dla $x = y = 0$: $x - y = 0$ oraz $x + y = 0$",
+        "explanation": "Oba mianowniki są równe zero, więc rozwiązanie nie istnieje",
+        "why": "To pokazuje, dlaczego założenia są ważne - pozorne rozwiązanie okazuje się niedopuszczalne!"
+      }
+    ],
+    "solutions": [
+      "Układ nie ma rozwiązań w liczbach rzeczywistych"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R}$",
+      "constraints": "$x \\neq y$ i $x \\neq -y$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T08:07:00.506Z"
+  },
+  {
+    "id": "homographic_inverse_function",
+    "topic": "Funkcje homograficzne i funkcje odwrotne",
+    "difficulty": 5,
+    "statement": "Znajdź wszystkie funkcje homograficzne $f(x) = \\frac{ax + b}{cx + d}$, które są równe swojej funkcji odwrotnej i dodatkowo spełniają warunek $f(2) = -1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że funkcja jest równa swojej funkcji odwrotnej?",
+        "expression": "$f(x) = f^{-1}(x)$, czyli $f(f(x)) = x$ dla każdego $x$ z dziedziny",
+        "explanation": "Funkcja jest inwolucją - dwukrotne zastosowanie daje tożsamość",
+        "why": "To bardzo specjalna własność! Oznacza, że wykres funkcji jest symetryczny względem prostej $y = x$. Takie funkcje nazywamy inwolucjami."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wygląda złożenie $f(f(x))$ dla funkcji homograficznej?",
+        "expression": "$f(f(x)) = f\\left(\\frac{ax + b}{cx + d}\\right) = \\frac{a \\cdot \\frac{ax + b}{cx + d} + b}{c \\cdot \\frac{ax + b}{cx + d} + d}$",
+        "explanation": "Podstawiamy wyrażenie $f(x)$ w miejsce $x$ w definicji funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć ten złożony ułamek do postaci z jednym mianownikiem?",
+        "expression": "$f(f(x)) = \\frac{\\frac{a(ax + b) + b(cx + d)}{cx + d}}{\\frac{c(ax + b) + d(cx + d)}{cx + d}} = \\frac{a(ax + b) + b(cx + d)}{c(ax + b) + d(cx + d)}$",
+        "explanation": "Mnożymy licznik i mianownik przez $(cx + d)$"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po rozwinięciu nawiasów w liczniku i mianowniku?",
+        "expression": "$f(f(x)) = \\frac{a^2x + ab + bcx + bd}{acx + bc + dcx + d^2} = \\frac{(a^2 + bc)x + b(a + d)}{(ac + dc)x + bc + d^2}$",
+        "explanation": "Grupujemy wyrazy przy $x$ i wyrazy wolne"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie warunki muszą być spełnione, żeby $f(f(x)) = x$?",
+        "expression": "$\\frac{(a^2 + bc)x + b(a + d)}{c(a + d)x + bc + d^2} = x$",
+        "explanation": "Porównujemy współczynniki po przyrównaniu do $x$",
+        "why": "Aby ułamek był równy $x$, licznik musi być równy $x$ razy mianownik. To daje nam system równań na współczynniki."
+      },
+      {
+        "step": 6,
+        "hint": "Jakie równania otrzymasz porównując współczynniki przy $x$ i wyrazy wolne?",
+        "expression": "$(a^2 + bc) = c(a + d)$ oraz $b(a + d) = bc + d^2$",
+        "explanation": "Z pierwszego równania: $a^2 + bc = ac + cd$, z drugiego: $b(a + d) = bc + d^2$"
+      },
+      {
+        "step": 7,
+        "hint": "Co można wywnioskować z pierwszego równania o relacji między $a$ i $d$?",
+        "expression": "$a^2 - ac + bc - cd = 0$, czyli $(a - c)(a + d) = 0$",
+        "explanation": "Faktoryzujemy pierwsze równanie",
+        "why": "To kluczowy moment! Otrzymujemy dwa przypadki: albo $a = c$, albo $a + d = 0$. Każdy prowadzi do innego typu funkcji."
+      },
+      {
+        "step": 8,
+        "hint": "Co się dzieje w przypadku gdy $a + d = 0$?",
+        "expression": "Jeśli $a + d = 0$, to z drugiego równania: $b \\cdot 0 = bc + d^2$, więc $bc + d^2 = 0$",
+        "explanation": "Podstawiamy $a + d = 0$ do drugiego równania"
+      },
+      {
+        "step": 9,
+        "hint": "Jaką postać ma funkcja gdy $a = -d$ i $bc = -d^2$?",
+        "expression": "$f(x) = \\frac{-dx + b}{cx + d}$ gdzie $bc = -d^2$, czyli $b = -\\frac{d^2}{c}$",
+        "explanation": "Otrzymujemy funkcję z warunkiem $a + d = 0$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak wykorzystać warunek $f(2) = -1$ do znalezienia konkretnych wartości?",
+        "expression": "$f(2) = \\frac{-2d + b}{2c + d} = -1$",
+        "explanation": "Podstawiamy $x = 2$ i przyrównujemy do $-1$"
+      },
+      {
+        "step": 11,
+        "hint": "Co otrzymasz po podstawieniu $b = -\\frac{d^2}{c}$ i rozwiązaniu równania?",
+        "expression": "$\\frac{-2d - \\frac{d^2}{c}}{2c + d} = -1$, czyli $\\frac{d(-2c - d)}{c(2c + d)} = -1$",
+        "explanation": "Po uproszczeniu: $d(-2c - d) = -c(2c + d)$, więc $d = c$"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie konkretne wartości parametrów otrzymasz gdy $d = c$?",
+        "expression": "Z $d = c$ i $bc = -d^2$ mamy $bc = -c^2$, więc $b = -c$. Także $a = -d = -c$",
+        "explanation": "Wszystkie parametry wyrażają się przez $c$: $a = -c$, $b = -c$, $d = c$"
+      },
+      {
+        "step": 13,
+        "hint": "Jak wygląda końcowa postać funkcji?",
+        "expression": "$f(x) = \\frac{-cx - c}{cx + c} = \\frac{-c(x + 1)}{c(x + 1)} = -1$ dla $x \\neq -1$",
+        "explanation": "Funkcja stała $f(x) = -1$ (z wyłączeniem punktu $x = -1$)",
+        "why": "To zdegenerowany przypadek funkcji homograficznej! Sprawdzenie: $f(f(x)) = f(-1) = -1 = x$ tylko gdy $x = -1$, ale punkt ten nie należy do dziedziny."
+      }
+    ],
+    "solutions": [
+      "Nie istnieje funkcja homograficzna spełniająca podane warunki",
+      "Analiza prowadzi do funkcji stałej $f(x) = -1$, która nie jest właściwą funkcją homograficzną"
+    ],
+    "parameters": {
+      "condition1": "$f(x) = f^{-1}(x)$",
+      "condition2": "$f(2) = -1$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:07:32.275Z"
+  },
+  {
+    "id": "rational_inequality_parameter",
+    "topic": "Nierówności wymierne z parametrem",
+    "difficulty": 5,
+    "statement": "Wyznacz wartości parametru k, dla których nierówność $\\frac{kx - 2}{x - k} \\cdot \\frac{x + 1}{2x - 1} > 0$ jest spełniona dla wszystkich $x \\in (0, 1)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które punkty mogą być problematyczne w przedziale $(0, 1)$?",
+        "expression": "Miejsca zerowe mianowników: $x - k = 0 \\Rightarrow x = k$ oraz $2x - 1 = 0 \\Rightarrow x = \\frac{1}{2}$",
+        "explanation": "Identyfikujemy punkty nieciągłości funkcji",
+        "why": "Nierówność musi być spełniona dla WSZYSTKICH $x \\in (0, 1)$, więc żaden mianownik nie może się zerować w tym przedziale."
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek \"dla wszystkich x z przedziału\"?",
+        "expression": "$k \\notin (0, 1)$ oraz $\\frac{1}{2} \\notin (0, 1)$",
+        "explanation": "Drugi warunek jest zawsze niespełniony, więc musimy mieć $k \\notin (0, 1)$",
+        "why": "Punkt $x = \\frac{1}{2}$ zawsze leży w $(0, 1)$, więc funkcja ma tam asymptotę pionową. To kluczowe ograniczenie!"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zachowuje się funkcja w okolicy punktu $x = \\frac{1}{2}$?",
+        "expression": "Dla $x \\to \\frac{1}{2}^-$: $2x - 1 \\to 0^-$, dla $x \\to \\frac{1}{2}^+$: $2x - 1 \\to 0^+$",
+        "explanation": "Analizujemy znak mianownika $2x - 1$ w okolicy $\\frac{1}{2}$",
+        "why": "Zmiana znaku mianownika oznacza, że funkcja zmienia znak z jednej strony asymptoty na drugą. To uniemożliwia stałą dodatniość."
+      },
+      {
+        "step": 4,
+        "hint": "Co musi być prawdą o liczniku w punkcie $x = \\frac{1}{2}$?",
+        "expression": "Licznik w $x = \\frac{1}{2}$: $(k \\cdot \\frac{1}{2} - 2)(\\frac{1}{2} + 1) = (\\frac{k}{2} - 2) \\cdot \\frac{3}{2}$",
+        "explanation": "Obliczamy wartość licznika w punkcie nieciągłości"
+      },
+      {
+        "step": 5,
+        "hint": "Kiedy funkcja może mieć stały znak mimo asymptoty?",
+        "expression": "Licznik musi się zerować w $x = \\frac{1}{2}$: $\\frac{k}{2} - 2 = 0 \\Rightarrow k = 4$",
+        "explanation": "Jeśli licznik zeruje się w tym samym punkcie co mianownik, mamy szansę na usunięcie nieciągłości",
+        "why": "To jedyna możliwość uniknięcia zmiany znaku przy przejściu przez $x = \\frac{1}{2}$. Sprawdzamy czy to rzeczywiście działa."
+      },
+      {
+        "step": 6,
+        "hint": "Jak wygląda funkcja po uproszczeniu dla $k = 4$?",
+        "expression": "Dla $k = 4$: $\\frac{4x - 2}{x - 4} \\cdot \\frac{x + 1}{2x - 1} = \\frac{2(2x - 1)}{x - 4} \\cdot \\frac{x + 1}{2x - 1} = \\frac{2(x + 1)}{x - 4}$",
+        "explanation": "Po skróceniu $(2x - 1)$ otrzymujemy prostszą funkcję"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest znak funkcji $\\frac{2(x + 1)}{x - 4}$ w przedziale $(0, 1)$?",
+        "expression": "Dla $x \\in (0, 1)$: $x + 1 > 0$ oraz $x - 4 < 0$, więc $\\frac{2(x + 1)}{x - 4} < 0$",
+        "explanation": "Funkcja jest ujemna w całym przedziale $(0, 1)$"
+      },
+      {
+        "step": 8,
+        "hint": "Czy istnieją inne wartości k spełniające warunki?",
+        "expression": "Sprawdzamy przypadki $k \\leq 0$ i $k \\geq 1$ - analiza znaków pokazuje, że funkcja zawsze zmienia znak w przedziale $(0, 1)$",
+        "explanation": "Dla innych wartości k funkcja nie może być stale dodatnia",
+        "why": "Obecność asymptoty w $x = \\frac{1}{2}$ przy niezerowym liczniku zawsze powoduje zmianę znaku."
+      }
+    ],
+    "solutions": [
+      "Brak rozwiązania - nierówność nie może być spełniona dla wszystkich $x \\in (0, 1)$ przy żadnej wartości parametru $k$"
+    ],
+    "parameters": {
+      "domain": "$x \\in (0, 1)$",
+      "parameter": "$k \\in \\mathbb{R}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 5
+      }
+    },
+    "timestamp": "2025-09-10T08:08:02.730Z"
+  },
+  {
+    "id": "function_composition_involution",
+    "topic": "Funkcje złożone i inwolucje",
+    "difficulty": 4,
+    "statement": "Dla funkcji $f(x) = \\frac{3x - 2}{2x + 1}$ znajdź funkcję złożoną $f^{(n)}(x) = f(f(f(...f(x)...)))$ (n-krotne złożenie) oraz wykaż, że $f^{(3)}(x) = x$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co otrzymasz, gdy podstawisz całą funkcję f(x) w miejsce x w tej samej funkcji?",
+        "expression": "$f(f(x)) = f\\left(\\frac{3x - 2}{2x + 1}\\right) = \\frac{3 \\cdot \\frac{3x - 2}{2x + 1} - 2}{2 \\cdot \\frac{3x - 2}{2x + 1} + 1}$",
+        "explanation": "Podstawiamy $f(x)$ w miejsce zmiennej x w definicji funkcji f",
+        "why": "To kluczowy krok - musimy zastąpić każde x przez całe wyrażenie $\\frac{3x-2}{2x+1}$. Uwaga na nawiasy!"
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć ułamek, gdy licznik i mianownik zawierają ułamki?",
+        "expression": "$f(f(x)) = \\frac{\\frac{3(3x-2) - 2(2x+1)}{2x+1}}{\\frac{2(3x-2) + (2x+1)}{2x+1}}$",
+        "explanation": "Sprowadzamy licznik i mianownik do wspólnego mianownika",
+        "why": "Gdy mamy ułamek ułamków, mnożymy przez odwrotność mianownika: $\\frac{\\frac{a}{c}}{\\frac{b}{c}} = \\frac{a}{b}$"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie po wymnożeniu i uproszczeniu wyrażeń w liczniku i mianowniku?",
+        "expression": "$f(f(x)) = \\frac{9x - 6 - 4x - 2}{6x - 4 + 2x + 1} = \\frac{5x - 8}{8x - 3}$",
+        "explanation": "Upraszczamy wyrażenia algebraiczne w liczniku i mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Czy zauważasz jakiś wzorzec, gdy porównasz f(x) i f(f(x))?",
+        "expression": "$f^{(2)}(x) = \\frac{5x - 8}{8x - 3}$",
+        "explanation": "Otrzymaliśmy drugą iterację funkcji f",
+        "why": "Porównaj współczynniki: $f(x) = \\frac{3x-2}{2x+1}$, $f^{(2)}(x) = \\frac{5x-8}{8x-3}$. Czy widzisz związek między nimi?"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz, gdy zastosujesz funkcję f jeszcze raz do wyniku f(f(x))?",
+        "expression": "$f^{(3)}(x) = f(f^{(2)}(x)) = f\\left(\\frac{5x - 8}{8x - 3}\\right) = \\frac{3 \\cdot \\frac{5x-8}{8x-3} - 2}{2 \\cdot \\frac{5x-8}{8x-3} + 1}$",
+        "explanation": "Podstawiamy $f^{(2)}(x)$ do funkcji f"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć to wyrażenie, używając tej samej metody co wcześniej?",
+        "expression": "$f^{(3)}(x) = \\frac{\\frac{3(5x-8) - 2(8x-3)}{8x-3}}{\\frac{2(5x-8) + (8x-3)}{8x-3}} = \\frac{15x - 24 - 16x + 6}{10x - 16 + 8x - 3} = \\frac{-x - 18}{18x - 19}$",
+        "explanation": "Upraszczamy wyrażenie krok po kroku"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź obliczenia - czy na pewno otrzymałeś właściwy wynik?",
+        "expression": "$f^{(3)}(x) = \\frac{15x - 24 - 16x + 6}{10x - 16 + 8x - 3} = \\frac{-x - 18}{18x - 19}$",
+        "explanation": "Hmm, to nie wygląda jak x. Sprawdźmy obliczenia ponownie"
+      },
+      {
+        "step": 8,
+        "hint": "Co się stanie, gdy dokładnie przeliczymy licznik i mianownik?",
+        "expression": "Licznik: $15x - 24 - 16x + 6 = -x - 18$\nMianownik: $10x - 16 + 8x - 3 = 18x - 19$",
+        "explanation": "Sprawdzamy każde działanie osobno"
+      },
+      {
+        "step": 9,
+        "hint": "Czy możemy wyciągnąć (-1) z licznika i zobaczyć, co się stanie?",
+        "expression": "$f^{(3)}(x) = \\frac{-(x + 18)}{18x - 19}$",
+        "explanation": "Wyciągamy minus przed ułamek, ale to nadal nie daje nam x"
+      },
+      {
+        "step": 10,
+        "hint": "Sprawdźmy ponownie obliczenia dla f(f(x)) - może tam jest błąd?",
+        "expression": "Licznik w $f^{(2)}(x)$: $3(3x-2) - 2(2x+1) = 9x - 6 - 4x - 2 = 5x - 8$ ✓\nMianownik: $2(3x-2) + (2x+1) = 6x - 4 + 2x + 1 = 8x - 3$ ✓",
+        "explanation": "Potwierdzamy, że $f^{(2)}(x) = \\frac{5x-8}{8x-3}$ jest poprawne"
+      },
+      {
+        "step": 11,
+        "hint": "Sprawdźmy teraz bardzo dokładnie obliczenia dla f³(x) - licznik i mianownik osobno:",
+        "expression": "Licznik: $3(5x-8) - 2(8x-3) = 15x - 24 - 16x + 6 = -x - 18$\nMianownik: $2(5x-8) + 1(8x-3) = 10x - 16 + 8x - 3 = 18x - 19$",
+        "explanation": "Ponownie otrzymujemy $\\frac{-x-18}{18x-19}$, co nie równa się x"
+      },
+      {
+        "step": 12,
+        "hint": "A może funkcja ma okres 6, nie 3? Sprawdźmy wzorzec dla różnych n:",
+        "expression": "$f^{(1)}(x) = \\frac{3x-2}{2x+1}$\n$f^{(2)}(x) = \\frac{5x-8}{8x-3}$\n$f^{(3)}(x) = \\frac{-x-18}{18x-19}$",
+        "explanation": "Dokumentujemy kolejne iteracje, aby znaleźć wzorzec",
+        "why": "Niektóre funkcje mają okres większy niż 3. Funkcje typu $\\frac{ax+b}{cx+d}$ mogą mieć różne okresy w zależności od współczynników."
+      }
+    ],
+    "solutions": [
+      "$f^{(1)}(x) = \\frac{3x-2}{2x+1}$",
+      "$f^{(2)}(x) = \\frac{5x-8}{8x-3}$",
+      "$f^{(3)}(x) = \\frac{-x-18}{18x-19}$",
+      "Uwaga: $f^{(3)}(x) \\neq x$ - należy sprawdzić dalsze iteracje lub zweryfikować założenia zadania"
+    ],
+    "parameters": {
+      "note": "Zadanie wymaga weryfikacji - obliczenia pokazują, że f³(x) ≠ x"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:08:41.378Z"
+  },
+  {
+    "id": "homographic_three_points",
+    "topic": "Funkcje homograficzne",
+    "difficulty": 4,
+    "statement": "Dane są punkty A(1, 2), B(-2, 3) i C(3, -1). Znajdź funkcję homograficzną, której wykres przechodzi przez te trzy punkty.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda ogólna postać funkcji homograficznej?",
+        "expression": "$f(x) = \\frac{ax + b}{cx + d}$",
+        "explanation": "Funkcja homograficzną ma postać ułamka z wielomianami stopnia pierwszego",
+        "why": "Funkcja homograficzna to funkcja wymierna z wielomianami stopnia co najwyżej 1. Mamy 4 parametry (a, b, c, d), ale jeden można ustalić, więc faktycznie 3 niewiadome."
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie gdy podstawimy współrzędne punktów do wzoru funkcji?",
+        "expression": "Dla A(1, 2): $2 = \\frac{a + b}{c + d}$\nDla B(-2, 3): $3 = \\frac{-2a + b}{-2c + d}$\nDla C(3, -1): $-1 = \\frac{3a + b}{3c + d}$",
+        "explanation": "Otrzymujemy układ trzech równań z czterema niewiadomymi"
+      },
+      {
+        "step": 3,
+        "hint": "Dlaczego możemy przyjąć d = 1 bez straty ogólności?",
+        "expression": "Przyjmujemy $d = 1$, więc:\n$2 = \\frac{a + b}{c + 1}$\n$3 = \\frac{-2a + b}{-2c + 1}$\n$-1 = \\frac{3a + b}{3c + 1}$",
+        "explanation": "Upraszczamy układ do trzech równań z trzema niewiadomymi",
+        "why": "Jeśli d ≠ 0, możemy podzielić licznik i mianownik przez d. To standardowy trik - jeden parametr można ustalić, bo liczy się tylko stosunek współczynników."
+      },
+      {
+        "step": 4,
+        "hint": "Jak przekształcić równania, żeby pozbyć się ułamków?",
+        "expression": "$2(c + 1) = a + b$ → $2c + 2 = a + b$\n$3(-2c + 1) = -2a + b$ → $-6c + 3 = -2a + b$\n$-1(3c + 1) = 3a + b$ → $-3c - 1 = 3a + b$",
+        "explanation": "Mnożymy każde równanie przez odpowiedni mianownik"
+      },
+      {
+        "step": 5,
+        "hint": "Które równanie wybrać do wyrażenia jednej niewiadomej przez inne?",
+        "expression": "Z pierwszego równania: $a = 2c + 2 - b$",
+        "explanation": "Wyrażamy a przez b i c"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz podstawiając wyrażenie na a do pozostałych równań?",
+        "expression": "Do drugiego: $-6c + 3 = -2(2c + 2 - b) + b = -4c - 4 + 3b$\n$-6c + 3 = -4c - 4 + 3b$\n$-2c + 7 = 3b$ → $b = \\frac{-2c + 7}{3}$",
+        "explanation": "Wyrażamy b przez c z drugiego równania"
+      },
+      {
+        "step": 7,
+        "hint": "Jak wykorzystać trzecie równanie do znalezienia c?",
+        "expression": "Do trzeciego: $-3c - 1 = 3a + b$\nPodstawiając $a$ i $b$:\n$-3c - 1 = 3(2c + 2 - \\frac{-2c + 7}{3}) + \\frac{-2c + 7}{3}$\n$-3c - 1 = 6c + 6 - (-2c + 7) + \\frac{-2c + 7}{3}$\n$-3c - 1 = 8c - 1 + \\frac{-2c + 7}{3}$",
+        "explanation": "Podstawiamy wyrażenia na a i b do trzeciego równania"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać równanie z c?",
+        "expression": "$-3c = 8c + \\frac{-2c + 7}{3}$\n$-9c = 24c - 2c + 7$\n$-9c = 22c + 7$\n$-31c = 7$\n$c = -\\frac{7}{31}$",
+        "explanation": "Mnożymy przez 3 i rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie wartości a i b otrzymasz podstawiając c?",
+        "expression": "$b = \\frac{-2(-\\frac{7}{31}) + 7}{3} = \\frac{\\frac{14}{31} + 7}{3} = \\frac{\\frac{14 + 217}{31}}{3} = \\frac{231}{93} = \\frac{77}{31}$\n$a = 2(-\\frac{7}{31}) + 2 - \\frac{77}{31} = -\\frac{14}{31} + 2 - \\frac{77}{31} = \\frac{-91 + 62}{31} = -\\frac{29}{31}$",
+        "explanation": "Obliczamy pozostałe współczynniki"
+      },
+      {
+        "step": 10,
+        "hint": "Jak zapisać ostateczną postać funkcji homograficznej?",
+        "expression": "$f(x) = \\frac{-\\frac{29}{31}x + \\frac{77}{31}}{-\\frac{7}{31}x + 1} = \\frac{-29x + 77}{-7x + 31}$",
+        "explanation": "Mnożymy licznik i mianownik przez 31, aby pozbyć się ułamków"
+      }
+    ],
+    "solutions": [
+      "$f(x) = \\frac{-29x + 77}{-7x + 31}$"
+    ],
+    "parameters": {
+      "points": "A(1, 2), B(-2, 3), C(3, -1)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T08:09:14.855Z"
+  },
+  {
+    "id": "rational_equation_parameter",
+    "topic": "Równania wymierne z parametrem",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $\\frac{x^2 - 3x + 2}{x^2 - x - 2} = \\frac{x + k}{x - 2}$ w zależności od wartości parametru k",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wartości x mogą sprawić problemy w tym równaniu?",
+        "expression": "Dziedzina: $x \\neq 2$ i $x \\neq -1$ (bo $x^2 - x - 2 = (x-2)(x+1) \\neq 0$)",
+        "explanation": "Określamy dziedzinę - mianowniki nie mogą być zero",
+        "why": "Kluczowe dla równań wymiernych! Wartości wykluczające mogą okazać się pozornymi rozwiązaniami."
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz rozkładając licznik na czynniki?",
+        "expression": "$x^2 - 3x + 2 = (x-1)(x-2)$",
+        "explanation": "Rozkładamy licznik lewej strony na czynniki",
+        "why": "Szukamy wspólnych czynników z mianownikiem - może uda się uprościć ułamek."
+      },
+      {
+        "step": 3,
+        "hint": "Czy można uprościć lewą stronę równania?",
+        "expression": "$\\frac{(x-1)(x-2)}{(x-2)(x+1)} = \\frac{x-1}{x+1}$ dla $x \\neq 2$",
+        "explanation": "Skracamy przez $(x-2)$, pamiętając o ograniczeniu dziedziny"
+      },
+      {
+        "step": 4,
+        "hint": "Jak teraz wygląda równanie po uproszczeniu?",
+        "expression": "$\\frac{x-1}{x+1} = \\frac{x+k}{x-2}$",
+        "explanation": "Otrzymujemy uproszczone równanie wymierne"
+      },
+      {
+        "step": 5,
+        "hint": "Co się stanie gdy pomnożysz obie strony przez $(x+1)(x-2)$?",
+        "expression": "$(x-1)(x-2) = (x+k)(x+1)$",
+        "explanation": "Mnożymy obustronnie przez wspólny mianownik",
+        "why": "Eliminujemy ułamki, ale pamiętamy: $x \\neq -1$ i $x \\neq 2$!"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwiniesz te iloczyny?",
+        "expression": "$x^2 - 3x + 2 = x^2 + (k+1)x + k$",
+        "explanation": "Rozwijamy obie strony równania"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz po przeniesieniu wszystkiego na jedną stronę?",
+        "expression": "$-3x + 2 = (k+1)x + k$",
+        "explanation": "Odejmujemy $x^2$ z obu stron"
+      },
+      {
+        "step": 8,
+        "hint": "Jak pogrupować wyrazy z x i bez x?",
+        "expression": "$-(k+4)x = k-2$",
+        "explanation": "Grupujemy wyrazy: $-3x - (k+1)x = k - 2$"
+      },
+      {
+        "step": 9,
+        "hint": "Kiedy równanie ma rozwiązanie, a kiedy nie?",
+        "expression": "Jeśli $k \\neq -4$: $x = \\frac{k-2}{-(k+4)} = \\frac{2-k}{k+4}$",
+        "explanation": "Dla $k \\neq -4$ mamy jednoznaczne rozwiązanie",
+        "why": "Gdy współczynnik przy x wynosi zero ($k = -4$), równanie może nie mieć rozwiązań lub mieć nieskończenie wiele."
+      },
+      {
+        "step": 10,
+        "hint": "Co musisz sprawdzić dla znalezionego rozwiązania?",
+        "expression": "Sprawdzamy czy $x = \\frac{2-k}{k+4} \\neq -1$ i $x \\neq 2$",
+        "explanation": "Weryfikujemy czy rozwiązanie należy do dziedziny"
+      },
+      {
+        "step": 11,
+        "hint": "Dla jakich k rozwiązanie równa się -1 lub 2?",
+        "expression": "$\\frac{2-k}{k+4} = -1 \\Rightarrow k = 3$ oraz $\\frac{2-k}{k+4} = 2 \\Rightarrow k = -6$",
+        "explanation": "Znajdujemy wartości parametru dające rozwiązania spoza dziedziny"
+      },
+      {
+        "step": 12,
+        "hint": "Co dzieje się gdy k = -4?",
+        "expression": "Dla $k = -4$: $0 \\cdot x = -6$, więc brak rozwiązań",
+        "explanation": "Przypadek szczególny - równanie sprzeczne"
+      }
+    ],
+    "solutions": [
+      "Dla $k \\in \\mathbb{R} \\setminus \\{-6, -4, 3\\}$: $x = \\frac{2-k}{k+4}$",
+      "Dla $k \\in \\{-6, -4, 3\\}$: brak rozwiązań"
+    ],
+    "parameters": {
+      "cases": [
+        {
+          "condition": "$k \\neq -6, -4, 3$",
+          "solution": "$x = \\frac{2-k}{k+4}$"
+        },
+        {
+          "condition": "$k = -6$ lub $k = -4$ lub $k = 3$",
+          "solution": "brak rozwiązań"
+        }
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:09:50.462Z"
+  },
+  {
+    "id": "homographic_composition",
+    "topic": "Funkcje homograficzne - złożenie",
+    "difficulty": 5,
+    "statement": "Wykaż, że jeśli funkcje $f(x) = \\frac{a_1x + b_1}{c_1x + d_1}$ i $g(x) = \\frac{a_2x + b_2}{c_2x + d_2}$ są różnowartościowe, to funkcja złożona $(f \\circ g)(x)$ jest również funkcją homograficzną.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza zapis $(f \\circ g)(x)$ i jak go obliczyć?",
+        "expression": "$(f \\circ g)(x) = f(g(x))$",
+        "explanation": "Funkcja złożona oznacza podstawienie g(x) w miejsce x w funkcji f"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz podstawiając $g(x) = \\frac{a_2x + b_2}{c_2x + d_2}$ w miejsce x do funkcji f?",
+        "expression": "$f(g(x)) = \\frac{a_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + b_1}{c_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + d_1}$",
+        "explanation": "Podstawiamy wyrażenie g(x) wszędzie gdzie w f występuje zmienna",
+        "why": "To kluczowy krok - musimy być bardzo ostrożni z podstawieniem ułamka do ułamka. Każde x w funkcji f zastępujemy całym wyrażeniem g(x)."
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć licznik tego złożonego ułamka?",
+        "expression": "Licznik: $a_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + b_1 = \\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_2x + d_2}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika",
+        "why": "Aby dodać ułamek do liczby całkowitej, musimy liczbę całkowitą zapisać jako ułamek o tym samym mianowniku."
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć mianownik tego złożonego ułamka?",
+        "expression": "Mianownik: $c_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + d_1 = \\frac{c_1(a_2x + b_2) + d_1(c_2x + d_2)}{c_2x + d_2}$",
+        "explanation": "Analogicznie sprowadzamy mianownik do wspólnego mianownika"
+      },
+      {
+        "step": 5,
+        "hint": "Co się stanie gdy podzielisz ułamek przez ułamek o tym samym mianowniku?",
+        "expression": "$f(g(x)) = \\frac{\\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_2x + d_2}}{\\frac{c_1(a_2x + b_2) + d_1(c_2x + d_2)}{c_2x + d_2}} = \\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_1(a_2x + b_2) + d_1(c_2x + d_2)}$",
+        "explanation": "Mianowniki $(c_2x + d_2)$ się skracają",
+        "why": "Dzielenie ułamków: $\\frac{\\frac{A}{C}}{\\frac{B}{C}} = \\frac{A}{B}$. To uprości nam znacznie dalsze obliczenia."
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwinąć nawiasy w liczniku i mianowniku?",
+        "expression": "Licznik: $a_1a_2x + a_1b_2 + b_1c_2x + b_1d_2 = (a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)$",
+        "explanation": "Grupujemy wyrazy z x i wyrazy wolne w liczniku"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka będzie postać mianownika po rozwinięciu nawiasów?",
+        "expression": "Mianownik: $c_1a_2x + c_1b_2 + d_1c_2x + d_1d_2 = (c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)$",
+        "explanation": "Analogicznie grupujemy wyrazy w mianowniku"
+      },
+      {
+        "step": 8,
+        "hint": "Czy otrzymana funkcja ma postać homograficzną $\\frac{Ax + B}{Cx + D}$?",
+        "expression": "$(f \\circ g)(x) = \\frac{(a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)}{(c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)}$",
+        "explanation": "To jest funkcja homograficzna postaci $\\frac{Ax + B}{Cx + D}$",
+        "why": "Funkcja homograficzna to każda funkcja postaci $\\frac{ax+b}{cx+d}$ gdzie $ad-bc \\neq 0$. Nasze założenie o różnowartościowości f i g gwarantuje, że złożenie też będzie różnowartościowe."
+      }
+    ],
+    "solutions": [
+      "$(f \\circ g)(x) = \\frac{(a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)}{(c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)}$",
+      "gdzie $A = a_1a_2 + b_1c_2$, $B = a_1b_2 + b_1d_2$, $C = c_1a_2 + d_1c_2$, $D = c_1b_2 + d_1d_2$"
+    ],
+    "parameters": {
+      "conditions": "f i g są różnowartościowe (czyli $a_1d_1 - b_1c_1 \\neq 0$ i $a_2d_2 - b_2c_2 \\neq 0$)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:10:15.679Z"
+  },
+  {
+    "id": "symmetric_function_parameters",
+    "topic": "Funkcje odwrotne i symetria względem prostej y = x",
+    "difficulty": 5,
+    "statement": "Znajdź wszystkie wartości parametrów p i q, dla których funkcja $h(x) = \\frac{px + q}{x - p}$ ma tę własność, że dla każdego $x_0$ z dziedziny punkty $(x_0, h(x_0))$ i $(h(x_0), h(h(x_0)))$ są symetryczne względem prostej $y = x$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza symetria dwóch punktów względem prostej y = x?",
+        "expression": "Punkty $(a, b)$ i $(c, d)$ są symetryczne względem $y = x$, gdy $c = b$ i $d = a$",
+        "explanation": "Symetria względem prostej y = x zamienia współrzędne miejscami",
+        "why": "To kluczowa własność: punkt $(a,b)$ ma odbicie $(b,a)$. Funkcja odwrotna to właśnie ta symetria!"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie warunki muszą spełniać współrzędne naszych punktów?",
+        "expression": "$(x_0, h(x_0))$ i $(h(x_0), h(h(x_0)))$ są symetryczne, więc $h(x_0) = h(x_0)$ i $h(h(x_0)) = x_0$",
+        "explanation": "Pierwszy warunek jest zawsze spełniony, drugi daje nam $h(h(x_0)) = x_0$",
+        "why": "Warunek $h(h(x)) = x$ oznacza, że funkcja h jest swoją własną funkcją odwrotną - jest inwolucją!"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz podstawiając h(x) do siebie samej?",
+        "expression": "$h(h(x)) = h\\left(\\frac{px + q}{x - p}\\right) = \\frac{p \\cdot \\frac{px + q}{x - p} + q}{\\frac{px + q}{x - p} - p}$",
+        "explanation": "Podstawiamy wyrażenie h(x) jako argument funkcji h"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć licznik tego złożonego ułamka?",
+        "expression": "Licznik: $p \\cdot \\frac{px + q}{x - p} + q = \\frac{p(px + q) + q(x - p)}{x - p} = \\frac{p^2x + pq + qx - pq}{x - p} = \\frac{x(p^2 + q)}{x - p}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika i upraszczamy"
+      },
+      {
+        "step": 5,
+        "hint": "A jak uprościć mianownik tego ułamka?",
+        "expression": "Mianownik: $\\frac{px + q}{x - p} - p = \\frac{px + q - p(x - p)}{x - p} = \\frac{px + q - px + p^2}{x - p} = \\frac{q + p^2}{x - p}$",
+        "explanation": "Podobnie sprowadzamy do wspólnego mianownika"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz dzieląc te dwa wyrażenia?",
+        "expression": "$h(h(x)) = \\frac{\\frac{x(p^2 + q)}{x - p}}{\\frac{q + p^2}{x - p}} = \\frac{x(p^2 + q)}{q + p^2} = x \\cdot \\frac{p^2 + q}{p^2 + q}$",
+        "explanation": "Dzielenie ułamków i skracanie wspólnych czynników"
+      },
+      {
+        "step": 7,
+        "hint": "Kiedy h(h(x)) = x dla wszystkich x z dziedziny?",
+        "expression": "$h(h(x)) = x \\cdot \\frac{p^2 + q}{p^2 + q} = x$, gdy $p^2 + q \\neq 0$",
+        "explanation": "Warunek jest spełniony automatycznie, gdy mianownik nie jest zerem",
+        "why": "Jeśli $p^2 + q = 0$, to $h(h(x)) = 0$, nie $x$. Musimy mieć $p^2 + q \\neq 0$ dla poprawności."
+      },
+      {
+        "step": 8,
+        "hint": "Czy istnieją dodatkowe ograniczenia na parametry?",
+        "expression": "Dodatkowo: $p^2 + q \\neq 0$ (z kroku 7) oraz $p \\neq 0$ (żeby funkcja nie była stała)",
+        "explanation": "Sprawdzamy warunki konieczne dla istnienia funkcji",
+        "why": "Gdy $p = 0$, funkcja staje się $h(x) = \\frac{q}{x}$, co zmienia charakter problemu. Warunek $p^2 + q \\neq 0$ zapewnia, że funkcja rzeczywiście jest inwolucją."
+      }
+    ],
+    "solutions": [
+      "Wszystkie pary $(p, q)$ takie, że $p \\neq 0$ i $p^2 + q \\neq 0$"
+    ],
+    "parameters": {
+      "constraints": "$p \\neq 0$, $p^2 + q \\neq 0$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-10T08:10:38.413Z"
+  }
+]

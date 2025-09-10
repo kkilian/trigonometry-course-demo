@@ -256,6 +256,13 @@ const NextProblemSuggestion = ({
         localStorage.setItem('systems-of-equations-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for systems of equations:', suggestedIds);
       }
+      
+      // Save suggested problems to localStorage for homographic functions module
+      if (currentProblem.id && currentProblem.id.includes('homographic')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('homographic-functions-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for homographic functions:', suggestedIds);
+      }
 
       return bestMatches;
 
@@ -377,10 +384,10 @@ const NextProblemSuggestion = ({
       <div className="relative group animate-fadeInScale">
         <button
           onClick={() => handleSuggestionClick(primaryProblem, primaryProblem.suggestionType)}
-          className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-yellow-400 text-stone-700 hover:bg-yellow-50 rounded-lg transition-all animate-pulse-border"
+          className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-orange-400 text-stone-700 hover:bg-orange-50 rounded-lg transition-all animate-pulse-border shadow-lg shadow-orange-200/50"
         >
           <span className="text-xs font-medium">Następne</span>
-          <svg className="w-3 h-3 text-yellow-500" fill="none" viewBox="0 0 20 20">
+          <svg className="w-3 h-3 text-orange-500" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
           </svg>
         </button>
@@ -420,12 +427,9 @@ const NextProblemSuggestion = ({
                   onClick={() => handleSuggestionClick(problem, type)}
                   className={`p-3 cursor-pointer transition-all duration-200 border border-stone-200 rounded-lg bg-white hover:shadow-sm ${getHoverBorderColor()}`}
                 >
-                  <div className="flex items-start justify-between gap-3 mb-2">
+                  <div className="mb-2">
                     <span className={`text-xs font-medium ${getLabelColor()}`}>
                       {config.label}
-                    </span>
-                    <span className={`text-xs ${getDifficultyColor(problem.estimatedDifficulty)}`}>
-                      {getDifficultyLabel(problem.estimatedDifficulty)}
                     </span>
                   </div>
                   <div className="text-sm text-stone-900 mb-1">
@@ -461,10 +465,10 @@ const NextProblemSuggestion = ({
           <div className="relative group animate-fadeInScale">
             <button
               onClick={() => handleSuggestionClick(nextProblem, 'fallback')}
-              className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-blue-400 text-stone-700 hover:bg-blue-50 rounded-lg transition-all animate-pulse-border-blue"
+              className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-orange-400 text-stone-700 hover:bg-orange-50 rounded-lg transition-all animate-pulse-border shadow-lg shadow-orange-200/50"
             >
               <span className="text-xs font-medium">Następne</span>
-              <svg className="w-3 h-3 text-blue-500" fill="none" viewBox="0 0 20 20">
+              <svg className="w-3 h-3 text-orange-500" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
               </svg>
             </button>

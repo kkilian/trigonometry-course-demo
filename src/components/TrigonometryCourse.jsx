@@ -7,6 +7,7 @@ import BasicsTopics from './BasicsTopics';
 import AIChat from './AIChat';
 import TrigonometryStartHere from './TrigonometryStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
+import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
 import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -27,6 +28,7 @@ import basics11Problems from '../data/basics-11-kombinatoryka-prawdopodobienstwo
 import basics12Problems from '../data/basics-12-statystyka.json';
 import basics13Problems from '../data/basics-13-uklady-rownan.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
+import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -61,6 +63,7 @@ const TrigonometryCourse = () => {
   const [completedBasics12Problems, setCompletedBasics12Problems] = useState(new Set());
   const [completedBasics13Problems, setCompletedBasics13Problems] = useState(new Set());
   const [completedSystemsOfEquationsProblems, setCompletedSystemsOfEquationsProblems] = useState(new Set());
+  const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -100,6 +103,7 @@ const TrigonometryCourse = () => {
     if (mode === 'basics-12-statystyka') return basics12Problems;
     if (mode === 'basics-13-uklady-rownan') return basics13Problems;
     if (mode === 'systems-of-equations') return systemsOfEquationsProblems;
+    if (mode === 'homographic-functions') return homographicFunctionsProblems;
     return [];
   };
   
@@ -124,6 +128,7 @@ const TrigonometryCourse = () => {
     if (mode === 'basics-12-statystyka') return completedBasics12Problems;
     if (mode === 'basics-13-uklady-rownan') return completedBasics13Problems;
     if (mode === 'systems-of-equations') return completedSystemsOfEquationsProblems;
+    if (mode === 'homographic-functions') return completedHomographicFunctionsProblems;
     return completedPowersProblems;
   };
   
@@ -166,6 +171,8 @@ const TrigonometryCourse = () => {
       setCompletedBasics13Problems(newSet);
     } else if (mode === 'systems-of-equations') {
       setCompletedSystemsOfEquationsProblems(newSet);
+    } else if (mode === 'homographic-functions') {
+      setCompletedHomographicFunctionsProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -296,6 +303,12 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
+    if (mode === 'homographic-functions') {
+      return {
+        title: 'Funkcje Homograficzne',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
     return {
       title: '',
       subtitle: ''
@@ -335,6 +348,16 @@ const TrigonometryCourse = () => {
         console.error('Error loading systems-of-equations progress:', e);
       }
     }
+
+    // Load homographic-functions progress
+    const savedHomographicFunctions = localStorage.getItem('completedHomographicFunctionsProblems');
+    if (savedHomographicFunctions) {
+      try {
+        setCompletedHomographicFunctionsProblems(new Set(JSON.parse(savedHomographicFunctions)));
+      } catch (e) {
+        console.error('Error loading homographic-functions progress:', e);
+      }
+    }
   }, []);
 
   // Save powers progress
@@ -351,6 +374,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedSystemsOfEquationsProblems', JSON.stringify([...completedSystemsOfEquationsProblems]));
   }, [completedSystemsOfEquationsProblems]);
+
+  // Save homographic-functions progress
+  useEffect(() => {
+    localStorage.setItem('completedHomographicFunctionsProblems', JSON.stringify([...completedHomographicFunctionsProblems]));
+  }, [completedHomographicFunctionsProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);
@@ -505,6 +533,14 @@ const TrigonometryCourse = () => {
       ) : mode === 'systems-of-equations' ? (
         // Special handling for systems of equations - show start here screen instead of problem list
         <SystemsOfEquationsStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
+        />
+      ) : mode === 'homographic-functions' ? (
+        // Special handling for homographic functions - show start here screen instead of problem list
+        <HomographicFunctionsStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
