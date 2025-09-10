@@ -233,7 +233,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{7}{12}$ i $\\frac{1}{4}$?",
-        "expression": "$NWW(12, 4) = 12$",
+        "expression": "Wspólny mianownik dla $12$ i $4$ to $12$",
         "explanation": "Musimy sprowadzić ułamki do wspólnego mianownika"
       },
       {
@@ -309,7 +309,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{9}{10}$ i $\\frac{2}{5}$?",
-        "expression": "$NWW(10, 5) = 10$",
+        "expression": "Wspólny mianownik dla $10$ i $5$ to $10$",
         "explanation": "Aby odjąć ułamki, musimy mieć wspólny mianownik"
       },
       {
@@ -528,7 +528,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "$NWW(3, 4, 12) = 12$",
+        "expression": "Wspólny mianownik dla $3$, $4$ i $12$ to $12$",
         "explanation": "Aby dodać ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -610,7 +610,7 @@
       {
         "step": 1,
         "hint": "Jakie jest wspólne mianownik dla ułamków $\\frac{11}{15}$ i $\\frac{2}{5}$?",
-        "expression": "$NWW(15, 5) = 15$",
+        "expression": "Wspólny mianownik dla $15$ i $5$ to $15$",
         "explanation": "Aby odjąć ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -686,7 +686,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 8 i 12?",
-        "expression": "$NWW(8, 12) = 24$",
+        "expression": "Wspólny mianownik dla $8$ i $12$ to $24$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -931,7 +931,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 1/2, 2/3 i 1/6?",
-        "expression": "$NWW(2, 3, 6) = 6$",
+        "expression": "Wspólny mianownik dla $2$, $3$ i $6$ to $6$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika 6"
       },
       {
@@ -997,7 +997,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 12 i 8?",
-        "expression": "$NWW(12, 8) = 24$",
+        "expression": "Wspólny mianownik dla $12$ i $8$ to $24$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1192,7 +1192,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 15 i 5?",
-        "expression": "$NWW(15, 5) = 15$",
+        "expression": "Wspólny mianownik dla $15$ i $5$ to $15$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -1268,7 +1268,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{13}{18}$ i $\\frac{1}{6}$?",
-        "expression": "$NWW(18, 6) = 18$",
+        "expression": "Wspólny mianownik dla $18$ i $6$ to $18$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1487,7 +1487,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownika dla ułamków $\\frac{2}{9}$ i $\\frac{5}{18}$?",
-        "expression": "$NWW(9, 18) = 18$",
+        "expression": "Wspólny mianownik dla $9$ i $18$ to $18$",
         "explanation": "Mianownik 18 pozwoli nam dodać ułamki"
       },
       {
@@ -2457,7 +2457,7 @@
       {
         "step": 2,
         "hint": "Jaki jest najmniejszy wspólny mianownik dla 6 i 12?",
-        "expression": "$NWW(6, 12) = 12$",
+        "expression": "Wspólny mianownik dla $6$ i $12$ to $12$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -2615,7 +2615,7 @@
       {
         "step": 3,
         "hint": "Jaka jest najmniejsza wspólna wielokrotność mianowników 4 i 3?",
-        "expression": "$\text{NWW}(4,3) = 12$",
+        "expression": "Wspólny mianownik dla $4$ i $3$ to $12$",
         "explanation": "Najmniejsza wspólna wielokrotność to 12"
       },
       {
@@ -3241,7 +3241,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "$\text{NWW}(3, 4, 12) = 12$",
+        "expression": "Wspólny mianownik dla $3$, $4$ i $12$ to $12$",
         "explanation": "Sprowadzamy wszystkie ułamki do wspólnego mianownika 12"
       },
       {
@@ -3307,7 +3307,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 8, 6 i 12?",
-        "expression": "$NWW(8, 6, 12) = 24$",
+        "expression": "Wspólny mianownik dla $8$, $6$ i $12$ to $24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -5630,7 +5630,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników tych ułamków?",
-        "expression": "$NWW(3, 4, 6, 12) = 12$",
+        "expression": "Wspólny mianownik dla $3$, $4$, $6$ i $12$ to $12$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -5712,7 +5712,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla tych ułamków?",
-        "expression": "$NWW(8, 6, 3, 4) = 24$",
+        "expression": "Wspólny mianownik dla $8$, $6$, $3$ i $4$ to $24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -6597,7 +6597,7 @@
         "step": 3,
         "hint": "Teraz masz już same ułamki. Jak dodać ułamki o różnych mianownikach?",
         "expression": "$\\frac{2}{3} + \\frac{4}{5} - \\frac{1}{15}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika: $NWW(3,5,15) = 15$"
+        "explanation": "Sprowadzamy do wspólnego mianownika: wspólny mianownik dla $3$, $5$ i $15$ to $15$"
       },
       {
         "step": 4,

@@ -63,6 +63,18 @@ src/components/HomographicFunctionsStartHere.jsx
 ### 3.2. Implementacja
 Skopiuj `TrigonometryStartHere.jsx` i zmień:
 
+#### **WAŻNE:** Dodaj informację dla nowych użytkowników
+W sekcji renderowania dla pierwszej wizyty (gdy `problemsToShow.length === 1`), dodaj przed kafelkiem:
+```jsx
+{/* Informacja dla nowych użytkowników */}
+<div className="text-center mb-6">
+  <h3 className="text-lg font-semibold text-stone-800 mb-2">Zacznij tutaj</h3>
+  <p className="text-stone-600 text-sm">
+    Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie
+  </p>
+</div>
+```
+
 #### Nazwa komponentu:
 ```jsx
 const HomographicFunctionsStartHere = ({ 
@@ -241,8 +253,11 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 ### Pierwsza wizyta:
 1. Użytkownik wybiera nowy dział z ekranu głównego
 2. System renderuje komponent `{Nazwa}StartHere`
-3. Pokazuje się jeden duży kafelek z pierwszym zadaniem
-4. Kafelek pulsuje pomarańczowym obramowaniem (animacja CSS)
+3. **WAŻNE:** Nad kafelkiem wyświetla się informacja:
+   - Nagłówek: "Zacznij tutaj"
+   - Opis: "Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie"
+4. Pokazuje się jeden duży kafelek z pierwszym zadaniem
+5. Kafelek pulsuje pomarańczowym obramowaniem (animacja CSS)
 
 ### Rozwiązywanie zadań:
 1. Użytkownik klika kafelek i przechodzi do ProblemView

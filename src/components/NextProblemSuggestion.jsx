@@ -265,7 +265,7 @@ const NextProblemSuggestion = ({
       }
       
       // Save suggested problems to localStorage for elementary fractions module
-      if (currentProblem.id && currentProblem.id.includes('elementary_fraction')) {
+      if (currentProblem.id && currentProblem.id.includes('fraction_')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('elementary-fractions-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for elementary fractions:', suggestedIds);

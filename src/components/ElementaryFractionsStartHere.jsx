@@ -126,7 +126,16 @@ const ElementaryFractionsStartHere = ({
           {/* Display problems based on user progress */}
           {problemsToShow.length === 1 ? (
             // First visit - single problem card
-            <div className="px-4 md:px-8">
+            <div className="space-y-6">
+              {/* Informacja dla nowych użytkowników */}
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-semibold text-stone-800 mb-2">Zacznij tutaj</h3>
+                <p className="text-stone-600 text-sm">
+                  Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie
+                </p>
+              </div>
+              
+              <div className="px-4 md:px-8">
               <button
                 onClick={() => handleStartProblem(problemsToShow[0])}
                 className={`w-full text-left p-6 md:p-10 rounded-xl transition-all group relative ${
@@ -166,6 +175,7 @@ const ElementaryFractionsStartHere = ({
                   </div>
                 </div>
               </button>
+            </div>
             </div>
           ) : (
             // Return visit - two suggested problems
