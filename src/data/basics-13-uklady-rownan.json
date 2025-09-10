@@ -4,6 +4,7 @@
     "topic": "Pochodna funkcji stałej",
     "difficulty": 1,
     "statement": "Oblicz pochodną funkcji $f(x) = 7$",
+    "statement_explanation": "Funkcja stała to taka, której wartość nie zmienia się wraz ze zmianą zmiennej niezależnej. W tym przypadku, bez względu na wartość $x$, funkcja zawsze wynosi 7.",
     "steps": [
       {
         "step": 1,
@@ -1580,5 +1581,1190 @@
       }
     },
     "timestamp": "2025-09-09T09:44:43.515Z"
+  },
+   {
+    "id": "polynomial_derivative_basic",
+    "topic": "Pochodne wielomianów",
+    "difficulty": 2,
+    "statement": "Oblicz pochodną funkcji $f(x) = 5x^7 - 2x^4 + 3x - 10$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy możesz różniczkować każdy składnik osobno?",
+        "expression": "$f'(x) = (5x^7)' - (2x^4)' + (3x)' - (10)'$",
+        "explanation": "Używamy liniowości pochodnej - różniczkujemy składnik po składniku",
+        "why": "Pochodna sumy to suma pochodnych. Stałe współczynniki można wynosić przed znak pochodnej."
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje z wykładnikiem przy różniczkowaniu potęgi?",
+        "expression": "$(5x^7)' = 5 \\cdot 7x^6 = 35x^6$",
+        "explanation": "Stosujemy wzór $(x^n)' = nx^{n-1}$ dla pierwszego składnika"
+      },
+      {
+        "step": 3,
+        "hint": "Jak różniczkuje się pozostałe potęgi x?",
+        "expression": "$(2x^4)' = 2 \\cdot 4x^3 = 8x^3$ oraz $(3x)' = 3 \\cdot 1x^0 = 3$",
+        "explanation": "Kontynuujemy stosowanie wzoru potęgowego"
+      },
+      {
+        "step": 4,
+        "hint": "Czy stała liczba zależy od x?",
+        "expression": "$(10)' = 0$",
+        "explanation": "Pochodna stałej to zero",
+        "why": "Stała nie zmienia się wraz z x, więc jej szybkość zmian (pochodna) wynosi zero."
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz łącząc wszystkie wyniki?",
+        "expression": "$f'(x) = 35x^6 - 8x^3 + 3$",
+        "explanation": "Składamy wszystkie obliczone pochodne"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = 35x^6 - 8x^3 + 3$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:44:31.193Z"
+  },
+  {
+    "id": "derivative_product_simple",
+    "topic": "Pochodne funkcji",
+    "difficulty": 2,
+    "statement": "Oblicz pochodną funkcji $f(x) = (x-1)(x+1)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co otrzymasz mnożąc $(x-1)(x+1)$?",
+        "expression": "$f(x) = (x-1)(x+1) = x^2 - 1$",
+        "explanation": "Używamy wzoru skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$",
+        "why": "Można też użyć reguły iloczynu, ale uproszenie najpierw jest szybsze. Wzór: $(a-b)(a+b) = a^2 - b^2$."
+      },
+      {
+        "step": 2,
+        "hint": "Jak zmienia się wykładnik przy różniczkowaniu $x^2$?",
+        "expression": "$f'(x) = 2x - 0$",
+        "explanation": "Pochodna $x^2$ to $2x$, a pochodna stałej to $0$"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o pochodnej stałej?",
+        "expression": "$f'(x) = 2x$",
+        "explanation": "Otrzymujemy ostateczny wynik"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = 2x$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T06:44:41.488Z"
+  },
+  {
+    "id": "derivative_power_root",
+    "topic": "Pochodne funkcji potęgowych",
+    "difficulty": 3,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\frac{1}{x^3} + \\sqrt[3]{x}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przepisać te funkcje używając potęg o wykładnikach wymiernych?",
+        "expression": "$f(x) = x^{-3} + x^{\\frac{1}{3}}$",
+        "explanation": "Przepisujemy ułamek i pierwiastek jako potęgi",
+        "why": "Wzór $\\frac{1}{x^n} = x^{-n}$ i $\\sqrt[n]{x} = x^{\\frac{1}{n}}$ pozwala używać jednej reguły potęgowej dla wszystkich przypadków."
+      },
+      {
+        "step": 2,
+        "hint": "Którą regułę różniczkowania zastosujemy dla sumy funkcji?",
+        "expression": "$f'(x) = (x^{-3})' + (x^{\\frac{1}{3}})'$",
+        "explanation": "Pochodna sumy to suma pochodnych"
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje z wykładnikiem przy różniczkowaniu potęgi?",
+        "expression": "$(x^{-3})' = -3 \\cdot x^{-3-1} = -3x^{-4}$",
+        "explanation": "Stosujemy wzór $(x^n)' = n \\cdot x^{n-1}$ dla pierwszego składnika"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć pochodną dla ułamkowego wykładnika $\\frac{1}{3}$?",
+        "expression": "$(x^{\\frac{1}{3}})' = \\frac{1}{3} \\cdot x^{\\frac{1}{3}-1} = \\frac{1}{3}x^{-\\frac{2}{3}}$",
+        "explanation": "Stosujemy ten sam wzór dla wykładnika ułamkowego"
+      },
+      {
+        "step": 5,
+        "hint": "Jak można zapisać wynik w postaci z pierwiastkami i ułamkami?",
+        "expression": "$f'(x) = -3x^{-4} + \\frac{1}{3}x^{-\\frac{2}{3}} = -\\frac{3}{x^4} + \\frac{1}{3\\sqrt[3]{x^2}}$",
+        "explanation": "Przepisujemy z powrotem na postać z ułamkami i pierwiastkami"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = -\\frac{3}{x^4} + \\frac{1}{3\\sqrt[3]{x^2}}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T06:44:54.883Z"
+  },
+  {
+    "id": "derivative_sqrt_linear",
+    "topic": "Pochodne funkcji",
+    "difficulty": 2,
+    "statement": "Oblicz pochodną funkcji $f(x) = 6\\sqrt{x} - 2x$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przepisać pierwiastek używając potęg?",
+        "expression": "$f(x) = 6x^{\\frac{1}{2}} - 2x$",
+        "explanation": "Przepisujemy $\\sqrt{x} = x^{\\frac{1}{2}}$ dla łatwiejszego różniczkowania",
+        "why": "Wzór na pochodną potęgi $\\frac{d}{dx}x^n = nx^{n-1}$ działa dla wszystkich wykładników rzeczywistych, nie tylko całkowitych."
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie z wykładnikiem $\\frac{1}{2}$ przy różniczkowaniu?",
+        "expression": "$\\frac{d}{dx}(6x^{\\frac{1}{2}}) = 6 \\cdot \\frac{1}{2} \\cdot x^{\\frac{1}{2}-1} = 3x^{-\\frac{1}{2}}$",
+        "explanation": "Stosujemy wzór na pochodną potęgi dla pierwszego składnika"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest pochodna funkcji liniowej $-2x$?",
+        "expression": "$\\frac{d}{dx}(-2x) = -2$",
+        "explanation": "Pochodna funkcji liniowej to jej współczynnik kierunkowy"
+      },
+      {
+        "step": 4,
+        "hint": "Jak można przepisać $x^{-\\frac{1}{2}}$ w postaci z pierwiastkiem?",
+        "expression": "$f'(x) = 3x^{-\\frac{1}{2}} - 2 = \\frac{3}{\\sqrt{x}} - 2$",
+        "explanation": "Łączymy wyniki i przepisujemy ujemną potęgę jako ułamek"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{3}{\\sqrt{x}} - 2$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-10T06:45:04.976Z"
+  },
+  {
+    "id": "derivative_trig_linear",
+    "topic": "Pochodne funkcji trygonometrycznych",
+    "difficulty": 2,
+    "statement": "Oblicz pochodną funkcji $f(x) = 4\\cos(x) - 2\\sin(x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak różniczkować sumę lub różnicę funkcji?",
+        "expression": "$f'(x) = (4\\cos(x))' - (2\\sin(x))'$",
+        "explanation": "Pochodna różnicy to różnica pochodnych"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje ze stałym czynnikiem przy różniczkowaniu?",
+        "expression": "$f'(x) = 4(\\cos(x))' - 2(\\sin(x))'$",
+        "explanation": "Stały czynnik wynosimy przed znak pochodnej",
+        "why": "Stała zawsze zostaje przed pochodną: $(c \\cdot g(x))' = c \\cdot g'(x)$. To znacznie upraszcza obliczenia!"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są pochodne podstawowych funkcji trygonometrycznych?",
+        "expression": "$f'(x) = 4(-\\sin(x)) - 2(\\cos(x))$",
+        "explanation": "Stosujemy wzory: $(\\cos(x))' = -\\sin(x)$ i $(\\sin(x))' = \\cos(x)$",
+        "why": "Uwaga na znak minus przy pochodnej cosinusa! Częsty błąd to zapomnienie o tym minusie."
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć końcowy wynik?",
+        "expression": "$f'(x) = -4\\sin(x) - 2\\cos(x)$",
+        "explanation": "Upraszczamy znaki i otrzymujemy ostateczną postać pochodnej"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = -4\\sin(x) - 2\\cos(x)$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:45:57.713Z"
+  },
+  {
+    "id": "derivative_exponential_logarithm",
+    "topic": "Pochodne funkcji wykładniczych i logarytmicznych",
+    "difficulty": 3,
+    "statement": "Oblicz pochodną funkcji $f(x) = 2e^x + \\ln(x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak różniczkować sumę dwóch funkcji?",
+        "expression": "$f'(x) = (2e^x)' + (\\ln(x))'$",
+        "explanation": "Pochodna sumy to suma pochodnych"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje ze stałą przy różniczkowaniu?",
+        "expression": "$(2e^x)' = 2 \\cdot (e^x)'$",
+        "explanation": "Stałą można wyłączyć przed znak pochodnej"
+      },
+      {
+        "step": 3,
+        "hint": "Czym jest szczególnego w funkcji $e^x$ przy różniczkowaniu?",
+        "expression": "$(e^x)' = e^x$",
+        "explanation": "Pochodna funkcji wykładniczej o podstawie e",
+        "why": "Funkcja $e^x$ jest jedyną funkcją, która jest równa swojej pochodnej. To właśnie dlatego liczba e jest tak ważna w matematyce!"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest wzór na pochodną logarytmu naturalnego?",
+        "expression": "$(\\ln(x))' = \\frac{1}{x}$",
+        "explanation": "Pochodna logarytmu naturalnego",
+        "why": "Pamiętaj: dziedzina to $x > 0$. Logarytm naturalny i funkcja wykładnicza $e^x$ to funkcje odwrotne."
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć wszystkie części w końcowy wynik?",
+        "expression": "$f'(x) = 2e^x + \\frac{1}{x}$",
+        "explanation": "Składamy wszystkie obliczone części"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = 2e^x + \\frac{1}{x}$"
+    ],
+    "parameters": {
+      "domain": "$x > 0$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:46:08.286Z"
+  },
+  {
+    "id": "derivative_polynomial_logarithm",
+    "topic": "Pochodne funkcji elementarnych",
+    "difficulty": 3,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\frac{1}{2}x^2 + \\log_3(x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Z jakich dwóch składników składa się ta funkcja?",
+        "expression": "$f(x) = \\frac{1}{2}x^2 + \\log_3(x)$",
+        "explanation": "Funkcja to suma dwóch składników: wielomianu i logarytmu"
+      },
+      {
+        "step": 2,
+        "hint": "Jak różniczkuje się sumę funkcji?",
+        "expression": "$f'(x) = \\left(\\frac{1}{2}x^2\\right)' + \\left(\\log_3(x)\\right)'$",
+        "explanation": "Pochodna sumy to suma pochodnych składników",
+        "why": "To podstawowa właściwość różniczkowania. Każdy składnik różniczkujemy osobno."
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje z wykładnikiem przy różniczkowaniu potęgi?",
+        "expression": "$\\left(\\frac{1}{2}x^2\\right)' = \\frac{1}{2} \\cdot 2x = x$",
+        "explanation": "Używamy wzoru $(x^n)' = nx^{n-1}$ dla pierwszego składnika"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest wzór na pochodną logarytmu o podstawie różnej od e?",
+        "expression": "$\\left(\\log_3(x)\\right)' = \\frac{1}{x \\ln 3}$",
+        "explanation": "Stosujemy wzór $(\\log_a(x))' = \\frac{1}{x \\ln a}$",
+        "why": "Logarytm naturalny ln x ma prostszą pochodną $\\frac{1}{x}$, ale dla innych podstaw pojawia się dodatkowy czynnik $\\frac{1}{\\ln a}$."
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć oba wyniki w jedną pochodną?",
+        "expression": "$f'(x) = x + \\frac{1}{x \\ln 3}$",
+        "explanation": "Łączymy pochodne obu składników"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = x + \\frac{1}{x \\ln 3}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:46:23.513Z"
+  },
+  {
+    "id": "derivative_exponential_cotangent",
+    "topic": "Pochodne funkcji wykładniczych i trygonometrycznych",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = 5^x + \\cot(x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak różniczkować sumę dwóch funkcji?",
+        "expression": "$f'(x) = (5^x)' + (\\cot(x))'$",
+        "explanation": "Pochodna sumy to suma pochodnych"
+      },
+      {
+        "step": 2,
+        "hint": "Czym różni się $5^x$ od $e^x$ przy różniczkowaniu?",
+        "expression": "$(5^x)' = 5^x \\ln 5$",
+        "explanation": "Pochodna funkcji wykładniczej o podstawie różnej od e",
+        "why": "Dla $a^x$ wzór to $a^x \\ln a$. Gdy $a = e$, to $\\ln e = 1$ i otrzymujemy $(e^x)' = e^x$. Logarytm naturalny podstawy jest kluczowy!"
+      },
+      {
+        "step": 3,
+        "hint": "Jak kotangens wiąże się z tangensem przy różniczkowaniu?",
+        "expression": "$(\\cot(x))' = -\\frac{1}{\\sin^2(x)} = -\\csc^2(x)$",
+        "explanation": "Pochodna kotangensa jest ujemna i zawiera sinus w kwadracie",
+        "why": "Kotangens to $\\frac{\\cos x}{\\sin x}$, więc można użyć reguły ilorazu. Alternatywnie: $\\cot x = \\frac{1}{\\tan x}$, ale wzór $(\\cot x)' = -\\csc^2 x$ jest szybszy."
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz łącząc oba składniki?",
+        "expression": "$f'(x) = 5^x \\ln 5 - \\csc^2(x)$",
+        "explanation": "Końcowy wynik to suma pochodnych obu składników"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = 5^x \\ln 5 - \\csc^2(x)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:46:35.772Z"
+  },
+  {
+    "id": "derivative_product_x3_ex",
+    "topic": "Pochodna iloczynu funkcji",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = x^3 e^x$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak nazywa się funkcja będąca iloczynem dwóch innych funkcji?",
+        "expression": "$f(x) = x^3 \\cdot e^x$",
+        "explanation": "Rozpoznajemy iloczyn dwóch funkcji: $u(x) = x^3$ i $v(x) = e^x$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą regułę różniczkowania wybierzesz dla iloczynu funkcji?",
+        "expression": "$(u \\cdot v)' = u' \\cdot v + u \\cdot v'$",
+        "explanation": "Stosujemy regułę Leibniza dla pochodnej iloczynu",
+        "why": "Nie można różniczkować każdego czynnika osobno! Reguła $(uv)' = u'v'$ jest błędna. Prawidłowa reguła uwzględnia oba sposoby zmiany iloczynu."
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie z wykładnikiem przy różniczkowaniu $x^3$?",
+        "expression": "$u'(x) = (x^3)' = 3x^2$",
+        "explanation": "Obliczamy pochodną pierwszego czynnika"
+      },
+      {
+        "step": 4,
+        "hint": "Czym jest szczególnego w pochodnej funkcji wykładniczej $e^x$?",
+        "expression": "$v'(x) = (e^x)' = e^x$",
+        "explanation": "Obliczamy pochodną drugiego czynnika",
+        "why": "Funkcja $e^x$ jest jedyną funkcją, która jest równa swojej pochodnej. To czyni ją wyjątkową w analizie matematycznej."
+      },
+      {
+        "step": 5,
+        "hint": "Jak podstawić obliczone pochodne do wzoru na regułę iloczynu?",
+        "expression": "$f'(x) = 3x^2 \\cdot e^x + x^3 \\cdot e^x$",
+        "explanation": "Podstawiamy do wzoru: $u' \\cdot v + u \\cdot v'$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki wspólny czynnik można wyłączyć przed nawias?",
+        "expression": "$f'(x) = e^x(3x^2 + x^3)$",
+        "explanation": "Wyłączamy wspólny czynnik $e^x$"
+      },
+      {
+        "step": 7,
+        "hint": "Co można jeszcze wyłączyć z wyrażenia w nawiasie?",
+        "expression": "$f'(x) = e^x \\cdot x^2(3 + x)$",
+        "explanation": "Wyłączamy $x^2$ z nawiasu, otrzymując ostateczną postać"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = e^x \\cdot x^2(3 + x)$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:46:51.375Z"
+  },
+  {
+    "id": "derivative_quotient_ln",
+    "topic": "Pochodne funkcji - reguła ilorazu",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\frac{\\ln(x)}{x^2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak nazywa się funkcja postaci $\\frac{u(x)}{v(x)}$ i którą regułę zastosujemy?",
+        "expression": "$f(x) = \\frac{\\ln(x)}{x^2}$, gdzie $u(x) = \\ln(x)$ i $v(x) = x^2$",
+        "explanation": "Rozpoznajemy iloraz dwóch funkcji",
+        "why": "To iloraz funkcji, więc użyjemy reguły: $(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$. Alternatywa: przepisać jako $\\ln(x) \\cdot x^{-2}$ i użyć reguły iloczynu."
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest pochodna funkcji logarytmicznej $\\ln(x)$?",
+        "expression": "$u'(x) = (\\ln(x))' = \\frac{1}{x}$",
+        "explanation": "Obliczamy pochodną licznika"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie z wykładnikiem przy różniczkowaniu $x^2$?",
+        "expression": "$v'(x) = (x^2)' = 2x$",
+        "explanation": "Obliczamy pochodną mianownika"
+      },
+      {
+        "step": 4,
+        "hint": "Jak podstawić wszystko do wzoru na pochodną ilorazu?",
+        "expression": "$f'(x) = \\frac{u'v - uv'}{v^2} = \\frac{\\frac{1}{x} \\cdot x^2 - \\ln(x) \\cdot 2x}{(x^2)^2}$",
+        "explanation": "Podstawiamy do wzoru na pochodną ilorazu",
+        "why": "Kolejność w liczniku ma znaczenie: $u'v - uv'$, nie $uv' - u'v$. Mianownik to zawsze $(v(x))^2$."
+      },
+      {
+        "step": 5,
+        "hint": "Co można uprościć w liczniku i mianowniku?",
+        "expression": "$f'(x) = \\frac{x - 2x\\ln(x)}{x^4}$",
+        "explanation": "Upraszczamy: $\\frac{1}{x} \\cdot x^2 = x$ i $(x^2)^2 = x^4$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki wspólny czynnik można wyłączyć z licznika?",
+        "expression": "$f'(x) = \\frac{x(1 - 2\\ln(x))}{x^4} = \\frac{1 - 2\\ln(x)}{x^3}$",
+        "explanation": "Wyłączamy $x$ z licznika i skracamy z mianownikiem"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{1 - 2\\ln(x)}{x^3}$"
+    ],
+    "parameters": {
+      "domain": "$x > 0$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:47:05.806Z"
+  },
+  {
+    "id": "derivative_composite_cos",
+    "topic": "Pochodna funkcji złożonej",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\cos(x^3 + 2x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co jest funkcją zewnętrzną, a co wewnętrzną w tym złożeniu?",
+        "expression": "$f(x) = \\cos(u)$, gdzie $u = x^3 + 2x$",
+        "explanation": "Rozpoznajemy funkcję złożoną: cosinus od wielomianu",
+        "why": "Funkcja złożona to 'funkcja w funkcji'. Zewnętrzna: cosinus, wewnętrzna: wielomian. Potrzebujemy reguły łańcuchowej: $(g(h(x)))' = g'(h(x)) \\cdot h'(x)$."
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest pochodna funkcji cosinus?",
+        "expression": "$(\\cos u)' = -\\sin u$",
+        "explanation": "Pochodna funkcji zewnętrznej względem u"
+      },
+      {
+        "step": 3,
+        "hint": "Jak różniczkować wielomian $x^3 + 2x$?",
+        "expression": "$(x^3 + 2x)' = 3x^2 + 2$",
+        "explanation": "Pochodna funkcji wewnętrznej względem x"
+      },
+      {
+        "step": 4,
+        "hint": "Jak połączyć te wyniki zgodnie z regułą łańcuchową?",
+        "expression": "$f'(x) = -\\sin(x^3 + 2x) \\cdot (3x^2 + 2)$",
+        "explanation": "Mnożymy pochodną zewnętrznej przez pochodną wewnętrznej",
+        "why": "Reguła łańcuchowa: pochodna złożenia to iloczyn pochodnej zewnętrznej (obliczonej w punkcie wewnętrznym) i pochodnej wewnętrznej."
+      }
+    ],
+    "solutions": [
+      "$f'(x) = -(3x^2 + 2)\\sin(x^3 + 2x)$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:47:20.758Z"
+  },
+  {
+    "id": "derivative_sqrt_exp",
+    "topic": "Pochodna funkcji złożonej",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\sqrt{e^x + 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przepisać pierwiastek używając potęgi?",
+        "expression": "$f(x) = (e^x + 1)^{\\frac{1}{2}}$",
+        "explanation": "Przepisujemy pierwiastek jako potęgę ułamkową"
+      },
+      {
+        "step": 2,
+        "hint": "Co jest funkcją zewnętrzną, a co wewnętrzną w tym złożeniu?",
+        "expression": "Funkcja zewnętrzna: $u^{\\frac{1}{2}}$, funkcja wewnętrzna: $u = e^x + 1$",
+        "explanation": "Rozpoznajemy funkcję złożoną",
+        "why": "To kluczowy moment - musimy zastosować regułę łańcuchową. Funkcja zewnętrzna to potęga, wewnętrzna to suma funkcji wykładniczej i stałej."
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest pochodna funkcji zewnętrznej $u^{\\frac{1}{2}}$?",
+        "expression": "$(u^{\\frac{1}{2}})' = \\frac{1}{2}u^{-\\frac{1}{2}} = \\frac{1}{2\\sqrt{u}}$",
+        "explanation": "Stosujemy wzór na pochodną potęgi"
+      },
+      {
+        "step": 4,
+        "hint": "Czemu równa się pochodna funkcji wewnętrznej $e^x + 1$?",
+        "expression": "$(e^x + 1)' = e^x + 0 = e^x$",
+        "explanation": "Pochodna sumy to suma pochodnych"
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć te wyniki według reguły łańcuchowej?",
+        "expression": "$f'(x) = \\frac{1}{2\\sqrt{e^x + 1}} \\cdot e^x$",
+        "explanation": "Mnożymy pochodną funkcji zewnętrznej przez pochodną wewnętrznej",
+        "why": "Reguła łańcuchowa: $(g(h(x)))' = g'(h(x)) \\cdot h'(x)$. Podstawiamy $u = e^x + 1$ z powrotem do wyniku."
+      },
+      {
+        "step": 6,
+        "hint": "Czy można jeszcze uprościć ten wynik?",
+        "expression": "$f'(x) = \\frac{e^x}{2\\sqrt{e^x + 1}}$",
+        "explanation": "Ostateczna postać pochodnej"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{e^x}{2\\sqrt{e^x + 1}}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:47:33.256Z"
+  },
+  {
+    "id": "derivative_tan_ln_product",
+    "topic": "Pochodna iloczynu funkcji",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\tan(x) \\ln(x)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką regułę zastosujemy dla iloczynu dwóch różnych funkcji?",
+        "expression": "$f(x) = \\tan(x) \\cdot \\ln(x)$",
+        "explanation": "Mamy iloczyn dwóch funkcji, więc użyjemy reguły Leibniza",
+        "why": "Reguła iloczynu: $(u \\cdot v)' = u' \\cdot v + u \\cdot v'$. Nie można różniczkować każdego czynnika osobno!"
+      },
+      {
+        "step": 2,
+        "hint": "Jak oznaczymy poszczególne funkcje w regule iloczynu?",
+        "expression": "$u = \\tan(x)$, $v = \\ln(x)$",
+        "explanation": "Identyfikujemy składniki iloczynu"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest pochodna funkcji tangens?",
+        "expression": "$u' = (\\tan(x))' = \\frac{1}{\\cos^2(x)} = \\sec^2(x)$",
+        "explanation": "Pochodna tangensa to sekans do kwadratu",
+        "why": "Wzór: $(\\tan(x))' = \\sec^2(x) = \\frac{1}{\\cos^2(x)}$. Można też zapisać jako $1 + \\tan^2(x)$."
+      },
+      {
+        "step": 4,
+        "hint": "A jaka jest pochodna logarytmu naturalnego?",
+        "expression": "$v' = (\\ln(x))' = \\frac{1}{x}$",
+        "explanation": "Pochodna logarytmu naturalnego to odwrotność argumentu"
+      },
+      {
+        "step": 5,
+        "hint": "Jak teraz połączyć wszystko według reguły iloczynu?",
+        "expression": "$f'(x) = u' \\cdot v + u \\cdot v' = \\sec^2(x) \\cdot \\ln(x) + \\tan(x) \\cdot \\frac{1}{x}$",
+        "explanation": "Podstawiamy do wzoru na pochodną iloczynu"
+      },
+      {
+        "step": 6,
+        "hint": "Czy można jeszcze uprościć ten wynik?",
+        "expression": "$f'(x) = \\sec^2(x) \\ln(x) + \\frac{\\tan(x)}{x}$",
+        "explanation": "Otrzymujemy ostateczną postać pochodnej"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\sec^2(x) \\ln(x) + \\frac{\\tan(x)}{x}$"
+    ],
+    "parameters": {
+      "domain": "$x > 0$ i $x \\neq \\frac{\\pi}{2} + k\\pi$, gdzie $k \\in \\mathbb{Z}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:47:46.562Z"
+  },
+  {
+    "id": "derivative_quotient_trig_exp",
+    "topic": "Pochodna ilorazu funkcji",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\frac{\\sin(2x)}{e^{3x}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Którą regułę wybierzesz dla ilorazu dwóch funkcji?",
+        "expression": "$f(x) = \\frac{\\sin(2x)}{e^{3x}}$, więc $u(x) = \\sin(2x)$, $v(x) = e^{3x}$",
+        "explanation": "Rozpoznajemy iloraz funkcji i oznaczamy licznik oraz mianownik",
+        "why": "Dla ilorazu $\\frac{u}{v}$ używamy wzoru $(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$. Alternatywa: przepisać jako $\\sin(2x) \\cdot e^{-3x}$ i użyć reguły iloczynu."
+      },
+      {
+        "step": 2,
+        "hint": "Co jest funkcją zewnętrzną, a co wewnętrzną w sin(2x)?",
+        "expression": "$u'(x) = (\\sin(2x))' = \\cos(2x) \\cdot 2 = 2\\cos(2x)$",
+        "explanation": "Pochodna licznika używając reguły łańcuchowej",
+        "why": "Funkcja złożona: zewnętrzna $\\sin$, wewnętrzna $2x$. Pochodna: $(\\sin(g(x)))' = \\cos(g(x)) \\cdot g'(x)$."
+      },
+      {
+        "step": 3,
+        "hint": "Jak zmieni się wykładnik przy różniczkowaniu funkcji wykładniczej?",
+        "expression": "$v'(x) = (e^{3x})' = e^{3x} \\cdot 3 = 3e^{3x}$",
+        "explanation": "Pochodna mianownika używając reguły łańcuchowej",
+        "why": "Dla $e^{g(x)}$ pochodna to $e^{g(x)} \\cdot g'(x)$. Funkcja $e^x$ jest jedyną, której pochodna równa się jej samej."
+      },
+      {
+        "step": 4,
+        "hint": "Jak podstawić obliczone pochodne do wzoru na iloraz?",
+        "expression": "$f'(x) = \\frac{u'v - uv'}{v^2} = \\frac{2\\cos(2x) \\cdot e^{3x} - \\sin(2x) \\cdot 3e^{3x}}{(e^{3x})^2}$",
+        "explanation": "Podstawiamy do wzoru na pochodną ilorazu"
+      },
+      {
+        "step": 5,
+        "hint": "Który czynnik można wyłączyć z licznika przed nawias?",
+        "expression": "$f'(x) = \\frac{e^{3x}(2\\cos(2x) - 3\\sin(2x))}{e^{6x}}$",
+        "explanation": "Wyłączamy wspólny czynnik $e^{3x}$ z licznika"
+      },
+      {
+        "step": 6,
+        "hint": "Co się stanie gdy podzielisz $e^{3x}$ przez $e^{6x}$?",
+        "expression": "$f'(x) = \\frac{2\\cos(2x) - 3\\sin(2x)}{e^{3x}}$",
+        "explanation": "Upraszczamy używając właściwości potęg: $\\frac{e^{3x}}{e^{6x}} = e^{3x-6x} = e^{-3x} = \\frac{1}{e^{3x}}$"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{2\\cos(2x) - 3\\sin(2x)}{e^{3x}}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T06:48:02.129Z"
+  },
+  {
+    "id": "derivative_ln_tan_x2",
+    "topic": "Pochodna funkcji złożonej",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = \\ln(\\tan(x^2))$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile warstw funkcji widzisz w tym złożeniu?",
+        "expression": "$f(x) = \\ln(\\tan(x^2))$",
+        "explanation": "Mamy funkcję złożoną trzech warstw: logarytm z tangensa z kwadratu",
+        "why": "To złożenie trzech funkcji: $\\ln(u)$ gdzie $u = \\tan(v)$ gdzie $v = x^2$. Potrzebujemy reguły łańcuchowej dwukrotnie."
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest pochodna logarytmu naturalnego z funkcji u(x)?",
+        "expression": "$(\\ln(u))' = \\frac{1}{u} \\cdot u'$",
+        "explanation": "Stosujemy wzór na pochodną logarytmu naturalnego z funkcji złożonej"
+      },
+      {
+        "step": 3,
+        "hint": "Co podstawimy za u i jak obliczymy u'?",
+        "expression": "$u = \\tan(x^2)$, więc $u' = (\\tan(x^2))'$",
+        "explanation": "Identyfikujemy funkcję wewnętrzną i przygotowujemy się do obliczenia jej pochodnej"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest pochodna tangensa z funkcji v(x)?",
+        "expression": "$(\\tan(v))' = \\frac{1}{\\cos^2(v)} \\cdot v' = \\sec^2(v) \\cdot v'$",
+        "explanation": "Stosujemy wzór na pochodną tangensa z funkcji złożonej",
+        "why": "Wzór $\\sec^2(v) = \\frac{1}{\\cos^2(v)}$ to ta sama funkcja. Niektórzy preferują zapis z sekanseм."
+      },
+      {
+        "step": 5,
+        "hint": "Co podstawimy za v i jaka jest pochodna v?",
+        "expression": "$v = x^2$, więc $v' = 2x$",
+        "explanation": "Obliczamy pochodną najgłębszej funkcji"
+      },
+      {
+        "step": 6,
+        "hint": "Jak połączyć wszystkie części zgodnie z regułą łańcuchową?",
+        "expression": "$f'(x) = \\frac{1}{\\tan(x^2)} \\cdot \\frac{1}{\\cos^2(x^2)} \\cdot 2x$",
+        "explanation": "Mnożymy wszystkie pochodne zgodnie z regułą łańcuchową"
+      },
+      {
+        "step": 7,
+        "hint": "Czy można uprościć wyrażenie używając tożsamości trygonometrycznych?",
+        "expression": "$f'(x) = \\frac{2x}{\\tan(x^2) \\cdot \\cos^2(x^2)} = \\frac{2x \\cos(x^2)}{\\sin(x^2) \\cos^2(x^2)} = \\frac{2x}{\\sin(x^2) \\cos(x^2)}$",
+        "explanation": "Upraszczamy używając $\\tan(x^2) = \\frac{\\sin(x^2)}{\\cos(x^2)}$",
+        "why": "Można też zostawić w postaci z poprzedniego kroku. Dalsze uproszczenie: $\\frac{2x}{\\sin(x^2)\\cos(x^2)} = \\frac{4x}{\\sin(2x^2)}$ używając $\\sin(2\\alpha) = 2\\sin(\\alpha)\\cos(\\alpha)$."
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{2x}{\\sin(x^2)\\cos(x^2)}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T06:48:19.473Z"
+  },
+  {
+    "id": "derivative_exponential_composite",
+    "topic": "Pochodna funkcji złożonej",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = e^{\\sqrt{x^2+1}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką strukturę ma ta funkcja - co jest funkcją zewnętrzną, a co wewnętrzną?",
+        "expression": "$f(x) = e^{\\sqrt{x^2+1}}$",
+        "explanation": "Mamy funkcję złożoną: funkcja wykładnicza z podstawą e i wykładnikiem $\\sqrt{x^2+1}$",
+        "why": "To złożenie trzech funkcji: $e^u$ gdzie $u = \\sqrt{v}$ i $v = x^2+1$. Potrzebujemy reguły łańcuchowej."
+      },
+      {
+        "step": 2,
+        "hint": "Jak brzmi reguła łańcuchowa dla funkcji $e^{g(x)}$?",
+        "expression": "$f'(x) = e^{\\sqrt{x^2+1}} \\cdot (\\sqrt{x^2+1})'$",
+        "explanation": "Stosujemy regułę łańcuchową: pochodna $e^{g(x)}$ to $e^{g(x)} \\cdot g'(x)$",
+        "why": "Funkcja wykładnicza $e^u$ ma pochodną $e^u \\cdot u'$. Teraz musimy znaleźć pochodną wykładnika."
+      },
+      {
+        "step": 3,
+        "hint": "Jak przepisać pierwiastek, żeby łatwiej było go różniczkować?",
+        "expression": "$\\sqrt{x^2+1} = (x^2+1)^{\\frac{1}{2}}$",
+        "explanation": "Przepisujemy pierwiastek jako potęgę z wykładnikiem ułamkowym"
+      },
+      {
+        "step": 4,
+        "hint": "Którą regułę zastosujemy do $(x^2+1)^{\\frac{1}{2}}$?",
+        "expression": "$(\\sqrt{x^2+1})' = \\frac{1}{2}(x^2+1)^{-\\frac{1}{2}} \\cdot (x^2+1)'$",
+        "explanation": "Ponownie reguła łańcuchowa: pochodna $(g(x))^n$ to $n \\cdot (g(x))^{n-1} \\cdot g'(x)$",
+        "why": "Mamy kolejne złożenie! $(x^2+1)^{\\frac{1}{2}}$ to potęga funkcji $x^2+1$."
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest pochodna wielomianu $x^2+1$?",
+        "expression": "$(x^2+1)' = 2x$",
+        "explanation": "Pochodna sumy to suma pochodnych: $(x^2)' + (1)' = 2x + 0 = 2x$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć wyrażenie $\\frac{1}{2}(x^2+1)^{-\\frac{1}{2}}$?",
+        "expression": "$(\\sqrt{x^2+1})' = \\frac{1}{2} \\cdot \\frac{1}{\\sqrt{x^2+1}} \\cdot 2x = \\frac{x}{\\sqrt{x^2+1}}$",
+        "explanation": "Przepisujemy potęgę ujemną jako ułamek i upraszczamy"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymamy, podstawiając wszystko do wzoru z kroku 2?",
+        "expression": "$f'(x) = e^{\\sqrt{x^2+1}} \\cdot \\frac{x}{\\sqrt{x^2+1}}$",
+        "explanation": "Podstawiamy obliczoną pochodną wykładnika do wzoru z reguły łańcuchowej"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = \\frac{x \\cdot e^{\\sqrt{x^2+1}}}{\\sqrt{x^2+1}}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T06:48:41.112Z"
+  },
+  {
+    "id": "exponential_variable_base_and_exponent",
+    "topic": "Pochodna funkcji wykładniczej o zmiennej podstawie i wykładniku",
+    "difficulty": 5,
+    "statement": "Oblicz pochodną funkcji $f(x) = (2x+1)^x$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co sprawia, że ta funkcja jest wyjątkowa - podstawa czy wykładnik?",
+        "expression": "$f(x) = (2x+1)^x$",
+        "explanation": "Mamy funkcję gdzie zarówno podstawa jak i wykładnik zależą od x",
+        "why": "To nie jest zwykła funkcja wykładnicza ani potęgowa! Gdy obie części potęgi zależą od x, standardowe wzory nie działają. Musimy użyć logarytmowania."
+      },
+      {
+        "step": 2,
+        "hint": "Jak logarytm naturalny może uprościć tę potęgę?",
+        "expression": "$\\ln f(x) = \\ln[(2x+1)^x] = x \\ln(2x+1)$",
+        "explanation": "Logarytmujemy obie strony i używamy właściwości $\\ln(a^b) = b\\ln(a)$"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie gdy zróżniczkujesz obie strony równania z ln?",
+        "expression": "$\\frac{d}{dx}[\\ln f(x)] = \\frac{d}{dx}[x \\ln(2x+1)]$",
+        "explanation": "Różniczkujemy obie strony względem x"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wygląda pochodna ln f(x) przez regułę łańcuchową?",
+        "expression": "$\\frac{f'(x)}{f(x)} = \\frac{d}{dx}[x \\ln(2x+1)]$",
+        "explanation": "Lewa strona to $\\frac{d}{dx}[\\ln f(x)] = \\frac{f'(x)}{f(x)}$",
+        "why": "To kluczowy moment! Pochodna $\\ln u$ to $\\frac{u'}{u}$. Dlatego $\\frac{d}{dx}[\\ln f(x)] = \\frac{f'(x)}{f(x)}$."
+      },
+      {
+        "step": 5,
+        "hint": "Którą regułę zastosować dla iloczynu x i ln(2x+1)?",
+        "expression": "$\\frac{f'(x)}{f(x)} = 1 \\cdot \\ln(2x+1) + x \\cdot \\frac{2}{2x+1}$",
+        "explanation": "Używamy reguły iloczynu: $(uv)' = u'v + uv'$",
+        "why": "Reguła iloczynu: pochodna pierwszego razy drugie plus pierwsze razy pochodna drugiego. Uwaga: $\\frac{d}{dx}[\\ln(2x+1)] = \\frac{2}{2x+1}$ przez regułę łańcuchową!"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć wyrażenie z ułamkiem?",
+        "expression": "$\\frac{f'(x)}{f(x)} = \\ln(2x+1) + \\frac{2x}{2x+1}$",
+        "explanation": "Upraszczamy $x \\cdot \\frac{2}{2x+1} = \\frac{2x}{2x+1}$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak wyizolować f'(x) z tego równania?",
+        "expression": "$f'(x) = f(x) \\cdot \\left[\\ln(2x+1) + \\frac{2x}{2x+1}\\right]$",
+        "explanation": "Mnożymy obie strony przez $f(x)$"
+      },
+      {
+        "step": 8,
+        "hint": "Czym zastąpić f(x) w końcowym wyniku?",
+        "expression": "$f'(x) = (2x+1)^x \\cdot \\left[\\ln(2x+1) + \\frac{2x}{2x+1}\\right]$",
+        "explanation": "Podstawiamy $f(x) = (2x+1)^x$"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = (2x+1)^x \\cdot \\left[\\ln(2x+1) + \\frac{2x}{2x+1}\\right]$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T06:48:59.165Z"
+  },
+  {
+    "id": "logarithmic_power_derivative",
+    "topic": "Pochodna funkcji złożonej z logarytmem",
+    "difficulty": 5,
+    "statement": "Oblicz pochodną funkcji $f(x) = (\\ln x)^{\\cos x}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co sprawia, że ta funkcja jest szczególnie trudna do różniczkowania?",
+        "expression": "$f(x) = (\\ln x)^{\\cos x}$",
+        "explanation": "Mamy funkcję postaci $u(x)^{v(x)}$, gdzie zarówno podstawa jak i wykładnik zależą od x",
+        "why": "Standardowe wzory na pochodną potęgi działają tylko gdy wykładnik jest stały. Tu potrzebujemy logarytmowania obustronnego."
+      },
+      {
+        "step": 2,
+        "hint": "Jak logarytm naturalny może uprościć tę funkcję?",
+        "expression": "$\\ln f(x) = \\ln[(\\ln x)^{\\cos x}] = \\cos x \\cdot \\ln(\\ln x)$",
+        "explanation": "Logarytmujemy obie strony, używając właściwości $\\ln(a^b) = b \\ln a$"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz różniczkując obie strony względem x?",
+        "expression": "$\\frac{f'(x)}{f(x)} = \\frac{d}{dx}[\\cos x \\cdot \\ln(\\ln x)]$",
+        "explanation": "Lewa strona to pochodna logarytmu funkcji, prawa wymaga reguły iloczynu",
+        "why": "Pochodna $\\ln f(x)$ to $\\frac{f'(x)}{f(x)}$ - to kluczowa technika dla funkcji typu $u^v$."
+      },
+      {
+        "step": 4,
+        "hint": "Którą regułę zastosujemy do prawej strony równania?",
+        "expression": "$\\frac{f'(x)}{f(x)} = (-\\sin x) \\cdot \\ln(\\ln x) + \\cos x \\cdot \\frac{1}{\\ln x} \\cdot \\frac{1}{x}$",
+        "explanation": "Używamy reguły iloczynu: $(uv)' = u'v + uv'$, gdzie $u = \\cos x$, $v = \\ln(\\ln x)$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć drugi składnik w tym wyrażeniu?",
+        "expression": "$\\frac{f'(x)}{f(x)} = -\\sin x \\cdot \\ln(\\ln x) + \\frac{\\cos x}{x \\ln x}$",
+        "explanation": "Upraszczamy $\\cos x \\cdot \\frac{1}{\\ln x} \\cdot \\frac{1}{x} = \\frac{\\cos x}{x \\ln x}$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak teraz wyznaczyć f'(x) z równania $\\frac{f'(x)}{f(x)} = ...$?",
+        "expression": "$f'(x) = f(x) \\cdot \\left[-\\sin x \\cdot \\ln(\\ln x) + \\frac{\\cos x}{x \\ln x}\\right]$",
+        "explanation": "Mnożymy obie strony przez $f(x)$"
+      },
+      {
+        "step": 7,
+        "hint": "Czym zastąpić f(x) w końcowym wyniku?",
+        "expression": "$f'(x) = (\\ln x)^{\\cos x} \\cdot \\left[-\\sin x \\cdot \\ln(\\ln x) + \\frac{\\cos x}{x \\ln x}\\right]$",
+        "explanation": "Podstawiamy $f(x) = (\\ln x)^{\\cos x}$ do otrzymanego wzoru"
+      }
+    ],
+    "solutions": [
+      "$f'(x) = (\\ln x)^{\\cos x} \\cdot \\left[-\\sin x \\cdot \\ln(\\ln x) + \\frac{\\cos x}{x \\ln x}\\right]$"
+    ],
+    "parameters": {
+      "domain": "$x > 0$ i $\\ln x > 0$, czyli $x > 1$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:49:17.853Z"
+  },
+  {
+    "id": "extrema_cubic_function",
+    "topic": "Ekstrema funkcji",
+    "difficulty": 3,
+    "statement": "Znajdź ekstrema lokalne funkcji $f(x) = x^3 - 3x^2 - 9x + 5$ za pomocą pochodnej",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co musi być spełnione w punktach ekstremów lokalnych?",
+        "expression": "$f'(x) = 3x^2 - 6x - 9$",
+        "explanation": "Obliczamy pierwszą pochodną funkcji",
+        "why": "W punktach ekstremów lokalnych pochodna musi być równa zero lub nie istnieć. Dla wielomianów pochodna zawsze istnieje, więc szukamy miejsc zerowych."
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozłożyć wyrażenie $3x^2 - 6x - 9$ na czynniki?",
+        "expression": "$f'(x) = 0 \\Rightarrow 3x^2 - 6x - 9 = 0$",
+        "explanation": "Przyrównujemy pochodną do zera"
+      },
+      {
+        "step": 3,
+        "hint": "Co można wyłączyć przed nawias w tym równaniu?",
+        "expression": "$3(x^2 - 2x - 3) = 0 \\Rightarrow x^2 - 2x - 3 = 0$",
+        "explanation": "Wyłączamy wspólny czynnik 3 przed nawias"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie liczby w iloczynie dają -3, a w sumie -2?",
+        "expression": "$(x - 3)(x + 1) = 0$",
+        "explanation": "Rozkładamy trójmian kwadratowy na czynniki",
+        "why": "Szukamy dwóch liczb: $a \\cdot b = -3$ i $a + b = -2$. To są liczby 1 i -3, więc $x^2 - 2x - 3 = (x - 3)(x + 1)$."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie wartości x zerują każdy z czynników?",
+        "expression": "$x = 3$ lub $x = -1$",
+        "explanation": "Znajdujemy punkty krytyczne funkcji"
+      },
+      {
+        "step": 6,
+        "hint": "Jak druga pochodna pomoże określić typ ekstremum?",
+        "expression": "$f''(x) = 6x - 6$",
+        "explanation": "Obliczamy drugą pochodną do testu drugiej pochodnej",
+        "why": "Test drugiej pochodnej: jeśli $f''(x_0) > 0$, to minimum lokalne; jeśli $f''(x_0) < 0$, to maksimum lokalne."
+      },
+      {
+        "step": 7,
+        "hint": "Co oznacza znak drugiej pochodnej w punkcie x = -1?",
+        "expression": "$f''(-1) = 6(-1) - 6 = -12 < 0$",
+        "explanation": "W punkcie $x = -1$ mamy maksimum lokalne"
+      },
+      {
+        "step": 8,
+        "hint": "Co oznacza znak drugiej pochodnej w punkcie x = 3?",
+        "expression": "$f''(3) = 6(3) - 6 = 12 > 0$",
+        "explanation": "W punkcie $x = 3$ mamy minimum lokalne"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są wartości funkcji w punktach ekstremów?",
+        "expression": "$f(-1) = (-1)^3 - 3(-1)^2 - 9(-1) + 5 = -1 - 3 + 9 + 5 = 10$",
+        "explanation": "Obliczamy wartość funkcji w maksimum lokalnym"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest wartość funkcji w drugim punkcie krytycznym?",
+        "expression": "$f(3) = 3^3 - 3(3)^2 - 9(3) + 5 = 27 - 27 - 27 + 5 = -22$",
+        "explanation": "Obliczamy wartość funkcji w minimum lokalnym"
+      }
+    ],
+    "solutions": [
+      "Maksimum lokalne: $(-1, 10)$",
+      "Minimum lokalne: $(3, -22)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-10T06:49:36.333Z"
+  },
+  {
+    "id": "absolute_value_derivative",
+    "topic": "Pochodna funkcji z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Oblicz pochodną funkcji $f(x) = |x^2 - 4|$ w punkcie $x = 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy wyrażenie pod wartością bezwzględną zmienia znak?",
+        "expression": "$x^2 - 4 = 0$ gdy $x = -2$ lub $x = 2$",
+        "explanation": "Znajdujemy punkty, gdzie wyrażenie pod wartością bezwzględną równa się zero",
+        "why": "W tych punktach funkcja może nie być różniczkowalna. Musimy sprawdzić zachowanie funkcji w okolicy tych punktów."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest znak wyrażenia $x^2 - 4$ dla $x > 2$?",
+        "expression": "Dla $x > 2$: $x^2 - 4 > 0$, więc $|x^2 - 4| = x^2 - 4$",
+        "explanation": "W przedziale $(2, +\\infty)$ funkcja ma postać $f(x) = x^2 - 4$"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest znak wyrażenia $x^2 - 4$ dla $x < 2$?",
+        "expression": "Dla $x \\in (-2, 2)$: $x^2 - 4 < 0$, więc $|x^2 - 4| = -(x^2 - 4) = 4 - x^2$",
+        "explanation": "W przedziale $(-2, 2)$ funkcja ma postać $f(x) = 4 - x^2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć pochodną prawostronną w punkcie $x = 2$?",
+        "expression": "$f'_+(2) = \\lim_{h \\to 0^+} \\frac{f(2+h) - f(2)}{h} = \\lim_{h \\to 0^+} \\frac{(2+h)^2 - 4 - 0}{h}$",
+        "explanation": "Używamy definicji pochodnej dla $x > 2$, gdzie $f(x) = x^2 - 4$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po rozwinięciu i uproszczeniu granicy prawostronnej?",
+        "expression": "$f'_+(2) = \\lim_{h \\to 0^+} \\frac{4 + 4h + h^2 - 4}{h} = \\lim_{h \\to 0^+} \\frac{4h + h^2}{h} = \\lim_{h \\to 0^+} (4 + h) = 4$",
+        "explanation": "Pochodna prawostronna w punkcie $x = 2$ wynosi 4"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć pochodną lewostronną w punkcie $x = 2$?",
+        "expression": "$f'_-(2) = \\lim_{h \\to 0^-} \\frac{f(2+h) - f(2)}{h} = \\lim_{h \\to 0^-} \\frac{4 - (2+h)^2 - 0}{h}$",
+        "explanation": "Używamy definicji pochodnej dla $x < 2$, gdzie $f(x) = 4 - x^2$"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz po rozwinięciu i uproszczeniu granicy lewostronnej?",
+        "expression": "$f'_-(2) = \\lim_{h \\to 0^-} \\frac{4 - 4 - 4h - h^2}{h} = \\lim_{h \\to 0^-} \\frac{-4h - h^2}{h} = \\lim_{h \\to 0^-} (-4 - h) = -4$",
+        "explanation": "Pochodna lewostronna w punkcie $x = 2$ wynosi -4"
+      },
+      {
+        "step": 8,
+        "hint": "Co oznacza różność pochodnych jednostronnych?",
+        "expression": "$f'_+(2) = 4 \\neq -4 = f'_-(2)$",
+        "explanation": "Pochodne jednostronne są różne, więc funkcja nie jest różniczkowalna w punkcie $x = 2$",
+        "why": "Funkcja jest różniczkowalna tylko wtedy, gdy pochodne lewo- i prawostronna są równe. Tutaj mamy 'załamanie' wykresu w punkcie $x = 2$."
+      }
+    ],
+    "solutions": [
+      "Funkcja nie jest różniczkowalna w punkcie $x = 2$"
+    ],
+    "parameters": {
+      "point": "$x = 2$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-10T06:49:54.098Z"
   }
+
 ]

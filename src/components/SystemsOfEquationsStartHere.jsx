@@ -1,6 +1,5 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import MathRenderer from './MathRenderer';
-import NextProblemSuggestion from './NextProblemSuggestion';
 
 const SystemsOfEquationsStartHere = ({ 
   problems, 
