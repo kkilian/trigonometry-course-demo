@@ -3,6 +3,7 @@ import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
+import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -13,7 +14,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       problemCount: 0,
       hasSubmenu: true,
       topicsCount: 13,
-      disabled: true
+      disabled: false
     },
     {
       id: 'powers',
@@ -43,6 +44,12 @@ const WelcomeScreen = ({ onSelectMode }) => {
       title: 'Funkcje Homograficzne',
       description: 'Funkcje postaci f(x) = (ax+b)/(cx+d), ich właściwości i wykresy',
       problemCount: homographicFunctionsProblems.length
+    },
+    {
+      id: 'elementary-fractions',
+      title: 'Ułamki - szkoła podstawowa',
+      description: 'Podstawy ułamków zwykłych - dodawanie, odejmowanie, mnożenie i dzielenie',
+      problemCount: elementaryFractionsProblems.length
     },
     {
       id: 'systems-of-equations',
@@ -88,7 +95,9 @@ const WelcomeScreen = ({ onSelectMode }) => {
                     ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60' 
                     : module.id === 'homographic-functions'
                       ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border'
-                      : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
+                      : module.id === 'elementary-fractions'
+                        ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border-green'
+                        : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
               >
                 {(module.isPremium || module.isAI) && (

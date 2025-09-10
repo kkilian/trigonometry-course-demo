@@ -263,6 +263,13 @@ const NextProblemSuggestion = ({
         localStorage.setItem('homographic-functions-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for homographic functions:', suggestedIds);
       }
+      
+      // Save suggested problems to localStorage for elementary fractions module
+      if (currentProblem.id && currentProblem.id.includes('elementary_fraction')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('elementary-fractions-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for elementary fractions:', suggestedIds);
+      }
 
       return bestMatches;
 

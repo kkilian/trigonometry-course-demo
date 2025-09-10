@@ -1,0 +1,154 @@
+**Analiza i optymalizacja systemu rekomendacji zadań edukacyjnych - NextProblemSuggestion.jsx**
+
+## KONTEKST
+Mam komponent React który sugeruje następne zadania matematyczne dla uczniów. System obecnie używa podobieństwa treści (TF-IDF + cosine similarity) oraz czasu rozwiązania do doboru zadań.
+
+## KRYTYCZNE PROBLEMY DO ROZWIĄZANIA
+
+### 1. NIEODWRACALNA ESKALACJA TRUDNOŚCI
+**Problem:** Gdy uczeń rozwiąże zadanie szybko (np. przypadkowo, znał odpowiedź, lub miał szczęście), system automatycznie zwiększa trudność (linie 41-43). Nie ma mechanizmu powrotu do łatwiejszych zadań. To prowadzi do:
+- Frustracji uczniów którzy trafili na za trudne zadania
+- Porzucania nauki gdy zadania stają się przytłaczające
+- Braku możliwości "resetu" po przerwie w nauce
+
+### 2. SZTYWNE PROGI CZASOWE
+**Kod problematyczny (linie 34-50):**
+```javascript
+if (duration < expectedTime * 0.7) {
+  return Math.min(currentDifficulty + 1, 5); // Za szybko = trudniejsze
+} else if (duration > expectedTime * 1.5) {
+  return Math.max(currentDifficulty - 1, 1); // Za wolno = łatwiejsze
+}
+```
+**Problemy:**
+- Nie uwzględnia kontekstu (pora dnia, zmęczenie, przerwy)
+- Ignoruje indywidualne tempo uczenia się
+- Brak adaptacji do różnych stylów rozwiązywania
+
+### 3. BRAK RÓŻNORODNOŚCI W SUGESTIACH
+**Obecna logika (linie 109-120):** System sortuje zadania według `progressionScore` i wybiera top 3, ale wszystkie są optymalizowane pod ten sam `targetDifficulty`.
+
+**Potrzebujemy:** Zawsze oferować 3 opcje:
+- Zadanie komfortowe (łatwiejsze) - budowanie pewności siebie
+- Zadanie na poziomie - kontynuacja nauki
+- Zadanie-wyzwanie (trudniejsze) - dla ambitnych
+
+## PYTANIA BADAWCZE
+
+### 1. ALGORYTMY ADAPTIVE LEARNING
+Które sprawdzą się najlepiej w kontekście edukacyjnym?
+- **Item Response Theory (IRT)** - modelowanie prawdopodobieństwa sukcesu
+- **Bayesian Knowledge Tracing** - śledzenie stanu wiedzy
+- **Deep Knowledge Tracing (DKT)** - sieci neuronowe RNN/LSTM
+- **Reinforcement Learning** - maksymalizacja długoterminowego postępu
+- **Multi-Armed Bandit** - balansowanie eksploracji i eksploatacji
+
+### 2. METRYKI ZROZUMIENIA
+Jakie sygnały oprócz czasu wskazują rzeczywisty poziom zrozumienia?
+- Liczba prób rozwiązania
+- Użycie podpowiedzi
+- Wzorce błędów (konceptualne vs obliczeniowe)
+- Czas spędzony na każdym kroku
+- Powroty do wcześniejszych kroków
+- Konsystencja rozwiązań podobnych zadań
+
+### 3. PSYCHOLOGIA EDUKACYJNA
+- Jak implementować **Zone of Proximal Development** (Vygotsky)?
+- Jak uwzględnić **Flow Theory** (Csikszentmihalyi) - balans wyzwanie/umiejętności?
+- Jak zastosować **Spaced Repetition** i **Interleaving**?
+- Jak zapobiegać **learned helplessness**?
+
+### 4. MECHANIZMY ADAPTACYJNE
+- **Confidence scoring:** Jak pozwolić uczniowi wskazać pewność odpowiedzi?
+- **Soft reset:** Jak elegancko wrócić do łatwiejszych zadań bez poczucia regresu?
+- **Momentum tracking:** Jak wykryć gdy uczeń "złapał rytm" vs "zgaduje"?
+- **Forgetting curve:** Jak modelować zanikanie wiedzy po przerwie?
+
+## PROPOZYCJA ROZWIĄZANIA - SZKIC
+
+```javascript
+// Zamiast pojedynczego targetDifficulty
+const getSuggestedProblems = (currentDifficulty, performance) => {
+  // Zawsze zwracaj 3 zadania o różnych poziomach
+  return {
+    comfort: {
+      difficulty: Math.max(1, currentDifficulty - 1),
+      label: "Rozgrzewka",
+      color: "green",
+      description: "Utrwal podstawy"
+    },
+    challenge: {
+      difficulty: currentDifficulty,
+      label: "Kontynuuj",
+      color: "yellow", 
+      description: "Twój poziom"
+    },
+    stretch: {
+      difficulty: Math.min(5, currentDifficulty + 1),
+      label: "Wyzwanie",
+      color: "orange",
+      description: "Sprawdź się"
+    }
+  };
+};
+
+// System śledzenia momentum
+const trackLearningMomentum = (history) => {
+  // Analiza ostatnich 5 zadań
+  const recentPerformance = history.slice(-5);
+  const successRate = recentPerformance.filter(p => p.correct).length / 5;
+  const avgTime = recentPerformance.reduce((a,b) => a + b.time, 0) / 5;
+  const consistency = calculateConsistency(recentPerformance);
+  
+  return {
+    isStruggling: successRate < 0.4,
+    isFlowing: successRate > 0.7 && consistency > 0.8,
+    needsBreak: detectFatigue(recentPerformance),
+    readyForChallenge: successRate > 0.9 && avgTime < expectedTime * 0.5
+  };
+};
+```
+
+## KONKRETNE PYTANIA DO ZBADANIA
+
+1. **Implementacja IRT w JavaScript:**
+   - Jak estymować parametry zadań (difficulty, discrimination)?
+   - Jak aktualizować ability ucznia w czasie rzeczywistym?
+   - Przykład kodu z bibliotekami lub vanilla JS?
+
+2. **UI/UX dla 3-poziomowej sugestii:**
+   - Jak wizualnie przedstawić 3 opcje bez przytłoczenia?
+   - Czy używać metafor (schody, ścieżki, poziomy)?
+   - Jak pokazać konsekwencje wyboru bez wywierania presji?
+
+3. **Dane do analizy:**
+   - Jakie minimum danych potrzebujemy do skutecznej personalizacji?
+   - Jak radzić sobie z "cold start problem" dla nowych użytkowników?
+   - Jak anonimowo agregować dane między użytkownikami?
+
+4. **Gamifikacja vs Edukacja:**
+   - Jak balansować motywację zewnętrzną (punkty, odznaki) z wewnętrzną?
+   - Czy pokazywać postęp w sposób liniowy czy nieliniowy?
+   - Jak unikać "teaching to the test"?
+
+## KOD KOMPONENTU DO ANALIZY
+[Pełny kod NextProblemSuggestion.jsx - linie 1-285]
+
+## OCZEKIWANE REZULTATY
+
+1. **Konkretny algorytm** z pseudokodem i implementacją JavaScript
+2. **Architektura systemu** z diagramem przepływu danych
+3. **Metryki sukcesu** - jak mierzyć czy system działa lepiej?
+4. **A/B testing strategy** - jak testować różne podejścia?
+5. **Fallback mechanisms** - co gdy ML/AI zawodzi?
+
+## DODATKOWE KONTEKSTY
+
+- Aplikacja jest w React z TypeScript
+- Używamy TailwindCSS do stylów
+- Dane zadań są w JSON z polami: id, statement, steps, difficulty (opcjonalne)
+- System musi działać w przeglądarce (no backend ML)
+- Docelowi użytkownicy: uczniowie liceum (15-18 lat)
+- Przedmiot: matematyka (trygonometria, pochodne, układy równań)
+
+Proszę o dogłębną analizę z konkretnymi, implementowalnymi rozwiązaniami które rozwiążą opisane problemy. Szczególnie zależy mi na rozwiązaniu problemu nieodwracalnej eskalacji trudności i zapewnieniu zawsze 3 poziomów trudności do wyboru.

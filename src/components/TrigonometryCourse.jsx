@@ -8,6 +8,7 @@ import AIChat from './AIChat';
 import TrigonometryStartHere from './TrigonometryStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
+import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
 import powersProblems from '../data/powers-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -29,6 +30,7 @@ import basics12Problems from '../data/basics-12-statystyka.json';
 import basics13Problems from '../data/basics-13-uklady-rownan.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
+import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -64,6 +66,7 @@ const TrigonometryCourse = () => {
   const [completedBasics13Problems, setCompletedBasics13Problems] = useState(new Set());
   const [completedSystemsOfEquationsProblems, setCompletedSystemsOfEquationsProblems] = useState(new Set());
   const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
+  const [completedElementaryFractionsProblems, setCompletedElementaryFractionsProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -104,6 +107,7 @@ const TrigonometryCourse = () => {
     if (mode === 'basics-13-uklady-rownan') return basics13Problems;
     if (mode === 'systems-of-equations') return systemsOfEquationsProblems;
     if (mode === 'homographic-functions') return homographicFunctionsProblems;
+    if (mode === 'elementary-fractions') return elementaryFractionsProblems;
     return [];
   };
   
@@ -129,6 +133,7 @@ const TrigonometryCourse = () => {
     if (mode === 'basics-13-uklady-rownan') return completedBasics13Problems;
     if (mode === 'systems-of-equations') return completedSystemsOfEquationsProblems;
     if (mode === 'homographic-functions') return completedHomographicFunctionsProblems;
+    if (mode === 'elementary-fractions') return completedElementaryFractionsProblems;
     return completedPowersProblems;
   };
   
@@ -173,6 +178,8 @@ const TrigonometryCourse = () => {
       setCompletedSystemsOfEquationsProblems(newSet);
     } else if (mode === 'homographic-functions') {
       setCompletedHomographicFunctionsProblems(newSet);
+    } else if (mode === 'elementary-fractions') {
+      setCompletedElementaryFractionsProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -309,6 +316,12 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
+    if (mode === 'elementary-fractions') {
+      return {
+        title: 'Ułamki - szkoła podstawowa',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
     return {
       title: '',
       subtitle: ''
@@ -358,6 +371,16 @@ const TrigonometryCourse = () => {
         console.error('Error loading homographic-functions progress:', e);
       }
     }
+
+    // Load elementary-fractions progress
+    const savedElementaryFractions = localStorage.getItem('completedElementaryFractionsProblems');
+    if (savedElementaryFractions) {
+      try {
+        setCompletedElementaryFractionsProblems(new Set(JSON.parse(savedElementaryFractions)));
+      } catch (e) {
+        console.error('Error loading elementary-fractions progress:', e);
+      }
+    }
   }, []);
 
   // Save powers progress
@@ -379,6 +402,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedHomographicFunctionsProblems', JSON.stringify([...completedHomographicFunctionsProblems]));
   }, [completedHomographicFunctionsProblems]);
+
+  // Save elementary-fractions progress
+  useEffect(() => {
+    localStorage.setItem('completedElementaryFractionsProblems', JSON.stringify([...completedElementaryFractionsProblems]));
+  }, [completedElementaryFractionsProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);
@@ -541,6 +569,14 @@ const TrigonometryCourse = () => {
       ) : mode === 'homographic-functions' ? (
         // Special handling for homographic functions - show start here screen instead of problem list
         <HomographicFunctionsStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
+        />
+      ) : mode === 'elementary-fractions' ? (
+        // Special handling for elementary fractions - show start here screen instead of problem list
+        <ElementaryFractionsStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
