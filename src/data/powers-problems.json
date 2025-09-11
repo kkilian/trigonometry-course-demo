@@ -21,6 +21,30 @@
       {
         "step": 3,
         "hint": "Przypomnij sobie wykres sinusa. W których punktach przedziału $[0, 2\\pi]$ sinus osiąga wartość $\\frac{1}{2}$?",
+        "interactive_choice": {
+          "prompt": "Ile rozwiązań ma równanie $\\sin x = \\frac{1}{2}$ w przedziale $[0, 2\\pi]$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jedno rozwiązanie: $x = \\frac{\\pi}{6}$",
+              "feedback": "Pamiętaj o symetrii sinusa! W przedziale $[0, 2\\pi]$ jest więcej rozwiązań.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Dwa rozwiązania: $x = \\frac{\\pi}{6}$ i $x = \\frac{5\\pi}{6}$",
+              "feedback": "Świetnie! Pamiętałeś o obu rozwiązaniach - w I i II ćwiartce.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Cztery rozwiązania, bo funkcja sinus ma okres $2\\pi$",
+              "feedback": "Okres to $2\\pi$, ale szukamy rozwiązań w jednym okresie $[0, 2\\pi]$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Funkcja sinus osiąga wartość $\\frac{1}{2}$ w dwóch punktach okresu: w I ćwiartce ($\\frac{\\pi}{6}$) i w II ćwiartce ($\\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$)."
+        },
         "expression": "$\\sin x = \\frac{1}{2}$ dla $x = \\frac{\\pi}{6}$ i $x = \\pi - \\frac{\\pi}{6}$",
         "explanation": "W przedziale $[0, 2\\pi]$ sinus równa się $\\frac{1}{2}$ w pierwszej i drugiej ćwiartce",
         "why": "Wartość $\\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$ to jedna z wartości specjalnych wynikających z koła jednostkowego. Drugie rozwiązanie znajdujemy korzystając z symetrii sinusa względem $x = \\frac{\\pi}{2}$, stąd $x = \\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$. Pamiętaj, że sinus jest dodatni w I i II ćwiartce."
@@ -66,6 +90,30 @@
       {
         "step": 1,
         "hint": "Aby rozwiązać równanie z $\\sin^2 x$, musisz najpierw wyznaczyć wartość $\\sin x$. Jak to zrobić?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozpocząć rozwiązywanie równania $\\sin^2 x = \\frac{1}{2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednio szukać kątów, dla których $\\sin^2 x = \\frac{1}{2}$",
+              "feedback": "To może być trudne - lepiej najpierw uprościć do prostszego równania.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wyciągnąć pierwiastek: $\\sin x = \\pm\\sqrt{\\frac{1}{2}}$",
+              "feedback": "Doskonale! To standardowy sposób - sprowadzamy do równania z $\\sin x$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wykorzystać tożsamość $\\sin^2 x = 1 - \\cos^2 x$",
+              "feedback": "Możliwe, ale skomplikuje to równanie. Lepiej wyciągnąć pierwiastek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy mamy równanie z $\\sin^2 x$, najczęściej wyciągamy pierwiastek z obu stron, pamiętając o znaku $\\pm$."
+        },
         "expression": "$\\sin x = \\pm\\sqrt{\\frac{1}{2}}$",
         "explanation": "Wyciągamy pierwiastek kwadratowy z obu stron równania"
       },
@@ -141,6 +189,30 @@
       {
         "step": 1,
         "hint": "Spójrz na strukturę równania. Co ci przypomina wyrażenie $ax^2 + bx + c$?",
+        "interactive_choice": {
+          "prompt": "Jaką strukturę ma równanie $2\\cos^2 x - \\cos x - 1 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Równanie liniowe względem $\\cos x$",
+              "feedback": "Nie - zobacz, że mamy $\\cos^2 x$, czyli potęgę drugą.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Równanie kwadratowe względem $\\cos x$",
+              "feedback": "Dokładnie! Możemy podstawić $t = \\cos x$ i otrzymać $2t^2 - t - 1 = 0$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Równanie mieszane - trzeba użyć tożsamości",
+              "feedback": "Struktura jest czytelna - to klasyczne równanie kwadratowe w $\\cos x$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie ma postać $a\\cos^2 x + b\\cos x + c = 0$, więc możemy je rozwiązać jak zwykłe równanie kwadratowe z podstawieniem $t = \\cos x$."
+        },
         "expression": "$2\\cos^2 x - \\cos x - 1 = 0$",
         "explanation": "Rozpoznajemy równanie kwadratowe względem $\\cos x$"
       },
@@ -217,6 +289,30 @@
       {
         "step": 1,
         "hint": "Jak możesz rozpisać $\\sin(2x)$ używając funkcji kąta pojedynczego?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić równanie $\\sin(2x) = \\cos x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpisać $\\sin(2x) = 2\\sin x \\cos x$",
+              "feedback": "Świetnie! To pozwoli sprowadzić wszystko do funkcji kąta pojedynczego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru $\\cos x = \\sin(\\frac{\\pi}{2} - x)$",
+              "feedback": "To skomplikuje równanie - lepiej rozpisać $\\sin(2x)$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bezpośrednio szukać przecięć wykresów",
+              "feedback": "Graficzna analiza może pomóc, ale algebraicznie będzie bardziej precyzyjnie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozkład $\\sin(2x) = 2\\sin x \\cos x$ pozwala na dalsze przekształcenia algebraiczne."
+        },
         "expression": "$\\sin(2x) = 2\\sin x \\cos x$",
         "explanation": "Stosujemy wzór na sinus podwójnego kąta"
       },
@@ -312,6 +408,30 @@
       {
         "step": 1,
         "hint": "Masz sumę sinusa i cosinusa. Czy pamiętasz wzór, który pozwala przekształcić taką sumę w jeden sinus lub cosinus?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić wyrażenie $\\sin x + \\cos x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zastąpić $\\cos x = \\sin(x + \\frac{\\pi}{2})$ i dodać sinusy",
+              "feedback": "To da $\\sin x + \\sin(x + \\frac{\\pi}{2})$ - można, ale skomplikuje.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru $\\sin x + \\cos x = \\sqrt{2}\\sin(x + \\frac{\\pi}{4})$",
+              "feedback": "Idealnie! To standardowy wzór na sumę sinus + cosinus.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podnieść obie strony do kwadratu",
+              "feedback": "To da $(\\sin x + \\cos x)^2$ - niepotrzebnie skomplikuje równanie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $\\sin x + \\cos x = \\sqrt{2}\\sin(x + \\frac{\\pi}{4})$ jest kluczowy do tego typu równań."
+        },
         "expression": "$\\sin x + \\cos x = \\sqrt{2}\\sin(x + \\frac{\\pi}{4})$",
         "explanation": "Używamy wzoru $\\sin x + \\cos x = \\sqrt{2}\\sin(x + \\frac{\\pi}{4})$"
       },
@@ -398,6 +518,30 @@
       {
         "step": 1,
         "hint": "Masz w równaniu tangens i sinus. Jak możesz wyrazić tangens przez sinus i cosinus?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $\\tan x + 2\\sin x = 0$ z mieszanymi funkcjami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyrazić wszystko przez sinus: $\\tan x = \\frac{\\sin x}{\\cos x}$",
+              "feedback": "Świetnie! To pozwoli sprowadzić do jednej funkcji podstawowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wyrazić wszystko przez tangens: $\\sin x = \\tan x \\cos x$",
+              "feedback": "Możliwe, ale skomplikuje równanie - lepiej przez sinus/cosinus.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzorów półkąta do przekształcenia",
+              "feedback": "Wzory półkąta tu nie będą potrzebne - lepiej podstawowa definicja.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $\\tan x = \\frac{\\sin x}{\\cos x}$ sprowadza równanie do funkcji elementarnych."
+        },
         "expression": "$\\frac{\\sin x}{\\cos x} + 2\\sin x = 0$",
         "explanation": "Podstawiamy definicję tangensa $\\tan x = \\frac{\\sin x}{\\cos x}$"
       },
@@ -503,6 +647,30 @@
       {
         "step": 2,
         "hint": "Jak możesz wyrazić $\\sin^4 x + \\cos^4 x$ używając wzoru na kwadrat sumy? Spróbuj podnieść tożsamość do kwadratu",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej przepisać wyrażenie $\\sin^4 x + \\cos^4 x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $(\\sin^2 x + \\cos^2 x)^2$ i rozwinąć",
+              "feedback": "Doskonale! To klucz - otrzymasz wyrażenie z $\\sin^2 x \\cos^2 x$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Bezpośrednio podstawić wzory na $\\sin^4 x$ i $\\cos^4 x$",
+              "feedback": "To bardzo skomplikuje obliczenia - lepiej użyć tożsamości algebraicznej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wykorzystać wzory podwójnego kąta dla czwartych potęg",
+              "feedback": "Wzory podwójnego kąta przydadzą się później - teraz lepiej algebra.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozwinięcie $(\\sin^2 x + \\cos^2 x)^2 = 1$ da nam $\\sin^4 x + 2\\sin^2 x \\cos^2 x + \\cos^4 x = 1$."
+        },
         "expression": "$(\\sin^2 x + \\cos^2 x)^2 = \\sin^4 x + 2\\sin^2 x \\cos^2 x + \\cos^4 x = 1$",
         "explanation": "Podnosimy podstawową tożsamość do kwadratu i rozwijamy"
       },
@@ -667,6 +835,30 @@
       {
         "step": 3,
         "hint": "Czy pamiętasz wzór na sinus kąta dopełniającego do $\\pi$? Jak uprościć $\\sin(\\pi - x)$?",
+        "interactive_choice": {
+          "prompt": "Jaka jest wartość $\\sin(\\pi - x)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\sin(\\pi - x) = \\sin x$",
+              "feedback": "Doskonale! To kluczowa tożsamość - sinus ma symetrię względem $\\frac{\\pi}{2}$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\sin(\\pi - x) = -\\sin x$",
+              "feedback": "To nie jest prawda - sprawdź wykres sinusa w przedziale $[0, \\pi]$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\sin(\\pi - x) = \\cos x$",
+              "feedback": "Nie - to nie ma związku z cosinusem, chyba że $x = \\frac{\\pi}{2}$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $\\sin(\\pi - x) = \\sin x$ wynika z symetrii sinusa względem prostej $x = \\frac{\\pi}{2}$ na wykresie."
+        },
         "expression": "$\\sin x + \\sin x = 1$",
         "explanation": "Korzystamy ze wzoru $\\sin(\\pi - x) = \\sin x$"
       },
@@ -748,6 +940,30 @@
       {
         "step": 1,
         "hint": "Jak możesz rozpisać $\\sin(3x)$ używając wzoru na sinus sumy? Pamiętaj, że $3x = 2x + x$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przepisać $\\sin(3x)$ w równaniu $\\frac{\\sin(3x)}{\\sin x} = 2\\cos x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru na sinus sumy: $\\sin(3x) = \\sin(2x + x)$",
+              "feedback": "Doskonały wybór! To pozwoli rozłożyć na funkcje prostsze.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Szukać bezpośrednio wzoru na $\\sin(3x)$ w tablicach",
+              "feedback": "Można, ale lepiej zrozumieć jak ten wzór powstaje z podstawowych.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Pomnożyć obie strony przez $\\sin x$ i pozbyć się ułamka",
+              "feedback": "To nie pomoże rozpisać $\\sin(3x)$ - potrzebujemy wzór na sumę kątów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozkład $\\sin(3x) = \\sin(2x + x)$ pozwala wykorzystać wzór na sinus sumy kątów."
+        },
         "expression": "$\\sin(3x) = \\sin(2x + x) = \\sin(2x)\\cos x + \\cos(2x)\\sin x$",
         "explanation": "Stosujemy wzór na sinus sumy kątów"
       },
@@ -878,6 +1094,30 @@
       {
         "step": 1,
         "hint": "Jaką właściwość ma funkcja arcus sinus względem funkcji sinus? Co się dzieje gdy zastosujemy sinus do obu stron równania?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $\\arcsin(\\sin(2x)) = \\frac{\\pi}{3}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zastosować funkcję sinus do obu stron",
+              "feedback": "Świetnie! To uprości lewą stronę do $\\sin(2x)$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Bezpośrednio podstawić $\\sin(2x) = \\frac{\\pi}{3}$",
+              "feedback": "Nie - $\\arcsin(\\sin(2x)) \\neq \\sin(2x)$ ogólnie. Trzeba ostrożnie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozpisać $\\arcsin$ na wzór różniczkowy",
+              "feedback": "To nie jest potrzebne - wystarczy własność funkcji odwrotnej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Stosując sinus do obu stron wykorzystujemy własność $\\sin(\\arcsin(y)) = y$ dla odpowiednich wartości $y$."
+        },
         "expression": "$\\sin(\\arcsin(\\sin(2x))) = \\sin\\left(\\frac{\\pi}{3}\\right)$",
         "explanation": "Stosujemy funkcję sinus do obu stron równania"
       },
@@ -958,6 +1198,30 @@
       {
         "step": 1,
         "hint": "Wyrażenie $\\sin^6 x + \\cos^6 x$ wygląda skomplikowanie. Czy pamiętasz wzór na sumę sześcianów $a^3 + b^3$?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić wyrażenie $\\sin^6 x + \\cos^6 x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zapisać jako $(\\sin^2 x)^3 + (\\cos^2 x)^3$ i użyć wzoru na sumę sześcianów",
+              "feedback": "Świetnie! To pozwoli wykorzystać wzór $a^3 + b^3 = (a+b)(a^2-ab+b^2)$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwinąć bezpośrednio jako $\\sin^6 x + \\cos^6 x$",
+              "feedback": "To byłoby bardzo skomplikowane - lepiej użyć wzorów algebraicznych.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzorów na potęgi funkcji trygonometrycznych",
+              "feedback": "Wzory na 6. potęgę są zbyt złożone - lepiej algebra.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zapisanie jako sześciany potęg drugich pozwala użyć prostego wzoru algebraicznego."
+        },
         "expression": "$\\sin^6 x + \\cos^6 x = (\\sin^2 x)^3 + (\\cos^2 x)^3$",
         "explanation": "Przepisujemy potęgi szóste jako sześciany potęg drugich"
       },
@@ -976,6 +1240,30 @@
       {
         "step": 4,
         "hint": "Teraz musisz uprościć $\\sin^4 x + \\cos^4 x$. Jak możesz to zrobić używając wzoru $(a + b)^2$?",
+        "interactive_choice": {
+          "prompt": "Jak przekształcić $\\sin^4 x + \\cos^4 x$ do prostszej postaci?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć $(\\sin^2 x + \\cos^2 x)^2$ i odjąć to co za dużo",
+              "feedback": "Dokładnie! $(a+b)^2 = a^2 + 2ab + b^2$, więc trzeba odjąć $2\\sin^2 x \\cos^2 x$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zastosować wzory redukcyjne dla czwartych potęg",
+              "feedback": "Można, ale prostsze jest wykorzystanie tożsamości algebraicznej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $\\sin^2 x = 1 - \\cos^2 x$",
+              "feedback": "To skomplikuje wyrażenie - lepiej użyć wzoru na kwadrat sumy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wykorzystując $(\\sin^2 x + \\cos^2 x)^2 = 1$ możemy łatwo wyrazić sumę czwartych potęg."
+        },
         "expression": "$\\sin^4 x + \\cos^4 x = (\\sin^2 x + \\cos^2 x)^2 - 2\\sin^2 x \\cos^2 x = 1 - 2\\sin^2 x \\cos^2 x$",
         "explanation": "Przekształcamy $(\\sin^2 x)^2 + (\\cos^2 x)^2$ używając wzoru na kwadrat sumy"
       },
@@ -1101,6 +1389,30 @@
       {
         "step": 1,
         "hint": "Masz układ z iloczynami funkcji trygonometrycznych. Czy pamiętasz wzory na sumę i różnicę cosinusów?",
+        "interactive_choice": {
+          "prompt": "Jakie wzory pomogą rozwiązać układ z iloczynami $\\sin x \\sin y$ i $\\cos x \\cos y$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzory na cosinus sumy i różnicy kątów",
+              "feedback": "Świetnie! $\\cos(x \\pm y) = \\cos x \\cos y \\mp \\sin x \\sin y$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzory na iloczyn sinusów i cosinusów",
+              "feedback": "Te wzory idą w drugą stronę - my chcemy połączyć iloczyny.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawienie $\\sin x = \\sqrt{1 - \\cos^2 x}$",
+              "feedback": "To bardzo skomplikuje układ - lepiej użyć wzorów na sumę/różnicę.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory na cosinus sumy i różnicy pozwalają połączyć dane iloczyny w pojedyncze funkcje."
+        },
         "expression": "$\\cos(x - y) = \\cos x \\cos y + \\sin x \\sin y$",
         "explanation": "Przypominamy wzór na cosinus różnicy kątów"
       },
@@ -1137,6 +1449,30 @@
       {
         "step": 7,
         "hint": "Masz układ dwóch równań liniowych względem $x$ i $y$. Jak rozwiązać taki układ przez dodawanie i odejmowanie?",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wyznaczyć $x$ z układu równań $x + y$ i $x - y$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać równania: $(x + y) + (x - y) = 2x$",
+              "feedback": "Dokładnie! Dodając eliminujemy $y$ i znajdujemy $x$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Odjąć równania: $(x + y) - (x - y) = 2y$",
+              "feedback": "To da nam $y$, ale pytamy o $x$ - trzeba dodać równania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $y$ z jednego równania do drugiego",
+              "feedback": "Można, ale dodawanie równań jest prostsze i szybsze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dodając równania $y$ się redukuje i zostaje tylko $2x$."
+        },
         "expression": "$(x + y) + (x - y) = 2x = \\pi + 2m\\pi \\pm \\frac{\\pi}{3} + 2k\\pi$",
         "explanation": "Dodajemy równania aby wyeliminować $y$"
       },
@@ -1219,6 +1555,30 @@
       {
         "step": 1,
         "hint": "Lewa strona zawiera różnicę sinusów w liczniku i sumę cosinusów w mianowniku. Czy znasz wzory na sumę i różnicę funkcji trygonometrycznych?",
+        "interactive_choice": {
+          "prompt": "Jakie wzory zastosujesz do ułamka $\\frac{\\sin(5x) - \\sin(3x)}{\\cos(5x) + \\cos(3x)}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzory na różnicę sinusów i sumę cosinusów",
+              "feedback": "Świetnie! To pozwoli uprościć ułamek do prostszej postaci.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwinąć $\\sin(5x)$ i $\\sin(3x)$ przez wzory wielokrotności",
+              "feedback": "To bardzo skomplikuje wyrażenie - lepiej użyć wzorów sum-to-product.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $5x = 3x + 2x$ i użyć wzorów na sumę",
+              "feedback": "Interesujący pomysł, ale wzory na różnicę/sumę są prostsze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory sum-to-product przekształcą różnicę i sumę w iloczyny, które można skrócić."
+        },
         "expression": "$\\sin(5x) - \\sin(3x) = 2\\cos\\left(\\frac{5x+3x}{2}\\right)\\sin\\left(\\frac{5x-3x}{2}\\right) = 2\\cos(4x)\\sin(x)$",
         "explanation": "Stosujemy wzór na różnicę sinusów: $\\sin A - \\sin B = 2\\cos\\left(\\frac{A+B}{2}\\right)\\sin\\left(\\frac{A-B}{2}\\right)$"
       },
@@ -1398,6 +1758,30 @@
       {
         "step": 1,
         "hint": "Spójrz na prawą stronę równania. Czy pamiętasz wzór łączący $1 - \\cos \\alpha$ z funkcjami połowy kąta?",
+        "interactive_choice": {
+          "prompt": "Jak uprościć wyrażenie $1 - \\cos(6x)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $1 - \\cos \\alpha = 2\\sin^2(\\frac{\\alpha}{2})$",
+              "feedback": "Doskonale! To da nam $2\\sin^2(3x)$, co uprości równanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwinąć $\\cos(6x)$ przez wzory wielokrotności",
+              "feedback": "To skomplikuje wyrażenie - lepiej użyć wzoru połówkowego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zostawić bez zmian i pracować z $1 - \\cos(6x)$",
+              "feedback": "Lepiej uprościć teraz - ułatwi to dalsze przekształcenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór połówkowy przekształca $1 - \\cos(6x)$ w $2\\sin^2(3x)$, co znacznie upraszcza równanie."
+        },
         "expression": "$1 - \\cos(6x) = 2\\sin^2(3x)$",
         "explanation": "Używamy wzoru $1 - \\cos \\alpha = 2\\sin^2(\\frac{\\alpha}{2})$"
       },

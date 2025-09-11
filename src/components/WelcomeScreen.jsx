@@ -21,7 +21,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       title: 'Trygonometria',
       description: 'Funkcje trygonometryczne, tożsamości, równania',
       problemCount: powersProblems.length,
-      disabled: true
+      disabled: false
     },
     {
       id: 'polynomials',

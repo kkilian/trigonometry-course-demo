@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
+import MultiStepChoice from './MultiStepChoice';
 
 const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set(), problems = [] }) => {
   const [revealedSteps, setRevealedSteps] = useState(new Set());
@@ -9,6 +10,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
   const [showSolution, setShowSolution] = useState(false);
   const [expandedWhy, setExpandedWhy] = useState(new Set());
   const [showStatementExplanation, setShowStatementExplanation] = useState(false);
+  const [completedInteractiveChoices, setCompletedInteractiveChoices] = useState(new Set());
+  const [showMultiStepSteps, setShowMultiStepSteps] = useState(new Set());
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -19,7 +22,15 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     if (!hintShownSteps.has(stepIndex) && step.hint) {
       setHintShownSteps(new Set([...hintShownSteps, stepIndex]));
     }
-    // Second click (or first if no hint): show expression, explanation AND mark as completed
+    // Second click after hint: show MultiStepChoice (if available)
+    else if (step.interactive_choice && !showMultiStepSteps.has(stepIndex) && hintShownSteps.has(stepIndex) && !completedInteractiveChoices.has(stepIndex)) {
+      setShowMultiStepSteps(new Set([...showMultiStepSteps, stepIndex]));
+    }
+    // If MultiStepChoice is shown but not completed, wait for completion
+    else if (step.interactive_choice && showMultiStepSteps.has(stepIndex) && !completedInteractiveChoices.has(stepIndex)) {
+      return; // The MultiStepChoice component will handle the interaction
+    }
+    // Final click: show expression, explanation AND mark as completed
     else if (!revealedSteps.has(stepIndex)) {
       setRevealedSteps(new Set([...revealedSteps, stepIndex]));
       setCompletedSteps(new Set([...completedSteps, stepIndex]));
@@ -37,6 +48,28 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
         if (onComplete) {
           onComplete(problem.id);
         }
+      }
+    }
+  };
+
+  const handleInteractiveChoiceComplete = (stepIndex) => {
+    setCompletedInteractiveChoices(new Set([...completedInteractiveChoices, stepIndex]));
+    // After completing interactive choice, automatically reveal the step
+    setRevealedSteps(new Set([...revealedSteps, stepIndex]));
+    setCompletedSteps(new Set([...completedSteps, stepIndex]));
+    
+    // Check if all steps are completed
+    if (completedSteps.size + 1 === problem.steps.length) {
+      setShowSolution(true);
+      // Track solve duration
+      solveDurationRef.current = Math.floor((Date.now() - startTimeRef.current) / 1000);
+      // Smooth scroll to top to show next problem button
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 500);
+      // Removed feedback modal
+      if (onComplete) {
+        onComplete(problem.id);
       }
     }
   };
@@ -61,6 +94,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     setShowSolution(false);
     setExpandedWhy(new Set());
     setShowStatementExplanation(false);
+    setCompletedInteractiveChoices(new Set());
+    setShowMultiStepSteps(new Set());
     solveDurationRef.current = null;
     // Scroll to top when opening a new problem
     window.scrollTo(0, 0);
@@ -324,6 +359,14 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
                             </p>
                           </div>
                         </div>
+                      )}
+                      
+                      {/* Show MultiStepChoice after second click */}
+                      {step.interactive_choice && showMultiStepSteps.has(index) && !completedInteractiveChoices.has(index) && (
+                        <MultiStepChoice 
+                          interactiveChoice={step.interactive_choice}
+                          onComplete={() => handleInteractiveChoiceComplete(index)}
+                        />
                       )}
                       
                       {/* Expression shown after hint (or first click if no hint) */}
