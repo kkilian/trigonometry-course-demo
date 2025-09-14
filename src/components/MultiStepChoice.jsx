@@ -19,7 +19,7 @@ const MultiStepChoice = ({ interactiveChoice, onComplete }) => {
       setTimeout(() => {
         setIsComplete(true);
         onComplete && onComplete();
-      }, 2000); // Show success feedback for 2 seconds
+      }, 1000); // Show success feedback for 1 second
     }
   };
 

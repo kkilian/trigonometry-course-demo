@@ -4,12 +4,13 @@ import ProblemView from './ProblemView';
 import WelcomeScreen from './WelcomeScreen';
 import PolynomialTopics from './PolynomialTopics';
 import BasicsTopics from './BasicsTopics';
+import BasicsReorganized from './BasicsReorganized';
 import AIChat from './AIChat';
-import TrigonometryStartHere from './TrigonometryStartHere';
+import KombinatorykStartHere from './KombinatorykStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
 import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
-import powersProblems from '../data/powers-problems.json';
+import powersProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
 import polynomialOperationsProblems from '../data/polynomial-operations-problems.json';
@@ -31,6 +32,11 @@ import basics13Problems from '../data/basics-13-uklady-rownan.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
+import basicsProcentyProblems from '../data/basics-procenty.json';
+import basicsPrzyblizeniaProblems from '../data/basics-przyblizenia.json';
+import basicsWartoscBezwzglednaProblems from '../data/basics-wartosc-bezwzgledna.json';
+import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
+import statystykaProblems from '../data/statystyka-problems.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -105,9 +111,14 @@ const TrigonometryCourse = () => {
     if (mode === 'basics-11-kombinatoryka-prawdopodobienstwo') return basics11Problems;
     if (mode === 'basics-12-statystyka') return basics12Problems;
     if (mode === 'basics-13-uklady-rownan') return basics13Problems;
+    if (mode === 'basics-procenty') return basicsProcentyProblems;
+    if (mode === 'basics-przyblizenia') return basicsPrzyblizeniaProblems;
+    if (mode === 'basics-wartosc-bezwzgledna') return basicsWartoscBezwzglednaProblems;
     if (mode === 'systems-of-equations') return systemsOfEquationsProblems;
     if (mode === 'homographic-functions') return homographicFunctionsProblems;
     if (mode === 'elementary-fractions') return elementaryFractionsProblems;
+    if (mode === 'kombinatoryka') return kombinatorykaProblems;
+    if (mode === 'statystyka') return statystykaProblems;
     return [];
   };
   
@@ -191,7 +202,7 @@ const TrigonometryCourse = () => {
   const getSectionInfo = () => {
     if (mode === 'powers') {
       return {
-        title: 'Trygonometria',
+        title: 'Kombinatoryka - podstawy',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -322,6 +333,18 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
+    if (mode === 'kombinatoryka') {
+      return {
+        title: 'Kombinatoryka i Prawdopodobieństwo',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'statystyka') {
+      return {
+        title: 'Statystyka',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
     return {
       title: '',
       subtitle: ''
@@ -445,7 +468,10 @@ const TrigonometryCourse = () => {
   };
 
   const handleBackToBasicsTopics = () => {
-    setMode('basics');
+    // Check if we came from reorganized basics
+    const wasFromReorganized = mode.startsWith('basics-') && 
+      localStorage.getItem('lastBasicsMode') === 'basics-reorganized';
+    setMode(wasFromReorganized ? 'basics-reorganized' : 'basics');
     setCurrentProblem(null);
   };
 
@@ -472,8 +498,20 @@ const TrigonometryCourse = () => {
   
   // Render basics topics menu
   if (mode === 'basics') {
+    localStorage.setItem('lastBasicsMode', 'basics');
     return (
       <BasicsTopics 
+        onSelectTopic={handleBasicsTopicSelect}
+        onBack={handleBackToWelcome}
+      />
+    );
+  }
+
+  // Render reorganized basics topics menu
+  if (mode === 'basics-reorganized') {
+    localStorage.setItem('lastBasicsMode', 'basics-reorganized');
+    return (
+      <BasicsReorganized 
         onSelectTopic={handleBasicsTopicSelect}
         onBack={handleBackToWelcome}
       />
@@ -552,7 +590,7 @@ const TrigonometryCourse = () => {
         />
       ) : mode === 'powers' ? (
         // Special handling for trigonometry - show start here screen instead of problem list
-        <TrigonometryStartHere
+        <KombinatorykStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}

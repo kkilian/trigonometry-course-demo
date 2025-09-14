@@ -1,0 +1,217 @@
+[
+  {
+    "id": "wartosc_bezwzgledna_problem_1",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 1,
+    "statement": "Oblicz: $|7|$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznaczają pionowe kreski wokół liczby?",
+        "expression": "$|7|$ oznacza wartość bezwzględną liczby $7$",
+        "explanation": "Wartość bezwzględna to odległość liczby od zera na osi liczbowej",
+        "why": "Wartość bezwzględna zawsze mierzy \"jak daleko\" liczba jest od zera, bez względu na kierunek"
+      },
+      {
+        "step": 2,
+        "hint": "Jak daleko jest liczba 7 od zera?",
+        "expression": "Na osi liczbowej: $0 \\rightarrow 7$ to odległość $7$",
+        "explanation": "Liczba 7 jest oddalona od zera o 7 jednostek",
+        "why": "Odległość liczymy zawsze jako liczbę dodatnią"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest wartość bezwzględna liczby dodatniej?",
+        "expression": "$|7| = 7$",
+        "explanation": "Wartość bezwzględna liczby dodatniej to ta sama liczba",
+        "why": "Liczby dodatnie są już \"po dobrej stronie\" zera, więc ich wartość bezwzględna się nie zmienia"
+      }
+    ],
+    "solutions": [
+      "$7$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "wartosc_bezwzgledna_problem_2",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 1,
+    "statement": "Oblicz: $|-5|$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak daleko jest liczba -5 od zera na osi liczbowej?",
+        "expression": "Na osi liczbowej: $-5 \\leftarrow 0$ to odległość $5$",
+        "explanation": "Liczba -5 jest oddalona od zera o 5 jednostek",
+        "why": "Odległość to zawsze liczba dodatnia, bez względu na to, czy idziemy w lewo czy w prawo od zera"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest wartość bezwzględna liczby ujemnej?",
+        "expression": "$|-5| = 5$",
+        "explanation": "Wartość bezwzględna liczby ujemnej to ta liczba bez znaku minus",
+        "why": "Wartość bezwzględna \"usuwa\" znak minus, zostawiając tylko wielkość liczby"
+      }
+    ],
+    "solutions": [
+      "$5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "wartosc_bezwzgledna_problem_3",
+    "topic": "Wartość bezwzględna", 
+    "difficulty": 2,
+    "statement": "Oblicz: $|3 - 8|$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Najpierw oblicz wyrażenie wewnątrz wartości bezwzględnej",
+        "expression": "$3 - 8 = -5$",
+        "explanation": "Wykonujemy działanie: 3 - 8 = -5",
+        "why": "Zawsze najpierw obliczamy to, co jest wewnątrz wartości bezwzględnej"
+      },
+      {
+        "step": 2,
+        "hint": "Teraz oblicz wartość bezwzględną wyniku",
+        "expression": "$|-5| = 5$",
+        "explanation": "Wartość bezwzględna liczby -5 to 5",
+        "why": "Wartość bezwzględna liczby ujemnej to ta liczba bez znaku minus"
+      },
+      {
+        "step": 3,
+        "hint": "Możesz też myśleć o tym jako o odległości na osi liczbowej",
+        "expression": "$|3 - 8|$ to odległość między punktami $3$ i $8$",
+        "explanation": "Odległość między 3 i 8 wynosi 5 jednostek",
+        "why": "Wartość bezwzględna różnicy dwóch liczb to odległość między nimi na osi liczbowej"
+      }
+    ],
+    "solutions": [
+      "$5$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "wartosc_bezwzgledna_problem_4",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 2,
+    "statement": "Rozwiąż równanie: $|x| = 4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie liczby mają wartość bezwzględną równą 4?",
+        "expression": "Szukamy liczb oddalonych od zera o 4 jednostki",
+        "explanation": "Na osi liczbowej szukamy punktów w odległości 4 od zera",
+        "why": "Definicja wartości bezwzględnej: |x| to odległość x od zera"
+      },
+      {
+        "step": 2,
+        "hint": "Które punkty są oddalone od zera o 4 jednostki?",
+        "expression": "W prawo od zera: $+4$, w lewo od zera: $-4$",
+        "explanation": "Dwa punkty: 4 i -4 są oddalone od zera o 4 jednostki",
+        "why": "Na osi liczbowej odległość można mierzyć w obu kierunkach"
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź oba rozwiązania",
+        "expression": "$|4| = 4$ ✓ oraz $|-4| = 4$ ✓",
+        "explanation": "Oba rozwiązania spełniają równanie",
+        "why": "Zawsze warto sprawdzić rozwiązania podstawiając je z powrotem do równania"
+      }
+    ],
+    "solutions": [
+      "$x = 4$ lub $x = -4$",
+      "$x \\in \\{-4, 4\\}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "wartosc_bezwzgledna_problem_5",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 3,
+    "statement": "Rozwiąż równanie: $|x - 3| = 2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza to równanie geometrycznie?",
+        "expression": "|x - 3| = 2$ oznacza: odległość między $x$ a $3$ wynosi $2$",
+        "explanation": "Wyrażenie |x - 3| to odległość punktu x od punktu 3 na osi liczbowej",
+        "why": "Wartość bezwzględna różnicy |a - b| to zawsze odległość między punktami a i b"
+      },
+      {
+        "step": 2,
+        "hint": "Które punkty są oddalone od 3 o 2 jednostki?",
+        "expression": "W prawo od 3: $3 + 2 = 5$, w lewo od 3: $3 - 2 = 1$",
+        "explanation": "Punkty 1 i 5 są oddalone od punktu 3 o 2 jednostki",
+        "why": "Jeśli punkt A jest oddalony od B o d jednostek, to może być w pozycji B+d lub B-d"
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź rozwiązania algebraicznie",
+        "expression": "$|x - 3| = 2$ gdy $x - 3 = 2$ lub $x - 3 = -2$",
+        "explanation": "Równanie z wartością bezwzględną daje dwa przypadki",
+        "why": "Jeśli |A| = B, to A = B lub A = -B (gdzie B > 0)"
+      },
+      {
+        "step": 4,
+        "hint": "Rozwiąż oba przypadki",
+        "expression": "$x - 3 = 2 \\Rightarrow x = 5$ oraz $x - 3 = -2 \\Rightarrow x = 1$",
+        "explanation": "Z pierwszego równania: x = 5, z drugiego: x = 1",
+        "why": "To są dwa rozwiązania liniowe równania bez wartości bezwzględnej"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź oba rozwiązania",
+        "expression": "$|5 - 3| = |2| = 2$ ✓ oraz $|1 - 3| = |-2| = 2$ ✓",
+        "explanation": "Oba rozwiązania są poprawne",
+        "why": "Weryfikacja potwierdza poprawność naszych obliczeń"
+      }
+    ],
+    "solutions": [
+      "$x = 1$ lub $x = 5$",
+      "$x \\in \\{1, 5\\}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "wartosc_bezwzgledna_problem_6",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 3,
+    "statement": "Rozwiąż nierówność: $|x| < 3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza |x| < 3 geometrycznie?",
+        "expression": "$|x| < 3$ oznacza: odległość $x$ od zera jest mniejsza niż $3$",
+        "explanation": "Szukamy punktów bliższych niż 3 jednostki od zera",
+        "why": "Wartość bezwzględna to odległość od zera na osi liczbowej"
+      },
+      {
+        "step": 2,
+        "hint": "Które punkty są bliżej niż 3 jednostki od zera?",
+        "expression": "Punkty między $-3$ a $3$ (nie włączając końców)",
+        "explanation": "To są wszystkie punkty w przedziale (-3, 3)",
+        "why": "Jeśli punkt jest oddalony od zera o mniej niż 3, to musi być między -3 a 3"
+      },
+      {
+        "step": 3,
+        "hint": "Zapisz to algebraicznie",
+        "expression": "$|x| < 3 \\Leftrightarrow -3 < x < 3$",
+        "explanation": "Nierówność z wartością bezwzględną przekształca się w nierówność podwójną",
+        "why": "To jest standardowa reguła: |x| < a ⟺ -a < x < a (gdy a > 0)"
+      },
+      {
+        "step": 4,
+        "hint": "Zapisz rozwiązanie w postaci przedziału",
+        "expression": "$x \\in (-3, 3)$",
+        "explanation": "Rozwiązaniem jest przedział otwarty od -3 do 3",
+        "why": "Nawiasy okrągłe oznaczają, że końce nie są włączone (< zamiast ≤)"
+      }
+    ],
+    "solutions": [
+      "$x \\in (-3, 3)$",
+      "$-3 < x < 3$"
+    ],
+    "parameters": {}
+  }
+]

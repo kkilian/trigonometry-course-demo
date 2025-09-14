@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import MathRenderer from './MathRenderer';
 
-const TrigonometryStartHere = ({ 
+const KombinatorykStartHere = ({ 
   problems, 
   onSelectProblem, 
   completedProblems = new Set(), 
@@ -11,7 +11,7 @@ const TrigonometryStartHere = ({
 
   // Load suggested problems from localStorage
   useEffect(() => {
-    const savedSuggestions = localStorage.getItem('trigonometry-suggested-problems');
+    const savedSuggestions = localStorage.getItem('kombinatoryka-suggested-problems');
     if (savedSuggestions) {
       try {
         const suggestions = JSON.parse(savedSuggestions);
@@ -102,18 +102,24 @@ const TrigonometryStartHere = ({
           {/* Header */}
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-              Trygonometria
+              Kombinatoryka - podstawy
             </h1>
             {/* Progress Bar */}
             {problems && problems.length > 0 && (
-              <div className="w-full bg-stone-200 rounded-full h-1.5">
-                <div 
-                  className="h-1.5 rounded-full transition-all duration-300"
-                  style={{
-                    background: 'linear-gradient(to right, #facc15, #f97316)',
-                    width: `${problems.length > 0 ? (completedProblems.size / problems.length) * 100 : 0}%`
-                  }}
-                />
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-sm text-stone-600">
+                  <span>Postęp</span>
+                  <span>{completedProblems.size} z {problems.length} zadań</span>
+                </div>
+                <div className="w-full bg-stone-200 rounded-full h-1.5">
+                  <div
+                    className="h-1.5 rounded-full transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(to right, #facc15, #f97316)',
+                      width: `${problems.length > 0 ? (completedProblems.size / problems.length) * 100 : 0}%`
+                    }}
+                  />
+                </div>
               </div>
             )}
           </header>
@@ -127,6 +133,13 @@ const TrigonometryStartHere = ({
           {problemsToShow.length === 1 ? (
             // First visit - single problem card
             <div className="px-4 md:px-8">
+              {/* Informacja dla nowych użytkowników */}
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-semibold text-stone-800 mb-2">Zacznij tutaj</h3>
+                <p className="text-stone-600 text-sm">
+                  Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie
+                </p>
+              </div>
               <button
                 onClick={() => handleStartProblem(problemsToShow[0])}
                 className={`w-full text-left p-6 md:p-10 rounded-xl transition-all group relative ${
@@ -212,9 +225,6 @@ const TrigonometryStartHere = ({
                             {problem.steps?.length || 0} kroków
                           </span>
                         </div>
-                        <div className="hidden md:block text-xs text-stone-500 font-mono">
-                          {problem.id}
-                        </div>
                         <div className="w-8 h-8 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
                           <svg className="w-4 h-4 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
@@ -233,4 +243,4 @@ const TrigonometryStartHere = ({
   );
 };
 
-export default TrigonometryStartHere;
+export default KombinatorykStartHere;

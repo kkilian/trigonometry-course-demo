@@ -3,7 +3,7 @@ import MathRenderer from './MathRenderer';
 import ChatSuggestions from './ChatSuggestions';
 
 // Import all problem datasets
-import powersProblems from '../data/powers-problems.json';
+import powersProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
 import polynomialOperationsProblems from '../data/polynomial-operations-problems.json';

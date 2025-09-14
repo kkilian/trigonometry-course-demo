@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LaTeXChecker from './components/LaTeXChecker';
-import powersProblems from './data/powers-problems.json';
+import powersProblems from './data/kombinatoryka-problems.json';
 import './App.css';
 
 function LaTeXCheckerApp() {

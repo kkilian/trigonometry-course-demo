@@ -102,6 +102,28 @@ const savedSuggestions = localStorage.getItem('homographic-functions-suggested-p
 export default HomographicFunctionsStartHere;
 ```
 
+#### Pasek postępu z liczbą zadań:
+```jsx
+{/* Progress Bar */}
+{problems && problems.length > 0 && (
+  <div className="space-y-2">
+    <div className="flex justify-between items-center text-sm text-stone-600">
+      <span>Postęp</span>
+      <span>{completedProblems.size} z {problems.length} zadań</span>
+    </div>
+    <div className="w-full bg-stone-200 rounded-full h-1.5">
+      <div
+        className="h-1.5 rounded-full transition-all duration-300"
+        style={{
+          background: 'linear-gradient(to right, #facc15, #f97316)',
+          width: `${problems.length > 0 ? (completedProblems.size / problems.length) * 100 : 0}%`
+        }}
+      />
+    </div>
+  </div>
+)}
+```
+
 **Uwaga:** Wszystkie pozostałe elementy (logika, stylowanie, animacje) pozostają identyczne jak w TrigonometryStartHere.jsx.
 
 ---

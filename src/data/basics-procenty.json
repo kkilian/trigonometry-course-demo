@@ -1,0 +1,195 @@
+[
+  {
+    "id": "procenty_problem_1",
+    "topic": "Procenty w praktyce",
+    "difficulty": 1,
+    "statement": "Zamień na ułamek zwykły: $25\\%$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza symbol % (procent)?",
+        "expression": "$25\\% = 25$ procent",
+        "explanation": "Procent oznacza \"na sto\" lub \"ze stu\"",
+        "why": "Słowo procent pochodzi z łaciny: \"per centum\" = \"na sto\". To sposób wyrażania części całości"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać procent jako ułamek?",
+        "expression": "$25\\% = \\frac{25}{100}$",
+        "explanation": "Procent to ułamek z mianownikiem 100",
+        "why": "25% oznacza \"25 z 100 części\", więc to po prostu ułamek 25/100"
+      },
+      {
+        "step": 3,
+        "hint": "Czy można uprościć ten ułamek? Znajdź największy wspólny dzielnik licznika i mianownika",
+        "expression": "$\\frac{25}{100} = \\frac{25 \\div 25}{100 \\div 25} = \\frac{1}{4}$",
+        "explanation": "Dzielimy licznik i mianownik przez 25",
+        "why": "25 i 100 mają wspólny dzielnik 25. Upraszczanie ułamków czyni je łatwiejszymi do zrozumienia i obliczeń"
+      }
+    ],
+    "solutions": [
+      "$\\frac{1}{4}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "procenty_problem_2", 
+    "topic": "Procenty w praktyce",
+    "difficulty": 2,
+    "statement": "Oblicz: $30\\%$ z liczby $120$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak obliczyć procent z liczby? Zastanów się nad znaczeniem słowa \"z\"",
+        "expression": "$30\\%$ z $120 = 30\\% \\cdot 120$",
+        "explanation": "Słowo \"z\" w matematyce oznacza mnożenie",
+        "why": "\"30% z 120\" to tak jakby powiedzieć \"weź 30 setnych części z 120\""
+      },
+      {
+        "step": 2,
+        "hint": "Zamień procent na ułamek dziesiętny",
+        "expression": "$30\\% = \\frac{30}{100} = 0,3$",
+        "explanation": "Dzielimy przez 100, aby zamienić procent na liczbę dziesiętną",
+        "why": "To jest najwygodniejszy sposób na obliczenia - zamiast dzielić przez 100 na końcu, robimy to na początku"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz pomnóż liczbę dziesiętną przez 120",
+        "expression": "$0,3 \\cdot 120 = 36$",
+        "explanation": "Mnożymy: 0,3 × 120 = 36",
+        "why": "To jest finalne obliczenie - bierzemy 0,3 (czyli 30 setnych) z liczby 120"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź wynik używając innej metody",
+        "expression": "$\\frac{30}{100} \\cdot 120 = \\frac{30 \\cdot 120}{100} = \\frac{3600}{100} = 36$ ✓",
+        "explanation": "Sprawdzenie potwierdza poprawność wyniku",
+        "why": "Zawsze warto sprawdzić wynik inną metodą - daje to pewność, że nie popełniliśmy błędu"
+      }
+    ],
+    "solutions": [
+      "$36$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "procenty_problem_3",
+    "topic": "Procenty w praktyce", 
+    "difficulty": 2,
+    "statement": "Jakim procentem liczby $200$ jest liczba $50$?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza pytanie \"jakim procentem liczby A jest liczba B\"?",
+        "expression": "Szukamy: $\\frac{50}{200} = ?\\%$",
+        "explanation": "Dzielimy liczbę, której szukamy procent przez liczbę bazową",
+        "why": "Procent to stosunek części do całości. Tu część to 50, a całość to 200"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz ułamek zwykły",
+        "expression": "$\\frac{50}{200} = \\frac{50 \\div 50}{200 \\div 50} = \\frac{1}{4}$",
+        "explanation": "Upraszczamy ułamek dzieląc przez wspólny dzielnik 50",
+        "why": "Uproszczony ułamek jest łatwiejszy do zamiany na procent"
+      },
+      {
+        "step": 3,
+        "hint": "Zamień ułamek na liczbę dziesiętną",
+        "expression": "$\\frac{1}{4} = 1 \\div 4 = 0,25$",
+        "explanation": "Dzielimy licznik przez mianownik",
+        "why": "Liczba dziesiętna łatwiej zamienia się na procent"
+      },
+      {
+        "step": 4,
+        "hint": "Zamień liczbę dziesiętną na procent",
+        "expression": "$0,25 = 0,25 \\cdot 100\\% = 25\\%$",
+        "explanation": "Mnożymy przez 100, aby otrzymać procent",
+        "why": "Procent to liczba dziesiętna pomnożona przez 100. Jest to odwrócenie zamiany % na liczbę dziesiętną"
+      }
+    ],
+    "solutions": [
+      "$25\\%$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "procenty_problem_4",
+    "topic": "Procenty w praktyce",
+    "difficulty": 3,
+    "statement": "Cena produktu wzrosła z $80$ zł do $96$ zł. O ile procent wzrosła cena?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest różnica między ceną końcową a początkową?",
+        "expression": "Wzrost = $96 - 80 = 16$ zł",
+        "explanation": "Obliczamy bezwzględną wartość wzrostu",
+        "why": "Najpierw musimy wiedzieć, o ile jednostek wzrosła wartość, zanim obliczymy procent"
+      },
+      {
+        "step": 2,
+        "hint": "O ile procent wzrosła cena względem ceny początkowej?",
+        "expression": "Szukamy: $\\frac{\\text{wzrost}}{\\text{cena początkowa}} = \\frac{16}{80}$",
+        "explanation": "Dzielimy wzrost przez wartość początkową",
+        "why": "Procent wzrostu to zawsze stosunek zmiany do wartości początkowej (nie końcowej!)"
+      },
+      {
+        "step": 3,
+        "hint": "Uprość ułamek",
+        "expression": "$\\frac{16}{80} = \\frac{16 \\div 16}{80 \\div 16} = \\frac{1}{5}$",
+        "explanation": "Dzielimy licznik i mianownik przez wspólny dzielnik 16",
+        "why": "Uproszczony ułamek jest łatwiejszy w dalszych obliczeniach"
+      },
+      {
+        "step": 4,
+        "hint": "Zamień ułamek na procent",
+        "expression": "$\\frac{1}{5} = 0,2 = 0,2 \\cdot 100\\% = 20\\%$",
+        "explanation": "1÷5 = 0,2, a 0,2 × 100% = 20%",
+        "why": "To jest standardowy sposób zamiany ułamka na procent"
+      }
+    ],
+    "solutions": [
+      "$20\\%$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "procenty_problem_5",
+    "topic": "Procenty w praktyce",
+    "difficulty": 3,
+    "statement": "Po obniżce o $15\\%$ cena wynosi $85$ zł. Jaka była cena przed obniżką?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki procent pierwotnej ceny stanowi cena po obniżce?",
+        "expression": "Cena po obniżce = $100\\% - 15\\% = 85\\%$ pierwotnej ceny",
+        "explanation": "Jeśli obniżka to 15%, to zostało 85% pierwotnej ceny",
+        "why": "Cena po obniżce to zawsze \"100% minus procent obniżki\" z ceny pierwotnej"
+      },
+      {
+        "step": 2,
+        "hint": "Ustaw równanie. Ile to 85% pierwotnej ceny?",
+        "expression": "$85\\%$ pierwotnej ceny $= 85$ zł",
+        "explanation": "85% nieznanej ceny (oznaczmy ją x) równa się 85 zł",
+        "why": "To jest klucz do rozwiązania - wiemy, że obecna cena to pewien procent dawnej ceny"
+      },
+      {
+        "step": 3,
+        "hint": "Zamień procent na liczbę dziesiętną i ustaw równanie",
+        "expression": "$0,85 \\cdot x = 85$",
+        "explanation": "85% = 0,85, gdzie x to szukana pierwotna cena",
+        "why": "To jest równanie, które możemy rozwiązać dzieląc obie strony przez 0,85"
+      },
+      {
+        "step": 4,
+        "hint": "Rozwiąż równanie dzieląc obie strony przez 0,85",
+        "expression": "$x = \\frac{85}{0,85} = 100$ zł",
+        "explanation": "Pierwotna cena wynosiła 100 zł",
+        "why": "85 ÷ 0,85 = 100. Możemy sprawdzić: 100 zł - 15% = 100 - 15 = 85 zł ✓"
+      }
+    ],
+    "solutions": [
+      "$100$ zł"
+    ],
+    "parameters": {}
+  }
+]

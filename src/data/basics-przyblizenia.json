@@ -1,0 +1,209 @@
+[
+  {
+    "id": "przyblizenia_problem_1",
+    "topic": "Przybliżenia i błędy",
+    "difficulty": 1,
+    "statement": "Zaokrąglij liczbę $3,726$ do części dziesiątych",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co to znaczy \"do części dziesiątych\"? Które miejsce po przecinku to części dziesiąte?",
+        "expression": "$3,726 = 3,\\underline{7}26$",
+        "explanation": "Części dziesiąte to pierwsza cyfra po przecinku",
+        "why": "W liczbie dziesiętnej: przed przecinkiem - jedności, po przecinku: dziesiąte, setne, tysięczne..."
+      },
+      {
+        "step": 2,
+        "hint": "Która cyfra decyduje o zaokrągleniu? Spójrz na cyfrę stojącą zaraz za miejscem, do którego zaokrąglamy",
+        "expression": "$3,7\\underline{2}6$ - cyfra decydująca to $2$",
+        "explanation": "Cyfra 2 (części setne) decyduje o zaokrągleniu części dziesiątych",
+        "why": "Zawsze patrzymy na cyfrę stojącą bezpośrednio za miejscem, do którego zaokrąglamy"
+      },
+      {
+        "step": 3,
+        "hint": "Czy cyfra 2 jest mniejsza od 5, czy większa lub równa 5?",
+        "expression": "$2 < 5$",
+        "explanation": "Cyfra 2 jest mniejsza od 5",
+        "why": "Zasada zaokrąglania: jeśli cyfra < 5, zaokrąglamy w dół; jeśli cyfra ≥ 5, zaokrąglamy w górę"
+      },
+      {
+        "step": 4,
+        "hint": "Zaokrąglij zgodnie z zasadą",
+        "expression": "$3,726 \\approx 3,7$",
+        "explanation": "Ponieważ 2 < 5, zaokrąglamy w dół - cyfra 7 zostaje bez zmiany",
+        "why": "Symbol ≈ oznacza \"w przybliżeniu równa się\". Usuwamy wszystkie cyfry za miejscem zaokrąglenia"
+      }
+    ],
+    "solutions": [
+      "$3,7$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "przyblizenia_problem_2",
+    "topic": "Przybliżenia i błędy",
+    "difficulty": 2,
+    "statement": "Zaokrąglij liczbę $2,895$ do części setnych",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które miejsce po przecinku to części setne?",
+        "expression": "$2,895 = 2,8\\underline{9}5$",
+        "explanation": "Części setne to druga cyfra po przecinku",
+        "why": "Po przecinku: pierwsza pozycja - dziesiąte, druga - setne, trzecia - tysięczne"
+      },
+      {
+        "step": 2,
+        "hint": "Która cyfra decyduje o zaokrągleniu?",
+        "expression": "$2,89\\underline{5}$ - cyfra decydująca to $5$",
+        "explanation": "Cyfra 5 (części tysięczne) decyduje o zaokrągleniu części setnych",
+        "why": "Patrzymy na cyfrę bezpośrednio za miejscem zaokrąglenia"
+      },
+      {
+        "step": 3,
+        "hint": "Czy cyfra 5 jest mniejsza od 5, czy większa lub równa 5?",
+        "expression": "$5 = 5$, więc $5 \\geq 5$",
+        "explanation": "Cyfra 5 jest równa 5, więc zaokrąglamy w górę",
+        "why": "Gdy cyfra decydująca wynosi dokładnie 5, zawsze zaokrąglamy w górę"
+      },
+      {
+        "step": 4,
+        "hint": "Zaokrąglij w górę - zwiększ cyfrę 9 o 1",
+        "expression": "$9 + 1 = 10$, więc piszemy $0$ i dodajemy $1$ do cyfry z lewej",
+        "explanation": "9+1=10, więc cyfra setnych staje się 0, a cyfra dziesiątych wzrasta o 1",
+        "why": "To jest \"przeniesienie\" - gdy cyfra ma stać się 10, zapisujemy 0 i dodajemy 1 do następnej pozycji"
+      },
+      {
+        "step": 5,
+        "hint": "Zapisz końcowy wynik",
+        "expression": "$2,895 \\approx 2,90$",
+        "explanation": "Po zaokrągleniu: 2,90 (można też napisać 2,9)",
+        "why": "Rezultat zaokrąglenia. Zero na końcu można pominąć, ale czasem zostawiamy je dla jasności"
+      }
+    ],
+    "solutions": [
+      "$2,90$", "$2,9$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "przyblizenia_problem_3", 
+    "topic": "Przybliżenia i błędy",
+    "difficulty": 2,
+    "statement": "Oblicz błąd bezwzględny, jeśli wartość rzeczywista wynosi $12,5$, a wartość przybliżona $12,3$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co to jest błąd bezwzględny?",
+        "expression": "Błąd bezwzględny = $|\\text{wartość rzeczywista} - \\text{wartość przybliżona}|$",
+        "explanation": "To różnica między wartością prawdziwą a przybliżoną, ale zawsze dodatnia",
+        "why": "Wartość bezwzględna (| |) sprawia, że błąd jest zawsze nieujemny - liczy się tylko wielkość błędu, nie kierunek"
+      },
+      {
+        "step": 2,
+        "hint": "Podstaw dane wartości do wzoru",
+        "expression": "Błąd bezwzględny = $|12,5 - 12,3|$",
+        "explanation": "Podstawiamy: wartość rzeczywista = 12,5, wartość przybliżona = 12,3",
+        "why": "To jest bezpośrednie zastosowanie definicji błędu bezwzględnego"
+      },
+      {
+        "step": 3,
+        "hint": "Oblicz różnicę",
+        "expression": "$12,5 - 12,3 = 0,2$",
+        "explanation": "Różnica wynosi 0,2",
+        "why": "To jest arytmetyczne odejmowanie liczb dziesiętnych"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz wartość bezwzględną",
+        "expression": "$|0,2| = 0,2$",
+        "explanation": "Ponieważ 0,2 > 0, wartość bezwzględna to po prostu 0,2",
+        "why": "Wartość bezwzględna liczby dodatniej to ta sama liczba"
+      }
+    ],
+    "solutions": [
+      "$0,2$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "przyblizenia_problem_4",
+    "topic": "Przybliżenia i błędy",
+    "difficulty": 3,
+    "statement": "Oblicz błąd względny (w procentach), jeśli wartość rzeczywista wynosi $50$, a wartość przybliżona $48$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Najpierw oblicz błąd bezwzględny",
+        "expression": "Błąd bezwzględny = $|50 - 48| = 2$",
+        "explanation": "Różnica między wartością rzeczywistą a przybliżoną wynosi 2",
+        "why": "Błąd bezwzględny to pierwszy krok do obliczenia błędu względnego"
+      },
+      {
+        "step": 2,
+        "hint": "Co to jest błąd względny?",
+        "expression": "Błąd względny = $\\frac{\\text{błąd bezwzględny}}{\\text{wartość rzeczywista}}$",
+        "explanation": "To stosunek błędu bezwzględnego do wartości rzeczywistej",
+        "why": "Błąd względny pokazuje, jak duży jest błąd w porównaniu do mierzonej wielkości"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw wartości do wzoru",
+        "expression": "Błąd względny = $\\frac{2}{50} = \\frac{1}{25} = 0,04$",
+        "explanation": "Dzielimy błąd bezwzględny przez wartość rzeczywistą",
+        "why": "To daje nam błąd względny jako liczbę dziesiętną (ułamek dziesiętny)"
+      },
+      {
+        "step": 4,
+        "hint": "Zamień na procenty",
+        "expression": "Błąd względny = $0,04 = 0,04 \\times 100\\% = 4\\%$",
+        "explanation": "Mnożymy przez 100%, aby otrzymać wynik w procentach",
+        "why": "Procenty są najczęstszym sposobem wyrażania błędu względnego - są łatwe do interpretacji"
+      }
+    ],
+    "solutions": [
+      "$4\\%$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "przyblizenia_problem_5",
+    "topic": "Przybliżenia i błędy", 
+    "difficulty": 3,
+    "statement": "Pomiar długości dał wynik $98,7$ cm z błędem bezwzględnym nie większym niż $0,3$ cm. Podaj przedział, w którym znajduje się rzeczywista długość",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza błąd bezwzględny nie większy niż 0,3 cm?",
+        "expression": "Błąd bezwzględny $\\leq 0,3$ cm",
+        "explanation": "Rzeczywista wartość może różnić się od zmierzonej maksymalnie o 0,3 cm",
+        "why": "Błąd bezwzględny to maksymalna możliwa różnica między wartością rzeczywistą a zmierzoną"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka może być najmniejsza rzeczywista długość?",
+        "expression": "Najmniejsza długość = $98,7 - 0,3 = 98,4$ cm",
+        "explanation": "Jeśli zmierzona wartość jest za duża o 0,3 cm",
+        "why": "W najgorszym przypadku nasze pomiar jest o 0,3 cm za duży"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka może być największa rzeczywista długość?",
+        "expression": "Największa długość = $98,7 + 0,3 = 99,0$ cm",
+        "explanation": "Jeśli zmierzona wartość jest za mała o 0,3 cm",
+        "why": "W najgorszym przypadku nasze pomiar jest o 0,3 cm za mały"
+      },
+      {
+        "step": 4,
+        "hint": "Zapisz przedział",
+        "expression": "Rzeczywista długość $\\in [98,4; 99,0]$ cm",
+        "explanation": "Przedział domknięty od 98,4 do 99,0 cm",
+        "why": "Nawiasy kwadratowe oznaczają, że końce przedziału są włączone (wartości graniczne są możliwe)"
+      }
+    ],
+    "solutions": [
+      "$[98,4; 99,0]$ cm"
+    ],
+    "parameters": {}
+  }
+]

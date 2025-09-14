@@ -243,11 +243,11 @@ const NextProblemSuggestion = ({
       // Convert to array format for backward compatibility
       const bestMatches = Object.values(suggestionsByLevel);
 
-      // Save suggested problems to localStorage for trigonometry module
-      if (currentProblem.id && currentProblem.id.includes('tex_problem')) {
+      // Save suggested problems to localStorage for kombinatoryka module
+      if (currentProblem.id && (currentProblem.id.includes('combinatorics') || currentProblem.id.includes('kombinatoryka'))) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
-        localStorage.setItem('trigonometry-suggested-problems', JSON.stringify(suggestedIds));
-        console.log('Saved suggested problems for trigonometry:', suggestedIds);
+        localStorage.setItem('kombinatoryka-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for kombinatoryka:', suggestedIds);
       }
       
       // Save suggested problems to localStorage for systems of equations module

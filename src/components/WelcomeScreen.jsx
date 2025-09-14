@@ -1,15 +1,17 @@
 import React from 'react';
-import powersProblems from '../data/powers-problems.json';
+import combinatoricsProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
+import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
+import statystykaProblems from '../data/statystyka-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
     {
       id: 'basics',
-      title: 'BASICS - Fundamenty matematyki',
+      title: 'BASICS - Fundamenty matematyki (stara struktura)',
       description: 'Arytmetyka, algebra, geometria, funkcje - start od zera',
       problemCount: 0,
       hasSubmenu: true,
@@ -17,10 +19,19 @@ const WelcomeScreen = ({ onSelectMode }) => {
       disabled: false
     },
     {
+      id: 'basics-reorganized',
+      title: 'FUNDAMENTY MATEMATYKI (nowa struktura)',
+      description: '4 sekcje tematyczne z systemem blokowania postępu',
+      problemCount: 0,
+      hasSubmenu: true,
+      topicsCount: 16,
+      disabled: false
+    },
+    {
       id: 'powers',
-      title: 'Trygonometria',
-      description: 'Funkcje trygonometryczne, tożsamości, równania',
-      problemCount: powersProblems.length,
+      title: 'Kombinatoryka - podstawy',
+      description: 'Permutacje, wariacje, kombinacje - poziom podstawowy',
+      problemCount: combinatoricsProblems.length,
       disabled: false
     },
     {
@@ -58,6 +69,20 @@ const WelcomeScreen = ({ onSelectMode }) => {
       problemCount: systemsOfEquationsProblems.length
     },
     {
+      id: 'kombinatoryka',
+      title: 'Kombinatoryka i Prawdopodobieństwo',
+      description: 'Permutacje, wariacje, kombinacje, prawdopodobieństwo klasyczne',
+      problemCount: kombinatorykaProblems.length,
+      disabled: true
+    },
+    {
+      id: 'statystyka',
+      title: 'Statystyka',
+      description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
+      problemCount: statystykaProblems.length,
+      disabled: true
+    },
+    {
       id: 'ai-chat',
       title: 'AI',
       description: 'Asystent AI do nauki matematyki',
@@ -91,13 +116,9 @@ const WelcomeScreen = ({ onSelectMode }) => {
                 }}
                 disabled={module.disabled}
                 className={`w-full text-left p-4 md:p-6 rounded-xl transition-all relative ${
-                  module.disabled 
-                    ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60' 
-                    : module.id === 'homographic-functions'
-                      ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border'
-                      : module.id === 'elementary-fractions'
-                        ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border-green'
-                        : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
+                  module.disabled
+                    ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60'
+                    : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
               >
                 {(module.isPremium || module.isAI) && (

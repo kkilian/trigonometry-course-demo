@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import MathRenderer from './MathRenderer';
-import defaultProblemsData from '../data/powers-problems.json';
+import defaultProblemsData from '../data/kombinatoryka-problems.json';
 
 const LaTeXChecker = ({ onBack, problems: propProblems, title, storageKey = 'latexCheckerState' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
