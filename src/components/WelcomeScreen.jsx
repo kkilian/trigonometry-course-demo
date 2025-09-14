@@ -60,7 +60,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
       id: 'elementary-fractions',
       title: 'Ułamki - szkoła podstawowa',
       description: 'Podstawy ułamków zwykłych - dodawanie, odejmowanie, mnożenie i dzielenie',
-      problemCount: elementaryFractionsProblems.length
+      problemCount: elementaryFractionsProblems.length,
+      isNew: true
     },
     {
       id: 'systems-of-equations',
@@ -118,6 +119,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
                 className={`w-full text-left p-4 md:p-6 rounded-xl transition-all relative ${
                   module.disabled
                     ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60'
+                    : module.isNew
+                    ? 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group animate-pulse-border-green'
                     : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
               >

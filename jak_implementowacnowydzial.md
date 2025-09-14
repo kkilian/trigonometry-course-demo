@@ -341,6 +341,161 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 
 ---
 
+## **Dodatek: Lista zadań z kropką (opcjonalne)**
+
+### **Opis funkcji**
+Subtelna kropka obok paska postępu pozwala użytkownikom przełączyć się na widok wszystkich zadań. Jest to ukryta funkcjonalność dla zaawansowanych użytkowników, która nie rozprasza początkujących.
+
+### **Implementacja w komponencie StartHere**
+
+#### **Krok 1: Dodanie stanu**
+```jsx
+const [showAllProblems, setShowAllProblems] = useState(false);
+```
+
+#### **Krok 2: Modyfikacja paska postępu**
+W sekcji progress bar, zamień:
+```jsx
+<div className="flex justify-between items-center text-sm text-stone-600">
+  <span>Postęp</span>
+  <span>{completedProblems.size} z {problems.length} zadań</span>
+</div>
+```
+
+Na:
+```jsx
+<div className="flex justify-between items-center text-sm text-stone-600">
+  <span>Postęp</span>
+  <div className="flex items-center gap-4">
+    <span>{completedProblems.size} z {problems.length} zadań</span>
+    <button
+      onClick={() => setShowAllProblems(!showAllProblems)}
+      className="w-2 h-2 rounded-full bg-stone-400 hover:bg-stone-600 transition-colors opacity-40 hover:opacity-100"
+      title={showAllProblems ? 'Ukryj listę' : 'Pokaż wszystkie zadania'}
+    >
+    </button>
+  </div>
+</div>
+```
+
+#### **Krok 3: Widok wszystkich zadań**
+Zastąp główną sekcję renderowania z:
+```jsx
+{/* Display problems based on user progress */}
+{problemsToShow.length === 1 ? (
+  // Existing single problem logic...
+) : (
+  // Existing suggested problems logic...
+)}
+```
+
+Na:
+```jsx
+{showAllProblems ? (
+  // All problems list view
+  <div className="space-y-4">
+    <div className="text-center mb-6">
+      <h3 className="text-lg font-semibold text-stone-800 mb-2">Wszystkie zadania</h3>
+      <p className="text-stone-600 text-sm">
+        Wybierz dowolne zadanie z pełnej listy ({problems.length} zadań)
+      </p>
+    </div>
+    <div className="space-y-3 px-4 md:px-8">
+      {problems.map((problem, index) => (
+        <button
+          key={problem.id}
+          onClick={() => handleStartProblem(problem)}
+          className={`w-full text-left p-4 md:p-6 rounded-lg transition-all group relative ${
+            completedProblems.has(problem.id)
+              ? 'bg-green-50 border border-green-200 hover:border-green-300'
+              : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50'
+          }`}
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-1 rounded">
+                  #{index + 1}
+                </span>
+                {problem.topic && (
+                  <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
+                    {problem.topic}
+                  </span>
+                )}
+                {completedProblems.has(problem.id) && (
+                  <div className="flex items-center gap-1 text-green-700">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-xs font-medium">Ukończone</span>
+                  </div>
+                )}
+              </div>
+              <div className="text-stone-900 text-sm md:text-base leading-relaxed">
+                <MathRenderer content={problem.statement || ''} />
+              </div>
+            </div>
+            <div className="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+              <div className="bg-stone-100 px-2 py-1 rounded-full">
+                <span className="text-xs text-stone-600">
+                  {problem.steps?.length || 0} kroków
+                </span>
+              </div>
+              <div className="w-6 h-6 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
+                <svg className="w-3 h-3 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+) : (
+  // Existing logic wrapped in fragment
+  <>
+    {problemsToShow.length === 1 ? (
+      // Existing single problem logic...
+    ) : (
+      // Existing suggested problems logic...
+    )}
+  </>
+)}
+```
+
+### **Charakterystyka designu**
+
+#### **Kropka trigger:**
+- **Rozmiar:** 8px × 8px (`w-2 h-2`)
+- **Kolor:** Szary z przezroczystością 40%
+- **Hover:** Ciemniejszy i pełna nieprzezroczystość
+- **Pozycja:** Obok licznika postępu
+- **Tooltip:** Informacyjny tekst po najechaniu
+
+#### **Lista wszystkich zadań:**
+- **Layout:** Kompaktowe karty 4-6px padding
+- **Numeracja:** `#{index + 1}` w mono font
+- **Status:** Zielone tło dla ukończonych
+- **Responsywność:** Zmniejszone elementy na mobile
+- **Badge:** Zachowane topic badges z danymi
+
+### **Zalety implementacji**
+
+✅ **Subtelność** - Nie rozprasza nowych użytkowników
+✅ **Discovery** - Zaawansowani znajdą funkcję naturalnie
+✅ **Szybkość** - Natychmiastowy dostęp do dowolnego zadania
+✅ **Status** - Widoczny postęp na liście wszystkich zadań
+✅ **Spójność** - Identyczny design we wszystkich modułach
+
+### **Uwagi implementacyjne**
+- Funkcja jest **opcjonalna** - można pominąć przy prostszych działach
+- Stan `showAllProblems` resetuje się przy każdym wejściu do działu
+- Lista renderuje wszystkie problemy - uwzględnij wydajność przy >500 zadań
+- Tooltip zapewnia accessibility dla screen readerów
+
+---
+
 ## **Podsumowanie**
 
 System StartHere zapewnia spójne, inteligentne doświadczenie użytkownika w całej aplikacji. Dzięki temu procesowi można łatwo dodawać nowe działy z zachowaniem wszystkich funkcjonalności:
