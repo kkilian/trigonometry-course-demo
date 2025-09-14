@@ -233,7 +233,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{7}{12}$ i $\\frac{1}{4}$?",
-        "expression": "Wspólny mianownik dla $12$ i $4$ to $12$",
+        "expression": "$\\frac{7}{12} + \\frac{1}{4}$ - sprowadzamy oba ułamki do wspólnego mianownika 12",
         "explanation": "Musimy sprowadzić ułamki do wspólnego mianownika"
       },
       {
@@ -309,7 +309,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{9}{10}$ i $\\frac{2}{5}$?",
-        "expression": "Wspólny mianownik dla $10$ i $5$ to $10$",
+        "expression": "$NWW(10, 5) = 10$",
         "explanation": "Aby odjąć ułamki, musimy mieć wspólny mianownik"
       },
       {
@@ -528,7 +528,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "Wspólny mianownik dla $3$, $4$ i $12$ to $12$",
+        "expression": "$NWW(3, 4, 12) = 12$",
         "explanation": "Aby dodać ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -610,7 +610,7 @@
       {
         "step": 1,
         "hint": "Jakie jest wspólne mianownik dla ułamków $\\frac{11}{15}$ i $\\frac{2}{5}$?",
-        "expression": "Wspólny mianownik dla $15$ i $5$ to $15$",
+        "expression": "$NWW(15, 5) = 15$",
         "explanation": "Aby odjąć ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -686,7 +686,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 8 i 12?",
-        "expression": "Wspólny mianownik dla $8$ i $12$ to $24$",
+        "expression": "$NWW(8, 12) = 24$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -931,7 +931,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 1/2, 2/3 i 1/6?",
-        "expression": "Wspólny mianownik dla $2$, $3$ i $6$ to $6$",
+        "expression": "$NWW(2, 3, 6) = 6$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika 6"
       },
       {
@@ -997,7 +997,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 12 i 8?",
-        "expression": "Wspólny mianownik dla $12$ i $8$ to $24$",
+        "expression": "$NWW(12, 8) = 24$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1192,7 +1192,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 15 i 5?",
-        "expression": "Wspólny mianownik dla $15$ i $5$ to $15$",
+        "expression": "$NWW(15, 5) = 15$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -1268,7 +1268,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{13}{18}$ i $\\frac{1}{6}$?",
-        "expression": "Wspólny mianownik dla $18$ i $6$ to $18$",
+        "expression": "$NWW(18, 6) = 18$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1487,7 +1487,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownika dla ułamków $\\frac{2}{9}$ i $\\frac{5}{18}$?",
-        "expression": "Wspólny mianownik dla $9$ i $18$ to $18$",
+        "expression": "$NWW(9, 18) = 18$",
         "explanation": "Mianownik 18 pozwoli nam dodać ułamki"
       },
       {
@@ -2457,7 +2457,7 @@
       {
         "step": 2,
         "hint": "Jaki jest najmniejszy wspólny mianownik dla 6 i 12?",
-        "expression": "Wspólny mianownik dla $6$ i $12$ to $12$",
+        "expression": "$NWW(6, 12) = 12$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -2615,7 +2615,7 @@
       {
         "step": 3,
         "hint": "Jaka jest najmniejsza wspólna wielokrotność mianowników 4 i 3?",
-        "expression": "Wspólny mianownik dla $4$ i $3$ to $12$",
+        "expression": "$\text{NWW}(4,3) = 12$",
         "explanation": "Najmniejsza wspólna wielokrotność to 12"
       },
       {
@@ -2677,139 +2677,7 @@
       "timestamp": "2025-09-10T08:02:19.018Z"
     }
   },
-  {
-    "id": "arithmetic_simplification_1",
-    "topic": "Działania na ułamkach",
-    "statement": "Oblicz: $0,6 - \frac{2}{5}$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jak zamienić liczbę dziesiętną na ułamek?",
-        "expression": "$0,6 = \frac{6}{10}$",
-        "explanation": "Liczba dziesiętna 0,6 to ułamek $\frac{6}{10}$ po skróceniu"
-      },
-      {
-        "step": 2,
-        "hint": "Czy masz już ułamki o tym samym mianowniku?",
-        "expression": "$\frac{6}{10} - \frac{2}{5}$",
-        "explanation": "Zauważamy, że mianowniki są różne i trzeba je ujednolicić"
-      },
-      {
-        "step": 3,
-        "hint": "Jak sprowadzić ułamki do wspólnego mianownika?",
-        "expression": "$\frac{6}{10} - \frac{4}{10}$",
-        "explanation": "Mnożymy drugi ułamek przez $\frac{2}{2}$, aby mieć mianownik 10"
-      },
-      {
-        "step": 4,
-        "hint": "Co się stanie, gdy odejmujesz ułamki o tym samym mianowniku?",
-        "expression": "$\frac{6-4}{10} = \frac{2}{10}$",
-        "explanation": "Odejmujemy liczniki, mianownik pozostaje bez zmian"
-      },
-      {
-        "step": 5,
-        "hint": "Czy możesz skrócić otrzymany ułamek?",
-        "expression": "$\frac{1}{5}$",
-        "explanation": "Skracamy ułamek $\frac{2}{10}$ przez podzielenie licznika i mianownika przez 2"
-      }
-    ],
-    "solutions": [
-      "$\frac{1}{5}$"
-    ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "vague_hint",
-          "step": 5,
-          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
-          "severity": "warning",
-          "hint": "Czy możesz skrócić otrzymany ułamek?",
-          "vagueWords": [
-            "może"
-          ]
-        }
-      ],
-      "qualityScore": 9.5,
-      "metrics": {
-        "avgExplanationLength": 61,
-        "maxExplanationLength": 77,
-        "vagueWordsCount": 1,
-        "problematicStepsPercentage": 20,
-        "warningTypeCounts": {
-          "vague_hint": 1
-        }
-      },
-      "timestamp": "2025-09-10T08:02:28.031Z"
-    }
-  },
-  {
-    "id": "division_fraction",
-    "topic": "Działania na ułamkach",
-    "statement": "Oblicz: $0,8 \\div \\frac{2}{3}$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jak zamienić liczbę dziesiętną na ułamek?",
-        "expression": "$0,8 = \\frac{8}{10}$",
-        "explanation": "Liczba 0,8 to 8 dziesiątych, więc zapisujemy jako ułamek $\\frac{8}{10}$"
-      },
-      {
-        "step": 2,
-        "hint": "Pamiętasz regułę dzielenia ułamków? Co trzeba zrobić?",
-        "expression": "$\\frac{8}{10} \\div \\frac{2}{3} = \\frac{8}{10} \\cdot \\frac{3}{2}$",
-        "explanation": "Przy dzieleniu ułamków mnożymy przez ułamek odwrotny"
-      },
-      {
-        "step": 3,
-        "hint": "Jak uprościć ułamki przed mnożeniem?",
-        "expression": "$\\frac{8}{10} \\cdot \\frac{3}{2} = \\frac{4}{5} \\cdot \\frac{3}{2}$",
-        "explanation": "Skracamy ułamek $\\frac{8}{10}$ do $\\frac{4}{5}$"
-      },
-      {
-        "step": 4,
-        "hint": "Jak mnożymy ułamki?",
-        "expression": "$\\frac{4}{5} \\cdot \\frac{3}{2} = \\frac{4 \\cdot 3}{5 \\cdot 2} = \\frac{12}{10}$",
-        "explanation": "Mnożymy liczniki i mianowniki"
-      },
-      {
-        "step": 5,
-        "hint": "Czy możesz uprościć końcowy ułamek?",
-        "expression": "$\\frac{12}{10} = \\frac{6}{5} = 1,2$",
-        "explanation": "Skracamy ułamek $\\frac{12}{10}$ do $\\frac{6}{5}$, co równa się 1,2"
-      }
-    ],
-    "solutions": [
-      "$1,2$",
-      "$\\frac{6}{5}$"
-    ],
-    "parameters": {},
-    "feedback": {
-      "warnings": [
-        {
-          "type": "vague_hint",
-          "step": 5,
-          "message": "Hint jest zbyt ogólny. Bądź bardziej konkretny.",
-          "severity": "warning",
-          "hint": "Czy możesz uprościć końcowy ułamek?",
-          "vagueWords": [
-            "może"
-          ]
-        }
-      ],
-      "qualityScore": 9.5,
-      "metrics": {
-        "avgExplanationLength": 53,
-        "maxExplanationLength": 71,
-        "vagueWordsCount": 1,
-        "problematicStepsPercentage": 20,
-        "warningTypeCounts": {
-          "vague_hint": 1
-        }
-      },
-      "timestamp": "2025-09-10T08:02:46.052Z"
-    }
-  },
+  
   {
     "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach i liczbach dziesiętnych",
@@ -3241,7 +3109,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "Wspólny mianownik dla $3$, $4$ i $12$ to $12$",
+        "expression": "$\text{NWW}(3, 4, 12) = 12$",
         "explanation": "Sprowadzamy wszystkie ułamki do wspólnego mianownika 12"
       },
       {
@@ -3307,7 +3175,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 8, 6 i 12?",
-        "expression": "Wspólny mianownik dla $8$, $6$ i $12$ to $24$",
+        "expression": "$NWW(8, 6, 12) = 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -5630,7 +5498,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników tych ułamków?",
-        "expression": "Wspólny mianownik dla $3$, $4$, $6$ i $12$ to $12$",
+        "expression": "$NWW(3, 4, 6, 12) = 12$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -5712,7 +5580,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla tych ułamków?",
-        "expression": "Wspólny mianownik dla $8$, $6$, $3$ i $4$ to $24$",
+        "expression": "$NWW(8, 6, 3, 4) = 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -6597,7 +6465,7 @@
         "step": 3,
         "hint": "Teraz masz już same ułamki. Jak dodać ułamki o różnych mianownikach?",
         "expression": "$\\frac{2}{3} + \\frac{4}{5} - \\frac{1}{15}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika: wspólny mianownik dla $3$, $5$ i $15$ to $15$"
+        "explanation": "Sprowadzamy do wspólnego mianownika: $NWW(3,5,15) = 15$"
       },
       {
         "step": 4,

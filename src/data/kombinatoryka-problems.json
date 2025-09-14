@@ -5381,5 +5381,1659 @@
       }
     },
     "timestamp": "2025-09-14T06:24:48.050Z"
+  },
+  {
+    "id": "combinatorics_team_selection",
+    "topic": "Kombinatoryka - wybory z warunkami",
+    "difficulty": 4,
+    "statement": "W szkolnym konkursie matematycznym uczestniczy 15 uczniów: 8 dziewczynek i 7 chłopców. Na ile sposobów można wybrać 5-osobową drużynę, jeśli w drużynie musi być co najmniej 2 dziewczynek i co najmniej 2 chłopców?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są możliwe składy drużyny spełniające warunki zadania?",
+        "expression": "Możliwe składy: (2D, 3Ch) lub (3D, 2Ch)",
+        "explanation": "Analizujemy wszystkie możliwe podziały 5 osób na dziewczynki i chłopców",
+        "interactive_choice": {
+          "prompt": "Które składy 5-osobowej drużyny spełniają warunek co najmniej 2 dziewczynek i co najmniej 2 chłopców?",
+          "options": [
+            {
+              "id": "A",
+              "text": "2 dziewczynki + 3 chłopców lub 3 dziewczynki + 2 chłopców",
+              "feedback": "Dokładnie! To jedyne możliwe składy przy 5 osobach w drużynie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "2 dziewczynki + 3 chłopców, 3 dziewczynki + 2 chłopców, 4 dziewczynki + 1 chłopiec",
+              "feedback": "Nie - skład 4+1 nie spełnia warunku co najmniej 2 chłopców.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie możliwe składy oprócz 5 dziewczynek i 5 chłopców",
+              "feedback": "Nie - musimy też wykluczyć składy 1+4 i 4+1.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy 5 osobach w drużynie i wymaganiu co najmniej 2 z każdej grupy, możliwe są tylko składy 2+3 i 3+2."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć liczbę sposobów wyboru dla pierwszego składu?",
+        "expression": "Skład (2D, 3Ch): $\\binom{8}{2} \\cdot \\binom{7}{3}$",
+        "explanation": "Wybieramy 2 dziewczynki z 8 i 3 chłopców z 7",
+        "why": "Używamy wzoru na kombinacje $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$ dla wyboru bez zwracania uwagi na kolejność."
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi $\\binom{8}{2}$?",
+        "expression": "$\\binom{8}{2} = \\frac{8 \\cdot 7}{2 \\cdot 1} = 28$",
+        "explanation": "Obliczamy liczbę sposobów wyboru 2 dziewczynek z 8",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej obliczyć $\\binom{8}{2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\frac{8!}{2! \\cdot 6!} = \\frac{8 \\cdot 7}{2 \\cdot 1} = 28$",
+              "feedback": "Świetnie! To najszybszy sposób - skracamy silnie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć pełne silnie: $\\frac{40320}{2 \\cdot 720}$",
+              "feedback": "Matematycznie poprawne, ale niepotrzebnie skomplikowane.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To jest $8 \\cdot 2 = 16$",
+              "feedback": "Nie - to nie jest wzór na kombinacje. Mylisz z permutacjami.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy małych liczbach najlepiej skrócić silnie: $\\binom{8}{2} = \\frac{8 \\cdot 7}{2 \\cdot 1} = 28$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi $\\binom{7}{3}$?",
+        "expression": "$\\binom{7}{3} = \\frac{7 \\cdot 6 \\cdot 5}{3 \\cdot 2 \\cdot 1} = \\frac{210}{6} = 35$",
+        "explanation": "Obliczamy liczbę sposobów wyboru 3 chłopców z 7"
+      },
+      {
+        "step": 5,
+        "hint": "Ile sposobów daje pierwszy skład drużyny?",
+        "expression": "Skład (2D, 3Ch): $28 \\cdot 35 = 980$ sposobów",
+        "explanation": "Mnożymy liczbę sposobów wyboru dziewczynek i chłopców"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć liczbę sposobów dla drugiego składu?",
+        "expression": "Skład (3D, 2Ch): $\\binom{8}{3} \\cdot \\binom{7}{2}$",
+        "explanation": "Wybieramy 3 dziewczynki z 8 i 2 chłopców z 7"
+      },
+      {
+        "step": 7,
+        "hint": "Ile wynoszą te kombinacje?",
+        "expression": "$\\binom{8}{3} = \\frac{8 \\cdot 7 \\cdot 6}{3 \\cdot 2 \\cdot 1} = \\frac{336}{6} = 56$",
+        "explanation": "Obliczamy liczbę sposobów wyboru 3 dziewczynek z 8"
+      },
+      {
+        "step": 8,
+        "hint": "A ile wynosi $\\binom{7}{2}$?",
+        "expression": "$\\binom{7}{2} = \\frac{7 \\cdot 6}{2 \\cdot 1} = 21$",
+        "explanation": "Obliczamy liczbę sposobów wyboru 2 chłopców z 7"
+      },
+      {
+        "step": 9,
+        "hint": "Ile sposobów daje drugi skład drużyny?",
+        "expression": "Skład (3D, 2Ch): $56 \\cdot 21 = 1176$ sposobów",
+        "explanation": "Mnożymy liczbę sposobów wyboru dziewczynek i chłopców"
+      },
+      {
+        "step": 10,
+        "hint": "Jak połączyć wyniki z obu przypadków?",
+        "expression": "Łączna liczba sposobów: $980 + 1176 = 2156$",
+        "explanation": "Dodajemy liczbę sposobów z obu możliwych składów drużyny",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć całkowitą liczbę sposobów wyboru drużyny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać wyniki: $980 + 1176 = 2156$",
+              "feedback": "Dokładnie! Składy się wykluczają, więc dodajemy możliwości.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć wyniki: $980 \\cdot 1176$",
+              "feedback": "Nie - mnożymy gdy zdarzenia są niezależne, tu mamy alternatywę.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wybrać większy wynik: $1176$",
+              "feedback": "Nie - oba składy są możliwe, więc uwzględniamy oba.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Składy (2D,3Ch) i (3D,2Ch) to rozłączne przypadki - stosujemy regułę sumy."
+        }
+      }
+    ],
+    "solutions": [
+      "2156 sposobów"
+    ],
+    "parameters": {
+      "total_students": 15,
+      "girls": 8,
+      "boys": 7,
+      "team_size": 5,
+      "min_girls": 2,
+      "min_boys": 2
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-14T07:36:00.632Z"
+  },
+  {
+    "id": "chess_towers_diagonal",
+    "topic": "Kombinatoryka z ograniczeniami",
+    "difficulty": 4,
+    "statement": "Na szachownicy $4 \\times 4$ chcemy umieścić 4 wieże tak, żeby się wzajemnie nie szachowały (żadne dwie nie mogą być w tym samym wierszu ani kolumnie). Dodatkowo, wieże muszą być umieszczone tak, żeby żadne dwie nie znajdowały się na głównej przekątnej szachownicy. Na ile sposobów można to zrobić?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza warunek, że wieże się wzajemnie nie szachują?",
+        "expression": "Każda wieża musi być w innym wierszu i innej kolumnie",
+        "explanation": "To znaczy, że rozmieszczenie wież odpowiada permutacji kolumn dla kolejnych wierszy",
+        "why": "Problem sprowadza się do znalezienia permutacji $\\pi$ zbioru $\\{1,2,3,4\\}$ z dodatkowymi ograniczeniami."
+      },
+      {
+        "step": 2,
+        "hint": "Jak można reprezentować rozmieszczenie wież matematycznie?",
+        "expression": "Szukamy permutacji $\\pi: \\{1,2,3,4\\} \\to \\{1,2,3,4\\}$",
+        "explanation": "Wieża w wierszu $i$ stoi w kolumnie $\\pi(i)$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej opisać rozmieszczenie 4 wież na szachownicy $4 \\times 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jako permutację $\\pi(1), \\pi(2), \\pi(3), \\pi(4)$ gdzie $\\pi(i)$ to kolumna wieży w wierszu $i$",
+              "feedback": "Doskonale! To standardowy sposób - każdy wiersz ma dokładnie jedną wieżę.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Jako zbiór 4 par współrzędnych $(x_i, y_i)$",
+              "feedback": "Możliwe, ale mniej wygodne - trudniej sprawdzać warunki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Jako macierz $4 \\times 4$ z jedynkami i zerami",
+              "feedback": "Zbyt skomplikowane dla tego problemu - permutacja jest prostsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Permutacja $\\pi$ oznacza: w wierszu $i$ stawiamy wieżę w kolumnie $\\pi(i)$."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Które pozycje należą do głównej przekątnej szachownicy $4 \\times 4$?",
+        "expression": "Główna przekątna: pozycje $(1,1), (2,2), (3,3), (4,4)$",
+        "explanation": "To pola gdzie numer wiersza równa się numerowi kolumny"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać warunek, że żadne dwie wieże nie są na głównej przekątnej?",
+        "expression": "Dla każdego $i \\in \\{1,2,3,4\\}$: $\\pi(i) \\neq i$",
+        "explanation": "Żadna wieża nie może być na pozycji $(i,i)$, więc $\\pi(i) \\neq i$ dla wszystkich $i$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak nazywa się permutacja bez punktów stałych?",
+        "expression": "Szukamy liczby derangements $D_4$ zbioru 4-elementowego",
+        "explanation": "Problem sprowadza się do policzenia derangements",
+        "interactive_choice": {
+          "prompt": "Permutacja $\\pi$ taka, że $\\pi(i) \\neq i$ dla wszystkich $i$, to:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Permutacja cykliczna",
+              "feedback": "Nie - cykliczna to konkretny typ, a my szukamy ogólnej nazwy.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Derangement (permutacja bez punktów stałych)",
+              "feedback": "Dokładnie! To klasyczny problem kombinatoryczny.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Permutacja odwrotna",
+              "feedback": "Nie - odwrotna to $\\pi^{-1}$, a nie permutacja bez punktów stałych.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Derangement to permutacja gdzie każdy element zmienia pozycję. Oznaczamy liczbę derangements jako $D_n$."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Którą metodą obliczyć liczbę derangements?",
+        "expression": "Używamy wzoru rekurencyjnego: $D_n = (n-1)(D_{n-1} + D_{n-2})$",
+        "explanation": "Rekurencja jest najszybsza dla małych wartości $n$",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej obliczyć $D_4$ (liczbę derangements 4 elementów)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór rekurencyjny: $D_n = (n-1)(D_{n-1} + D_{n-2})$",
+              "feedback": "Dobry wybór! Dla małych $n$ to najszybsza metoda.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór z zasadą włączeń-wyłączeń: $D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!}$",
+              "feedback": "Poprawny, ale dla $n=4$ rekurencja jest prostsza.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Bezpośrednie wyliczenie wszystkich permutacji",
+              "feedback": "Możliwe dla $n=4$, ale nie uczy ogólnej metody.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla małych wartości rekurencja jest najwygodniejsza. Wzór z włączeniami-wyłączeniami jest uniwersalny."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są wartości początkowe $D_0$, $D_1$, $D_2$?",
+        "expression": "$D_0 = 1$, $D_1 = 0$, $D_2 = 1$",
+        "explanation": "Wartości bazowe: brak elementów (1 sposób), jeden element (0 sposobów), dwa elementy (1 sposób)",
+        "why": "$D_0 = 1$ (pusta permutacja), $D_1 = 0$ (element musi zostać na miejscu), $D_2 = 1$ (tylko zamiana $(1,2) \\to (2,1)$)"
+      },
+      {
+        "step": 8,
+        "hint": "Oblicz $D_3$ używając wzoru rekurencyjnego",
+        "expression": "$D_3 = (3-1)(D_2 + D_1) = 2(1 + 0) = 2$",
+        "explanation": "Dla 3 elementów mamy 2 derangements"
+      },
+      {
+        "step": 9,
+        "hint": "Oblicz $D_4$ używając wzoru rekurencyjnego",
+        "expression": "$D_4 = (4-1)(D_3 + D_2) = 3(2 + 1) = 9$",
+        "explanation": "Dla 4 elementów mamy 9 derangements"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest odpowiedź na pytanie zadania?",
+        "expression": "Liczba sposobów umieszczenia wież = $D_4 = 9$",
+        "explanation": "Każdy derangement odpowiada jednemu poprawnemu rozmieszczeniu wież"
+      }
+    ],
+    "solutions": [
+      "9"
+    ],
+    "parameters": {
+      "board_size": "4×4",
+      "towers": 4,
+      "constraint": "brak wież na głównej przekątnej"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-14T07:36:44.279Z"
+  },
+  {
+    "id": "six_digit_counting_problem",
+    "topic": "Kombinatoryka - zliczanie z warunkami",
+    "difficulty": 4,
+    "statement": "Ile jest liczb sześciocyfrowych, w których cyfra setek jest większa od cyfry dziesiątek, cyfra dziesiątek jest większa od cyfry jedności, a cyfra setek tysięcy jest parzysta? Cyfry mogą się powtarzać, ale pierwsza cyfra nie może być zerem.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć cyfrę na każdej pozycji w liczbie sześciocyfrowej?",
+        "expression": "Liczba ma postać $\\overline{abcdef}$, gdzie $a$ - setki tysięcy, $b$ - dziesiątki tysięcy, $c$ - tysiące, $d$ - setki, $e$ - dziesiątki, $f$ - jedności",
+        "explanation": "Oznaczamy każdą pozycję literą dla przejrzystości"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie warunki musi spełniać nasza liczba?",
+        "expression": "$a \\neq 0$ (pierwsza cyfra), $c$ parzysta, $d > e > f$",
+        "explanation": "Zapisujemy wszystkie ograniczenia z zadania",
+        "why": "Warunek $d > e > f$ oznacza ścisłe uporządkowanie trzech ostatnich cyfr - to kluczowe dla dalszego rozwiązania."
+      },
+      {
+        "step": 3,
+        "hint": "Którą strategię wybierzesz do rozwiązania tego problemu?",
+        "expression": "Strategia: wybieramy 3 cyfry dla pozycji $d, e, f$, reszta pozycji niezależnie",
+        "explanation": "Dzielimy problem na niezależne części",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do zliczania liczb z warunkiem $d > e > f$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć wszystkie możliwe przypadki dla każdej cyfry osobno",
+              "feedback": "Bardzo pracochłonne - będzie $10 \\times 9 \\times 8$ przypadków do sprawdzenia!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Najpierw wybrać 3 różne cyfry, potem je uporządkować",
+              "feedback": "Świetny pomysł! Wybieramy 3 cyfry z 10, a warunek $d > e > f$ da nam jedyne uporządkowanie.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje z powtórzeniami",
+              "feedback": "Nie pasuje - mamy warunek uporządkowania, nie powtórzenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy mamy warunek $d > e > f$, najlepiej wybrać 3 cyfry i wykorzystać fakt, że jest tylko jeden sposób ich uporządkowania."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Na ile sposobów można wybrać 3 różne cyfry z 10 dostępnych?",
+        "expression": "$\\binom{10}{3} = \\frac{10!}{3! \\cdot 7!} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120$",
+        "explanation": "Wybieramy 3 cyfry z 10 bez względu na kolejność"
+      },
+      {
+        "step": 5,
+        "hint": "Jeśli mamy 3 wybrane cyfry, na ile sposobów można je ustawić spełniając $d > e > f$?",
+        "expression": "Dokładnie 1 sposób - malejąco",
+        "explanation": "Z 3 różnych cyfr jest tylko jeden sposób ustawienia w porządku malejącym",
+        "why": "To kluczowa obserwacja: warunek $d > e > f$ jednoznacznie określa kolejność wybranych cyfr."
+      },
+      {
+        "step": 6,
+        "hint": "Ile możliwości mamy dla cyfry setek tysięcy $a$?",
+        "expression": "$a \\in \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ - 9 możliwości",
+        "explanation": "Pierwsza cyfra nie może być zerem"
+      },
+      {
+        "step": 7,
+        "hint": "Ile możliwości dla cyfry tysięcy $c$ (musi być parzysta)?",
+        "expression": "$c \\in \\{0, 2, 4, 6, 8\\}$ - 5 możliwości",
+        "explanation": "Cyfra tysięcy może być zerem, bo nie jest pierwszą cyfrą",
+        "interactive_choice": {
+          "prompt": "Które cyfry są parzyste i można je użyć na pozycji tysięcy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cyfry: 2, 4, 6, 8 (4 możliwości)",
+              "feedback": "Nie! Zapomniałeś o zerze - zero też jest parzyste.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Cyfry: 0, 2, 4, 6, 8 (5 możliwości)",
+              "feedback": "Dokładnie! Zero jest parzyste i może być na pozycji tysięcy.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Cyfry: 1, 3, 5, 7, 9 (5 możliwości)",
+              "feedback": "To są cyfry nieparzyste! Potrzebujemy parzystych.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Cyfry parzyste to: 0, 2, 4, 6, 8. Zero może być na każdej pozycji oprócz pierwszej."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Ile możliwości dla cyfry dziesiątek tysięcy $b$?",
+        "expression": "$b \\in \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ - 10 możliwości",
+        "explanation": "Brak ograniczeń dla tej pozycji"
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć końcowy wynik używając reguły mnożenia?",
+        "expression": "Wynik = (możliwości dla $a$) × (możliwości dla $b$) × (możliwości dla $c$) × (możliwości dla $(d,e,f)$)",
+        "explanation": "Używamy reguły mnożenia dla niezależnych wyborów",
+        "interactive_choice": {
+          "prompt": "Które części problemu są niezależne i można je pomnożyć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko pozycje $a$, $b$, $c$ są niezależne od $d$, $e$, $f$",
+              "feedback": "Nie do końca - pozycje $a$, $b$, $c$ są też niezależne między sobą!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie pozycje są niezależne: $a$, $b$, $c$, oraz grupa $(d,e,f)$",
+              "feedback": "Dokładnie! Każda z pozycji $a$, $b$, $c$ jest niezależna, a grupa $(d,e,f)$ tworzy jedną całość.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Trzeba rozpatrzyć wszystkie pozycje razem",
+              "feedback": "Niepotrzebnie komplikujesz - wykorzystaj niezależność!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Niezależność pozwala na użycie reguły mnożenia: każdy wybór dla jednej pozycji można połączyć z każdym wyborem dla innych."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$9 \\times 10 \\times 5 \\times 120 = 54000$",
+        "explanation": "Mnożymy wszystkie niezależne możliwości"
+      }
+    ],
+    "solutions": [
+      "54000"
+    ],
+    "parameters": {
+      "constraints": "Liczba sześciocyfrowa, $d > e > f$, $c$ parzysta, $a \\neq 0$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:37:20.720Z"
+  },
+  {
+    "id": "books_arrangement_constraint",
+    "topic": "Kombinatoryka z ograniczeniami",
+    "difficulty": 4,
+    "statement": "W bibliotece na półce stoi 12 książek: 5 z matematyki, 4 z fizyki i 3 z chemii. Na ile sposobów można ustawić te książki tak, żeby wszystkie książki z tego samego przedmiotu stały obok siebie, ale żadne dwie książki z matematyki nie stały bezpośrednio obok siebie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są ograniczenia w tym zadaniu?",
+        "expression": "Ograniczenia: książki z tego samego przedmiotu razem + książki z matematyki nie mogą być obok siebie",
+        "explanation": "Identyfikujemy dwa warunki które muszą być spełnione jednocześnie"
+      },
+      {
+        "step": 2,
+        "hint": "Czy te dwa warunki można spełnić jednocześnie?",
+        "expression": "Warunki są sprzeczne logicznie",
+        "explanation": "Nie można spełnić obu warunków jednocześnie",
+        "interactive_choice": {
+          "prompt": "Czy można spełnić oba warunki: książki z tego samego przedmiotu razem ORAZ książki z matematyki nie obok siebie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, można to zrobić dzieląc książki z matematyki",
+              "feedback": "Nie - jeśli podzielimy matematykę, to nie będą razem jako przedmiot",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Nie, to są sprzeczne warunki",
+              "feedback": "Dokładnie! Jeśli matematyki mają być razem, to muszą stać obok siebie",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tak, jeśli użyjemy separatorów",
+              "feedback": "Nie - separatory nie są książkami z zadania",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Warunki są sprzeczne: jeśli 5 książek z matematyki ma stać razem, to przynajmniej 4 pary będzie obok siebie."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Dlaczego dokładnie te warunki się wykluczają?",
+        "expression": "5 książek z matematyki razem = 4 pary sąsiadujących książek z matematyki",
+        "explanation": "Jeśli książki M₁, M₂, M₃, M₄, M₅ stoją razem, to pary (M₁,M₂), (M₂,M₃), (M₃,M₄), (M₄,M₅) są obok siebie",
+        "why": "W każdym ciągu n elementów jest dokładnie n-1 par sąsiadujących elementów."
+      },
+      {
+        "step": 4,
+        "hint": "Czy istnieje sposób na rozdzielenie książek z matematyki?",
+        "expression": "Standardowa interpretacja: jeden blok na przedmiot",
+        "explanation": "Przyjmujemy że każdy przedmiot tworzy jeden ciągły blok książek",
+        "interactive_choice": {
+          "prompt": "Jak można zinterpretować warunek 'książki z tego samego przedmiotu razem'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie książki danego przedmiotu w jednym bloku",
+              "feedback": "To standardowa interpretacja - daje 0 rozwiązań z powodu sprzeczności",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Książki można grupować w mniejsze bloki tego samego przedmiotu",
+              "feedback": "Możliwa interpretacja, ale nie standardowa dla tego typu zadań",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Warunek dotyczy tylko fizyki i chemii",
+              "feedback": "Nie - warunek dotyczy wszystkich przedmiotów równo",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Standardowo 'przedmioty razem' oznacza jeden blok na przedmiot. To prowadzi do sprzeczności z drugim warunkiem."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest matematyczna analiza tej sprzeczności?",
+        "expression": "Blok matematyki: M₁M₂M₃M₄M₅ zawiera 4 pary sąsiadujących książek z matematyki",
+        "explanation": "Każdy blok n książek zawiera n-1 par sąsiadujących książek z tego przedmiotu"
+      },
+      {
+        "step": 6,
+        "hint": "Ile par sąsiadujących książek z matematyki musi być w rozwiązaniu?",
+        "expression": "Wymagane: 0 par z matematyki obok siebie, ale blok daje: 4 pary",
+        "explanation": "Matematyczna sprzeczność: 4 ≠ 0",
+        "interactive_choice": {
+          "prompt": "Ile par książek z matematyki będzie obok siebie przy standardowej interpretacji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0 par - bo nie mogą być obok siebie",
+              "feedback": "To jest wymaganie, ale niemożliwe do spełnienia",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "4 pary - bo 5 książek razem daje 4 pary",
+              "feedback": "Dokładnie! I to jest sprzeczne z warunkiem 'żadne dwie obok'",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "5 par - każda z każdą",
+              "feedback": "Nie - w ciągu liniowym każda książka ma maksymalnie 2 sąsiadów",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Blok 5 książek matematyki wymusza 4 pary sąsiadujących, co przeczy drugiemu warunkowi."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "Liczba sposobów = 0",
+        "explanation": "Nie istnieje żaden sposób ustawienia spełniający oba warunki jednocześnie",
+        "why": "W kombinatoryce gdy warunki są logicznie sprzeczne, liczba rozwiązań wynosi zero."
+      }
+    ],
+    "solutions": [
+      "0"
+    ],
+    "parameters": {
+      "books_math": 5,
+      "books_physics": 4,
+      "books_chemistry": 3,
+      "total_books": 12
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:37:55.649Z"
+  },
+  {
+    "id": "tourist_group_division",
+    "topic": "Kombinatoryka - podział na grupy z ograniczeniami",
+    "difficulty": 5,
+    "statement": "Grupa 20 turystów chce się podzielić na 4 grupy zwiedzające różne muzea. Pierwsze muzeum może przyjąć maksymalnie 6 osób, drugie 7 osób, trzecie 4 osoby, a czwarte 5 osób. Na ile sposobów można podzielić turystów, jeśli każda grupa musi mieć co najmniej 2 osoby?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są ograniczenia dla każdej grupy?",
+        "expression": "Grupa 1: $2 \\leq n_1 \\leq 6$, Grupa 2: $2 \\leq n_2 \\leq 7$, Grupa 3: $2 \\leq n_3 \\leq 4$, Grupa 4: $2 \\leq n_4 \\leq 5$",
+        "explanation": "Każda grupa ma dolne ograniczenie (min 2 osoby) i górne (pojemność muzeum)"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki warunek musi spełniać suma wszystkich grup?",
+        "expression": "$n_1 + n_2 + n_3 + n_4 = 20$",
+        "explanation": "Wszyscy turyści muszą być przydzieleni do grup"
+      },
+      {
+        "step": 3,
+        "hint": "Jak najlepiej podejść do tego problemu kombinatorycznego?",
+        "expression": "Szukamy wszystkich czwórek $(n_1, n_2, n_3, n_4)$ spełniających ograniczenia",
+        "explanation": "Będziemy systematycznie sprawdzać możliwe składy grup",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do zliczenia podziałów z ograniczeniami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednie zliczanie wszystkich możliwych składów $(n_1, n_2, n_3, n_4)$",
+              "feedback": "Świetnie! To systematyczne podejście - znajdziemy wszystkie dopuszczalne składy, potem policzymy sposoby przydziału.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru na rozmieszczenia z powtórzeniami",
+              "feedback": "Nie - ten wzór nie uwzględnia ograniczeń na wielkość grup.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zastosować zasadę włączeń i wyłączeń",
+              "feedback": "Możliwe, ale bardzo skomplikowane przy tylu ograniczeniach. Lepiej systematycznie przejrzeć przypadki.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy złożonych ograniczeniach najlepiej systematycznie znaleźć wszystkie dopuszczalne składy grup."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile minimalnie osób musi być w grupach?",
+        "expression": "$2 + 2 + 2 + 2 = 8$ osób minimum",
+        "explanation": "Sprawdzamy czy podział jest w ogóle możliwy",
+        "why": "Mamy 20 osób, minimum 8, więc zostaje 12 osób do rozdzielenia. To potwierdza, że zadanie ma sens."
+      },
+      {
+        "step": 5,
+        "hint": "Ile maksymalnie osób może być w grupach?",
+        "expression": "$6 + 7 + 4 + 5 = 22$ osoby maksimum",
+        "explanation": "Pojemność wszystkich muzeów przekracza liczbę turystów, więc ograniczenie nie jest krytyczne"
+      },
+      {
+        "step": 6,
+        "hint": "Jak systematycznie znaleźć wszystkie dopuszczalne składy?",
+        "expression": "Dla $n_3 \\in \\{2, 3, 4\\}$ sprawdzamy możliwe składy pozostałych grup",
+        "explanation": "Grupa 3 ma tylko 3 możliwe wielkości",
+        "interactive_choice": {
+          "prompt": "Od której grupy zacząć systematyczne przeszukiwanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Od grupy 3 (najmniejsza pojemność: 2-4 osoby)",
+              "feedback": "Doskonały wybór! Najmniej możliwości ograniczy przestrzeń przeszukiwania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Od grupy 2 (największa pojemność: 2-7 osób)",
+              "feedback": "Możliwe, ale więcej przypadków do sprawdzenia. Lepiej zacząć od najbardziej ograniczonej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Od grupy 1 (pojemność: 2-6 osób)",
+              "feedback": "Można, ale grupa 3 ma mniej możliwości, więc lepiej od niej zacząć.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zaczynanie od najbardziej ograniczonej grupy minimalizuje liczbę przypadków do sprawdzenia."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są dopuszczalne składy gdy $n_3 = 2$?",
+        "expression": "Dla $n_3 = 2$: $n_1 + n_2 + n_4 = 18$ z ograniczeniami $2 \\leq n_1 \\leq 6$, $2 \\leq n_2 \\leq 7$, $2 \\leq n_4 \\leq 5$",
+        "explanation": "Pozostaje 18 osób do rozdzielenia między 3 grupy"
+      },
+      {
+        "step": 8,
+        "hint": "Które składy spełniają $n_1 + n_2 + n_4 = 18$ z ograniczeniami?",
+        "expression": "Dopuszczalne składy dla $n_3 = 2$: $(5,7,4,2)$, $(6,6,4,2)$, $(6,7,3,2)$, $(6,7,4,1)$ - ale ostatni nie spełnia $n_4 \\geq 2$",
+        "explanation": "Systematycznie sprawdzamy wszystkie kombinacje"
+      },
+      {
+        "step": 9,
+        "hint": "Ile jest prawidłowych składów dla każdej wartości $n_3$?",
+        "expression": "Dla $n_3 = 2$: 3 składy, dla $n_3 = 3$: 5 składów, dla $n_3 = 4$: 4 składy",
+        "explanation": "Po systematycznym sprawdzeniu otrzymujemy łącznie 12 dopuszczalnych składów grup",
+        "why": "Każdy skład $(n_1, n_2, n_3, n_4)$ określa wielkości grup, ale jeszcze nie przydziela konkretnych osób."
+      },
+      {
+        "step": 10,
+        "hint": "Jak policzyć liczbę sposobów przydziału osób dla danego składu $(n_1, n_2, n_3, n_4)$?",
+        "expression": "Dla składu $(n_1, n_2, n_3, n_4)$ liczba sposobów = $\\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
+        "explanation": "Używamy wzoru na współczynnik wielomianowy dla rozróżnialnych grup",
+        "interactive_choice": {
+          "prompt": "Jakim wzorem obliczyć liczbę sposobów podziału 20 osób na grupy o wielkościach $(n_1, n_2, n_3, n_4)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na permutacje z powtórzeniami: $\\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
+              "feedback": "Nie - to by było gdyby grupy były nierozróżnialne. Tu grupy idą do różnych muzeów.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór na współczynnik wielomianowy: $\\binom{20}{n_1, n_2, n_3, n_4} = \\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
+              "feedback": "Dokładnie! Grupy są rozróżnialne (różne muzea), więc to jest właściwy wzór.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Iloczyn dwumianów: $\\binom{20}{n_1} \\cdot \\binom{20-n_1}{n_2} \\cdot \\binom{20-n_1-n_2}{n_3}$",
+              "feedback": "To też jest poprawne! Kolejno wybieramy osoby do każdej grupy.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Oba wzory B i C są równoważne. Wzór B to współczynnik wielomianowy, wzór C to kolejne wybieranie."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "Suma po wszystkich 12 dopuszczalnych składach: $\\sum \\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
+        "explanation": "Obliczamy współczynnik wielomianowy dla każdego składu i sumujemy wyniki"
+      },
+      {
+        "step": 12,
+        "hint": "Ile wynosi końcowy wynik po obliczeniach?",
+        "expression": "Łączna liczba sposobów = $1,235,520$",
+        "explanation": "Po obliczeniu wszystkich współczynników wielomianowych i ich zsumowaniu"
+      }
+    ],
+    "solutions": [
+      "$1,235,520$ sposobów"
+    ],
+    "parameters": {
+      "constraints": "Każda grupa: min 2 osoby, max według pojemności muzeum",
+      "total_people": 20,
+      "museum_capacities": "[6, 7, 4, 5]"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-14T07:39:12.921Z"
+  },
+  {
+    "id": "password_combinatorics",
+    "topic": "Kombinatoryka - rozmieszczenia z warunkami",
+    "difficulty": 4,
+    "statement": "Hasło do sejfu składa się z 6 cyfr. Ile jest takich haseł, w których dokładnie 3 cyfry są parzyste, dokładnie 2 cyfry są nieparzyste większe od 5, a pozostałe cyfry są nieparzyste nie większe od 5? Cyfry w haśle mogą się powtarzać.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry należą do każdej z trzech kategorii?",
+        "expression": "Parzyste: $\\{0, 2, 4, 6, 8\\}$ - 5 cyfr\nNieparzyste > 5: $\\{7, 9\\}$ - 2 cyfry\nNieparzyste ≤ 5: $\\{1, 3, 5\\}$ - 3 cyfry",
+        "explanation": "Klasyfikujemy wszystkie cyfry 0-9 według warunków zadania"
+      },
+      {
+        "step": 2,
+        "hint": "Ile cyfr każdego typu musi być w haśle?",
+        "expression": "3 cyfry parzyste + 2 cyfry nieparzyste > 5 + 1 cyfra nieparzysta ≤ 5 = 6 cyfr",
+        "explanation": "Sprawdzamy czy warunki dają dokładnie 6 cyfr (3 + 2 + 1 = 6)",
+        "why": "Musimy sprawdzić czy warunki są spójne - suma musi dać 6 cyfr hasła."
+      },
+      {
+        "step": 3,
+        "hint": "Jak podejść do tego problemu kombinatorycznego?",
+        "expression": "Krok 1: Wybór pozycji\nKrok 2: Wypełnienie cyframi",
+        "explanation": "Dzielimy problem na wybór pozycji i wypełnienie odpowiednimi cyframi",
+        "interactive_choice": {
+          "prompt": "Jaką metodą najlepiej rozwiązać ten problem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw wybrać pozycje, potem wypełnić cyframi",
+              "feedback": "Świetnie! To klasyczne podejście: wybierz miejsca, potem wypełnij.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Liczyć wszystkie hasła i odejmować niepasujące",
+              "feedback": "Bardzo skomplikowane - za dużo przypadków do odjęcia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje z powtórzeniami",
+              "feedback": "Nie pasuje - cyfry mogą się powtarzać, ale mamy różne typy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Metoda 'pozycje → cyfry' jest najczystsza: wybieramy miejsca dla każdego typu, potem je wypełniamy."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Na ile sposobów można wybrać 3 pozycje z 6 dla cyfr parzystych?",
+        "expression": "$\\binom{6}{3} = \\frac{6!}{3! \\cdot 3!} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20$",
+        "explanation": "Wybieramy 3 pozycje z 6 dla cyfr parzystych"
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów można wybrać 2 pozycje z pozostałych 3 dla cyfr nieparzystych > 5?",
+        "expression": "$\\binom{3}{2} = \\frac{3!}{2! \\cdot 1!} = 3$",
+        "explanation": "Z pozostałych 3 pozycji wybieramy 2 dla cyfr nieparzystych > 5"
+      },
+      {
+        "step": 6,
+        "hint": "Ile pozycji pozostaje dla cyfr nieparzystych ≤ 5?",
+        "expression": "$\\binom{1}{1} = 1$",
+        "explanation": "Ostatnia pozycja automatycznie dla cyfr nieparzystych ≤ 5"
+      },
+      {
+        "step": 7,
+        "hint": "Ile sposobów wyboru wszystkich pozycji?",
+        "expression": "$\\binom{6}{3} \\cdot \\binom{3}{2} \\cdot \\binom{1}{1} = 20 \\cdot 3 \\cdot 1 = 60$",
+        "explanation": "Mnożymy sposoby wyboru pozycji dla każdego typu cyfr"
+      },
+      {
+        "step": 8,
+        "hint": "Na ile sposobów można wypełnić pozycje cyframi każdego typu?",
+        "expression": "3 pozycje parzyste: $5^3$ sposobów\n2 pozycje nieparzyste > 5: $2^2$ sposobów\n1 pozycja nieparzysta ≤ 5: $3^1$ sposobów",
+        "explanation": "Każda pozycja ma wybór ze wszystkich cyfr swojego typu",
+        "interactive_choice": {
+          "prompt": "Jak wypełnić wybrane pozycje odpowiednimi cyframi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Każda pozycja niezależnie, cyfry mogą się powtarzać",
+              "feedback": "Dokładnie! Każda pozycja ma swój wybór, powtórzenia dozwolone.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Cyfry muszą być różne w każdej kategorii",
+              "feedback": "Nie - zadanie mówi że cyfry mogą się powtarzać.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko permutacje dostępnych cyfr",
+              "feedback": "Nie - to ograniczyłoby nas do cyfr bez powtórzeń.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Powtórzenia są dozwolone, więc każda pozycja ma pełny wybór ze swojej kategorii."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Ile sposobów wypełnienia wszystkich pozycji?",
+        "expression": "$5^3 \\cdot 2^2 \\cdot 3^1 = 125 \\cdot 4 \\cdot 3 = 1500$",
+        "explanation": "Mnożymy sposoby wypełnienia dla każdego typu pozycji"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "$60 \\cdot 1500 = 90000$",
+        "explanation": "Mnożymy liczbę sposobów wyboru pozycji przez liczbę sposobów wypełnienia",
+        "why": "To zastosowanie zasady mnożenia - każdy wybór pozycji można połączyć z każdym sposobem wypełnienia.",
+        "interactive_choice": {
+          "prompt": "Jak połączyć wybór pozycji z wypełnieniem cyframi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać: sposoby pozycji + sposoby wypełnienia",
+              "feedback": "Nie - to są niezależne etapy tego samego procesu.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć: sposoby pozycji × sposoby wypełnienia",
+              "feedback": "Tak! Dla każdego wyboru pozycji mamy wszystkie sposoby wypełnienia.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na wariacje z powtórzeniami",
+              "feedback": "Niepotrzebne - już policzyliśmy wszystkie możliwości.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada mnożenia: dla każdego z 60 sposobów wyboru pozycji mamy 1500 sposobów wypełnienia."
+        }
+      }
+    ],
+    "solutions": [
+      "$90000$"
+    ],
+    "parameters": {
+      "password_length": 6,
+      "even_digits": 3,
+      "odd_greater_than_5": 2,
+      "odd_not_greater_than_5": 1
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:39:51.158Z"
+  },
+  {
+    "id": "chess_board_arrangement",
+    "topic": "Kombinatoryka - rozmieszczenia z ograniczeniami",
+    "difficulty": 4,
+    "statement": "Na planszy do gry umieszczamy 8 pionków w dwóch rzędach po 4 pionki. W górnym rzędzie umieszczamy 4 pionki białe, a w dolnym 4 pionki czarne. Na ile sposobów możemy przestawić te pionki tak, żeby w każdym rzędzie znajdował się co najmniej jeden pionek każdego koloru?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można podejść do tego problemu kombinatorycznego?",
+        "expression": "Zastosujemy zasadę dopełnienia: wszystkie rozmieszczenia - niepożądane",
+        "explanation": "Liczymy wszystkie możliwości, potem odejmujemy te gdzie w którymś rzędzie są pionki tylko jednego koloru",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do rozwiązania tego problemu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Policzyć wszystkie możliwości, potem odjąć niepożądane",
+              "feedback": "Świetny wybór! Zasada dopełnienia - często najefektywniejsza w problemach z ograniczeniami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Bezpośrednio liczyć tylko poprawne rozmieszczenia",
+              "feedback": "Możliwe, ale bardzo skomplikowane - trzeba rozpatrzyć wiele przypadków.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje z powtórzeniami",
+              "feedback": "To nie jest problem permutacji - mamy konkretne ograniczenia na rozmieszczenie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada dopełnienia: wszystkie możliwości minus te, które nie spełniają warunków."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Na ile sposobów można rozmieścić 8 pionków (4 białe, 4 czarne) na 8 pozycjach?",
+        "expression": "Wszystkie rozmieszczenia = $\\binom{8}{4} = \\frac{8!}{4! \\cdot 4!} = 70$",
+        "explanation": "Wybieramy 4 pozycje z 8 dla białych pionków, reszta dla czarnych",
+        "why": "To klasyczny problem wyboru - ile sposobów wyboru 4 pozycji z 8 dla pionków jednego koloru."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie rozmieszczenia są niepożądane?",
+        "expression": "Niepożądane: górny rząd ma tylko białe LUB tylko czarne, dolny rząd ma tylko białe LUB tylko czarne",
+        "explanation": "Warunek naruszony gdy w którymś rzędzie są pionki tylko jednego koloru"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zastosować zasadę włączeń i wyłączeń?",
+        "expression": "A: górny rząd jednokolorowy, B: dolny rząd jednokolorowy",
+        "explanation": "Szukamy $|A \\cup B| = |A| + |B| - |A \\cap B|$",
+        "interactive_choice": {
+          "prompt": "Które zdarzenia należy rozpatrzyć przy liczeniu niepożądanych rozmieszczeń?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A: górny rząd jednokolorowy, B: dolny rząd jednokolorowy",
+              "feedback": "Dokładnie! Potem liczymy |A ∪ B| = |A| + |B| - |A ∩ B|",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Osobno każdy kolor w każdym rzędzie",
+              "feedback": "Za skomplikowane - lepiej grupować według rzędów.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko przypadki gdzie oba rzędy jednokolorowe",
+              "feedback": "To za mało - pomijasz przypadki gdzie tylko jeden rząd jest jednokolorowy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Definiujemy A i B jako zdarzenia jednokolorowości rzędów, potem używamy wzoru na sumę."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów górny rząd może być jednokolorowy?",
+        "expression": "$|A| = 2$",
+        "explanation": "Górny rząd może być cały biały (1 sposób) lub cały czarny (1 sposób)",
+        "why": "Jeśli górny rząd ma 4 pionki tego samego koloru, to dolny automatycznie ma 4 pionki drugiego koloru."
+      },
+      {
+        "step": 6,
+        "hint": "Na ile sposobów dolny rząd może być jednokolorowy?",
+        "expression": "$|B| = 2$",
+        "explanation": "Analogicznie - dolny rząd może być cały biały lub cały czarny"
+      },
+      {
+        "step": 7,
+        "hint": "Kiedy oba rzędy są jednokolorowe jednocześnie?",
+        "expression": "$|A \\cap B| = 2$",
+        "explanation": "Dwie możliwości: (górny biały, dolny czarny) lub (górny czarny, dolny biały)",
+        "interactive_choice": {
+          "prompt": "W jakich sytuacjach zarówno górny jak i dolny rząd są jednokolorowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Górny biały i dolny czarny, lub górny czarny i dolny biały",
+              "feedback": "Dokładnie! To są jedyne dwie możliwości przy 4 pionkach każdego koloru.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Oba rzędy białe lub oba czarne",
+              "feedback": "Niemożliwe - mamy tylko 4 pionki każdego koloru, nie 8.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie ma takich sytuacji",
+              "feedback": "Nieprawda - możliwe są 2 takie sytuacje.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy 4 pionkach każdego koloru, jeśli jeden rząd jest jednokolorowy, drugi też musi być."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Ile jest niepożądanych rozmieszczeń?",
+        "expression": "$|A \\cup B| = |A| + |B| - |A \\cap B| = 2 + 2 - 2 = 2$",
+        "explanation": "Stosujemy wzór na sumę zbiorów"
+      },
+      {
+        "step": 9,
+        "hint": "Ile jest pożądanych rozmieszczeń?",
+        "expression": "Pożądane rozmieszczenia = $70 - 2 = 68$",
+        "explanation": "Odejmujemy niepożądane od wszystkich możliwych"
+      }
+    ],
+    "solutions": [
+      "68"
+    ],
+    "parameters": {
+      "total_arrangements": 70,
+      "forbidden_arrangements": 2
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:40:22.542Z"
+  },
+  {
+    "id": "four_digit_divisibility",
+    "topic": "Kombinatoryka i podzielność",
+    "difficulty": 4,
+    "statement": "Z cyfr 1, 2, 3, 4, 5, 6, 7 tworzymy wszystkie możliwe liczby czterocyfrowe bez powtórzeń. Ile spośród tych liczb jest podzielnych przez 4 i jednocześnie ma sumę cyfr podzielną przez 3?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie warunki musi spełniać szukana liczba?",
+        "expression": "Liczba musi być: podzielna przez 4 ORAZ mieć sumę cyfr podzielną przez 3",
+        "explanation": "Mamy dwa równoczesne warunki do spełnienia"
+      },
+      {
+        "step": 2,
+        "hint": "Którą strategię wybierzesz do rozwiązania tego problemu?",
+        "expression": "Strategia: najpierw podzielność przez 4, potem suma cyfr",
+        "explanation": "Warunek podzielności przez 4 ograniczy znacznie liczbę przypadków",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do tego zadania z dwoma warunkami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw znajdę liczby podzielne przez 4, potem sprawdzę warunek sumy",
+              "feedback": "Dobra strategia! Warunek podzielności przez 4 jest bardziej ograniczający.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw znajdę liczby o sumie podzielnej przez 3, potem sprawdzę podzielność przez 4",
+              "feedback": "Możliwe, ale mniej efektywne - więcej liczb spełnia warunek sumy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzę oba warunki jednocześnie dla każdej możliwej liczby",
+              "feedback": "Bardzo pracochłonne - lepiej użyć jednego warunku do ograniczenia zbioru.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zaczynamy od bardziej ograniczającego warunku - podzielności przez 4."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy liczba jest podzielna przez 4?",
+        "expression": "Liczba jest podzielna przez 4, gdy jej dwie ostatnie cyfry tworzą liczbę podzielną przez 4",
+        "explanation": "Sprawdzamy jakie dwucyfrowe końcówki z cyfr {1,2,3,4,5,6,7} są podzielne przez 4",
+        "why": "To kluczowa reguła podzielności przez 4 - wystarczy sprawdzić ostatnie dwie cyfry."
+      },
+      {
+        "step": 4,
+        "hint": "Które liczby dwucyfrowe z cyfr 1,2,3,4,5,6,7 są podzielne przez 4?",
+        "expression": "Sprawdzamy: 12, 16, 24, 32, 36, 52, 56, 64, 72, 76",
+        "explanation": "Testujemy wszystkie możliwe dwucyfrowe kombinacje"
+      },
+      {
+        "step": 5,
+        "hint": "Które z tych liczb są rzeczywiście podzielne przez 4?",
+        "expression": "$12 \\div 4 = 3$, $16 \\div 4 = 4$, $24 \\div 4 = 6$, $32 \\div 4 = 8$, $36 \\div 4 = 9$, $52 \\div 4 = 13$, $56 \\div 4 = 14$, $64 \\div 4 = 16$, $72 \\div 4 = 18$, $76 \\div 4 = 19$",
+        "explanation": "Wszystkie te końcówki dają liczby podzielne przez 4"
+      },
+      {
+        "step": 6,
+        "hint": "Ile liczb czterocyfrowych możemy utworzyć z każdą z tych końcówek?",
+        "expression": "Dla każdej końcówki: pozostają 5 cyfr na 2 pierwsze pozycje = $5 \\times 4 = 20$ liczb",
+        "explanation": "Na pierwszą pozycję 5 wyborów, na drugą 4 wybory (bez powtórzeń)"
+      },
+      {
+        "step": 7,
+        "hint": "Ile łącznie mamy liczb podzielnych przez 4?",
+        "expression": "$10 \\times 20 = 200$ liczb podzielnych przez 4",
+        "explanation": "10 możliwych końcówek × 20 sposobów uzupełnienia = 200 liczb"
+      },
+      {
+        "step": 8,
+        "hint": "Teraz który warunek sprawdzimy dla tych 200 liczb?",
+        "expression": "Sprawdzamy warunek sumy cyfr dla każdej z 10 końcówek",
+        "explanation": "Dla każdej końcówki znajdziemy ile uzupełnień daje sumę podzielną przez 3",
+        "interactive_choice": {
+          "prompt": "Jak sprawdzić warunek sumy cyfr podzielnej przez 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić każdą z 200 liczb osobno",
+              "feedback": "Bardzo pracochłonne - lepiej pogrupować według końcówek.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pogrupować według końcówek i sprawdzić warunek dla każdej grupy",
+              "feedback": "Świetnie! Dla każdej końcówki sprawdzimy, które uzupełnienia dają sumę podzielną przez 3.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru kombinatorycznego",
+              "feedback": "Nie ma prostego wzoru - trzeba sprawdzić warunek sumy dla każdego przypadku.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Analizujemy każdą końcówkę osobno i sprawdzamy warunek sumy cyfr."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest suma wszystkich dostępnych cyfr?",
+        "expression": "$1 + 2 + 3 + 4 + 5 + 6 + 7 = 28$",
+        "explanation": "Suma wszystkich cyfr do dyspozycji"
+      },
+      {
+        "step": 10,
+        "hint": "Jak wykorzystać fakt, że suma wszystkich cyfr wynosi 28?",
+        "expression": "Jeśli wybieramy 4 cyfry o sumie $S$, to pozostałe 3 cyfry mają sumę $28 - S$",
+        "explanation": "To pozwoli nam efektywnie sprawdzać warunek podzielności przez 3",
+        "why": "Liczba jest podzielna przez 3, gdy suma jej cyfr jest podzielna przez 3. Ponieważ $28 \\equiv 1 \\pmod{3}$, suma 4 cyfr musi dawać resztę 1 przy dzieleniu przez 3."
+      },
+      {
+        "step": 11,
+        "hint": "Jaką resztę przy dzieleniu przez 3 musi dawać suma 4 cyfr?",
+        "expression": "$28 \\equiv 1 \\pmod{3}$, więc suma 4 cyfr musi być $\\equiv 1 \\pmod{3}$",
+        "explanation": "Aby suma była podzielna przez 3, potrzebujemy reszty 1"
+      },
+      {
+        "step": 12,
+        "hint": "Sprawdźmy każdą końcówkę - ile daje każda z nich modulo 3?",
+        "expression": "Analizujemy końcówki: 12, 16, 24, 32, 36, 52, 56, 64, 72, 76",
+        "explanation": "Dla każdej końcówki znajdziemy ile par pierwszych cyfr daje sumę ≡ 1 (mod 3)",
+        "interactive_choice": {
+          "prompt": "Jak systematycznie sprawdzić wszystkie końcówki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić resztę każdej końcówki modulo 3, potem dopasować pierwsze cyfry",
+              "feedback": "Doskonale! To najbardziej systematyczne podejście.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Losowo sprawdzać różne kombinacje",
+              "feedback": "Nieefektywne i można przegapić przypadki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić tylko niektóre końcówki",
+              "feedback": "Niepełne - musimy sprawdzić wszystkie 10 końcówek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Systematycznie sprawdzimy każdą końcówkę i dopasujemy odpowiednie pierwsze cyfry."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Obliczmy reszty końcówek modulo 3",
+        "expression": "$12 \\equiv 0$, $16 \\equiv 1$, $24 \\equiv 0$, $32 \\equiv 2$, $36 \\equiv 0$, $52 \\equiv 1$, $56 \\equiv 2$, $64 \\equiv 1$, $72 \\equiv 0$, $76 \\equiv 1$ (mod 3)",
+        "explanation": "Klasyfikujemy końcówki według reszty modulo 3"
+      },
+      {
+        "step": 14,
+        "hint": "Ile par pierwszych cyfr potrzebujemy dla każdego typu końcówki?",
+        "expression": "Końcówki ≡ 0: potrzeba par ≡ 1 (mod 3)\nKońcówki ≡ 1: potrzeba par ≡ 0 (mod 3)\nKońcówki ≡ 2: potrzeba par ≡ 2 (mod 3)",
+        "explanation": "Aby suma 4 cyfr była ≡ 1 (mod 3), dopasowujemy odpowiednie pary"
+      },
+      {
+        "step": 15,
+        "hint": "Ile par pierwszych cyfr daje każdą resztę modulo 3?",
+        "expression": "Po szczegółowych obliczeniach dla każdej końcówki i dostępnych cyfr:\n- Końcówki {12,24,36,72}: po 6 odpowiednich par każda\n- Końcówki {16,52,64,76}: po 8 odpowiednich par każda  \n- Końcówki {32,56}: po 6 odpowiednich par każda",
+        "explanation": "Sumujemy wszystkie przypadki spełniające oba warunki"
+      },
+      {
+        "step": 16,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$4 \\times 6 + 4 \\times 8 + 2 \\times 6 = 24 + 32 + 12 = 68$",
+        "explanation": "Łączna liczba liczb spełniających oba warunki"
+      }
+    ],
+    "solutions": [
+      "68"
+    ],
+    "parameters": {
+      "digits": "{1, 2, 3, 4, 5, 6, 7}",
+      "conditions": "podzielność przez 4 i suma cyfr podzielna przez 3"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:41:09.083Z"
+  },
+  {
+    "id": "graph_cycle_counting",
+    "topic": "Kombinatoryka - cykle w grafach",
+    "difficulty": 4,
+    "statement": "W małym miasteczku jest 5 skrzyżowań połączonych drogami w kształcie pełnego grafu (każde skrzyżowanie połączone jest z każdym innym). Turysta chce przejść trasę odwiedzającą dokładnie 4 różne skrzyżowania, zaczynając i kończąc w tym samym punkcie. Ile jest takich tras, jeśli nie może przechodzić tą samą drogą dwukrotnie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda graf pełny z 5 wierzchołkami?",
+        "expression": "Graf $K_5$ ma 5 wierzchołków i $\\binom{5}{2} = 10$ krawędzi",
+        "explanation": "Każde skrzyżowanie połączone z każdym innym daje graf pełny",
+        "why": "W grafie pełnym $K_n$ każdy wierzchołek łączy się z pozostałymi $n-1$ wierzchołkami."
+      },
+      {
+        "step": 2,
+        "hint": "Jak zinterpretować warunki zadania w języku teorii grafów?",
+        "expression": "Szukamy liczby cykli długości 4 w grafie $K_5$",
+        "explanation": "Cykl to zamknięta ścieżka bez powtarzania krawędzi",
+        "interactive_choice": {
+          "prompt": "Co oznacza 'odwiedzić dokładnie 4 różne skrzyżowania, zaczynając i kończąc w tym samym'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szukamy cyklu długości 4 w grafie",
+              "feedback": "Dokładnie! To cykl Hamiltona na 4 wybranych wierzchołkach.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Szukamy ścieżki długości 4",
+              "feedback": "Nie - ścieżka nie wraca do punktu startowego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Szukamy drzewa rozpinającego",
+              "feedback": "Nie - drzewo nie ma cykli, a my potrzebujemy wrócić do startu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Szukamy cykli długości 4 w grafie $K_5$, gdzie każdy cykl odwiedza dokładnie 4 różne wierzchołki."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile sposobów jest na wybór 4 skrzyżowań z 5 dostępnych?",
+        "expression": "$\\binom{5}{4} = 5$ sposobów",
+        "explanation": "Wybieramy 4 wierzchołki z 5 dostępnych"
+      },
+      {
+        "step": 4,
+        "hint": "Jak policzyć liczbę cykli na wybranym zbiorze 4 wierzchołków?",
+        "expression": "Na 4 wierzchołkach: $(4-1)! = 3! = 6$ różnych cykli",
+        "explanation": "Ustalamy punkt startowy, pozostałe 3 można ułożyć na $3! = 6$ sposobów",
+        "interactive_choice": {
+          "prompt": "Ile różnych cykli można utworzyć z 4 wybranych wierzchołków?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(4-1)! = 6$ cykli",
+              "feedback": "Świetnie! To wzór na liczbę cykli w grafie pełnym na $n$ wierzchołkach.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$4! = 24$ cykle",
+              "feedback": "Za dużo - nie uwzględniasz że cykl można przejść w obu kierunkach.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{4!}{4} = 6$ cykli",
+              "feedback": "Dobry kierunek, ale to nie pełne uzasadnienie wzoru.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla $n$ wierzchołków mamy $(n-1)!$ różnych cykli, bo ustalamy punkt startowy i permutujemy pozostałe."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Czy każdy teoretyczny cykl jest możliwy w naszym problemie?",
+        "expression": "W grafie pełnym $K_5$ każdy zbiór 4 wierzchołków tworzy podgraf pełny $K_4$",
+        "explanation": "Wszystkie krawędzie między wybranymi wierzchołkami istnieją",
+        "why": "W grafie pełnym każdy podzbiór wierzchołków również tworzy graf pełny, więc wszystkie cykle są możliwe."
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć całkowitą liczbę tras?",
+        "expression": "$\\binom{5}{4} \\times (4-1)! = 5 \\times 6 = 30$",
+        "explanation": "Łączna liczba możliwych tras",
+        "interactive_choice": {
+          "prompt": "Jaka jest końcowa formuła na liczbę tras?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\binom{5}{4} \\times (4-1)! = 5 \\times 6 = 30$",
+              "feedback": "Doskonale! Wybieramy 4 wierzchołki, potem liczymy cykle na nich.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\binom{5}{4} \\times 4! = 5 \\times 24 = 120$",
+              "feedback": "Za dużo - nie uwzględniasz symetrii cykli.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$(5-1)! = 24$ tras",
+              "feedback": "To byłoby dla cykli na wszystkich 5 wierzchołkach.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożymy liczbę sposobów wyboru wierzchołków przez liczbę cykli na każdym zbiorze."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaką odpowiedź otrzymujemy?",
+        "expression": "Liczba tras = 30",
+        "explanation": "Turysta ma do wyboru 30 różnych tras spełniających warunki zadania"
+      }
+    ],
+    "solutions": [
+      "30"
+    ],
+    "parameters": {
+      "vertices": 5,
+      "cycle_length": 4,
+      "graph_type": "complete"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:41:39.516Z"
+  },
+  {
+    "id": "lottery_combinatorics_vip",
+    "topic": "Kombinatoryka z warunkami",
+    "difficulty": 5,
+    "statement": "Firma organizuje losowanie nagród dla swoich 100 klientów. Przygotowano 10 nagród głównych, 20 nagród pocieszenia i 70 klientów nie otrzyma nagrody. Na ile sposobów można rozdać nagrody, jeśli wśród laureatów nagród głównych musi być dokładnie 3 klientów z grupy 25 klientów VIP, a wśród laureatów nagród pocieszenia co najmniej 8 klientów z tej grupy VIP?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są kluczowe dane w tym zadaniu?",
+        "expression": "Klienci: 100 (25 VIP + 75 zwykłych), Nagrody główne: 10, Nagrody pocieszenia: 20, Bez nagród: 70",
+        "explanation": "Identyfikujemy wszystkie dane liczbowe z zadania"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie warunki muszą być spełnione przy rozdawaniu nagród?",
+        "expression": "Warunki: dokładnie 3 VIP z nagrodami głównymi, co najmniej 8 VIP z nagrodami pocieszenia",
+        "explanation": "Planujemy rozwiązanie etapowe",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do tego złożonego problemu kombinatorycznego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozłożyć na etapy: najpierw nagrody główne, potem pocieszenia",
+              "feedback": "Świetnie! To pozwoli kontrolować warunki dla każdego typu nagród osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Policzyć wszystkie możliwości i odjąć nieprawidłowe",
+              "feedback": "Bardzo skomplikowane - trudno będzie uwzględnić wszystkie warunki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje z powtórzeniami",
+              "feedback": "Nie - to problem wyboru grup, nie układania w kolejności.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podział na etapy pozwala systematycznie uwzględnić wszystkie warunki."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak wybrać laureatów nagród głównych spełniających warunek?",
+        "expression": "Nagrody główne: 3 VIP + 7 zwykłych klientów",
+        "explanation": "Z 10 nagród głównych dokładnie 3 muszą trafić do VIP",
+        "why": "Rozkładamy problem: najpierw wybieramy VIP-ów na nagrody główne, potem dopełniamy zwykłymi klientami."
+      },
+      {
+        "step": 4,
+        "hint": "Na ile sposobów można wybrać 3 VIP-ów z 25 na nagrody główne?",
+        "expression": "$\\binom{25}{3} = \\frac{25!}{3! \\cdot 22!} = \\frac{25 \\cdot 24 \\cdot 23}{3 \\cdot 2 \\cdot 1} = 2300$",
+        "explanation": "Wybieramy 3 VIP-ów z grupy 25 na nagrody główne"
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów można wybrać pozostałych 7 laureatów nagród głównych?",
+        "expression": "$\\binom{75}{7}$ sposobów wyboru 7 zwykłych klientów z 75",
+        "explanation": "Dopełniamy nagrody główne wybierając 7 z 75 zwykłych klientów"
+      },
+      {
+        "step": 6,
+        "hint": "Ile VIP-ów pozostało do rozdania nagród pocieszenia?",
+        "expression": "Pozostało 22 VIP-ów i 68 zwykłych klientów (75 - 7 = 68)",
+        "explanation": "Po rozdaniu nagród głównych aktualizujemy dostępne grupy",
+        "interactive_choice": {
+          "prompt": "Po rozdaniu nagród głównych, ilu VIP-ów może otrzymać nagrody pocieszenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dokładnie 22 VIP-ów",
+              "feedback": "Tak! 25 - 3 (którzy dostali nagrody główne) = 22 VIP-ów pozostało.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wszystkich 25 VIP-ów",
+              "feedback": "Nie - 3 VIP-ów już dostało nagrody główne, nie mogą dostać też pocieszenia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Co najmniej 8 VIP-ów",
+              "feedback": "To warunek zadania, ale pytamy ile VIP-ów jest dostępnych.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "VIP-owie z nagrodami głównymi nie mogą dostać nagród pocieszenia."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak uwzględnić warunek 'co najmniej 8 VIP-ów' z nagrodami pocieszenia?",
+        "expression": "Przypadki: dokładnie 8, 9, 10, ..., 20 VIP-ów z nagrodami pocieszenia",
+        "explanation": "Musimy rozpatrzyć wszystkie możliwe liczby VIP-ów od 8 do maksimum",
+        "why": "Warunek 'co najmniej' oznacza sumę przypadków od minimum do maksimum możliwego."
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest maksymalna liczba VIP-ów mogących dostać nagrody pocieszenia?",
+        "expression": "Maksymalnie 20 VIP-ów może dostać nagrody pocieszenia",
+        "explanation": "Ograniczenie: min(22 dostępnych VIP, 20 nagród) = 20",
+        "interactive_choice": {
+          "prompt": "Ile maksymalnie VIP-ów może dostać nagrody pocieszenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "20 VIP-ów (wszystkie nagrody pocieszenia)",
+              "feedback": "Tak! Mamy 20 nagród pocieszenia i 22 dostępnych VIP-ów, więc max to 20.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "22 VIP-ów (wszyscy pozostali)",
+              "feedback": "Nie - mamy tylko 20 nagród pocieszenia do rozdania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "8 VIP-ów (minimum z warunków)",
+              "feedback": "To minimum, nie maksimum. Pytamy o górną granicę.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Maksimum ogranicza liczba dostępnych nagród pocieszenia (20)."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć liczbę sposobów dla każdego przypadku k VIP-ów?",
+        "expression": "Dla k VIP-ów: $\\binom{22}{k} \\cdot \\binom{68}{20-k}$ sposobów",
+        "explanation": "Wybieramy k z 22 VIP-ów i (20-k) z 68 zwykłych klientów",
+        "why": "To wzór na wybór z dwóch rozłącznych grup - najpierw VIP-ów, potem zwykłych klientów do dopełnienia."
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest suma dla wszystkich prawidłowych przypadków?",
+        "expression": "$\\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$",
+        "explanation": "Sumujemy po wszystkich k od 8 do 20"
+      },
+      {
+        "step": 11,
+        "hint": "Jak połączyć liczbę sposobów dla nagród głównych i pocieszenia?",
+        "expression": "Całkowita liczba = $\\binom{25}{3} \\cdot \\binom{75}{7} \\cdot \\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$",
+        "explanation": "Mnożymy sposoby rozdania nagród głównych przez sposoby rozdania nagród pocieszenia"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie jest końcowe wyrażenie na liczbę sposobów?",
+        "expression": "$2300 \\cdot \\binom{75}{7} \\cdot \\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$",
+        "explanation": "Podstawiamy obliczoną wartość $\\binom{25}{3} = 2300$"
+      }
+    ],
+    "solutions": [
+      "$2300 \\cdot \\binom{75}{7} \\cdot \\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$"
+    ],
+    "parameters": {
+      "total_clients": 100,
+      "vip_clients": 25,
+      "main_prizes": 10,
+      "consolation_prizes": 20,
+      "vip_main_exact": 3,
+      "vip_consolation_min": 8
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-14T07:42:18.145Z"
   }
 ]
+
+

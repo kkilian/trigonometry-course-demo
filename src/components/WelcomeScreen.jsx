@@ -92,6 +92,12 @@ const WelcomeScreen = ({ onSelectMode }) => {
     }
   ];
 
+  // Sort modules - enabled first, disabled last
+  const sortedModules = [...modules].sort((a, b) => {
+    if (a.disabled === b.disabled) return 0;
+    return a.disabled ? 1 : -1;
+  });
+
   return (
     <div className="min-h-screen bg-stone-100">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
@@ -103,10 +109,18 @@ const WelcomeScreen = ({ onSelectMode }) => {
               Dostępne kursy ({modules.filter(m => !m.isAI).length}) + AI Asystent
             </h2>
           </div>
-          
+
           {/* Module Items */}
-          {modules.map((module) => (
-            <div className="px-4 md:px-8" key={module.id}>
+          {sortedModules.map((module, index) => (
+            <React.Fragment key={module.id}>
+              {/* Separator between enabled and disabled modules */}
+              {index > 0 && !sortedModules[index - 1].disabled && module.disabled && (
+                <div className="px-4 md:px-8 py-3">
+                  <div className="border-t border-stone-300"></div>
+                  <p className="text-xs text-stone-500 mt-3">Wkrótce dostępne</p>
+                </div>
+              )}
+              <div className="px-4 md:px-8">
               <button
                 onClick={() => {
                   if (module.isPremium || (module.isAI && module.disabled)) {
@@ -195,6 +209,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
                 </div>
               </button>
             </div>
+            </React.Fragment>
           ))}
         </div>
       </div>
