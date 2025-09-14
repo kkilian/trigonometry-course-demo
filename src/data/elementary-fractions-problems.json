@@ -7,6 +7,30 @@
       {
         "step": 1,
         "hint": "Jakie jest wspólne działanie przy dodawaniu ułamków o różnych mianownikach?",
+        "interactive_choice": {
+          "prompt": "Jaki jest pierwszy krok przy dodawaniu $\\frac{1}{3} + \\frac{1}{6}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodajemy liczniki: $1 + 1 = 2$",
+              "feedback": "Nie możemy dodawać liczników, gdy mianowniki są różne!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Sprowadzamy ułamki do wspólnego mianownika",
+              "feedback": "Świetnie! To kluczowy krok przy dodawaniu ułamków o różnych mianownikach.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Mnożymy ułamki przez siebie",
+              "feedback": "To nie jest działanie dla dodawania - mnożenie to zupełnie inna operacja!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zawsze gdy dodajemy ułamki o różnych mianownikach, musimy najpierw znaleźć wspólny mianownik."
+        },
         "expression": "$\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6}$",
         "explanation": "Sprowadzamy pierwszy ułamek do wspólnego mianownika przez pomnożenie licznika i mianownika przez 2"
       },
@@ -68,6 +92,30 @@
       {
         "step": 1,
         "hint": "Jakie jest wspólne działanie, które musisz wykonać przed odejmowaniem ułamków?",
+        "interactive_choice": {
+          "prompt": "Jak przekształcisz $\\frac{1}{4}$, aby odjąć go od $\\frac{5}{8}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożę licznik i mianownik przez 2: $\\frac{1}{4} = \\frac{2}{8}$",
+              "feedback": "Dokładnie! Rozszerzasz ułamek do wspólnego mianownika 8.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podzielę mianownik przez 2: $\\frac{1}{4} = \\frac{1}{2}$",
+              "feedback": "Nie! To by zmieniło wartość ułamka. Musisz znaleźć wspólny mianownik.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Pozostawię bez zmian i odjemę: $\\frac{5}{8} - \\frac{1}{4}$",
+              "feedback": "Nie możesz odejmować ułamków o różnych mianownikach bezpośrednio!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wspólny mianownik dla 8 i 4 to 8, więc rozszerzamy $\\frac{1}{4}$ do $\\frac{2}{8}$."
+        },
         "expression": "$\\frac{5}{8} - \\frac{1}{4} = \\frac{5}{8} - \\frac{2}{8}$",
         "explanation": "Sprowadzamy ułamki do wspólnego mianownika przez pomnożenie $\\frac{1}{4}$ przez $2$"
       },
@@ -129,6 +177,30 @@
       {
         "step": 1,
         "hint": "Jak się mnoży ułamki? Przypomnij sobie podstawową zasadę",
+        "interactive_choice": {
+          "prompt": "Jak pomnożyć $\\frac{2}{5} \\cdot \\frac{3}{7}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodaję liczniki i mianowniki: $\\frac{2+3}{5+7} = \\frac{5}{12}$",
+              "feedback": "Nie! To nie jest mnożenie. Przy mnożeniu nie dodajemy!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Mnożę liczniki osobno i mianowniki osobno: $\\frac{2 \\cdot 3}{5 \\cdot 7}$",
+              "feedback": "Perfekcyjnie! To podstawowa zasada mnożenia ułamków.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Mnożę na krzyż: $2 \\cdot 7$ i $5 \\cdot 3$",
+              "feedback": "Mnożenie na krzyż używamy przy równaniach, nie przy prostym mnożeniu!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie ułamków jest proste: licznik razy licznik, mianownik razy mianownik."
+        },
         "expression": "$\\frac{2}{5} \\cdot \\frac{3}{7} = \\frac{2 \\cdot 3}{5 \\cdot 7}$",
         "explanation": "Przy mnożeniu ułamków mnożymy liczniki i mianowniki osobno"
       },
@@ -179,6 +251,30 @@
       {
         "step": 1,
         "hint": "Jak zamienić dzielenie ułamków na mnożenie?",
+        "interactive_choice": {
+          "prompt": "Co zrobisz z działaniem $\\frac{3}{4} \\div \\frac{2}{3}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podzielę liczniki i mianowniki: $\\frac{3 \\div 2}{4 \\div 3}$",
+              "feedback": "Nie tak działa dzielenie ułamków! Musisz użyć odwrotności.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pomnożę przez odwrotność drugiego ułamka: $\\frac{3}{4} \\cdot \\frac{3}{2}$",
+              "feedback": "Brawo! Dzielenie przez ułamek to mnożenie przez jego odwrotność.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zamienię miejscami ułamki: $\\frac{2}{3} \\div \\frac{3}{4}$",
+              "feedback": "To zmieni wynik! Kolejność ma znaczenie przy dzieleniu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odwrotność $\\frac{2}{3}$ to $\\frac{3}{2}$ - zamieniamy licznik z mianownikiem."
+        },
         "expression": "$\\frac{3}{4} \\div \\frac{2}{3} = \\frac{3}{4} \\cdot \\frac{3}{2}$",
         "explanation": "Dzielenie ułamków to mnożenie przez ułamek odwrotny"
       },
@@ -245,6 +341,30 @@
       {
         "step": 3,
         "hint": "Teraz możesz dodać ułamki o tym samym mianowniku. Co zrobisz z licznikami?",
+        "interactive_choice": {
+          "prompt": "Jak wykonasz dodawanie $\\frac{7}{12} + \\frac{3}{12}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodam liczniki i mianowniki: $\\frac{7+3}{12+12} = \\frac{10}{24}$",
+              "feedback": "Nie! Przy dodawaniu ułamków o tym samym mianowniku dodajemy TYLKO liczniki!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Dodam tylko liczniki: $\\frac{7+3}{12} = \\frac{10}{12}$",
+              "feedback": "Dokładnie! Mianownik pozostaje bez zmian.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pomnożę ułamki: $\\frac{7 \\cdot 3}{12 \\cdot 12}$",
+              "feedback": "Chcemy dodawać, nie mnożyć! Dodajemy tylko liczniki.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy tym samym mianowniku dodajemy tylko liczniki: $7 + 3 = 10$."
+        },
         "expression": "$\\frac{7}{12} + \\frac{3}{12} = \\frac{7+3}{12}$",
         "explanation": "Dodajemy liczniki, mianownik pozostaje ten sam"
       },
@@ -309,7 +429,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{9}{10}$ i $\\frac{2}{5}$?",
-        "expression": "$NWW(10, 5) = 10$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 10$",
         "explanation": "Aby odjąć ułamki, musimy mieć wspólny mianownik"
       },
       {
@@ -528,7 +648,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "$NWW(3, 4, 12) = 12$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -610,7 +730,7 @@
       {
         "step": 1,
         "hint": "Jakie jest wspólne mianownik dla ułamków $\\frac{11}{15}$ i $\\frac{2}{5}$?",
-        "expression": "$NWW(15, 5) = 15$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 15$",
         "explanation": "Aby odjąć ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -686,7 +806,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 8 i 12?",
-        "expression": "$NWW(8, 12) = 24$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -931,7 +1051,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 1/2, 2/3 i 1/6?",
-        "expression": "$NWW(2, 3, 6) = 6$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 6$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika 6"
       },
       {
@@ -997,7 +1117,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 12 i 8?",
-        "expression": "$NWW(12, 8) = 24$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1192,7 +1312,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 15 i 5?",
-        "expression": "$NWW(15, 5) = 15$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 15$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -1268,7 +1388,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{13}{18}$ i $\\frac{1}{6}$?",
-        "expression": "$NWW(18, 6) = 18$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 18$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1487,7 +1607,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownika dla ułamków $\\frac{2}{9}$ i $\\frac{5}{18}$?",
-        "expression": "$NWW(9, 18) = 18$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 18$",
         "explanation": "Mianownik 18 pozwoli nam dodać ułamki"
       },
       {
@@ -2457,7 +2577,7 @@
       {
         "step": 2,
         "hint": "Jaki jest najmniejszy wspólny mianownik dla 6 i 12?",
-        "expression": "$NWW(6, 12) = 12$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -2615,7 +2735,7 @@
       {
         "step": 3,
         "hint": "Jaka jest najmniejsza wspólna wielokrotność mianowników 4 i 3?",
-        "expression": "$\text{NWW}(4,3) = 12$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Najmniejsza wspólna wielokrotność to 12"
       },
       {
@@ -3109,7 +3229,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "$\text{NWW}(3, 4, 12) = 12$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Sprowadzamy wszystkie ułamki do wspólnego mianownika 12"
       },
       {
@@ -3175,7 +3295,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 8, 6 i 12?",
-        "expression": "$NWW(8, 6, 12) = 24$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -5498,7 +5618,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników tych ułamków?",
-        "expression": "$NWW(3, 4, 6, 12) = 12$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -5580,7 +5700,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla tych ułamków?",
-        "expression": "$NWW(8, 6, 3, 4) = 24$",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -6465,7 +6585,7 @@
         "step": 3,
         "hint": "Teraz masz już same ułamki. Jak dodać ułamki o różnych mianownikach?",
         "expression": "$\\frac{2}{3} + \\frac{4}{5} - \\frac{1}{15}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika: $NWW(3,5,15) = 15$"
+        "explanation": "Sprowadzamy do wspólnego mianownika - najlepszym będzie 15"
       },
       {
         "step": 4,
@@ -6578,5 +6698,1086 @@
       },
       "timestamp": "2025-09-10T08:11:53.429Z"
     }
+  },
+  {
+    "id": "tex_problem_1",
+    "topic": "Ułamki i kolejność działań",
+    "statement": "Oblicz wartość wyrażenia: $\\frac{3}{4} + \\frac{2}{3} \\cdot \\frac{9}{8} - \\frac{1}{6}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które działanie wykonasz najpierw?",
+        "expression": "$\\frac{2}{3} \\cdot \\frac{9}{8}$",
+        "explanation": "Zaczynamy od mnożenia ułamków",
+        "why": "Mnożenie ma pierwszeństwo przed dodawaniem i odejmowaniem. To jak przygotowanie składników przed ugotowaniem potrawy"
+      },
+      {
+        "step": 2,
+        "hint": "Jak mnożysz ułamki?",
+        "expression": "$\\frac{2 \\cdot 9}{3 \\cdot 8} = \\frac{18}{24} = \\frac{3}{4}$",
+        "explanation": "Mnożymy liczniki i mianowniki",
+        "why": "Przy mnożeniu ułamków każdy licznik mnoży się z każdym licznikiem, tak samo z mianownikami"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz mamy: $\\frac{3}{4} + \\frac{3}{4} - \\frac{1}{6}$. Co dalej?",
+        "expression": "$\\frac{3}{4} + \\frac{3}{4} - \\frac{1}{6}$",
+        "explanation": "Podstawiamy wynik mnożenia",
+        "why": "Zawsze warto rozbijać skomplikowane działania na mniejsze, prostsze kroki"
+      },
+      {
+        "step": 4,
+        "hint": "Jak dodać/odjąć ułamki o różnych mianownikach?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 12",
+        "explanation": "Znajdujemy najmniejszą wspólną wielokrotność",
+        "why": "Aby dodawać lub odejmować ułamki, muszą mieć ten sam mianownik - jak dokładanie takich samych kawałków pizzy"
+      },
+      {
+        "step": 5,
+        "hint": "Rozszerz ułamki do wspólnego mianownika",
+        "expression": "$\\frac{3 \\cdot 3}{4 \\cdot 3} + \\frac{3 \\cdot 3}{4 \\cdot 3} - \\frac{1 \\cdot 2}{6 \\cdot 2} = \\frac{9}{12} + \\frac{9}{12} - \\frac{2}{12}$",
+        "explanation": "Rozszerzamy ułamki do mianownika 12"
+      },
+      {
+        "step": 6,
+        "hint": "Teraz możesz dodawać i odejmować",
+        "expression": "$\\frac{9}{12} + \\frac{9}{12} - \\frac{2}{12} = \\frac{16}{12} = \\frac{4}{3}$",
+        "explanation": "Dodajemy i odejmujemy liczniki"
+      },
+      {
+        "step": 7,
+        "hint": "Czy możesz uprościć końcowy wynik?",
+        "expression": "$\\frac{4}{3}$",
+        "explanation": "Ułamek jest już w najprostszej postaci",
+        "why": "Nie zawsze można uprościć ułamek - tutaj licznik i mianownik nie mają wspólnych dzielników"
+      }
+    ],
+    "solutions": [
+      "$\\frac{4}{3}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_2",
+    "topic": "Ułamki zwykłe",
+    "statement": "Anna, Bartek i Celina dzielą pizzę. Anna zjada $\\frac{2}{5}$ pizzy, Bartek $\\frac{1}{4}$, a Celina $\\frac{2}{15}$. Czy zostanie im pizza na jutro?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy możesz dodać te ułamki bezpośrednio?",
+        "expression": "$\\frac{2}{5} + \\frac{1}{4} + \\frac{2}{15}$",
+        "explanation": "Mamy ułamki o różnych mianownikach",
+        "why": "Ułamki można dodawać tylko gdy mają ten sam mianownik - jak dodawanie różnych kawałków tej samej pizzy"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki będzie najmniejszy wspólny mianownik?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 60",
+        "explanation": "Znajdujemy najmniejszą wspólną wielokrotność",
+        "why": "Wybieramy najmniejszą wspólną wielokrotność, żeby uprościć obliczenia"
+      },
+      {
+        "step": 3,
+        "hint": "Przeliczymy każdy ułamek na 60-tki",
+        "expression": "$\\frac{2}{5} = \\frac{2 \\cdot 12}{5 \\cdot 12} = \\frac{24}{60}$",
+        "explanation": "Rozszerzamy pierwszy ułamek",
+        "why": "Mnożymy licznik i mianownik przez tę samą liczbę, więc wartość ułamka się nie zmienia"
+      },
+      {
+        "step": 4,
+        "hint": "Przeliczymy drugi ułamek",
+        "expression": "$\\frac{1}{4} = \\frac{1 \\cdot 15}{4 \\cdot 15} = \\frac{15}{60}$",
+        "explanation": "Rozszerzamy drugi ułamek"
+      },
+      {
+        "step": 5,
+        "hint": "Przeliczymy trzeci ułamek",
+        "expression": "$\\frac{2}{15} = \\frac{2 \\cdot 4}{15 \\cdot 4} = \\frac{8}{60}$",
+        "explanation": "Rozszerzamy trzeci ułamek"
+      },
+      {
+        "step": 6,
+        "hint": "Dodaj wszystkie ułamki",
+        "expression": "$\\frac{24}{60} + \\frac{15}{60} + \\frac{8}{60} = \\frac{47}{60}$",
+        "explanation": "Sumujemy wszystkie części pizzy"
+      },
+      {
+        "step": 7,
+        "hint": "Czy zjedli całą pizzę?",
+        "expression": "$\\frac{47}{60} < 1$",
+        "explanation": "Zjedli mniej niż całą pizzę",
+        "why": "Skoro 47/60 jest mniejsze od 1, to zostanie im jeszcze trochę pizzy"
+      },
+      {
+        "step": 8,
+        "hint": "Ile pizzy im zostało?",
+        "expression": "$1 - \\frac{47}{60} = \\frac{60}{60} - \\frac{47}{60} = \\frac{13}{60}$",
+        "explanation": "Obliczamy pozostałą część pizzy",
+        "why": "Często ludzie zapominają, że można zobaczyć, ile jeszcze zostało"
+      }
+    ],
+    "solutions": [
+      "Tak, zostanie im $\\frac{13}{60}$ pizzy (prawie 1/4)"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_3",
+    "topic": "Równania z ułamkami",
+    "statement": "Rozwiąż równanie: $\\frac{x}{6} + \\frac{x-2}{4} = \\frac{5}{12}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki jest najmniejszy wspólny mianownik dla 6, 4 i 12?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 12",
+        "explanation": "Znajdujemy wspólny mianownik dla wszystkich ułamków",
+        "why": "Aby dodawać ułamki, muszą mieć ten sam mianownik - jak dokładanie kawałków tej samej pizzy"
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozszerzyć każdy ułamek do mianownika 12?",
+        "expression": "$\\frac{x}{6} \\cdot \\frac{2}{2} + \\frac{x-2}{4} \\cdot \\frac{3}{3} = \\frac{5}{12}$",
+        "explanation": "Rozszerzamy ułamki, mnożąc licznik i mianownik przez odpowiednie liczby",
+        "why": "Pamiętaj: mnożąc licznik i mianownik przez tę samą liczbę, wartość ułamka się nie zmienia"
+      },
+      {
+        "step": 3,
+        "hint": "Uprość rozszerzone ułamki",
+        "expression": "$\\frac{2x}{12} + \\frac{3x-6}{12} = \\frac{5}{12}$",
+        "explanation": "Wszystkie ułamki mają już mianownik 12"
+      },
+      {
+        "step": 4,
+        "hint": "Co możesz zrobić z lewą stroną równania?",
+        "expression": "$\\frac{2x + 3x - 6}{12} = \\frac{5}{12}$",
+        "explanation": "Dodajemy liczniki ułamków po lewej stronie"
+      },
+      {
+        "step": 5,
+        "hint": "Uprość lewą stronę równania",
+        "expression": "$\\frac{5x - 6}{12} = \\frac{5}{12}$",
+        "explanation": "Upraszczamy licznik lewej strony"
+      },
+      {
+        "step": 6,
+        "hint": "Jak pozbyć się mianownika 12?",
+        "expression": "$5x - 6 = 5$",
+        "explanation": "Mnożymy obie strony przez 12",
+        "why": "Zawsze, gdy chcemy pozbyć się mianownika, mnożymy całe równanie przez ten mianownik"
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć x?",
+        "expression": "$5x = 11$",
+        "explanation": "Dodajemy 6 do obu stron równania"
+      },
+      {
+        "step": 8,
+        "hint": "Oblicz wartość x",
+        "expression": "$x = \\frac{11}{5}$",
+        "explanation": "Dzielimy obie strony przez 5"
+      },
+      {
+        "step": 9,
+        "hint": "Sprawdź swoje rozwiązanie podstawiając do oryginalnego równania",
+        "expression": "$\\frac{\\frac{11}{5}}{6} + \\frac{\\frac{11}{5}-2}{4} = \\frac{5}{12}$",
+        "explanation": "Weryfikujemy poprawność rozwiązania",
+        "why": "Zawsze warto sprawdzić wynik - to zajmuje chwilę, a pozwala wyłapać błędy rachunkowe"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{11}{5}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_4",
+    "topic": "Pierwiastek kwadratowy",
+    "statement": "Pole kwadratu wynosi $2\\frac{1}{4}$ cm². Oblicz długość boku tego kwadratu.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zamienić liczbę mieszaną na ułamek dziesiętny?",
+        "expression": "$2\\frac{1}{4} = \\frac{9}{4} = 2,25$ cm²",
+        "explanation": "Zamieniamy liczbę mieszaną na ułamek dziesiętny",
+        "why": "Liczba mieszana to całość plus ułamek. 2 + 1/4 = 2,25"
+      },
+      {
+        "step": 2,
+        "hint": "Pamiętasz wzór na pole kwadratu?",
+        "expression": "$P = a^2$",
+        "explanation": "Pole kwadratu to długość boku do kwadratu",
+        "why": "W kwadracie wszystkie boki są równe, więc pole to bok razy bok"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć długość boku, znając pole?",
+        "expression": "$a = \\sqrt{2,25}$",
+        "explanation": "Bierzemy pierwiastek kwadratowy z pola",
+        "why": "Odwrotność potęgowania - żeby znaleźć bok, cofamy kwadratowanie"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz pierwiastek",
+        "expression": "$a = 1,5$ cm",
+        "explanation": "Długość boku kwadratu"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik podstawiając do wzoru na pole",
+        "expression": "$1,5 \\cdot 1,5 = 2,25$ cm²",
+        "explanation": "Potwierdzamy poprawność wyniku",
+        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów"
+      }
+    ],
+    "solutions": [
+      "$1,5$ cm"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_6",
+    "topic": "Podstawy matematyki",
+    "statement": "W trzech koszach jest łącznie 60 jabłek. W pierwszym koszu jest $\\frac{2}{5}$ wszystkich jabłek, w drugim $\\frac{1}{3}$ reszty. Ile jabłek jest w trzecim koszu?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile jabłek jest w pierwszym koszu?",
+        "expression": "$\\frac{2}{5} \\cdot 60 = 24$ jabłka",
+        "explanation": "Obliczamy liczbę jabłek w pierwszym koszu",
+        "why": "Pamiętaj: $\\frac{2}{5}$ to 2/5 całości, więc mnożymy przez 60"
+      },
+      {
+        "step": 2,
+        "hint": "Ile jabłek zostało po pierwszym koszu?",
+        "expression": "$60 - 24 = 36$ jabłek",
+        "explanation": "Odejmujemy liczbę jabłek z pierwszego kosza od całkowitej liczby",
+        "why": "To pozostała liczba jabłek w drugim i trzecim koszu"
+      },
+      {
+        "step": 3,
+        "hint": "Ile jabłek jest w drugim koszu?",
+        "expression": "$\\frac{1}{3} \\cdot 36 = 12$ jabłek",
+        "explanation": "Obliczamy liczbę jabłek w drugim koszu",
+        "why": "Drugi kosz ma $\\frac{1}{3}$ z pozostałych 36 jabłek"
+      },
+      {
+        "step": 4,
+        "hint": "Ile jabłek zostało w trzecim koszu?",
+        "expression": "$36 - 12 = 24$ jabłka",
+        "explanation": "Odejmujemy liczbę jabłek z drugiego kosza od pozostałych"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy suma się zgadza",
+        "expression": "$24 + 24 + 12 = 60$ jabłek ✓",
+        "explanation": "Sumujemy jabłka ze wszystkich trzech koszyków",
+        "why": "Zawsze warto sprawdzić, czy nasze obliczenia są poprawne"
+      }
+    ],
+    "solutions": [
+      "24 jabłka"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_7",
+    "topic": "Procenty i ułamki",
+    "statement": "Sklep obniżył cenę o $\\frac{1}{8}$, a potem podniósł o $\\frac{1}{7}$ obniżonej ceny. O jaki ułamek pierwotnej ceny ostatecznie zmieniła się cena?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co się stanie z ceną po pierwszej obniżce o 1/8?",
+        "expression": "$1 - \\frac{1}{8} = \\frac{7}{8}$ pierwotnej ceny",
+        "explanation": "Po pierwszej obniżce zostaje 7/8 ceny",
+        "why": "Obniżka o 1/8 oznacza, że zostaje 7/8 oryginalnej wartości - jak pizza, z której zjedzono jeden kawałek"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć podwyżkę o 1/7 z obniżonej ceny?",
+        "expression": "$\\frac{7}{8} \\cdot (1 + \\frac{1}{7}) = \\frac{7}{8} \\cdot \\frac{8}{7} = 1$",
+        "explanation": "Mnożymy obniżoną cenę przez (1 + 1/7)",
+        "why": "Podwyżka o 1/7 oznacza pomnożenie przez 8/7 - często ludzie mylą się przy takich obliczeniach"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest różnica między końcową a początkową ceną?",
+        "expression": "$1 - 1 = 0$",
+        "explanation": "Cena wróciła dokładnie do pierwotnej wartości",
+        "why": "Pozornie skomplikowane zmiany cen mogą prowadzić do zaskakujących rezultatów"
+      },
+      {
+        "step": 4,
+        "hint": "Sprawdź, czy rozumiesz, dlaczego tak się stało",
+        "expression": "$\\frac{7}{8} \\cdot \\frac{8}{7} = 1$",
+        "explanation": "Obniżka o 1/8, a potem podwyżka o 1/7 dają dokładnie tę samą cenę",
+        "why": "Kolejność i proporcje zmian cen mogą prowadzić do nieoczekiwanych wyników"
+      }
+    ],
+    "solutions": [
+      "$0$ (brak zmiany ceny)"
+    ],
+    "parameters": {
+      "initial_price_change": "$-\\frac{1}{8}$",
+      "second_price_change": "$+\\frac{1}{7}$",
+      "final_price_change": "$0$"
+    }
+  },
+  {
+    "id": "tex_problem_8",
+    "topic": "Ułamki mieszane, działania złożone",
+    "statement": "Oblicz: $\\frac{4\\frac{2}{3} - 2\\frac{5}{6}}{1\\frac{1}{4} + \\frac{3}{8}}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zamienić liczby mieszane na ułamki niewłaściwe?",
+        "expression": "$4\\frac{2}{3} = \\frac{14}{3}$, $2\\frac{5}{6} = \\frac{17}{6}$, $1\\frac{1}{4} = \\frac{5}{4}$, $\\frac{3}{8}$ już jest w dobrej formie",
+        "explanation": "Zamieniamy liczby mieszane na ułamki niewłaściwe",
+        "why": "Liczba mieszana to całość plus ułamek. Aby dodawać/odejmować, musimy je zamienić na jeden typ - ułamki niewłaściwe"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć różnicę w liczniku?",
+        "expression": "$\\frac{14}{3} - \\frac{17}{6} = \\frac{28}{6} - \\frac{17}{6} = \\frac{11}{6}$",
+        "explanation": "Sprowadzamy ułamki do wspólnego mianownika i odejmujemy",
+        "why": "Ułamki można odejmować tylko gdy mają ten sam mianownik - jak dodawanie jabłek do jabłek"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć sumę w mianowniku?",
+        "expression": "$\\frac{5}{4} + \\frac{3}{8} = \\frac{10}{8} + \\frac{3}{8} = \\frac{13}{8}$",
+        "explanation": "Sprowadzamy ułamki do wspólnego mianownika i dodajemy",
+        "why": "Zawsze sprowadzamy do wspólnego mianownika, aby móc dodawać lub odejmować"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz możesz podzielić ułamki",
+        "expression": "$\\frac{\\frac{11}{6}}{\\frac{13}{8}} = \\frac{11}{6} \\cdot \\frac{8}{13} = \\frac{88}{78} = \\frac{44}{39}$",
+        "explanation": "Dzielenie ułamków to mnożenie przez ułamek odwrotny",
+        "why": "Przy dzieleniu ułamków zawsze mnożymy przez ułamek odwrotny - to jak odwrócenie liczby przy dzieleniu"
+      },
+      {
+        "step": 5,
+        "hint": "Czy można uprościć końcowy ułamek?",
+        "expression": "$\\frac{44}{39}$ jest już w najprostszej postaci",
+        "explanation": "Sprawdzamy, czy można skrócić ułamek",
+        "why": "Zawsze warto sprawdzić, czy można uprościć ułamek, dzieląc licznik i mianownik przez ich wspólny dzielnik"
+      }
+    ],
+    "solutions": [
+      "$\\frac{44}{39}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_9",
+    "topic": "Ułamki, procenty",
+    "statement": "Tomek przeczytał książkę w trzech dniach. Pierwszego dnia przeczytał $\\frac{3}{8}$ książki, drugiego dnia $\\frac{2}{5}$ reszty. Jeśli trzeciego dnia przeczytał 42 strony, ile stron miała książka?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile książki Tomek przeczytał pierwszego dnia?",
+        "expression": "$\\frac{3}{8}$ książki",
+        "explanation": "Pierwszego dnia Tomek przeczytał 3/8 całej książki",
+        "why": "Pamiętaj, że ułamek pokazuje, jaką część całości już przeczytano"
+      },
+      {
+        "step": 2,
+        "hint": "Ile zostało do przeczytania po pierwszym dniu?",
+        "expression": "$1 - \\frac{3}{8} = \\frac{8}{8} - \\frac{3}{8} = \\frac{5}{8}$ książki",
+        "explanation": "Obliczamy pozostałą część książki po pierwszym dniu",
+        "why": "Zawsze gdy chcemy znaleźć resztę, odejmujemy już przeczytaną część od całości"
+      },
+      {
+        "step": 3,
+        "hint": "Ile Tomek przeczytał drugiego dnia z pozostałej części?",
+        "expression": "$\\frac{2}{5} \\cdot \\frac{5}{8} = \\frac{2 \\cdot 5}{5 \\cdot 8} = \\frac{10}{40} = \\frac{1}{4}$ książki",
+        "explanation": "Drugiego dnia przeczytał 2/5 z pozostałej 5/8 książki",
+        "why": "Mnożąc ułamki, zawsze mnożymy liczniki i mianowniki osobno"
+      },
+      {
+        "step": 4,
+        "hint": "Ile zostało do przeczytania po drugim dniu?",
+        "expression": "$\\frac{5}{8} - \\frac{1}{4} = \\frac{5}{8} - \\frac{2}{8} = \\frac{3}{8}$ książki",
+        "explanation": "Obliczamy pozostałą część książki po drugim dniu"
+      },
+      {
+        "step": 5,
+        "hint": "Ile stron przeczytał trzeciego dnia?",
+        "expression": "42 strony",
+        "explanation": "Wiemy, że trzeciego dnia przeczytał 42 strony",
+        "why": "To kluczowa informacja, która pomoże nam obliczyć całkowitą liczbę stron"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka część książki pozostała do przeczytania?",
+        "expression": "$\\frac{3}{8}$ książki",
+        "explanation": "Trzeciego dnia Tomek przeczytał pozostałą 3/8 książki"
+      },
+      {
+        "step": 7,
+        "hint": "Jeśli 42 strony to 3/8 książki, to ile stron ma cała książka?",
+        "expression": "$42 \\div \\frac{3}{8} = 42 \\cdot \\frac{8}{3} = 112$ stron",
+        "explanation": "Obliczamy całkowitą liczbę stron w książce",
+        "why": "Dzielenie przez ułamek to to samo co mnożenie przez ułamek odwrotny"
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź swoje obliczenia",
+        "expression": "$\\frac{3}{8} \\cdot 112 = 42$ strony ✓",
+        "explanation": "Sprawdzamy, czy 42 strony rzeczywiście stanowią 3/8 książki",
+        "why": "Zawsze warto sprawdzić rozwiązanie, aby upewnić się, że nie popełniliśmy błędu"
+      }
+    ],
+    "solutions": [
+      "112 stron"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_11",
+    "topic": "Objętość cylindra",
+    "statement": "Cylinder ma wysokość $3\\frac{1}{3}$ cm i pole podstawy $\\frac{9}{4}$ cm². Oblicz objętość cylindra.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Przypomnij sobie wzór na objętość cylindra",
+        "expression": "$V = P_{podstawy} \\cdot h$",
+        "explanation": "Objętość cylindra to pole podstawy razy wysokość",
+        "why": "To jak pudełko - jego objętość zależy od pola podstawy i wysokości"
+      },
+      {
+        "step": 2,
+        "hint": "Zamień mieszaną wysokość na ułamek dziesiętny",
+        "expression": "$3\\frac{1}{3} = \\frac{10}{3}$ cm",
+        "explanation": "Zamieniamy liczbę mieszaną na ułamek nieparzysty",
+        "why": "Łatwiej wykonywać działania na ułamkach w tej samej postaci"
+      },
+      {
+        "step": 3,
+        "hint": "Podstaw wartości do wzoru na objętość",
+        "expression": "$V = \\frac{9}{4} \\cdot \\frac{10}{3}$ cm³",
+        "explanation": "Mnożymy pole podstawy przez wysokość"
+      },
+      {
+        "step": 4,
+        "hint": "Wykonaj mnożenie ułamków",
+        "expression": "$V = \\frac{9 \\cdot 10}{4 \\cdot 3} = \\frac{90}{12} = 7,5$ cm³",
+        "explanation": "Mnożymy liczniki i mianowniki",
+        "why": "Przy mnożeniu ułamków: liczniki się mnożą, mianowniki się mnożą"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź jednostki i zaokrąglenie",
+        "expression": "$V = 7,5$ cm³",
+        "explanation": "Końcowy wynik objętości cylindra",
+        "why": "Zawsze warto sprawdzić, czy jednostki i zaokrąglenie mają sens"
+      }
+    ],
+    "solutions": [
+      "$7,5$ cm³"
+    ],
+    "parameters": {
+      "height": "$3\\frac{1}{3}$ cm",
+      "base_area": "$\\frac{9}{4}$ cm²"
+    }
+  },
+  {
+    "id": "tex_problem_12",
+    "topic": "Ułamki - działania złożone",
+    "statement": "Wykonaj działanie: $\\frac{7}{12} \\cdot \\left(\\frac{8}{21} + \\frac{4}{14}\\right) - \\frac{1}{9}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Zacznij od dodania ułamków wewnątrz nawiasu. Czy mają wspólny mianownik?",
+        "expression": "$\\frac{8}{21} + \\frac{4}{14}$",
+        "explanation": "Musimy znaleźć wspólny mianownik",
+        "why": "Ułamki można dodawać tylko gdy mają ten sam mianownik - jak dokładanie takich samych kawałków pizzy"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest najmniejszy wspólny mianownik dla 21 i 14?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 42",
+        "explanation": "Znajdujemy najmniejszą wspólną wielokrotność",
+        "why": "Wybieramy najmniejszą wspólną wielokrotność, żeby uprościć obliczenia"
+      },
+      {
+        "step": 3,
+        "hint": "Rozszerz ułamki do wspólnego mianownika 42",
+        "expression": "$\\frac{8 \\cdot 2}{21 \\cdot 2} + \\frac{4 \\cdot 3}{14 \\cdot 3} = \\frac{16}{42} + \\frac{12}{42}$",
+        "explanation": "Rozszerzamy ułamki, mnożąc licznik i mianownik przez odpowiednie liczby"
+      },
+      {
+        "step": 4,
+        "hint": "Dodaj ułamki o tym samym mianowniku",
+        "expression": "$\\frac{16 + 12}{42} = \\frac{28}{42}$",
+        "explanation": "Dodajemy liczniki, mianownik zostaje bez zmian"
+      },
+      {
+        "step": 5,
+        "hint": "Uprość ułamek $\\frac{28}{42}$",
+        "expression": "$\\frac{28}{42} = \\frac{2 \\cdot 14}{2 \\cdot 21} = \\frac{2}{3}$",
+        "explanation": "Skracamy ułamek przez wspólne czynniki"
+      },
+      {
+        "step": 6,
+        "hint": "Teraz pomnóż $\\frac{7}{12}$ przez $\\frac{2}{3}$",
+        "expression": "$\\frac{7}{12} \\cdot \\frac{2}{3} = \\frac{14}{36}$",
+        "explanation": "Mnożymy liczniki i mianowniki",
+        "why": "Przy mnożeniu ułamków: liczniki się mnożą, mianowniki się mnożą"
+      },
+      {
+        "step": 7,
+        "hint": "Uprość $\\frac{14}{36}$",
+        "expression": "$\\frac{14}{36} = \\frac{7}{18}$",
+        "explanation": "Skracamy ułamek przez wspólne czynniki"
+      },
+      {
+        "step": 8,
+        "hint": "Odejmij $\\frac{1}{9}$ od $\\frac{7}{18}$",
+        "expression": "$\\frac{7}{18} - \\frac{1}{9} = \\frac{7}{18} - \\frac{2}{18} = \\frac{5}{18}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika i odejmujemy",
+        "why": "Często popełniany błąd to próba odejmowania bez wspólnego mianownika"
+      }
+    ],
+    "solutions": [
+      "$\\frac{5}{18}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_13",
+    "topic": "Ułamki i procenty",
+    "statement": "Na przyjęciu było 48 osób. $\\frac{5}{12}$ z nich to kobiety, a $\\frac{2}{3}$ mężczyzn miało więcej niż 30 lat. Ilu mężczyzn miało co najwyżej 30 lat?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile osób stanowią kobiety?",
+        "expression": "$\\frac{5}{12} \\cdot 48 = \\frac{240}{12} = 20$ kobiet",
+        "explanation": "Obliczamy liczbę kobiet na przyjęciu",
+        "why": "Ułamek $\\frac{5}{12}$ oznacza, że z każdych 12 osób 5 to kobiety"
+      },
+      {
+        "step": 2,
+        "hint": "Ile osób stanowią mężczyźni?",
+        "expression": "$48 - 20 = 28$ mężczyzn",
+        "explanation": "Odejmujemy liczbę kobiet od całkowitej liczby osób"
+      },
+      {
+        "step": 3,
+        "hint": "Ile mężczyzn miało więcej niż 30 lat?",
+        "expression": "$\\frac{2}{3} \\cdot 28 = \\frac{56}{3} = 18$ mężczyzn powyżej 30 lat",
+        "explanation": "Obliczamy liczbę mężczyzn powyżej 30 lat",
+        "why": "Ułamek $\\frac{2}{3}$ oznacza, że 2 na 3 mężczyzn ma powyżej 30 lat"
+      },
+      {
+        "step": 4,
+        "hint": "Ile mężczyzn miało co najwyżej 30 lat?",
+        "expression": "$28 - 18 = 10$ mężczyzn",
+        "explanation": "Odejmujemy mężczyzn powyżej 30 lat od całkowitej liczby mężczyzn",
+        "why": "Często popełniany błąd to zapominanie o prostych odejmowaniach"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź, czy wszystkie liczby się zgadzają",
+        "expression": "$20 + 28 = 48$ ✓, $18 + 10 = 28$ ✓",
+        "explanation": "Podwójne sprawdzenie naszych obliczeń",
+        "why": "Zawsze warto zrobić szybką kontrolę, czy nasze obliczenia mają sens"
+      }
+    ],
+    "solutions": [
+      "10 mężczyzn"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_14",
+    "topic": "Liczby mieszane, średnia arytmetyczna",
+    "statement": "Oblicz średnią arytmetyczną liczb: $2\\frac{1}{3}, 1\\frac{5}{6}, 3\\frac{1}{4}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zamienić liczby mieszane na ułamki niewłaściwe?",
+        "expression": "$2\\frac{1}{3} = \\frac{7}{3}$, $1\\frac{5}{6} = \\frac{11}{6}$, $3\\frac{1}{4} = \\frac{13}{4}$",
+        "explanation": "Zamieniamy liczby mieszane na ułamki niewłaściwe",
+        "why": "Aby dodać liczby, musimy mieć je w tej samej postaci. Liczba mieszana to całość plus ułamek"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki będzie wspólny mianownik dla tych ułamków?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 12",
+        "explanation": "Znajdujemy najmniejszą wspólną wielokrotność mianowników",
+        "why": "Wspólny mianownik ułatwi nam dodawanie ułamków"
+      },
+      {
+        "step": 3,
+        "hint": "Jak przeliczyć ułamki na wspólny mianownik?",
+        "expression": "$\\frac{7}{3} = \\frac{7 \\cdot 4}{3 \\cdot 4} = \\frac{28}{12}$, $\\frac{11}{6} = \\frac{11 \\cdot 2}{6 \\cdot 2} = \\frac{22}{12}$, $\\frac{13}{4} = \\frac{13 \\cdot 3}{4 \\cdot 3} = \\frac{39}{12}$",
+        "explanation": "Rozszerzamy ułamki do wspólnego mianownika 12",
+        "why": "Mnożymy licznik i mianownik przez tę samą liczbę, więc wartość ułamka się nie zmienia"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć sumę tych ułamków?",
+        "expression": "$\\frac{28}{12} + \\frac{22}{12} + \\frac{39}{12} = \\frac{89}{12}$",
+        "explanation": "Dodajemy liczniki przy wspólnym mianowniku"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć średnią arytmetyczną?",
+        "expression": "$\\frac{89}{12} \\div 3 = \\frac{89}{36}$",
+        "explanation": "Dzielimy sumę przez liczbę elementów (3)",
+        "why": "Średnia arytmetyczna to suma wszystkich liczb podzielona przez ich liczbę"
+      },
+      {
+        "step": 6,
+        "hint": "Czy można uprościć wynik?",
+        "expression": "$\\frac{89}{36} = 2\\frac{17}{36}$",
+        "explanation": "Zamieniamy ułamek niewłaściwy na liczbę mieszaną",
+        "why": "Zapis liczby mieszanej jest często bardziej czytelny"
+      },
+      {
+        "step": 7,
+        "hint": "Sprawdź swoje obliczenia",
+        "expression": "$2\\frac{1}{3} + 1\\frac{5}{6} + 3\\frac{1}{4} = 7$, $7 \\div 3 = 2\\frac{1}{3}$",
+        "explanation": "Sprawdzamy poprawność wyniku",
+        "why": "Zawsze warto zweryfikować swoje obliczenia, aby uniknąć błędów"
+      }
+    ],
+    "solutions": [
+      "$\\frac{89}{36}$",
+      "$2\\frac{17}{36}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_15",
+    "topic": "Ułamki",
+    "statement": "Woda w basenie obniża się o $\\frac{1}{15}$ poziomu dziennie przez parowanie. Po ilu dniach poziom wody obniży się o $\\frac{2}{5}$?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile wody ubywa dziennie?",
+        "expression": "$\\frac{1}{15}$ poziomu",
+        "explanation": "Codziennie poziom wody spada o $\\frac{1}{15}$",
+        "why": "To jak systematyczne zmniejszanie się poziomu wody w basenie przez parowanie"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest docelowy spadek poziomu wody?",
+        "expression": "$\\frac{2}{5}$ poziomu",
+        "explanation": "Chcemy wiedzieć, ile dni zajmie osiągnięcie spadku o $\\frac{2}{5}$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć liczbę dni? Podziel docelowy spadek przez dzienny spadek",
+        "expression": "$\\frac{2/5}{1/15} = \\frac{2}{5} \\cdot \\frac{15}{1}$",
+        "explanation": "Dzielimy docelowy spadek przez dzienny spadek",
+        "why": "Przy dzieleniu ułamków mnożymy przez ułamek odwrotny - to jak 'odwracanie' drugiego ułamka"
+      },
+      {
+        "step": 4,
+        "hint": "Uprość mnożenie ułamków",
+        "expression": "$\\frac{2 \\cdot 15}{5 \\cdot 1} = \\frac{30}{5} = 6$",
+        "explanation": "Mnożymy liczniki i mianowniki"
+      },
+      {
+        "step": 5,
+        "hint": "Sprawdź swój wynik - ile to będzie dni spadku",
+        "expression": "$6 \\cdot \\frac{1}{15} = \\frac{6}{15} = \\frac{2}{5}$ ✓",
+        "explanation": "Sprawdzamy, czy 6 dni da nam spadek o $\\frac{2}{5}$",
+        "why": "Zawsze warto sprawdzić rozwiązanie, żeby upewnić się, że nasze obliczenia są poprawne"
+      }
+    ],
+    "solutions": [
+      "6 dni"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_16",
+    "topic": "Nierówności ułamkowe",
+    "statement": "Rozwiąż nierówność: $\\frac{2x+1}{3} - \\frac{x-2}{6} > \\frac{1}{2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki jest pierwszy krok w rozwiązywaniu skomplikowanej nierówności z ułamkami?",
+        "expression": "$\\frac{2x+1}{3} - \\frac{x-2}{6} > \\frac{1}{2}$",
+        "explanation": "Identyfikujemy wszystkie składniki nierówności",
+        "why": "Zawsze zaczynamy od dokładnego przyjrzenia się wszystkim częściom nierówności - to jak mapowanie trasy przed podróżą"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprowadzić ułamki do wspólnego mianownika?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 6",
+        "explanation": "Znajdujemy najmniejszy wspólny mianownik",
+        "why": "Wspólny mianownik pozwoli nam wykonywać działania na ułamkach, tak jak dodawanie kawałków tej samej pizzy"
+      },
+      {
+        "step": 3,
+        "hint": "Rozszerz ułamki do wspólnego mianownika 6",
+        "expression": "$\\frac{2(2x+1)}{6} - \\frac{x-2}{6} > \\frac{3}{6}$",
+        "explanation": "Rozszerzamy pierwszy ułamek przez 2, drugi zostaje bez zmian",
+        "why": "Pamiętaj: mnożąc licznik i mianownik przez tę samą liczbę, wartość ułamka się nie zmienia"
+      },
+      {
+        "step": 4,
+        "hint": "Uprość lewą stronę nierówności",
+        "expression": "$\\frac{4x+2}{6} - \\frac{x-2}{6} > \\frac{3}{6}$",
+        "explanation": "Mamy już wspólny mianownik 6"
+      },
+      {
+        "step": 5,
+        "hint": "Co zrobić z ułamkami o tym samym mianowniku?",
+        "expression": "$\\frac{4x+2 - (x-2)}{6} > \\frac{3}{6}$",
+        "explanation": "Odejmujemy liczniki"
+      },
+      {
+        "step": 6,
+        "hint": "Uprość licznik",
+        "expression": "$\\frac{4x+2 - x+2}{6} > \\frac{3}{6}$",
+        "explanation": "Rozwijamy nawiasy"
+      },
+      {
+        "step": 7,
+        "hint": "Kontynuuj upraszczanie",
+        "expression": "$\\frac{3x+4}{6} > \\frac{3}{6}$",
+        "explanation": "Upraszczamy licznik"
+      },
+      {
+        "step": 8,
+        "hint": "Możemy skrócić ułamki przez 3",
+        "expression": "$\\frac{x+\\frac{4}{3}}{2} > \\frac{1}{2}$",
+        "explanation": "Skracamy ułamki przez 3",
+        "why": "Często można uprościć ułamki, co czyni obliczenia prostszymi"
+      },
+      {
+        "step": 9,
+        "hint": "Pomnóż obie strony przez 2, aby pozbyć się mianownika",
+        "expression": "$x+\\frac{4}{3} > 1$",
+        "explanation": "Mnożymy obie strony przez 2"
+      },
+      {
+        "step": 10,
+        "hint": "Przesuń stałe na jedną stronę",
+        "expression": "$x > 1 - \\frac{4}{3}$",
+        "explanation": "Odejmujemy $\\frac{4}{3}$ od obu stron"
+      },
+      {
+        "step": 11,
+        "hint": "Oblicz końcowy wynik",
+        "expression": "$x > -\\frac{1}{3}$",
+        "explanation": "Upraszczamy prawą stronę"
+      }
+    ],
+    "solutions": [
+      "$x \\in (-\\frac{1}{3}, +\\infty)$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_17",
+    "topic": "Twierdzenie Pitagorasa",
+    "statement": "Prostokąt ma wymiary $2\\frac{2}{3}$ m na $1\\frac{7}{8}$ m. Oblicz długość jego przekątnej (wynik podaj w postaci ułamka niewłaściwego w najprostszej postaci).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Zamień liczby mieszane na ułamki niewłaściwe",
+        "expression": "$2\\frac{2}{3} = \\frac{8}{3}$ oraz $1\\frac{7}{8} = \\frac{15}{8}$",
+        "explanation": "Zamieniamy liczby mieszane na ułamki",
+        "why": "Łatwiej wykonywać działania na ułamkach niewłaściwych niż na liczbach mieszanych"
+      },
+      {
+        "step": 2,
+        "hint": "Przypomnij sobie wzór na długość przekątnej prostokąta",
+        "expression": "$d = \\sqrt{a^2 + b^2}$",
+        "explanation": "Używamy twierdzenia Pitagorasa",
+        "why": "Przekątna to przeciwprostokątna w trójkącie prostokątnym utworzonym przez boki prostokąta"
+      },
+      {
+        "step": 3,
+        "hint": "Podnieś długości boków do kwadratu",
+        "expression": "$\\left(\\frac{8}{3}\\right)^2 + \\left(\\frac{15}{8}\\right)^2$",
+        "explanation": "Kwadratujemy długości boków",
+        "why": "Przed dodaniem musimy podnieść każdy bok do kwadratu"
+      },
+      {
+        "step": 4,
+        "hint": "Oblicz kwadraty boków",
+        "expression": "$\\frac{64}{9} + \\frac{225}{64}$",
+        "explanation": "Obliczamy kwadraty boków",
+        "why": "Uważaj na mnożeniu ułamków - mnoż liczniki i mianowniki osobno"
+      },
+      {
+        "step": 5,
+        "hint": "Znajdź wspólny mianownik",
+        "expression": "$\\frac{64 \\cdot 64}{9 \\cdot 64} + \\frac{225 \\cdot 9}{64 \\cdot 9} = \\frac{4096}{576} + \\frac{2025}{576}$",
+        "explanation": "Sprowadzamy ułamki do wspólnego mianownika",
+        "why": "Wspólny mianownik ułatwia dodawanie ułamków"
+      },
+      {
+        "step": 6,
+        "hint": "Dodaj kwadraty boków",
+        "expression": "$\\frac{4096 + 2025}{576} = \\frac{6121}{576}$",
+        "explanation": "Dodajemy liczniki przy wspólnym mianowniku"
+      },
+      {
+        "step": 7,
+        "hint": "Oblicz pierwiastek z sumy kwadratów",
+        "expression": "$\\sqrt{\\frac{6121}{576}}$",
+        "explanation": "Bierzemy pierwiastek z wyniku"
+      },
+      {
+        "step": 8,
+        "hint": "Uprość pierwiastek",
+        "expression": "$\\frac{\\sqrt{6121}}{\\sqrt{576}} = \\frac{\\sqrt{6121}}{24}$",
+        "explanation": "Wyciągamy pierwiastek z licznika i mianownika"
+      }
+    ],
+    "solutions": [
+      "$\\frac{\\sqrt{6121}}{24}$"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_18",
+    "topic": "Procenty składane",
+    "statement": "Cena towaru wzrosła najpierw o $20\\%$, potem spadła o $\\frac{1}{6}$ nowej ceny. Następnie wzrosła o $12,5\\%$ aktualnej ceny. O jaki procent końcowa cena różni się od początkowej?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Zacznij od ustalenia początkowej ceny. Jaką wartość przyjmiemy?",
+        "expression": "$100$ zł",
+        "explanation": "Wybieramy cenę początkową 100 zł dla wygody obliczeń",
+        "why": "Często w zadaniach procentowych wygodnie jest zaczynać od 100, bo procenty liczą się łatwo"
+      },
+      {
+        "step": 2,
+        "hint": "Oblicz cenę po pierwszej podwyżce o 20%",
+        "expression": "$100 \\cdot 1,20 = 120$ zł",
+        "explanation": "Zwiększamy cenę o 20%",
+        "why": "1,20 oznacza 100% + 20%, więc mnożymy przez tę wartość"
+      },
+      {
+        "step": 3,
+        "hint": "Teraz spadek o $\\frac{1}{6}$ nowej ceny",
+        "expression": "$120 - (120 \\cdot \\frac{1}{6}) = 120 \\cdot \\frac{5}{6} = 100$ zł",
+        "explanation": "Odejmujemy $\\frac{1}{6}$ z 120 zł",
+        "why": "Często ludzie mylą się, czy odejmować, czy mnożyć - tu trzeba odjąć $\\frac{1}{6}$"
+      },
+      {
+        "step": 4,
+        "hint": "Następna zmiana - wzrost o 12,5%",
+        "expression": "$100 \\cdot 1,125 = 112,50$ zł",
+        "explanation": "Zwiększamy cenę o 12,5%",
+        "why": "1,125 to 100% + 12,5%, więc mnożymy przez tę wartość"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz zmianę procentową między ceną początkową a końcową",
+        "expression": "$\\frac{112,50 - 100}{100} \\cdot 100\\% = 12,5\\%$",
+        "explanation": "Obliczamy różnicę w procentach",
+        "why": "Pamiętaj o dzieleniu przez cenę początkową i mnożeniu przez 100%"
+      }
+    ],
+    "solutions": [
+      "$12,5\\%$ wzrostu"
+    ],
+    "parameters": {
+      "starting_price": 100,
+      "final_price": 112.5
+    }
+  },
+  {
+    "id": "tex_problem_19",
+    "topic": "Równania z ułamkami",
+    "statement": "W dwóch zbiornikach jest razem $37\\frac{1}{2}$ litrów benzyny. W pierwszym jest o $4\\frac{3}{4}$ litra więcej niż $\\frac{3}{5}$ tego co jest w drugim. Ile litrów benzyny jest w każdym zbiorniku?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Oznacz ilość benzyny w drugim zbiorniku jako zmienną x",
+        "expression": "Niech $x$ będzie ilością benzyny w drugim zbiorniku",
+        "explanation": "Wybieramy zmienną do opisania nieznanej ilości",
+        "why": "Często najlepiej zacząć od oznaczenia nieznanej wartości jako zmiennej"
+      },
+      {
+        "step": 2,
+        "hint": "Ile wynosi $\\frac{3}{5}$ z x?",
+        "expression": "$\\frac{3}{5}x$",
+        "explanation": "Obliczamy $\\frac{3}{5}$ zawartości drugiego zbiornika"
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest w pierwszym zbiorniku?",
+        "expression": "$x + 4\\frac{3}{4}$",
+        "explanation": "Pierwszy zbiornik ma o $4\\frac{3}{4}$ więcej niż $\\frac{3}{5}$ drugiego",
+        "why": "Pamiętaj o dodaniu $4\\frac{3}{4}$ do $\\frac{3}{5}x$"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi suma obu zbiorników?",
+        "expression": "$\\frac{3}{5}x + x + 4\\frac{3}{4} = 37\\frac{1}{2}$",
+        "explanation": "Składamy równanie z całkowitej objętości",
+        "why": "Suma obu zbiorników musi być równa podanej całkowitej objętości"
+      },
+      {
+        "step": 5,
+        "hint": "Uprość lewą stronę równania",
+        "expression": "$\\frac{3}{5}x + x = \\frac{8}{5}x$",
+        "explanation": "Dodajemy ułamki o różnych mianownikach"
+      },
+      {
+        "step": 6,
+        "hint": "Podstaw do równania",
+        "expression": "$\\frac{8}{5}x + 4\\frac{3}{4} = 37\\frac{1}{2}$",
+        "explanation": "Kontynuujemy rozwiązywanie równania"
+      },
+      {
+        "step": 7,
+        "hint": "Zamień liczbę mieszaną na ułamek niewłaściwy",
+        "expression": "$\\frac{8}{5}x + \\frac{19}{4} = \\frac{75}{2}$",
+        "explanation": "Zamieniamy $4\\frac{3}{4}$ na $\\frac{19}{4}$ i $37\\frac{1}{2}$ na $\\frac{75}{2}$"
+      },
+      {
+        "step": 8,
+        "hint": "Znajdź wspólny mianownik",
+        "expression": "$\\frac{8}{5}x + \\frac{19}{4} = \\frac{75}{2}$",
+        "explanation": "Musimy wykonać działania na ułamkach"
+      },
+      {
+        "step": 9,
+        "hint": "Przesuń zmienną na jedną stronę",
+        "expression": "$\\frac{8}{5}x = \\frac{75}{2} - \\frac{19}{4}$",
+        "explanation": "Odejmujemy stałą od obu stron"
+      },
+      {
+        "step": 10,
+        "hint": "Oblicz prawą stronę",
+        "expression": "$\\frac{8}{5}x = \\frac{150}{4} - \\frac{19}{4} = \\frac{131}{4}$",
+        "explanation": "Upraszczamy prawą stronę równania"
+      },
+      {
+        "step": 11,
+        "hint": "Rozwiąż równanie, mnożąc obie strony przez odwrotność",
+        "expression": "$x = \\frac{131}{4} \\cdot \\frac{5}{8} = \\frac{655}{32} = 20\\frac{15}{32}$",
+        "explanation": "Obliczamy wartość x",
+        "why": "Pamiętaj o mnożeniu przez odwrotność, aby wyizolować x"
+      },
+      {
+        "step": 12,
+        "hint": "Oblicz zawartość pierwszego zbiornika",
+        "expression": "$20\\frac{15}{32} + 4\\frac{3}{4} = 25\\frac{1}{2}$",
+        "explanation": "Dodajemy do x wartość $4\\frac{3}{4}$"
+      },
+      {
+        "step": 13,
+        "hint": "Sprawdź sumę obu zbiorników",
+        "expression": "$20\\frac{15}{32} + 25\\frac{1}{2} = 37\\frac{1}{2}$ ✓",
+        "explanation": "Weryfikujemy poprawność rozwiązania",
+        "why": "Zawsze warto sprawdzić obliczenia, aby uniknąć błędów"
+      }
+    ],
+    "solutions": [
+      "Pierwszy zbiornik: $25\\frac{1}{2}$ litra",
+      "Drugi zbiornik: $20\\frac{15}{32}$ litra"
+    ],
+    "parameters": {}
+  },
+  {
+    "id": "tex_problem_20",
+    "topic": "Działania na ułamkach",
+    "statement": "Wykonaj działanie i wynik zapisz w postaci ułamka dziesiętnego: $\\frac{5}{6} : \\left(\\frac{7}{9} - \\frac{5}{12}\\right) + 1\\frac{2}{15}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Zacznij od obliczenia działania w nawiasie. Jakie masz ułamki?",
+        "expression": "$\\frac{7}{9} - \\frac{5}{12}$",
+        "explanation": "Musimy odjąć ułamki o różnych mianownikach",
+        "why": "Ułamki można odejmować tylko po sprowadzeniu do wspólnego mianownika"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest najmniejszy wspólny mianownik dla 9 i 12?",
+        "expression": "najlepszym wspólnym mianownikiem będzie 36",
+        "explanation": "Znajdujemy najmniejszą wspólną wielokrotność",
+        "why": "Wspólny mianownik pozwoli nam wykonać odejmowanie"
+      },
+      {
+        "step": 3,
+        "hint": "Rozszerz ułamki do wspólnego mianownika 36",
+        "expression": "$\\frac{7 \\cdot 4}{9 \\cdot 4} - \\frac{5 \\cdot 3}{12 \\cdot 3} = \\frac{28}{36} - \\frac{15}{36}$",
+        "explanation": "Mnożymy liczniki i mianowniki przez odpowiednie liczby"
+      },
+      {
+        "step": 4,
+        "hint": "Odejmij ułamki o tym samym mianowniku",
+        "expression": "$\\frac{28 - 15}{36} = \\frac{13}{36}$",
+        "explanation": "Odejmujemy liczniki, mianownik zostaje bez zmian"
+      },
+      {
+        "step": 5,
+        "hint": "Teraz wykonaj dzielenie $\\frac{5}{6}$ przez $\\frac{13}{36}$",
+        "expression": "$\\frac{5}{6} : \\frac{13}{36} = \\frac{5}{6} \\cdot \\frac{36}{13}$",
+        "explanation": "Dzielenie ułamków to mnożenie przez ułamek odwrotny",
+        "why": "Przy dzieleniu ułamków zamieniamy drugi ułamek na odwrotny i mnożymy"
+      },
+      {
+        "step": 6,
+        "hint": "Pomnóż ułamki",
+        "expression": "$\\frac{5 \\cdot 36}{6 \\cdot 13} = \\frac{180}{78} = \\frac{30}{13}$",
+        "explanation": "Mnożymy liczniki i mianowniki"
+      },
+      {
+        "step": 7,
+        "hint": "Dodaj $1\\frac{2}{15}$ do wyniku",
+        "expression": "$\\frac{30}{13} + 1\\frac{2}{15}$",
+        "explanation": "Musimy zamienić liczbę mieszaną na nieparzystą",
+        "why": "Liczba mieszana to całość plus ułamek, więc musimy ją przekształcić"
+      },
+      {
+        "step": 8,
+        "hint": "Zamień $1\\frac{2}{15}$ na nieparzysty ułamek",
+        "expression": "$1\\frac{2}{15} = \\frac{15}{15} + \\frac{2}{15} = \\frac{17}{15}$",
+        "explanation": "Dodajemy całość jako ułamek o tym samym mianowniku"
+      },
+      {
+        "step": 9,
+        "hint": "Dodaj ułamki o różnych mianownikach",
+        "expression": "$\\frac{30}{13} + \\frac{17}{15}$",
+        "explanation": "Musimy znaleźć wspólny mianownik",
+        "why": "Ułamki można dodawać tylko po sprowadzeniu do wspólnego mianownika"
+      },
+      {
+        "step": 10,
+        "hint": "Znajdź wspólny mianownik",
+        "expression": "najlepszym wspólnym mianownikiem będzie 195",
+        "explanation": "Obliczamy najmniejszą wspólną wielokrotność"
+      },
+      {
+        "step": 11,
+        "hint": "Rozszerz ułamki do wspólnego mianownika",
+        "expression": "$\\frac{30 \\cdot 15}{13 \\cdot 15} + \\frac{17 \\cdot 13}{15 \\cdot 13} = \\frac{450}{195} + \\frac{221}{195}$",
+        "explanation": "Mnożymy liczniki i mianowniki"
+      },
+      {
+        "step": 12,
+        "hint": "Dodaj ułamki o tym samym mianowniku",
+        "expression": "$\\frac{450 + 221}{195} = \\frac{671}{195}$",
+        "explanation": "Dodajemy liczniki, mianownik zostaje bez zmian"
+      },
+      {
+        "step": 13,
+        "hint": "Zamień na ułamek dziesiętny",
+        "expression": "$\\frac{671}{195} \\approx 3,44$",
+        "explanation": "Dzielimy licznik przez mianownik",
+        "why": "Zaokrąglamy do dwóch miejsc po przecinku"
+      }
+    ],
+    "solutions": [
+      "$3,44$"
+    ],
+    "parameters": {}
   }
 ]
+
+
