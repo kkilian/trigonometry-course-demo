@@ -25,7 +25,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       problemCount: 0,
       hasSubmenu: true,
       topicsCount: 16,
-      disabled: false
+      disabled: true
     },
     {
       id: 'powers',
