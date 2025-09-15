@@ -2695,7 +2695,6 @@
   {
     "id": "absolute_value_derivative",
     "topic": "Pochodna funkcji z wartością bezwzględną",
-    "difficulty": 4,
     "statement": "Oblicz pochodną funkcji $f(x) = |x^2 - 4|$ w punkcie $x = 2$",
     "steps": [
       {

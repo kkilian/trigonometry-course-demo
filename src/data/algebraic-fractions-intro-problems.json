@@ -1,6 +1,6 @@
 [
   {
-    "id": "tex_problem_1",
+    "id": "algfrac_tex_problem_1",
     "topic": "Równania trygonometryczne",
     "statement": "Wśród wyrażeń $\\frac{0,5 x^{3}+8 x+1}{x^{2}}$, $\\frac{2 x-5}{3}$, $\\frac{2|x|}{x^{3}-8}$, $\\sqrt{\\frac{x}{x+2}}$, $\\frac{3}{x^{3}-8 x^{2}+6}$, $\\frac{7-\\sqrt{x}}{x^{2}+1}$ wskaż ułamki algebraiczne.",
     "steps": [
@@ -96,7 +96,7 @@
     }
   },
   {
-    "id": "tex_problem_2",
+    "id": "algfrac_tex_problem_2",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{9x}{5x-10}$",
     "steps": [
@@ -170,7 +170,7 @@
     }
   },
   {
-    "id": "tex_problem_3",
+    "id": "algfrac_tex_problem_3",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{1}{(x+1)(5-x)}$",
     "steps": [
@@ -271,7 +271,7 @@
     }
   },
   {
-    "id": "tex_problem_4",
+    "id": "algfrac_tex_problem_4",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{4x+2}{x^2+4}$",
     "steps": [
@@ -332,7 +332,7 @@
     }
   },
   {
-    "id": "tex_problem_5",
+    "id": "algfrac_tex_problem_5",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-7}{9x^2-81}$",
     "steps": [
@@ -393,7 +393,7 @@
     }
   },
   {
-    "id": "tex_problem_6",
+    "id": "algfrac_tex_problem_6",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x-5}{x^2+2x+1}$",
     "steps": [
@@ -454,7 +454,7 @@
     }
   },
   {
-    "id": "tex_problem_7",
+    "id": "algfrac_tex_problem_7",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^3-1}{x^3+8}$",
     "steps": [
@@ -540,7 +540,7 @@
     }
   },
   {
-    "id": "tex_problem_8",
+    "id": "algfrac_tex_problem_8",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+x+4}{x^{2}-5 x+6}$",
     "steps": [
@@ -561,8 +561,8 @@
         "hint": "Rozłóż trójmian $x^2 - 5x + 6$ na czynniki za pomocą delty. Oblicz deltę i pierwiastki, a następnie zapisz postać iloczynową.",
         "expression": "$\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$, $x_1 = \\frac{5 - 1}{2} = 2$, $x_2 = \\frac{5 + 1}{2} = 3$, więc $x^2 - 5x + 6 = (x - 2)(x - 3)$",
         "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac = 1$. Pierwiastki: $x_1 = 2$, $x_2 = 3$. Trójmian rozkładamy: $(x - 2)(x - 3)$"
-      
-      },{
+      },
+      {
         "step": 4,
         "hint": "Kiedy iloczyn dwóch czynników równa się zero? Rozpatrz wszystkie możliwości",
         "expression": "$(x-2)(x-3) = 0 \\Rightarrow x-2 = 0$ lub $x-3 = 0$",
@@ -624,7 +624,7 @@
     }
   },
   {
-    "id": "tex_problem_9",
+    "id": "algfrac_tex_problem_9",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x+1}{x^{3}-4 x^{2}}$",
     "steps": [
@@ -705,7 +705,7 @@
     }
   },
   {
-    "id": "tex_problem_10",
+    "id": "algfrac_tex_problem_10",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^3 + 8x + 5}{8x^4 - x}$",
     "steps": [
@@ -789,7 +789,7 @@
     }
   },
   {
-    "id": "tex_problem_11",
+    "id": "algfrac_tex_problem_11",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x^{2}+5}{x^{3}-9 x^{2}+x-9}$",
     "steps": [
@@ -877,7 +877,7 @@
     }
   },
   {
-    "id": "tex_problem_12",
+    "id": "algfrac_tex_problem_12",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x-7}{x^4+x^2-20}$",
     "steps": [
@@ -969,7 +969,7 @@
     }
   },
   {
-    "id": "tex_problem_13",
+    "id": "algfrac_tex_problem_13",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{2x^3 - 5x + 3}{x^3 - 3x^2 + 3x - 1}$",
     "steps": [
@@ -1037,7 +1037,7 @@
     }
   },
   {
-    "id": "tex_problem_14",
+    "id": "algfrac_tex_problem_14",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{-7x+2}{x^3+4x+5}$",
     "steps": [
@@ -1143,7 +1143,7 @@
     }
   },
   {
-    "id": "tex_problem_15",
+    "id": "algfrac_tex_problem_15",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{x-3}{5x^3-15x^2-5x+15}$",
     "steps": [
@@ -1240,7 +1240,7 @@
     }
   },
   {
-    "id": "tex_problem_16",
+    "id": "algfrac_tex_problem_16",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz dziedzinę ułamka algebraicznego $\\frac{3x^2 - 2x + 1}{x^5 + 3x^3 - 4x^2}$",
     "steps": [
@@ -1342,7 +1342,7 @@
     }
   },
   {
-    "id": "tex_problem_17",
+    "id": "algfrac_tex_problem_17",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R}$",
     "steps": [
@@ -1429,7 +1429,7 @@
     }
   },
   {
-    "id": "tex_problem_18",
+    "id": "algfrac_tex_problem_18",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} \\setminus \\{1\\}$",
     "steps": [
@@ -1518,7 +1518,7 @@
     }
   },
   {
-    "id": "tex_problem_19",
+    "id": "algfrac_tex_problem_19",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{0\\}$",
     "steps": [
@@ -1605,7 +1605,7 @@
     }
   },
   {
-    "id": "tex_problem_20",
+    "id": "algfrac_tex_problem_20",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{0, 3\\}$",
     "steps": [
@@ -1681,7 +1681,7 @@
     }
   },
   {
-    "id": "tex_problem_21",
+    "id": "algfrac_tex_problem_21",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{-2, 3\\}$",
     "steps": [
@@ -1757,7 +1757,7 @@
     }
   },
   {
-    "id": "tex_problem_22",
+    "id": "algfrac_tex_problem_22",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} \\setminus \\{-\\sqrt{2}, \\sqrt{2}\\}$",
     "steps": [
@@ -1839,7 +1839,7 @@
     }
   },
   {
-    "id": "tex_problem_23",
+    "id": "algfrac_tex_problem_23",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} - \\{-\\sqrt{3}, 0, \\sqrt{3}\\}$",
     "steps": [
@@ -1933,7 +1933,7 @@
     }
   },
   {
-    "id": "tex_problem_24",
+    "id": "algfrac_tex_problem_24",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} \\setminus \\{-1, 1, 2, 4\\}$",
     "steps": [
@@ -2025,7 +2025,7 @@
     }
   },
   {
-    "id": "tex_problem_25",
+    "id": "algfrac_tex_problem_25",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{-x^{2}+3}{(2-x)(2+x)}$ dla $x = -1$",
     "steps": [
@@ -2099,7 +2099,7 @@
     }
   },
   {
-    "id": "tex_problem_26",
+    "id": "algfrac_tex_problem_26",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x^{2}-5 x+6}{x^{8}+4 x^{2}+7}$ dla $x = 3$",
     "steps": [
@@ -2181,7 +2181,7 @@
     }
   },
   {
-    "id": "tex_problem_27",
+    "id": "algfrac_tex_problem_27",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{2x^2 + 1}{x^3 - 1}$ dla $x = 2$",
     "steps": [
@@ -2259,7 +2259,7 @@
     }
   },
   {
-    "id": "tex_problem_28",
+    "id": "algfrac_tex_problem_28",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{32-x^{2}}{2 x^{3}+8 x^{2}+5 x+20}$ dla $x = -3$",
     "steps": [
@@ -2320,7 +2320,7 @@
     }
   },
   {
-    "id": "tex_problem_29",
+    "id": "algfrac_tex_problem_29",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x}{x-2}$ dla $x = 3\\sqrt{2}+2$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
     "steps": [
@@ -2412,7 +2412,7 @@
     }
   },
   {
-    "id": "tex_problem_30",
+    "id": "algfrac_tex_problem_30",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x+1}{x-2}$ dla $x = 1-\\sqrt{3}$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
     "steps": [
@@ -2506,7 +2506,7 @@
     }
   },
   {
-    "id": "tex_problem_31",
+    "id": "algfrac_tex_problem_31",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x^2}{x^2-3}$ dla $x = 1+\\sqrt{2}$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
     "steps": [
@@ -2594,7 +2594,7 @@
     }
   },
   {
-    "id": "tex_problem_32",
+    "id": "algfrac_tex_problem_32",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{(6-x)(2+x)}{(x-1)^{2}}$ dla $x = 2-\\sqrt{2}$. Wynik przedstaw w postaci $a+b\\sqrt{c}$, gdzie $a, b, c \\in \\mathbb{Q}$",
     "steps": [
@@ -2698,7 +2698,7 @@
     }
   },
   {
-    "id": "tex_problem_33",
+    "id": "algfrac_tex_problem_33",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{1}{x+2}$ dla $x = 2\\sqrt[3]{3}$. Wynik przedstaw w postaci ułamka o wymiernym mianowniku.",
     "steps": [
@@ -2788,7 +2788,7 @@
     }
   },
   {
-    "id": "tex_problem_34",
+    "id": "algfrac_tex_problem_34",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{x^{3}}{3(x-1)}$ dla $x = \\sqrt[3]{2}$. Wynik przedstaw w postaci ułamka o wymiernym mianowniku.",
     "steps": [
@@ -2878,7 +2878,7 @@
     }
   },
   {
-    "id": "tex_problem_35",
+    "id": "algfrac_tex_problem_35",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{2x^3}{x^2 + x + 1}$ dla $x = \\sqrt[3]{5}$. Wynik przedstaw w postaci ułamka o wymiernym mianowniku.",
     "steps": [
@@ -3022,7 +3022,7 @@
     }
   },
   {
-    "id": "tex_problem_36",
+    "id": "algfrac_tex_problem_36",
     "topic": "Równania trygonometryczne",
     "statement": "Oblicz wartość ułamka algebraicznego $\\frac{1}{x^{2}+\\sqrt[3]{3}}$ dla $x = \\sqrt[3]{3}-1$. Wynik przedstaw w postaci ułamka o wymiernym mianowniku.",
     "steps": [
@@ -3134,7 +3134,7 @@
     }
   },
   {
-    "id": "tex_problem_37",
+    "id": "algfrac_tex_problem_37",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} \\setminus \\{0\\}$ i który dla liczby $1$ przyjmuje wartość $3$",
     "steps": [
@@ -3211,7 +3211,7 @@
     }
   },
   {
-    "id": "tex_problem_38",
+    "id": "algfrac_tex_problem_38",
     "topic": "Równania trygonometryczne",
     "statement": "Podaj przykład ułamka algebraicznego, którego dziedziną jest zbiór $\\mathbb{R} \\setminus \\{2, 3\\}$ i który dla liczby $-1$ przyjmuje wartość $5$",
     "steps": [
@@ -3304,7 +3304,7 @@
     }
   },
   {
-    "id": "tex_problem_39",
+    "id": "algfrac_tex_problem_39",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz wszystkie wartości $m \\in \\mathbb{R}$, dla których dziedziną ułamka algebraicznego $\\frac{x^2+5}{x^2+2x+m}$ jest zbiór liczb rzeczywistych.",
     "steps": [
@@ -3371,7 +3371,7 @@
     }
   },
   {
-    "id": "tex_problem_40",
+    "id": "algfrac_tex_problem_40",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz wszystkie wartości $m$, $m \\in \\mathbb{R}$, dla których dziedziną ułamka algebraicznego $\\frac{x}{x^2 + 5x + 9m^2}$ jest zbiór liczb rzeczywistych.",
     "steps": [
@@ -3448,7 +3448,7 @@
     }
   },
   {
-    "id": "tex_problem_41",
+    "id": "algfrac_tex_problem_41",
     "topic": "Równania trygonometryczne",
     "statement": "Wyznacz wszystkie wartości $m \\in \\mathbb{R}$, dla których dziedziną ułamka algebraicznego $\\frac{1-2x}{x^2+3mx+m}$ jest zbiór liczb rzeczywistych.",
     "steps": [
@@ -3540,7 +3540,7 @@
     }
   },
   {
-    "id": "tex_problem_42",
+    "id": "algfrac_tex_problem_42",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{3x^{12}}{6x^8}$. Podaj konieczne założenia.",
     "steps": [
@@ -3624,7 +3624,7 @@
     }
   },
   {
-    "id": "tex_problem_43",
+    "id": "algfrac_tex_problem_43",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{-15(-x)^{2}}{3x}$. Podaj konieczne założenia.",
     "steps": [
@@ -3739,7 +3739,7 @@
     }
   },
   {
-    "id": "tex_problem_44",
+    "id": "algfrac_tex_problem_44",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{7(-x)^{13}+5(-x)^{12}}{x^{10}}$. Podaj konieczne założenia.",
     "steps": [
@@ -3813,7 +3813,7 @@
     }
   },
   {
-    "id": "tex_problem_45",
+    "id": "algfrac_tex_problem_45",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{(x^{3})^{2}-5(x^{2})^{3}}{2 x^{7}}$. Podaj konieczne założenia.",
     "steps": [
@@ -3933,7 +3933,7 @@
     }
   },
   {
-    "id": "tex_problem_46",
+    "id": "algfrac_tex_problem_46",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{[3(-x)^{2}]^{2}-8 x^{4}}{2(-x)^{5}+3 x^{5}}$. Podaj konieczne założenia.",
     "steps": [
@@ -4000,7 +4000,7 @@
     }
   },
   {
-    "id": "tex_problem_47",
+    "id": "algfrac_tex_problem_47",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{6}(-3 x)^{2}+9 x^{8}}{18 x^{4} \\cdot x^{3}}$. Podaj konieczne założenia.",
     "steps": [
@@ -4106,7 +4106,7 @@
     }
   },
   {
-    "id": "tex_problem_48",
+    "id": "algfrac_tex_problem_48",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^2-4}{3x+6}$. Podaj konieczne założenia.",
     "steps": [
@@ -4180,7 +4180,7 @@
     }
   },
   {
-    "id": "tex_problem_49",
+    "id": "algfrac_tex_problem_49",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{5+x}{25-x^{2}}$. Podaj konieczne założenia.",
     "steps": [
@@ -4274,7 +4274,7 @@
     }
   },
   {
-    "id": "tex_problem_50",
+    "id": "algfrac_tex_problem_50",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{4x^2 - 9}{(3 - 2x)(3 + 2x)}$. Podaj konieczne założenia.",
     "steps": [
@@ -4374,7 +4374,7 @@
     }
   },
   {
-    "id": "tex_problem_51",
+    "id": "algfrac_tex_problem_51",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{4-81x^{2}}{-9x-2}$. Podaj konieczne założenia.",
     "steps": [
@@ -4448,7 +4448,7 @@
     }
   },
   {
-    "id": "tex_problem_52",
+    "id": "algfrac_tex_problem_52",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{2}-2 x+1}{5 x-5}$. Podaj konieczne założenia.",
     "steps": [
@@ -4532,7 +4532,7 @@
     }
   },
   {
-    "id": "tex_problem_53",
+    "id": "algfrac_tex_problem_53",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{9x^2 - 1}{1 - 6x + 9x^2}$. Podaj konieczne założenia.",
     "steps": [
@@ -4632,7 +4632,7 @@
     }
   },
   {
-    "id": "tex_problem_54",
+    "id": "algfrac_tex_problem_54",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{2}-x-6}{x^{2}-4}$. Podaj konieczne założenia.",
     "steps": [
@@ -4706,7 +4706,7 @@
     }
   },
   {
-    "id": "tex_problem_55",
+    "id": "algfrac_tex_problem_55",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{2}-6 x+9}{x^{2}+2 x-15}$. Podaj konieczne założenia.",
     "steps": [
@@ -4790,7 +4790,7 @@
     }
   },
   {
-    "id": "tex_problem_56",
+    "id": "algfrac_tex_problem_56",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{-2x^2 - 14x + 16}{3x^2 + 15x - 72}$. Podaj konieczne założenia.",
     "steps": [
@@ -4857,7 +4857,7 @@
     }
   },
   {
-    "id": "tex_problem_57",
+    "id": "algfrac_tex_problem_57",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^2 - 3x - 9}{4x^2 - 11x - 3}$. Podaj konieczne założenia.",
     "steps": [
@@ -4955,7 +4955,7 @@
     }
   },
   {
-    "id": "tex_problem_58",
+    "id": "algfrac_tex_problem_58",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^3 - 32x}{3x^2 + 12x}$. Podaj konieczne założenia.",
     "steps": [
@@ -5035,7 +5035,7 @@
     }
   },
   {
-    "id": "tex_problem_59",
+    "id": "algfrac_tex_problem_59",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{4x^4 - 400x^2}{x^3 - 13x^2 + 30x}$. Podaj konieczne założenia.",
     "steps": [
@@ -5102,7 +5102,7 @@
     }
   },
   {
-    "id": "tex_problem_60",
+    "id": "algfrac_tex_problem_60",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{36x + 3x^2 - 3x^3}{x^2 + 6x + 9}$. Podaj konieczne założenia.",
     "steps": [
@@ -5182,7 +5182,7 @@
     }
   },
   {
-    "id": "tex_problem_61",
+    "id": "algfrac_tex_problem_61",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^7 - 8x^3}{3x^5 + 6x^3}$. Podaj konieczne założenia.",
     "steps": [
@@ -5256,7 +5256,7 @@
     }
   },
   {
-    "id": "tex_problem_62",
+    "id": "algfrac_tex_problem_62",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{3x^3 + 2x^2 - 3x - 2}{2x^4 - 2}$. Podaj konieczne założenia.",
     "steps": [
@@ -5360,7 +5360,7 @@
     }
   },
   {
-    "id": "tex_problem_63",
+    "id": "algfrac_tex_problem_63",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{8x^4 - x}{4x^2 + 2x + 1}$. Podaj konieczne założenia.",
     "steps": [
@@ -5456,7 +5456,7 @@
     }
   },
   {
-    "id": "tex_problem_64",
+    "id": "algfrac_tex_problem_64",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{75x^2 - 30x + 12}{125x^3 + 8}$. Podaj konieczne założenia.",
     "steps": [
@@ -5542,7 +5542,7 @@
     }
   },
   {
-    "id": "tex_problem_65",
+    "id": "algfrac_tex_problem_65",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{4}-x^{2}-12}{x^{4}+8 x^{2}+15}$. Podaj konieczne założenia.",
     "steps": [
@@ -5615,7 +5615,7 @@
     }
   },
   {
-    "id": "tex_problem_66",
+    "id": "algfrac_tex_problem_66",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{3}+x^{2}-4 x-4}{x^{2}+3 x+2}$. Podaj konieczne założenia.",
     "steps": [
@@ -5716,7 +5716,7 @@
     }
   },
   {
-    "id": "tex_problem_67",
+    "id": "algfrac_tex_problem_67",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{4}-3 x^{2}-4}{2 x^{4}-8 x^{2}}$. Podaj konieczne założenia.",
     "steps": [
@@ -5802,7 +5802,7 @@
     }
   },
   {
-    "id": "tex_problem_68",
+    "id": "algfrac_tex_problem_68",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^3 + x - 3}{4x^2 + 4x + 6}$. Podaj konieczne założenia.",
     "steps": [
@@ -5919,7 +5919,7 @@
     }
   },
   {
-    "id": "tex_problem_69",
+    "id": "algfrac_tex_problem_69",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{8x^3 + 12x^2 + 6x + 1}{4x^3 + 4x^2 + x}$. Podaj konieczne założenia.",
     "steps": [
@@ -6022,7 +6022,7 @@
     }
   },
   {
-    "id": "tex_problem_70",
+    "id": "algfrac_tex_problem_70",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^2 + 4x - 6}{x^3 - 3x^2 - 9x + 27}$. Podaj konieczne założenia.",
     "steps": [
@@ -6089,7 +6089,7 @@
     }
   },
   {
-    "id": "tex_problem_71",
+    "id": "algfrac_tex_problem_71",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{4}-8 x^{2}-9}{x^{4}-13 x^{2}+36}$. Podaj konieczne założenia.",
     "steps": [
@@ -6162,7 +6162,7 @@
     }
   },
   {
-    "id": "tex_problem_72",
+    "id": "algfrac_tex_problem_72",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{3x^2(x-2)+4(x-2)}{9x^4-16}$. Podaj konieczne założenia.",
     "steps": [
@@ -6252,7 +6252,7 @@
     }
   },
   {
-    "id": "tex_problem_73",
+    "id": "algfrac_tex_problem_73",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{x^{3}(3 x-1)-(1-3 x) x}{27 x^{3}-1}$. Podaj konieczne założenia.",
     "steps": [
@@ -6374,7 +6374,7 @@
     }
   },
   {
-    "id": "tex_problem_74",
+    "id": "algfrac_tex_problem_74",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{25x^3 + 50x^2 - x - 2}{5x^2 + 9x - 2}$. Podaj konieczne założenia.",
     "steps": [
@@ -6484,7 +6484,7 @@
     }
   },
   {
-    "id": "tex_problem_75",
+    "id": "algfrac_tex_problem_75",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{2x^3 + 2x - 4}{x^3 - x^2 + 3x - 3}$. Podaj konieczne założenia.",
     "steps": [
@@ -6600,7 +6600,7 @@
     }
   },
   {
-    "id": "tex_problem_76",
+    "id": "algfrac_tex_problem_76",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{216x^3 + 8}{12x^2 - 20x - 8}$. Podaj konieczne założenia.",
     "steps": [
@@ -6720,7 +6720,7 @@
     }
   },
   {
-    "id": "tex_problem_77",
+    "id": "algfrac_tex_problem_77",
     "topic": "Równania trygonometryczne",
     "statement": "Skróć ułamek algebraiczny $\\frac{(x-2)^3-1}{x^3-3x^2}$. Podaj konieczne założenia.",
     "steps": [
@@ -6806,7 +6806,7 @@
     }
   },
   {
-    "id": "tex_problem_78",
+    "id": "algfrac_tex_problem_78",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3x}{4}$ tak, aby otrzymać wyrażenie o mianowniku $16x$. Podaj konieczne założenia.",
     "steps": [
@@ -6880,7 +6880,7 @@
     }
   },
   {
-    "id": "tex_problem_79",
+    "id": "algfrac_tex_problem_79",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{-2x^2}{9}$ tak, aby otrzymać wyrażenie o mianowniku $18x^3$. Podaj konieczne założenia.",
     "steps": [
@@ -6941,7 +6941,7 @@
     }
   },
   {
-    "id": "tex_problem_80",
+    "id": "algfrac_tex_problem_80",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3}{x-2}$ tak, aby otrzymać wyrażenie o mianowniku $2-x$. Podaj konieczne założenia.",
     "steps": [
@@ -7002,7 +7002,7 @@
     }
   },
   {
-    "id": "tex_problem_81",
+    "id": "algfrac_tex_problem_81",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{5}{2}$ tak, aby otrzymać wyrażenie o mianowniku $2x - 8$. Podaj konieczne założenia.",
     "steps": [
@@ -7057,7 +7057,7 @@
     }
   },
   {
-    "id": "tex_problem_82",
+    "id": "algfrac_tex_problem_82",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x+1}{x}$ tak, aby otrzymać wyrażenie o mianowniku $x(x-2)$. Podaj konieczne założenia.",
     "steps": [
@@ -7124,7 +7124,7 @@
     }
   },
   {
-    "id": "tex_problem_83",
+    "id": "algfrac_tex_problem_83",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2x}{x+3}$ tak, aby otrzymać wyrażenie o mianowniku $x^2-9$. Podaj konieczne założenia.",
     "steps": [
@@ -7185,7 +7185,7 @@
     }
   },
   {
-    "id": "tex_problem_84",
+    "id": "algfrac_tex_problem_84",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3}{x}$ tak, aby otrzymać wyrażenie o mianowniku $x^2 - 6x$. Podaj konieczne założenia.",
     "steps": [
@@ -7265,7 +7265,7 @@
     }
   },
   {
-    "id": "tex_problem_85",
+    "id": "algfrac_tex_problem_85",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x-1}{x-2}$ tak, aby otrzymać wyrażenie o mianowniku $6x^2 - 3x^3$. Podaj konieczne założenia.",
     "steps": [
@@ -7345,7 +7345,7 @@
     }
   },
   {
-    "id": "tex_problem_86",
+    "id": "algfrac_tex_problem_86",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3}{x-2}$ tak, aby otrzymać wyrażenie o mianowniku $x^2-x-2$. Podaj konieczne założenia.",
     "steps": [
@@ -7419,7 +7419,7 @@
     }
   },
   {
-    "id": "tex_problem_87",
+    "id": "algfrac_tex_problem_87",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x}{x+1}$ tak, aby otrzymać wyrażenie o mianowniku $2x^2 + 4x + 2$. Podaj konieczne założenia.",
     "steps": [
@@ -7509,7 +7509,7 @@
     }
   },
   {
-    "id": "tex_problem_88",
+    "id": "algfrac_tex_problem_88",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{5}{x-2}$ tak, aby otrzymać wyrażenie o mianowniku $x^3-8$. Podaj konieczne założenia.",
     "steps": [
@@ -7570,7 +7570,7 @@
     }
   },
   {
-    "id": "tex_problem_89",
+    "id": "algfrac_tex_problem_89",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x+2}{x^{2}-x+1}$ tak, aby otrzymać wyrażenie o mianowniku $x^{3}+1$. Podaj konieczne założenia.",
     "steps": [
@@ -7643,7 +7643,7 @@
     }
   },
   {
-    "id": "tex_problem_90",
+    "id": "algfrac_tex_problem_90",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x-1}{x^{2}-4}$ tak, aby otrzymać wyrażenie o mianowniku $x^{3}+3 x^{2}-4 x-12$. Podaj konieczne założenia.",
     "steps": [
@@ -7740,7 +7740,7 @@
     }
   },
   {
-    "id": "tex_problem_91",
+    "id": "algfrac_tex_problem_91",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x}{x^2+1}$ tak, aby otrzymać wyrażenie o mianowniku $x^4-3x^2-4$. Podaj konieczne założenia.",
     "steps": [
@@ -7842,7 +7842,7 @@
     }
   },
   {
-    "id": "tex_problem_92",
+    "id": "algfrac_tex_problem_92",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2}{x-1}$ tak, aby otrzymać wyrażenie o mianowniku $x^3-3x^2+3x-1$. Podaj konieczne założenia.",
     "steps": [
@@ -7903,7 +7903,7 @@
     }
   },
   {
-    "id": "tex_problem_93",
+    "id": "algfrac_tex_problem_93",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3}{x-1}$ tak, aby otrzymać wyrażenie o mianowniku $x^3 + 4x^2 - 5$. Podaj konieczne założenia.",
     "steps": [
@@ -8005,7 +8005,7 @@
     }
   },
   {
-    "id": "tex_problem_94",
+    "id": "algfrac_tex_problem_94",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3}{5x}$ tak, aby otrzymać wyrażenie o liczniku $3x^2$. Podaj konieczne założenia.",
     "steps": [
@@ -8066,7 +8066,7 @@
     }
   },
   {
-    "id": "tex_problem_95",
+    "id": "algfrac_tex_problem_95",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x+1}{x-2}$ tak, aby otrzymać wyrażenie o liczniku $x^2+x$. Podaj konieczne założenia.",
     "steps": [
@@ -8121,7 +8121,7 @@
     }
   },
   {
-    "id": "tex_problem_96",
+    "id": "algfrac_tex_problem_96",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{9-x}{3}$ tak, aby otrzymać wyrażenie o liczniku $81-x^{2}$. Podaj konieczne założenia.",
     "steps": [
@@ -8195,7 +8195,7 @@
     }
   },
   {
-    "id": "tex_problem_97",
+    "id": "algfrac_tex_problem_97",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2}{x-3}$ tak, aby otrzymać wyrażenie o liczniku $6-2x$. Podaj konieczne założenia.",
     "steps": [
@@ -8268,7 +8268,7 @@
     }
   },
   {
-    "id": "tex_problem_98",
+    "id": "algfrac_tex_problem_98",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{3x-1}{x^2+5}$ tak, aby otrzymać wyrażenie o liczniku $3x^3-x^2$. Podaj konieczne założenia.",
     "steps": [
@@ -8358,7 +8358,7 @@
     }
   },
   {
-    "id": "tex_problem_99",
+    "id": "algfrac_tex_problem_99",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x^{2}-3}{x}$ tak, aby otrzymać wyrażenie o liczniku $x^{4}-9$. Podaj konieczne założenia.",
     "steps": [
@@ -8438,7 +8438,7 @@
     }
   },
   {
-    "id": "tex_problem_100",
+    "id": "algfrac_tex_problem_100",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x^{2}-3 x}{x+1}$ tak, aby otrzymać wyrażenie o liczniku $x^{3}-9 x$. Podaj konieczne założenia.",
     "steps": [
@@ -8524,7 +8524,7 @@
     }
   },
   {
-    "id": "tex_problem_101",
+    "id": "algfrac_tex_problem_101",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2x+3}{x-5}$ tak, aby otrzymać wyrażenie o liczniku $4x^2+12x+9$. Podaj konieczne założenia.",
     "steps": [
@@ -8605,7 +8605,7 @@
     }
   },
   {
-    "id": "tex_problem_102",
+    "id": "algfrac_tex_problem_102",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x^2-1}{x}$ tak, aby otrzymać wyrażenie o liczniku $x^4+2x^2-3$. Podaj konieczne założenia.",
     "steps": [
@@ -8702,7 +8702,7 @@
     }
   },
   {
-    "id": "tex_problem_103",
+    "id": "algfrac_tex_problem_103",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{x-1}{x}$ tak, aby otrzymać wyrażenie o liczniku $3x^3 - 3x^2 + x - 1$. Podaj konieczne założenia.",
     "steps": [
@@ -8800,7 +8800,7 @@
     }
   },
   {
-    "id": "tex_problem_104",
+    "id": "algfrac_tex_problem_104",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2x-3}{3x}$ tak, aby otrzymać wyrażenie o liczniku $8x^3-27$. Podaj konieczne założenia.",
     "steps": [
@@ -8908,7 +8908,7 @@
     }
   },
   {
-    "id": "tex_problem_105",
+    "id": "algfrac_tex_problem_105",
     "topic": "Równania trygonometryczne",
     "statement": "Rozszerz ułamek $\\frac{2x+1}{x+1}$ tak, aby otrzymać wyrażenie o liczniku $10x^3+5x^2+8x+4$. Podaj konieczne założenia.",
     "steps": [

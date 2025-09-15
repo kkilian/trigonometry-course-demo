@@ -1,6 +1,6 @@
 [
   {
-    "id": "tex_problem_1",
+    "id": "poly_tex_problem_1",
     "topic": "Definicja wielomianu",
     "statement": "Które z podanych wyrażeń jest wielomianem jednej zmiennej \n$x$\n? \n$3x^2 + 2x - 5$\n, \n$\\frac{2}{x} + x$\n, \n$\\sqrt{x} + 1$",
     "steps": [
@@ -95,7 +95,7 @@
     }
   },
   {
-    "id": "tex_problem_2",
+    "id": "poly_tex_problem_2",
     "topic": "Definicja wielomianu",
     "statement": "Rozpoznaj, które wyrażenie to wielomian: \n$2x^3 - x^{-1} + 4$\n, \n$x^2 + 3x + 1$\n, \n$\\sin(x) + x^2$",
     "steps": [
@@ -169,7 +169,7 @@
     }
   },
   {
-    "id": "tex_problem_3",
+    "id": "poly_tex_problem_3",
     "topic": "Definicja wielomianu",
     "statement": "Określ, które z wyrażeń: \n$5x^4 - 2x^3 + \\frac{1}{2}x^2 - 7$\n, \n$x^{\\frac{3}{2}} + x$\n, \n$e^x - 2x + 1$\n jest wielomianem.",
     "steps": [
@@ -265,7 +265,7 @@
     }
   },
   {
-    "id": "tex_problem_4",
+    "id": "poly_tex_problem_4",
     "topic": "Stopień i współczynniki",
     "statement": "Znajdź stopień jednomianu \n$-7x^5$\n i podaj jego współczynnik.",
     "steps": [
@@ -332,7 +332,7 @@
     }
   },
   {
-    "id": "tex_problem_5",
+    "id": "poly_tex_problem_5",
     "topic": "Stopień i współczynniki",
     "statement": "Określ stopień wielomianu \n$3x^4 - 2x^2 + x - 8$\n i wymień wszystkie jego współczynniki",
     "steps": [
@@ -386,7 +386,7 @@
     }
   },
   {
-    "id": "tex_problem_6",
+    "id": "poly_tex_problem_6",
     "topic": "Stopień i współczynniki",
     "statement": "Dla wielomianu \n$-2x^6 + 4x^5 - x^3 + 7x^2 - 3x + 1$\n podaj stopień oraz współczynnik przy \n$x^5$",
     "steps": [
@@ -446,7 +446,7 @@
     }
   },
   {
-    "id": "tex_problem_8",
+    "id": "poly_tex_problem_8",
     "topic": "Stopień i współczynniki",
     "statement": "Napisz wielomian \n$x^2 - 4x^5 + 2x + 7x^3 - 1$\n w porządku malejących potęg",
     "steps": [
@@ -505,7 +505,7 @@
     }
   },
   {
-    "id": "tex_problem_9",
+    "id": "poly_tex_problem_9",
     "topic": "Stopień i współczynniki",
     "statement": "Uporządkuj według malejących potęg wielomian \n$-3x + x^7 - 2x^4 + 6 + x^2 - x^6$",
     "steps": [
@@ -570,7 +570,7 @@
     }
   },
   {
-    "id": "tex_problem_10",
+    "id": "poly_tex_problem_10",
     "topic": "Stopień i współczynniki",
     "statement": "Wyznacz wyraz wolny i współczynnik przy najwyższej potędze wielomianu \n$2x^3 - 5x + 7$",
     "steps": [
@@ -624,7 +624,7 @@
     }
   },
   {
-    "id": "tex_problem_11",
+    "id": "poly_tex_problem_11",
     "topic": "Stopień i współczynniki",
     "statement": "Dla wielomianu \n$-x^4 + 3x^2 - 2x + 8$\n podaj wyraz wolny i współczynnik dominujący.",
     "steps": [
@@ -678,7 +678,7 @@
     }
   },
   {
-    "id": "tex_problem_12",
+    "id": "poly_tex_problem_12",
     "topic": "Stopień i współczynniki",
     "statement": "W wielomianie \n$a_n x^n + a_{n-1} x^{n-1} + \\ldots + a_1 x + a_0$\n, gdzie \n$a_n \\neq 0$\n, które wyrazy to wyraz wolny i współczynnik przy najwyższej potędze?",
     "steps": [
@@ -740,7 +740,7 @@
     }
   },
   {
-    "id": "tex_problem_13",
+    "id": "poly_tex_problem_13",
     "topic": "Stopień i współczynniki",
     "statement": "Oblicz wartość wielomianu \n$P(x) = 2x^2 - 3x + 1$\n dla \n$x = 2$",
     "steps": [
@@ -865,7 +865,7 @@
     }
   },
   {
-    "id": "tex_problem_15",
+    "id": "poly_tex_problem_15",
     "topic": "Wartości wielomianu",
     "statement": "Oblicz wartość wielomianu \n$Q(x) = -x^4 + 2x^3 - x^2 + 5x - 7$\n w punkcie \n$x = -2$",
     "steps": [
@@ -918,7 +918,7 @@
     }
   },
   {
-    "id": "tex_problem_16",
+    "id": "poly_tex_problem_16",
     "topic": "Wartości wielomianu",
     "statement": "Wyznacz współczynnik \n$a$\n w wielomianie \n$P(x) = ax^2 + 3x - 2$\n, jeśli \n$P(1) = 5$",
     "steps": [
@@ -977,7 +977,7 @@
     }
   },
   {
-    "id": "tex_problem_17",
+    "id": "poly_tex_problem_17",
     "topic": "Wartości wielomianu",
     "statement": "Dla wielomianu \n$W(x) = x^3 + bx^2 + cx + d$\n wiadomo, że \n$W(0) = 2$\n, \n$W(1) = 4$\n. Wyznacz \n$d$\n i związek między \n$b$\n i \n$c$\n.",
     "steps": [
@@ -1050,7 +1050,7 @@
     }
   },
   {
-    "id": "tex_problem_18",
+    "id": "poly_tex_problem_18",
     "topic": "Wartości wielomianu",
     "statement": "Znajdź współczynniki \n$a$\n i \n$b$\n w wielomianie \n$Q(x) = x^2 + ax + b$\n, jeśli \n$Q(-1) = 3$\n i \n$Q(2) = 0$",
     "steps": [
@@ -1166,7 +1166,7 @@
     }
   },
   {
-    "id": "tex_problem_19",
+    "id": "poly_tex_problem_19",
     "topic": "Wartości wielomianu",
     "statement": "Oblicz sumę wszystkich współczynników wielomianu \n$P(x) = 3x^4 - 2x^3 + x^2 - 5x + 7$",
     "steps": [
@@ -1233,7 +1233,7 @@
     }
   },
   {
-    "id": "tex_problem_21",
+    "id": "poly_tex_problem_21",
     "topic": "Wartości wielomianu",
     "statement": "Dla wielomianu \n$Q(x) = ax^n + a_{n-1}x^{n-1} + \\ldots + a_1x + a_0$\n podaj wzór na sumę jego współczynników.",
     "steps": [
@@ -1299,7 +1299,7 @@
     }
   },
   {
-    "id": "tex_problem_23",
+    "id": "poly_tex_problem_23",
     "topic": "Suma współczynników",
     "statement": "Określ, czy wielomiany \n$A(x) = x^3 + 2x - 5$\n i \n$B(x) = x^3 + 0x^2 + 2x - 5$\n są równe.",
     "steps": [
@@ -1367,7 +1367,7 @@
     }
   },
   {
-    "id": "tex_problem_24",
+    "id": "poly_tex_problem_24",
     "topic": "Suma współczynników",
     "statement": "Zbadaj równość wielomianów \n$F(x) = (x+1)^2 - 1$\n i \n$G(x) = x^2 + 2x$",
     "steps": [
@@ -1451,7 +1451,7 @@
     }
   },
   {
-    "id": "tex_problem_25",
+    "id": "poly_tex_problem_25",
     "topic": "Suma współczynników",
     "statement": "Dla jakich wartości parametru \n$a$\n wielomiany \n$P(x) = ax^2 + 3x - 2$\n i \n$Q(x) = 2x^2 + 3x + a$\n są równe?",
     "steps": [
@@ -1534,7 +1534,7 @@
     }
   },
   {
-    "id": "tex_problem_26",
+    "id": "poly_tex_problem_26",
     "topic": "Suma współczynników",
     "statement": "Wyznacz parametry \n$a$\n i \n$b$\n, dla których wielomiany \n$W(x) = x^3 + ax + b$\n i \n$V(x) = x^3 + 2x + 5$\n są równe.",
     "steps": [
@@ -1594,7 +1594,7 @@
     }
   },
   {
-    "id": "tex_problem_27",
+    "id": "poly_tex_problem_27",
     "topic": "Równość wielomianów",
     "statement": "Znajdź wszystkie wartości \n$m$\n i \n$n$\n, przy których wielomiany \n$A(x) = mx^2 + 3x + n$\n i \n$B(x) = x^2 + 3x - 4$\n są równe.",
     "steps": [
@@ -1683,7 +1683,7 @@
     }
   },
   {
-    "id": "tex_problem_28",
+    "id": "poly_tex_problem_28",
     "topic": "Równość wielomianów",
     "statement": "Wykaż, że wielomian \n$P(x) = 0 \\cdot x^3 + 0 \\cdot x^2 + 0 \\cdot x + 0$\n jest wielomianem zerowym.",
     "steps": [
@@ -1755,7 +1755,7 @@
     }
   },
   {
-    "id": "tex_problem_29",
+    "id": "poly_tex_problem_29",
     "topic": "Równość wielomianów",
     "statement": "Sprawdź, czy wielomian \n$(x-1)(x+1) - (x^2-1)$\n jest wielomianem zerowym.",
     "steps": [
@@ -1821,7 +1821,7 @@
     }
   },
   {
-    "id": "tex_problem_30",
+    "id": "poly_tex_problem_30",
     "topic": "Równość wielomianów",
     "statement": "Dla jakich wartości parametru \n$k$\n wielomian \n$W(x) = kx^2 + (k-1)x + (2k-2)$\n jest wielomianem zerowym?",
     "steps": [
@@ -1892,7 +1892,7 @@
     }
   },
   {
-    "id": "tex_problem_31",
+    "id": "poly_tex_problem_31",
     "topic": "Wzory skróconego mnożenia",
     "statement": "Oblicz sumę wielomianów \n$P(x) = 2x^2 + 3x - 1$\n i \n$Q(x) = x^2 - 2x + 4$",
     "steps": [
@@ -1970,7 +1970,7 @@
     }
   },
   {
-    "id": "tex_problem_32",
+    "id": "poly_tex_problem_32",
     "topic": "Wzory skróconego mnożenia",
     "statement": "Wyznacz różnicę wielomianów \n$A(x) = 3x^3 - 2x + 5$\n i \n$B(x) = x^3 + x^2 - 3x + 1$",
     "steps": [
@@ -2029,7 +2029,7 @@
     }
   },
   {
-    "id": "tex_problem_34",
+    "id": "poly_tex_problem_34",
     "topic": "Wzory skróconego mnożenia",
     "statement": "Wymnóż wielomiany \n$P(x) = x + 2$\n i \n$Q(x) = x^2 - 3x + 1$",
     "steps": [
@@ -2088,7 +2088,7 @@
     }
   },
   {
-    "id": "tex_problem_35",
+    "id": "poly_tex_problem_35",
     "topic": "Wzory skróconego mnożenia",
     "statement": "Oblicz iloczyn \n$(2x^2 - x + 3)(x^2 + 2x - 1)$\n metodą pisemną",
     "steps": [
@@ -2159,7 +2159,7 @@
     }
   },
   {
-    "id": "tex_problem_36",
+    "id": "poly_tex_problem_36",
     "topic": "Wzory skróconego mnożenia",
     "statement": "Wyznacz iloczyn wielomianów \n$(x^3 - 2x + 1)(x^2 + x - 2)$",
     "steps": [
@@ -2301,7 +2301,7 @@
     }
   },
   {
-    "id": "tex_problem_40",
+    "id": "poly_tex_problem_40",
     "topic": "Zastosowanie wzorów",
     "statement": "Zastosuj wzór \n$(a+b)^2 = a^2 + 2ab + b^2$\n do obliczenia \n$(2x + 3)^2$",
     "steps": [

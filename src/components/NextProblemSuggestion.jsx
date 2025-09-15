@@ -183,52 +183,59 @@ const NextProblemSuggestion = ({
       
       // Group problems by difficulty level and find best match for each level
       const suggestionsByLevel = {};
-      
+      const usedProblemIds = new Set(); // Track already used problems
+
       Object.entries(difficultyLevels).forEach(([key, config]) => {
+        // Filter out already used problems
+        const availableProblems = similar.filter(p => !usedProblemIds.has(p.id));
+
         // First try exact match
-        let problemsAtLevel = similar.filter(p => p.estimatedDifficulty === config.level);
-        
+        let problemsAtLevel = availableProblems.filter(p => p.estimatedDifficulty === config.level);
+
         // If no exact match, find closest difficulty
         if (problemsAtLevel.length === 0) {
           // Sort by distance from target difficulty, then take closest ones
-          const sortedByDistance = similar
+          const sortedByDistance = availableProblems
             .map(p => ({
               ...p,
               distance: Math.abs(p.estimatedDifficulty - config.level)
             }))
             .sort((a, b) => a.distance - b.distance);
-          
+
           // Take problems within 1 level distance
           problemsAtLevel = sortedByDistance.filter(p => p.distance <= 1);
-          
+
           // If still nothing, take any available problems
           if (problemsAtLevel.length === 0 && sortedByDistance.length > 0) {
             problemsAtLevel = sortedByDistance.slice(0, 3);
           }
         }
-        
+
         if (problemsAtLevel.length > 0) {
-          // Sort by similarity and take the best one
+          // Sort by similarity and take the best one not yet used
           const bestAtLevel = problemsAtLevel
             .sort((a, b) => b.similarity - a.similarity)[0];
-          
+
           suggestionsByLevel[key] = {
             ...bestAtLevel,
             levelConfig: config,
             suggestionType: key
           };
+
+          // Mark this problem as used
+          usedProblemIds.add(bestAtLevel.id);
         }
       });
       
       // Ensure we always have 3 suggestions if possible
       const availableKeys = Object.keys(suggestionsByLevel);
       const missingKeys = ['comfort', 'current', 'challenge'].filter(k => !availableKeys.includes(k));
-      
+
       // Fill missing suggestions with best available problems
       if (missingKeys.length > 0 && similar.length > availableKeys.length) {
-        const usedProblemIds = new Set(Object.values(suggestionsByLevel).map(s => s.id));
+        // usedProblemIds already contains the IDs from above
         const unusedProblems = similar.filter(p => !usedProblemIds.has(p.id));
-        
+
         missingKeys.forEach((key, index) => {
           if (unusedProblems[index]) {
             suggestionsByLevel[key] = {
@@ -236,6 +243,8 @@ const NextProblemSuggestion = ({
               levelConfig: difficultyLevels[key],
               suggestionType: key
             };
+            // Also mark this as used
+            usedProblemIds.add(unusedProblems[index].id);
           }
         });
       }

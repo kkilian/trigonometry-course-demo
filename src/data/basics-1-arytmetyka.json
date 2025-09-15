@@ -1,6 +1,6 @@
 [
   {
-    "id": "tex_problem_1",
+    "id": "arith_tex_problem_1",
     "topic": "Kolejność działań",
     "difficulty": 1,
     "statement": "Oblicz: $12 + 7 - 5$",
@@ -38,7 +38,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_2",
+    "id": "arith_tex_problem_2",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $-8 + 15 - 3$",
     "steps": [
@@ -76,7 +76,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_3",
+    "id": "arith_tex_problem_3",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $-13 + (-7) - (-5)$",
     "steps": [
@@ -132,7 +132,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_4",
+    "id": "arith_tex_problem_4",
     "topic": "Liczby całkowite",
     "statement": "Wyznacz wartość: $25 - 18 + (-9) - (-4)$",
     "steps": [
@@ -188,7 +188,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_5",
+    "id": "arith_tex_problem_5",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz sumę: $-37 + 42 - 15 + 8 - (-12)$",
     "steps": [
@@ -244,7 +244,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_6",
+    "id": "arith_tex_problem_6",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz iloczyn: $6 \\cdot (-4)$",
     "steps": [
@@ -289,7 +289,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_7",
+    "id": "arith_tex_problem_7",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $(-8) \\cdot (-7) : 4$",
     "steps": [
@@ -327,7 +327,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_8",
+    "id": "arith_tex_problem_8",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $(-15) \\cdot 3 : (-9)$",
     "steps": [
@@ -371,7 +371,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_9",
+    "id": "arith_tex_problem_9",
     "topic": "Podstawy matematyki",
     "statement": "Wyznacz wartość: $\\frac{-48}{6} \\cdot \\frac{3}{-4}$",
     "steps": [
@@ -434,7 +434,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_10",
+    "id": "arith_tex_problem_10",
     "topic": "Kolejność działań z liczbami ujemnymi",
     "statement": "Oblicz: $(-2,5) \\cdot 4 : (-0,5) \\cdot (-3)$",
     "steps": [
@@ -485,7 +485,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_11",
+    "id": "arith_tex_problem_11",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz wartość: $2^5$",
     "steps": [
@@ -534,7 +534,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_12",
+    "id": "arith_tex_problem_12",
     "topic": "Podstawy matematyki",
     "statement": "Wyznacz: $(-3)^4$",
     "steps": [
@@ -580,7 +580,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_13",
+    "id": "arith_tex_problem_13",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $\\left(\\frac{2}{3}\\right)^3$",
     "steps": [
@@ -636,7 +636,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_14",
+    "id": "arith_tex_problem_14",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $(-0,2)^4 \\cdot 5^3$",
     "steps": [
@@ -699,7 +699,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_15",
+    "id": "arith_tex_problem_15",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $\\left(-\\frac{3}{4}\\right)^2 \\cdot 8^2 : 3^3$",
     "steps": [
@@ -774,7 +774,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_16",
+    "id": "arith_tex_problem_16",
     "topic": "Pierwiastki kwadratowe",
     "statement": "Oblicz: $\\sqrt{144}$",
     "steps": [
@@ -818,7 +818,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_17",
+    "id": "arith_tex_problem_17",
     "topic": "Podstawy matematyki",
     "statement": "Wyznacz wartość: $\\sqrt[3]{-125}$",
     "steps": [
@@ -870,7 +870,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_18",
+    "id": "arith_tex_problem_18",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $\\sqrt{49} + \\sqrt[3]{27} - \\sqrt{16}$",
     "steps": [
@@ -927,7 +927,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_19",
+    "id": "arith_tex_problem_19",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $2\\sqrt{81} - 3\\sqrt[3]{-8} + \\sqrt{0,25}$",
     "steps": [
@@ -997,7 +997,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_20",
+    "id": "arith_tex_problem_20",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $\\sqrt{2,25} \\cdot (-2)^3 + \\sqrt[3]{-0,064} \\cdot 5^2$",
     "steps": [
@@ -1072,7 +1072,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_21",
+    "id": "arith_tex_problem_21",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz przestrzegając kolejności działań: $3 + 4 \\cdot 5$",
     "steps": [
@@ -1116,7 +1116,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_22",
+    "id": "arith_tex_problem_22",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $24 : 6 - 2 \\cdot 3$",
     "steps": [
@@ -1154,7 +1154,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_23",
+    "id": "arith_tex_problem_23",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $15 - 3 \\cdot 4 + 8 : 2$",
     "steps": [
@@ -1204,7 +1204,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_24",
+    "id": "arith_tex_problem_24",
     "topic": "Podstawy matematyki",
     "statement": "Wyznacz wartość: $2^3 + 5 \\cdot 3 - 18 : 6$",
     "steps": [
@@ -1261,7 +1261,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_25",
+    "id": "arith_tex_problem_25",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $36 : 9 \\cdot 2 - 3^2 + 7$",
     "steps": [
@@ -1329,7 +1329,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_26",
+    "id": "arith_tex_problem_26",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz wartość wyrażenia: $(15 - 7) \\cdot 3$",
     "steps": [
@@ -1372,7 +1372,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_27",
+    "id": "arith_tex_problem_27",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $24 : (8 - 2)$",
     "steps": [
@@ -1416,7 +1416,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_28",
+    "id": "arith_tex_problem_28",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $(3 + 5) \\cdot (9 - 6)$",
     "steps": [
@@ -1460,7 +1460,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_29",
+    "id": "arith_tex_problem_29",
     "topic": "Kolejność działań",
     "statement": "Wyznacz: $48 : (2 \\cdot 3) + (15 - 9) \\cdot 2$",
     "steps": [
@@ -1517,7 +1517,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_30",
+    "id": "arith_tex_problem_30",
     "topic": "Kolejność działań",
     "statement": "Oblicz: $[(24 - 16) : 2] \\cdot 3 + 5$",
     "steps": [
@@ -1579,7 +1579,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_31",
+    "id": "arith_tex_problem_31",
     "topic": "Podstawy matematyki",
     "statement": "Oblicz: $2^3 \\cdot (5 - 3) + 4^2$",
     "steps": [
@@ -1641,7 +1641,7 @@
     "parameters": {}
   },
   {
-    "id": "tex_problem_32",
+    "id": "arith_tex_problem_32",
     "topic": "Podstawy matematyki",
     "statement": "Wykonaj działanie: $(3^2 - 2^3) \\cdot 5 + 7$",
     "steps": [
