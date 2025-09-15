@@ -14,51 +14,6 @@ const NextProblemSuggestion = ({
   compact = false
 }) => {
 
-  // Choice tracking system for implicit confidence detection
-  const trackChoice = (problemId, suggestionType, currentDifficulty) => {
-    const storageKey = 'learning-patterns-choices';
-    const existing = JSON.parse(localStorage.getItem(storageKey) || '[]');
-    
-    const choice = {
-      timestamp: Date.now(),
-      problemId,
-      suggestionType, // 'comfort', 'current', 'challenge'
-      currentDifficulty,
-      sessionId: Date.now().toString(36) // Simple session tracking
-    };
-    
-    // Keep last 50 choices to prevent localStorage bloat
-    const updated = [choice, ...existing].slice(0, 50);
-    localStorage.setItem(storageKey, JSON.stringify(updated));
-    
-    console.log('Tracked choice:', choice);
-  };
-  
-  const getChoiceHistory = useCallback(() => {
-    const storageKey = 'learning-patterns-choices';
-    return JSON.parse(localStorage.getItem(storageKey) || '[]');
-  }, []);
-  
-  // Debug function to analyze recent choices
-  const analyzeRecentChoices = () => {
-    const history = getChoiceHistory().slice(0, 10); // Last 10 choices
-    if (history.length === 0) return null;
-    
-    const choiceCounts = history.reduce((acc, choice) => {
-      acc[choice.suggestionType] = (acc[choice.suggestionType] || 0) + 1;
-      return acc;
-    }, {});
-    
-    const totalChoices = history.length;
-    const preferences = Object.entries(choiceCounts).map(([type, count]) => ({
-      type,
-      count,
-      percentage: Math.round((count / totalChoices) * 100)
-    }));
-    
-    console.log('Recent choice analysis:', { history, preferences });
-    return { history, preferences, totalChoices };
-  };
 
   // Use manual difficulty from JSON or fallback to steps count
   const estimateDifficulty = (problem) => {
@@ -76,70 +31,18 @@ const NextProblemSuggestion = ({
     return 5; // Expert
   };
 
-  // Adaptive logic engine - analyzes choice patterns and adjusts difficulty suggestions
-  const getAdaptiveDifficultyOffset = useCallback(() => {
-    const recentChoices = getChoiceHistory().slice(0, 8); // Last 8 choices
-    if (recentChoices.length < 3) return 0; // Not enough data
-    
-    const choiceCounts = recentChoices.reduce((acc, choice) => {
-      acc[choice.suggestionType] = (acc[choice.suggestionType] || 0) + 1;
-      return acc;
-    }, {});
-    
-    const total = recentChoices.length;
-    const comfortRate = (choiceCounts.comfort || 0) / total;
-    const challengeRate = (choiceCounts.challenge || 0) / total;
-    const currentRate = (choiceCounts.current || 0) / total;
-    
-    console.log('Choice pattern analysis:', { comfortRate, currentRate, challengeRate });
-    
-    // Adaptive logic
-    if (comfortRate > 0.6) {
-      // User mostly chooses easy - suggest easier overall
-      console.log('Pattern: Risk-averse learner, reducing overall difficulty');
-      return -0.5;
-    } else if (challengeRate > 0.5) {
-      // User mostly chooses hard - increase overall difficulty slightly
-      console.log('Pattern: Challenge-seeking learner, increasing overall difficulty');
-      return +0.5;
-    } else if (currentRate > 0.6) {
-      // User mostly chooses current level - perfect balance
-      console.log('Pattern: Balanced learner, maintaining difficulty');
-      return 0;
-    } else if (comfortRate > 0.4 && challengeRate < 0.2) {
-      // Conservative pattern - slightly easier
-      console.log('Pattern: Conservative learner, slight difficulty reduction');
-      return -0.3;
-    }
-    
-    return 0; // Default - no adjustment
-  }, [getChoiceHistory]);
 
   // Calculate suggested next problems (multiple)
   const suggestedProblems = useMemo(() => {
     if (!currentProblem || !problems) return null;
 
-    // Generate 3-level difficulty suggestions with adaptive adjustments (moved inside useMemo)
-    const getThreeLevelSuggestions = (currentDifficulty) => {
-      const adaptiveOffset = getAdaptiveDifficultyOffset();
-      const adjustedBase = Math.max(1, Math.min(5, currentDifficulty + adaptiveOffset));
-      
-      const comfort = Math.max(1, Math.round(adjustedBase - 1));
-      const current = Math.max(1, Math.min(5, Math.round(adjustedBase)));
-      const challenge = Math.min(5, Math.round(adjustedBase + 1));
-      
-      console.log('Adaptive difficulty calculation:', { 
-        originalDifficulty: currentDifficulty, 
-        adaptiveOffset, 
-        adjustedBase,
-        finalLevels: { comfort, current, challenge }
-      });
-      
-      return {
-        comfort: { level: comfort, label: "Powtórka", color: "green", description: "Utrwal podstawy" },
-        current: { level: current, label: "Dalej", color: "yellow", description: "Twój poziom" },
-        challenge: { level: challenge, label: "Wyzwanie", color: "orange", description: "Sprawdź się" }
-      };
+    // Simple 3-level difficulty system based on similarity + difficulty
+    const currentDifficulty = estimateDifficulty(currentProblem);
+
+    const difficultyLevels = {
+      easy: { label: "Łatwe", color: "green", description: "Podstawy" },
+      same: { label: "Podobne", color: "yellow", description: "Twój poziom" },
+      hard: { label: "Trudne", color: "orange", description: "Wyzwanie" }
     };
 
     try {
@@ -177,80 +80,70 @@ const NextProblemSuggestion = ({
 
       if (similar.length === 0) return [];
 
-      // Generate 3-level difficulty system
-      const currentDifficulty = estimateDifficulty(currentProblem);
-      const difficultyLevels = getThreeLevelSuggestions(currentDifficulty);
-      
-      // Group problems by difficulty level and find best match for each level
-      const suggestionsByLevel = {};
-      const usedProblemIds = new Set(); // Track already used problems
+      // Simple selection: pick best similar problems from each difficulty category
+      const usedProblemIds = new Set();
+      const suggestions = {};
 
-      Object.entries(difficultyLevels).forEach(([key, config]) => {
-        // Filter out already used problems
-        const availableProblems = similar.filter(p => !usedProblemIds.has(p.id));
+      // EASY: Find most similar problem with difficulty 1 or 2
+      const easySuggestion = similar.find(p =>
+        (p.estimatedDifficulty === 1 || p.estimatedDifficulty === 2) &&
+        !usedProblemIds.has(p.id)
+      );
 
-        // First try exact match
-        let problemsAtLevel = availableProblems.filter(p => p.estimatedDifficulty === config.level);
+      if (easySuggestion) {
+        suggestions.easy = {
+          ...easySuggestion,
+          levelConfig: difficultyLevels.easy,
+          suggestionType: 'easy'
+        };
+        usedProblemIds.add(easySuggestion.id);
+      }
 
-        // If no exact match, find closest difficulty
-        if (problemsAtLevel.length === 0) {
-          // Sort by distance from target difficulty, then take closest ones
-          const sortedByDistance = availableProblems
-            .map(p => ({
-              ...p,
-              distance: Math.abs(p.estimatedDifficulty - config.level)
-            }))
-            .sort((a, b) => a.distance - b.distance);
+      // SAME: Find most similar problem with same difficulty
+      const sameSuggestion = similar.find(p =>
+        p.estimatedDifficulty === currentDifficulty &&
+        !usedProblemIds.has(p.id)
+      );
 
-          // Take problems within 1 level distance
-          problemsAtLevel = sortedByDistance.filter(p => p.distance <= 1);
+      if (sameSuggestion) {
+        suggestions.same = {
+          ...sameSuggestion,
+          levelConfig: difficultyLevels.same,
+          suggestionType: 'same'
+        };
+        usedProblemIds.add(sameSuggestion.id);
+      }
 
-          // If still nothing, take any available problems
-          if (problemsAtLevel.length === 0 && sortedByDistance.length > 0) {
-            problemsAtLevel = sortedByDistance.slice(0, 3);
-          }
-        }
+      // HARD: Find most similar problem with higher difficulty
+      const hardSuggestion = similar.find(p =>
+        p.estimatedDifficulty > currentDifficulty &&
+        !usedProblemIds.has(p.id)
+      );
 
-        if (problemsAtLevel.length > 0) {
-          // Sort by similarity and take the best one not yet used
-          const bestAtLevel = problemsAtLevel
-            .sort((a, b) => b.similarity - a.similarity)[0];
+      if (hardSuggestion) {
+        suggestions.hard = {
+          ...hardSuggestion,
+          levelConfig: difficultyLevels.hard,
+          suggestionType: 'hard'
+        };
+        usedProblemIds.add(hardSuggestion.id);
+      }
 
-          suggestionsByLevel[key] = {
-            ...bestAtLevel,
-            levelConfig: config,
-            suggestionType: key
+      // Fallback: Fill missing categories with any available similar problems
+      const missingCategories = ['easy', 'same', 'hard'].filter(category => !suggestions[category]);
+      const remainingProblems = similar.filter(p => !usedProblemIds.has(p.id));
+
+      missingCategories.forEach((category, index) => {
+        if (remainingProblems[index]) {
+          suggestions[category] = {
+            ...remainingProblems[index],
+            levelConfig: difficultyLevels[category],
+            suggestionType: category
           };
-
-          // Mark this problem as used
-          usedProblemIds.add(bestAtLevel.id);
         }
       });
-      
-      // Ensure we always have 3 suggestions if possible
-      const availableKeys = Object.keys(suggestionsByLevel);
-      const missingKeys = ['comfort', 'current', 'challenge'].filter(k => !availableKeys.includes(k));
 
-      // Fill missing suggestions with best available problems
-      if (missingKeys.length > 0 && similar.length > availableKeys.length) {
-        // usedProblemIds already contains the IDs from above
-        const unusedProblems = similar.filter(p => !usedProblemIds.has(p.id));
-
-        missingKeys.forEach((key, index) => {
-          if (unusedProblems[index]) {
-            suggestionsByLevel[key] = {
-              ...unusedProblems[index],
-              levelConfig: difficultyLevels[key],
-              suggestionType: key
-            };
-            // Also mark this as used
-            usedProblemIds.add(unusedProblems[index].id);
-          }
-        });
-      }
-      
-      // Convert to array format for backward compatibility
-      const bestMatches = Object.values(suggestionsByLevel);
+      const bestMatches = Object.values(suggestions);
 
       // Save suggested problems to localStorage for kombinatoryka module
       if (currentProblem.id && (currentProblem.id.includes('combinatorics') || currentProblem.id.includes('kombinatoryka'))) {
@@ -287,7 +180,7 @@ const NextProblemSuggestion = ({
       console.error('Full error details:', err.message, err.stack);
       return [];
     }
-  }, [currentProblem, completedProblems, problems, getAdaptiveDifficultyOffset]);
+  }, [currentProblem, completedProblems, problems]);
 
   const getDifficultyLabel = (difficulty) => {
     switch (difficulty) {
@@ -313,88 +206,14 @@ const NextProblemSuggestion = ({
 
   const handleSuggestionClick = (problem, suggestionType = null) => {
     if (problem && onSelectProblem) {
-      // Track the choice for implicit confidence detection
-      if (suggestionType && currentProblem) {
-        const currentDifficulty = estimateDifficulty(currentProblem);
-        trackChoice(problem.id, suggestionType, currentDifficulty);
-      }
-      
       onSelectProblem(problem);
     }
   };
 
-  // Enhanced debug logging and analytics
-  const logAnalytics = () => {
-    const choiceAnalysis = analyzeRecentChoices();
-    const adaptiveOffset = getAdaptiveDifficultyOffset();
-    
-    console.group('🧠 NextProblemSuggestion Analytics');
-    console.log('📋 Current state:', {
-      currentProblem: currentProblem?.id,
-      currentDifficulty: currentProblem ? estimateDifficulty(currentProblem) : null,
-      completedCount: completedProblems.size,
-      suggestedCount: suggestedProblems?.length || 0
-    });
-    
-    if (choiceAnalysis) {
-      console.log('📊 Choice patterns:', choiceAnalysis.preferences);
-      console.log('🎯 Adaptive adjustment:', adaptiveOffset);
-    }
-    
-    if (suggestedProblems && suggestedProblems.length > 0) {
-      console.log('✨ Generated suggestions:', 
-        suggestedProblems.map(p => ({ 
-          type: p.suggestionType, 
-          difficulty: p.estimatedDifficulty,
-          targetDifficulty: p.levelConfig?.level,
-          isExactMatch: p.estimatedDifficulty === p.levelConfig?.level,
-          id: p.id.substring(0, 12) + '...', 
-          similarity: Math.round(p.similarity * 100) + '%'
-        }))
-      );
-      
-      const exactMatches = suggestedProblems.filter(p => p.estimatedDifficulty === p.levelConfig?.level).length;
-      if (exactMatches < 3) {
-        console.warn(`⚠️ Using fallback: Only ${exactMatches}/3 exact difficulty matches found`);
-      }
-    }
-    console.groupEnd();
-  };
-  
-  // Export learning data for analysis
-  const exportLearningData = () => {
-    const data = {
-      timestamp: new Date().toISOString(),
-      choiceHistory: getChoiceHistory(),
-      choiceAnalysis: analyzeRecentChoices(),
-      adaptiveOffset: getAdaptiveDifficultyOffset(),
-      currentSession: {
-        currentProblem: currentProblem?.id,
-        currentDifficulty: currentProblem ? estimateDifficulty(currentProblem) : null,
-        completedCount: completedProblems.size,
-        availableProblems: problems.length
-      }
-    };
-    
-    console.log('📦 Learning data export:', data);
-    
-    // Save to localStorage for manual inspection
-    localStorage.setItem('learning-data-export', JSON.stringify(data, null, 2));
-    
-    return data;
-  };
-  
-  // Call analytics logging
-  logAnalytics();
-  
-  // Make export function available on window for debugging
-  if (typeof window !== 'undefined') {
-    window.exportLearningData = exportLearningData;
-  }
 
   // Compact mode for header - one button with hover showing 3 difficulty levels
   if (compact && suggestedProblems && suggestedProblems.length > 0) {
-    const primaryProblem = suggestedProblems.find(p => p.suggestionType === 'current') || suggestedProblems[0];
+    const primaryProblem = suggestedProblems.find(p => p.suggestionType === 'same') || suggestedProblems[0];
     
     return (
       <div className="relative group animate-fadeInScale">
@@ -414,7 +233,7 @@ const NextProblemSuggestion = ({
             <h4 className="text-xs font-medium text-stone-600 uppercase tracking-wider">Wybierz poziom trudności</h4>
           </div>
           <div className="space-y-1">
-            {['comfort', 'current', 'challenge'].map((type) => {
+            {['easy', 'same', 'hard'].map((type) => {
               const problem = suggestedProblems.find(p => p.suggestionType === type);
               if (!problem) return null;
               
