@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
+import NextProblemSuggestionMultiStep from './NextProblemSuggestionMultiStep';
 import MultiStepChoice from './MultiStepChoice';
 
 const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set(), problems = [] }) => {
@@ -12,6 +13,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
   const [showStatementExplanation, setShowStatementExplanation] = useState(false);
   const [completedInteractiveChoices, setCompletedInteractiveChoices] = useState(new Set());
   const [showMultiStepSteps, setShowMultiStepSteps] = useState(new Set());
+  const [useNewSuggestionSystem, setUseNewSuggestionSystem] = useState(false);
+  const [multiStepResults, setMultiStepResults] = useState(null);
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -52,12 +55,18 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     }
   };
 
-  const handleInteractiveChoiceComplete = (stepIndex) => {
+  const handleInteractiveChoiceComplete = (stepIndex, choiceResults = null) => {
     setCompletedInteractiveChoices(new Set([...completedInteractiveChoices, stepIndex]));
+
+    // Store MultiStep results for new suggestion system
+    if (choiceResults) {
+      setMultiStepResults(choiceResults);
+    }
+
     // After completing interactive choice, automatically reveal the step
     setRevealedSteps(new Set([...revealedSteps, stepIndex]));
     setCompletedSteps(new Set([...completedSteps, stepIndex]));
-    
+
     // Check if all steps are completed
     if (completedSteps.size + 1 === problem.steps.length) {
       setShowSolution(true);
@@ -96,6 +105,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     setShowStatementExplanation(false);
     setCompletedInteractiveChoices(new Set());
     setShowMultiStepSteps(new Set());
+    setMultiStepResults(null);
     solveDurationRef.current = null;
     // Scroll to top when opening a new problem
     window.scrollTo(0, 0);
@@ -218,15 +228,52 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
             
             {/* Compact Next Problem Suggestion */}
             {showSolution && problems.length > 0 && (
-              <div>
-                <NextProblemSuggestion 
-                  currentProblem={problem}
-                  completedProblems={completedProblems}
-                  onSelectProblem={onSelectProblem}
-                  solveDuration={solveDurationRef.current}
-                  problems={problems}
-                  compact={true}
-                />
+              <div className="space-y-4">
+                {/* Demo Toggle for NextProblemSuggestion Systems */}
+                <div className="flex items-center justify-center">
+                  <button
+                    onClick={() => setUseNewSuggestionSystem(!useNewSuggestionSystem)}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${
+                      useNewSuggestionSystem ? 'bg-blue-600' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span className="sr-only">Toggle suggestion system</span>
+                    <span
+                      className={`${
+                        useNewSuggestionSystem ? 'translate-x-6' : 'translate-x-1'
+                      } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                    />
+                  </button>
+                  <span className="ml-3 text-sm text-gray-600">
+                    {useNewSuggestionSystem ? 'MultiStep System v2.0' : 'Original System v1.0'}
+                  </span>
+                </div>
+
+                {/* Render appropriate suggestion system */}
+                {useNewSuggestionSystem ? (
+                  <NextProblemSuggestionMultiStep
+                    currentProblem={problem}
+                    completedProblems={completedProblems}
+                    onSelectProblem={onSelectProblem}
+                    solveDuration={solveDurationRef.current}
+                    problems={problems}
+                    compact={true}
+                    showPerformanceIndicators={true}
+                    showReasoningDetails={false}
+                    onTrackMultiStepChoice={(choiceData) => {
+                      console.log('🎯 MultiStep Choice Tracked:', choiceData);
+                    }}
+                  />
+                ) : (
+                  <NextProblemSuggestion
+                    currentProblem={problem}
+                    completedProblems={completedProblems}
+                    onSelectProblem={onSelectProblem}
+                    solveDuration={solveDurationRef.current}
+                    problems={problems}
+                    compact={true}
+                  />
+                )}
               </div>
             )}
           </div>
