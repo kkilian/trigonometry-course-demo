@@ -82,13 +82,6 @@ const WelcomeScreen = ({ onSelectMode }) => {
       description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
       problemCount: statystykaProblems.length,
       disabled: true
-    },
-    {
-      id: 'ai-chat',
-      title: 'AI',
-      description: 'Asystent AI do nauki matematyki',
-      isAI: true,
-      disabled: true
     }
   ];
 
@@ -106,7 +99,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
           {/* Category Header */}
           <div className="px-4 md:px-8 py-3 md:py-4">
             <h2 className="text-xs font-medium text-stone-600 uppercase tracking-wider">
-              Dostępne kursy ({modules.filter(m => !m.isAI).length}) + AI Asystent
+              Dostępne kursy ({modules.length})
             </h2>
           </div>
 
@@ -123,7 +116,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
               <div className="px-4 md:px-8">
               <button
                 onClick={() => {
-                  if (module.isPremium || (module.isAI && module.disabled)) {
+                  if (module.isPremium) {
                     alert('Ta funkcja jest dostępna w wersji Premium');
                   } else if (!module.disabled) {
                     onSelectMode(module.id);
@@ -138,16 +131,14 @@ const WelcomeScreen = ({ onSelectMode }) => {
                     : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
               >
-                {(module.isPremium || module.isAI) && (
+                {module.isPremium && (
                   <div className="absolute top-1 right-4 md:top-2 md:right-6">
                     <span className={`text-xs font-semibold uppercase tracking-wider border px-2 py-1 rounded ${
                       module.disabled 
                         ? 'text-stone-400/70 border-stone-400/50 bg-white/20' 
-                        : module.isAI
-                        ? 'text-stone-500 border-stone-300'
                         : 'text-stone-500 border-stone-300'
                     }`}>
-                      {module.isAI ? 'AI' : 'Premium'}
+                      Premium
                     </span>
                   </div>
                 )}
@@ -173,16 +164,6 @@ const WelcomeScreen = ({ onSelectMode }) => {
                           module.disabled ? 'text-stone-400/70' : 'text-yellow-700'
                         }`}>
                           {module.topicsCount || 4} {module.topicsCount === 1 ? 'temat' : module.topicsCount > 4 ? 'tematów' : 'tematy'}
-                        </span>
-                      </div>
-                    ) : module.isAI ? (
-                      <div className={`px-3 py-1 rounded-full ${
-                        module.disabled ? 'bg-stone-100/50 backdrop-blur-sm' : 'bg-stone-100'
-                      }`}>
-                        <span className={`text-xs md:text-sm ${
-                          module.disabled ? 'text-stone-400/70' : 'text-stone-600'
-                        }`}>
-                          Asystent
                         </span>
                       </div>
                     ) : (

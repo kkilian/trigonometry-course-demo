@@ -5,7 +5,6 @@ import WelcomeScreen from './WelcomeScreen';
 import PolynomialTopics from './PolynomialTopics';
 import BasicsTopics from './BasicsTopics';
 import BasicsReorganized from './BasicsReorganized';
-import AIChat from './AIChat';
 import KombinatorykStartHere from './KombinatorykStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
@@ -518,63 +517,6 @@ const TrigonometryCourse = () => {
     );
   }
 
-  // Render AI Chat
-  if (mode === 'ai-chat') {
-    return (
-      <AIChat 
-        onBack={handleBackToWelcome}
-        onSelectProblem={(problem) => {
-          // Set the current problem to display
-          setCurrentProblem(problem);
-          
-          // Determine which mode to switch to based on problem ID pattern
-          if (problem.id?.includes('basics_order') || problem.id?.includes('basics_1') || problem.id?.includes('arytm')) {
-            setMode('basics-1-arytmetyka');
-          } else if (problem.id?.includes('basics_logic') || problem.id?.includes('basics_2') || problem.id?.includes('zbiory')) {
-            setMode('basics-2-logika-zbiory');
-          } else if (problem.id?.includes('basics_algebra') || problem.id?.includes('basics_3') || problem.id?.includes('wyraz')) {
-            setMode('basics-3-wyrazenia-algebraiczne');
-          } else if (problem.id?.includes('basics_equation') || problem.id?.includes('basics_4') || problem.id?.includes('rownan')) {
-            setMode('basics-4-rownania-nierownosci');
-          } else if (problem.id?.includes('basics_function') || problem.id?.includes('basics_5') || problem.id?.includes('funkcj')) {
-            setMode('basics-5-funkcje-fundament');
-          } else if (problem.id?.includes('basics_geometry') || problem.id?.includes('basics_6') || problem.id?.includes('geometr')) {
-            setMode('basics-6-geometria-elementarna');
-          } else if (problem.id?.includes('basics_coordinate') || problem.id?.includes('basics_7') || problem.id?.includes('uklad')) {
-            setMode('basics-7-uklad-wspolrzednych');
-          } else if (problem.id?.includes('basics_power') || problem.id?.includes('basics_8') || problem.id?.includes('poteg')) {
-            setMode('basics-8-potegi-pierwiastki');
-          } else if (problem.id?.includes('basics_log') || problem.id?.includes('basics_9')) {
-            setMode('basics-9-logarytmy');
-          } else if (problem.id?.includes('basics_trig') || problem.id?.includes('basics_10') || problem.id?.includes('trygonom')) {
-            setMode('basics-10-trygonometria-podstawowa');
-          } else if (problem.id?.includes('basics_comb') || problem.id?.includes('basics_11') || problem.id?.includes('kombin')) {
-            setMode('basics-11-kombinatoryka-prawdopodobienstwo');
-          } else if (problem.id?.includes('basics_stat') || problem.id?.includes('basics_12')) {
-            setMode('basics-12-statystyka');
-          } else if (problem.id?.includes('basics_system') || problem.id?.includes('basics_13') || problem.id?.includes('uklad_rownan')) {
-            setMode('basics-13-uklady-rownan');
-          } else if (problem.id?.includes('polynomial_definition')) {
-            setMode('polynomial-definition');
-          } else if (problem.id?.includes('polynomial_operations')) {
-            setMode('polynomial-operations');
-          } else if (problem.id?.includes('polynomial_formulas')) {
-            setMode('polynomial-formulas');
-          } else if (problem.id?.includes('polynomial_substitution')) {
-            setMode('polynomial-substitution');
-          } else if (problem.id?.includes('powers_')) {
-            setMode('powers');
-          } else if (problem.id?.includes('algebraic_fractions')) {
-            setMode('algebraic-fractions-intro');
-          } else {
-            // Default fallback - try to detect from first part of ID
-            console.log('Could not detect mode for problem:', problem.id);
-            setMode('basics-1-arytmetyka');
-          }
-        }}
-      />
-    );
-  }
 
   // Render course mode (powers, polynomial topics, etc)
   return (

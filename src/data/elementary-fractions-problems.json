@@ -322,7 +322,7 @@
     }
   },
   {
-    "id": "fraction_addition_1_2",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{12} + \\frac{1}{4}$",
     "steps": [
@@ -422,14 +422,14 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_2",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{9}{10} - \\frac{2}{5}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{9}{10}$ i $\\frac{2}{5}$?",
-        "expression": "Wspólny mianownik = 10",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 10$",
         "explanation": "Aby odjąć ułamki, musimy mieć wspólny mianownik"
       },
       {
@@ -498,7 +498,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_2",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{4}{9} \\cdot \\frac{3}{8}$",
     "steps": [
@@ -575,7 +575,7 @@
     }
   },
   {
-    "id": "division_fractions_1_2",
+    "id": "division_fractions_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{5}{6} \\div \\frac{2}{9}$",
     "steps": [
@@ -641,14 +641,14 @@
     }
   },
   {
-    "id": "fraction_addition_1_3",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{3} + \\frac{1}{4} + \\frac{1}{12}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "Wspólny mianownik = 12",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -723,14 +723,14 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_3",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{11}{15} - \\frac{2}{5}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest wspólne mianownik dla ułamków $\\frac{11}{15}$ i $\\frac{2}{5}$?",
-        "expression": "Wspólny mianownik = 15",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 15$",
         "explanation": "Aby odjąć ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -799,14 +799,14 @@
     }
   },
   {
-    "id": "fraction_addition_1_4",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{3}{8} + \\frac{5}{12}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 8 i 12?",
-        "expression": "Wspólny mianownik = 24",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -852,7 +852,7 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_4",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz $\\frac{7}{9} - \\frac{1}{3}$",
     "steps": [
@@ -902,7 +902,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_3",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{2}{7} \\cdot \\frac{14}{5}$",
     "steps": [
@@ -1051,7 +1051,7 @@
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków 1/2, 2/3 i 1/6?",
-        "expression": "Wspólny mianownik = 6",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 6$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika 6"
       },
       {
@@ -1110,14 +1110,14 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_5",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{5}{12} - \\frac{1}{8}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 12 i 8?",
-        "expression": "Wspólny mianownik = 24",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1176,7 +1176,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_4",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{6}{7} \\cdot \\frac{2}{3}$",
     "steps": [
@@ -1229,7 +1229,7 @@
     }
   },
   {
-    "id": "fraction_division_1_2",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{3}{5} \\div \\frac{9}{10}$",
     "steps": [
@@ -1305,14 +1305,14 @@
     }
   },
   {
-    "id": "fraction_addition_1_5",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{4}{15} + \\frac{2}{5}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników 15 i 5?",
-        "expression": "Wspólny mianownik = 15",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 15$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -1381,14 +1381,14 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_6",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{13}{18} - \\frac{1}{6}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownik dla ułamków $\\frac{13}{18}$ i $\\frac{1}{6}$?",
-        "expression": "Wspólny mianownik = 18",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 18$",
         "explanation": "Aby odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -1457,7 +1457,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_5",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{1}{4} \\cdot \\frac{8}{9}$",
     "steps": [
@@ -1523,7 +1523,7 @@
     }
   },
   {
-    "id": "fraction_division_1_3",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{12} \\div \\frac{7}{8}$",
     "steps": [
@@ -1600,14 +1600,14 @@
     }
   },
   {
-    "id": "fraction_addition_1_6",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{9} + \\frac{5}{18}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownika dla ułamków $\\frac{2}{9}$ i $\\frac{5}{18}$?",
-        "expression": "Wspólny mianownik = 18",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 18$",
         "explanation": "Mianownik 18 pozwoli nam dodać ułamki"
       },
       {
@@ -1653,7 +1653,7 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_7",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{5}{8} - \\frac{3}{16}$",
     "steps": [
@@ -1720,7 +1720,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_6",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{3}{10} \\cdot \\frac{5}{6}$",
     "steps": [
@@ -1773,7 +1773,7 @@
     }
   },
   {
-    "id": "fraction_division_1_4",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{4}{7} \\div \\frac{8}{21}$",
     "steps": [
@@ -1839,7 +1839,7 @@
     }
   },
   {
-    "id": "fraction_addition_1_7",
+    "id": "fraction_addition_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{20} + \\frac{3}{10}$",
     "steps": [
@@ -1895,7 +1895,7 @@
     }
   },
   {
-    "id": "fraction_subtraction_1_8",
+    "id": "fraction_subtraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{11}{12} - \\frac{1}{3}$",
     "steps": [
@@ -1951,7 +1951,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_7",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{5}{9} \\cdot \\frac{6}{25}$",
     "steps": [
@@ -2017,7 +2017,7 @@
     }
   },
   {
-    "id": "division_fractions_1_3",
+    "id": "division_fractions_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{3} \\div \\frac{4}{9}$",
     "steps": [
@@ -2204,7 +2204,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_8",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $1\\frac{2}{5} \\cdot \\frac{5}{7}$",
     "steps": [
@@ -2270,7 +2270,7 @@
     }
   },
   {
-    "id": "fraction_division_1_5",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $3\\frac{1}{3} \\div 2\\frac{2}{9}$",
     "steps": [
@@ -2336,7 +2336,7 @@
     }
   },
   {
-    "id": "fraction_addition_1_8",
+    "id": "fraction_addition_1",
     "topic": "Dodawanie ułamków",
     "statement": "Oblicz $\\frac{3}{8} + 2\\frac{1}{4}$",
     "steps": [
@@ -2511,7 +2511,7 @@
     }
   },
   {
-    "id": "fraction_division_1_6",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz $4\\frac{2}{5} \\div 1\\frac{3}{10}$",
     "steps": [
@@ -2577,7 +2577,7 @@
       {
         "step": 2,
         "hint": "Jaki jest najmniejszy wspólny mianownik dla 6 i 12?",
-        "expression": "Wspólny mianownik = 12",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -2640,7 +2640,7 @@
     }
   },
   {
-    "id": "arithmetic_fraction_subtraction_2",
+    "id": "arithmetic_fraction_subtraction",
     "topic": "Odejmowanie ułamków mieszanych",
     "statement": "Oblicz: $3\\frac{7}{15} - 2\\frac{1}{5}$",
     "steps": [
@@ -2735,7 +2735,7 @@
       {
         "step": 3,
         "hint": "Jaka jest najmniejsza wspólna wielokrotność mianowników 4 i 3?",
-        "expression": "Wspólny mianownik = 12",
+        "expression": "$\text{NWW}(4,3) = 12$",
         "explanation": "Najmniejsza wspólna wielokrotność to 12"
       },
       {
@@ -2797,6 +2797,7 @@
       "timestamp": "2025-09-10T08:02:19.018Z"
     }
   },
+  
   {
     "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach i liczbach dziesiętnych",
@@ -2865,7 +2866,7 @@
     }
   },
   {
-    "id": "basic_arithmetic_1_2",
+    "id": "basic_arithmetic_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\frac{5}{6} - 0,5$",
     "steps": [
@@ -3078,7 +3079,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_9",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz $\\frac{3}{7} \\cdot \\frac{14}{9} \\cdot \\frac{1}{2}$",
     "steps": [
@@ -3154,7 +3155,7 @@
     }
   },
   {
-    "id": "fraction_division_1_7",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{8}{15} \\div \\frac{4}{5} \\div \\frac{2}{3}$",
     "steps": [
@@ -3221,14 +3222,14 @@
     }
   },
   {
-    "id": "fraction_calculation_1_2",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{3} + \\frac{1}{4} - \\frac{5}{12}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 3, 4 i 12?",
-        "expression": "Wspólny mianownik = 12",
+        "expression": "$\text{NWW}(3, 4, 12) = 12$",
         "explanation": "Sprowadzamy wszystkie ułamki do wspólnego mianownika 12"
       },
       {
@@ -3287,14 +3288,14 @@
     }
   },
   {
-    "id": "fraction_calculation_1_3",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{8} - \\frac{1}{6} + \\frac{1}{12}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla ułamków 8, 6 i 12?",
-        "expression": "Wspólny mianownik = 24",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -3353,7 +3354,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_10",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz: $\\frac{5}{9} \\cdot \\frac{3}{10} \\cdot \\frac{6}{7}$",
     "steps": [
@@ -3429,7 +3430,7 @@
     }
   },
   {
-    "id": "fraction_division_1_8",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{12}{25} \\div \\frac{3}{5} \\div \\frac{4}{15}$",
     "steps": [
@@ -3561,7 +3562,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_4",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{11}{12} - \\frac{2}{3} - \\frac{1}{6}$",
     "steps": [
@@ -3638,7 +3639,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_11",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz: $\\frac{4}{7} \\cdot \\frac{21}{8} \\cdot \\frac{2}{9}$",
     "steps": [
@@ -3714,7 +3715,7 @@
     }
   },
   {
-    "id": "fraction_division_1_9",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{15}{16} \\div \\frac{5}{8} \\div \\frac{3}{4}$",
     "steps": [
@@ -3770,7 +3771,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_5",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{2}{3} + \\frac{1}{4}\\right) \\cdot \\frac{12}{11}$",
     "steps": [
@@ -3837,7 +3838,7 @@
     }
   },
   {
-    "id": "fraction_division_1_10",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{5}{6} - \\frac{1}{3}\\right) \\div \\frac{2}{9}$",
     "steps": [
@@ -3904,7 +3905,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_2",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\frac{3}{4} \\cdot \\left(\\frac{2}{5} + \\frac{1}{10}\\right)$",
     "steps": [
@@ -3980,7 +3981,7 @@
     }
   },
   {
-    "id": "fraction_division_1_11",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{8} \\div \\left(\\frac{3}{4} - \\frac{1}{8}\\right)$",
     "steps": [
@@ -4057,7 +4058,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_3",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{4}{7} + \\frac{1}{14}\\right) \\cdot \\frac{14}{9}$",
     "steps": [
@@ -4209,7 +4210,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_6",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{3} + \\frac{1}{4} \\cdot \\frac{8}{5}$",
     "steps": [
@@ -4297,7 +4298,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_7",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{5}{6} - \\frac{2}{3} \\div \\frac{4}{9}$",
     "steps": [
@@ -4375,7 +4376,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_8",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{3}{8} \\cdot \\frac{4}{9} + \\frac{1}{6}$",
     "steps": [
@@ -4462,7 +4463,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_9",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{12} \\div \\frac{14}{15} - \\frac{1}{8}$",
     "steps": [
@@ -4538,7 +4539,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_4",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\left(\\frac{2}{5}\\right)^2 + \\frac{1}{25}$",
     "steps": [
@@ -4604,7 +4605,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_5",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\left(\\frac{3}{4}\\right)^2 - \\frac{1}{8}$",
     "steps": [
@@ -4721,7 +4722,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_10",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{5}{6}\\right)^2 \\div \\frac{25}{36}$",
     "steps": [
@@ -4771,7 +4772,7 @@
     }
   },
   {
-    "id": "arithmetic_fraction_1_2",
+    "id": "arithmetic_fraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{1}{2} + \\left(\\frac{1}{3}\\right)^2$",
     "steps": [
@@ -4824,7 +4825,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_6",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{4}{5}\\right)^2 - \\frac{3}{25}$",
     "steps": [
@@ -4993,7 +4994,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_7",
+    "id": "arithmetic_calculation_1",
     "topic": "Upraszczanie wyrażeń arytmetycznych",
     "statement": "Oblicz $\\frac{2}{3} \\cdot \\sqrt{\\frac{9}{4}}$",
     "steps": [
@@ -5168,7 +5169,7 @@
     }
   },
   {
-    "id": "absolute_value_calculation_2",
+    "id": "absolute_value_calculation",
     "topic": "Wartość bezwzględna i działania arytmetyczne",
     "statement": "Oblicz: $\\left|\\frac{2}{5} - \\frac{3}{5}\\right| \\cdot \\frac{10}{3}$",
     "steps": [
@@ -5234,7 +5235,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_8",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\frac{7}{8} - \\left|\\frac{1}{4} - \\frac{1}{2}\\right|$",
     "steps": [
@@ -5284,7 +5285,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_9",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left|\\frac{5}{6} - \\frac{2}{3}\\right| \\div \\frac{1}{6}$",
     "steps": [
@@ -5345,7 +5346,7 @@
     }
   },
   {
-    "id": "fraction_calculation_1_11",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2^3}{3^2} + \\frac{1}{9}$",
     "steps": [
@@ -5498,7 +5499,7 @@
     }
   },
   {
-    "id": "fraction_simplification_1_2",
+    "id": "fraction_simplification_1",
     "topic": "Upraszczanie ułamków",
     "statement": "Oblicz $\\frac{5^2}{6^2} \\cdot \\frac{36}{25}$",
     "steps": [
@@ -5554,7 +5555,7 @@
     }
   },
   {
-    "id": "fraction_division_1_12",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{4^2}{5^2} \\div \\frac{16}{25}$",
     "steps": [
@@ -5610,14 +5611,14 @@
     }
   },
   {
-    "id": "fraction_calculation_1_12",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{2}{3} + \\frac{3}{4} - \\frac{5}{6} + \\frac{1}{12}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne wielokrotność mianowników tych ułamków?",
-        "expression": "Wspólny mianownik = 12",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 12$",
         "explanation": "Aby dodać i odjąć ułamki, musimy sprowadzić je do wspólnego mianownika"
       },
       {
@@ -5692,14 +5693,14 @@
     }
   },
   {
-    "id": "fraction_calculation_1_13",
+    "id": "fraction_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{8} - \\frac{1}{6} + \\frac{2}{3} - \\frac{1}{4}$",
     "steps": [
       {
         "step": 1,
         "hint": "Jakie jest najmniejsze wspólne mianownie dla tych ułamków?",
-        "expression": "Wspólny mianownik = 24",
+        "expression": "$najlepszym wspólnym mianownikiem będzie 24$",
         "explanation": "Aby dodawać i odejmować ułamki, potrzebujemy wspólnego mianownika"
       },
       {
@@ -5780,7 +5781,7 @@
     }
   },
   {
-    "id": "fraction_multiplication_1_12",
+    "id": "fraction_multiplication_1",
     "topic": "Mnożenie ułamków",
     "statement": "Oblicz: $\\frac{3}{5} \\cdot \\frac{10}{9} \\cdot \\frac{3}{4} \\cdot \\frac{2}{1}$",
     "steps": [
@@ -5841,7 +5842,7 @@
     }
   },
   {
-    "id": "fraction_division_1_13",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{12}{25} \\div \\frac{3}{5} \\div \\frac{4}{15} \\div \\frac{2}{3}$",
     "steps": [
@@ -5917,7 +5918,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_10",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{2}{3} + \\frac{1}{4}\\right) \\cdot \\left(\\frac{3}{4} - \\frac{1}{6}\\right)$",
     "steps": [
@@ -5993,7 +5994,7 @@
     }
   },
   {
-    "id": "fraction_division_1_14",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{5}{6} - \\frac{1}{3}\\right) \\div \\left(\\frac{2}{9} + \\frac{1}{18}\\right)$",
     "steps": [
@@ -6049,7 +6050,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_11",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\frac{3}{4} \\cdot \\left(\\frac{2}{5} + \\frac{1}{10}\\right) - \\frac{1}{8}$",
     "steps": [
@@ -6125,7 +6126,7 @@
     }
   },
   {
-    "id": "arithmetic_fraction_1_3",
+    "id": "arithmetic_fraction_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{7}{8} \\div \\left(\\frac{3}{4} - \\frac{1}{8}\\right) + \\frac{1}{3}$",
     "steps": [
@@ -6178,7 +6179,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_12",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{4}{7} + \\frac{1}{14}\\right) \\cdot \\frac{14}{9} - \\frac{2}{3}$",
     "steps": [
@@ -6231,7 +6232,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_13",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{9}{10} - \\frac{2}{5}\\right) \\div \\frac{1}{4} + \\frac{1}{2}$",
     "steps": [
@@ -6292,7 +6293,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_14",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania arytmetyczne",
     "statement": "Oblicz: $\\frac{1}{2} \\cdot \\left(\\frac{2}{3} + \\frac{1}{4}\\right) \\cdot \\frac{12}{11}$",
     "steps": [
@@ -6358,7 +6359,7 @@
     }
   },
   {
-    "id": "fraction_division_1_15",
+    "id": "fraction_division_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\frac{3}{4} \\div \\left(\\frac{5}{6} - \\frac{1}{3}\\right) \\div \\frac{2}{9}$",
     "steps": [
@@ -6445,7 +6446,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_15",
+    "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach",
     "statement": "Oblicz: $\\left(\\frac{2}{5}\\right)^2 + \\left(\\frac{3}{5}\\right)^2$",
     "steps": [
@@ -6498,7 +6499,7 @@
     }
   },
   {
-    "id": "arithmetic_calculation_1_16",
+    "id": "arithmetic_calculation_1",
     "topic": "Potęgowanie ułamków",
     "statement": "Oblicz $\\left(\\frac{1}{2}\\right)^3 + \\left(\\frac{1}{4}\\right)^2$",
     "steps": [
@@ -6584,7 +6585,7 @@
         "step": 3,
         "hint": "Teraz masz już same ułamki. Jak dodać ułamki o różnych mianownikach?",
         "expression": "$\\frac{2}{3} + \\frac{4}{5} - \\frac{1}{15}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika - najlepszym będzie 15"
+        "explanation": "Sprowadzamy do wspólnego mianownika: $najlepszym wspólnym mianownikiem będzie 15$"
       },
       {
         "step": 4,
@@ -6646,7 +6647,7 @@
     }
   },
   {
-    "id": "absolute_value_calculation_3",
+    "id": "absolute_value_calculation",
     "topic": "Wartości bezwzględne i ułamki",
     "statement": "Oblicz: $\\left|\\frac{2}{3} - \\frac{5}{6}\\right| + \\left|\\frac{1}{4} - \\frac{1}{2}\\right|$",
     "steps": [
@@ -7778,3 +7779,5 @@
     "parameters": {}
   }
 ]
+
+

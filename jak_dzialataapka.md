@@ -4,10 +4,9 @@
 1. [Architektura aplikacji](#architektura-aplikacji)
 2. [Unikalne funkcje edukacyjne](#unikalne-funkcje-edukacyjne)
 3. [System adaptacyjnego uczenia](#system-adaptacyjnego-uczenia)
-4. [Integracja AI - MADRE AI](#integracja-ai---madre-ai)
-5. [System renderowania matematycznego](#system-renderowania-matematycznego)
-6. [Struktura danych i modułów](#struktura-danych-i-modułów)
-7. [Co czyni tę aplikację wyjątkową](#co-czyni-tę-aplikację-wyjątkową)
+4. [System renderowania matematycznego](#system-renderowania-matematycznego)
+5. [Struktura danych i modułów](#struktura-danych-i-modułów)
+6. [Co czyni tę aplikację wyjątkową](#co-czyni-tę-aplikację-wyjątkową)
 
 ## 🏗️ Architektura aplikacji
 
@@ -19,7 +18,6 @@ Frontend (React)
 ├── TrigonometryCourse (główny komponent)
 ├── ProblemView (wyświetlanie zadań)
 ├── NextProblemSuggestion (adaptacyjne sugestie)
-├── AIChat (asystent MADRE AI)
 └── MathRenderer (renderowanie LaTeX)
 
 Backend (Express.js)
@@ -109,10 +107,6 @@ System zapisuje w `localStorage`:
 4. Ranking według podobieństwa + trudności
 ```
 
-## 🤖 Integracja AI - MADRE AI
-
-### Unikalna persona AI
-MADRE AI to **"kochająca matka matematyczka"** - ciepła, cierpliwa, wspierająca:
 
 ```javascript
 system: 'Jesteś kochającą, słodką, uczynną matką matematyczką 
@@ -207,7 +201,6 @@ const parseLatexTextMemo = (() => {
 - Ciepłe komunikaty ("Świetnie Ci idzie!")
 - Brak negatywnego feedbacku
 - Opcja "cofnij" zawsze dostępna
-- AI asystent z osobowością wspierającej matki
 
 ### 5. **Techniczne innowacje**
 - **Hybrydowe renderowanie** (server + client)
@@ -228,7 +221,6 @@ Ta aplikacja jest **rewolucyjna** w podejściu do nauki matematyki, ponieważ:
 1. **Stawia psychologiczny komfort ponad wszystko**
 2. **Adaptuje się do użytkownika, nie wymusza adaptacji**
 3. **Uczy zrozumienia, nie tylko mechanicznego rozwiązywania**
-4. **Wykorzystuje AI jako wsparcie, nie zastępstwo nauczyciela**
 5. **Łączy najnowsze technologie z sprawdzoną pedagogiką**
 
 To nie jest "kolejna aplikacja do matematyki" - to **system wsparcia uczenia** który rozumie, że za każdym uczeniem stoi człowiek z własnymi emocjami, tempem i sposobem myślenia.
