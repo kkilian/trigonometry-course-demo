@@ -727,56 +727,353 @@ const NextProblemSuggestionMultiStep = ({
     }
   };
 
-  // Continue with UI implementation...
+  // ===== UI UTILITIES =====
+
+  const getProfileColorClass = (profile) => {
+    switch (profile.color) {
+      case 'red': return 'text-red-600 bg-red-50 border-red-200';
+      case 'blue': return 'text-blue-600 bg-blue-50 border-blue-200';
+      case 'green': return 'text-green-600 bg-green-50 border-green-200';
+      case 'orange': return 'text-orange-600 bg-orange-50 border-orange-200';
+      case 'purple': return 'text-purple-600 bg-purple-50 border-purple-200';
+      case 'yellow': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      default: return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
+
+  const getPerformanceRingColor = (score) => {
+    if (score >= 80) return 'text-green-600';
+    if (score >= 60) return 'text-yellow-600';
+    if (score >= 40) return 'text-orange-600';
+    return 'text-red-600';
+  };
+
+  const getMicroTrendIcon = (trend) => {
+    switch (trend) {
+      case 'improving': return '📈';
+      case 'declining': return '📉';
+      case 'stable': return '➡️';
+      default: return '❓';
+    }
+  };
+
+  // ===== COMPACT MODE UI =====
+
+  if (compact && generateEnhancedSuggestions && generateEnhancedSuggestions.length > 0) {
+    const primaryProblem = generateEnhancedSuggestions.find(p => p.suggestionType === 'current') || generateEnhancedSuggestions[0];
+    const performanceAnalysis = analyzeMultistepPerformance();
+    const hybridProfile = detectHybridProfile();
+
+    return (
+      <div className="relative group animate-fadeInScale">
+        <button
+          onClick={() => handleEnhancedSuggestionClick(primaryProblem, primaryProblem.suggestionType)}
+          className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-orange-400 text-stone-700 hover:bg-orange-50 rounded-lg transition-all animate-pulse-border shadow-lg shadow-orange-200/50"
+        >
+          <span className="text-xs font-medium">Następne</span>
+
+          {/* Performance Ring Indicator */}
+          {performanceAnalysis.avgMultistepScore !== null && (
+            <div className={`relative w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+              getPerformanceRingColor(performanceAnalysis.avgMultistepScore)
+            }`} style={{
+              borderColor: 'currentColor',
+              backgroundColor: 'rgba(255,255,255,0.9)'
+            }}>
+              <span className="text-[8px] font-bold">
+                {Math.round(performanceAnalysis.avgMultistepScore)}
+              </span>
+            </div>
+          )}
+
+          <svg className="w-3 h-3 text-orange-500" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+          </svg>
+        </button>
+
+        {/* Enhanced Hover Tooltip */}
+        <div className="absolute top-full right-0 mt-2 w-[500px] bg-white border border-stone-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+
+          {/* Tooltip Header */}
+          <div className="p-3 border-b border-stone-100">
+            <div className="flex items-center justify-between mb-1">
+              <h4 className="text-xs font-medium text-stone-600 uppercase tracking-wider">
+                Wybierz poziom trudności
+              </h4>
+              <div className="text-xs text-stone-500">
+                {getMicroTrendIcon(performanceAnalysis.trend)} {performanceAnalysis.trend || 'brak danych'}
+              </div>
+            </div>
+
+            {/* Learner Profile Badge */}
+            <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium border ${getProfileColorClass(hybridProfile)}`}>
+              👤 {hybridProfile.profile}
+              {hybridProfile.confidence && (
+                <span className="ml-1 opacity-75">({Math.round(hybridProfile.confidence * 100)}%)</span>
+              )}
+            </div>
+          </div>
+
+          {/* Suggestions Grid */}
+          <div className="space-y-1">
+            {['comfort', 'current', 'challenge'].map((type) => {
+              const problem = generateEnhancedSuggestions.find(p => p.suggestionType === type);
+              if (!problem) return null;
+
+              const config = problem.levelConfig;
+              const metrics = problem.expectedMetrics;
+
+              const getHoverBorderColor = () => {
+                switch(config.color) {
+                  case 'green': return 'hover:border-green-400 hover:shadow-green-100';
+                  case 'yellow': return 'hover:border-yellow-400 hover:shadow-yellow-100';
+                  case 'orange': return 'hover:border-orange-400 hover:shadow-orange-100';
+                  default: return 'hover:border-gray-400 hover:shadow-gray-100';
+                }
+              };
+
+              const getLabelColor = () => {
+                switch(config.color) {
+                  case 'green': return 'text-green-700 bg-green-100';
+                  case 'yellow': return 'text-yellow-700 bg-yellow-100';
+                  case 'orange': return 'text-orange-700 bg-orange-100';
+                  default: return 'text-gray-700 bg-gray-100';
+                }
+              };
+
+              return (
+                <div
+                  key={problem.id}
+                  onClick={() => handleEnhancedSuggestionClick(problem, type)}
+                  className={`p-3 cursor-pointer transition-all duration-200 border border-stone-200 rounded-lg bg-white hover:shadow-sm ${getHoverBorderColor()}`}
+                >
+                  {/* Header Row */}
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`text-xs font-medium px-2 py-1 rounded ${getLabelColor()}`}>
+                      {config.label}
+                    </span>
+                    <div className="flex items-center gap-2 text-xs text-stone-500">
+                      <span className={`font-medium ${getPerformanceRingColor(metrics.fit)}`}>
+                        {metrics.fit}% dopasowanie
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Problem Statement */}
+                  <div className="text-sm text-stone-900 mb-2">
+                    <MathRenderer content={problem.statement} />
+                  </div>
+
+                  {/* Enhanced Metrics Row */}
+                  <div className="grid grid-cols-4 gap-2 text-xs">
+                    <div className="flex items-center gap-1 text-stone-600">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>~{metrics.estimatedTime}min</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-stone-600">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                      <span>{metrics.successRate}%</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-stone-600">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                      </svg>
+                      <span>{problem.steps?.length || 0} kroków</span>
+                    </div>
+                    <div className="text-stone-400">
+                      {config.description}
+                    </div>
+                  </div>
+
+                  {/* Adaptive Reasoning (when enabled) */}
+                  {showReasoningDetails && problem.adaptiveReasoning && (
+                    <details className="mt-2">
+                      <summary className="text-xs text-stone-500 cursor-pointer hover:text-stone-700">
+                        Dlaczego ten wybór? 🤔
+                      </summary>
+                      <div className="text-xs text-stone-600 mt-1 p-2 bg-stone-50 rounded">
+                        <p><strong>Metoda:</strong> {problem.adaptiveReasoning.method}</p>
+                        <p><strong>Profil:</strong> {problem.adaptiveReasoning.profile}</p>
+                        <p><strong>Offset:</strong> {problem.adaptiveReasoning.adaptiveOffset?.toFixed(2)}</p>
+                      </div>
+                    </details>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Performance Analytics Footer */}
+          {performanceAnalysis.sampleSize > 0 && (
+            <div className="p-3 border-t border-stone-100 bg-stone-50">
+              <div className="grid grid-cols-3 gap-4 text-xs">
+                <div className="text-center">
+                  <div className="font-medium text-stone-700">Średni wynik</div>
+                  <div className={`text-lg font-bold ${getPerformanceRingColor(performanceAnalysis.avgMultistepScore)}`}>
+                    {performanceAnalysis.avgMultistepScore}%
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-stone-700">Konsystencja</div>
+                  <div className="text-lg font-bold text-stone-600">
+                    {Math.round((performanceAnalysis.consistencyScore || 0) * 100)}%
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-stone-700">Próbka</div>
+                  <div className="text-lg font-bold text-stone-600">
+                    {performanceAnalysis.sampleSize}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // ===== FALLBACK COMPACT MODE =====
+
+  if (compact && (!generateEnhancedSuggestions || generateEnhancedSuggestions.length === 0)) {
+    // Fallback - show next sequential problem (like original system)
+    const nextProblem = problems.find(p => !completedProblems.has(p.id) && p.id !== currentProblem?.id);
+    if (nextProblem) {
+      return (
+        <div className="relative group animate-fadeInScale">
+          <button
+            onClick={() => handleEnhancedSuggestionClick(nextProblem, 'fallback')}
+            className="flex items-center gap-2 px-3 py-1.5 bg-transparent border-2 border-orange-400 text-stone-700 hover:bg-orange-50 rounded-lg transition-all animate-pulse-border shadow-lg shadow-orange-200/50"
+          >
+            <span className="text-xs font-medium">Następne</span>
+            <div className="text-xs text-orange-600 opacity-75">(fallback)</div>
+            <svg className="w-3 h-3 text-orange-500" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+            </svg>
+          </button>
+
+          {/* Hover tooltip with problem preview */}
+          <div className="absolute top-full right-0 mt-2 w-96 p-4 bg-white border border-stone-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="text-sm text-stone-900">
+              <MathRenderer content={nextProblem.statement} />
+            </div>
+            <div className="mt-2 text-xs text-stone-500">
+              Brak danych do inteligentnych sugestii - używam kolejnego zadania
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  }
+
+  // ===== FULL MODE UI =====
 
   return (
     <div className="next-problem-suggestion-multistep">
-      <div className="text-sm text-gray-600 mb-2">NextProblemSuggestionMultiStep v2.0</div>
 
-      {/* Debug Info */}
-      <div className="text-xs text-gray-500 space-y-1 mb-4 p-2 bg-gray-50 rounded">
-        <div>Choice History: {getEnhancedChoiceHistory().length} entries</div>
-        <div>Performance Data: {analyzeMultistepPerformance().sampleSize} problems</div>
-        <div>Profile: {detectHybridProfile().profile}</div>
-        <div>Adaptive Offset: {getDualMetricAdaptiveOffset().finalOffset?.toFixed(2)}</div>
-        <div>Suggestions: {generateEnhancedSuggestions?.length || 0}</div>
-      </div>
+      {/* Development Header */}
+      {showReasoningDetails && (
+        <>
+          <div className="text-sm text-gray-600 mb-2">NextProblemSuggestionMultiStep v2.0</div>
+          <div className="text-xs text-gray-500 space-y-1 mb-4 p-2 bg-gray-50 rounded">
+            <div>Choice History: {getEnhancedChoiceHistory().length} entries</div>
+            <div>Performance Data: {analyzeMultistepPerformance().sampleSize} problems</div>
+            <div>Profile: {detectHybridProfile().profile}</div>
+            <div>Adaptive Offset: {getDualMetricAdaptiveOffset().finalOffset?.toFixed(2)}</div>
+            <div>Suggestions: {generateEnhancedSuggestions?.length || 0}</div>
+          </div>
+        </>
+      )}
 
-      {/* Basic Implementation - will be enhanced with full UI */}
-      {generateEnhancedSuggestions && generateEnhancedSuggestions.length > 0 && (
-        <div className="space-y-2">
-          <h3 className="font-medium text-gray-800">Enhanced Suggestions</h3>
-          {generateEnhancedSuggestions.map((suggestion, index) => (
-            <button
-              key={suggestion.id}
-              onClick={() => handleEnhancedSuggestionClick(suggestion, suggestion.suggestionType)}
-              className="block w-full text-left p-3 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
-            >
-              <div className="flex justify-between items-start mb-2">
-                <span className={`text-xs font-medium px-2 py-1 rounded ${
-                  suggestion.levelConfig.color === 'green' ? 'bg-green-100 text-green-700' :
-                  suggestion.levelConfig.color === 'yellow' ? 'bg-yellow-100 text-yellow-700' :
-                  suggestion.levelConfig.color === 'orange' ? 'bg-orange-100 text-orange-700' :
-                  'bg-gray-100 text-gray-700'
-                }`}>
-                  {suggestion.levelConfig.label}
-                </span>
-                <div className="text-xs text-gray-500">
-                  {suggestion.expectedMetrics.fit}% fit
+      {/* Enhanced Full Mode Suggestions */}
+      {generateEnhancedSuggestions && generateEnhancedSuggestions.length > 0 ? (
+        <div className="space-y-4">
+
+          {/* Header with Profile */}
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-semibold text-stone-800">Sugerowane zadania</h3>
+            <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium border ${getProfileColorClass(detectHybridProfile())}`}>
+              {detectHybridProfile().profile}
+            </div>
+          </div>
+
+          {/* Suggestions Grid */}
+          <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-3">
+            {generateEnhancedSuggestions.map((suggestion, index) => (
+              <button
+                key={suggestion.id}
+                onClick={() => handleEnhancedSuggestionClick(suggestion, suggestion.suggestionType)}
+                className="text-left p-4 border-2 border-stone-200 rounded-xl hover:border-stone-300 hover:shadow-md transition-all group"
+              >
+                {/* Card Header */}
+                <div className="flex justify-between items-center mb-3">
+                  <span className={`text-sm font-medium px-3 py-1 rounded-full ${
+                    suggestion.levelConfig.color === 'green' ? 'bg-green-100 text-green-700 border border-green-200' :
+                    suggestion.levelConfig.color === 'yellow' ? 'bg-yellow-100 text-yellow-700 border border-yellow-200' :
+                    suggestion.levelConfig.color === 'orange' ? 'bg-orange-100 text-orange-700 border border-orange-200' :
+                    'bg-gray-100 text-gray-700 border border-gray-200'
+                  }`}>
+                    {suggestion.levelConfig.label}
+                  </span>
+                  <div className="text-xs text-stone-500 font-medium">
+                    {suggestion.expectedMetrics.fit}% dopasowanie
+                  </div>
                 </div>
-              </div>
 
-              <div className="text-sm text-gray-900 mb-2">
-                <MathRenderer content={suggestion.statement} />
-              </div>
+                {/* Problem Statement */}
+                <div className="text-stone-900 mb-3 leading-relaxed">
+                  <MathRenderer content={suggestion.statement} />
+                </div>
 
-              <div className="flex justify-between text-xs text-gray-500">
-                <span>~{suggestion.expectedMetrics.estimatedTime} min</span>
-                <span>{suggestion.expectedMetrics.successRate}% success</span>
-                <span>{suggestion.steps?.length || 0} steps</span>
-              </div>
-            </button>
-          ))}
+                {/* Enhanced Metrics */}
+                <div className="grid grid-cols-2 gap-2 text-xs text-stone-600 mb-2">
+                  <div className="flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>~{suggestion.expectedMetrics.estimatedTime} min</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4" />
+                    </svg>
+                    <span>{suggestion.expectedMetrics.successRate}% sukces</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                    <span>{suggestion.steps?.length || 0} kroków</span>
+                  </div>
+                  <div className="text-stone-500">
+                    {suggestion.levelConfig.description}
+                  </div>
+                </div>
+
+                {/* Action Indicator */}
+                <div className="flex justify-end">
+                  <div className="w-6 h-6 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
+                    <svg className="w-3 h-3 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        // No suggestions available
+        <div className="text-center py-8 text-stone-600">
+          <div className="text-sm">Brak dostępnych sugestii</div>
+          <div className="text-xs text-stone-500 mt-1">
+            Spróbuj rozwiązać więcej zadań aby otrzymać spersonalizowane rekomendacje
+          </div>
         </div>
       )}
     </div>
