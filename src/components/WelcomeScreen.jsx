@@ -96,8 +96,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
     <div className="min-h-screen bg-stone-100">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Logo */}
-        <div className="flex justify-center mb-8 md:mb-12">
-          <img src={DuzegLogo} alt="Duzeg" className="h-20 md:h-24" />
+        <div className="flex justify-start mb-8 md:mb-12">
+          <img src={DuzegLogo} alt="Duzeg" className="h-32 md:h-40" />
         </div>
 
         {/* Modules List */}
