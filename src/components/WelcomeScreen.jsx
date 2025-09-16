@@ -6,7 +6,7 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
-import DuzegLogo from '../Duzeg logo.svg';
+import DuzegLogo from '../Polygon 25.svg';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -97,7 +97,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Logo */}
         <div className="flex justify-start mb-8 md:mb-12">
-          <img src={DuzegLogo} alt="Duzeg" className="h-32 md:h-40" />
+          <img src={DuzegLogo} alt="Duzeg" className="h-24 md:h-30" />
         </div>
 
         {/* Modules List */}
