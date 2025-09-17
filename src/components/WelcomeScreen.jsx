@@ -1,5 +1,4 @@
 import React from 'react';
-import combinatoricsProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
@@ -26,13 +25,6 @@ const WelcomeScreen = ({ onSelectMode }) => {
       hasSubmenu: true,
       topicsCount: 16,
       disabled: true
-    },
-    {
-      id: 'powers',
-      title: 'Kombinatoryka - podstawy',
-      description: 'Permutacje, wariacje, kombinacje - poziom podstawowy',
-      problemCount: combinatoricsProblems.length,
-      disabled: false
     },
     {
       id: 'polynomials',
@@ -73,8 +65,7 @@ const WelcomeScreen = ({ onSelectMode }) => {
       id: 'kombinatoryka',
       title: 'Kombinatoryka i Prawdopodobieństwo',
       description: 'Permutacje, wariacje, kombinacje, prawdopodobieństwo klasyczne',
-      problemCount: kombinatorykaProblems.length,
-      disabled: true
+      problemCount: kombinatorykaProblems.length
     },
     {
       id: 'statystyka',
