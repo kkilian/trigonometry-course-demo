@@ -206,6 +206,23 @@ const NextProblemSuggestion = ({
 
   const handleSuggestionClick = (problem, suggestionType = null) => {
     if (problem && onSelectProblem) {
+      // Track choice for learning patterns
+      if (suggestionType) {
+        const choices = JSON.parse(localStorage.getItem('learning-patterns-choices') || '[]');
+        choices.push({
+          timestamp: Date.now(),
+          problemId: problem.id,
+          suggestionType: suggestionType, // 'easy', 'same', or 'hard'
+          currentDifficulty: problem.estimatedDifficulty || problem.difficulty || (problem.steps?.length || 0),
+          sessionId: sessionStorage.getItem('sessionId') || 'default'
+        });
+        // Keep only last 50 choices
+        if (choices.length > 50) {
+          choices.shift();
+        }
+        localStorage.setItem('learning-patterns-choices', JSON.stringify(choices));
+        console.log(`Tracked choice: ${suggestionType} for problem ${problem.id}`);
+      }
       onSelectProblem(problem);
     }
   };

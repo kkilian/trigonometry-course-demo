@@ -6,7 +6,6 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
-import DuzegLogo from '../Polygon 25.svg';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -97,7 +96,44 @@ const WelcomeScreen = ({ onSelectMode }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Logo */}
         <div className="flex justify-start mb-8 md:mb-12">
-          <img src={DuzegLogo} alt="Duzeg" className="h-24 md:h-30" />
+          <svg
+            className="h-20 md:h-24 w-auto"
+            viewBox="0 0 220 268"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              shapeRendering: 'crispEdges'
+            }}
+          >
+            <path
+              d="M68.8545 29.3545C71.5076 24.4905 78.4924 24.4905 81.1455 29.3545L127.669 114.648C130.213 119.313 126.837 125 121.523 125H28.4766C23.1633 125 19.787 119.313 22.3311 114.648L68.8545 29.3545Z"
+              stroke="#FF6B00"
+              strokeWidth="2"
+              fill="none"
+              vectorEffect="non-scaling-stroke"
+            />
+            <path
+              d="M151.146 112.646C148.492 117.51 141.508 117.51 138.854 112.646L92.3311 27.3516C89.787 22.687 93.1633 17 98.4766 17L191.523 17C196.837 17 200.213 22.687 197.669 27.3516L151.146 112.646Z"
+              stroke="#FF6B00"
+              strokeWidth="2"
+              fill="none"
+              vectorEffect="non-scaling-stroke"
+            />
+            <path
+              d="M138.854 147.354C141.508 142.49 148.492 142.49 151.146 147.354L197.669 232.648C200.213 237.313 196.837 243 191.523 243H98.4766C93.1633 243 89.787 237.313 92.3311 232.648L138.854 147.354Z"
+              stroke="#FF6B00"
+              strokeWidth="2"
+              fill="none"
+              vectorEffect="non-scaling-stroke"
+            />
+            <path
+              d="M81.1455 230.646C78.4924 235.51 71.5076 235.51 68.8545 230.646L22.3311 145.352C19.787 140.687 23.1633 135 28.4766 135H121.523C126.837 135 130.213 140.687 127.669 145.352L81.1455 230.646Z"
+              stroke="#FF6B00"
+              strokeWidth="2"
+              fill="none"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
         </div>
 
         {/* Modules List */}

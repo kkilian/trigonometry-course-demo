@@ -3,7 +3,7 @@ import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
 import MultiStepChoice from './MultiStepChoice';
 
-const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedProblems = new Set(), problems = [] }) => {
+const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, completedProblems = new Set(), problems = [] }) => {
   const [revealedSteps, setRevealedSteps] = useState(new Set());
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [hintShownSteps, setHintShownSteps] = useState(new Set());
@@ -12,6 +12,9 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
   const [showStatementExplanation, setShowStatementExplanation] = useState(false);
   const [completedInteractiveChoices, setCompletedInteractiveChoices] = useState(new Set());
   const [showMultiStepSteps, setShowMultiStepSteps] = useState(new Set());
+  const [hasSeenSkipHint, setHasSeenSkipHint] = useState(
+    localStorage.getItem('hasSeenSkipHint') === 'true'
+  );
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -101,6 +104,17 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
     window.scrollTo(0, 0);
   }, [problem.id]);
 
+  // Automatically mark skip hint as seen after 10 seconds
+  useEffect(() => {
+    if (!hasSeenSkipHint && onSkip) {
+      const timer = setTimeout(() => {
+        localStorage.setItem('hasSeenSkipHint', 'true');
+        setHasSeenSkipHint(true);
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasSeenSkipHint, onSkip]);
+
   const toggleWhy = (stepIndex) => {
     const newExpanded = new Set(expandedWhy);
     if (newExpanded.has(stepIndex)) {
@@ -142,9 +156,9 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
       {/* Sticky Header with Back Button */}
       <div className="sticky top-0 z-40 bg-stone-100 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
-          {/* Back Button */}
-          <div className="mb-4">
-            <button 
+          {/* Back Button and Skip Button */}
+          <div className="mb-4 flex items-center justify-between">
+            <button
               onClick={onBack}
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
             >
@@ -153,6 +167,39 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, completedPr
               </svg>
               Zadania
             </button>
+            {onSkip && !showSolution && (
+              <div className="relative">
+                <button
+                  onClick={() => {
+                    if (!hasSeenSkipHint) {
+                      localStorage.setItem('hasSeenSkipHint', 'true');
+                      setHasSeenSkipHint(true);
+                    }
+                    onSkip();
+                  }}
+                  className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors group ${
+                    !hasSeenSkipHint
+                      ? 'text-orange-600 hover:text-orange-700 bg-orange-50 hover:bg-orange-100 border-2 border-orange-400 animate-pulse-border'
+                      : 'text-stone-500 hover:text-stone-700 hover:bg-stone-100'
+                  }`}
+                  title={!hasSeenSkipHint ? "Utknąłeś? Możesz pominąć to zadanie!" : undefined}
+                >
+                  Pomiń zadanie
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l6 6-6 6" />
+                  </svg>
+                </button>
+                {/* Tooltip on first hover */}
+                {!hasSeenSkipHint && (
+                  <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                    <div className="bg-orange-500 text-white text-xs px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+                      <div className="absolute -top-1 right-4 w-2 h-2 bg-orange-500 rotate-45"></div>
+                      System wybierze następne zadanie dla Ciebie!
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
           
           {/* Header */}

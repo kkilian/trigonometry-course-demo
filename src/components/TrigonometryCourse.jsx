@@ -443,6 +443,98 @@ const TrigonometryCourse = () => {
     setCurrentCompleted(new Set([...currentCompleted, problemId]));
   };
 
+  const handleSkip = () => {
+    // Track skipped problem
+    const skippedProblems = JSON.parse(localStorage.getItem('skipped-problems') || '[]');
+    const skipRecord = {
+      problemId: currentProblem.id,
+      timestamp: Date.now(),
+      mode: mode
+    };
+    skippedProblems.push(skipRecord);
+
+    // Keep only last 100 skipped problems
+    if (skippedProblems.length > 100) {
+      skippedProblems.shift();
+    }
+    localStorage.setItem('skipped-problems', JSON.stringify(skippedProblems));
+
+    // Track as a "skip" choice for learning patterns (future AI adaptation)
+    const choices = JSON.parse(localStorage.getItem('learning-patterns-choices') || '[]');
+    choices.push({
+      timestamp: Date.now(),
+      problemId: currentProblem.id,
+      suggestionType: 'skip',
+      currentDifficulty: currentProblem.difficulty || (currentProblem.steps?.length || 0),
+      sessionId: sessionStorage.getItem('sessionId') || 'default'
+    });
+    // Keep only last 50 choices
+    if (choices.length > 50) {
+      choices.shift();
+    }
+    localStorage.setItem('learning-patterns-choices', JSON.stringify(choices));
+
+    // Get current problems and completed set
+    const currentProblems = getCurrentProblems();
+    const currentCompleted = getCurrentCompleted();
+
+    // Get AI suggestions for next problem
+    const suggestedProblems = getSuggestedProblemsForModule();
+
+    if (suggestedProblems && suggestedProblems.length > 0) {
+      // Select next problem from suggestions
+      // Priority: 1. "same" difficulty, 2. first available
+      const sameDifficultyProblem = currentProblems.find(p =>
+        suggestedProblems.includes(p.id) &&
+        !currentCompleted.has(p.id)
+      );
+
+      const nextProblem = sameDifficultyProblem ||
+        currentProblems.find(p => suggestedProblems.includes(p.id) && !currentCompleted.has(p.id));
+
+      if (nextProblem) {
+        setCurrentProblem(nextProblem);
+        return;
+      }
+    }
+
+    // Fallback: find any unfinished problem
+    const unfinishedProblems = currentProblems.filter(p => !currentCompleted.has(p.id));
+    if (unfinishedProblems.length > 0) {
+      // Pick random unfinished problem
+      const randomIndex = Math.floor(Math.random() * unfinishedProblems.length);
+      setCurrentProblem(unfinishedProblems[randomIndex]);
+    } else {
+      // No more problems - go back
+      setCurrentProblem(null);
+    }
+  };
+
+  const getSuggestedProblemsForModule = () => {
+    // Get suggestions from localStorage based on current mode
+    let storageKey = '';
+    if (mode === 'powers' || currentProblem?.id?.includes('kombinatoryka')) {
+      storageKey = 'trigonometry-suggested-problems';
+    } else if (mode === 'homographic-functions') {
+      storageKey = 'homographic-functions-suggested-problems';
+    } else if (mode === 'elementary-fractions') {
+      storageKey = 'elementary-fractions-suggested-problems';
+    } else if (mode === 'systems-of-equations') {
+      storageKey = 'systems-of-equations-suggested-problems';
+    }
+
+    if (storageKey) {
+      const suggested = localStorage.getItem(storageKey);
+      if (suggested) {
+        try {
+          return JSON.parse(suggested);
+        } catch (e) {
+          console.error('Error parsing suggested problems:', e);
+        }
+      }
+    }
+    return null;
+  };
 
   const handleWelcomeSelect = (selectedMode) => {
     console.log('handleWelcomeSelect called with selectedMode:', selectedMode);
@@ -527,6 +619,7 @@ const TrigonometryCourse = () => {
           onBack={handleBack}
           onComplete={handleComplete}
           onSelectProblem={handleSelectProblem}
+          onSkip={handleSkip}
           completedProblems={getCurrentCompleted()}
           problems={problems}
         />

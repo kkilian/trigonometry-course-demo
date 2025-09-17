@@ -496,6 +496,249 @@ Na:
 
 ---
 
+## **Funkcja pomijania zadań (Skip)**
+
+### **Opis funkcji**
+System umożliwia użytkownikom pominięcie zadania i automatyczne przejście do następnego sugerowanego przez AI. Jest to szczególnie przydatne gdy użytkownik utknął lub chce spróbować innego zadania.
+
+### **Implementacja w TrigonometryCourse.jsx**
+
+#### **Krok 1: Dodanie funkcji handleSkip**
+```jsx
+const handleSkip = () => {
+  // Track skipped problem
+  const skippedProblems = JSON.parse(localStorage.getItem('skipped-problems') || '[]');
+  const skipRecord = {
+    problemId: currentProblem.id,
+    timestamp: Date.now(),
+    mode: mode
+  };
+  skippedProblems.push(skipRecord);
+
+  // Keep only last 100 skipped problems
+  if (skippedProblems.length > 100) {
+    skippedProblems.shift();
+  }
+  localStorage.setItem('skipped-problems', JSON.stringify(skippedProblems));
+
+  // Track as a "skip" choice for learning patterns (future AI adaptation)
+  const choices = JSON.parse(localStorage.getItem('learning-patterns-choices') || '[]');
+  choices.push({
+    timestamp: Date.now(),
+    problemId: currentProblem.id,
+    suggestionType: 'skip',
+    currentDifficulty: currentProblem.difficulty || (currentProblem.steps?.length || 0),
+    sessionId: sessionStorage.getItem('sessionId') || 'default'
+  });
+  // Keep only last 50 choices
+  if (choices.length > 50) {
+    choices.shift();
+  }
+  localStorage.setItem('learning-patterns-choices', JSON.stringify(choices));
+
+  // Get current problems and completed set
+  const currentProblems = getCurrentProblems();
+  const currentCompleted = getCurrentCompleted();
+
+  // Get AI suggestions for next problem
+  const suggestedProblems = getSuggestedProblemsForModule();
+
+  if (suggestedProblems && suggestedProblems.length > 0) {
+    // Select next problem from suggestions
+    // Priority: 1. "same" difficulty, 2. first available
+    const sameDifficultyProblem = currentProblems.find(p =>
+      suggestedProblems.includes(p.id) &&
+      !currentCompleted.has(p.id)
+    );
+
+    const nextProblem = sameDifficultyProblem ||
+      currentProblems.find(p => suggestedProblems.includes(p.id) && !currentCompleted.has(p.id));
+
+    if (nextProblem) {
+      setCurrentProblem(nextProblem);
+      return;
+    }
+  }
+
+  // Fallback: find any unfinished problem
+  const unfinishedProblems = currentProblems.filter(p => !currentCompleted.has(p.id));
+  if (unfinishedProblems.length > 0) {
+    // Pick random unfinished problem
+    const randomIndex = Math.floor(Math.random() * unfinishedProblems.length);
+    setCurrentProblem(unfinishedProblems[randomIndex]);
+  } else {
+    // No more problems - go back
+    setCurrentProblem(null);
+  }
+};
+```
+
+#### **Krok 2: Funkcja pomocnicza do pobierania sugestii AI**
+```jsx
+const getSuggestedProblemsForModule = () => {
+  // Get suggestions from localStorage based on current mode
+  let storageKey = '';
+  if (mode === 'powers' || currentProblem?.id?.includes('kombinatoryka')) {
+    storageKey = 'trigonometry-suggested-problems';
+  } else if (mode === 'homographic-functions') {
+    storageKey = 'homographic-functions-suggested-problems';
+  } else if (mode === 'elementary-fractions') {
+    storageKey = 'elementary-fractions-suggested-problems';
+  } else if (mode === 'systems-of-equations') {
+    storageKey = 'systems-of-equations-suggested-problems';
+  }
+
+  if (storageKey) {
+    const suggested = localStorage.getItem(storageKey);
+    if (suggested) {
+      try {
+        return JSON.parse(suggested);
+      } catch (e) {
+        console.error('Error parsing suggested problems:', e);
+      }
+    }
+  }
+  return null;
+};
+```
+
+#### **Krok 3: Przekazanie handleSkip do ProblemView**
+```jsx
+<ProblemView
+  problem={currentProblem}
+  onBack={handleBack}
+  onComplete={handleComplete}
+  onSelectProblem={handleSelectProblem}
+  onSkip={handleSkip}  // Dodaj tę linię
+  completedProblems={getCurrentCompleted()}
+  problems={problems}
+/>
+```
+
+### **Implementacja w ProblemView.jsx**
+
+#### **Krok 1: Dodanie parametru onSkip**
+```jsx
+const ProblemView = ({
+  problem,
+  onBack,
+  onComplete,
+  onSelectProblem,
+  onSkip,  // Nowy parametr
+  completedProblems = new Set(),
+  problems = []
+}) => {
+```
+
+#### **Krok 2: Dodanie przycisku "Pomiń zadanie"**
+```jsx
+{/* Back Button and Skip Button */}
+<div className="mb-4 flex items-center justify-between">
+  <button
+    onClick={onBack}
+    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+  >
+    <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-6-6 6-6" />
+    </svg>
+    Zadania
+  </button>
+  {onSkip && !showSolution && (
+    <button
+      onClick={onSkip}
+      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-500 hover:text-stone-700 hover:bg-stone-100 rounded-lg transition-colors"
+    >
+      Pomiń zadanie
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l6 6-6 6" />
+      </svg>
+    </button>
+  )}
+</div>
+```
+
+### **Integracja z systemem uczenia (NextProblemSuggestion.jsx)**
+
+#### **Tracking wyboru użytkownika**
+```jsx
+const handleSuggestionClick = (problem, suggestionType = null) => {
+  if (problem && onSelectProblem) {
+    // Track choice for learning patterns
+    if (suggestionType) {
+      const choices = JSON.parse(localStorage.getItem('learning-patterns-choices') || '[]');
+      choices.push({
+        timestamp: Date.now(),
+        problemId: problem.id,
+        suggestionType: suggestionType, // 'easy', 'same', or 'hard'
+        currentDifficulty: problem.estimatedDifficulty || problem.difficulty || (problem.steps?.length || 0),
+        sessionId: sessionStorage.getItem('sessionId') || 'default'
+      });
+      // Keep only last 50 choices
+      if (choices.length > 50) {
+        choices.shift();
+      }
+      localStorage.setItem('learning-patterns-choices', JSON.stringify(choices));
+      console.log(`Tracked choice: ${suggestionType} for problem ${problem.id}`);
+    }
+    onSelectProblem(problem);
+  }
+};
+```
+
+### **LocalStorage struktura**
+
+#### **skipped-problems**
+Przechowuje historię pominiętych zadań (max 100):
+```json
+[
+  {
+    "problemId": "tex_problem_123",
+    "timestamp": 1694857200000,
+    "mode": "powers"
+  }
+]
+```
+
+#### **learning-patterns-choices**
+Trackuje wszystkie wybory użytkownika dla adaptacyjnego AI (max 50):
+```json
+[
+  {
+    "timestamp": 1694857200000,
+    "problemId": "tex_problem_123",
+    "suggestionType": "skip",  // lub "easy", "same", "hard"
+    "currentDifficulty": 3,
+    "sessionId": "lm2x9k"
+  }
+]
+```
+
+### **Flow działania**
+
+1. **Użytkownik klika "Pomiń zadanie"**
+   - Zadanie zapisywane jako pominięte
+   - Choice trackowane jako typ "skip" dla AI
+
+2. **System szuka następnego zadania**
+   - Priorytet 1: Sugestie AI z localStorage (`{module}-suggested-problems`)
+   - Priorytet 2: Zadanie o tej samej trudności z sugestii
+   - Priorytet 3: Dowolne zadanie z sugestii
+   - Fallback: Losowe nieukończone zadanie
+
+3. **Automatyczne przejście**
+   - Nowe zadanie ładowane bez powrotu do listy
+   - Użytkownik kontynuuje naukę bez przerwy
+
+### **Zalety implementacji**
+
+✅ **Bezstresowa nauka** - użytkownik może pominąć trudne zadania
+✅ **Inteligentny wybór** - AI sugeruje najlepsze następne zadanie
+✅ **Tracking dla adaptacji** - system uczy się z pominięć
+✅ **Płynny flow** - brak powrotu do listy, natychmiastowe następne zadanie
+✅ **Fallback** - zawsze znajdzie zadanie, nawet bez sugestii AI
+
+---
+
 ## **Podsumowanie**
 
 System StartHere zapewnia spójne, inteligentne doświadczenie użytkownika w całej aplikacji. Dzięki temu procesowi można łatwo dodawać nowe działy z zachowaniem wszystkich funkcjonalności:
