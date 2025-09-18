@@ -3648,7 +3648,7 @@
         "step": 1,
         "hint": "Jak oznaczyć nieznane w tym zadaniu?",
         "expression": "Oznaczmy: $d$ - odległość AB, $v_1$ - prędkość pierwszego turysty, $v_2$ - prędkość drugiego turysty",
-        "explanation": "Wprowadzamy podstawowe oznaczenia dla zadania",
+        "explanation": "Definiujemy zmienne: d to szukana odległość między miejscowościami, v₁ i v₂ to stałe prędkości turystów potrzebne do analizy ich ruchu",
         "interactive_choice": {
           "prompt": "Jakie oznaczenia wprowadzić do tego zadania?",
           "options": [
@@ -3678,26 +3678,26 @@
         "step": 2,
         "hint": "Co dzieje się podczas pierwszego spotkania turystów?",
         "expression": "Pierwsze spotkanie: w odległości 4 km od A, po czasie $t_1$",
-        "explanation": "Pierwszy turysta przeszedł 4 km, drugi przeszedł $(d-4)$ km",
+        "explanation": "W momencie pierwszego spotkania: pierwszy turysta (startujący z A) przebył 4 km, drugi turysta (startujący z B) przebył pozostałą część trasy do miejsca spotkania, czyli $(d-4)$ km",
         "why": "W pierwszym spotkaniu suma przebytych dróg równa się odległości AB."
       },
       {
         "step": 3,
         "hint": "Jaka jest suma dróg przebytych przez obu turystów do pierwszego spotkania?",
         "expression": "$v_1 \\cdot t_1 + v_2 \\cdot t_1 = d$",
-        "explanation": "Pierwszy przeszedł $v_1 t_1 = 4$ km, drugi $v_2 t_1 = d-4$ km"
+        "explanation": "W czasie $t_1$ do pierwszego spotkania: pierwszy turysta przebył $v_1 \cdot t_1 = 4$ km, drugi turysta przebył $v_2 \cdot t_1 = d-4$ km. Suma ich dróg musi równać się całkowitej odległości $d$"
       },
       {
         "step": 4,
         "hint": "Co możemy wywnioskować o stosunku prędkości z pierwszego spotkania?",
         "expression": "$\\frac{v_1}{v_2} = \\frac{4}{d-4}$",
-        "explanation": "Stosunek przebytych dróg równa się stosunkowi prędkości"
+        "explanation": "Ponieważ oba turystów szli przez ten sam czas $t_1$, stosunek przebytych przez nich dróg jest równy stosunkowi ich prędkości: $\frac{\text{droga}_1}{\text{droga}_2} = \frac{v_1 \cdot t_1}{v_2 \cdot t_1} = \frac{v_1}{v_2}$"
       },
       {
         "step": 5,
         "hint": "Gdzie znajdują się turyści w momencie drugiego spotkania?",
         "expression": "Drugie spotkanie: w odległości $(d-3)$ km od A, po czasie $t_2$",
-        "explanation": "Oba turysty są w tym samym miejscu - $(d-3)$ km od A",
+        "explanation": "Drugie spotkanie następuje w punkcie oddalonym o 3 km od B. Ponieważ całkowita odległość AB wynosi $d$, to miejsce spotkania jest oddalone o $(d-3)$ km od A",
         "interactive_choice": {
           "prompt": "Co oznacza spotkanie w odległości 3 km od B?",
           "options": [
@@ -3727,20 +3727,20 @@
         "step": 6,
         "hint": "Ile łącznie przeszli turyści do drugiego spotkania?",
         "expression": "Do drugiego spotkania suma przebytych dróg wynosi $3d$",
-        "explanation": "Każdy turysta przeszedł łącznie $1.5d$, więc razem $3d$",
+        "explanation": "Między dwoma spotkaniami jadących w przeciwnych kierunkach obiektów, każdy z nich przebywa łącznie 1,5 raza odległość między punktami startowymi. Dlatego suma dróg obu turystów wynosi $2 \times 1.5d = 3d$",
         "why": "Do drugiego spotkania każdy turysta przebył drogę równą 1.5 raza odległość AB - pierwszy doszedł do B i wrócił o $(d-3)$ km, drugi doszedł do A i wrócił o 3 km."
       },
       {
         "step": 7,
         "hint": "Jaki jest stosunek czasów pierwszego i drugiego spotkania?",
         "expression": "$\\frac{t_2}{t_1} = \\frac{3d}{d} = 3$",
-        "explanation": "Czas drugiego spotkania jest 3 razy dłuższy od pierwszego"
+        "explanation": "Ponieważ suma dróg do drugiego spotkania ($3d$) jest 3 razy większa niż do pierwszego ($d$), a prędkości są stałe, czas drugiego spotkania też jest 3 razy większy"
       },
       {
         "step": 8,
         "hint": "Ile przeszedł pierwszy turysta do drugiego spotkania?",
         "expression": "Pierwszy turysta przeszedł: $d + (d-3) = 2d-3$ km",
-        "explanation": "Doszedł do B, potem wrócił o $(d-3)$ km w kierunku A",
+        "explanation": "Pierwszy turysta najpierw przeszedł całą trasę z A do B (czyli $d$ km), następnie zawrócił i szedł z powrotem w kierunku A przez $(d-3)$ km, aby dotrzeć do miejsca drugiego spotkania",
         "interactive_choice": {
           "prompt": "Jak obliczyć drogę pierwszego turysty do drugiego spotkania?",
           "options": [
@@ -3770,43 +3770,43 @@
         "step": 9,
         "hint": "Jak wykorzystać fakt, że stosunek prędkości się nie zmienia?",
         "expression": "$\\frac{v_1}{v_2} = \\frac{4}{d-4} = \\frac{2d-3}{d+3}$",
-        "explanation": "Stosunek przebytych dróg w obu spotkaniach musi być taki sam"
+        "explanation": "Stosunek prędkości turystów jest stały, więc stosunek przebytych przez nich dróg w dowolnym momencie musi być taki sam. Porównujemy proporcje z pierwszego i drugiego spotkania"
       },
       {
         "step": 10,
         "hint": "Jak rozwiązać równanie proporcji?",
         "expression": "$4(d+3) = (d-4)(2d-3)$",
-        "explanation": "Przekształcamy proporcję do postaci równania"
+        "explanation": "Stosujemy podstawową właściwość proporcji: jeśli $\frac{a}{b} = \frac{c}{d}$, to $a \cdot d = b \cdot c$. Mnożymy na krzyż aby pozbyć się ułamków"
       },
       {
         "step": 11,
         "hint": "Co otrzymujemy po rozwinięciu nawiasów?",
         "expression": "$4d + 12 = 2d^2 - 3d - 8d + 12$",
-        "explanation": "Rozwijamy oba nawiasy"
+        "explanation": "Lewa strona: $4(d+3) = 4d + 12$. Prawa strona: $(d-4)(2d-3) = d \cdot 2d + d \cdot (-3) + (-4) \cdot 2d + (-4) \cdot (-3) = 2d^2 - 3d - 8d + 12$"
       },
       {
         "step": 12,
         "hint": "Jak uprościć równanie?",
         "expression": "$4d + 12 = 2d^2 - 11d + 12$",
-        "explanation": "Łączymy podobne składniki po prawej stronie"
+        "explanation": "Po prawej stronie grupujemy składniki z $d$: $-3d - 8d = -11d$, więc otrzymujemy $2d^2 - 11d + 12$"
       },
       {
         "step": 13,
         "hint": "Jaka jest postać standardowa tego równania kwadratowego?",
         "expression": "$2d^2 - 15d = 0$",
-        "explanation": "Przenosimy wszystko na jedną stronę i upraszczamy"
+        "explanation": "Odejmujemy od obu stron $4d + 12$: $(4d + 12) - (4d + 12) = (2d^2 - 11d + 12) - (4d + 12)$, co daje $0 = 2d^2 - 15d$"
       },
       {
         "step": 14,
         "hint": "Jak rozłożyć równanie na czynniki?",
         "expression": "$d(2d - 15) = 0$",
-        "explanation": "Wyłączamy $d$ przed nawias"
+        "explanation": "Oba składniki po prawej stronie zawierają $d$ jako czynnik: $2d^2 = d \cdot 2d$ i $15d = d \cdot 15$, więc $2d^2 - 15d = d(2d - 15)$"
       },
       {
         "step": 15,
         "hint": "Jakie są rozwiązania i które ma sens fizyczny?",
         "expression": "$d = 0$ lub $d = 7.5$ km",
-        "explanation": "Odrzucamy $d = 0$ jako nielogiczne, zostaje $d = 7.5$ km"
+        "explanation": "Z równania $d(2d - 15) = 0$ wynikają dwa rozwiązania: $d = 0$ lub $2d - 15 = 0$ (czyli $d = 7.5$). Rozwiązanie $d = 0$ nie ma sensu fizycznego (brak odległości między miejscowościami), więc odpowiedzią jest $d = 7.5$ km"
       }
     ],
     "solutions": [
