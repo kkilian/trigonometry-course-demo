@@ -3856,5 +3856,198 @@
     },
     "timestamp": "2025-09-18T06:27:35.370Z",
     "module": "rational-equations-word-problems"
+  },
+  {
+    "id": "tourists_meeting_problem",
+    "topic": "Zadania tekstowe - ruch jednostajny",
+    "difficulty": 4,
+    "statement": "Z miejscowości A i B wyruszyli jednocześnie dwaj turyści idący ze stałymi prędkościami. Pierwszy przeszedł drogę z A do B i zaraz wrócił do A. Drugi poszedł z B do A i wrócił do B. Turyści minęli się po raz pierwszy w odległości 4 km od A, drugi raz w odległości 3 km od B. Jaka jest odległość z A do B?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć nieznane w tym zadaniu?",
+        "expression": "Oznaczmy: $d$ = odległość AB, $v_1$ = prędkość pierwszego turysty, $v_2$ = prędkość drugiego",
+        "explanation": "Wprowadzamy podstawowe oznaczenia dla zadania",
+        "interactive_choice": {
+          "prompt": "Jakie oznaczenia wprowadzić do tego zadania o ruchu turystów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oznaczyć tylko odległość AB jako $d$",
+              "feedback": "Za mało - potrzebujemy też prędkości turystów do analizy spotkań",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Oznaczyć $d$ = odległość AB, $v_1$ i $v_2$ = prędkości turystów",
+              "feedback": "Świetnie! To pozwoli analizować pozycje turystów w czasie",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Oznaczyć tylko czasy spotkań $t_1$ i $t_2$",
+              "feedback": "Niewystarczające - bez prędkości nie określisz pozycji",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Potrzebujemy odległości AB oraz prędkości obu turystów do modelowania ich ruchu."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Gdzie znajdują się turyści w momencie pierwszego spotkania?",
+        "expression": "Pierwsze spotkanie: w odległości 4 km od A, czyli $(d-4)$ km od B",
+        "explanation": "Turyści spotykają się po raz pierwszy 4 km od punktu A"
+      },
+      {
+        "step": 3,
+        "hint": "Ile czasu minęło do pierwszego spotkania?",
+        "expression": "Czas pierwszego spotkania: $t_1 = \\frac{d}{v_1 + v_2}$",
+        "explanation": "W tym czasie razem przeszli całą odległość AB",
+        "why": "Kluczowa obserwacja: przy pierwszym spotkaniu suma przebytych dróg równa się odległości AB",
+        "interactive_choice": {
+          "prompt": "Jak wyznaczyć czas pierwszego spotkania turystów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Czas = $\\frac{4}{v_1}$ (czas pierwszego turysty do miejsca spotkania)",
+              "feedback": "Dobry kierunek! Ale można też użyć faktu, że razem przeszli odległość $d$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Razem przeszli odległość $d$, więc czas = $\\frac{d}{v_1 + v_2}$",
+              "feedback": "Doskonale! To eleganckie podejście - suma prędkości razy czas = odległość AB",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Czas = $\\frac{d-4}{v_2}$ (czas drugiego turysty)",
+              "feedback": "Też poprawne, ale lepiej użyć sumy prędkości",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Najlepiej myśleć o tym, że razem przeszli odległość AB w czasie $t_1 = \\frac{d}{v_1 + v_2}$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie równanie otrzymamy z pozycji pierwszego turysty?",
+        "expression": "Pierwszy turysta przeszedł: $v_1 \\cdot t_1 = v_1 \\cdot \\frac{d}{v_1 + v_2} = 4$",
+        "explanation": "Pierwszy turysta w czasie $t_1$ przeszedł 4 km od punktu A"
+      },
+      {
+        "step": 5,
+        "hint": "Co możemy wywnioskować o stosunku prędkości?",
+        "expression": "Z równania $\\frac{v_1 \\cdot d}{v_1 + v_2} = 4$ otrzymujemy: $\\frac{v_1}{v_1 + v_2} = \\frac{4}{d}$",
+        "explanation": "Stosunek prędkości pierwszego turysty do sumy prędkości"
+      },
+      {
+        "step": 6,
+        "hint": "Gdzie znajdują się turyści w momencie drugiego spotkania?",
+        "expression": "Drugie spotkanie: w odległości 3 km od B, czyli $(d-3)$ km od A",
+        "explanation": "Drugie spotkanie następuje 3 km od punktu B"
+      },
+      {
+        "step": 7,
+        "hint": "Ile łącznie przeszli turyści do drugiego spotkania?",
+        "expression": "Do drugiego spotkania razem przeszli: $3d$",
+        "explanation": "Suma przebytych dróg do drugiego spotkania wynosi $3d$",
+        "why": "Ogólna zasada: do n-tego spotkania suma dróg = $(2n-1)d$. Pierwszy turysta przeszedł $d + (d-3) = 2d-3$",
+        "interactive_choice": {
+          "prompt": "Jaka jest suma dróg przebytych przez turystów do drugiego spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Suma = $2d$ (każdy przeszedł średnio odległość $d$)",
+              "feedback": "Nie - to nie jest średnia, lecz konkretna suma przebytych odcinków",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Suma = $3d$ (razem przeszli trzy razy odległość AB)",
+              "feedback": "Dokładnie! Do drugiego spotkania razem przebyli $3d$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Suma = $d + (d-3) + 3 = 2d$",
+              "feedback": "To błędne liczenie - nie uwzględnia pełnych tras turystów",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór: do n-tego spotkania turyści razem przebywają $(2n-1) \\cdot d$. Dla $n=2$: $3d$."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jaki stosunek drogi przeszedł pierwszy turysta do drugiego spotkania?",
+        "expression": "Pierwszy turysta przeszedł: $2d - 3$ z łącznej drogi $3d$",
+        "explanation": "Pierwszy turysta: A→B→powrót do 3 km przed A, czyli $d + (d-3) = 2d-3$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak wykorzystać stałość stosunku prędkości?",
+        "expression": "Stosunek: $\\frac{2d-3}{3d} = \\frac{v_1}{v_1 + v_2} = \\frac{4}{d}$",
+        "explanation": "Stosunek drogi pierwszego turysty do sumy dróg jest stały (równy stosunkowi prędkości)"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie równanie otrzymamy z tej proporcji?",
+        "expression": "$(2d-3) \\cdot d = 4 \\cdot 3d$",
+        "explanation": "Przekształcamy proporcję do postaci równania"
+      },
+      {
+        "step": 11,
+        "hint": "Jak rozwiązać otrzymane równanie?",
+        "expression": "$2d^2 - 3d = 12d$",
+        "explanation": "Rozwijamy lewą stronę równania"
+      },
+      {
+        "step": 12,
+        "hint": "Do jakiej postaci sprowadzi się równanie?",
+        "expression": "$2d^2 - 15d = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę"
+      },
+      {
+        "step": 13,
+        "hint": "Jak rozłożyć równanie na czynniki?",
+        "expression": "$d(2d - 15) = 0$",
+        "explanation": "Wyłączamy $d$ przed nawias"
+      },
+      {
+        "step": 14,
+        "hint": "Które rozwiązanie ma sens fizyczny?",
+        "expression": "$d = 0$ lub $d = 7.5$",
+        "explanation": "Otrzymujemy dwa rozwiązania matematyczne"
+      },
+      {
+        "step": 15,
+        "hint": "Dlaczego odrzucamy jedno z rozwiązań?",
+        "expression": "$d = 7.5$ km",
+        "explanation": "Rozwiązanie $d = 0$ nie ma sensu fizycznego - odległość musi być dodatnia",
+        "why": "Sprawdzenie: przy $d = 7.5$ pierwszy turysta przeszedł $\\frac{4}{7.5} = \\frac{8}{15}$ całkowitej drogi w pierwszym spotkaniu, a $\\frac{2 \\cdot 7.5 - 3}{3 \\cdot 7.5} = \\frac{12}{22.5} = \\frac{8}{15}$ w drugim - stosunki się zgadzają!"
+      }
+    ],
+    "solutions": [
+      "$d = 7.5$ km"
+    ],
+    "parameters": {
+      "first_meeting": "4 km od A",
+      "second_meeting": "3 km od B"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-18T14:40:23.909Z"
   }
 ]
