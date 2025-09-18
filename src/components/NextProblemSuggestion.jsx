@@ -173,6 +173,20 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for elementary fractions:', suggestedIds);
       }
 
+      // Save suggested problems to localStorage for kombinatoryka-rozszerzenie module
+      if (currentProblem.id && currentProblem.id.includes('kombinatoryka-rozszerzenie')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('kombinatoryka-rozszerzenie-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for kombinatoryka-rozszerzenie:', suggestedIds);
+      }
+
+      // Save suggested problems to localStorage for rational equations word problems module
+      if (currentProblem.id && currentProblem.id.includes('rational-equation')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('rational-equations-word-problems-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for rational-equations-word-problems:', suggestedIds);
+      }
+
       return bestMatches;
 
     } catch (err) {

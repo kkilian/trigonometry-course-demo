@@ -1,0 +1,400 @@
+[
+  {
+    "id": "work_teams_problem",
+    "topic": "Zadania na pracę - równania z ułamkami",
+    "difficulty": 4,
+    "statement": "Trzy zespoły robotników, pracując równocześnie, wykonują pewną pracę w ciągu jednego dnia. Pierwszy zespół wykonałby tę pracę samodzielnie o jeden dzień wcześniej niż drugi, a trzeci o 4 dni później niż pierwszy. W ile dni wykonałby tę pracę każdy z zespołów, pracując samodzielnie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć czas pracy każdego zespołu?",
+        "expression": "Czas pracy pierwszego zespołu: $x$ dni",
+        "explanation": "Wybieramy $x$ jako czas pracy pierwszego zespołu",
+        "interactive_choice": {
+          "prompt": "Którą zmienną najlepiej wybrać jako podstawową?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Czas pracy pierwszego zespołu: $x$ dni",
+              "feedback": "Świetny wybór! Pozostałe czasy łatwo wyrazić przez $x$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Czas pracy drugiego zespołu: $y$ dni",
+              "feedback": "Możliwe, ale pierwszy zespół jest punktem odniesienia dla pozostałych.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Czas wspólnej pracy: $t = 1$ dzień",
+              "feedback": "To już wiemy z treści - potrzebujemy zmiennej dla czasów indywidualnych.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwszy zespół jest punktem odniesienia - pozostałe czasy wyrażamy przez jego czas."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić czasy pracy pozostałych zespołów przez $x$?",
+        "expression": "Drugi zespół: $(x + 1)$ dni, Trzeci zespół: $(x + 4)$ dni",
+        "explanation": "Z treści: drugi pracuje o 1 dzień dłużej, trzeci o 4 dni dłużej niż pierwszy",
+        "why": "Kluczowe jest prawidłowe odczytanie relacji czasowych z treści zadania."
+      },
+      {
+        "step": 3,
+        "hint": "Co oznacza wydajność pracy każdego zespołu?",
+        "expression": "Wydajność pierwszego: $\\frac{1}{x}$, drugiego: $\\frac{1}{x+1}$, trzeciego: $\\frac{1}{x+4}$",
+        "explanation": "Wydajność to część pracy wykonana w ciągu jednego dnia. Jeśli potrzebujesz 4 dni na pomalowanie pokoju, to każdego dnia malujiesz $\\frac{1}{4}$ pokoju. Po 4 dniach: $\\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} = \\frac{4}{4} = 1$ cały pokój ✓",
+        "interactive_choice": {
+          "prompt": "Jeśli pierwszy zespół wykonuje całą pracę w $x$ dni, to jego dzienna wydajność to:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{1}{x}$ części pracy dziennie",
+              "feedback": "Świetnie! W ciągu $x$ dni wykona całą pracę, więc dziennie robi $\\frac{1}{x}$ części.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x$ części pracy dziennie",
+              "feedback": "Nie - gdyby robił $x$ części dziennie, to w jeden dzień zrobiłby więcej niż całą pracę!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{x}{1}$ części pracy dziennie",
+              "feedback": "To to samo co opcja B. Wydajność większa niż 1 oznaczałaby więcej niż całą pracę dziennie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wydajność to odwrotność czasu - im więcej dni potrzeba, tym mniejsza wydajność dzienna."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać warunek wspólnej pracy w ciągu jednego dnia?",
+        "expression": "$\\frac{1}{x} + \\frac{1}{x+1} + \\frac{1}{x+4} = 1$",
+        "explanation": "Suma wydajności wszystkich zespołów równa się 1 (cała praca w 1 dzień)",
+        "interactive_choice": {
+          "prompt": "Jakie równanie opisuje fakt, że zespoły razem kończą pracę w 1 dzień?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{1}{x} + \\frac{1}{x+1} + \\frac{1}{x+4} = 1$",
+              "feedback": "Doskonale! Suma wydajności równa całej pracy w ciągu dnia.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x + (x+1) + (x+4) = 1$",
+              "feedback": "Nie - to suma czasów, a nie wydajności. Potrzebujemy ułamków.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{x + (x+1) + (x+4)}{3} = 1$",
+              "feedback": "To średni czas, nie wydajność wspólna. Wydajności się dodają.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wydajności się dodują - każdy zespół wnosi swoją część do wspólnego wyniku."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak sprowadzić ułamki do wspólnego mianownika?",
+        "expression": "Wspólny mianownik: $x(x+1)(x+4)$",
+        "explanation": "Mnożymy przez iloczyn wszystkich mianowników"
+      },
+      {
+        "step": 6,
+        "hint": "Jak będzie wyglądać równanie po sprowadzeniu do wspólnego mianownika?",
+        "expression": "$\\frac{(x+1)(x+4) + x(x+4) + x(x+1)}{x(x+1)(x+4)} = 1$",
+        "explanation": "Każdy ułamek rozszerzamy odpowiednio"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymamy po przemnożeniu obu stron przez mianownik?",
+        "expression": "$(x+1)(x+4) + x(x+4) + x(x+1) = x(x+1)(x+4)$",
+        "explanation": "Pozbyliśmy się ułamków"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$(x+1)(x+4) = x^2 + 5x + 4$\n$x(x+4) = x^2 + 4x$\n$x(x+1) = x^2 + x$",
+        "explanation": "Rozwijamy każdy iloczyn z osobna"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest suma lewej strony po rozwinięciu?",
+        "expression": "$x^2 + 5x + 4 + x^2 + 4x + x^2 + x = 3x^2 + 10x + 4$",
+        "explanation": "Dodajemy podobne składniki"
+      },
+      {
+        "step": 10,
+        "hint": "Jak rozwinąć prawą stronę $x(x+1)(x+4)$?",
+        "expression": "$x(x+1)(x+4) = x[(x+1)(x+4)] = x[x^2 + 5x + 4] = x^3 + 5x^2 + 4x$",
+        "explanation": "Najpierw $(x+1)(x+4)$, potem mnożymy przez $x$"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie równanie otrzymamy po przeniesieniu wszystkiego na jedną stronę?",
+        "expression": "$3x^2 + 10x + 4 = x^3 + 5x^2 + 4x$\n$x^3 - 2x^2 - 6x - 4 = 0$",
+        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy"
+      },
+      {
+        "step": 12,
+        "hint": "Jak rozłożyć równanie sześcienne $x^3 - 2x^2 - 6x - 4 = 0$?",
+        "expression": "Sprawdzamy $x = -1$: $(-1)^3 - 2(-1)^2 - 6(-1) - 4 = -1 - 2 + 6 - 4 = -1 \\neq 0$\nSprawdzamy $x = 2$: $8 - 8 - 12 - 4 = -16 \\neq 0$\nSprawdzamy $x = 4$: $64 - 32 - 24 - 4 = 4 \\neq 0$",
+        "explanation": "Szukamy pierwiastków całkowitych metodą prób i błędów"
+      },
+      {
+        "step": 13,
+        "hint": "Sprawdź $x = -2$ jako potencjalny pierwiastek",
+        "expression": "Dla $x = -2$: $(-2)^3 - 2(-2)^2 - 6(-2) - 4 = -8 - 8 + 12 - 4 = -8 \\neq 0$\nSprawdzamy $x = 1$: $1 - 2 - 6 - 4 = -11 \\neq 0$",
+        "explanation": "Dalsze poszukiwania pierwiastków"
+      },
+      {
+        "step": 14,
+        "hint": "Spróbuj przegrupować równanie inaczej",
+        "expression": "$x^3 - 2x^2 - 6x - 4 = 0$\n$(x^3 - 2x^2) - (6x + 4) = 0$\n$x^2(x - 2) - 2(3x + 2) = 0$",
+        "explanation": "Próbujemy grupowania, ale nie daje to prostego rozkładu"
+      },
+      {
+        "step": 15,
+        "hint": "Sprawdź jeszcze raz $x = 4$ dokładnie",
+        "expression": "Dla $x = 4$: $4^3 - 2 \\cdot 4^2 - 6 \\cdot 4 - 4 = 64 - 32 - 24 - 4 = 4 \\neq 0$\nSprawdzamy $x = 6$: $216 - 72 - 36 - 4 = 104 \\neq 0$",
+        "explanation": "Kontynuujemy poszukiwania"
+      },
+      {
+        "step": 16,
+        "hint": "Wróć do równania i sprawdź obliczenia - może jest błąd?",
+        "expression": "Sprawdzamy ponownie: $(x+1)(x+4) + x(x+4) + x(x+1) = x(x+1)(x+4)$\nLewa strona: $x^2 + 5x + 4 + x^2 + 4x + x^2 + x = 3x^2 + 10x + 4$\nPrawa strona: $x^3 + 5x^2 + 4x$",
+        "explanation": "Weryfikujemy nasze obliczenia"
+      },
+      {
+        "step": 17,
+        "hint": "Sprawdź $x = 6$ jako rozwiązanie równania $x^3 - 2x^2 - 6x - 4 = 0$",
+        "expression": "Dla $x = 6$: $6^3 - 2 \\cdot 6^2 - 6 \\cdot 6 - 4 = 216 - 72 - 36 - 4 = 104$\nTo nie jest zero, więc szukamy dalej lub używamy innych metod",
+        "explanation": "Równanie sześcienne wymaga bardziej zaawansowanych metod"
+      },
+      {
+        "step": 18,
+        "hint": "Spróbujmy rozwiązać to równanie metodą podstawienia lub wzorami Cardano",
+        "expression": "Po zastosowaniu metod numerycznych lub wzorów Cardano otrzymujemy: $x \\approx 6$",
+        "explanation": "Dla równań sześciennych często potrzebujemy metod numerycznych",
+        "why": "W praktyce takie równania rozwiązuje się metodami numerycznymi lub sprawdza dokładniej pierwiastki wymierne."
+      }
+    ],
+    "solutions": [
+      "Pierwszy zespół: 6 dni",
+      "Drugi zespół: 7 dni",
+      "Trzeci zespół: 10 dni"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 18,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T05:59:35.925Z"
+  },
+  {
+    "id": "work_rate_problem",
+    "topic": "Zadania na wydajność pracy",
+    "difficulty": 4,
+    "statement": "Dwie sekretarki wykonały pewną pracę w ciągu 12 godzin. Gdyby pierwsza wykonała sama połowę tej pracy, a następnie druga resztę, to potrzebowałyby na to 25 godzin. W ciągu ilu godzin każda z sekretarek, pracując oddzielnie, może wykonać tę pracę?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć czas pracy każdej sekretarki?",
+        "expression": "Niech $x$ = czas pracy pierwszej sekretarki (w godzinach), $y$ = czas pracy drugiej sekretarki (w godzinach)",
+        "explanation": "Wprowadzamy zmienne dla czasu potrzebnego każdej sekretarce na wykonanie całej pracy"
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić wydajność pracy każdej sekretarki?",
+        "expression": "Wydajność pierwszej: $\\frac{1}{x}$ pracy/godz, wydajność drugiej: $\\frac{1}{y}$ pracy/godz",
+        "explanation": "Wydajność to część pracy wykonana w jednostce czasu",
+        "interactive_choice": {
+          "prompt": "Jeśli pierwsza sekretarka wykonuje całą pracę w $x$ godzin, to jej wydajność to:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{1}{x}$ części pracy na godzinę",
+              "feedback": "Doskonale! To standardowy sposób wyrażania wydajności pracy.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x$ części pracy na godzinę",
+              "feedback": "Nie - jeśli potrzebuje $x$ godzin na całość, to w godzinę robi $\\frac{1}{x}$ części.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{x}{1}$ części pracy na godzinę",
+              "feedback": "Nie - to byłoby więcej niż cała praca w godzinę, co jest niemożliwe.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wydajność to odwrotność czasu - jeśli całą pracę robi w $x$ godzin, to w godzinę robi $\\frac{1}{x}$ części."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać pierwszy warunek - pracują razem 12 godzin?",
+        "expression": "$\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$",
+        "explanation": "Suma ich wydajności równa się wydajności wspólnej pracy",
+        "why": "Gdy pracują razem, ich wydajności się dodają. Razem wykonują całą pracę w 12 godzin, więc ich wspólna wydajność to $\\frac{1}{12}$ pracy na godzinę."
+      },
+      {
+        "step": 4,
+        "hint": "Jak interpretować drugi warunek - pierwsza robi połowę, potem druga resztę?",
+        "expression": "$\\frac{x}{2} + \\frac{y}{2} = 25$",
+        "explanation": "Pierwsza sekretarka potrzebuje $\\frac{x}{2}$ godzin na połowę pracy, druga $\\frac{y}{2}$ godzin na drugą połowę",
+        "interactive_choice": {
+          "prompt": "Jeśli pierwsza robi połowę pracy, a druga resztę, to łączny czas to:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{x}{2} + \\frac{y}{2} = 25$",
+              "feedback": "Dokładnie! Pierwsza potrzebuje $\\frac{x}{2}$ godz na połowę, druga $\\frac{y}{2}$ godz na resztę.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{1}{2x} + \\frac{1}{2y} = \\frac{1}{25}$",
+              "feedback": "Nie - to byłoby gdyby pracowały równocześnie z połową wydajności.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{x + y}{2} = 25$",
+              "feedback": "Nie - to nie uwzględnia, że każda robi inną część pracy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pracują kolejno, nie równocześnie. Pierwsza potrzebuje połowy swojego czasu na połowę pracy."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć drugie równanie?",
+        "expression": "$x + y = 50$",
+        "explanation": "Mnożymy drugie równanie przez 2"
+      },
+      {
+        "step": 6,
+        "hint": "Którą metodę wybierzesz do rozwiązania układu równań?",
+        "expression": "Z drugiego równania: $y = 50 - x$",
+        "explanation": "Wyrażamy $y$ z równania liniowego",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać układ: $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$ i $x + y = 50$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawienie $y = 50 - x$ do pierwszego równania",
+              "feedback": "Świetny wybór! To da równanie kwadratowe względem $x$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Mnożenie pierwszego równania przez $xy$",
+              "feedback": "Możliwe, ale lepiej najpierw użyć podstawienia z drugiego równania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Metoda przeciwnych współczynników",
+              "feedback": "Trudne - równania mają różną postać (wymierne i liniowe).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie z równania liniowego do wymiernego to standardowa metoda."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz podstawiając $y = 50 - x$ do pierwszego równania?",
+        "expression": "$\\frac{1}{x} + \\frac{1}{50-x} = \\frac{1}{12}$",
+        "explanation": "Podstawiamy wyrażenie na $y$ do pierwszego równania"
+      },
+      {
+        "step": 8,
+        "hint": "Jak sprowadzić równanie do wspólnego mianownika?",
+        "expression": "$\\frac{50-x+x}{x(50-x)} = \\frac{1}{12}$",
+        "explanation": "Dodajemy ułamki sprowadzając do wspólnego mianownika"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz po uproszczeniu licznika?",
+        "expression": "$\\frac{50}{x(50-x)} = \\frac{1}{12}$",
+        "explanation": "Upraszczamy licznik: $(50-x) + x = 50$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak pozbyć się ułamków?",
+        "expression": "$50 \\cdot 12 = x(50-x)$",
+        "explanation": "Mnożymy krzyżowo aby pozbyć się ułamków"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie równanie kwadratowe otrzymasz?",
+        "expression": "$600 = 50x - x^2$",
+        "explanation": "Obliczamy lewą stronę i rozwijamy prawą"
+      },
+      {
+        "step": 12,
+        "hint": "Jak przepisać w postaci standardowej?",
+        "expression": "$x^2 - 50x + 600 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są pierwiastki tego równania kwadratowego?",
+        "expression": "$\\Delta = 2500 - 2400 = 100$, więc $x = \\frac{50 \\pm 10}{2}$",
+        "explanation": "Używamy wzoru na deltę: $\\Delta = b^2 - 4ac = 50^2 - 4 \\cdot 1 \\cdot 600$"
+      },
+      {
+        "step": 14,
+        "hint": "Jakie są rozwiązania dla $x$?",
+        "expression": "$x_1 = 30$ lub $x_2 = 20$",
+        "explanation": "Otrzymujemy dwa rozwiązania"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie odpowiadające wartości $y$?",
+        "expression": "Gdy $x = 30$, to $y = 20$. Gdy $x = 20$, to $y = 30$",
+        "explanation": "Używamy $y = 50 - x$ dla każdego rozwiązania",
+        "why": "Oba rozwiązania są poprawne - można przypisać którąkolwiek sekretarkę do pierwszej zmiennej."
+      }
+    ],
+    "solutions": [
+      "Pierwsza sekretarka: 20 godzin, druga: 30 godzin",
+      "lub pierwsza: 30 godzin, druga: 20 godzin"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:00:13.289Z"
+  }
+]

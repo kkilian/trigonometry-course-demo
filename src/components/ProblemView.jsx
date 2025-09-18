@@ -488,6 +488,17 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
             </div>
           )}
 
+          {/* Next Problem Suggestions - Show when problem is completed */}
+          {showSolution && (
+            <NextProblemSuggestion
+              currentProblem={problem}
+              completedProblems={completedProblems}
+              onSelectProblem={onSelectProblem}
+              solveDuration={solveDurationRef.current}
+              problems={problems}
+            />
+          )}
+
         </div>
       </div>
     </div>

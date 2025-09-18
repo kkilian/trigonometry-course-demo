@@ -5,10 +5,13 @@ import WelcomeScreen from './WelcomeScreen';
 import PolynomialTopics from './PolynomialTopics';
 import BasicsTopics from './BasicsTopics';
 import BasicsReorganized from './BasicsReorganized';
+import KombinatorykTopics from './KombinatorykTopics';
 import KombinatorykStartHere from './KombinatorykStartHere';
+import KombinatorykRozszerzenieStartHere from './KombinatorykRozszerzenieStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
 import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
+import RationalEquationsWordProblemsStartHere from './RationalEquationsWordProblemsStartHere';
 import powersProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -35,6 +38,8 @@ import basicsProcentyProblems from '../data/basics-procenty.json';
 import basicsPrzyblizeniaProblems from '../data/basics-przyblizenia.json';
 import basicsWartoscBezwzglednaProblems from '../data/basics-wartosc-bezwzgledna.json';
 import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
+import kombinatorykaRozszerzenieProblems from '../data/kombinatoryka-rozszerzenie-problems.json';
+import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
 
 const TrigonometryCourse = () => {
@@ -72,6 +77,8 @@ const TrigonometryCourse = () => {
   const [completedSystemsOfEquationsProblems, setCompletedSystemsOfEquationsProblems] = useState(new Set());
   const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
   const [completedElementaryFractionsProblems, setCompletedElementaryFractionsProblems] = useState(new Set());
+  const [completedRationalEquationsWordProblems, setCompletedRationalEquationsWordProblems] = useState(new Set());
+  const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -117,6 +124,8 @@ const TrigonometryCourse = () => {
     if (mode === 'homographic-functions') return homographicFunctionsProblems;
     if (mode === 'elementary-fractions') return elementaryFractionsProblems;
     if (mode === 'kombinatoryka') return kombinatorykaProblems;
+    if (mode === 'kombinatoryka-rozszerzenie') return kombinatorykaRozszerzenieProblems;
+    if (mode === 'rational-equations-word-problems') return rationalEquationsWordProblems;
     if (mode === 'statystyka') return statystykaProblems;
     return [];
   };
@@ -144,6 +153,9 @@ const TrigonometryCourse = () => {
     if (mode === 'systems-of-equations') return completedSystemsOfEquationsProblems;
     if (mode === 'homographic-functions') return completedHomographicFunctionsProblems;
     if (mode === 'elementary-fractions') return completedElementaryFractionsProblems;
+    if (mode === 'rational-equations-word-problems') return completedRationalEquationsWordProblems;
+    if (mode === 'kombinatoryka') return completedPowersProblems; // kombinatoryka uses the same as powers
+    if (mode === 'kombinatoryka-rozszerzenie') return completedKombinatorykRozszerzenieProblems;
     return completedPowersProblems;
   };
   
@@ -190,6 +202,12 @@ const TrigonometryCourse = () => {
       setCompletedHomographicFunctionsProblems(newSet);
     } else if (mode === 'elementary-fractions') {
       setCompletedElementaryFractionsProblems(newSet);
+    } else if (mode === 'rational-equations-word-problems') {
+      setCompletedRationalEquationsWordProblems(newSet);
+    } else if (mode === 'kombinatoryka') {
+      setCompletedPowersProblems(newSet); // kombinatoryka uses the same as powers
+    } else if (mode === 'kombinatoryka-rozszerzenie') {
+      setCompletedKombinatorykRozszerzenieProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -338,6 +356,18 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
+    if (mode === 'kombinatoryka-rozszerzenie') {
+      return {
+        title: 'Kombinatoryka - Rozszerzenie',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
+    if (mode === 'rational-equations-word-problems') {
+      return {
+        title: 'Zadania tekstowe prowadzące do równań wymiernych',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
     if (mode === 'statystyka') {
       return {
         title: 'Statystyka',
@@ -403,6 +433,26 @@ const TrigonometryCourse = () => {
         console.error('Error loading elementary-fractions progress:', e);
       }
     }
+
+    // Load rational-equations-word-problems progress
+    const savedRationalEquationsWordProblems = localStorage.getItem('completedRationalEquationsWordProblems');
+    if (savedRationalEquationsWordProblems) {
+      try {
+        setCompletedRationalEquationsWordProblems(new Set(JSON.parse(savedRationalEquationsWordProblems)));
+      } catch (e) {
+        console.error('Error loading rational-equations-word-problems progress:', e);
+      }
+    }
+
+    // Load kombinatoryka-rozszerzenie progress
+    const savedKombinatorykRozszerzenie = localStorage.getItem('completedKombinatorykRozszerzenieProblems');
+    if (savedKombinatorykRozszerzenie) {
+      try {
+        setCompletedKombinatorykRozszerzenieProblems(new Set(JSON.parse(savedKombinatorykRozszerzenie)));
+      } catch (e) {
+        console.error('Error loading kombinatoryka-rozszerzenie progress:', e);
+      }
+    }
   }, []);
 
   // Save powers progress
@@ -429,6 +479,16 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedElementaryFractionsProblems', JSON.stringify([...completedElementaryFractionsProblems]));
   }, [completedElementaryFractionsProblems]);
+
+  // Save rational-equations-word-problems progress
+  useEffect(() => {
+    localStorage.setItem('completedRationalEquationsWordProblems', JSON.stringify([...completedRationalEquationsWordProblems]));
+  }, [completedRationalEquationsWordProblems]);
+
+  // Save kombinatoryka-rozszerzenie progress
+  useEffect(() => {
+    localStorage.setItem('completedKombinatorykRozszerzenieProblems', JSON.stringify([...completedKombinatorykRozszerzenieProblems]));
+  }, [completedKombinatorykRozszerzenieProblems]);
 
   const handleSelectProblem = (problem) => {
     setCurrentProblem(problem);
@@ -513,14 +573,18 @@ const TrigonometryCourse = () => {
   const getSuggestedProblemsForModule = () => {
     // Get suggestions from localStorage based on current mode
     let storageKey = '';
-    if (mode === 'powers' || currentProblem?.id?.includes('kombinatoryka')) {
-      storageKey = 'trigonometry-suggested-problems';
+    if (mode === 'powers' || mode === 'kombinatoryka') {
+      storageKey = 'kombinatoryka-suggested-problems';
     } else if (mode === 'homographic-functions') {
       storageKey = 'homographic-functions-suggested-problems';
     } else if (mode === 'elementary-fractions') {
       storageKey = 'elementary-fractions-suggested-problems';
     } else if (mode === 'systems-of-equations') {
       storageKey = 'systems-of-equations-suggested-problems';
+    } else if (mode === 'rational-equations-word-problems') {
+      storageKey = 'rational-equations-word-problems-suggested-problems';
+    } else if (mode === 'kombinatoryka-rozszerzenie') {
+      storageKey = 'kombinatoryka-rozszerzenie-suggested-problems';
     }
 
     if (storageKey) {
@@ -548,6 +612,11 @@ const TrigonometryCourse = () => {
     setCurrentProblem(null);
   };
 
+  const handleKombinatorykTopicSelect = (topicId) => {
+    setMode(topicId);
+    setCurrentProblem(null);
+  };
+
   const handleBackToPolynomialTopics = () => {
     setMode('polynomials');
     setCurrentProblem(null);
@@ -560,9 +629,14 @@ const TrigonometryCourse = () => {
 
   const handleBackToBasicsTopics = () => {
     // Check if we came from reorganized basics
-    const wasFromReorganized = mode.startsWith('basics-') && 
+    const wasFromReorganized = mode.startsWith('basics-') &&
       localStorage.getItem('lastBasicsMode') === 'basics-reorganized';
     setMode(wasFromReorganized ? 'basics-reorganized' : 'basics');
+    setCurrentProblem(null);
+  };
+
+  const handleBackToKombinatorykTopics = () => {
+    setMode('kombinatoryka-menu');
     setCurrentProblem(null);
   };
 
@@ -602,8 +676,18 @@ const TrigonometryCourse = () => {
   if (mode === 'basics-reorganized') {
     localStorage.setItem('lastBasicsMode', 'basics-reorganized');
     return (
-      <BasicsReorganized 
+      <BasicsReorganized
         onSelectTopic={handleBasicsTopicSelect}
+        onBack={handleBackToWelcome}
+      />
+    );
+  }
+
+  // Render kombinatoryka topics menu
+  if (mode === 'kombinatoryka-menu') {
+    return (
+      <KombinatorykTopics
+        onSelectTopic={handleKombinatorykTopicSelect}
         onBack={handleBackToWelcome}
       />
     );
@@ -655,6 +739,30 @@ const TrigonometryCourse = () => {
           completedProblems={getCurrentCompleted()}
           onBack={handleBackToWelcome}
         />
+      ) : mode === 'kombinatoryka' ? (
+        // Special handling for kombinatoryka - show start here screen instead of problem list
+        <KombinatorykStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
+        />
+      ) : mode === 'rational-equations-word-problems' ? (
+        // Special handling for rational equations word problems - show start here screen instead of problem list
+        <RationalEquationsWordProblemsStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
+        />
+      ) : mode === 'kombinatoryka-rozszerzenie' ? (
+        // Special handling for kombinatoryka-rozszerzenie - show start here screen instead of problem list
+        <KombinatorykRozszerzenieStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={handleBackToWelcome}
+        />
       ) : (
         <ProblemList
           problems={problems}
@@ -663,8 +771,9 @@ const TrigonometryCourse = () => {
           title={sectionInfo.title}
           subtitle={sectionInfo.subtitle}
           onBack={
-            mode.startsWith('polynomial-') ? handleBackToPolynomialTopics : 
+            mode.startsWith('polynomial-') ? handleBackToPolynomialTopics :
             mode.startsWith('basics-') ? handleBackToBasicsTopics :
+            (mode === 'kombinatoryka' || mode === 'kombinatoryka-rozszerzenie') ? handleBackToKombinatorykTopics :
             handleBackToWelcome
           }
         />

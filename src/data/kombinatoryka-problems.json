@@ -1,6 +1,6 @@
 [
   {
-    "id": "elevator_combinatorics",
+    "id": "elevator_combinatorics_any_floor",
     "topic": "Kombinatoryka - rozmieszczenia z powtórzeniami",
     "difficulty": 3,
     "statement": "Na parterze wieżowca mającego osiem pięter do windy wsiada pięć osób. Na ile sposobów te osoby mogą wysiąść na piętrach, jeśli każda z tych osób wybiera piętro dowolnie? Pomijamy kolejność wysiadania z windy na poszczególnych piętrach.",
@@ -144,7 +144,7 @@
     "timestamp": "2025-09-13T19:19:54.074Z"
   },
   {
-    "id": "elevator_combinatorics",
+    "id": "elevator_combinatorics_specific_floors",
     "topic": "Kombinatoryka - rozmieszczenia z powtórzeniami",
     "difficulty": 3,
     "statement": "Na parterze wieżowca mającego osiem pięter do windy wsiada pięć osób. Na ile sposobów te osoby mogą wysiąść na piętrach, jeśli każda z tych osób wysiada na czwartym, piątym lub szóstym piętrze? Pomijamy kolejność wysiadania z windy na poszczególnych piętrach.",
@@ -424,7 +424,7 @@
     "timestamp": "2025-09-13T19:20:54.868Z"
   },
   {
-    "id": "elevator_combinatorics",
+    "id": "elevator_combinatorics_at_least_one",
     "topic": "Kombinatoryka - zasada włączeń i wyłączeń",
     "difficulty": 4,
     "statement": "Na parterze wieżowca mającego osiem pięter do windy wsiada pięć osób. Na ile sposobów te osoby mogą wysiąść na piętrach, jeśli co najmniej jedna osoba wysiada na siódmym piętrze? Pomijamy kolejność wysiadania z windy na poszczególnych piętrach.",
@@ -1109,7 +1109,7 @@
     "timestamp": "2025-09-13T19:23:16.446Z"
   },
   {
-    "id": "ordered_pairs_logic",
+    "id": "ordered_pairs_logic_range",
     "topic": "Kombinatoryka i logika",
     "difficulty": 3,
     "statement": "Dany jest zbiór $X = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$. Ile jest par uporządkowanych $(a, b)$ takich, że liczby $a, b$ należą do zbioru $X$ oraz liczba $a$ jest mniejsza od 3 lub liczba $b$ jest większa od 7?",
@@ -1264,7 +1264,7 @@
     "timestamp": "2025-09-13T19:23:48.235Z"
   },
   {
-    "id": "ordered_pairs_counting",
+    "id": "ordered_pairs_greater_than",
     "topic": "Kombinatoryka - zliczanie par uporządkowanych",
     "difficulty": 3,
     "statement": "Dany jest zbiór $X = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$. Ile jest par uporządkowanych $(a, b)$ takich, że liczby $a, b$ należą do zbioru $X$ oraz liczba $a$ jest większa od $b$ lub liczba $b$ jest większa od liczby $9$?",
@@ -1412,7 +1412,7 @@
     "timestamp": "2025-09-13T19:24:29.301Z"
   },
   {
-    "id": "ordered_pairs_counting",
+    "id": "ordered_pairs_divisible",
     "topic": "Kombinatoryka - zliczanie par uporządkowanych",
     "difficulty": 3,
     "statement": "Dany jest zbiór $X = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$. Ile jest par uporządkowanych $(a, b)$ takich, że liczby $a, b$ należą do zbioru $X$ oraz liczba $a$ jest nie mniejsza niż 4 i jednocześnie liczba $b$ jest podzielna przez 3 lub przez 5?",
@@ -1556,7 +1556,7 @@
     "timestamp": "2025-09-13T19:24:58.347Z"
   },
   {
-    "id": "ordered_pairs_logic",
+    "id": "ordered_pairs_logic_prime",
     "topic": "Kombinatoryka i logika",
     "difficulty": 3,
     "statement": "Dany jest zbiór $X = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$. Ile jest par uporządkowanych $(a, b)$ takich, że liczby $a, b$ należą do zbioru $X$ oraz liczba $a$ jest liczbą pierwszą lub liczba $b$ jest nie większa niż 6?",
@@ -2151,7 +2151,7 @@
     "timestamp": "2025-09-13T19:27:06.549Z"
   },
   {
-    "id": "three_digit_numbers_combinatorics",
+    "id": "three_digit_numbers_under_444",
     "topic": "Kombinatoryka - liczby o różnych cyfrach",
     "difficulty": 4,
     "statement": "Ile jest liczb trzycyfrowych o różnych cyfrach, utworzonych z cyfr należących do zbioru {1, 2, 3, 4, 5, 6, 7} i jednocześnie mniejszych od 444?",
@@ -2306,7 +2306,7 @@
     "timestamp": "2025-09-13T19:27:38.916Z"
   },
   {
-    "id": "three_digit_numbers_combinatorics",
+    "id": "three_digit_numbers_under_780",
     "topic": "Kombinatoryka - liczby trzycyfrowe z warunkami",
     "difficulty": 4,
     "statement": "Ile jest liczb trzycyfrowych o różnych cyfrach, utworzonych z cyfr należących do zbioru {1, 2, 3, 4, 5, 6, 7, 8, 9} i jednocześnie mniejszych od 780?",
@@ -4488,7 +4488,7 @@
     "timestamp": "2025-09-14T06:21:26.628Z"
   },
   {
-    "id": "four_digit_counting",
+    "id": "four_digit_first_greater",
     "topic": "Kombinatoryka - zliczanie",
     "difficulty": 3,
     "statement": "Ile jest liczb czterocyfrowych, w których pierwsza cyfra jest większa od ostatniej, a cyfry mogą się powtarzać?",
@@ -7615,6 +7615,1035 @@
       }
     },
     "timestamp": "2025-09-15T12:47:37.229Z"
+  },
+  {
+    "id": "even_product_pairs",
+    "topic": "Kombinatoryka i prawdopodobieństwo",
+    "difficulty": 3,
+    "statement": "Ze zbioru liczb {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} losujemy bez zwracania dwa razy po jednej liczbie. Wylosowane liczby tworzą parę (a, b), gdzie a jest wynikiem pierwszego losowania, b jest wynikiem drugiego losowania. Oblicz, ile jest wszystkich par (a, b) takich, że iloczyn $a \\cdot b$ jest liczbą parzystą.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy iloczyn dwóch liczb jest parzysty?",
+        "expression": "Iloczyn $a \\cdot b$ jest parzysty, gdy co najmniej jedna z liczb $a$ lub $b$ jest parzysta",
+        "explanation": "Iloczyn jest parzysty gdy zawiera czynnik parzysty",
+        "why": "To kluczowa obserwacja - iloczyn jest nieparzysty tylko gdy obie liczby są nieparzyste"
+      },
+      {
+        "step": 2,
+        "hint": "Jak podzielić zbiór {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} na parzyste i nieparzyste?",
+        "expression": "Liczby parzyste: {2,4,6,8,10,12,14} - jest ich 7\nLiczby nieparzyste: {1,3,5,7,9,11,13,15} - jest ich 8",
+        "explanation": "Dzielimy zbiór na dwie kategorie"
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę wybierzesz do policzenia par o parzystym iloczynie?",
+        "expression": "Użyjemy wzoru: pary parzyste = wszystkie pary - pary nieparzyste",
+        "explanation": "Wybieramy metodę przez dopełnienie",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej policzyć pary (a,b) o parzystym iloczynie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednio - liczyć wszystkie pary z co najmniej jedną liczbą parzystą",
+              "feedback": "Możliwe, ale pracochłonne - trzeba rozpatrzyć wiele przypadków",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przez dopełnienie - policzyć wszystkie pary, potem odjąć te o nieparzystym iloczynie",
+              "feedback": "Świetnie! To znacznie prostsze - pary nieparzyste to tylko (nieparzysta, nieparzysta)",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Osobno przypadki: (parzysta, parzysta), (parzysta, nieparzysta), (nieparzysta, parzysta)",
+              "feedback": "Można, ale więcej rachunków niż metoda dopełnienia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Metoda dopełnienia jest najefektywniejsza - łatwiej policzyć pary nieparzyste"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile jest wszystkich możliwych par (a,b) przy losowaniu bez zwracania?",
+        "expression": "Wszystkich par: $15 \\cdot 14 = 210$",
+        "explanation": "Pierwsza liczba: 15 możliwości, druga: 14 możliwości (bez zwracania)"
+      },
+      {
+        "step": 5,
+        "hint": "Kiedy iloczyn $a \\cdot b$ jest nieparzysty?",
+        "expression": "Iloczyn jest nieparzysty gdy obie liczby $a$ i $b$ są nieparzyste",
+        "explanation": "Jedyny przypadek nieparzystego iloczynu"
+      },
+      {
+        "step": 6,
+        "hint": "Ile jest par (a,b) gdzie obie liczby są nieparzyste?",
+        "expression": "Par nieparzystych: $8 \\cdot 7 = 56$",
+        "explanation": "Pierwsza nieparzysta: 8 wybory, druga nieparzysta: 7 pozostałych",
+        "interactive_choice": {
+          "prompt": "Jak policzyć pary (nieparzysta, nieparzysta) przy losowaniu bez zwracania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$8 \\times 8 = 64$ pary",
+              "feedback": "Nie - to byłoby przy losowaniu ze zwracaniem! Tutaj druga liczba ma mniej możliwości",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$8 \\times 7 = 56$ par",
+              "feedback": "Dokładnie! Pierwsza nieparzysta: 8 możliwości, druga nieparzysta: 7 pozostałych",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\binom{8}{2} = 28$ par",
+              "feedback": "To liczba kombinacji - ale tutaj kolejność ma znaczenie (a,b) ≠ (b,a)",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy losowaniu bez zwracania druga liczba ma o jedną możliwość mniej"
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Ile jest par o parzystym iloczynie?",
+        "expression": "Par o parzystym iloczynie: $210 - 56 = 154$",
+        "explanation": "Odejmujemy pary nieparzyste od wszystkich par"
+      }
+    ],
+    "solutions": [
+      "154"
+    ],
+    "parameters": {
+      "total_numbers": 15,
+      "even_numbers": 7,
+      "odd_numbers": 8,
+      "sampling": "bez zwracania"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-17T07:33:12.423Z"
+  },
+  {
+    "id": "can_number_combinatorics",
+    "topic": "Kombinatoryka - permutacje z ograniczeniami",
+    "difficulty": 4,
+    "statement": "E-dowód ma zapisany na pierwszej stronie specjalny sześciocyfrowy numer CAN, który zabezpiecza go przed odczytaniem danych przez osoby nieuprawnione. Oblicz, ile jest wszystkich sześciocyfrowych numerów CAN o różnych cyfrach, spełniających warunek: trzy pierwsze cyfry są kolejnymi wyrazami ciągu arytmetycznego o różnicy (-3).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry mogą być pierwszą cyfrą ciągu arytmetycznego o różnicy (-3)?",
+        "expression": "Pierwsza cyfra $a \\in \\{6, 7, 8, 9\\}$",
+        "explanation": "Ograniczenie wynika z warunków: $a-3 \\geq 0$ i $a-6 \\geq 0$",
+        "interactive_choice": {
+          "prompt": "Jeśli pierwsza cyfra to $a$, druga to $a-3$, trzecia to $a-6$, jakie wartości może przyjąć $a$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a \\in \\{6, 7, 8, 9\\}$",
+              "feedback": "Świetnie! Tylko te cyfry dają ciąg z cyframi nieujemnymi.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$a \\in \\{3, 4, 5, 6, 7, 8, 9\\}$",
+              "feedback": "Nie - dla $a=3$ mamy $a-6=-3$, co nie jest cyfrą.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$a \\in \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$",
+              "feedback": "Nie - większość da ujemne wartości dla $a-6$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Potrzebujemy $a-6 \\geq 0$, więc $a \\geq 6$. Dodatkowo $a \\leq 9$ jako cyfra."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są możliwe trójki pierwszych trzech cyfr?",
+        "expression": "$(6,3,0)$, $(7,4,1)$, $(8,5,2)$, $(9,6,3)$",
+        "explanation": "Wszystkie możliwe ciągi arytmetyczne o różnicy (-3)",
+        "why": "Każda trójka ma różne cyfry, co jest wymagane w zadaniu."
+      },
+      {
+        "step": 3,
+        "hint": "Ile cyfr zostało do wyboru na pozycje 4, 5, 6?",
+        "expression": "Na pozycje 4, 5, 6 mamy 7 dostępnych cyfr",
+        "explanation": "Z 10 cyfr (0-9) używamy 3 w pierwszych pozycjach, zostaje 7",
+        "interactive_choice": {
+          "prompt": "Dla każdej trójki pierwszych cyfr, ile cyfr pozostało na ostatnie 3 pozycje?",
+          "options": [
+            {
+              "id": "A",
+              "text": "7 cyfr (10 minus 3 użyte)",
+              "feedback": "Dokładnie! Mamy 10 cyfr, użyliśmy 3 różne, zostało 7.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "6 cyfr",
+              "feedback": "Nie - zapomniałeś, że mamy 10 cyfr (0-9), nie 9.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zależy od konkretnej trójki",
+              "feedback": "Nie - każda trójka używa 3 różnych cyfr, więc zawsze zostaje 7.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Niezależnie od wyboru trójki, zawsze używamy 3 różne cyfry z 10 dostępnych."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć liczbę sposobów wypełnienia pozycji 4, 5, 6?",
+        "expression": "$V_7^3 = 7 \\cdot 6 \\cdot 5 = 210$",
+        "explanation": "Liczba sposobów wypełnienia ostatnich trzech pozycji",
+        "interactive_choice": {
+          "prompt": "Jaką metodą obliczyć liczbę sposobów ustawienia 3 różnych cyfr z 7 dostępnych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wariacje: $V_7^3 = 7 \\cdot 6 \\cdot 5$",
+              "feedback": "Perfekcyjnie! Kolejność ma znaczenie, cyfry muszą być różne.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Kombinacje: $C_7^3 = \\frac{7!}{3!4!}$",
+              "feedback": "Nie - kombinacje ignorują kolejność, a tu pozycje się różnią.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Po prostu $7^3$",
+              "feedback": "Nie - to pozwalałoby na powtarzanie cyfr.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wariacje bez powtórzeń: na 4. pozycji 7 wyborów, na 5. pozycji 6, na 6. pozycji 5."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile mamy możliwych trójek pierwszych cyfr?",
+        "expression": "4 możliwe trójki: $(6,3,0)$, $(7,4,1)$, $(8,5,2)$, $(9,6,3)$",
+        "explanation": "Każda odpowiada innemu wyborowi pierwszej cyfry $a$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć całkowitą liczbę numerów CAN?",
+        "expression": "$4 \\cdot 210 = 840$",
+        "explanation": "Mnożymy liczbę możliwych trójek przez liczbę sposobów wypełnienia pozostałych pozycji",
+        "why": "Zasada mnożenia: dla każdej z 4 trójek mamy 210 sposobów dokończenia numeru."
+      }
+    ],
+    "solutions": [
+      "840"
+    ],
+    "parameters": {
+      "constraints": "6 różnych cyfr, pierwsze 3 w ciągu arytmetycznym o różnicy (-3)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:33:42.693Z"
+  },
+  {
+    "id": "three_digit_divisible_6_or_15",
+    "topic": "Zasada włączeń i wyłączeń",
+    "difficulty": 4,
+    "statement": "Oblicz, ile jest liczb naturalnych trzycyfrowych podzielnych przez 6 lub podzielnych przez 15.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki jest zakres liczb trzycyfrowych?",
+        "expression": "Liczby trzycyfrowe: $100 \\leq n \\leq 999$",
+        "explanation": "Najmniejsza liczba trzycyfrowa to 100, największa to 999"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę zastosować do zliczania liczb podzielnych przez 6 lub przez 15?",
+        "expression": "$|A \\cup B| = |A| + |B| - |A \\cap B|$",
+        "explanation": "Gdzie A - liczby podzielne przez 6, B - liczby podzielne przez 15",
+        "why": "Niektóre liczby są podzielne przez oba dzielniki, więc zwykłe dodawanie dałoby błędny wynik.",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej policzyć liczby podzielne przez 6 lub przez 15?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać liczby podzielne przez 6 i przez 15",
+              "feedback": "Nie - niektóre liczby będą policzone dwukrotnie!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć zasady włączeń i wyłączeń: |A ∪ B| = |A| + |B| - |A ∩ B|",
+              "feedback": "Doskonale! To uniknie podwójnego liczenia.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić każdą liczbę od 100 do 999 osobno",
+              "feedback": "Możliwe, ale bardzo pracochłonne - jest lepszy sposób.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada włączeń i wyłączeń pozwala uniknąć podwójnego liczenia liczb podzielnych przez oba dzielniki."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest liczb trzycyfrowych podzielnych przez 6?",
+        "expression": "Najmniejsza: $\\lceil \\frac{100}{6} \\rceil \\cdot 6 = 17 \\cdot 6 = 102$",
+        "explanation": "Pierwsza liczba trzycyfrowa podzielna przez 6. Symbol $\\lceil \\ \\rceil$ oznacza sufit (zaokrąglenie w górę)"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest największa liczba trzycyfrowa podzielna przez 6?",
+        "expression": "Największa: $\\lfloor \\frac{999}{6} \\rfloor \\cdot 6 = 166 \\cdot 6 = 996$",
+        "explanation": "Ostatnia liczba trzycyfrowa podzielna przez 6. Symbol $\\lfloor \\ \\rfloor$ oznacza podłogę (zaokrąglenie w dół)"
+      },
+      {
+        "step": 5,
+        "hint": "Ile jest liczb w ciągu arytmetycznym od 102 do 996 z różnicą 6?",
+        "expression": "$|A| = \\frac{996 - 102}{6} + 1 = \\frac{894}{6} + 1 = 149 + 1 = 150$",
+        "explanation": "Liczba elementów ciągu arytmetycznego"
+      },
+      {
+        "step": 6,
+        "hint": "Ile jest liczb trzycyfrowych podzielnych przez 15?",
+        "expression": "Najmniejsza: $\\lceil \\frac{100}{15} \\rceil \\cdot 15 = 7 \\cdot 15 = 105$",
+        "explanation": "Pierwsza liczba trzycyfrowa podzielna przez 15"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest największa liczba trzycyfrowa podzielna przez 15?",
+        "expression": "Największa: $\\lfloor \\frac{999}{15} \\rfloor \\cdot 15 = 66 \\cdot 15 = 990$",
+        "explanation": "Ostatnia liczba trzycyfrowa podzielna przez 15"
+      },
+      {
+        "step": 8,
+        "hint": "Ile jest liczb podzielnych przez 15?",
+        "expression": "$|B| = \\frac{990 - 105}{15} + 1 = \\frac{885}{15} + 1 = 59 + 1 = 60$",
+        "explanation": "Liczba trzycyfrowych liczb podzielnych przez 15"
+      },
+      {
+        "step": 9,
+        "hint": "Przez co są podzielne liczby należące do przecięcia zbiorów A i B?",
+        "expression": "$NWW(6, 15) = 30$",
+        "explanation": "Rozkład: $6 = 2 \\cdot 3$, $15 = 3 \\cdot 5$, więc $NWW = 2 \\cdot 3 \\cdot 5 = 30$",
+        "why": "Liczba jest podzielna przez oba dzielniki wtedy i tylko wtedy, gdy jest podzielna przez ich NWW.",
+        "interactive_choice": {
+          "prompt": "Liczby podzielne jednocześnie przez 6 i przez 15 są podzielne przez:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przez 21 (suma 6 + 15)",
+              "feedback": "Nie - suma nie ma znaczenia dla podzielności.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przez 90 (iloczyn 6 × 15)",
+              "feedback": "Nie - iloczyn jest za duży, potrzebujemy NWW.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przez 30 (NWW(6,15))",
+              "feedback": "Dokładnie! NWW(6,15) = 30, bo 6 = 2×3, 15 = 3×5.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Liczby podzielne przez oba dzielniki są podzielne przez ich najmniejszą wspólną wielokrotność."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile jest liczb trzycyfrowych podzielnych przez 30?",
+        "expression": "Najmniejsza: $\\lceil \\frac{100}{30} \\rceil \\cdot 30 = 4 \\cdot 30 = 120$",
+        "explanation": "Pierwsza liczba trzycyfrowa podzielna przez 30"
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest największa liczba trzycyfrowa podzielna przez 30?",
+        "expression": "Największa: $\\lfloor \\frac{999}{30} \\rfloor \\cdot 30 = 33 \\cdot 30 = 990$",
+        "explanation": "Ostatnia liczba trzycyfrowa podzielna przez 30"
+      },
+      {
+        "step": 12,
+        "hint": "Ile jest liczb w przecięciu zbiorów A i B?",
+        "expression": "$|A \\cap B| = \\frac{990 - 120}{30} + 1 = \\frac{870}{30} + 1 = 29 + 1 = 30$",
+        "explanation": "Liczba trzycyfrowych liczb podzielnych przez 30"
+      },
+      {
+        "step": 13,
+        "hint": "Jak obliczyć końcowy wynik używając zasady włączeń i wyłączeń?",
+        "expression": "$|A \\cup B| = 150 + 60 - 30 = 180$",
+        "explanation": "Stosujemy zasadę włączeń i wyłączeń",
+        "interactive_choice": {
+          "prompt": "Jaki jest wzór na liczbę elementów sumy zbiorów A i B?",
+          "options": [
+            {
+              "id": "A",
+              "text": "|A ∪ B| = |A| + |B|",
+              "feedback": "Nie - to nie uwzględnia przecięcia, będzie za dużo.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "|A ∪ B| = |A| + |B| - |A ∩ B|",
+              "feedback": "Tak! Odejmujemy przecięcie, bo inaczej liczymy je dwukrotnie.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "|A ∪ B| = |A| - |B| + |A ∩ B|",
+              "feedback": "Nie - to nieprawidłowy wzór.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada włączeń i wyłączeń: dodajemy oba zbiory, ale odejmujemy przecięcie."
+        }
+      }
+    ],
+    "solutions": [
+      "180"
+    ],
+    "parameters": {
+      "range": "liczby trzycyfrowe: 100-999",
+      "divisors": "6 lub 15",
+      "method": "zasada włączeń i wyłączeń"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:34:14.735Z"
+  },
+  {
+    "id": "five_digit_counting_with_conditions",
+    "topic": "Kombinatoryka - zliczanie z warunkami",
+    "difficulty": 4,
+    "statement": "Ile jest liczb pięciocyfrowych, spełniających jednocześnie następujące cztery warunki: (1) cyfry setek, dziesiątek i jedności są parzyste, (2) cyfra setek jest większa od cyfry dziesiątek, (3) cyfra dziesiątek jest większa od cyfry jedności, (4) w zapisie tej liczby nie występuje cyfra 9.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć cyfry liczby pięciocyfrowej?",
+        "expression": "Liczba pięciocyfrowa: $\\overline{abcde}$ gdzie $a$ - dziesiątki tysięcy, $b$ - tysiące, $c$ - setki, $d$ - dziesiątki, $e$ - jedności",
+        "explanation": "Ustalamy oznaczenia dla każdej pozycji w liczbie"
+      },
+      {
+        "step": 2,
+        "hint": "Które cyfry muszą być parzyste według warunków?",
+        "expression": "Cyfry $c$, $d$, $e$ muszą być parzyste",
+        "explanation": "Z warunków (1) wynika, że cyfry setek, dziesiątek i jedności są parzyste"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie cyfry parzyste możemy użyć przy ograniczeniu braku cyfry 9?",
+        "expression": "Dostępne cyfry parzyste: $\\{0, 2, 4, 6, 8\\}$",
+        "explanation": "Mamy 5 cyfr parzystych do wyboru dla pozycji c, d, e",
+        "interactive_choice": {
+          "prompt": "Które cyfry parzyste są dostępne przy warunku braku cyfry 9?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cyfry: 0, 2, 4, 6, 8",
+              "feedback": "Dokładnie! To wszystkie cyfry parzyste oprócz niedostępnej cyfry 9 (która i tak nie jest parzysta).",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Cyfry: 2, 4, 6, 8",
+              "feedback": "Zapomniałeś o cyfrze 0, która też jest parzysta i może wystąpić na pozycjach c, d, e.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Cyfry: 0, 2, 4, 6",
+              "feedback": "Brakuje cyfry 8 - ona też jest parzysta i dostępna (warunek (4) eliminuje tylko cyfrę 9).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Cyfry parzyste to: 0, 2, 4, 6, 8. Warunek (4) eliminuje tylko cyfrę 9, która nie jest parzysta."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie ograniczenia mają cyfry a i b?",
+        "expression": "Cyfra $a \\in \\{1, 2, 3, 4, 5, 6, 7, 8\\}$ (bez 0 i 9), cyfra $b \\in \\{0, 1, 2, 3, 4, 5, 6, 7, 8\\}$ (bez 9)",
+        "explanation": "Pierwsza cyfra nie może być 0, obie nie mogą być 9"
+      },
+      {
+        "step": 5,
+        "hint": "Jak podejść do warunków uporządkowania $c > d > e$?",
+        "expression": "Liczba sposobów wyboru $(c,d,e)$: $\\binom{5}{3} = 10$",
+        "explanation": "Wybieramy 3 cyfry z 5 parzystych i układamy malejąco",
+        "why": "Warunki $c > d > e$ oznaczają, że cyfry muszą być różne i w określonym porządku. To klasyczna kombinacja.",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej zliczyć trójki $(c,d,e)$ spełniające $c > d > e$ z cyfr parzystych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybrać 3 różne cyfry parzyste i uporządkować malejąco",
+              "feedback": "Świetnie! To jest kombinacja - wybieramy 3 z 5 cyfr, a porządek jest już ustalony.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Policzyć wszystkie permutacje i wybrać te z właściwym porządkiem",
+              "feedback": "Niepotrzebnie skomplikowane - lepiej od razu wybrać kombinację.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozpatrzyć każdą cyfrę c osobno i liczyć możliwości dla d i e",
+              "feedback": "Możliwe, ale dłuższe - kombinacja jest elegantniejsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wybór 3 różnych cyfr z 5 automatycznie daje jedną możliwość uporządkowania malejącego."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile sposobów wyboru cyfry a?",
+        "expression": "Cyfra $a$: 8 możliwości",
+        "explanation": "Cyfra dziesiątek tysięcy może być dowolną z 8 dostępnych cyfr"
+      },
+      {
+        "step": 7,
+        "hint": "Ile sposobów wyboru cyfry b?",
+        "expression": "Cyfra $b$: 9 możliwości",
+        "explanation": "Cyfra tysięcy może być dowolną z 9 dostępnych cyfr (włącznie z 0)"
+      },
+      {
+        "step": 8,
+        "hint": "Czy wybory cyfr są niezależne?",
+        "expression": "Całkowita liczba: $8 \\times 9 \\times 10 = 720$",
+        "explanation": "Stosujemy regułę iloczynu dla niezależnych wyborów",
+        "interactive_choice": {
+          "prompt": "Czy możemy zastosować regułę iloczynu do zliczenia wszystkich liczb?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bo wybory cyfr a, b i trójki (c,d,e) są niezależne",
+              "feedback": "Dokładnie! Cyfry a i b nie mają ograniczeń względem c, d, e.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo cyfry mogą się powtarzać",
+              "feedback": "Mylisz się - cyfry a, b mogą się powtarzać z c, d, e, ale to nie przeszkadza w zastosowaniu reguły iloczynu.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie, bo warunki są zbyt skomplikowane",
+              "feedback": "Warunki dotyczą tylko określonych pozycji, więc można zastosować regułę iloczynu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wybory są niezależne: cyfry a,b nie mają ograniczeń względem siebie ani względem c,d,e."
+        }
+      }
+    ],
+    "solutions": [
+      "720"
+    ],
+    "parameters": {
+      "conditions": [
+        "cyfry c, d, e parzyste",
+        "c > d > e",
+        "brak cyfry 9",
+        "liczba pięciocyfrowa"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:34:48.396Z"
+  },
+  {
+    "id": "four_digit_numbers_constraint",
+    "topic": "Kombinatoryka - liczby z ograniczeniami",
+    "difficulty": 3,
+    "statement": "Oblicz, ile jest liczb naturalnych czterocyfrowych, w których cyfra jedności jest o 3 większa od cyfry setek",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć cyfrę setek i jedności w liczbie czterocyfrowej?",
+        "expression": "Liczba czterocyfrowa: $\\overline{abcd}$, gdzie $a$ - tysiące, $b$ - setki, $c$ - dziesiątki, $d$ - jedności",
+        "explanation": "Ustalamy oznaczenia dla cyfr w liczbie czterocyfrowej"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek że cyfra jedności jest o 3 większa od cyfry setek?",
+        "expression": "$d = b + 3$",
+        "explanation": "Zapisujemy warunek algebraicznie",
+        "why": "To kluczowe ograniczenie - cyfra jedności musi być dokładnie o 3 większa od cyfry setek"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są ograniczenia dla cyfr w liczbie czterocyfrowej?",
+        "expression": "$a \\in \\{1,2,3,4,5,6,7,8,9\\}$, $b,c,d \\in \\{0,1,2,3,4,5,6,7,8,9\\}$",
+        "explanation": "Ustalamy dziedziny dla wszystkich cyfr",
+        "interactive_choice": {
+          "prompt": "Jakie warunki muszą spełniać cyfry w liczbie czterocyfrowej $\\overline{abcd}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a \\in \\{1,2,...,9\\}$, $b,c,d \\in \\{0,1,...,9\\}$",
+              "feedback": "Dokładnie! Pierwsza cyfra nie może być 0, pozostałe mogą.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie cyfry $a,b,c,d \\in \\{1,2,...,9\\}$",
+              "feedback": "Nie - cyfry setek, dziesiątek i jedności mogą być zerem.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie cyfry $a,b,c,d \\in \\{0,1,...,9\\}$",
+              "feedback": "Nie - pierwsza cyfra nie może być 0, bo wtedy liczba nie byłaby czterocyfrowa.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W liczbie czterocyfrowej pierwsza cyfra musi być różna od zera, pozostałe mogą być dowolne."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie wartości może przyjąć cyfra setek $b$, jeśli $d = b + 3$ i $d \\leq 9$?",
+        "expression": "$b + 3 \\leq 9$, więc $b \\leq 6$",
+        "explanation": "Z warunku $d = b + 3$ i faktu że $d$ musi być cyfrą"
+      },
+      {
+        "step": 5,
+        "hint": "Ile możliwych wartości ma cyfra setek $b$?",
+        "expression": "$b \\in \\{0,1,2,3,4,5,6\\}$ - czyli 7 możliwości",
+        "explanation": "Cyfra setek może przyjąć 7 różnych wartości"
+      },
+      {
+        "step": 6,
+        "hint": "Jak policzyć liczbę możliwości dla każdej cyfry osobno?",
+        "expression": "Niezależne wybory: $a$ (9 możliwości), $b$ (7 możliwości), $c$ (10 możliwości)",
+        "explanation": "Identyfikujemy niezależne wybory cyfr",
+        "interactive_choice": {
+          "prompt": "Które cyfry możemy wybierać niezależnie od siebie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $a$ i $c$ - pozostałe są związane warunkiem",
+              "feedback": "Świetnie! Gdy wybierzemy $b$, to $d$ jest już ustalone. Cyfry $a$ i $c$ są niezależne.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie cyfry $a$, $b$, $c$, $d$ niezależnie",
+              "feedback": "Nie - cyfry $b$ i $d$ są związane warunkiem $d = b + 3$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko $a$ - pozostałe są ograniczone",
+              "feedback": "Nie całkiem - cyfra $c$ (dziesiątki) może być dowolna.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy ustalimy $b$, automatycznie mamy $d = b + 3$. Cyfry $a$ i $c$ wybieramy swobodnie."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć całkowitą liczbę możliwości?",
+        "expression": "$9 \\times 7 \\times 10 = 630$",
+        "explanation": "Stosujemy regułę iloczynu dla niezależnych wyborów",
+        "interactive_choice": {
+          "prompt": "Jaką regułę zastosować do policzenia wszystkich możliwości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Regułę sumy: $9 + 7 + 10 = 26$",
+              "feedback": "Nie - to byłoby gdyby wybory się wykluczały. Tu każda kombinacja jest możliwa.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Regułę iloczynu: $9 \\times 7 \\times 10 = 630$",
+              "feedback": "Dokładnie! Każdy wybór cyfry $a$ można połączyć z każdym wyborem $b$ i $c$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wzór na permutacje: $\\frac{9!}{(9-3)!} = 504$",
+              "feedback": "Nie - to nie jest problem permutacji, tylko niezależnych wyborów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy wybory są niezależne, używamy reguły iloczynu - mnożymy liczby możliwości."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest ostateczna odpowiedź?",
+        "expression": "Liczba czterocyfrowych liczb naturalnych = 630",
+        "explanation": "Otrzymujemy wynik końcowy"
+      }
+    ],
+    "solutions": [
+      "630"
+    ],
+    "parameters": {
+      "constraint": "$d = b + 3$",
+      "number_type": "czterocyfrowe liczby naturalne"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:35:18.159Z"
+  },
+  {
+    "id": "five_digit_counting_problem",
+    "topic": "Kombinatoryka - zliczanie z warunkami",
+    "difficulty": 4,
+    "statement": "Oblicz, ile jest liczb naturalnych pięciocyfrowych, w zapisie których nie występuje zero, jest dokładnie jedna cyfra 7 i dokładnie jedna cyfra parzysta.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry możemy użyć w liczbie pięciocyfrowej bez zera?",
+        "expression": "Dostępne cyfry: $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$",
+        "explanation": "Mamy 9 cyfr do dyspozycji, wykluczając zero"
+      },
+      {
+        "step": 2,
+        "hint": "Które z dostępnych cyfr są parzyste?",
+        "expression": "Cyfry parzyste: $\\{2, 4, 6, 8\\}$ - razem 4 cyfry",
+        "explanation": "Identyfikujemy cyfry parzyste spośród dostępnych"
+      },
+      {
+        "step": 3,
+        "hint": "Jak podejść do tego problemu zliczania z wieloma warunkami?",
+        "expression": "Strategia: wybieramy pozycje dla 7 i cyfry parzystej, potem uzupełniamy",
+        "explanation": "Dzielimy problem na etapy: pozycje → cyfry → pozostałe miejsca",
+        "interactive_choice": {
+          "prompt": "Którą strategię zastosować do zliczenia liczb z dokładnie jedną cyfrą 7 i jedną parzystą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw wybrać pozycje dla cyfr 7 i parzystej, potem uzupełnić resztę",
+              "feedback": "Świetny wybór! To systematyczne podejście - wybieramy pozycje, potem cyfry.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Policzyć wszystkie możliwości i odjąć niepożądane przypadki",
+              "feedback": "Możliwe, ale bardzo skomplikowane - łatwo o błąd przy tylu warunkach.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozpatrzyć każdą pozycję cyfry 7 osobno",
+              "feedback": "Częściowo dobre, ale nie uwzględnia systematycznie cyfry parzystej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wybór pozycji, potem cyfr to najczystsze podejście - unikamy pomyłek."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Na ile sposobów można wybrać pozycje dla cyfry 7 i cyfry parzystej?",
+        "expression": "Pozycji dla cyfry 7: $\\binom{5}{1} = 5$ sposobów",
+        "explanation": "Cyfra 7 może być na dowolnej z 5 pozycji"
+      },
+      {
+        "step": 5,
+        "hint": "Po wyborze pozycji dla cyfry 7, ile zostaje pozycji dla cyfry parzystej?",
+        "expression": "Pozycji dla cyfry parzystej: $\\binom{4}{1} = 4$ sposoby",
+        "explanation": "Po umieszczeniu cyfry 7 zostają 4 pozycje dla cyfry parzystej"
+      },
+      {
+        "step": 6,
+        "hint": "Ile sposobów wyboru pozycji dają nam razem te dwa kroki?",
+        "expression": "Łącznie pozycji: $5 \\times 4 = 20$ sposobów",
+        "explanation": "Mnożymy liczbę sposobów wyboru pozycji dla każdej specjalnej cyfry",
+        "why": "To zasada mnożenia - dla każdej pozycji cyfry 7 mamy 4 wybory pozycji dla cyfry parzystej."
+      },
+      {
+        "step": 7,
+        "hint": "Ile mamy do wyboru cyfr parzystych?",
+        "expression": "Cyfr parzystych: 4 możliwości $\\{2, 4, 6, 8\\}$",
+        "explanation": "Wybieramy konkretną cyfrę parzystą spośród dostępnych"
+      },
+      {
+        "step": 8,
+        "hint": "Jakimi cyframi możemy wypełnić pozostałe 3 pozycje?",
+        "expression": "Dostępnych cyfr na pozostałe pozycje: $9 - 2 = 7$",
+        "explanation": "Wykluczamy cyfrę 7 i jedną użytą cyfrę parzystą",
+        "interactive_choice": {
+          "prompt": "Które cyfry możemy użyć na pozostałych 3 pozycjach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie cyfry oprócz 0, 7 i wybranej cyfry parzystej",
+              "feedback": "Dokładnie! Zostaje nam 7 cyfr: 5 nieparzystych + 3 parzyste.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko cyfry nieparzyste oprócz 7",
+              "feedback": "Nie - możemy użyć pozostałych cyfr parzystych (3 z 4).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie cyfry oprócz 0 i 7",
+              "feedback": "Nie - musimy wykluczyć też już użytą cyfrę parzystą.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Po użyciu cyfry 7 i jednej parzystej zostaje 7 cyfr: $\\{1,3,5,9\\}$ + 3 pozostałe parzyste."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Na ile sposobów można wypełnić pozostałe 3 pozycje?",
+        "expression": "Sposobów wypełnienia 3 pozycji: $7^3 = 343$",
+        "explanation": "Na każdej z 3 pozycji mamy 7 możliwych cyfr",
+        "why": "Cyfry mogą się powtarzać na różnych pozycjach, więc to wariacje z powtórzeniami."
+      },
+      {
+        "step": 10,
+        "hint": "Jak połączyć wszystkie obliczone elementy?",
+        "expression": "Wynik: $20 \\times 4 \\times 343 = 27440$",
+        "explanation": "Mnożymy: sposoby wyboru pozycji × cyfry parzyste × wypełnienie reszty",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć końcowy wynik łącząc wszystkie elementy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pozycje × cyfry parzyste × wypełnienie: $20 \\times 4 \\times 343$",
+              "feedback": "Perfekcyjnie! Mnożymy wszystkie niezależne wybory.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dodać: pozycje + cyfry parzyste + wypełnienie",
+              "feedback": "Nie - to niezależne wybory, więc mnożymy, nie dodajemy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko pozycje × wypełnienie: $20 \\times 343$",
+              "feedback": "Zapomniałeś o wyborze konkretnej cyfry parzystej!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada mnożenia: każdy niezależny wybór mnoży liczbę możliwości."
+        }
+      }
+    ],
+    "solutions": [
+      "$27440$"
+    ],
+    "parameters": {
+      "constraints": "pięciocyfrowe, bez zera, dokładnie jedna cyfra 7, dokładnie jedna cyfra parzysta"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:35:53.579Z"
+  },
+  {
+    "id": "four_digit_even_odd",
+    "topic": "Kombinatoryka - zasada mnożenia",
+    "difficulty": 3,
+    "statement": "Oblicz, ile jest liczb naturalnych czterocyfrowych, w których zapisie pierwsza cyfra jest parzysta, a pozostałe nieparzyste.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry mogą stać na pierwszej pozycji w liczbie czterocyfrowej?",
+        "expression": "Pierwsza cyfra: $\\{2, 4, 6, 8\\}$ - mamy 4 możliwości",
+        "explanation": "Cyfra parzysta różna od zera na pierwszej pozycji",
+        "interactive_choice": {
+          "prompt": "Które cyfry parzyste mogą być pierwszą cyfrą liczby czterocyfrowej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cyfry: 0, 2, 4, 6, 8",
+              "feedback": "Nie! Zero nie może być pierwszą cyfrą - liczba nie byłaby czterocyfrowa.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Cyfry: 2, 4, 6, 8",
+              "feedback": "Dokładnie! Pierwsza cyfra musi być różna od zera i parzysta.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Cyfry: 1, 3, 5, 7, 9",
+              "feedback": "To są cyfry nieparzyste, a potrzebujemy parzystych na pierwszej pozycji.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwsza cyfra liczby czterocyfrowej nie może być zerem, więc mamy 4 możliwości: 2, 4, 6, 8."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Które cyfry mogą stać na pozostałych trzech pozycjach?",
+        "expression": "Cyfry nieparzyste: $\\{1, 3, 5, 7, 9\\}$ - mamy 5 możliwości na każdej pozycji",
+        "explanation": "Na pozycjach 2, 3 i 4 mogą stać tylko cyfry nieparzyste"
+      },
+      {
+        "step": 3,
+        "hint": "Czy cyfry mogą się powtarzać w tej liczbie?",
+        "expression": "Cyfry mogą się powtarzać - każda pozycja wybierana niezależnie",
+        "explanation": "Nie ma ograniczeń na powtarzanie cyfr",
+        "interactive_choice": {
+          "prompt": "Czy w zadaniu są ograniczenia dotyczące powtarzania cyfr?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, wszystkie cyfry muszą być różne",
+              "feedback": "Nie ma takiego wymagania w treści zadania.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Nie, cyfry mogą się powtarzać",
+              "feedback": "Zgadza się! Zadanie nie zabrania powtarzania cyfr.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko cyfry nieparzyste mogą się powtarzać",
+              "feedback": "Zadanie nie wprowadza takich ograniczeń.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Brak ograniczeń oznacza, że cyfry mogą się powtarzać - każda pozycja jest niezależna."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Którą metodę zastosować do policzenia wszystkich możliwości?",
+        "expression": "Liczba możliwości = $4 \\times 5 \\times 5 \\times 5$",
+        "explanation": "Stosujemy zasadę mnożenia dla niezależnych wyborów",
+        "why": "Zasada mnożenia: jeśli pierwszy wybór można wykonać na $a$ sposobów, drugi na $b$ sposobów itd., to wszystkich kombinacji jest $a \\times b \\times c \\times d$.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć liczbę wszystkich czterocyfrowych liczb spełniających warunki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać liczby możliwości: 4 + 5 + 5 + 5",
+              "feedback": "Nie - dodawanie używamy gdy mamy alternatywy, tu mamy kolejne wybory.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć liczby możliwości: 4 × 5 × 5 × 5",
+              "feedback": "Dokładnie! Zasada mnożenia - każdy wybór jest niezależny.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje",
+              "feedback": "Permutacje to gdy cyfry nie mogą się powtarzać - tu mogą.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada mnożenia: gdy mamy kolejne niezależne wybory, mnożymy liczby możliwości."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $4 \\times 5^3$?",
+        "expression": "$4 \\times 5^3 = 4 \\times 125 = 500$",
+        "explanation": "Obliczamy końcowy wynik"
+      }
+    ],
+    "solutions": [
+      "500"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-17T07:36:16.803Z"
   }
 ]
 

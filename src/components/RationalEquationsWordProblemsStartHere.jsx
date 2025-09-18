@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import MathRenderer from './MathRenderer';
 
-const KombinatorykStartHere = ({
+const RationalEquationsWordProblemsStartHere = ({
   problems,
   onSelectProblem,
   completedProblems = new Set(),
@@ -12,7 +12,7 @@ const KombinatorykStartHere = ({
 
   // Load suggested problems from localStorage
   useEffect(() => {
-    const savedSuggestions = localStorage.getItem('kombinatoryka-suggested-problems');
+    const savedSuggestions = localStorage.getItem('rational-equations-word-problems-suggested-problems');
     if (savedSuggestions) {
       try {
         const suggestions = JSON.parse(savedSuggestions);
@@ -46,7 +46,7 @@ const KombinatorykStartHere = ({
     const uncompleted = problems
       .filter(p => !completedProblems.has(p.id))
       .slice(0, 2);
-    
+
     return uncompleted.length > 0 ? uncompleted : [problems[0]];
   }, [problems, completedProblems, suggestedProblems]);
 
@@ -99,11 +99,11 @@ const KombinatorykStartHere = ({
               </button>
             </div>
           )}
-          
+
           {/* Header */}
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-              Kombinatoryka - podstawy
+              Zadania tekstowe prowadzące do równań wymiernych
             </h1>
             {/* Progress Bar */}
             {problems && problems.length > 0 && (
@@ -385,4 +385,4 @@ const KombinatorykStartHere = ({
   );
 };
 
-export default KombinatorykStartHere;
+export default RationalEquationsWordProblemsStartHere;

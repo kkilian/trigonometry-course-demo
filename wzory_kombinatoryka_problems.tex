@@ -1,0 +1,205 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+
+\geometry{margin=1.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textbf{Ściąga wzorów - Kombinatoryka}}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.3em}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+\section*{1. Wzory kombinatoryczne}
+
+\subsection*{Wariacje z powtórzeniami}
+$$V_n^k = n^k$$
+\textit{k-elementowe wariacje z powtórzeniami ze zbioru n-elementowego}
+
+\textbf{Przykłady:}
+\begin{itemize}
+\item $8^5 = 32768$ (5 osób, 8 pięter)
+\item $3^5 = 243$ (5 osób, 3 piętra)
+\end{itemize}
+
+\subsection*{Wariacje bez powtórzeń}
+$$V_n^k = \frac{n!}{(n-k)!}$$
+
+\textbf{Przykłady:}
+\begin{itemize}
+\item $V_8^5 = \frac{8!}{3!} = 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4$
+\item $V_6^4 = \frac{6!}{2!} = 6 \cdot 5 \cdot 4 \cdot 3$
+\item $P(12,2) = \frac{12!}{10!} = 12 \times 11 = 132$
+\end{itemize}
+
+\subsection*{Kombinacje (współczynnik dwumianowy)}
+$$C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+\textbf{Przykłady:}
+\begin{itemize}
+\item $\binom{16}{2} = \frac{16 \cdot 15}{2} = 120$
+\item $\binom{10}{5} = \frac{10!}{5! \cdot 5!} = 252$
+\item $\binom{8}{3} = \frac{8 \cdot 7 \cdot 6}{3 \cdot 2 \cdot 1} = 56$
+\end{itemize}
+
+\subsection*{Współczynnik wielomianowy}
+$$\binom{n}{n_1, n_2, \ldots, n_k} = \frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}$$
+
+\subsection*{Permutacje z powtórzeniami}
+$$\frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}$$
+\textit{gdzie $n_i$ to liczby powtórzeń poszczególnych elementów}
+
+\section*{2. Zasady kombinatoryczne}
+
+\subsection*{Zasada mnożenia}
+Dla niezależnych wyborów:
+$$n_1 \times n_2 \times \ldots \times n_k$$
+
+\textbf{Przykłady:}
+\begin{itemize}
+\item $4 \times 5 \times 5 \times 5$ (liczby czterocyfrowe)
+\item $2 \times 1 \times 7^7$ (numery telefonu)
+\end{itemize}
+
+\subsection*{Zasada włączeń i wyłączeń}
+$$|A \cup B| = |A| + |B| - |A \cap B|$$
+
+Dla trzech zbiorów:
+$$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$$
+
+\subsection*{Zasada dopełnienia}
+$$\text{Szukane} = \text{Wszystkie} - \text{Niechciane}$$
+
+\section*{3. Funkcje specjalne}
+
+\subsection*{Funkcje podłogi i sufitu}
+\begin{itemize}
+\item $\lceil x \rceil$ - sufit (zaokrąglenie w górę)
+\item $\lfloor x \rfloor$ - podłoga (zaokrąglenie w dół)
+\end{itemize}
+
+\textbf{Przykłady:}
+\begin{itemize}
+\item $\lceil \frac{100}{6} \rceil \cdot 6 = 17 \cdot 6 = 102$
+\item $\lfloor \frac{999}{6} \rfloor \cdot 6 = 166 \cdot 6 = 996$
+\end{itemize}
+
+\subsection*{Operacje modulo}
+$n \bmod r$ - reszta z dzielenia $n$ przez $r$
+
+\section*{4. Wzory na ciągi}
+
+\subsection*{Suma liczb naturalnych}
+$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$
+
+\textbf{Przykład:} $\frac{9 \cdot 10}{2} = 45$ (suma od 1 do 9)
+
+\subsection*{Ciągi arytmetyczne}
+Liczba elementów: $\frac{a_n - a_1}{r} + 1$
+
+gdzie $r$ to różnica ciągu
+
+\textbf{Przykład:} $\frac{996 - 102}{6} + 1 = 150$
+
+\section*{5. Lemat Burnside'a}
+
+$$|X/G| = \frac{1}{|G|} \sum_{g \in G} |X^g|$$
+
+gdzie:
+\begin{itemize}
+\item $X$ - zbiór obiektów
+\item $G$ - grupa symetrii
+\item $X^g$ - obiekty niezmiennicze względem $g$
+\end{itemize}
+
+\textbf{Przykład:} $|X/G| = \frac{1}{24}(1 \cdot 720 + 23 \cdot 0) = 30$
+
+\section*{6. Wzory z teorii grafów}
+
+\subsection*{Cykle Hamiltona}
+$(n-1)!$ cykli w grafie pełnym na $n$ wierzchołkach
+
+\textbf{Przykład:} $\frac{4!}{4} = 6$ cykli dla grafu $K_4$
+
+\subsection*{Graf pełny}
+$\binom{n}{2}$ krawędzi w grafie pełnym na $n$ wierzchołkach
+
+\textbf{Przykład:} $\binom{5}{2} = 10$ krawędzi w $K_5$
+
+\section*{7. Derangements (bez punktów stałych)}
+
+$$D_n = n! \sum_{k=0}^n \frac{(-1)^k}{k!}$$
+
+\section*{8. Symbole matematyczne}
+
+\begin{itemize}
+\item $!$ - silnia (factorial)
+\item $n!$ - iloczyn liczb od 1 do $n$
+\item $\binom{n}{k}$ - symbol Newtona
+\item $\sum$ - suma (summation)
+\item $\prod$ - iloczyn (product)
+\item $\lceil \rceil$ - sufit (ceiling)
+\item $\lfloor \rfloor$ - podłoga (floor)
+\item $\bmod$ - modulo (reszta z dzielenia)
+\end{itemize}
+
+\section*{9. Kluczowe koncepty}
+
+\textbf{Niezależność wyborów} - umożliwia zastosowanie zasady mnożenia
+
+\textbf{Rozróżnialność obiektów} - wpływa na wybór między permutacjami a kombinacjami
+
+\textbf{Symetria} - wymaga użycia lematu Burnside'a
+
+\textbf{Ograniczenia} - prowadzą do zasady dopełnienia lub włączeń-wyłączeń
+
+\section*{10. Przydatne wzory}
+
+\subsection*{Małe silnie}
+\begin{itemize}
+\item $0! = 1$
+\item $1! = 1$
+\item $2! = 2$
+\item $3! = 6$
+\item $4! = 24$
+\item $5! = 120$
+\item $6! = 720$
+\item $7! = 5040$
+\item $8! = 40320$
+\item $9! = 362880$
+\item $10! = 3628800$
+\end{itemize}
+
+\subsection*{Małe potęgi}
+\begin{itemize}
+\item $2^{10} = 1024$
+\item $3^5 = 243$
+\item $4^3 = 64$
+\item $5^3 = 125$
+\item $8^3 = 512$
+\item $9^2 = 81$
+\item $10^3 = 1000$
+\end{itemize}
+
+\subsection*{Przydatne kombinacje}
+\begin{itemize}
+\item $\binom{n}{0} = 1$
+\item $\binom{n}{1} = n$
+\item $\binom{n}{n} = 1$
+\item $\binom{n}{k} = \binom{n}{n-k}$
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
