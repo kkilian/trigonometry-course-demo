@@ -5,7 +5,6 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
-import angDemoProblems from '../data/ang-demo-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -84,13 +83,6 @@ const WelcomeScreen = ({ onSelectMode }) => {
       description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
       problemCount: statystykaProblems.length,
       disabled: true
-    },
-    {
-      id: 'ang-demo',
-      title: 'English Demo - Nauka angielskiego',
-      description: 'Phrasal verbs, conditionals, transformacje zdań - system krokowy',
-      problemCount: angDemoProblems.length,
-      isNew: true
     }
   ];
 

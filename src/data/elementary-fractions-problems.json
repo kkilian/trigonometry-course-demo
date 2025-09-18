@@ -82,7 +82,8 @@
         }
       },
       "timestamp": "2025-09-10T07:56:27.798Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -167,7 +168,8 @@
         }
       },
       "timestamp": "2025-09-10T07:56:34.237Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -241,7 +243,8 @@
         }
       },
       "timestamp": "2025-09-10T07:56:41.041Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "division_fractions_1",
@@ -319,7 +322,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T07:56:50.109Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -419,7 +423,8 @@
         }
       },
       "timestamp": "2025-09-10T07:56:59.933Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -495,7 +500,8 @@
         }
       },
       "timestamp": "2025-09-10T07:57:08.850Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -572,7 +578,8 @@
         }
       },
       "timestamp": "2025-09-10T07:57:18.493Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "division_fractions_1",
@@ -638,7 +645,8 @@
         }
       },
       "timestamp": "2025-09-10T07:57:26.255Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -720,7 +728,8 @@
         }
       },
       "timestamp": "2025-09-10T07:57:36.704Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -796,7 +805,8 @@
         }
       },
       "timestamp": "2025-09-10T07:57:45.881Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -849,7 +859,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T07:57:54.646Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -899,7 +910,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:01.479Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -975,7 +987,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:10.136Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -1041,7 +1054,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:18.480Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -1107,7 +1121,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:27.388Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -1173,7 +1188,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:36.398Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -1226,7 +1242,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T07:58:44.716Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -1302,7 +1319,8 @@
         }
       },
       "timestamp": "2025-09-10T07:58:54.011Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -1378,7 +1396,8 @@
         }
       },
       "timestamp": "2025-09-10T07:59:03.740Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -1454,7 +1473,8 @@
         }
       },
       "timestamp": "2025-09-10T07:59:12.852Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -1520,7 +1540,8 @@
         }
       },
       "timestamp": "2025-09-10T07:59:21.662Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -1597,7 +1618,8 @@
         }
       },
       "timestamp": "2025-09-10T07:59:29.340Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -1650,7 +1672,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T07:59:38.084Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -1717,7 +1740,8 @@
         }
       },
       "timestamp": "2025-09-10T07:59:45.826Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -1770,7 +1794,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T07:59:54.121Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -1836,7 +1861,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:02.595Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -1892,7 +1918,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:10.610Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_subtraction_1",
@@ -1948,7 +1975,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:18.179Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -2014,7 +2042,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:26.480Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "division_fractions_1",
@@ -2081,7 +2110,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:34.673Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_addition_1",
@@ -2135,7 +2165,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:00:44.808Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_subtraction",
@@ -2201,7 +2232,8 @@
         }
       },
       "timestamp": "2025-09-10T08:00:54.742Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -2267,7 +2299,8 @@
         }
       },
       "timestamp": "2025-09-10T08:01:02.484Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -2333,7 +2366,8 @@
         }
       },
       "timestamp": "2025-09-10T08:01:11.537Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_addition_1",
@@ -2386,7 +2420,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:01:21.880Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_1",
@@ -2442,7 +2477,8 @@
         }
       },
       "timestamp": "2025-09-10T08:01:30.583Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_multiplication_1",
@@ -2508,7 +2544,8 @@
         }
       },
       "timestamp": "2025-09-10T08:01:39.389Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -2561,7 +2598,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:01:49.014Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_addition",
@@ -2637,7 +2675,8 @@
         }
       },
       "timestamp": "2025-09-10T08:01:58.845Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_subtraction",
@@ -2713,7 +2752,8 @@
         }
       },
       "timestamp": "2025-09-10T08:02:08.985Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "basic_arithmetic_1",
@@ -2795,9 +2835,9 @@
         }
       },
       "timestamp": "2025-09-10T08:02:19.018Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
-  
   {
     "id": "arithmetic_calculation_1",
     "topic": "Działania na ułamkach i liczbach dziesiętnych",
@@ -2863,7 +2903,8 @@
         }
       },
       "timestamp": "2025-09-10T08:02:55.134Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "basic_arithmetic_1",
@@ -2930,7 +2971,8 @@
         }
       },
       "timestamp": "2025-09-10T08:03:02.436Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "basic_multiplication_1",
@@ -3005,7 +3047,8 @@
         }
       },
       "timestamp": "2025-09-10T08:03:13.176Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "division_fraction_decimal",
@@ -3076,7 +3119,8 @@
         }
       },
       "timestamp": "2025-09-10T08:03:22.917Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -3152,7 +3196,8 @@
         }
       },
       "timestamp": "2025-09-10T08:03:51.111Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -3219,7 +3264,8 @@
         }
       },
       "timestamp": "2025-09-10T08:03:59.780Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -3285,7 +3331,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:09.815Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -3351,7 +3398,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:19.238Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -3427,7 +3475,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:29.066Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -3493,7 +3542,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:38.129Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_sum_1",
@@ -3559,7 +3609,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:48.113Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -3636,7 +3687,8 @@
         }
       },
       "timestamp": "2025-09-10T08:04:56.818Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -3712,7 +3764,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:06.323Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -3768,7 +3821,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:15.260Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -3835,7 +3889,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:22.881Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -3902,7 +3957,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:32.904Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -3978,7 +4034,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:40.747Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -4055,7 +4112,8 @@
         }
       },
       "timestamp": "2025-09-10T08:05:51.504Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -4131,7 +4189,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:00.205Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_division_1",
@@ -4207,7 +4266,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:11.389Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -4295,7 +4355,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:23.232Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -4373,7 +4434,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:35.212Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -4460,7 +4522,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:43.096Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -4536,7 +4599,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:51.800Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -4602,7 +4666,8 @@
         }
       },
       "timestamp": "2025-09-10T08:06:59.687Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -4658,7 +4723,8 @@
         }
       },
       "timestamp": "2025-09-10T08:07:07.877Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "simple_fraction_calculation",
@@ -4719,7 +4785,8 @@
         }
       },
       "timestamp": "2025-09-10T08:07:15.249Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -4769,7 +4836,8 @@
         }
       },
       "timestamp": "2025-09-10T08:07:22.021Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_1",
@@ -4822,7 +4890,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:07:30.688Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -4872,7 +4941,8 @@
         }
       },
       "timestamp": "2025-09-10T08:07:37.075Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "sqrt_fraction_calculation",
@@ -4925,7 +4995,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:07:45.252Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "sqrt_fraction_simplification",
@@ -4991,7 +5062,8 @@
         }
       },
       "timestamp": "2025-09-10T08:07:53.386Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -5057,7 +5129,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:01.967Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_simplification_1",
@@ -5113,7 +5186,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:09.422Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "absolute_value_calculation",
@@ -5166,7 +5240,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:08:17.817Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "absolute_value_calculation",
@@ -5232,7 +5307,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:26.214Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -5282,7 +5358,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:33.110Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -5343,7 +5420,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:39.728Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -5430,7 +5508,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:47.203Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_simplification_1",
@@ -5496,7 +5575,8 @@
         }
       },
       "timestamp": "2025-09-10T08:08:55.643Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_simplification_1",
@@ -5552,7 +5632,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:03.297Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -5608,7 +5689,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:11.101Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -5690,7 +5772,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:23.251Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_calculation_1",
@@ -5778,7 +5861,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:35.642Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_multiplication_1",
@@ -5839,7 +5923,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:43.320Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -5915,7 +6000,8 @@
         }
       },
       "timestamp": "2025-09-10T08:09:55.294Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -5991,7 +6077,8 @@
         }
       },
       "timestamp": "2025-09-10T08:10:05.406Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -6047,7 +6134,8 @@
         }
       },
       "timestamp": "2025-09-10T08:10:15.954Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6123,7 +6211,8 @@
         }
       },
       "timestamp": "2025-09-10T08:10:24.485Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_fraction_1",
@@ -6176,7 +6265,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:10:34.597Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6229,7 +6319,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:10:43.162Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6290,7 +6381,8 @@
         }
       },
       "timestamp": "2025-09-10T08:10:51.643Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6356,7 +6448,8 @@
         }
       },
       "timestamp": "2025-09-10T08:11:00.932Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "fraction_division_1",
@@ -6443,7 +6536,8 @@
         }
       },
       "timestamp": "2025-09-10T08:11:13.994Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6496,7 +6590,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:11:22.310Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "arithmetic_calculation_1",
@@ -6562,7 +6657,8 @@
         }
       },
       "timestamp": "2025-09-10T08:11:31.661Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "sqrt_calculation_1",
@@ -6644,7 +6740,8 @@
         }
       },
       "timestamp": "2025-09-10T08:11:44.257Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "absolute_value_calculation",
@@ -6697,7 +6794,8 @@
         "warningTypeCounts": {}
       },
       "timestamp": "2025-09-10T08:11:53.429Z"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_1",
@@ -6755,7 +6853,8 @@
     "solutions": [
       "$\\frac{4}{3}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_2",
@@ -6819,7 +6918,8 @@
     "solutions": [
       "Tak, zostanie im $\\frac{13}{60}$ pizzy (prawie 1/4)"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_3",
@@ -6888,7 +6988,8 @@
     "solutions": [
       "$x = \\frac{11}{5}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_4",
@@ -6933,7 +7034,8 @@
     "solutions": [
       "$1,5$ cm"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_6",
@@ -6978,7 +7080,8 @@
     "solutions": [
       "24 jabłka"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_7",
@@ -7021,7 +7124,8 @@
       "initial_price_change": "$-\\frac{1}{8}$",
       "second_price_change": "$+\\frac{1}{7}$",
       "final_price_change": "$0$"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_8",
@@ -7067,7 +7171,8 @@
     "solutions": [
       "$\\frac{44}{39}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_9",
@@ -7132,7 +7237,8 @@
     "solutions": [
       "112 stron"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_11",
@@ -7180,7 +7286,8 @@
     "parameters": {
       "height": "$3\\frac{1}{3}$ cm",
       "base_area": "$\\frac{9}{4}$ cm²"
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_12",
@@ -7243,7 +7350,8 @@
     "solutions": [
       "$\\frac{5}{18}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_13",
@@ -7288,7 +7396,8 @@
     "solutions": [
       "10 mężczyzn"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_14",
@@ -7348,7 +7457,8 @@
       "$\\frac{89}{36}$",
       "$2\\frac{17}{36}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_15",
@@ -7392,7 +7502,8 @@
     "solutions": [
       "6 dni"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_16",
@@ -7473,7 +7584,8 @@
     "solutions": [
       "$x \\in (-\\frac{1}{3}, +\\infty)$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_17",
@@ -7537,7 +7649,8 @@
     "solutions": [
       "$\\frac{\\sqrt{6121}}{24}$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_18",
@@ -7586,7 +7699,8 @@
     "parameters": {
       "starting_price": 100,
       "final_price": 112.5
-    }
+    },
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_19",
@@ -7681,7 +7795,8 @@
       "Pierwszy zbiornik: $25\\frac{1}{2}$ litra",
       "Drugi zbiornik: $20\\frac{15}{32}$ litra"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   },
   {
     "id": "tex_problem_20",
@@ -7776,8 +7891,7 @@
     "solutions": [
       "$3,44$"
     ],
-    "parameters": {}
+    "parameters": {},
+    "module": "elementary-fractions"
   }
 ]
-
-

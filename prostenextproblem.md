@@ -3,6 +3,20 @@
 ## Przegląd
 Uproszczony system sugerowania następnego zadania w `NextProblemSuggestion.jsx` zawsze proponuje dokładnie **3 zadania** w różnych poziomach trudności, używając **TF-IDF + cosine similarity** do znajdowania najbardziej podobnych zadań.
 
+## ⚠️ Wymagane pola w plikach JSON
+
+### Każdy problem MUSI zawierać pole `module` (od 18.09.2025):
+```json
+{
+  "id": "fraction_word_problem",
+  "module": "rational-equations-word-problems",  // ← WYMAGANE!
+  "topic": "Równania z ułamkami - zadania tekstowe",
+  "difficulty": 3,
+  "statement": "...",
+  "steps": [...]
+}
+```
+
 ## Jak to działa
 
 ### 1. Analiza podobieństwa zadań
@@ -131,29 +145,27 @@ Działa we **wszystkich działach** które używają ProblemView:
 
 ## Dane localStorage
 
-System zapisuje sugerowane zadania dla konkretnych modułów:
+System zapisuje sugerowane zadania dla konkretnych modułów używając pola `module`:
 
 ```javascript
-// Kombinatoryka
-if (currentProblem.id.includes('combinatorics') || currentProblem.id.includes('kombinatoryka')) {
-  localStorage.setItem('kombinatoryka-suggested-problems', JSON.stringify(suggestedIds));
+// NOWA LOGIKA (od 18.09.2025) - sprawdzanie po polu module:
+if (currentProblem.module === 'rational-equations-word-problems') {
+  const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+  localStorage.setItem('rational-equations-word-problems-suggested-problems', JSON.stringify(suggestedIds));
 }
 
-// Układy równań
-if (currentProblem.id.includes('derivative') || currentProblem.id.includes('uklady_rownan')) {
-  localStorage.setItem('systems-of-equations-suggested-problems', JSON.stringify(suggestedIds));
-}
-
-// Funkcje homograficzne
-if (currentProblem.id.includes('homographic')) {
-  localStorage.setItem('homographic-functions-suggested-problems', JSON.stringify(suggestedIds));
-}
-
-// Ułamki elementarne
-if (currentProblem.id.includes('fraction_')) {
-  localStorage.setItem('elementary-fractions-suggested-problems', JSON.stringify(suggestedIds));
-}
+// STARA LOGIKA (przestarzała) - sprawdzanie po ID:
+// if (currentProblem.id.includes('fraction_')) { ... }
 ```
+
+### Wszystkie moduły w systemie:
+- `kombinatoryka` → kombinatoryka-suggested-problems
+- `kombinatoryka-rozszerzenie` → kombinatoryka-rozszerzenie-suggested-problems
+- `systems-of-equations` → systems-of-equations-suggested-problems
+- `homographic-functions` → homographic-functions-suggested-problems
+- `elementary-fractions` → elementary-fractions-suggested-problems
+- `rational-equations-word-problems` → rational-equations-word-problems-suggested-problems
+- `statystyka` → statystyka-suggested-problems
 
 ## Filtrowanie zadań
 
@@ -191,6 +203,50 @@ const nextProblem = problems.find(p =>
 7. **UI** - Wyświetla w kompaktowym tooltip'ie
 8. **localStorage** - Zapisuje dla modułów specjalnych
 
+## 🚀 Jak dodać nowy moduł - instrukcja krok po kroku
+
+### 1. Dodaj pole `module` do pliku JSON z problemami:
+```bash
+jq '. | map(. + {"module": "nazwa-twojego-modulu"})' src/data/twoj-plik.json > /tmp/temp.json && mv /tmp/temp.json src/data/twoj-plik.json
+```
+
+### 2. Dodaj warunek w `NextProblemSuggestion.jsx`:
+```javascript
+// Dodaj po linii ~184
+if (currentProblem.module === 'nazwa-twojego-modulu') {
+  const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+  localStorage.setItem('nazwa-twojego-modulu-suggested-problems', JSON.stringify(suggestedIds));
+  console.log('Saved suggested problems for nazwa-twojego-modulu:', suggestedIds);
+}
+```
+
+### 3. W komponencie StartHere odczytaj sugestie:
+```javascript
+const savedSuggestions = localStorage.getItem('nazwa-twojego-modulu-suggested-problems');
+if (savedSuggestions) {
+  const suggestions = JSON.parse(savedSuggestions);
+  // użyj sugestii...
+}
+```
+
+### 4. Dodaj czyszczenie w `TrigonometryCourse.jsx`:
+```javascript
+if (mode === 'nazwa-twojego-modulu') {
+  storageKey = 'nazwa-twojego-modulu-suggested-problems';
+}
+// localStorage.removeItem(storageKey) przy zmianie problemu
+```
+
+### 5. Weryfikacja że moduł działa:
+```javascript
+// W konsoli przeglądarki po rozwiązaniu zadania:
+localStorage.getItem('nazwa-twojego-modulu-suggested-problems')
+// Powinno zwrócić tablicę z 2 ID sugerowanych zadań
+
+// Sprawdź też console.log:
+// "Saved suggested problems for nazwa-twojego-modulu: [...]"
+```
+
 ## Klucze techniczne
 
 - **Podobieństwo**: Cosine similarity na wektorach TF-IDF
@@ -198,3 +254,4 @@ const nextProblem = problems.find(p =>
 - **Wydajność**: Cachowanie w useMemo, max 20 kandydatów
 - **UX**: Hover tooltip, animacje, responsive design
 - **Dostępność**: Semantic HTML, keyboard navigation
+- **Modularność**: Pole `module` w każdym problemie dla łatwej identyfikacji

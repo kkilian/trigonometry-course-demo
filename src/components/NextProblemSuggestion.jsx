@@ -146,53 +146,47 @@ const NextProblemSuggestion = ({
       const bestMatches = Object.values(suggestions);
 
       // Save suggested problems to localStorage for kombinatoryka module
-      if (currentProblem.id && (currentProblem.id.includes('combinatorics') || currentProblem.id.includes('kombinatoryka'))) {
+      if (currentProblem.module === 'kombinatoryka') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('kombinatoryka-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for kombinatoryka:', suggestedIds);
       }
       
       // Save suggested problems to localStorage for systems of equations module
-      if (currentProblem.id && (currentProblem.id.includes('derivative') || currentProblem.id.includes('uklady_rownan'))) {
+      if (currentProblem.module === 'systems-of-equations') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('systems-of-equations-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for systems of equations:', suggestedIds);
       }
       
       // Save suggested problems to localStorage for homographic functions module
-      if (currentProblem.id && currentProblem.id.includes('homographic')) {
+      if (currentProblem.module === 'homographic-functions') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('homographic-functions-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for homographic functions:', suggestedIds);
       }
       
       // Save suggested problems to localStorage for elementary fractions module
-      if (currentProblem.id && currentProblem.id.includes('fraction_')) {
+      if (currentProblem.module === 'elementary-fractions') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('elementary-fractions-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for elementary fractions:', suggestedIds);
       }
 
       // Save suggested problems to localStorage for kombinatoryka-rozszerzenie module
-      if (currentProblem.id && currentProblem.id.includes('kombinatoryka-rozszerzenie')) {
+      if (currentProblem.module === 'kombinatoryka-rozszerzenie') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('kombinatoryka-rozszerzenie-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for kombinatoryka-rozszerzenie:', suggestedIds);
       }
 
       // Save suggested problems to localStorage for rational equations word problems module
-      if (currentProblem.id && currentProblem.id.includes('rational-equation')) {
+      if (currentProblem.module === 'rational-equations-word-problems') {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('rational-equations-word-problems-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for rational-equations-word-problems:', suggestedIds);
       }
 
-      // Save suggested problems to localStorage for ang-demo module
-      if (currentProblem.id && currentProblem.id.includes('ang_')) {
-        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
-        localStorage.setItem('ang-demo-suggested-problems', JSON.stringify(suggestedIds));
-        console.log('Saved suggested problems for ang-demo:', suggestedIds);
-      }
 
       return bestMatches;
 

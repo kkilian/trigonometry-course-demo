@@ -141,7 +141,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-13T19:19:54.074Z"
+    "timestamp": "2025-09-13T19:19:54.074Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "elevator_combinatorics_specific_floors",
@@ -285,7 +286,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:20:23.896Z"
+    "timestamp": "2025-09-13T19:20:23.896Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "elevator_permutations",
@@ -421,7 +423,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:20:54.868Z"
+    "timestamp": "2025-09-13T19:20:54.868Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "elevator_combinatorics_at_least_one",
@@ -565,7 +568,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:21:20.358Z"
+    "timestamp": "2025-09-13T19:21:20.358Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "permutations_four_students",
@@ -703,7 +707,8 @@
         "correctOptions": 6
       }
     },
-    "timestamp": "2025-09-13T19:21:56.668Z"
+    "timestamp": "2025-09-13T19:21:56.668Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "assignment_counting",
@@ -834,7 +839,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:22:24.118Z"
+    "timestamp": "2025-09-13T19:22:24.118Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "two_digit_even_complement",
@@ -967,7 +973,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:22:51.191Z"
+    "timestamp": "2025-09-13T19:22:51.191Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "two_digit_odd_complement",
@@ -1106,7 +1113,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:23:16.446Z"
+    "timestamp": "2025-09-13T19:23:16.446Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "ordered_pairs_logic_range",
@@ -1261,7 +1269,8 @@
         "correctOptions": 6
       }
     },
-    "timestamp": "2025-09-13T19:23:48.235Z"
+    "timestamp": "2025-09-13T19:23:48.235Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "ordered_pairs_greater_than",
@@ -1409,7 +1418,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:24:29.301Z"
+    "timestamp": "2025-09-13T19:24:29.301Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "ordered_pairs_divisible",
@@ -1553,7 +1563,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-13T19:24:58.347Z"
+    "timestamp": "2025-09-13T19:24:58.347Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "ordered_pairs_logic_prime",
@@ -1713,7 +1724,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:25:34.252Z"
+    "timestamp": "2025-09-13T19:25:34.252Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_numbers_divisible_by_3",
@@ -1888,7 +1900,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:26:12.903Z"
+    "timestamp": "2025-09-13T19:26:12.903Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_permutations",
@@ -2034,7 +2047,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-13T19:26:45.032Z"
+    "timestamp": "2025-09-13T19:26:45.032Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "colorful_flyers_combinatorics",
@@ -2148,7 +2162,8 @@
         "correctOptions": 2
       }
     },
-    "timestamp": "2025-09-13T19:27:06.549Z"
+    "timestamp": "2025-09-13T19:27:06.549Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_numbers_under_444",
@@ -2303,7 +2318,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:27:38.916Z"
+    "timestamp": "2025-09-13T19:27:38.916Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_numbers_under_780",
@@ -2452,7 +2468,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:28:23.468Z"
+    "timestamp": "2025-09-13T19:28:23.468Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_divisible_25",
@@ -2609,7 +2626,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:29:12.520Z"
+    "timestamp": "2025-09-13T19:29:12.520Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_divisible_by_4",
@@ -2757,7 +2775,8 @@
         "correctOptions": 5
       }
     },
-    "timestamp": "2025-09-13T19:30:07.955Z"
+    "timestamp": "2025-09-13T19:30:07.955Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_divisible_25",
@@ -2912,7 +2931,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:30:47.382Z"
+    "timestamp": "2025-09-13T19:30:47.382Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_numbers_combinatorics",
@@ -3070,7 +3090,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:31:28.135Z"
+    "timestamp": "2025-09-13T19:31:28.135Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "five_digit_divisible_by_4",
@@ -3221,7 +3242,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:32:05.775Z"
+    "timestamp": "2025-09-13T19:32:05.775Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "five_digit_numbers_combinatorics",
@@ -3357,7 +3379,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:32:44.161Z"
+    "timestamp": "2025-09-13T19:32:44.161Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "mobile_numbers_counting",
@@ -3505,7 +3528,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-13T19:33:14.772Z"
+    "timestamp": "2025-09-13T19:33:14.772Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "phone_numbers_permutations",
@@ -3655,7 +3679,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-13T19:33:53.770Z"
+    "timestamp": "2025-09-13T19:33:53.770Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "phone_numbers_decreasing",
@@ -3803,7 +3828,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:34:38.018Z"
+    "timestamp": "2025-09-13T19:34:38.018Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "mobile_numbers_combinatorics",
@@ -3949,9 +3975,10 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-13T19:35:08.218Z"
+    "timestamp": "2025-09-13T19:35:08.218Z",
+    "module": "kombinatoryka"
   },
-   {
+  {
     "id": "permutations_5_books",
     "topic": "Permutacje",
     "difficulty": 2,
@@ -4082,7 +4109,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T06:20:06.491Z"
+    "timestamp": "2025-09-14T06:20:06.491Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "permutations_class_positions",
@@ -4209,7 +4237,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:20:30.151Z"
+    "timestamp": "2025-09-14T06:20:30.151Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "combinatorics_menu_choice",
@@ -4341,7 +4370,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T06:20:58.065Z"
+    "timestamp": "2025-09-14T06:20:58.065Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "parking_arrangement_adjacent",
@@ -4485,7 +4515,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:21:26.628Z"
+    "timestamp": "2025-09-14T06:21:26.628Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_first_greater",
@@ -4631,7 +4662,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T06:21:57.585Z"
+    "timestamp": "2025-09-14T06:21:57.585Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "chess_tournament_outcomes",
@@ -4758,7 +4790,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:22:23.460Z"
+    "timestamp": "2025-09-14T06:22:23.460Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "team_division_combinatorics",
@@ -4892,7 +4925,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:22:51.108Z"
+    "timestamp": "2025-09-14T06:22:51.108Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "cube_coloring_burnside",
@@ -5050,7 +5084,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:23:28.586Z"
+    "timestamp": "2025-09-14T06:23:28.586Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "chess_rooks_combinatorics",
@@ -5200,7 +5235,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:24:04.022Z"
+    "timestamp": "2025-09-14T06:24:04.022Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "graph_theory_clique_problem",
@@ -5380,7 +5416,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T06:24:48.050Z"
+    "timestamp": "2025-09-14T06:24:48.050Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "combinatorics_team_selection",
@@ -5545,7 +5582,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T07:36:00.632Z"
+    "timestamp": "2025-09-14T07:36:00.632Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "chess_towers_diagonal",
@@ -5708,7 +5746,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T07:36:44.279Z"
+    "timestamp": "2025-09-14T07:36:44.279Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "six_digit_counting_problem",
@@ -5869,7 +5908,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:37:20.720Z"
+    "timestamp": "2025-09-14T07:37:20.720Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "books_arrangement_constraint",
@@ -6015,7 +6055,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:37:55.649Z"
+    "timestamp": "2025-09-14T07:37:55.649Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "tourist_group_division",
@@ -6190,7 +6231,8 @@
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-14T07:39:12.921Z"
+    "timestamp": "2025-09-14T07:39:12.921Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "password_combinatorics",
@@ -6354,7 +6396,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:39:51.158Z"
+    "timestamp": "2025-09-14T07:39:51.158Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "chess_board_arrangement",
@@ -6510,7 +6553,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:40:22.542Z"
+    "timestamp": "2025-09-14T07:40:22.542Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_divisibility",
@@ -6708,7 +6752,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:41:09.083Z"
+    "timestamp": "2025-09-14T07:41:09.083Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "graph_cycle_counting",
@@ -6853,7 +6898,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:41:39.516Z"
+    "timestamp": "2025-09-14T07:41:39.516Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "lottery_combinatorics_vip",
@@ -7032,7 +7078,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-14T07:42:18.145Z"
+    "timestamp": "2025-09-14T07:42:18.145Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "permutations_queue_arrangements",
@@ -7228,7 +7275,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-15T12:46:07.973Z"
+    "timestamp": "2025-09-15T12:46:07.973Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "five_digit_counting",
@@ -7403,7 +7451,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-15T12:46:45.711Z"
+    "timestamp": "2025-09-15T12:46:45.711Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "counting_four_digit_odd",
@@ -7614,7 +7663,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-15T12:47:37.229Z"
+    "timestamp": "2025-09-15T12:47:37.229Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "even_product_pairs",
@@ -7735,7 +7785,8 @@
         "correctOptions": 2
       }
     },
-    "timestamp": "2025-09-17T07:33:12.423Z"
+    "timestamp": "2025-09-17T07:33:12.423Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "can_number_combinatorics",
@@ -7872,7 +7923,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:33:42.693Z"
+    "timestamp": "2025-09-17T07:33:42.693Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "three_digit_divisible_6_or_15",
@@ -8053,7 +8105,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:34:14.735Z"
+    "timestamp": "2025-09-17T07:34:14.735Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "five_digit_counting_with_conditions",
@@ -8206,7 +8259,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:34:48.396Z"
+    "timestamp": "2025-09-17T07:34:48.396Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_numbers_constraint",
@@ -8355,7 +8409,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:35:18.159Z"
+    "timestamp": "2025-09-17T07:35:18.159Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "five_digit_counting_problem",
@@ -8516,7 +8571,8 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:35:53.579Z"
+    "timestamp": "2025-09-17T07:35:53.579Z",
+    "module": "kombinatoryka"
   },
   {
     "id": "four_digit_even_odd",
@@ -8643,7 +8699,7 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-17T07:36:16.803Z"
+    "timestamp": "2025-09-17T07:36:16.803Z",
+    "module": "kombinatoryka"
   }
 ]
-
