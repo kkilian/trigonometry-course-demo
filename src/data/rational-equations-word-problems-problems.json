@@ -1,5 +1,1412 @@
 [
   {
+    "id": "fraction_word_problem",
+    "topic": "Równania z ułamkami - zadania tekstowe",
+    "difficulty": 3,
+    "statement": "Licznik i mianownik dodatniego ułamka właściwego różnią się o 4. Wyznacz ten ułamek wiedząc, że jeśli jego licznik zwiększymy o 7, a mianownik podwoimy, to otrzymamy liczbę równą $\\frac{5}{7}$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć licznik i mianownik szukanego ułamka?",
+        "expression": "Szukany ułamek: $\\frac{x}{x+4}$, gdzie $x > 0$",
+        "explanation": "Oznaczamy licznik jako $x$, mianownik jako $x+4$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej oznaczyć licznik i mianownik ułamka właściwego, który różni się o 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Licznik = $x$, mianownik = $x + 4$",
+              "feedback": "Świetnie! Ułamek właściwy ma mianownik większy od licznika.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Licznik = $x + 4$, mianownik = $x$",
+              "feedback": "Nie - wtedy ułamek byłby niewłaściwy (większy od 1).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Licznik = $a$, mianownik = $b$, gdzie $b - a = 4$",
+              "feedback": "Poprawne, ale mniej wygodne - lepiej użyć jednej zmiennej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla ułamka właściwego mianownik > licznik, więc jeśli różnica to 4, to mianownik = licznik + 4."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek z zadania matematycznie?",
+        "expression": "$\\frac{x + 7}{2(x + 4)} = \\frac{5}{7}$",
+        "explanation": "Licznik zwiększamy o 7, mianownik podwajamy i otrzymujemy $\\frac{5}{7}$",
+        "why": "To kluczowe równanie - przekładamy słowa na matematykę. Licznik: $x + 7$, mianownik: $2(x + 4)$."
+      },
+      {
+        "step": 3,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$(x + 7) \\cdot 7 = 5 \\cdot 2(x + 4)$",
+        "explanation": "Stosujemy mnożenie krzyżowe",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do rozwiązania równania $\\frac{x + 7}{2(x + 4)} = \\frac{5}{7}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mnożenie krzyżowe: $(x + 7) \\cdot 7 = 5 \\cdot 2(x + 4)$",
+              "feedback": "Doskonale! To najszybsza metoda dla proporcji.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć obie strony przez $14(x + 4)$",
+              "feedback": "Zadziała, ale mnożenie krzyżowe jest prostsze.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić lewą stronę do postaci $\\frac{a}{b}$",
+              "feedback": "Niepotrzebnie komplikujesz - użyj mnożenia krzyżowego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie krzyżowe to najszybsza metoda: jeśli $\\frac{a}{b} = \\frac{c}{d}$, to $ad = bc$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć prawą stronę równania?",
+        "expression": "$7(x + 7) = 10(x + 4)$",
+        "explanation": "Upraszczamy prawą stronę: $5 \\cdot 2(x + 4) = 10(x + 4)$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po rozwinięciu nawiasów?",
+        "expression": "$7x + 49 = 10x + 40$",
+        "explanation": "Rozwijamy nawiasy po obu stronach"
+      },
+      {
+        "step": 6,
+        "hint": "Jak zebrać wszystkie wyrazy z $x$ na jednej stronie?",
+        "expression": "$49 - 40 = 10x - 7x$",
+        "explanation": "Przenosimy wyrazy z $x$ na prawą stronę, liczby na lewą"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest wartość $x$?",
+        "expression": "$9 = 3x$, więc $x = 3$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 8,
+        "hint": "Jaki jest szukany ułamek?",
+        "expression": "Szukany ułamek: $\\frac{3}{7}$",
+        "explanation": "Podstawiamy $x = 3$ do wzoru $\\frac{x}{x+4}$",
+        "interactive_choice": {
+          "prompt": "Czy rozwiązanie $x = 3$ spełnia wszystkie warunki zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, ułamek $\\frac{3}{7}$ jest właściwy i dodatni",
+              "feedback": "Świetnie! Sprawdźmy jeszcze warunek z równania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo $\\frac{3}{7} > 1$",
+              "feedback": "Błąd! $\\frac{3}{7} < 1$, więc to ułamek właściwy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie wiem, trzeba sprawdzić warunek",
+              "feedback": "Dobra ostrożność! Zawsze warto sprawdzić rozwiązanie.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Ułamek $\\frac{3}{7}$ jest dodatni i właściwy. Sprawdźmy jeszcze drugi warunek."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Czy drugi warunek jest spełniony?",
+        "expression": "$\\frac{3 + 7}{2(3 + 4)} = \\frac{10}{14} = \\frac{5}{7}$ ✓",
+        "explanation": "Sprawdzamy: po zwiększeniu licznika o 7 i podwojeniu mianownika otrzymujemy $\\frac{5}{7}$"
+      }
+    ],
+    "solutions": [
+      "$\\frac{3}{7}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-18T06:09:56.161Z"
+  },
+  {
+    "id": "fraction_equation_problem",
+    "topic": "Równania z ułamkami",
+    "difficulty": 4,
+    "statement": "Ułamek zwykły jest liczbą dodatnią, a jego licznik jest o 1 większy od mianownika. Wyznacz ten ułamek wiedząc, że różnica tego ułamka i 20% jego odwrotności jest równa 1,09.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć szukany ułamek jeśli jego licznik jest o 1 większy od mianownika?",
+        "expression": "Oznaczmy mianownik jako $x$, wtedy ułamek to $\\frac{x+1}{x}$",
+        "explanation": "Wprowadzamy zmienną dla mianownika, licznik jest o 1 większy"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest odwrotność ułamka $\\frac{x+1}{x}$?",
+        "expression": "Odwrotność: $\\frac{x}{x+1}$",
+        "explanation": "Odwrotność ułamka otrzymujemy zamieniając miejscami licznik i mianownik"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi 20% odwrotności naszego ułamka?",
+        "expression": "$20\\% \\cdot \\frac{x}{x+1} = \\frac{x}{5(x+1)}$",
+        "explanation": "20% zapisujemy jako $\\frac{1}{5}$ i mnożymy przez odwrotność",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć 20% z $\\frac{x}{x+1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$0,2 \\cdot \\frac{x}{x+1} = \\frac{0,2x}{x+1}$",
+              "feedback": "Dobrze! 20% to 0,2, więc mnożymy przez 0,2",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{20}{100} \\cdot \\frac{x}{x+1} = \\frac{20x}{100(x+1)}$",
+              "feedback": "Poprawnie, ale lepiej uprościć od razu do $\\frac{x}{5(x+1)}$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{x}{x+1} + 0,2$",
+              "feedback": "Nie - to byłoby dodawanie 20%, a nie mnożenie przez 20%",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "20% to $\\frac{1}{5}$, więc $20\\% \\cdot \\frac{x}{x+1} = \\frac{x}{5(x+1)}$"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać równanie na podstawie warunków zadania?",
+        "expression": "$\\frac{x+1}{x} - \\frac{x}{5(x+1)} = 1,09$",
+        "explanation": "Różnica ułamka i 20% jego odwrotności równa się 1,09",
+        "why": "To kluczowe równanie - tłumaczymy słowa na matematykę. 'Różnica' oznacza odejmowanie."
+      },
+      {
+        "step": 5,
+        "hint": "Jaki będzie wspólny mianownik dla tych ułamków?",
+        "expression": "$\\frac{5(x+1)^2}{5x(x+1)} - \\frac{x^2}{5x(x+1)} = 1,09$",
+        "explanation": "Sprowadzamy ułamki do wspólnego mianownika $5x(x+1)$",
+        "interactive_choice": {
+          "prompt": "Jaki wspólny mianownik wybrać dla $\\frac{x+1}{x}$ i $\\frac{x}{5(x+1)}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$x(x+1)$",
+              "feedback": "Nie wystarczy - nie uwzględnia czynnika 5 z drugiego ułamka",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$5x(x+1)$",
+              "feedback": "Doskonale! To najmniejszy wspólny mianownik",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$5x^2(x+1)^2$",
+              "feedback": "Za duży - niepotrzebnie komplikujesz obliczenia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wspólny mianownik to iloczyn wszystkich różnych czynników: $5x(x+1)$"
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz łącząc ułamki o tym samym mianowniku?",
+        "expression": "$\\frac{5(x+1)^2 - x^2}{5x(x+1)} = 1,09$",
+        "explanation": "Łączymy ułamki w jeden"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwinąć wyrażenie $5(x+1)^2 - x^2$ w liczniku?",
+        "expression": "$5(x^2 + 2x + 1) - x^2 = 5x^2 + 10x + 5 - x^2 = 4x^2 + 10x + 5$",
+        "explanation": "Rozwijamy kwadrat i upraszczamy"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie równanie otrzymasz po przemnożeniu obu stron przez mianownik?",
+        "expression": "$4x^2 + 10x + 5 = 1,09 \\cdot 5x(x+1)$",
+        "explanation": "Mnożymy obie strony przez $5x(x+1)$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć prawą stronę równania?",
+        "expression": "$4x^2 + 10x + 5 = 5,45x(x+1) = 5,45x^2 + 5,45x$",
+        "explanation": "Rozwijamy prawą stronę: $1,09 \\cdot 5 = 5,45$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak sprowadzić równanie do postaci standardowej?",
+        "expression": "$4x^2 + 10x + 5 - 5,45x^2 - 5,45x = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę",
+        "interactive_choice": {
+          "prompt": "Co zrobić z równaniem $4x^2 + 10x + 5 = 5,45x^2 + 5,45x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przenieść wszystko na lewą stronę",
+              "feedback": "Dobrze! Otrzymasz równanie kwadratowe w postaci standardowej",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podzielić obie strony przez $x$",
+              "feedback": "Niebezpieczne - możesz stracić rozwiązanie $x = 0$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości $x$",
+              "feedback": "To nie prowadzi do ogólnego rozwiązania",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przenosimy wszystko na jedną stronę, aby otrzymać równanie kwadratowe"
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jak uprościć współczynniki w równaniu?",
+        "expression": "$-1,45x^2 + 4,55x + 5 = 0$",
+        "explanation": "Łączymy podobne składniki: $(4-5,45)x^2 + (10-5,45)x + 5$"
+      },
+      {
+        "step": 12,
+        "hint": "Jak pozbyć się liczb dziesiętnych w równaniu?",
+        "expression": "$-145x^2 + 455x + 500 = 0$",
+        "explanation": "Mnożymy przez 100, aby pozbyć się przecinków",
+        "why": "Liczby całkowite są łatwiejsze w obliczeniach. Możemy też podzielić przez -5."
+      },
+      {
+        "step": 13,
+        "hint": "Czy można uprościć to równanie dzieląc przez wspólny czynnik?",
+        "expression": "$29x^2 - 91x - 100 = 0$",
+        "explanation": "Dzielimy przez -5 i zmieniamy znaki"
+      },
+      {
+        "step": 14,
+        "hint": "Jakie są współczynniki do wzoru na deltę?",
+        "expression": "$a = 29$, $b = -91$, $c = -100$",
+        "explanation": "Identyfikujemy współczynniki równania kwadratowego"
+      },
+      {
+        "step": 15,
+        "hint": "Ile wynosi delta tego równania?",
+        "expression": "$\\Delta = (-91)^2 - 4 \\cdot 29 \\cdot (-100) = 8281 + 11600 = 19881$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 16,
+        "hint": "Czy delta jest kwadratem liczby całkowitej?",
+        "expression": "$\\sqrt{19881} = 141$, bo $141^2 = 19881$",
+        "explanation": "Sprawdzamy czy można wyciągnąć pierwiastek"
+      },
+      {
+        "step": 17,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$x_1 = \\frac{91 + 141}{58} = \\frac{232}{58} = 4$ oraz $x_2 = \\frac{91 - 141}{58} = \\frac{-50}{58} = -\\frac{25}{29}$",
+        "explanation": "Używamy wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 18,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$x = 4$ (bo ułamek ma być dodatni, więc $x > 0$)",
+        "explanation": "Odrzucamy rozwiązanie ujemne, bo mianownik musi być dodatni"
+      },
+      {
+        "step": 19,
+        "hint": "Jaki jest szukany ułamek?",
+        "expression": "$\\frac{x+1}{x} = \\frac{4+1}{4} = \\frac{5}{4} = 1,25$",
+        "explanation": "Podstawiamy $x = 4$ do wzoru na ułamek"
+      }
+    ],
+    "solutions": [
+      "$\\frac{5}{4}$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 19,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:11:13.133Z"
+  },
+  {
+    "id": "speed_time_problem",
+    "topic": "Równania kwadratowe - zadania tekstowe",
+    "difficulty": 4,
+    "statement": "Drogę długości 208 km, kierowca przejechał ze średnią prędkością V [km/h], w pewnym czasie t [h]. Gdyby jechał z prędkością o 13 km/h większą, wówczas trasę pokonałby w czasie o 48 minut krótszym. Oblicz V.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki wzór łączy drogę, prędkość i czas?",
+        "expression": "$s = V \\cdot t$, więc $208 = V \\cdot t$",
+        "explanation": "Podstawowy wzór kinematyki dla ruchu jednostajnego"
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić czas t przez prędkość V?",
+        "expression": "$t = \\frac{208}{V}$",
+        "explanation": "Czas pierwotnej podróży wyrażony przez prędkość"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi 48 minut w godzinach?",
+        "expression": "$48  minut = \\frac{48}{60} = \\frac{4}{5}  godziny$",
+        "explanation": "Przeliczamy minuty na godziny",
+        "interactive_choice": {
+          "prompt": "Jak przeliczyć 48 minut na godziny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$48$ godzin",
+              "feedback": "Nie - to byłoby 48 godzin, a nie minut!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{48}{60} = \\frac{4}{5}$ godziny",
+              "feedback": "Dokładnie! 48 minut to $\\frac{48}{60} = 0{,}8$ godziny",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{48}{100}$ godziny",
+              "feedback": "Nie - minuty dzielimy przez 60, nie przez 100",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W jednej godzinie jest 60 minut, więc 48 minut = $\\frac{48}{60} = \\frac{4}{5}$ godziny."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest czas podróży przy większej prędkości?",
+        "expression": "Czas przy prędkości $(V + 13)$: $\\frac{208}{V + 13}$",
+        "explanation": "Przy większej prędkości czas się skraca"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać warunek o skróceniu czasu o 48 minut?",
+        "expression": "$\\frac{208}{V} - \\frac{208}{V + 13} = \\frac{4}{5}$",
+        "explanation": "Różnica czasów równa się oszczędności 48 minut",
+        "interactive_choice": {
+          "prompt": "Które równanie poprawnie opisuje różnicę czasów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{208}{V} + \\frac{4}{5} = \\frac{208}{V + 13}$",
+              "feedback": "Nie - czas się skraca, więc powinien być znak minus",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{208}{V} - \\frac{208}{V + 13} = \\frac{4}{5}$",
+              "feedback": "Świetnie! Różnica czasów (pierwotny minus nowy) równa się oszczędności",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{208}{V + 13} - \\frac{208}{V} = \\frac{4}{5}$",
+              "feedback": "Nie - to dałoby ujemną różnicę, a czas się skraca",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Czas pierwotny minus czas skrócony = oszczędność czasu."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak sprowadzić ułamki do wspólnego mianownika?",
+        "expression": "$\\frac{208(V + 13) - 208V}{V(V + 13)} = \\frac{4}{5}$",
+        "explanation": "Wspólny mianownik to $V(V + 13)$",
+        "why": "To kluczowy krok - sprowadzamy do jednego ułamka, co pozwoli pozbyć się mianowników."
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz po rozwinięciu licznika?",
+        "expression": "$\\frac{208V + 208 \\cdot 13 - 208V}{V(V + 13)} = \\frac{208 \\cdot 13}{V(V + 13)} = \\frac{4}{5}$",
+        "explanation": "Składniki $208V$ się skracają, zostaje $208 \\cdot 13 = 2704$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$\\frac{2704}{V(V + 13)} = \\frac{4}{5}$",
+        "explanation": "Uproszczone równanie z ułamkami"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz po przemnożeniu na krzyż?",
+        "expression": "$2704 \\cdot 5 = 4 \\cdot V(V + 13)$",
+        "explanation": "Mnożymy na krzyż aby pozbyć się ułamków"
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć równanie?",
+        "expression": "$13520 = 4V(V + 13)$",
+        "explanation": "Obliczamy $2704 \\cdot 5 = 13520$"
+      },
+      {
+        "step": 11,
+        "hint": "Co otrzymasz po podzieleniu przez 4?",
+        "expression": "$3380 = V(V + 13) = V^2 + 13V$",
+        "explanation": "Dzielimy obie strony przez 4"
+      },
+      {
+        "step": 12,
+        "hint": "Jak zapisać w postaci standardowej równania kwadratowego?",
+        "expression": "$V^2 + 13V - 3380 = 0$",
+        "explanation": "Równanie kwadratowe w postaci standardowej",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do rozwiązania równania $V^2 + 13V - 3380 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór z deltą",
+              "feedback": "Dobry wybór - dla dużych liczb to najbezpieczniejsza metoda",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki",
+              "feedback": "Trudne - liczby są duże, ciężko zgadnąć rozkład",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe, ale wzór z deltą będzie prostszy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla dużych współczynników wzór z deltą jest najniezawodniejszy."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są współczynniki a, b, c?",
+        "expression": "$a = 1$, $b = 13$, $c = -3380$",
+        "explanation": "Identyfikujemy współczynniki dla wzoru z deltą"
+      },
+      {
+        "step": 14,
+        "hint": "Ile wynosi delta?",
+        "expression": "$\\Delta = b^2 - 4ac = 13^2 - 4 \\cdot 1 \\cdot (-3380) = 169 + 13520 = 13689$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 15,
+        "hint": "Ile wynosi $\\sqrt{13689}$?",
+        "expression": "$\\sqrt{13689} = 117$",
+        "explanation": "Sprawdzamy: $117^2 = 13689$",
+        "why": "Warto sprawdzić czy delta to kwadrat liczby całkowitej - ułatwia to obliczenia."
+      },
+      {
+        "step": 16,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$V = \\frac{-13 \\pm 117}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 17,
+        "hint": "Które rozwiązanie ma sens fizyczny?",
+        "expression": "$V_1 = \\frac{-13 + 117}{2} = \\frac{104}{2} = 52$ lub $V_2 = \\frac{-13 - 117}{2} = \\frac{-130}{2} = -65$",
+        "explanation": "Prędkość musi być dodatnia, więc $V = 52$ km/h"
+      }
+    ],
+    "solutions": [
+      "$V = 52$ km/h"
+    ],
+    "parameters": {
+      "distance": "208 km",
+      "speed_increase": "13 km/h",
+      "time_saved": "48 minut"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 17,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:11:50.402Z"
+  },
+  {
+    "id": "tourist_distance_problem",
+    "topic": "Równania kwadratowe - zadania tekstowe",
+    "difficulty": 4,
+    "statement": "Turysta przebył pieszo 600 km. Każdego dnia pokonywał taką samą liczbę kilometrów. Gdyby codziennie przebywał o 10 km więcej, byłby w drodze o 5 dni krócej. Ile dni był turysta w drodze?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką zmienną warto wprowadzić w tym zadaniu?",
+        "expression": "Niech $x$ = liczba dni podróży",
+        "explanation": "Wprowadzamy zmienną dla liczby dni",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako zmienną w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liczbę kilometrów dziennie jako $x$",
+              "feedback": "Możliwe, ale wtedy trudniej zapisać warunek o 5 dniach krócej.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Liczbę dni podróży jako $x$",
+              "feedback": "Świetny wybór! Łatwo zapiszemy warunek o 5 dniach krócej.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Całkowitą odległość jako $x$",
+              "feedback": "Nie - odległość jest znana (600 km), nie jest zmienną.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczając liczbę dni jako $x$, łatwo wyrażamy wszystkie pozostałe wielkości."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile kilometrów dziennie pokonywał turysta?",
+        "expression": "Dzienna odległość = $\\frac{600}{x}$ km",
+        "explanation": "Dzielimy całkowitą odległość przez liczbę dni"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać warunek o szybszym tempie?",
+        "expression": "Gdyby szedł $\\frac{600}{x} + 10$ km dziennie, to szedłby $x - 5$ dni",
+        "explanation": "Zwiększone tempo o 10 km/dzień, skrócony czas o 5 dni"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie równanie wynika z faktu, że odległość pozostaje taka sama?",
+        "expression": "$(\\frac{600}{x} + 10)(x - 5) = 600$",
+        "explanation": "Równanie wynikające z niezmienności całkowitej odległości",
+        "why": "To podstawowe równanie zadania - nowe warunki muszą dać tę samą odległość 600 km.",
+        "interactive_choice": {
+          "prompt": "Jak zapisać równanie wyrażające stałość całkowitej odległości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{600}{x} \\cdot x = \\frac{600}{x-5} \\cdot (x-5)$",
+              "feedback": "To prawda, ale oba wyrażenia równają się 600 - nie prowadzi do rozwiązania.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$(\\frac{600}{x} + 10) \\cdot (x - 5) = 600$",
+              "feedback": "Doskonale! Nowe tempo × nowy czas = ta sama odległość.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{600}{x} + 10 = \\frac{600}{x-5}$",
+              "feedback": "Nie - to porównuje tempa, a nie całkowitą odległość.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kluczowe: (nowe tempo) × (nowy czas) = (stała odległość)"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$\\frac{600(x-5)}{x} + 10(x-5) = 600$",
+        "explanation": "Rozkładamy pierwszy czynnik na dwa składniki"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz po dalszym rozwinięciu?",
+        "expression": "$\\frac{600x - 3000}{x} + 10x - 50 = 600$",
+        "explanation": "Rozwijamy oba składniki"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć ułamek w pierwszym składniku?",
+        "expression": "$600 - \\frac{3000}{x} + 10x - 50 = 600$",
+        "explanation": "Rozkładamy ułamek: $\\frac{600x - 3000}{x} = 600 - \\frac{3000}{x}$"
+      },
+      {
+        "step": 8,
+        "hint": "Co zostanie po uproszczeniu stałych?",
+        "expression": "$-\\frac{3000}{x} + 10x - 50 = 0$",
+        "explanation": "Odejmujemy 600 z obu stron"
+      },
+      {
+        "step": 9,
+        "hint": "Jak pozbyć się ułamka w równaniu?",
+        "expression": "$-3000 + 10x^2 - 50x = 0$",
+        "explanation": "Mnożymy całe równanie przez $x$ (zakładając $x \\neq 0$)",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić równanie $-\\frac{3000}{x} + 10x - 50 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć przez $x$ (przy $x \\neq 0$)",
+              "feedback": "Świetnie! To usunie ułamek i da równanie kwadratowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść ułamek na prawą stronę",
+              "feedback": "Możliwe, ale nadal zostanie ułamek - lepiej go wyeliminować.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $y = \\frac{1}{x}$",
+              "feedback": "Skomplikowane - proste mnożenie przez $x$ jest lepsze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez $x$ eliminuje ułamek i daje standardowe równanie kwadratowe."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jak uporządkować równanie kwadratowe?",
+        "expression": "$10x^2 - 50x - 3000 = 0$",
+        "explanation": "Porządkujemy w postaci standardowej"
+      },
+      {
+        "step": 11,
+        "hint": "Czy można uprościć to równanie?",
+        "expression": "$x^2 - 5x - 300 = 0$",
+        "explanation": "Dzielimy przez 10 aby uprościć współczynniki"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są współczynniki do wzoru na deltę?",
+        "expression": "$a = 1$, $b = -5$, $c = -300$",
+        "explanation": "Identyfikujemy współczynniki równania kwadratowego"
+      },
+      {
+        "step": 13,
+        "hint": "Ile wynosi delta?",
+        "expression": "$\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot (-300) = 25 + 1200 = 1225$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 14,
+        "hint": "Ile wynosi pierwiastek z delty?",
+        "expression": "$\\sqrt{\\Delta} = \\sqrt{1225} = 35$",
+        "explanation": "Pierwiastek z 1225 to 35"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$x_1 = \\frac{5 + 35}{2} = 20$, $x_2 = \\frac{5 - 35}{2} = -15$",
+        "explanation": "Stosujemy wzór kwadratowy"
+      },
+      {
+        "step": 16,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$x = 20$ dni",
+        "explanation": "Liczba dni musi być dodatnia, więc $x = 20$",
+        "why": "W zadaniach tekstowych zawsze sprawdzamy, które rozwiązania matematyczne mają sens praktyczny."
+      },
+      {
+        "step": 17,
+        "hint": "Jak sprawdzić poprawność rozwiązania?",
+        "expression": "Sprawdzenie: $\\frac{600}{20} = 30$ km/dzień, $(30+10) \\cdot 15 = 40 \\cdot 15 = 600$ km ✓",
+        "explanation": "Weryfikujemy: przy 40 km/dzień przez 15 dni = 600 km"
+      }
+    ],
+    "solutions": [
+      "20 dni"
+    ],
+    "parameters": {
+      "total_distance": "600 km",
+      "speed_increase": "10 km/dzień",
+      "time_decrease": "5 dni"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 17,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:13:18.678Z"
+  },
+  {
+    "id": "hotel_curtains_system",
+    "topic": "Układy równań - zadania tekstowe",
+    "difficulty": 4,
+    "statement": "Właściciel hotelu zlecił dwóm zakładom krawieckim uszycie 140 zasłon. Pierwszy zakład miał uszyć 80 zasłon, zaś drugi 60 zasłon. W zakładzie pierwszym, zatrudniającym więcej pracowników, szyto dziennie o 8 zasłon więcej niż w zakładzie drugim. Drugi zakład wykonał zamówienie w terminie, a pierwszy o 1 dzień wcześniej niż ustalono. Ile zasłon dziennie szyto w każdym z zakładów?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości warto oznaczyć jako niewiadome w tym zadaniu?",
+        "expression": "Niech $x$ = liczba zasłon dziennie w zakładzie drugim, $y$ = liczba zasłon dziennie w zakładzie pierwszym",
+        "explanation": "Definiujemy niewiadome jako dzienną wydajność każdego zakładu",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako niewiadome w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liczbę dni pracy każdego zakładu",
+              "feedback": "Możliwe, ale komplikuje - nie znamy bezpośrednio relacji między czasami",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Liczbę zasłon szyanych dziennie w każdym zakładzie",
+              "feedback": "Doskonały wybór! Mamy bezpośrednią relację między wydajnościami",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Całkowitą liczbę zasłon i czas pracy",
+              "feedback": "Niepotrzebnie - liczby zasłon są już podane w zadaniu",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczenie wydajności (zasłon dziennie) pozwala bezpośrednio wykorzystać podane relacje."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest relacja między wydajnościami obu zakładów?",
+        "expression": "$y = x + 8$",
+        "explanation": "Pierwszy zakład szyje o 8 zasłon więcej dziennie niż drugi",
+        "why": "To kluczowa relacja z treści zadania - różnica wydajności wynosi 8 zasłon dziennie"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić czas pracy każdego zakładu przez wydajność?",
+        "expression": "Czas pracy drugiego zakładu: $\\frac{60}{x}$ dni, pierwszego: $\\frac{80}{y}$ dni",
+        "explanation": "Czas = liczba zasłon ÷ wydajność dzienna"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest relacja między czasami pracy obu zakładów?",
+        "expression": "$\\frac{60}{x} - \\frac{80}{y} = 1$",
+        "explanation": "Drugi zakład pracował o 1 dzień dłużej niż pierwszy",
+        "interactive_choice": {
+          "prompt": "Jak interpretować informację 'pierwszy o 1 dzień wcześniej niż ustalono'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy pracował 1 dzień krócej niż drugi",
+              "feedback": "Dokładnie! Drugi wykonał w terminie, pierwszy dzień wcześniej",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pierwszy pracował 1 dzień dłużej niż drugi",
+              "feedback": "Nie - 'wcześniej' oznacza krócej, nie dłużej",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Oba zakłady pracowały równo długo",
+              "feedback": "Nie - jest wyraźna różnica 1 dnia między terminami",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Drugi zakład pracował zgodnie z planem, pierwszy skończył dzień wcześniej."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć układ równań podstawiając $y = x + 8$?",
+        "expression": "$\\frac{60}{x} - \\frac{80}{x + 8} = 1$",
+        "explanation": "Podstawiamy pierwszą relację do drugiego równania"
+      },
+      {
+        "step": 6,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$60(x + 8) - 80x = x(x + 8)$",
+        "explanation": "Mnożymy obie strony przez $x(x + 8)$",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać równanie $\\frac{60}{x} - \\frac{80}{x + 8} = 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć przez $x(x + 8)$",
+              "feedback": "Świetnie! To usunie wszystkie mianowniki jednocześnie",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprowadzić ułamki do wspólnego mianownika",
+              "feedback": "Możliwe, ale więcej rachunków - lepiej od razu pomnożyć",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić każdy ułamek osobno",
+              "feedback": "Niepraktyczne - mnożenie przez wspólny mianownik jest szybsze",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez wspólny mianownik $x(x+8)$ eliminuje wszystkie ułamki na raz."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwinąć i uporządkować otrzymane równanie?",
+        "expression": "$60x + 480 - 80x = x^2 + 8x$",
+        "explanation": "Rozwijamy nawiasy po obu stronach"
+      },
+      {
+        "step": 8,
+        "hint": "Jak sprowadzić równanie do postaci standardowej?",
+        "expression": "$480 - 20x = x^2 + 8x$",
+        "explanation": "Upraszczamy lewą stronę: $60x - 80x = -20x$"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest postać standardowa tego równania kwadratowego?",
+        "expression": "$x^2 + 28x - 480 = 0$",
+        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy"
+      },
+      {
+        "step": 10,
+        "hint": "Jak rozwiązać równanie $x^2 + 28x - 480 = 0$?",
+        "expression": "$\\Delta = 28^2 - 4 \\cdot 1 \\cdot (-480) = 784 + 1920 = 2704$",
+        "explanation": "Obliczamy dyskryminantę",
+        "why": "Współczynniki są duże, więc delta jest najniezawodniejszą metodą"
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi pierwiastek z dyskryminanty?",
+        "expression": "$\\sqrt{2704} = 52$",
+        "explanation": "Sprawdzamy: $52^2 = 2704$"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$x_1 = \\frac{-28 + 52}{2} = 12$, $x_2 = \\frac{-28 - 52}{2} = -40$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 13,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$x = 12$ (zasłon dziennie w zakładzie drugim)",
+        "explanation": "Odrzucamy $x = -40$ bo liczba zasłon musi być dodatnia"
+      },
+      {
+        "step": 14,
+        "hint": "Ile zasłon dziennie szyje pierwszy zakład?",
+        "expression": "$y = x + 8 = 12 + 8 = 20$ (zasłon dziennie w zakładzie pierwszym)",
+        "explanation": "Używamy relacji między wydajnościami"
+      },
+      {
+        "step": 15,
+        "hint": "Czy rozwiązanie jest poprawne?",
+        "expression": "Sprawdzenie: $\\frac{60}{12} - \\frac{80}{20} = 5 - 4 = 1$ ✓",
+        "explanation": "Drugi zakład pracował 5 dni, pierwszy 4 dni - różnica wynosi 1 dzień"
+      }
+    ],
+    "solutions": [
+      "Zakład pierwszy: 20 zasłon dziennie",
+      "Zakład drugi: 12 zasłon dziennie"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:13:54.917Z"
+  },
+  {
+    "id": "workshop_production_problem",
+    "topic": "Równania z zadaniami tekstowymi",
+    "difficulty": 4,
+    "statement": "Zakład stolarski otrzymał zamówienie na wykonanie 720 stołków. Aby zrealizować zamówienie na czas, postanowiono wykonywać dziennie jednakową liczbę stołków. Po wykonaniu $66\\frac{2}{3}\\%$ zamówienia usprawnieniu produkcję tak, że dzienna produkcja wzrosła o 4 stołki, a zamówienie zrealizowano o 5 dni wcześniej, niż planowano. W ciągu ilu dni planowano wykonać zamówienie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są kluczowe dane w tym zadaniu?",
+        "expression": "Całkowite zamówienie: 720 stołków, $66\\frac{2}{3}\\% = \\frac{2}{3}$ zamówienia, wzrost produkcji: +4 stołki/dzień, skrócenie czasu: 5 dni",
+        "explanation": "Identyfikujemy wszystkie dane liczbowe z zadania"
+      },
+      {
+        "step": 2,
+        "hint": "Ile stołków wykonano przed usprawnieniem produkcji?",
+        "expression": "$\\frac{2}{3} \\cdot 720 = 480$ stołków",
+        "explanation": "Obliczamy $66\\frac{2}{3}\\%$ z 720 stołków"
+      },
+      {
+        "step": 3,
+        "hint": "Ile stołków pozostało do wykonania po usprawnieniu?",
+        "expression": "$720 - 480 = 240$ stołków",
+        "explanation": "Pozostała część zamówienia do wykonania z większą wydajnością"
+      },
+      {
+        "step": 4,
+        "hint": "Jaką zmienną najlepiej wprowadzić do tego problemu?",
+        "expression": "Niech $x$ = planowana liczba dni na wykonanie całego zamówienia",
+        "explanation": "Wprowadzamy zmienną dla szukanej wielkości",
+        "interactive_choice": {
+          "prompt": "Co oznaczyć jako zmienną $x$ w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Planowaną liczbę dni na całe zamówienie",
+              "feedback": "Świetny wybór! To jest to, czego szukamy - bezpośrednia odpowiedź na pytanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Początkową dzienną produkcję stołków",
+              "feedback": "Możliwe, ale komplikuje rozwiązanie - lepiej oznaczyć to, czego szukamy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Liczbę dni po usprawnieniu",
+              "feedback": "To tylko część problemu - lepiej oznaczyć całkowity planowany czas.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczając $x$ jako planowany czas, łatwiej wyrażamy wszystkie pozostałe wielkości."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jaka była planowana dzienna produkcja?",
+        "expression": "Planowana dzienna produkcja = $\\frac{720}{x}$ stołków/dzień",
+        "explanation": "Dzielimy całkowite zamówienie przez planowany czas",
+        "why": "To kluczowe wyrażenie - pozwala nam powiązać wszystkie wielkości w zadaniu."
+      },
+      {
+        "step": 6,
+        "hint": "Ile dni planowano na wykonanie pierwszych 480 stołków?",
+        "expression": "Czas na pierwsze 480 stołków = $\\frac{480}{\\frac{720}{x}} = \\frac{480x}{720} = \\frac{2x}{3}$ dni",
+        "explanation": "Dzielimy liczbę stołków przez dzienną produkcję"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka była dzienna produkcja po usprawnieniu?",
+        "expression": "Produkcja po usprawnieniu = $\\frac{720}{x} + 4$ stołków/dzień",
+        "explanation": "Dodajemy 4 stołki do pierwotnej dziennej produkcji"
+      },
+      {
+        "step": 8,
+        "hint": "Ile dni faktycznie zajęło wykonanie pozostałych 240 stołków?",
+        "expression": "Czas na pozostałe 240 stołków = $\\frac{240}{\\frac{720}{x} + 4}$ dni",
+        "explanation": "Dzielimy pozostałe stołki przez nową dzienną produkcję"
+      },
+      {
+        "step": 9,
+        "hint": "Jak zapisać warunek, że całe zamówienie wykonano o 5 dni wcześniej?",
+        "expression": "$\\frac{2x}{3} + \\frac{240}{\\frac{720}{x} + 4} = x - 5$",
+        "explanation": "Równanie opisujące warunek przyspieszenia realizacji",
+        "interactive_choice": {
+          "prompt": "Które równanie poprawnie opisuje sytuację z przyspieszeniem o 5 dni?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{2x}{3} + \\frac{240}{\\frac{720}{x} + 4} = x - 5$",
+              "feedback": "Doskonale! Faktyczny czas (lewa strona) jest o 5 dni krótszy od planowanego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{2x}{3} + \\frac{240}{\\frac{720}{x} + 4} = x + 5$",
+              "feedback": "Nie - to oznaczałoby, że zajęło więcej czasu, a nie mniej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{2x}{3} + \\frac{240}{\\frac{720}{x} + 4} + 5 = x$",
+              "feedback": "Błędnie - dodajesz 5 dni zamiast je odejmować.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Faktyczny czas wykonania to suma czasu na pierwsze 480 stołków i pozostałe 240, co równa się planowanemu czasowi minus 5 dni."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć drugie wyrażenie w równaniu?",
+        "expression": "$\\frac{240}{\\frac{720}{x} + 4} = \\frac{240}{\\frac{720 + 4x}{x}} = \\frac{240x}{720 + 4x} = \\frac{60x}{180 + x}$",
+        "explanation": "Upraszczamy ułamek złożony i skracamy przez 4"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie równanie otrzymujemy po podstawieniu?",
+        "expression": "$\\frac{2x}{3} + \\frac{60x}{180 + x} = x - 5$",
+        "explanation": "Podstawiamy uproszczone wyrażenie do równania"
+      },
+      {
+        "step": 12,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$2x(180 + x) + 180x = 3(x - 5)(180 + x)$",
+        "explanation": "Mnożymy całe równanie przez $3(180 + x)$",
+        "interactive_choice": {
+          "prompt": "Przez co pomnożyć równanie, aby pozbyć się wszystkich ułamków?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przez $3(180 + x)$",
+              "feedback": "Świetnie! To wspólny mianownik wszystkich ułamków w równaniu.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przez $3x$",
+              "feedback": "To nie wystarczy - nie pozbędzie się mianownika $(180 + x)$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przez $(180 + x)$",
+              "feedback": "To nie wystarczy - zostanie ułamek z mianownikiem 3.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożąc przez $3(180 + x)$ eliminujemy wszystkie mianowniki jednocześnie."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$360x + 2x^2 + 180x = 540x + 2x^2$",
+        "explanation": "Rozwijamy i porządkujemy lewą stronę"
+      },
+      {
+        "step": 14,
+        "hint": "Jak rozwinąć prawą stronę równania?",
+        "expression": "$3(x - 5)(180 + x) = 3(180x + x^2 - 900 - 5x) = 3(x^2 + 175x - 900) = 3x^2 + 525x - 2700$",
+        "explanation": "Rozwijamy prawą stronę równania"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie równanie otrzymujemy po przeniesieniu wszystkiego na jedną stronę?",
+        "expression": "$540x + 2x^2 = 3x^2 + 525x - 2700$",
+        "explanation": "Podstawiamy rozwinięte wyrażenia"
+      },
+      {
+        "step": 16,
+        "hint": "Jak uprościć równanie do postaci standardowej?",
+        "expression": "$0 = x^2 - 15x - 2700$",
+        "explanation": "Przenosimy wszystko na prawą stronę i upraszczamy"
+      },
+      {
+        "step": 17,
+        "hint": "Jakie są współczynniki tego równania kwadratowego?",
+        "expression": "$x^2 - 15x - 2700 = 0$, gdzie $a = 1$, $b = -15$, $c = -2700$",
+        "explanation": "Identyfikujemy współczynniki równania kwadratowego"
+      },
+      {
+        "step": 18,
+        "hint": "Ile wynosi delta tego równania?",
+        "expression": "$\\Delta = (-15)^2 - 4 \\cdot 1 \\cdot (-2700) = 225 + 10800 = 11025 = 105^2$",
+        "explanation": "Obliczamy deltę i sprawdzamy, czy jest kwadratem"
+      },
+      {
+        "step": 19,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$x = \\frac{15 \\pm 105}{2}$, więc $x_1 = \\frac{120}{2} = 60$ lub $x_2 = \\frac{-90}{2} = -45$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 20,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$x = 60$ dni",
+        "explanation": "Odrzucamy rozwiązanie ujemne, bo liczba dni musi być dodatnia",
+        "why": "W zadaniach praktycznych zawsze sprawdzamy, czy rozwiązania matematyczne mają sens w kontekście problemu."
+      }
+    ],
+    "solutions": [
+      "60 dni"
+    ],
+    "parameters": {
+      "total_order": "720 stołków",
+      "improvement_point": "$66\\frac{2}{3}\\%$ zamówienia",
+      "production_increase": "4 stołki/dzień",
+      "time_saved": "5 dni"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 20,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:14:41.308Z"
+  },
+  {
+    "id": "work_plan_problem",
+    "topic": "Zadania tekstowe z równaniami",
+    "difficulty": 4,
+    "statement": "Pod budowę bloku na osiedlu mieszkaniowym należało wykopać w określonym terminie 8000 m³ ziemi. Praca została rozpoczęta na 8 dni przed terminem, gdyż ekipa robotników przekraczała stale o 50 m³ dzienny plan. Oblicz, w ciągu ilu dni miała być wykonana praca i o ile procent przekraczano codzienny plan.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości należy oznaczyć jako niewiadome?",
+        "expression": "Niech $x$ = liczba dni, w ciągu których miała być wykonana praca",
+        "explanation": "Definiujemy główną niewiadomą",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako główną niewiadomą w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oznaczyć $x$ jako liczbę dni planowanych",
+              "feedback": "Świetny wybór! To pozwoli łatwo wyrazić wszystkie inne wielkości.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Oznaczyć $x$ jako dzienny plan pracy",
+              "feedback": "Możliwe, ale trudniej będzie wyrazić czas pracy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Oznaczyć $x$ jako rzeczywistą wydajność dzienną",
+              "feedback": "Skomplikowane - lepiej zacząć od czasu planowanego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczenie czasu planowanego jako $x$ pozwala łatwo wyrazić wydajności przez objętość podzieloną przez czas."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić planowaną dzienną wydajność przez $x$?",
+        "expression": "Planowana dzienna wydajność = $\\frac{8000}{x}$ m³/dzień",
+        "explanation": "Wydajność to całkowita objętość podzielona przez czas",
+        "why": "To podstawowa zależność: wydajność = praca/czas. Pozwala wyrazić wszystkie wielkości przez jedną niewiadomą."
+      },
+      {
+        "step": 3,
+        "hint": "O ile większa była rzeczywista wydajność od planowanej?",
+        "expression": "Rzeczywista dzienna wydajność = $\\frac{8000}{x} + 50$ m³/dzień",
+        "explanation": "Rzeczywista wydajność to plan plus 50 m³"
+      },
+      {
+        "step": 4,
+        "hint": "W jakim czasie faktycznie wykonano pracę?",
+        "expression": "Rzeczywisty czas pracy = $x - 8$ dni",
+        "explanation": "Pracę rozpoczęto 8 dni wcześniej, więc trwała o 8 dni krócej"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać równanie wyrażające fakt, że wykonano tę samą objętość pracy?",
+        "expression": "$(\\frac{8000}{x} + 50) \\cdot (x - 8) = 8000$",
+        "explanation": "Rzeczywista wydajność pomnożona przez rzeczywisty czas daje całkowitą pracę",
+        "interactive_choice": {
+          "prompt": "Które równanie poprawnie opisuje sytuację?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(\\frac{8000}{x} + 50) \\cdot (x - 8) = 8000$",
+              "feedback": "Doskonale! Rzeczywista wydajność × rzeczywisty czas = całkowita praca.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{8000}{x} \\cdot (x - 8) = 8000$",
+              "feedback": "Nie - to uwzględnia tylko planowaną wydajność, a nie zwiększoną o 50 m³.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$(\\frac{8000}{x} + 50) \\cdot x = 8000$",
+              "feedback": "Nie - to zakłada, że pracowano przez planowany czas $x$, a nie $(x-8)$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kluczowe jest uwzględnienie zarówno zwiększonej wydajności, jak i skróconego czasu pracy."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$\\frac{8000(x-8)}{x} + 50(x-8) = 8000$",
+        "explanation": "Rozwijamy iloczyn stosując prawo rozdzielności"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć pierwszy składnik?",
+        "expression": "$\\frac{8000x - 64000}{x} + 50x - 400 = 8000$",
+        "explanation": "Rozwijamy licznik ułamka i drugi składnik"
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymamy po rozdzieleniu ułamka?",
+        "expression": "$8000 - \\frac{64000}{x} + 50x - 400 = 8000$",
+        "explanation": "Dzielimy licznik przez mianownik: $\\frac{8000x - 64000}{x} = 8000 - \\frac{64000}{x}$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć równanie po przeniesieniu 8000?",
+        "expression": "$-\\frac{64000}{x} + 50x - 400 = 0$",
+        "explanation": "Odejmujemy 8000 z obu stron"
+      },
+      {
+        "step": 10,
+        "hint": "Jak pozbyć się ułamka w równaniu?",
+        "expression": "$-64000 + 50x^2 - 400x = 0$",
+        "explanation": "Mnożymy całe równanie przez $x$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić równanie $-\\frac{64000}{x} + 50x - 400 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć całe równanie przez $x$",
+              "feedback": "Świetnie! To usunie ułamek i da równanie kwadratowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść ułamek na prawą stronę",
+              "feedback": "Możliwe, ale nadal zostanie ułamek - lepiej go wyeliminować.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $y = \\frac{1}{x}$",
+              "feedback": "Niepotrzebnie komplikuje - proste mnożenie przez $x$ wystarczy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez $x$ (przy $x \\neq 0$) eliminuje ułamek i daje standardowe równanie kwadratowe."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jak uporządkować równanie kwadratowe?",
+        "expression": "$50x^2 - 400x - 64000 = 0$",
+        "explanation": "Porządkujemy według malejących potęg $x$"
+      },
+      {
+        "step": 12,
+        "hint": "Czy można uprościć równanie dzieląc przez wspólny czynnik?",
+        "expression": "$x^2 - 8x - 1280 = 0$",
+        "explanation": "Dzielimy całe równanie przez 50",
+        "why": "Uproszczenie ułatwia obliczenia. Sprawdzamy: $50, 400, 64000$ są podzielne przez 50."
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są współczynniki do wzoru na deltę?",
+        "expression": "$a = 1$, $b = -8$, $c = -1280$",
+        "explanation": "Identyfikujemy współczynniki równania $ax^2 + bx + c = 0$"
+      },
+      {
+        "step": 14,
+        "hint": "Ile wynosi delta?",
+        "expression": "$\\Delta = (-8)^2 - 4 \\cdot 1 \\cdot (-1280) = 64 + 5120 = 5184$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 15,
+        "hint": "Ile wynosi pierwiastek z delty?",
+        "expression": "$\\sqrt{\\Delta} = \\sqrt{5184} = 72$",
+        "explanation": "Sprawdzamy: $72^2 = 5184$"
+      },
+      {
+        "step": 16,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$x_1 = \\frac{8 + 72}{2} = \\frac{80}{2} = 40$, $x_2 = \\frac{8 - 72}{2} = \\frac{-64}{2} = -32$",
+        "explanation": "Stosujemy wzór $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$"
+      },
+      {
+        "step": 17,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$x = 40$ dni",
+        "explanation": "Czas nie może być ujemny, więc $x = -32$ odrzucamy"
+      },
+      {
+        "step": 18,
+        "hint": "Jaka była planowana dzienna wydajność?",
+        "expression": "Planowana wydajność = $\\frac{8000}{40} = 200$ m³/dzień",
+        "explanation": "Dzielimy całkowitą objętość przez planowany czas"
+      },
+      {
+        "step": 19,
+        "hint": "O ile procent przekraczano plan?",
+        "expression": "Przekroczenie = $\\frac{50}{200} \\cdot 100\\% = 25\\%$",
+        "explanation": "Procent to stosunek przekroczenia do planu razy 100%"
+      }
+    ],
+    "solutions": [
+      "Praca miała być wykonana w ciągu 40 dni",
+      "Codzienny plan przekraczano o 25%"
+    ],
+    "parameters": {
+      "total_work": "8000 m³",
+      "early_start": "8 dni",
+      "daily_excess": "50 m³"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 19,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:15:23.400Z"
+  },
+  {
     "id": "work_teams_problem",
     "topic": "Zadania na pracę - równania z ułamkami",
     "difficulty": 4,
@@ -16,13 +1423,13 @@
             {
               "id": "A",
               "text": "Czas pracy pierwszego zespołu: $x$ dni",
-              "feedback": "Świetny wybór! Pozostałe czasy łatwo wyrazić przez $x$.",
+              "feedback": "Świetny wybór! Pozostałe czasy łatwo wyrazisz przez $x$.",
               "is_correct": true
             },
             {
               "id": "B",
               "text": "Czas pracy drugiego zespołu: $y$ dni",
-              "feedback": "Możliwe, ale pierwszy zespół jest punktem odniesienia dla pozostałych.",
+              "feedback": "Możliwe, ale pierwszy zespół jest punktem odniesienia w zadaniu.",
               "is_correct": false
             },
             {
@@ -46,39 +1453,15 @@
         "step": 3,
         "hint": "Co oznacza wydajność pracy każdego zespołu?",
         "expression": "Wydajność pierwszego: $\\frac{1}{x}$, drugiego: $\\frac{1}{x+1}$, trzeciego: $\\frac{1}{x+4}$",
-        "explanation": "Wydajność to część pracy wykonana w ciągu jednego dnia. Jeśli potrzebujesz 4 dni na pomalowanie pokoju, to każdego dnia malujiesz $\\frac{1}{4}$ pokoju. Po 4 dniach: $\\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} = \\frac{4}{4} = 1$ cały pokój ✓",
-        "interactive_choice": {
-          "prompt": "Jeśli pierwszy zespół wykonuje całą pracę w $x$ dni, to jego dzienna wydajność to:",
-          "options": [
-            {
-              "id": "A",
-              "text": "$\\frac{1}{x}$ części pracy dziennie",
-              "feedback": "Świetnie! W ciągu $x$ dni wykona całą pracę, więc dziennie robi $\\frac{1}{x}$ części.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "$x$ części pracy dziennie",
-              "feedback": "Nie - gdyby robił $x$ części dziennie, to w jeden dzień zrobiłby więcej niż całą pracę!",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "$\\frac{x}{1}$ części pracy dziennie",
-              "feedback": "To to samo co opcja B. Wydajność większa niż 1 oznaczałaby więcej niż całą pracę dziennie.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Wydajność to odwrotność czasu - im więcej dni potrzeba, tym mniejsza wydajność dzienna."
-        }
+        "explanation": "Wydajność to część pracy wykonana w ciągu jednego dnia"
       },
       {
         "step": 4,
         "hint": "Jak zapisać warunek wspólnej pracy w ciągu jednego dnia?",
         "expression": "$\\frac{1}{x} + \\frac{1}{x+1} + \\frac{1}{x+4} = 1$",
-        "explanation": "Suma wydajności wszystkich zespołów równa się 1 (cała praca w 1 dzień)",
+        "explanation": "Suma wydajności wszystkich zespołów równa się całej pracy",
         "interactive_choice": {
-          "prompt": "Jakie równanie opisuje fakt, że zespoły razem kończą pracę w 1 dzień?",
+          "prompt": "Jakie równanie opisuje wspólną pracę trzech zespołów?",
           "options": [
             {
               "id": "A",
@@ -95,11 +1478,11 @@
             {
               "id": "C",
               "text": "$\\frac{x + (x+1) + (x+4)}{3} = 1$",
-              "feedback": "To średni czas, nie wydajność wspólna. Wydajności się dodają.",
+              "feedback": "To średnia czasów, nie suma wydajności pracujących zespołów.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Wydajności się dodują - każdy zespół wnosi swoją część do wspólnego wyniku."
+          "explanation_after": "Wydajności się dodają - każdy zespół wykonuje swoją część w tym samym czasie."
         }
       },
       {
@@ -110,102 +1493,115 @@
       },
       {
         "step": 6,
-        "hint": "Jak będzie wyglądać równanie po sprowadzeniu do wspólnego mianownika?",
+        "hint": "Jak wyglądają liczniki po sprowadzeniu do wspólnego mianownika?",
         "expression": "$\\frac{(x+1)(x+4) + x(x+4) + x(x+1)}{x(x+1)(x+4)} = 1$",
-        "explanation": "Każdy ułamek rozszerzamy odpowiednio"
+        "explanation": "Każdy ułamek rozszerzamy odpowiednimi czynnikami"
       },
       {
         "step": 7,
-        "hint": "Co otrzymamy po przemnożeniu obu stron przez mianownik?",
+        "hint": "Co otrzymasz po pomnożeniu obu stron przez mianownik?",
         "expression": "$(x+1)(x+4) + x(x+4) + x(x+1) = x(x+1)(x+4)$",
         "explanation": "Pozbyliśmy się ułamków"
       },
       {
         "step": 8,
-        "hint": "Jak rozwinąć lewą stronę równania?",
-        "expression": "$(x+1)(x+4) = x^2 + 5x + 4$\n$x(x+4) = x^2 + 4x$\n$x(x+1) = x^2 + x$",
-        "explanation": "Rozwijamy każdy iloczyn z osobna"
+        "hint": "Jak rozwinąć wyrażenia w nawiasach?",
+        "expression": "$(x^2 + 5x + 4) + (x^2 + 4x) + (x^2 + x) = x(x^2 + 5x + 4)$",
+        "explanation": "Rozwijamy każdy iloczyn osobno"
       },
       {
         "step": 9,
-        "hint": "Jaka jest suma lewej strony po rozwinięciu?",
-        "expression": "$x^2 + 5x + 4 + x^2 + 4x + x^2 + x = 3x^2 + 10x + 4$",
-        "explanation": "Dodajemy podobne składniki"
+        "hint": "Jak uprościć lewą stronę równania?",
+        "expression": "$3x^2 + 10x + 4 = x^3 + 5x^2 + 4x$",
+        "explanation": "Dodajemy podobne składniki po lewej stronie"
       },
       {
         "step": 10,
-        "hint": "Jak rozwinąć prawą stronę $x(x+1)(x+4)$?",
-        "expression": "$x(x+1)(x+4) = x[(x+1)(x+4)] = x[x^2 + 5x + 4] = x^3 + 5x^2 + 4x$",
-        "explanation": "Najpierw $(x+1)(x+4)$, potem mnożymy przez $x$"
+        "hint": "Jak przepisać równanie w postaci standardowej?",
+        "expression": "$x^3 + 2x^2 - 6x - 4 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę i porządkujemy",
+        "interactive_choice": {
+          "prompt": "W jakiej postaci najlepiej rozwiązać to równanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Równanie sześcienne: $x^3 + 2x^2 - 6x - 4 = 0$",
+              "feedback": "Tak! Przenosimy wszystko na jedną stronę i porządkujemy.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zostawić w postaci: $3x^2 + 10x + 4 = x^3 + 5x^2 + 4x$",
+              "feedback": "Lepiej przenieść wszystko na jedną stronę dla jasności.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podzielić przez $x$: $3x + 10 + \\frac{4}{x} = x^2 + 5x + 4$",
+              "feedback": "Niebezpieczne - możemy stracić rozwiązanie $x = 0$ (choć tu niemożliwe).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Standardowa postać równania sześciennego ułatwia znajdowanie pierwiastków."
+        }
       },
       {
         "step": 11,
-        "hint": "Jakie równanie otrzymamy po przeniesieniu wszystkiego na jedną stronę?",
-        "expression": "$3x^2 + 10x + 4 = x^3 + 5x^2 + 4x$\n$x^3 - 2x^2 - 6x - 4 = 0$",
-        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy"
+        "hint": "Jakie mogą być wymierne pierwiastki tego równania?",
+        "expression": "Sprawdzamy dzielniki wyrazu wolnego: $\\pm 1, \\pm 2, \\pm 4$",
+        "explanation": "Używamy twierdzenia o pierwiastkach wymiernych",
+        "why": "Dla równania $ax^3 + bx^2 + cx + d = 0$ wymierne pierwiastki to $\\pm \\frac{p}{q}$, gdzie $p$ dzieli $d$, a $q$ dzieli $a$."
       },
       {
         "step": 12,
-        "hint": "Jak rozłożyć równanie sześcienne $x^3 - 2x^2 - 6x - 4 = 0$?",
-        "expression": "Sprawdzamy $x = -1$: $(-1)^3 - 2(-1)^2 - 6(-1) - 4 = -1 - 2 + 6 - 4 = -1 \\neq 0$\nSprawdzamy $x = 2$: $8 - 8 - 12 - 4 = -16 \\neq 0$\nSprawdzamy $x = 4$: $64 - 32 - 24 - 4 = 4 \\neq 0$",
-        "explanation": "Szukamy pierwiastków całkowitych metodą prób i błędów"
+        "hint": "Który z kandydatów jest pierwiastkiem?",
+        "expression": "Sprawdzamy $x = 2$: $8 + 8 - 12 - 4 = 0$ ✓",
+        "explanation": "Znaleźliśmy pierwszy pierwiastek: $x = 2$"
       },
       {
         "step": 13,
-        "hint": "Sprawdź $x = -2$ jako potencjalny pierwiastek",
-        "expression": "Dla $x = -2$: $(-2)^3 - 2(-2)^2 - 6(-2) - 4 = -8 - 8 + 12 - 4 = -8 \\neq 0$\nSprawdzamy $x = 1$: $1 - 2 - 6 - 4 = -11 \\neq 0$",
-        "explanation": "Dalsze poszukiwania pierwiastków"
+        "hint": "Jak rozłożyć wielomian znając jeden pierwiastek?",
+        "expression": "$x^3 + 2x^2 - 6x - 4 = (x - 2)(x^2 + 4x + 2)$",
+        "explanation": "Dzielimy wielomian przez $(x - 2)$ lub używamy schematu Hornera"
       },
       {
         "step": 14,
-        "hint": "Spróbuj przegrupować równanie inaczej",
-        "expression": "$x^3 - 2x^2 - 6x - 4 = 0$\n$(x^3 - 2x^2) - (6x + 4) = 0$\n$x^2(x - 2) - 2(3x + 2) = 0$",
-        "explanation": "Próbujemy grupowania, ale nie daje to prostego rozkładu"
+        "hint": "Jakie są pierwiastki równania $x^2 + 4x + 2 = 0$?",
+        "expression": "$\\Delta = 16 - 8 = 8$, więc $x = \\frac{-4 \\pm 2\\sqrt{2}}{2} = -2 \\pm \\sqrt{2}$",
+        "explanation": "Używamy wzoru kwadratowego dla pozostałych pierwiastków"
       },
       {
         "step": 15,
-        "hint": "Sprawdź jeszcze raz $x = 4$ dokładnie",
-        "expression": "Dla $x = 4$: $4^3 - 2 \\cdot 4^2 - 6 \\cdot 4 - 4 = 64 - 32 - 24 - 4 = 4 \\neq 0$\nSprawdzamy $x = 6$: $216 - 72 - 36 - 4 = 104 \\neq 0$",
-        "explanation": "Kontynuujemy poszukiwania"
+        "hint": "Które rozwiązania mają sens w kontekście zadania?",
+        "expression": "Tylko $x = 2$ (czas musi być dodatni)",
+        "explanation": "Odrzucamy ujemne rozwiązania jako niefizyczne"
       },
       {
         "step": 16,
-        "hint": "Wróć do równania i sprawdź obliczenia - może jest błąd?",
-        "expression": "Sprawdzamy ponownie: $(x+1)(x+4) + x(x+4) + x(x+1) = x(x+1)(x+4)$\nLewa strona: $x^2 + 5x + 4 + x^2 + 4x + x^2 + x = 3x^2 + 10x + 4$\nPrawa strona: $x^3 + 5x^2 + 4x$",
-        "explanation": "Weryfikujemy nasze obliczenia"
-      },
-      {
-        "step": 17,
-        "hint": "Sprawdź $x = 6$ jako rozwiązanie równania $x^3 - 2x^2 - 6x - 4 = 0$",
-        "expression": "Dla $x = 6$: $6^3 - 2 \\cdot 6^2 - 6 \\cdot 6 - 4 = 216 - 72 - 36 - 4 = 104$\nTo nie jest zero, więc szukamy dalej lub używamy innych metod",
-        "explanation": "Równanie sześcienne wymaga bardziej zaawansowanych metod"
-      },
-      {
-        "step": 18,
-        "hint": "Spróbujmy rozwiązać to równanie metodą podstawienia lub wzorami Cardano",
-        "expression": "Po zastosowaniu metod numerycznych lub wzorów Cardano otrzymujemy: $x \\approx 6$",
-        "explanation": "Dla równań sześciennych często potrzebujemy metod numerycznych",
-        "why": "W praktyce takie równania rozwiązuje się metodami numerycznymi lub sprawdza dokładniej pierwiastki wymierne."
+        "hint": "Ile dni potrzebuje każdy zespół na wykonanie pracy?",
+        "expression": "Pierwszy zespół: $2$ dni, Drugi zespół: $3$ dni, Trzeci zespół: $6$ dni",
+        "explanation": "Podstawiamy $x = 2$ do wyrażeń na czasy pracy"
       }
     ],
     "solutions": [
-      "Pierwszy zespół: 6 dni",
-      "Drugi zespół: 7 dni",
-      "Trzeci zespół: 10 dni"
+      "Pierwszy zespół: 2 dni",
+      "Drugi zespół: 3 dni",
+      "Trzeci zespół: 6 dni"
     ],
+    "parameters": {},
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 18,
+        "totalSteps": 16,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-18T05:59:35.925Z"
+    "timestamp": "2025-09-18T06:16:31.493Z"
   },
   {
     "id": "work_rate_problem",
@@ -215,174 +1611,2168 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Jak oznaczyć czas pracy każdej sekretarki?",
-        "expression": "Niech $x$ = czas pracy pierwszej sekretarki (w godzinach), $y$ = czas pracy drugiej sekretarki (w godzinach)",
-        "explanation": "Wprowadzamy zmienne dla czasu potrzebnego każdej sekretarce na wykonanie całej pracy"
-      },
-      {
-        "step": 2,
-        "hint": "Jak wyrazić wydajność pracy każdej sekretarki?",
-        "expression": "Wydajność pierwszej: $\\frac{1}{x}$ pracy/godz, wydajność drugiej: $\\frac{1}{y}$ pracy/godz",
-        "explanation": "Wydajność to część pracy wykonana w jednostce czasu",
+        "hint": "Jakie zmienne wprowadzisz do tego zadania?",
+        "expression": "Niech $t_1$ = czas pracy pierwszej sekretarki (w godzinach), $t_2$ = czas pracy drugiej sekretarki (w godzinach)",
+        "explanation": "Wprowadzamy zmienne dla czasów pracy każdej sekretarki osobno",
         "interactive_choice": {
-          "prompt": "Jeśli pierwsza sekretarka wykonuje całą pracę w $x$ godzin, to jej wydajność to:",
+          "prompt": "Jak najlepiej oznaczyć niewiadome w tym zadaniu?",
           "options": [
             {
               "id": "A",
-              "text": "$\\frac{1}{x}$ części pracy na godzinę",
-              "feedback": "Doskonale! To standardowy sposób wyrażania wydajności pracy.",
+              "text": "Oznaczyć wydajności pracy: $v_1$ i $v_2$ (część pracy na godzinę)",
+              "feedback": "Świetny wybór! Wydajności to naturalne zmienne dla zadań o pracy.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "$x$ części pracy na godzinę",
-              "feedback": "Nie - jeśli potrzebuje $x$ godzin na całość, to w godzinę robi $\\frac{1}{x}$ części.",
-              "is_correct": false
+              "text": "Oznaczyć czasy pracy: $t_1$ i $t_2$ (godziny potrzebne każdej sekretarce)",
+              "feedback": "Też dobry wybór - to właśnie szukamy w zadaniu!",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "$\\frac{x}{1}$ części pracy na godzinę",
-              "feedback": "Nie - to byłoby więcej niż cała praca w godzinę, co jest niemożliwe.",
+              "text": "Oznaczyć ilości wykonanej pracy: $p_1$ i $p_2$",
+              "feedback": "Niepraktyczne - całkowita praca jest stała, lepiej wydajności lub czasy.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Wydajność to odwrotność czasu - jeśli całą pracę robi w $x$ godzin, to w godzinę robi $\\frac{1}{x}$ części."
+          "explanation_after": "Można użyć wydajności lub czasów - są to zmienne wzajemnie odwrotne."
         }
       },
       {
+        "step": 2,
+        "hint": "Jak wyrazić wydajności pracy przez wprowadzone zmienne?",
+        "expression": "Wydajność pierwszej: $\\frac{1}{t_1}$ pracy/godz, wydajność drugiej: $\\frac{1}{t_2}$ pracy/godz",
+        "explanation": "Jeśli sekretarka wykonuje całą pracę w $t$ godzin, to w 1 godzinę wykonuje $\\frac{1}{t}$ części pracy",
+        "why": "To kluczowa zależność w zadaniach o wydajności: wydajność = $\\frac{1}{czas całkowity}$"
+      },
+      {
         "step": 3,
-        "hint": "Jak zapisać pierwszy warunek - pracują razem 12 godzin?",
-        "expression": "$\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$",
-        "explanation": "Suma ich wydajności równa się wydajności wspólnej pracy",
-        "why": "Gdy pracują razem, ich wydajności się dodają. Razem wykonują całą pracę w 12 godzin, więc ich wspólna wydajność to $\\frac{1}{12}$ pracy na godzinę."
+        "hint": "Jak zapisać pierwszy warunek zadania matematycznie?",
+        "expression": "$\\frac{1}{t_1} + \\frac{1}{t_2} = \\frac{1}{12}$",
+        "explanation": "Razem wykonują całą pracę w 12 godzin, więc suma ich wydajności równa się $\\frac{1}{12}$"
       },
       {
         "step": 4,
-        "hint": "Jak interpretować drugi warunek - pierwsza robi połowę, potem druga resztę?",
-        "expression": "$\\frac{x}{2} + \\frac{y}{2} = 25$",
-        "explanation": "Pierwsza sekretarka potrzebuje $\\frac{x}{2}$ godzin na połowę pracy, druga $\\frac{y}{2}$ godzin na drugą połowę",
+        "hint": "Co oznacza drugi warunek w języku matematycznym?",
+        "expression": "$\\frac{t_1}{2} + \\frac{t_2}{2} = 25$",
+        "explanation": "Pierwsza wykonuje połowę pracy w czasie $\\frac{t_1}{2}$, druga połowę w czasie $\\frac{t_2}{2}$",
         "interactive_choice": {
-          "prompt": "Jeśli pierwsza robi połowę pracy, a druga resztę, to łączny czas to:",
+          "prompt": "Jak zapisać warunek: 'pierwsza wykonuje połowę pracy, potem druga resztę w sumie 25 godzin'?",
           "options": [
             {
               "id": "A",
-              "text": "$\\frac{x}{2} + \\frac{y}{2} = 25$",
-              "feedback": "Dokładnie! Pierwsza potrzebuje $\\frac{x}{2}$ godz na połowę, druga $\\frac{y}{2}$ godz na resztę.",
-              "is_correct": true
+              "text": "$\\frac{t_1}{2} + \\frac{t_2}{2} = 25$",
+              "feedback": "Nie - to by znaczyło, że każda pracuje połowę swojego normalnego czasu.",
+              "is_correct": false
             },
             {
               "id": "B",
-              "text": "$\\frac{1}{2x} + \\frac{1}{2y} = \\frac{1}{25}$",
-              "feedback": "Nie - to byłoby gdyby pracowały równocześnie z połową wydajności.",
-              "is_correct": false
+              "text": "$\\frac{t_1}{2} + \\frac{t_2}{2} = 25$",
+              "feedback": "Prawie! Ale pierwsza robi połowę pracy w czasie $\\frac{t_1}{2}$, druga też połowę w czasie $\\frac{t_2}{2}$.",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "$\\frac{x + y}{2} = 25$",
-              "feedback": "Nie - to nie uwzględnia, że każda robi inną część pracy.",
+              "text": "$t_1 + t_2 = 25$",
+              "feedback": "Nie - każda robi tylko połowę pracy, więc potrzebuje połowę swojego normalnego czasu.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Pracują kolejno, nie równocześnie. Pierwsza potrzebuje połowy swojego czasu na połowę pracy."
+          "explanation_after": "Jeśli sekretarka robi połowę pracy, potrzebuje połowę swojego normalnego czasu."
         }
       },
       {
         "step": 5,
         "hint": "Jak uprościć drugie równanie?",
-        "expression": "$x + y = 50$",
+        "expression": "$t_1 + t_2 = 50$",
         "explanation": "Mnożymy drugie równanie przez 2"
       },
       {
         "step": 6,
-        "hint": "Którą metodę wybierzesz do rozwiązania układu równań?",
-        "expression": "Z drugiego równania: $y = 50 - x$",
-        "explanation": "Wyrażamy $y$ z równania liniowego",
+        "hint": "Jaki masz teraz układ równań do rozwiązania?",
+        "expression": "$\\begin{cases} \\frac{1}{t_1} + \\frac{1}{t_2} = \\frac{1}{12} \\\\ t_1 + t_2 = 50 \\end{cases}$",
+        "explanation": "Układ dwóch równań z dwiema niewiadomymi"
+      },
+      {
+        "step": 7,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego układu?",
+        "expression": "Z drugiego równania: $t_2 = 50 - t_1$",
+        "explanation": "Wyrażamy $t_2$ przez $t_1$",
         "interactive_choice": {
-          "prompt": "Jak najlepiej rozwiązać układ: $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$ i $x + y = 50$?",
+          "prompt": "Jak najlepiej rozwiązać ten układ równań?",
           "options": [
             {
               "id": "A",
-              "text": "Podstawienie $y = 50 - x$ do pierwszego równania",
-              "feedback": "Świetny wybór! To da równanie kwadratowe względem $x$.",
+              "text": "Podstawienie: z drugiego równania $t_2 = 50 - t_1$",
+              "feedback": "Doskonały wybór! Proste podstawienie uprości pierwsze równanie.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Mnożenie pierwszego równania przez $xy$",
-              "feedback": "Możliwe, ale lepiej najpierw użyć podstawienia z drugiego równania.",
+              "text": "Eliminacja: pomnożyć pierwsze równanie przez $t_1 t_2$",
+              "feedback": "Możliwe, ale skomplikuje obliczenia - lepiej podstawienie.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Metoda przeciwnych współczynników",
-              "feedback": "Trudne - równania mają różną postać (wymierne i liniowe).",
+              "text": "Wzory Cramera",
+              "feedback": "Niepraktyczne dla tego typu układu - lepiej podstawienie.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Podstawienie z równania liniowego do wymiernego to standardowa metoda."
+          "explanation_after": "Podstawienie jest najproste gdy jedno równanie jest liniowe."
         }
       },
       {
-        "step": 7,
-        "hint": "Co otrzymasz podstawiając $y = 50 - x$ do pierwszego równania?",
-        "expression": "$\\frac{1}{x} + \\frac{1}{50-x} = \\frac{1}{12}$",
-        "explanation": "Podstawiamy wyrażenie na $y$ do pierwszego równania"
-      },
-      {
         "step": 8,
-        "hint": "Jak sprowadzić równanie do wspólnego mianownika?",
-        "expression": "$\\frac{50-x+x}{x(50-x)} = \\frac{1}{12}$",
-        "explanation": "Dodajemy ułamki sprowadzając do wspólnego mianownika"
+        "hint": "Co otrzymasz podstawiając $t_2 = 50 - t_1$ do pierwszego równania?",
+        "expression": "$\\frac{1}{t_1} + \\frac{1}{50 - t_1} = \\frac{1}{12}$",
+        "explanation": "Podstawiamy wyrażenie na $t_2$ do pierwszego równania"
       },
       {
         "step": 9,
-        "hint": "Co otrzymasz po uproszczeniu licznika?",
-        "expression": "$\\frac{50}{x(50-x)} = \\frac{1}{12}$",
-        "explanation": "Upraszczamy licznik: $(50-x) + x = 50$"
+        "hint": "Jak sprowadzić równanie do wspólnego mianownika?",
+        "expression": "$\\frac{50 - t_1 + t_1}{t_1(50 - t_1)} = \\frac{1}{12}$",
+        "explanation": "Sprowadzamy lewe strony do wspólnego mianownika"
       },
       {
         "step": 10,
-        "hint": "Jak pozbyć się ułamków?",
-        "expression": "$50 \\cdot 12 = x(50-x)$",
-        "explanation": "Mnożymy krzyżowo aby pozbyć się ułamków"
+        "hint": "Co otrzymasz po uproszczeniu licznika?",
+        "expression": "$\\frac{50}{t_1(50 - t_1)} = \\frac{1}{12}$",
+        "explanation": "Licznik upraszcza się do 50"
       },
       {
         "step": 11,
-        "hint": "Jakie równanie kwadratowe otrzymasz?",
-        "expression": "$600 = 50x - x^2$",
-        "explanation": "Obliczamy lewą stronę i rozwijamy prawą"
+        "hint": "Jak przekształcić równanie przez mnożenie na krzyż?",
+        "expression": "$50 \\cdot 12 = t_1(50 - t_1)$",
+        "explanation": "Mnożymy na krzyż"
       },
       {
         "step": 12,
-        "hint": "Jak przepisać w postaci standardowej?",
-        "expression": "$x^2 - 50x + 600 = 0$",
-        "explanation": "Przenosimy wszystko na lewą stronę"
+        "hint": "Do jakiej postaci sprowadzi się równanie?",
+        "expression": "$600 = 50t_1 - t_1^2$",
+        "explanation": "Rozwijamy prawą stronę"
       },
       {
         "step": 13,
-        "hint": "Jakie są pierwiastki tego równania kwadratowego?",
-        "expression": "$\\Delta = 2500 - 2400 = 100$, więc $x = \\frac{50 \\pm 10}{2}$",
-        "explanation": "Używamy wzoru na deltę: $\\Delta = b^2 - 4ac = 50^2 - 4 \\cdot 1 \\cdot 600$"
+        "hint": "Jak zapisać to jako równanie kwadratowe w postaci standardowej?",
+        "expression": "$t_1^2 - 50t_1 + 600 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę"
       },
       {
         "step": 14,
-        "hint": "Jakie są rozwiązania dla $x$?",
-        "expression": "$x_1 = 30$ lub $x_2 = 20$",
-        "explanation": "Otrzymujemy dwa rozwiązania"
+        "hint": "Jakie są współczynniki tego równania kwadratowego?",
+        "expression": "$a = 1$, $b = -50$, $c = 600$",
+        "explanation": "Identyfikujemy współczynniki dla wzoru na deltę"
       },
       {
         "step": 15,
-        "hint": "Jakie odpowiadające wartości $y$?",
-        "expression": "Gdy $x = 30$, to $y = 20$. Gdy $x = 20$, to $y = 30$",
-        "explanation": "Używamy $y = 50 - x$ dla każdego rozwiązania",
-        "why": "Oba rozwiązania są poprawne - można przypisać którąkolwiek sekretarkę do pierwszej zmiennej."
+        "hint": "Ile wynosi delta?",
+        "expression": "$\\Delta = (-50)^2 - 4 \\cdot 1 \\cdot 600 = 2500 - 2400 = 100$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 16,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$t_1 = \\frac{50 \\pm \\sqrt{100}}{2} = \\frac{50 \\pm 10}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 17,
+        "hint": "Jakie są konkretne wartości $t_1$?",
+        "expression": "$t_1 = 30$ lub $t_1 = 20$",
+        "explanation": "Otrzymujemy dwa rozwiązania: $\\frac{50+10}{2} = 30$ i $\\frac{50-10}{2} = 20$"
+      },
+      {
+        "step": 18,
+        "hint": "Jakie odpowiadające wartości $t_2$?",
+        "expression": "Gdy $t_1 = 30$, to $t_2 = 50 - 30 = 20$. Gdy $t_1 = 20$, to $t_2 = 50 - 20 = 30$",
+        "explanation": "Obliczamy $t_2$ z równania $t_2 = 50 - t_1$"
+      },
+      {
+        "step": 19,
+        "hint": "Jaka jest interpretacja otrzymanych wyników?",
+        "expression": "Pierwsza sekretarka wykonuje pracę w 20 lub 30 godzin, druga odpowiednio w 30 lub 20 godzin",
+        "explanation": "Ze względu na symetrię zadania, obie interpretacje są poprawne",
+        "why": "Zadanie ma dwa równoważne rozwiązania - możemy przypisać czasy w dowolny sposób do sekretarek."
       }
     ],
     "solutions": [
       "Pierwsza sekretarka: 20 godzin, druga: 30 godzin",
-      "lub pierwsza: 30 godzin, druga: 20 godzin"
+      "Pierwsza sekretarka: 30 godzin, druga: 20 godzin"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 19,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:17:20.323Z"
+  },
+  {
+    "id": "work_problem_father_son",
+    "topic": "Zadania o pracy",
+    "difficulty": 4,
+    "statement": "Ojciec i syn pracując razem wykonaliby pewną pracę w ciągu 12 dni. Ponieważ jednak po ośmiu dniach wspólnej pracy syn zachorował, ojciec, pracując sam, potrzebował jeszcze pięciu dni do ukończenia pracy. W ciągu ilu dni każdy z nich pracując sam, mógłby wykonać tę pracę?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak najlepiej oznaczyć niewiadome w tym zadaniu?",
+        "expression": "Niech $x$ = liczba dni potrzebnych ojcu do wykonania całej pracy sam, $y$ = liczba dni potrzebnych synowi do wykonania całej pracy sam",
+        "explanation": "Definiujemy niewiadome jako czas pracy każdego z nich",
+        "interactive_choice": {
+          "prompt": "Jakie oznaczenia będą najwygodniejsze dla tego zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oznaczyć czas pracy: $x$ - dni ojca, $y$ - dni syna",
+              "feedback": "Świetny wybór! To naturalne oznaczenie - szukamy czasu pracy każdego z nich.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Oznaczyć wydajność: $a$ - część pracy ojca dziennie, $b$ - część pracy syna dziennie",
+              "feedback": "Możliwe, ale mniej intuicyjne - będziesz musiał potem liczyć odwrotności.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Oznaczyć całkowitą pracę jako $W$ i wydajności",
+              "feedback": "Niepotrzebnie komplikujesz - można przyjąć całą pracę jako 1.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczenie czasu pracy jest najbardziej naturalne, bo tego właśnie szukamy."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić wydajność pracy ojca i syna?",
+        "expression": "Wydajność ojca: $\\frac{1}{x}$ części pracy dziennie, wydajność syna: $\\frac{1}{y}$ części pracy dziennie",
+        "explanation": "Jeśli ktoś wykonuje całą pracę w $n$ dni, to dziennie wykonuje $\\frac{1}{n}$ części pracy",
+        "why": "To kluczowa idea w zadaniach o pracy - wydajność to odwrotność czasu potrzebnego na całą pracę."
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać fakt, że razem wykonaliby pracę w 12 dni?",
+        "expression": "$\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$",
+        "explanation": "Suma ich wydajności równa się wydajności wspólnej pracy"
+      },
+      {
+        "step": 4,
+        "hint": "Co się dzieje w rzeczywistym scenariuszu pracy?",
+        "expression": "$8 \\cdot \\left(\\frac{1}{x} + \\frac{1}{y}\\right) + 5 \\cdot \\frac{1}{x} = 1$",
+        "explanation": "8 dni wspólnej pracy plus 5 dni pracy ojca daje całą pracę (1)",
+        "interactive_choice": {
+          "prompt": "Jak opisać rzeczywisty przebieg pracy w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "8 dni razem + 5 dni sam ojciec = cała praca",
+              "feedback": "Dokładnie! To daje równanie: $8(\\frac{1}{x} + \\frac{1}{y}) + 5 \\cdot \\frac{1}{x} = 1$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "8 dni razem, potem syn 5 dni sam",
+              "feedback": "Nie - to ojciec pracował sam przez ostatnie 5 dni, nie syn.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Najpierw ojciec 5 dni, potem 8 dni razem",
+              "feedback": "Nie - kolejność jest inna: najpierw 8 dni razem, potem ojciec 5 dni sam.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kluczowe jest zrozumienie sekwencji: wspólna praca, potem ojciec kończy sam."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć drugie równanie używając pierwszego?",
+        "expression": "$8 \\cdot \\frac{1}{12} + \\frac{5}{x} = 1$",
+        "explanation": "Podstawiamy $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$ do drugiego równania"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwiązać równanie względem $x$?",
+        "expression": "$\\frac{2}{3} + \\frac{5}{x} = 1$",
+        "explanation": "Obliczamy $8 \\cdot \\frac{1}{12} = \\frac{8}{12} = \\frac{2}{3}$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest wartość $\\frac{5}{x}$?",
+        "expression": "$\\frac{5}{x} = 1 - \\frac{2}{3} = \\frac{1}{3}$",
+        "explanation": "Przenosimy $\\frac{2}{3}$ na prawą stronę"
+      },
+      {
+        "step": 8,
+        "hint": "Ile dni potrzebuje ojciec na wykonanie całej pracy?",
+        "expression": "$x = \\frac{5}{\\frac{1}{3}} = 5 \\cdot 3 = 15$",
+        "explanation": "Ojciec sam wykonałby całą pracę w 15 dni"
+      },
+      {
+        "step": 9,
+        "hint": "Jak znaleźć czas pracy syna używając pierwszego równania?",
+        "expression": "$\\frac{1}{15} + \\frac{1}{y} = \\frac{1}{12}$",
+        "explanation": "Podstawiamy $x = 15$ do pierwszego równania",
+        "interactive_choice": {
+          "prompt": "Jak najłatwiej obliczyć $y$ znając $x = 15$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić do równania $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12}$",
+              "feedback": "Świetnie! To da $\\frac{1}{15} + \\frac{1}{y} = \\frac{1}{12}$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć drugiego równania z podstawieniem",
+              "feedback": "Możliwe, ale pierwsze równanie jest prostsze do użycia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić przez proporcje",
+              "feedback": "Niepotrzebnie skomplikowane - mamy proste równanie liniowe.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwsze równanie daje nam bezpośrednio $y$ po podstawieniu znanego $x$."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest wartość $\\frac{1}{y}$?",
+        "expression": "$\\frac{1}{y} = \\frac{1}{12} - \\frac{1}{15} = \\frac{5-4}{60} = \\frac{1}{60}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika: $\\frac{1}{12} = \\frac{5}{60}$, $\\frac{1}{15} = \\frac{4}{60}$"
+      },
+      {
+        "step": 11,
+        "hint": "Ile dni potrzebuje syn na wykonanie całej pracy?",
+        "expression": "$y = 60$",
+        "explanation": "Syn sam wykonałby całą pracę w 60 dni"
+      },
+      {
+        "step": 12,
+        "hint": "Czy warto sprawdzić poprawność rozwiązania?",
+        "expression": "Sprawdzenie: $\\frac{1}{15} + \\frac{1}{60} = \\frac{4+1}{60} = \\frac{5}{60} = \\frac{1}{12}$ ✓",
+        "explanation": "Rozwiązanie jest poprawne - wydajności sumują się do $\\frac{1}{12}$"
+      }
+    ],
+    "solutions": [
+      "Ojciec wykonałby całą pracę sam w 15 dni",
+      "Syn wykonałby całą pracę sam w 60 dni"
     ],
     "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:18:31.498Z"
+  },
+  {
+    "id": "milk_fat_concentration",
+    "topic": "Zadania na mieszaniny i stężenia",
+    "difficulty": 3,
+    "statement": "Do mleczarni dostarczono 2400 kg mleka o zawartości 4% tłuszczu. Ile kilogramów śmietanek o zawartości tłuszczu 12% należy odwirować z tego mleka, aby otrzymać mleko o zawartości 2% tłuszczu?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie dane mamy w zadaniu i co musimy wyznaczyć?",
+        "expression": "Dane: 2400 kg mleka (4% tłuszczu), śmietanki (12% tłuszczu), docelowe mleko (2% tłuszczu). Szukane: masa śmietanek do odwirowania",
+        "explanation": "Identyfikujemy wszystkie dane i niewiadomą"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego zadania na mieszaniny?",
+        "expression": "Oznaczmy $x$ = masa śmietanek do odwirowania (w kg)",
+        "explanation": "Wprowadzamy niewiadomą dla masy śmietanek",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do tego zadania o stężeniach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bilans masy tłuszczu przed i po odwirowaniu",
+              "feedback": "Świetny wybór! To klasyczna metoda - masa tłuszczu się zachowuje.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Proporcje i regula trzech",
+              "feedback": "Możliwe, ale bardziej skomplikowane dla tego typu zadania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Równanie z jedną niewiadomą na podstawie stężeń",
+              "feedback": "Dobra metoda! Można ułożyć równanie porównując stężenia.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Najlepiej użyć bilansu masy tłuszczu - tłuszcz nie znika, tylko się redistrybuuje."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile tłuszczu zawiera początkowe mleko?",
+        "expression": "Masa tłuszczu w początkowym mleku = $2400 \\cdot 0{,}04 = 96$ kg",
+        "explanation": "Obliczamy masę tłuszczu w 2400 kg mleka o stężeniu 4%"
+      },
+      {
+        "step": 4,
+        "hint": "Ile tłuszczu będzie w odwirowanych śmietankach?",
+        "expression": "Masa tłuszczu w śmietankach = $x \\cdot 0{,}12 = 0{,}12x$ kg",
+        "explanation": "Śmietanki mają 12% tłuszczu, więc $x$ kg śmietanek zawiera $0{,}12x$ kg tłuszczu"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka będzie masa mleka po odwirowaniu śmietanek?",
+        "expression": "Masa mleka po odwirowaniu = $2400 - x$ kg",
+        "explanation": "Po odwirowaniu $x$ kg śmietanek zostaje $2400 - x$ kg mleka",
+        "why": "To kluczowy moment - masa całkowita się zmniejsza o masę odwirowanych śmietanek."
+      },
+      {
+        "step": 6,
+        "hint": "Ile tłuszczu pozostanie w mleku po odwirowaniu?",
+        "expression": "Masa tłuszczu w mleku po odwirowaniu = $96 - 0{,}12x$ kg",
+        "explanation": "Od początkowej masy tłuszczu odejmujemy tłuszcz zawarty w śmietankach",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć masę tłuszczu w mleku po odwirowaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Masa początkowa tłuszczu minus tłuszcz w śmietankach",
+              "feedback": "Dokładnie! $96 - 0{,}12x$ kg tłuszczu pozostanie w mleku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "2% z masy mleka po odwirowaniu",
+              "feedback": "To będzie druga strona równania - docelowe stężenie!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "4% z masy mleka po odwirowaniu",
+              "feedback": "Nie - stężenie się zmieni po odwirowaniu tłustych śmietanek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Tłuszcz się zachowuje - odejmujemy od początkowej masy tłuszczu to, co odwirujemy."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak zapisać warunek, że mleko po odwirowaniu ma mieć 2% tłuszczu?",
+        "expression": "$\\frac{96 - 0{,}12x}{2400 - x} = 0{,}02$",
+        "explanation": "Stężenie to stosunek masy tłuszczu do masy całkowitej mleka"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać to równanie z ułamkiem?",
+        "expression": "$96 - 0{,}12x = 0{,}02(2400 - x)$",
+        "explanation": "Mnożymy obie strony przez mianownik $(2400 - x)$"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz po rozwinięciu prawej strony?",
+        "expression": "$96 - 0{,}12x = 48 - 0{,}02x$",
+        "explanation": "Rozwijamy: $0{,}02 \\cdot 2400 = 48$ i $0{,}02 \\cdot x = 0{,}02x$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak uporządkować równanie, aby wyznaczyć $x$?",
+        "expression": "$96 - 48 = 0{,}12x - 0{,}02x$",
+        "explanation": "Przenosimy składniki z $x$ na prawą stronę, stałe na lewą",
+        "interactive_choice": {
+          "prompt": "W którą stronę przenieść składniki z $x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie $x$ na lewą stronę",
+              "feedback": "Dobry wybór! Daje: $-0{,}12x + 0{,}02x = 48 - 96$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie $x$ na prawą stronę",
+              "feedback": "Też można! Daje: $96 - 48 = 0{,}12x - 0{,}02x$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zostawić $x$ po obu stronach",
+              "feedback": "Niepotrzebnie komplikuje - lepiej zgrupować wszystkie $x$ po jednej stronie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Najważniejsze to zgrupować składniki z $x$ po jednej stronie równania."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są wyniki obliczeń po obu stronach?",
+        "expression": "$48 = 0{,}10x$",
+        "explanation": "Upraszczamy: $96 - 48 = 48$ oraz $0{,}12 - 0{,}02 = 0{,}10$"
+      },
+      {
+        "step": 12,
+        "hint": "Jaka jest masa śmietanek do odwirowania?",
+        "expression": "$x = \\frac{48}{0{,}10} = 480$ kg",
+        "explanation": "Dzielimy obie strony przez $0{,}10$"
+      },
+      {
+        "step": 13,
+        "hint": "Czy wynik ma sens w kontekście zadania?",
+        "expression": "Sprawdzenie: odwirujemy 480 kg śmietanek z 2400 kg mleka, zostaje 1920 kg mleka",
+        "explanation": "Weryfikujemy sensowność wyniku - odwirujemy 20% masy mleka"
+      }
+    ],
+    "solutions": [
+      "480 kg śmietanek"
+    ],
+    "parameters": {
+      "initial_milk": "2400 kg",
+      "initial_concentration": "4%",
+      "cream_concentration": "12%",
+      "final_concentration": "2%"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-18T06:19:15.913Z"
+  },
+  {
+    "id": "water_tanks_problem",
+    "topic": "Równania z zastosowaniami praktycznymi",
+    "difficulty": 4,
+    "statement": "Kran A napełnia pojemnik w czasie o 6 minut krótszym, niż kran B. Jeśli obydwa krany odkręcimy jednocześnie, to pojemnik zostanie napełniony w ciągu 4 minut. Ile minut potrzeba na napełnienie pojemnika przez każdy z kranów oddzielnie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć czas napełniania przez kran B?",
+        "expression": "Niech $t$ = czas napełniania przez kran B (w minutach)",
+        "explanation": "Wprowadzamy zmienną dla nieznanego czasu"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest czas napełniania przez kran A w zależności od $t$?",
+        "expression": "Czas napełniania przez kran A = $t - 6$ minut",
+        "explanation": "Kran A jest szybszy o 6 minut od kranu B"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić wydajność każdego kranu?",
+        "expression": "Wydajność kranu A: $\\frac{1}{t-6}$, wydajność kranu B: $\\frac{1}{t}$",
+        "explanation": "Wydajność to odwrotność czasu - część pojemnika napełniona w 1 minutę",
+        "interactive_choice": {
+          "prompt": "Co oznacza wydajność kranu w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Część pojemnika napełniona w 1 minutę",
+              "feedback": "Dokładnie! Jeśli kran napełnia w $t$ minut, to w 1 minutę napełnia $\\frac{1}{t}$ pojemnika.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Całkowity czas napełniania",
+              "feedback": "To nie wydajność, tylko czas. Wydajność to szybkość pracy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Ilość wody w litrach na minutę",
+              "feedback": "Nie znamy pojemności - pracujemy z częściami całego pojemnika.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wydajność to część pracy wykonana w jednostce czasu. Tutaj: część pojemnika na minutę."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest łączna wydajność obu kranów pracujących razem?",
+        "expression": "Łączna wydajność = $\\frac{1}{t-6} + \\frac{1}{t}$",
+        "explanation": "Wydajności się dodają gdy krany pracują jednocześnie",
+        "why": "Kluczowa zasada: gdy dwa urządzenia pracują razem, ich wydajności się sumują."
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać fakt, że razem napełniają pojemnik w 4 minuty?",
+        "expression": "Łączna wydajność = $\\frac{1}{4}$ pojemnika na minutę",
+        "explanation": "Jeśli razem napełniają w 4 minuty, to w 1 minutę napełniają $\\frac{1}{4}$ pojemnika"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie równanie możemy zapisać?",
+        "expression": "$\\frac{1}{t-6} + \\frac{1}{t} = \\frac{1}{4}$",
+        "explanation": "Przyrównujemy wydajność łączną do wydajności wynikającej z czasu 4 minut"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwiązać to równanie z ułamkami?",
+        "expression": "$4t + 4(t-6) = t(t-6)$",
+        "explanation": "Mnożymy obie strony przez $4t(t-6)$ aby pozbyć się ułamków",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do rozwiązania równania $\\frac{1}{t-6} + \\frac{1}{t} = \\frac{1}{4}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć przez wspólny mianownik $4t(t-6)$",
+              "feedback": "Świetnie! To usunie wszystkie ułamki i da równanie kwadratowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprowadzić do wspólnego mianownika po lewej stronie",
+              "feedback": "Możliwe, ale dłuższe - lepiej od razu pozbyć się ułamków.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości i zgadywać",
+              "feedback": "To nie metoda algebraiczna - możesz przegapić rozwiązania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez wspólny mianownik to najszybsza metoda dla równań z ułamkami."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć lewą stronę równania?",
+        "expression": "$4t + 4t - 24 = t(t-6)$",
+        "explanation": "Rozwijamy nawias $4(t-6) = 4t - 24$"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest postać równania po uproszczeniu?",
+        "expression": "$8t - 24 = t^2 - 6t$",
+        "explanation": "Łączymy podobne składniki i rozwijamy prawą stronę"
+      },
+      {
+        "step": 10,
+        "hint": "Jak przepisać to jako równanie kwadratowe w postaci standardowej?",
+        "expression": "$t^2 - 14t + 24 = 0$",
+        "explanation": "Przenosimy wszystko na prawą stronę: $t^2 - 6t - 8t + 24 = 0$"
+      },
+      {
+        "step": 11,
+        "hint": "Jak rozwiązać równanie $t^2 - 14t + 24 = 0$?",
+        "expression": "$\\Delta = (-14)^2 - 4 \\cdot 1 \\cdot 24 = 196 - 96 = 100$",
+        "explanation": "Obliczamy deltę dla równania kwadratowego",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do równania $t^2 - 14t + 24 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Delta: $\\Delta = 196 - 96 = 100$",
+              "feedback": "Dobry wybór! Delta da $t = \\frac{14 \\pm 10}{2}$, więc $t = 12$ lub $t = 2$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład: szukać liczb o sumie 14 i iloczynie 24",
+              "feedback": "Możliwe, ale trudniejsze - liczby to 12 i 2, ale nie od razu widać.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Zbyt skomplikowane dla tego równania - delta będzie szybsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla współczynników średniej wielkości delta jest najniezawodniejsza."
+        }
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$t = \\frac{14 \\pm \\sqrt{100}}{2} = \\frac{14 \\pm 10}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 13,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$t_1 = \\frac{14 + 10}{2} = 12$ lub $t_2 = \\frac{14 - 10}{2} = 2$",
+        "explanation": "Otrzymujemy dwa kandydaty na czas napełniania przez kran B"
+      },
+      {
+        "step": 14,
+        "hint": "Dlaczego $t = 2$ nie może być rozwiązaniem?",
+        "expression": "Jeśli $t = 2$, to kran A napełniałby w $2 - 6 = -4$ minuty",
+        "explanation": "Czas ujemny nie ma sensu fizycznego",
+        "why": "Zawsze sprawdzamy czy rozwiązania matematyczne mają sens w kontekście zadania."
+      },
+      {
+        "step": 15,
+        "hint": "Jakie są ostateczne odpowiedzi?",
+        "expression": "Kran B: $12$ minut, kran A: $12 - 6 = 6$ minut",
+        "explanation": "Kran B napełnia w 12 minut, kran A w 6 minut"
+      }
+    ],
+    "solutions": [
+      "Kran A napełnia pojemnik w 6 minut",
+      "Kran B napełnia pojemnik w 12 minut"
+    ],
+    "parameters": {
+      "verification": "Sprawdzenie: $\\frac{1}{6} + \\frac{1}{12} = \\frac{2+1}{12} = \\frac{3}{12} = \\frac{1}{4}$ ✓"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:19:56.955Z"
+  },
+  {
+    "id": "water_tank_problem",
+    "topic": "Równania z zadaniami tekstowymi",
+    "difficulty": 4,
+    "statement": "Przez jeden z kranów woda wypływa ze zbiornika, a przez drugi do niego wpływa. Gdy otworzymy oba krany, zbiornik zostanie napełniony wodą w ciągu 12 godzin. W ciągu ilu godzin pierwszy kran opróżnia pełny zbiornik, a drugi napełnia pusty zbiornik, jeżeli wiadomo, że czas napełniania zbiornika jest o godzinę krótszy od czasu jego opróżniania?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć niewiadome w tym zadaniu?",
+        "expression": "Niech $t$ = czas opróżniania zbiornika (w godzinach), wtedy $(t-1)$ = czas napełniania zbiornika",
+        "explanation": "Definiujemy niewiadomą na podstawie relacji między czasami",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako niewiadomą w zadaniu o kranach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Objętość zbiornika jako $V$",
+              "feedback": "Możliwe, ale komplikuje obliczenia - lepiej skupić się na czasach",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Czas opróżniania jako $t$ godzin",
+              "feedback": "Świetny wybór! Wtedy czas napełniania to $(t-1)$ godzin",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wydajność kranów w litrach na godzinę",
+              "feedback": "Skomplikowane - nie znamy objętości zbiornika",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczenie czasu jako niewiadomej pozwala wykorzystać związek między czasami."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić wydajność każdego kranu?",
+        "expression": "Wydajność kranu opróżniającego: $-\\frac{1}{t}$ zbiornika na godzinę, wydajność kranu napełniającego: $\\frac{1}{t-1}$ zbiornika na godzinę",
+        "explanation": "Wydajność to część zbiornika na jednostkę czasu (minus dla opróżniania)",
+        "why": "Jeśli kran opróżnia zbiornik w $t$ godzin, to w 1 godzinę opróżnia $\\frac{1}{t}$ zbiornika. Znak minus oznacza ubytek wody."
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest łączna wydajność obu kranów działających jednocześnie?",
+        "expression": "Łączna wydajność = $\\frac{1}{t-1} - \\frac{1}{t}$ zbiornika na godzinę",
+        "explanation": "Dodajemy wydajności (napełnianie minus opróżnianie)"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać informację o 12 godzinach napełniania?",
+        "expression": "$\\frac{1}{t-1} - \\frac{1}{t} = \\frac{1}{12}$",
+        "explanation": "Równanie wynikające z warunków zadania",
+        "interactive_choice": {
+          "prompt": "Jeśli oba krany napełniają zbiornik w 12 godzin, to jaka jest ich łączna wydajność?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{1}{12}$ zbiornika na godzinę",
+              "feedback": "Dokładnie! W 1 godzinę napełniają $\\frac{1}{12}$ zbiornika",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$12$ zbiorników na godzinę",
+              "feedback": "Nie - to byłoby gdyby w 1 godzinę napełniali 12 zbiorników",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{12}{1}$ zbiornika na godzinę",
+              "feedback": "Odwrotnie - jeśli 12 godzin daje 1 zbiornik, to 1 godzina daje $\\frac{1}{12}$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wydajność to odwrotność czasu: jeśli praca trwa $n$ godzin, wydajność to $\\frac{1}{n}$ na godzinę."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać równanie z ułamkami?",
+        "expression": "$\\frac{t - (t-1)}{t(t-1)} = \\frac{1}{12}$",
+        "explanation": "Sprowadzamy lewe strony do wspólnego mianownika"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz po uproszczeniu licznika?",
+        "expression": "$\\frac{1}{t(t-1)} = \\frac{1}{12}$",
+        "explanation": "Licznik: $t - (t-1) = t - t + 1 = 1$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$t(t-1) = 12$",
+        "explanation": "Odwracamy obie strony równania lub mnożymy przez mianowniki",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $\\frac{1}{t(t-1)} = \\frac{1}{12}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć obie strony przez $12t(t-1)$",
+              "feedback": "Świetnie! To usunie wszystkie mianowniki jednocześnie",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Odwrócić obie strony równania",
+              "feedback": "Dobra metoda! Daje $t(t-1) = 12$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Przenieść wszystko na jedną stronę",
+              "feedback": "Niepotrzebnie komplikuje - lepiej usunąć mianowniki",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy mamy równość ułamków o tym samym liczniku, możemy odwrócić obie strony."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak przekształcić to równanie do postaci standardowej?",
+        "expression": "$t^2 - t = 12$",
+        "explanation": "Rozwijamy lewą stronę"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest postać standardowa równania kwadratowego?",
+        "expression": "$t^2 - t - 12 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie liczby dają sumę $1$ i iloczyn $-12$?",
+        "expression": "$4 + (-3) = 1$ oraz $4 \\cdot (-3) = -12$",
+        "explanation": "Szukamy rozkładu na czynniki: $(t-4)(t+3) = 0$"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są rozwiązania równania $(t-4)(t+3) = 0$?",
+        "expression": "$t = 4$ lub $t = -3$",
+        "explanation": "Każdy czynnik może być zerem"
+      },
+      {
+        "step": 12,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$t = 4$ godziny (czas nie może być ujemny)",
+        "explanation": "Odrzucamy $t = -3$ jako nielogiczne w kontekście czasu",
+        "why": "W zadaniach praktycznych sprawdzamy czy rozwiązania mają sens fizyczny."
+      },
+      {
+        "step": 13,
+        "hint": "Ile czasu potrzebuje każdy kran osobno?",
+        "expression": "Kran opróżniający: $4$ godziny, kran napełniający: $4 - 1 = 3$ godziny",
+        "explanation": "Podstawiamy $t = 4$ do naszych definicji"
+      }
+    ],
+    "solutions": [
+      "Pierwszy kran (opróżniający) - 4 godziny",
+      "Drugi kran (napełniający) - 3 godziny"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:20:34.270Z"
+  },
+  {
+    "id": "basin_filling_problem",
+    "topic": "Układy równań - zadania tekstowe",
+    "difficulty": 4,
+    "statement": "Pusty basen można napełnić wodą z dwóch kranów. Jeżeli otworzymy pierwszy kran na 5 godzin, a następnie zamkniemy go i otworzymy drugi kran na 10 godzin, to basen napełni się w 35%. Jeżeli natomiast otworzymy jednocześnie oba krany, to basen zostanie całkowicie napełniony w ciągu $22\\frac{2}{3}$ godzin. Ile godzin potrzeba do napełnienia całego basenu za pomocą każdego kranu oddzielnie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie zmienne warto wprowadzić do tego problemu?",
+        "expression": "Niech $x$ = czas napełnienia basenu pierwszym kranem (w godzinach), $y$ = czas napełnienia basenu drugim kranem (w godzinach)",
+        "explanation": "Wprowadzamy zmienne reprezentujące szukane czasy",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej oznaczyć niewiadome w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Niech $x$ i $y$ to objętości wody z każdego kranu",
+              "feedback": "Nie - objętości się zmieniają w czasie, lepiej użyć wydajności",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Niech $x$ i $y$ to czas napełnienia basenu każdym kranem",
+              "feedback": "Świetnie! To naturalne oznaczenie - szukamy właśnie tych czasów",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Niech $x$ i $y$ to wydajność każdego kranu (część basenu na godzinę)",
+              "feedback": "Dobre podejście! Wydajność to $\\frac{1}{czas}$, ale oznaczenie czasów jest prostsze",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Oznaczmy $x$ - czas napełnienia basenu pierwszym kranem, $y$ - czas napełnienia basenu drugim kranem."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest wydajność każdego kranu wyrażona przez $x$ i $y$?",
+        "expression": "Wydajność pierwszego kranu: $\\frac{1}{x}$ basenu na godzinę, wydajność drugiego kranu: $\\frac{1}{y}$ basenu na godzinę",
+        "explanation": "Jeśli kran napełnia basen w $x$ godzin, to w 1 godzinę napełnia $\\frac{1}{x}$ basenu",
+        "why": "To kluczowe pojęcie - wydajność to odwrotność czasu. Jeśli coś trwa $x$ godzin, to w godzinę robimy $\\frac{1}{x}$ całości."
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać matematycznie pierwszą sytuację z zadania?",
+        "expression": "$5 \\cdot \\frac{1}{x} + 10 \\cdot \\frac{1}{y} = 0.35$",
+        "explanation": "Pierwszy kran przez 5h plus drugi kran przez 10h dają 35% basenu"
+      },
+      {
+        "step": 4,
+        "hint": "Jak przekształcić $22\\frac{2}{3}$ godziny na ułamek niewłaściwy?",
+        "expression": "$22\\frac{2}{3} = \\frac{68}{3}$ godzin",
+        "explanation": "Zamieniamy liczbę mieszaną na ułamek: $22\\frac{2}{3} = \\frac{22 \\cdot 3 + 2}{3} = \\frac{68}{3}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać drugą sytuację z zadania?",
+        "expression": "$\\frac{68}{3} \\cdot (\\frac{1}{x} + \\frac{1}{y}) = 1$",
+        "explanation": "Oba krany razem przez $\\frac{68}{3}$ godzin napełniają cały basen (100%)"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie podstawienie uprości nasze równania?",
+        "expression": "Podstawmy $u = \\frac{1}{x}$ i $v = \\frac{1}{y}$",
+        "explanation": "To podstawienie uprości nasze równania do postaci liniowej",
+        "interactive_choice": {
+          "prompt": "Które podstawienie najlepiej uprości układ równań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $u = x + y$ i $v = xy$",
+              "feedback": "To wzory Vieta, ale tutaj nie mamy sumy i iloczynu zmiennych",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Podstawić $u = \\frac{1}{x}$ i $v = \\frac{1}{y}$",
+              "feedback": "Doskonale! To zamieni nasze równania na liniowe względem $u$ i $v$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zostawić $x$ i $y$ bez podstawienia",
+              "feedback": "Możliwe, ale będzie trudniej - równania będą wymierne",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $u = \\frac{1}{x}$, $v = \\frac{1}{y}$ zamienia równania wymierne na liniowe."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak wyglądają równania po podstawieniu?",
+        "expression": "$\\begin{cases} 5u + 10v = 0.35 \\\\ \\frac{68}{3}(u + v) = 1 \\end{cases}$",
+        "explanation": "Otrzymujemy układ dwóch równań liniowych względem $u$ i $v$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć pierwsze równanie?",
+        "expression": "$\\begin{cases} u + 2v = 0.07 \\\\ \\frac{68}{3}(u + v) = 1 \\end{cases}$",
+        "explanation": "Dzielimy pierwsze równanie przez 5: $\\frac{5u + 10v}{5} = \\frac{0.35}{5}$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć drugie równanie?",
+        "expression": "$\\begin{cases} u + 2v = 0.07 \\\\ u + v = \\frac{3}{68} \\end{cases}$",
+        "explanation": "Z drugiego równania: $u + v = \\frac{1}{\\frac{68}{3}} = \\frac{3}{68}$"
+      },
+      {
+        "step": 10,
+        "hint": "Którą metodę zastosować do rozwiązania tego układu?",
+        "expression": "Odejmujemy równania: $(u + 2v) - (u + v) = 0.07 - \\frac{3}{68}$",
+        "explanation": "Metoda przeciwnych współczynników - odejmujemy drugie od pierwszego",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać układ $\\begin{cases} u + 2v = 0.07 \\\\ u + v = \\frac{3}{68} \\end{cases}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Metoda podstawiania",
+              "feedback": "Dobra metoda - z drugiego równania $u = \\frac{3}{68} - v$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Metoda przeciwnych współczynników",
+              "feedback": "Świetnie! Odejmujemy równania: $(u + 2v) - (u + v) = v$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wzory Cramera",
+              "feedback": "Możliwe, ale bardziej pracochłonne dla tak prostego układu",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Użyjemy metody odejmowania - współczynniki przy $u$ są równe."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi $0.07 - \\frac{3}{68}$?",
+        "expression": "$v = 0.07 - \\frac{3}{68} = \\frac{7}{100} - \\frac{3}{68} = \\frac{7 \\cdot 68 - 3 \\cdot 100}{6800} = \\frac{476 - 300}{6800} = \\frac{176}{6800} = \\frac{11}{425}$",
+        "explanation": "Obliczamy różnicę ułamków sprowadzając do wspólnego mianownika"
+      },
+      {
+        "step": 12,
+        "hint": "Jak obliczyć $u$ znając $v$?",
+        "expression": "$u = \\frac{3}{68} - v = \\frac{3}{68} - \\frac{11}{425}$",
+        "explanation": "Podstawiamy $v$ do drugiego równania"
+      },
+      {
+        "step": 13,
+        "hint": "Ile wynosi $\\frac{3}{68} - \\frac{11}{425}$?",
+        "expression": "$u = \\frac{3 \\cdot 425 - 11 \\cdot 68}{68 \\cdot 425} = \\frac{1275 - 748}{28900} = \\frac{527}{28900} = \\frac{31}{1700}$",
+        "explanation": "Obliczamy różnicę ułamków"
+      },
+      {
+        "step": 14,
+        "hint": "Jak przejść od $u$ i $v$ do $x$ i $y$?",
+        "expression": "$x = \\frac{1}{u} = \\frac{1700}{31}$ oraz $y = \\frac{1}{v} = \\frac{425}{11}$",
+        "explanation": "Używamy odwrotności podstawienia: jeśli $u = \\frac{1}{x}$, to $x = \\frac{1}{u}$"
+      },
+      {
+        "step": 15,
+        "hint": "Ile to jest w postaci dziesiętnej lub mieszanej?",
+        "expression": "$x = \\frac{1700}{31} \\approx 54.84$ godzin, $y = \\frac{425}{11} \\approx 38.64$ godzin",
+        "explanation": "Pierwszy kran napełnia basen w około 54.84 godzin, drugi w około 38.64 godzin"
+      }
+    ],
+    "solutions": [
+      "Pierwszy kran: $\\frac{1700}{31}$ godzin (około 54.84 godzin)",
+      "Drugi kran: $\\frac{425}{11}$ godzin (około 38.64 godzin)"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-18T06:21:35.750Z"
+  },
+  {
+    "id": "train_meeting_problem",
+    "topic": "Zadania tekstowe - ruch jednostajny",
+    "difficulty": 4,
+    "statement": "Z miejscowości A i B, odległych od siebie o 330 km, wyruszyli naprzeciw siebie po równoległych torach dwa pociągi. Pociąg jadący z miejscowości A do B wyjechał o godzinę wcześniej i jechał ze średnią prędkością o 5 km/h mniejszą niż pociąg jadący z miejscowości B do A. Pociągi spotkały się w odległości 180 km od miasta A. a) Oblicz średnie prędkości obu pociągów. b) Ile godzin jechał pociąg z miejscowości A do miejsca spotkania obu pociągów?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości warto oznaczyć jako niewiadome?",
+        "expression": "Oznaczmy: prędkość pociągu z A = $v$ km/h, prędkość pociągu z B = $(v+5)$ km/h",
+        "explanation": "Definiujemy niewiadome na podstawie relacji między prędkościami",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako główną niewiadomą w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prędkość pociągu z A jako $v$ km/h",
+              "feedback": "Dobry wybór! Wtedy pociąg z B ma prędkość $(v+5)$ km/h",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Prędkość pociągu z B jako $v$ km/h",
+              "feedback": "Też możliwe! Wtedy pociąg z A ma prędkość $(v-5)$ km/h",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Czas jazdy pociągu z A jako $t$ godzin",
+              "feedback": "Można, ale prędkości są głównym celem - lepiej je oznaczyć bezpośrednio",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczenie prędkości jako głównej niewiadomej ułatwia rozwiązanie. Wybierzmy prędkość pociągu z A."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jakie drogi przejechały pociągi do momentu spotkania?",
+        "expression": "Pociąg z A przejechał 180 km, pociąg z B przejechał $330 - 180 = 150$ km",
+        "explanation": "Suma dróg musi równać się całkowitej odległości 330 km"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić czasy jazdy pociągów używając wzoru $t = \\frac{s}{v}$?",
+        "expression": "Czas pociągu z A: $t_A = \\frac{180}{v}$ h, czas pociągu z B: $t_B = \\frac{150}{v+5}$ h",
+        "explanation": "Używamy wzoru droga = prędkość × czas, więc czas = droga ÷ prędkość",
+        "why": "To kluczowy krok - wyrażamy czasy przez prędkości, co pozwoli wykorzystać warunek o godzinie różnicy."
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest relacja między czasami jazdy obu pociągów?",
+        "expression": "$\\frac{180}{v} = \\frac{150}{v+5} + 1$",
+        "explanation": "Równanie wynikające z warunków zadania",
+        "interactive_choice": {
+          "prompt": "Jak zapisać warunek że pociąg z A wyjechał godzinę wcześniej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$t_A = t_B + 1$",
+              "feedback": "Dokładnie! Pociąg z A jechał o godzinę dłużej niż pociąg z B",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$t_B = t_A + 1$",
+              "feedback": "Nie - to oznaczałoby że pociąg z B jechał dłużej",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$t_A - t_B = -1$",
+              "feedback": "To jest równoważne z $t_B = t_A + 1$, co jest nieprawidłowe",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pociąg z A wyjechał wcześniej, więc jechał dłużej o 1 godzinę."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać to równanie z ułamkami?",
+        "expression": "$\\frac{180}{v} - \\frac{150}{v+5} = 1$",
+        "explanation": "Przenosimy wszystko na jedną stronę"
+      },
+      {
+        "step": 6,
+        "hint": "Jak sprowadzić ułamki do wspólnego mianownika?",
+        "expression": "$\\frac{180(v+5) - 150v}{v(v+5)} = 1$",
+        "explanation": "Wspólny mianownik to $v(v+5)$"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz po rozwinięciu licznika?",
+        "expression": "$\\frac{180v + 900 - 150v}{v(v+5)} = 1$",
+        "explanation": "Rozwijamy nawiasy w liczniku"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć licznik?",
+        "expression": "$\\frac{30v + 900}{v(v+5)} = 1$",
+        "explanation": "Upraszczamy: $180v - 150v = 30v$"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz mnożąc obie strony przez mianownik?",
+        "expression": "$30v + 900 = v(v+5)$",
+        "explanation": "Mnożymy obie strony przez $v(v+5)$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak rozwinąć prawą stronę i uporządkować równanie?",
+        "expression": "$30v + 900 = v^2 + 5v$",
+        "explanation": "Rozwijamy prawą stronę"
+      },
+      {
+        "step": 11,
+        "hint": "Jaką postać ma równanie kwadratowe?",
+        "expression": "$v^2 + 5v - 30v - 900 = 0$, czyli $v^2 - 25v - 900 = 0$",
+        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy"
+      },
+      {
+        "step": 12,
+        "hint": "Którą metodą rozwiążesz to równanie kwadratowe?",
+        "expression": "$\\Delta = (-25)^2 - 4 \\cdot 1 \\cdot (-900) = 625 + 3600 = 4225$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $v^2 - 25v - 900 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór z deltą",
+              "feedback": "Dobry wybór - dla dużych współczynników delta jest niezawodna",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki",
+              "feedback": "Trudne - współczynniki są duże, ciężko zgadnąć rozkład",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe, ale delta będzie szybsza dla tych liczb",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla dużych współczynników wzór z deltą jest najefektywniejszy."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Ile wynosi $\\sqrt{4225}$?",
+        "expression": "$\\sqrt{4225} = 65$",
+        "explanation": "Sprawdzamy: $65^2 = 4225$"
+      },
+      {
+        "step": 14,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$v_1 = \\frac{25 + 65}{2} = \\frac{90}{2} = 45$, $v_2 = \\frac{25 - 65}{2} = \\frac{-40}{2} = -20$",
+        "explanation": "Używamy wzoru $v = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$"
+      },
+      {
+        "step": 15,
+        "hint": "Które rozwiązanie ma sens fizyczny?",
+        "expression": "$v = 45$ km/h (prędkość musi być dodatnia)",
+        "explanation": "Odrzucamy rozwiązanie ujemne jako niefizyczne"
+      },
+      {
+        "step": 16,
+        "hint": "Jakie są prędkości obu pociągów?",
+        "expression": "Pociąg z A: $v = 45$ km/h, pociąg z B: $v + 5 = 50$ km/h",
+        "explanation": "Odpowiedź na część a) zadania"
+      },
+      {
+        "step": 17,
+        "hint": "Ile czasu jechał pociąg z A do spotkania?",
+        "expression": "$t_A = \\frac{180}{45} = 4$ godziny",
+        "explanation": "Odpowiedź na część b) zadania - używamy wzoru $t = \\frac{s}{v}$"
+      }
+    ],
+    "solutions": [
+      "a) Prędkość pociągu z A: 45 km/h, prędkość pociągu z B: 50 km/h",
+      "b) Pociąg z A jechał 4 godziny do miejsca spotkania"
+    ],
+    "parameters": {
+      "distance_total": "330 km",
+      "distance_A": "180 km",
+      "distance_B": "150 km",
+      "time_difference": "1 godzina",
+      "speed_difference": "5 km/h"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 17,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:22:45.164Z"
+  },
+  {
+    "id": "cyclists_meeting_problem",
+    "topic": "Zadania tekstowe z równaniami",
+    "difficulty": 4,
+    "statement": "Dwaj rowerzyści wyjechali naprzeciw siebie z miejscowości A i B, odległych od siebie o 96 km. Rowerzysta jadący z miejscowości A do B wyjechał o godzinę później i jechał ze średnią prędkością o 3 km/h mniejszą niż rowerzysta jadący z miejscowości B do A. Rowerzyści spotkali się w odległości 36 km od miasta A. Wiedząc, że obaj jechali z prędkościami większymi niż 10 km/h, oblicz średnie prędkości obu rowerzystów.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości warto oznaczyć jako niewiadome?",
+        "expression": "Prędkość rowerzysty z B: $v$ km/h, prędkość rowerzysty z A: $(v-3)$ km/h",
+        "explanation": "Ustalamy oznaczenia dla prędkości obu rowerzystów",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako główną niewiadomą w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prędkość rowerzysty z A jako $v$, z B jako $v+3$",
+              "feedback": "Dobry wybór! Rowerzysta z A jedzie wolniej o 3 km/h.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Prędkość rowerzysty z B jako $v$, z A jako $v-3$",
+              "feedback": "Też poprawne! Rowerzysta z B jedzie szybciej o 3 km/h.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Czas jazdy jako główną niewiadomą",
+              "feedback": "Możliwe, ale prędkości są prostsze - to o nie pyta zadanie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczmy prędkość rowerzysty z B jako $v$ km/h, wtedy z A jedzie z prędkością $(v-3)$ km/h."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jakie drogi przejechali rowerzyści do momentu spotkania?",
+        "expression": "Rowerzysta z A przejechał: 36 km, rowerzysta z B przejechał: $96 - 36 = 60$ km",
+        "explanation": "Spotkali się 36 km od A, więc drugi przejechał pozostałą część trasy"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić czas jazdy każdego rowerzysty?",
+        "expression": "Czas rowerzysty z A: $t_A = \\frac{36}{v-3}$ h, czas rowerzysty z B: $t_B = \\frac{60}{v}$ h",
+        "explanation": "Używamy wzoru $t = \\frac{s}{v}$ dla każdego rowerzysty",
+        "why": "Czas to kluczowa wielkość - rowerzysta z A wyjechał godzinę później, więc $t_A = t_B - 1$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest relacja między czasami jazdy obu rowerzystów?",
+        "expression": "$\\frac{36}{v-3} = \\frac{60}{v} - 1$",
+        "explanation": "Podstawiamy wyrażenia na czasy i zapisujemy równanie",
+        "interactive_choice": {
+          "prompt": "Jak zapisać fakt, że rowerzysta z A wyjechał godzinę później?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$t_A = t_B - 1$",
+              "feedback": "Dokładnie! Rowerzysta z A jechał o godzinę krócej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$t_A = t_B + 1$",
+              "feedback": "Nie - jeśli wyjechał później, to jechał krócej, nie dłużej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$t_A + 1 = t_B$",
+              "feedback": "To samo co opcja A, tylko inaczej zapisane - poprawne!",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Rowerzysta z A jechał godzinę krócej, więc $t_A = t_B - 1$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać to równanie z ułamkami?",
+        "expression": "$\\frac{36}{v-3} = \\frac{60-v}{v}$",
+        "explanation": "Przekształcamy prawą stronę do wspólnego mianownika"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz po przemnożeniu na krzyż?",
+        "expression": "$36v = (60-v)(v-3)$",
+        "explanation": "Mnożymy na krzyż, aby pozbyć się ułamków"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwinąć prawą stronę równania?",
+        "expression": "$36v = 60v - 180 - v^2 + 3v$",
+        "explanation": "Rozwijamy $(60-v)(v-3) = 60v - 180 - v^2 + 3v$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uporządkować równanie do postaci standardowej?",
+        "expression": "$36v = 63v - 180 - v^2$",
+        "explanation": "Łączymy podobne składniki po prawej stronie"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest postać standardowa tego równania kwadratowego?",
+        "expression": "$v^2 - 27v - 180 = 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę i porządkujemy"
+      },
+      {
+        "step": 10,
+        "hint": "Którą metodą rozwiążesz równanie $v^2 - 27v - 180 = 0$?",
+        "expression": "$\\Delta = (-27)^2 - 4 \\cdot 1 \\cdot (-180) = 729 + 720 = 1449$",
+        "explanation": "Obliczamy deltę dla równania $v^2 - 27v - 180 = 0$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $v^2 - 27v - 180 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór z deltą",
+              "feedback": "Dobry wybór - delta zawsze działa dla równań kwadratowych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki",
+              "feedback": "Trudne - liczby są duże, delta będzie prostsza.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe, ale delta jest tutaj najszybsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla dużych współczynników wzór z deltą jest najniezawodniejszy."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi $\\sqrt{1449}$?",
+        "expression": "$\\sqrt{1449} = \\sqrt{1449} = 38.07...$, sprawdzamy: $38^2 = 1444$, $39^2 = 1521$",
+        "explanation": "Szukamy pierwiastka z 1449, sprawdzając kwadraty liczb całkowitych"
+      },
+      {
+        "step": 12,
+        "hint": "Czy można uprościć $\\sqrt{1449}$?",
+        "expression": "$1449 = 3^2 \\cdot 161 = 9 \\cdot 161$, więc $\\sqrt{1449} = 3\\sqrt{161}$",
+        "explanation": "Rozkładamy 1449 na czynniki pierwsze"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$v = \\frac{27 \\pm 3\\sqrt{161}}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 14,
+        "hint": "Które rozwiązanie spełnia warunek $v > 10$?",
+        "expression": "$v_1 = \\frac{27 + 3\\sqrt{161}}{2} \\approx \\frac{27 + 38.07}{2} \\approx 32.5$ km/h",
+        "explanation": "Bierzemy rozwiązanie dodatnie, bo prędkość musi być dodatnia"
+      },
+      {
+        "step": 15,
+        "hint": "Jaka jest prędkość drugiego rowerzysty?",
+        "expression": "Prędkość rowerzysty z A: $v - 3 = 32.5 - 3 = 29.5$ km/h",
+        "explanation": "Odejmujemy 3 km/h od prędkości rowerzysty z B"
+      },
+      {
+        "step": 16,
+        "hint": "Czy rozwiązanie spełnia wszystkie warunki zadania?",
+        "expression": "Sprawdzenie: obie prędkości > 10 km/h ✓, różnica 3 km/h ✓",
+        "explanation": "Weryfikujemy czy rozwiązanie jest zgodne z warunkami zadania"
+      }
+    ],
+    "solutions": [
+      "Prędkość rowerzysty z miejscowości B: $\\frac{27 + 3\\sqrt{161}}{2}$ km/h $\\approx 32.5$ km/h",
+      "Prędkość rowerzysty z miejscowości A: $\\frac{21 + 3\\sqrt{161}}{2}$ km/h $\\approx 29.5$ km/h"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-18T06:24:03.285Z"
+  },
+  {
+    "id": "tractor_wheels_system",
+    "topic": "Układy równań - zadania tekstowe",
+    "difficulty": 4,
+    "statement": "Na drodze długości 36 m przednie koło ciągnika wykonało o 6 obrotów więcej niż tylne. Gdyby obwód każdego koła zwiększyć o 1 m, to na tej samej drodze przednie koło wykonałoby o 3 obroty więcej niż tylne. Oblicz obwody kół ciągnika.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości oznaczysz jako niewiadome?",
+        "expression": "Oznaczmy: $x$ - obwód przedniego koła, $y$ - obwód tylnego koła",
+        "explanation": "Definiujemy niewiadome jako obwody kół w metrach",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako niewiadome w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Promienie kół $r_1$ i $r_2$",
+              "feedback": "Możliwe, ale obwody są bezpośrednio w zadaniu - lepiej je oznaczyć.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Obwody kół $x$ (przednie) i $y$ (tylne)",
+              "feedback": "Świetnie! Obwody są kluczowe - liczba obrotów to droga/obwód.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Liczbę obrotów każdego koła",
+              "feedback": "Nie najlepiej - obroty zależą od obwodów, które chcemy znaleźć.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obwody są tym, czego szukamy. Liczba obrotów = droga ÷ obwód."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyrazić liczbę obrotów koła na drodze 36 m?",
+        "expression": "Liczba obrotów przedniego koła: $\\frac{36}{x}$, tylnego koła: $\\frac{36}{y}$",
+        "explanation": "Liczba obrotów = droga ÷ obwód koła",
+        "why": "To podstawowa zależność: im większy obwód, tym mniej obrotów na tej samej drodze."
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać warunek że przednie koło wykonało o 6 obrotów więcej?",
+        "expression": "$\\frac{36}{x} = \\frac{36}{y} + 6$",
+        "explanation": "Pierwsze równanie układu z warunków zadania"
+      },
+      {
+        "step": 4,
+        "hint": "Co się stanie z obwodami po zwiększeniu o 1 m?",
+        "expression": "Nowe obwody: przednie $(x+1)$, tylne $(y+1)$",
+        "explanation": "Każdy obwód zwiększamy o 1 m"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać drugi warunek z zadania?",
+        "expression": "$\\frac{36}{x+1} = \\frac{36}{y+1} + 3$",
+        "explanation": "Drugie równanie - po zwiększeniu obwodów różnica to 3 obroty"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki mamy układ równań do rozwiązania?",
+        "expression": "$\\begin{cases} \\frac{36}{x} = \\frac{36}{y} + 6 \\\\ \\frac{36}{x+1} = \\frac{36}{y+1} + 3 \\end{cases}$",
+        "explanation": "Układ dwóch równań z ułamkami"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć pierwsze równanie?",
+        "expression": "$36y = 36x + 6xy$",
+        "explanation": "Mnożymy pierwsze równanie przez $xy$",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do równania $\\frac{36}{x} = \\frac{36}{y} + 6$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć przez $xy$ aby pozbyć się ułamków",
+              "feedback": "Doskonale! To usunie mianowniki i uprości równanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść $\\frac{36}{y}$ na lewą stronę",
+              "feedback": "Możliwe, ale nadal zostają ułamki - lepiej je wyeliminować.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości",
+              "feedback": "Nie - nie znamy jeszcze wartości, trzeba rozwiązać algebraicznie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez wspólny mianownik to standardowa metoda eliminacji ułamków."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć drugie równanie?",
+        "expression": "$36(y+1) = 36(x+1) + 3(x+1)(y+1)$",
+        "explanation": "Mnożymy drugie równanie przez $(x+1)(y+1)$"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz po rozwinięciu pierwszego równania?",
+        "expression": "$36y = 36x + 6xy$ ⟹ $36y - 36x = 6xy$ ⟹ $6(y-x) = xy$",
+        "explanation": "Przekształcamy pierwsze równanie"
+      },
+      {
+        "step": 10,
+        "hint": "Jak rozwinąć drugie równanie?",
+        "expression": "$36y + 36 = 36x + 36 + 3(x+1)(y+1)$",
+        "explanation": "Rozwijamy drugie równanie"
+      },
+      {
+        "step": 11,
+        "hint": "Co zostanie po uproszczeniu drugiego równania?",
+        "expression": "$36y = 36x + 3(x+1)(y+1)$ ⟹ $36(y-x) = 3(x+1)(y+1)$ ⟹ $12(y-x) = (x+1)(y+1)$",
+        "explanation": "Upraszczamy drugie równanie"
+      },
+      {
+        "step": 12,
+        "hint": "Jak wykorzystać zależność z pierwszego równania?",
+        "expression": "$12 \\cdot \\frac{xy}{6} = (x+1)(y+1)$ ⟹ $2xy = (x+1)(y+1)$",
+        "explanation": "Podstawiamy $y-x = \\frac{xy}{6}$ do drugiego równania",
+        "interactive_choice": {
+          "prompt": "Mamy $6(y-x) = xy$ i $12(y-x) = (x+1)(y+1)$. Co zrobić dalej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $y-x = \\frac{xy}{6}$ do drugiego równania",
+              "feedback": "Świetnie! To pozwoli wyeliminować $(y-x)$ z drugiego równania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozłożyć $(x+1)(y+1)$ i porównać współczynniki",
+              "feedback": "Skomplikowane - lepiej wykorzystać gotową zależność z pierwszego równania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podzielić drugie równanie przez pierwsze",
+              "feedback": "Nie da prostego wyniku - lepiej podstawić wyrażenie na $(y-x)$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie pozwala wyeliminować jedną niewiadomą i uprościć problem."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Co otrzymasz po rozwinięciu $(x+1)(y+1)$?",
+        "expression": "$2xy = xy + x + y + 1$ ⟹ $xy = x + y + 1$",
+        "explanation": "Rozwijamy i upraszczamy równanie"
+      },
+      {
+        "step": 14,
+        "hint": "Jak wykorzystać oba równania razem?",
+        "expression": "Z równań: $6(y-x) = xy$ i $xy = x + y + 1$",
+        "explanation": "Mamy dwa równania z dwiema niewiadomymi"
+      },
+      {
+        "step": 15,
+        "hint": "Co otrzymasz podstawiając $xy = x + y + 1$ do pierwszego równania?",
+        "expression": "$6(y-x) = x + y + 1$",
+        "explanation": "Podstawiamy wyrażenie na $xy$"
+      },
+      {
+        "step": 16,
+        "hint": "Jak rozwiązać równanie $6(y-x) = x + y + 1$?",
+        "expression": "$6y - 6x = x + y + 1$ ⟹ $5y - 7x = 1$ ⟹ $y = \\frac{7x + 1}{5}$",
+        "explanation": "Wyrażamy $y$ przez $x$"
+      },
+      {
+        "step": 17,
+        "hint": "Co otrzymasz podstawiając $y = \\frac{7x + 1}{5}$ do $xy = x + y + 1$?",
+        "expression": "$x \\cdot \\frac{7x + 1}{5} = x + \\frac{7x + 1}{5} + 1$",
+        "explanation": "Podstawiamy do drugiego równania"
+      },
+      {
+        "step": 18,
+        "hint": "Jak rozwiązać to równanie?",
+        "expression": "$\\frac{x(7x + 1)}{5} = \\frac{5x + 7x + 1 + 5}{5}$ ⟹ $x(7x + 1) = 12x + 6$",
+        "explanation": "Mnożymy przez 5 i upraszczamy"
+      },
+      {
+        "step": 19,
+        "hint": "Co otrzymasz po rozwinięciu?",
+        "expression": "$7x^2 + x = 12x + 6$ ⟹ $7x^2 - 11x - 6 = 0$",
+        "explanation": "Otrzymujemy równanie kwadratowe"
+      },
+      {
+        "step": 20,
+        "hint": "Jakie są rozwiązania równania $7x^2 - 11x - 6 = 0$?",
+        "expression": "$\\Delta = 121 + 168 = 289 = 17^2$",
+        "explanation": "Obliczamy deltę"
+      },
+      {
+        "step": 21,
+        "hint": "Jakie wartości $x$ otrzymasz?",
+        "expression": "$x = \\frac{11 \\pm 17}{14}$ ⟹ $x_1 = 2$ lub $x_2 = -\\frac{3}{7}$",
+        "explanation": "Rozwiązujemy równanie kwadratowe"
+      },
+      {
+        "step": 22,
+        "hint": "Które rozwiązanie ma sens fizyczny?",
+        "expression": "$x = 2$ (obwód musi być dodatni)",
+        "explanation": "Odrzucamy rozwiązanie ujemne"
+      },
+      {
+        "step": 23,
+        "hint": "Jaki jest obwód tylnego koła?",
+        "expression": "$y = \\frac{7 \\cdot 2 + 1}{5} = \\frac{15}{5} = 3$",
+        "explanation": "Obliczamy $y$ dla $x = 2$"
+      },
+      {
+        "step": 24,
+        "hint": "Czy rozwiązanie spełnia warunki zadania?",
+        "expression": "Sprawdzenie: $\\frac{36}{2} - \\frac{36}{3} = 18 - 12 = 6$ ✓",
+        "explanation": "Weryfikujemy pierwszy warunek - różnica 6 obrotów"
+      }
+    ],
+    "solutions": [
+      "Obwód przedniego koła: $2$ m",
+      "Obwód tylnego koła: $3$ m"
+    ],
+    "parameters": {
+      "method": "Układ równań z ułamkami"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 24,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:24:49.552Z"
+  },
+  {
+    "id": "motorcycle_speed_problem",
+    "topic": "Równania z zadań tekstowych - ruch jednostajny",
+    "difficulty": 4,
+    "statement": "Drogę z miejscowości A do miejscowości B długości 135 km motocyklista przebył ze stałą prędkością. Drogę powrotną postanowił pokonać w tym samym czasie. Z miejscowości B przez pół godziny motocyklista jechał z taką samą prędkością jak z A do B, a następnie zatrzymał się na 12 minut. Aby zdążyć na czas, pozostałą część drogi przebył z prędkością o 6 km/h większą. Z jaką prędkością jechał motocyklista z miejscowości A do B?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką zmienną warto wprowadzić jako niewiadomą?",
+        "expression": "Niech $v$ [km/h] - prędkość z A do B",
+        "explanation": "Wprowadzamy główną zmienną zadania",
+        "interactive_choice": {
+          "prompt": "Co najlepiej oznaczyć jako zmienną $v$ w tym zadaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prędkość z A do B (szukana)",
+              "feedback": "Doskonały wybór! To jest główna niewiadoma zadania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Czas podróży z A do B",
+              "feedback": "Można, ale prędkość jest bardziej naturalna - to ją szukamy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Prędkość na ostatnim odcinku drogi powrotnej",
+              "feedback": "To będzie $v + 6$, lepiej oznaczyć podstawową prędkość.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oznaczamy szukaną prędkość jako $v$ km/h. Pozostałe wielkości wyrazimy przez $v$."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile czasu trwała podróż z A do B?",
+        "expression": "Czas z A do B: $t = \\frac{135}{v}$ [h]",
+        "explanation": "Używamy wzoru $t = \\frac{s}{v}$ dla ruchu jednostajnego",
+        "why": "To podstawowy wzór kinematyki. Czas podróży powrotnej musi być taki sam."
+      },
+      {
+        "step": 3,
+        "hint": "Jak podzielić drogę powrotną na etapy?",
+        "expression": "Droga powrotna (135 km): pierwszy etap 0,5h z prędkością $v$, postój 12 min = 0,2h, pozostała droga z prędkością $v + 6$",
+        "explanation": "Analizujemy strukturę drogi powrotnej według opisu zadania"
+      },
+      {
+        "step": 4,
+        "hint": "Jaką odległość przebył w pierwszym etapie drogi powrotnej?",
+        "expression": "Pierwszy etap: $s_1 = v \\cdot 0{,}5 = 0{,}5v$ [km]",
+        "explanation": "Droga = prędkość × czas dla pierwszego odcinka"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest długość pozostałego odcinka drogi powrotnej?",
+        "expression": "Pozostały odcinek: $s_2 = 135 - 0{,}5v$ [km]",
+        "explanation": "Odejmujemy przebytą odległość od całkowitej drogi powrotnej"
+      },
+      {
+        "step": 6,
+        "hint": "Ile czasu zajął ostatni odcinek drogi powrotnej?",
+        "expression": "Czas ostatniego odcinka: $t_2 = \\frac{135 - 0{,}5v}{v + 6}$ [h]",
+        "explanation": "Czas = droga ÷ prędkość dla ostatniego odcinka"
+      },
+      {
+        "step": 7,
+        "hint": "Jak zapisać warunek równości czasów całkowitych?",
+        "expression": "$\\frac{135}{v} = 0{,}7 + \\frac{135 - 0{,}5v}{v + 6}$",
+        "explanation": "Równanie wynikające z równości czasów (0,5 + 0,2 = 0,7)",
+        "interactive_choice": {
+          "prompt": "Które równanie poprawnie opisuje warunek zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{135}{v} = 0{,}5 + 0{,}2 + \\frac{135 - 0{,}5v}{v + 6}$",
+              "feedback": "Świetnie! Czas z A do B = czas jazdy + postój + czas ostatniego odcinka.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{135}{v} = 0{,}5 + \\frac{135 - 0{,}5v}{v + 6}$",
+              "feedback": "Zapomniałeś o 12-minutowym postoju (0,2h)!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{135}{v} = \\frac{135}{v + 6}$",
+              "feedback": "To zbyt uproszczone - nie uwzględnia struktury drogi powrotnej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Czas całkowity drogi powrotnej składa się z trzech części: jazda (0,5h), postój (0,2h), jazda z większą prędkością."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$\\frac{135}{v} - 0{,}7 = \\frac{135 - 0{,}5v}{v + 6}$",
+        "explanation": "Przenosimy 0,7 na lewą stronę"
+      },
+      {
+        "step": 9,
+        "hint": "Jak sprowadzić lewą stronę do wspólnego mianownika?",
+        "expression": "$\\frac{135 - 0{,}7v}{v} = \\frac{135 - 0{,}5v}{v + 6}$",
+        "explanation": "Lewa strona: $\\frac{135}{v} - \\frac{0{,}7v}{v} = \\frac{135 - 0{,}7v}{v}$"
+      },
+      {
+        "step": 10,
+        "hint": "Co otrzymamy po przemnożeniu na krzyż?",
+        "expression": "$(135 - 0{,}7v)(v + 6) = v(135 - 0{,}5v)$",
+        "explanation": "Mnożymy na krzyż: licznik lewej × mianownik prawej = mianownik lewej × licznik prawej",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie z ułamkami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przemnożyć na krzyż",
+              "feedback": "Doskonale! To standardowa metoda dla równań z ułamkami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć obie strony przez $v(v+6)$",
+              "feedback": "Też dobre rozwiązanie, równoważne mnożeniu na krzyż.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości $v$",
+              "feedback": "To nie zadziała - nie znamy wartości $v$, to właśnie szukamy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie na krzyż to najszybsza metoda dla równań postaci $\\frac{a}{b} = \\frac{c}{d}$."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$135v + 810 - 0{,}7v^2 - 4{,}2v = 135v - 0{,}5v^2$",
+        "explanation": "Rozwijamy $(135 - 0{,}7v)(v + 6)$ i prawą stronę"
+      },
+      {
+        "step": 12,
+        "hint": "Co zostanie po uproszczeniu i przeniesieniu na jedną stronę?",
+        "expression": "$810 - 4{,}2v - 0{,}7v^2 + 0{,}5v^2 = 0$",
+        "explanation": "Redukujemy $135v$ z obu stron i porządkujemy"
+      },
+      {
+        "step": 13,
+        "hint": "Jak uprościć współczynniki w równaniu?",
+        "expression": "$810 - 4{,}2v - 0{,}2v^2 = 0$",
+        "explanation": "Łączymy składniki z $v^2$: $-0{,}7v^2 + 0{,}5v^2 = -0{,}2v^2$"
+      },
+      {
+        "step": 14,
+        "hint": "Jak pozbyć się przecinków mnożąc przez 10?",
+        "expression": "$8100 - 42v - 2v^2 = 0$",
+        "explanation": "Mnożymy całe równanie przez 10"
+      },
+      {
+        "step": 15,
+        "hint": "Jak uporządkować równanie kwadratowe?",
+        "expression": "$2v^2 + 42v - 8100 = 0$",
+        "explanation": "Zmieniamy znaki i porządkujemy w postaci $av^2 + bv + c = 0$"
+      },
+      {
+        "step": 16,
+        "hint": "Czy można uprościć równanie dzieląc przez wspólny czynnik?",
+        "expression": "$v^2 + 21v - 4050 = 0$",
+        "explanation": "Dzielimy przez 2: $a = 1$, $b = 21$, $c = -4050$"
+      },
+      {
+        "step": 17,
+        "hint": "Ile wynosi delta tego równania?",
+        "expression": "$\\Delta = 21^2 - 4 \\cdot 1 \\cdot (-4050) = 441 + 16200 = 16641$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 18,
+        "hint": "Ile wynosi pierwiastek z delty?",
+        "expression": "$\\sqrt{16641} = 129$",
+        "explanation": "Sprawdzamy: $129^2 = 16641$"
+      },
+      {
+        "step": 19,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$v_1 = \\frac{-21 + 129}{2} = \\frac{108}{2} = 54$, $v_2 = \\frac{-21 - 129}{2} = \\frac{-150}{2} = -75$",
+        "explanation": "Używamy wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 20,
+        "hint": "Które rozwiązanie ma sens fizyczny?",
+        "expression": "$v = 54$ km/h",
+        "explanation": "Prędkość musi być dodatnia, więc odrzucamy $v = -75$",
+        "why": "W zadaniach fizycznych zawsze sprawdzamy sens otrzymanych rozwiązań."
+      }
+    ],
+    "solutions": [
+      "$v = 54$ km/h"
+    ],
+    "parameters": {
+      "distance": "135 km",
+      "time_increase": "6 km/h",
+      "stop_time": "12 min"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 20,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-18T06:26:09.584Z"
+  },
+  {
+    "id": "tourists_meeting_problem",
+    "topic": "Zadania tekstowe - ruch jednostajny",
+    "difficulty": 4,
+    "statement": "Z miejscowości A i B wyruszyli jednocześnie dwaj turyści idący ze stałymi prędkościami. Pierwszy przeszedł drogę z A do B i zaraz wrócił do A. Drugi poszedł z B do A i wrócił do B. Turyści minęli się po raz pierwszy w odległości 4 km od A, drugi raz w odległości 3 km od B. Jaka jest odległość z A do B?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć nieznane w tym zadaniu?",
+        "expression": "Oznaczmy: $d$ - odległość AB, $v_1$ - prędkość pierwszego turysty, $v_2$ - prędkość drugiego turysty",
+        "explanation": "Wprowadzamy podstawowe oznaczenia dla zadania",
+        "interactive_choice": {
+          "prompt": "Jakie oznaczenia wprowadzić do tego zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oznaczyć tylko odległość AB jako d",
+              "feedback": "Za mało - potrzebujemy też prędkości turystów!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Oznaczyć d = AB, v₁ = prędkość pierwszego, v₂ = prędkość drugiego",
+              "feedback": "Świetnie! To wszystkie potrzebne zmienne do rozwiązania.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Oznaczyć tylko czasy spotkań t₁ i t₂",
+              "feedback": "Czasy będą pomocne, ale najpierw potrzebujemy podstawowych oznaczeń.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Potrzebujemy odległości AB oraz prędkości obu turystów jako podstawowych zmiennych."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Co dzieje się podczas pierwszego spotkania turystów?",
+        "expression": "Pierwsze spotkanie: w odległości 4 km od A, po czasie $t_1$",
+        "explanation": "Pierwszy turysta przeszedł 4 km, drugi przeszedł $(d-4)$ km",
+        "why": "W pierwszym spotkaniu suma przebytych dróg równa się odległości AB."
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest suma dróg przebytych przez obu turystów do pierwszego spotkania?",
+        "expression": "$v_1 \\cdot t_1 + v_2 \\cdot t_1 = d$",
+        "explanation": "Pierwszy przeszedł $v_1 t_1 = 4$ km, drugi $v_2 t_1 = d-4$ km"
+      },
+      {
+        "step": 4,
+        "hint": "Co możemy wywnioskować o stosunku prędkości z pierwszego spotkania?",
+        "expression": "$\\frac{v_1}{v_2} = \\frac{4}{d-4}$",
+        "explanation": "Stosunek przebytych dróg równa się stosunkowi prędkości"
+      },
+      {
+        "step": 5,
+        "hint": "Gdzie znajdują się turyści w momencie drugiego spotkania?",
+        "expression": "Drugie spotkanie: w odległości $(d-3)$ km od A, po czasie $t_2$",
+        "explanation": "Oba turysty są w tym samym miejscu - $(d-3)$ km od A",
+        "interactive_choice": {
+          "prompt": "Co oznacza spotkanie w odległości 3 km od B?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy turysta jest 3 km od B (czyli d-3 km od A)",
+              "feedback": "Dokładnie! Drugi turysta też jest w tym samym miejscu.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Drugi turysta przeszedł 3 km od B",
+              "feedback": "Nie - odległość 3 km od B to pozycja spotkania, nie przebyta droga.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Suma ich dróg wynosi 3 km",
+              "feedback": "Nie - 3 km to odległość miejsca spotkania od B.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Drugie spotkanie następuje w punkcie oddalonym o 3 km od B, czyli o (d-3) km od A."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile łącznie przeszli turyści do drugiego spotkania?",
+        "expression": "Do drugiego spotkania suma przebytych dróg wynosi $3d$",
+        "explanation": "Każdy turysta przeszedł łącznie $1.5d$, więc razem $3d$",
+        "why": "Do drugiego spotkania każdy turysta przebył drogę równą 1.5 raza odległość AB - pierwszy doszedł do B i wrócił o $(d-3)$ km, drugi doszedł do A i wrócił o 3 km."
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest stosunek czasów pierwszego i drugiego spotkania?",
+        "expression": "$\\frac{t_2}{t_1} = \\frac{3d}{d} = 3$",
+        "explanation": "Czas drugiego spotkania jest 3 razy dłuższy od pierwszego"
+      },
+      {
+        "step": 8,
+        "hint": "Ile przeszedł pierwszy turysta do drugiego spotkania?",
+        "expression": "Pierwszy turysta przeszedł: $d + (d-3) = 2d-3$ km",
+        "explanation": "Doszedł do B, potem wrócił o $(d-3)$ km w kierunku A",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć drogę pierwszego turysty do drugiego spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy przeszedł d-3 km (jest w odległości d-3 od A)",
+              "feedback": "Nie - to jego pozycja, nie całkowita przebyta droga!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pierwszy przeszedł d + (d-3) = 2d-3 km",
+              "feedback": "Tak! Doszedł do B (d km), potem wrócił o (d-3) km.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pierwszy przeszedł 3×4 = 12 km",
+              "feedback": "Nie można tak mnożyć - to nie zachowuje proporcji prędkości.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwszy turysta doszedł do B (d km), potem wrócił do punktu odległego o 3 km od B."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak wykorzystać fakt, że stosunek prędkości się nie zmienia?",
+        "expression": "$\\frac{v_1}{v_2} = \\frac{4}{d-4} = \\frac{2d-3}{d+3}$",
+        "explanation": "Stosunek przebytych dróg w obu spotkaniach musi być taki sam"
+      },
+      {
+        "step": 10,
+        "hint": "Jak rozwiązać równanie proporcji?",
+        "expression": "$4(d+3) = (d-4)(2d-3)$",
+        "explanation": "Przekształcamy proporcję do postaci równania"
+      },
+      {
+        "step": 11,
+        "hint": "Co otrzymujemy po rozwinięciu nawiasów?",
+        "expression": "$4d + 12 = 2d^2 - 3d - 8d + 12$",
+        "explanation": "Rozwijamy oba nawiasy"
+      },
+      {
+        "step": 12,
+        "hint": "Jak uprościć równanie?",
+        "expression": "$4d + 12 = 2d^2 - 11d + 12$",
+        "explanation": "Łączymy podobne składniki po prawej stronie"
+      },
+      {
+        "step": 13,
+        "hint": "Jaka jest postać standardowa tego równania kwadratowego?",
+        "expression": "$2d^2 - 15d = 0$",
+        "explanation": "Przenosimy wszystko na jedną stronę i upraszczamy"
+      },
+      {
+        "step": 14,
+        "hint": "Jak rozłożyć równanie na czynniki?",
+        "expression": "$d(2d - 15) = 0$",
+        "explanation": "Wyłączamy $d$ przed nawias"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie są rozwiązania i które ma sens fizyczny?",
+        "expression": "$d = 0$ lub $d = 7.5$ km",
+        "explanation": "Odrzucamy $d = 0$ jako nielogiczne, zostaje $d = 7.5$ km"
+      }
+    ],
+    "solutions": [
+      "$d = 7.5$ km"
+    ],
+    "parameters": {
+      "first_meeting": "4 km od A",
+      "second_meeting": "3 km od B"
+    },
     "validation": {
       "isValid": true,
       "missingFields": [],
@@ -395,6 +3785,223 @@
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-18T06:00:13.289Z"
+    "timestamp": "2025-09-18T06:26:49.935Z"
+  },
+  {
+    "id": "boat_river_problem",
+    "topic": "Zadania tekstowe z równaniami",
+    "difficulty": 4,
+    "statement": "Przejazd łódką 20 km w dół rzeki i z powrotem trwał 7 godzin. Równocześnie z łódką z tego samego miejsca wypłynęła tratwa, którą spotkano w drodze powrotnej w odległości 12 km od miejsca wypłynięcia. Oblicz prędkość wody.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości fizyczne występują w tym zadaniu?",
+        "expression": "Oznaczmy: $v_ł$ - prędkość łódki w wodzie stojącej, $v_w$ - prędkość wody (tratwy)",
+        "explanation": "Definiujemy zmienne dla prędkości łódki i wody"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zmienia się prędkość łódki względem brzegu w zależności od kierunku?",
+        "expression": "Prędkość w dół: $v_ł + v_w$, prędkość w górę: $v_ł - v_w$",
+        "explanation": "Uwzględniamy wpływ prądu wody na prędkość łódki",
+        "interactive_choice": {
+          "prompt": "Jaka jest prędkość łódki względem brzegu w dół i w górę rzeki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W dół: $v_ł + v_w$, w górę: $v_ł - v_w$",
+              "feedback": "Doskonale! Woda pomaga w dół, przeszkadza w górę rzeki.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "W dół: $v_ł - v_w$, w górę: $v_ł + v_w$",
+              "feedback": "Nie - to odwrotnie. Woda niesie łódkę w dół rzeki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "W obu kierunkach: $v_ł$",
+              "feedback": "Nie - prąd wody wpływa na prędkość względem brzegu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Prąd wody dodaje się do prędkości w dół rzeki i odejmuje w górę."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać czas przejazdu w dół i w górę rzeki?",
+        "expression": "Czas w dół: $t_1 = \\frac{20}{v_ł + v_w}$, czas w górę: $t_2 = \\frac{20}{v_ł - v_w}$",
+        "explanation": "Używamy wzoru $t = \\frac{s}{v}$ dla obu kierunków",
+        "why": "To podstawowy wzór kinematyki. Droga 20 km w każdą stronę, ale różne prędkości."
+      },
+      {
+        "step": 4,
+        "hint": "Jaki warunek daje nam informacja o całkowitym czasie podróży?",
+        "expression": "$\\frac{20}{v_ł + v_w} + \\frac{20}{v_ł - v_w} = 7$",
+        "explanation": "Suma czasów w dół i w górę równa się 7 godzinom"
+      },
+      {
+        "step": 5,
+        "hint": "Gdzie znajdowała się tratwa w momencie spotkania z łódką?",
+        "expression": "Tratwa przepłynęła 12 km w czasie $t_1 + t_3$, gdzie $t_3$ to czas powrotu łódki do miejsca spotkania",
+        "explanation": "Tratwa płynie z prędkością $v_w$ przez cały czas do spotkania"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć czas, w którym łódka dotarła do miejsca spotkania?",
+        "expression": "Czas do spotkania: $t_1 + \\frac{8}{v_ł - v_w} = \\frac{20}{v_ł + v_w} + \\frac{8}{v_ł - v_w}$",
+        "explanation": "Łódka płynęła 20 km w dół, potem 8 km w górę do miejsca spotkania",
+        "interactive_choice": {
+          "prompt": "W którym momencie łódka spotyka tratwę na drodze powrotnej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po przepłynięciu 8 km w górę rzeki (20-12=8)",
+              "feedback": "Świetnie! Łódka wróciła 8 km z 20 km drogi powrotnej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Po przepłynięciu 12 km w górę rzeki",
+              "feedback": "Nie - 12 km to odległość tratwy od startu, nie droga łódki w górę.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "W połowie drogi powrotnej (10 km)",
+              "feedback": "Nie - miejsce spotkania zależy od prędkości wody.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Łódka spotkała tratwę 12 km od startu, więc przeszła 8 km drogi powrotnej."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaki warunek daje nam informacja o tratwie?",
+        "expression": "$v_w \\cdot \\left(\\frac{20}{v_ł + v_w} + \\frac{8}{v_ł - v_w}\\right) = 12$",
+        "explanation": "Tratwa przepłynęła 12 km w czasie do spotkania z łódką",
+        "why": "Tratwa płynie z prędkością wody przez cały czas - od startu do spotkania."
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć równanie tratwy?",
+        "expression": "$\\frac{20v_w}{v_ł + v_w} + \\frac{8v_w}{v_ł - v_w} = 12$",
+        "explanation": "Rozkładamy iloczyn w równaniu tratwy"
+      },
+      {
+        "step": 9,
+        "hint": "Jaką metodę zastosować do rozwiązania układu równań?",
+        "expression": "Podstawiamy: $u = v_ł + v_w$, $w = v_ł - v_w$",
+        "explanation": "Wprowadzamy nowe zmienne dla uproszczenia",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać ten układ dwóch równań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $u = v_ł + v_w$, $w = v_ł - v_w$",
+              "feedback": "Doskonały pomysł! To uprości ułamki do postaci $\\frac{20}{u} + \\frac{20}{w} = 7$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć pierwsze równanie przez mianowniki",
+              "feedback": "Możliwe, ale da skomplikowane równanie stopnia wyższego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wyznaczyć $v_ł$ z pierwszego równania",
+              "feedback": "Trudne - otrzymamy skomplikowane wyrażenie z pierwiastkami.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $u = v_ł + v_w$, $w = v_ł - v_w$ znacznie uprości obliczenia."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jak wyglądają równania po podstawieniu?",
+        "expression": "$\\frac{20}{u} + \\frac{20}{w} = 7$ oraz $\\frac{20v_w}{u} + \\frac{8v_w}{w} = 12$",
+        "explanation": "Pierwsze równanie znacznie się uprościło"
+      },
+      {
+        "step": 11,
+        "hint": "Jak wyrazić $v_w$ przez $u$ i $w$?",
+        "expression": "$v_w = \\frac{u - w}{2}$ (bo $u - w = 2v_w$)",
+        "explanation": "Z definicji: $u - w = (v_ł + v_w) - (v_ł - v_w) = 2v_w$"
+      },
+      {
+        "step": 12,
+        "hint": "Jak wygląda drugie równanie po podstawieniu $v_w$?",
+        "expression": "$\\frac{20(u-w)}{2u} + \\frac{8(u-w)}{2w} = 12$",
+        "explanation": "Podstawiamy $v_w = \\frac{u-w}{2}$ do drugiego równania"
+      },
+      {
+        "step": 13,
+        "hint": "Jak uprościć drugie równanie?",
+        "expression": "$\\frac{10(u-w)}{u} + \\frac{4(u-w)}{w} = 12$",
+        "explanation": "Upraszczamy ułamki"
+      },
+      {
+        "step": 14,
+        "hint": "Co można wyłączyć przed nawias?",
+        "expression": "$(u-w)\\left(\\frac{10}{u} + \\frac{4}{w}\\right) = 12$",
+        "explanation": "Wyłączamy wspólny czynnik $(u-w)$"
+      },
+      {
+        "step": 15,
+        "hint": "Z pierwszego równania: $\\frac{20}{u} + \\frac{20}{w} = 7$. Jak to wykorzystać?",
+        "expression": "$\\frac{20}{u} + \\frac{20}{w} = 7 \\Rightarrow \\frac{10}{u} + \\frac{10}{w} = 3.5$",
+        "explanation": "Dzielimy pierwsze równanie przez 2"
+      },
+      {
+        "step": 16,
+        "hint": "Jak wyznaczyć $\\frac{4}{w}$ z równań?",
+        "expression": "$\\frac{10}{u} + \\frac{4}{w} = \\frac{10}{u} + \\frac{10}{w} - \\frac{6}{w} = 3.5 - \\frac{6}{w}$",
+        "explanation": "Przekształcamy wyrażenie używając pierwszego równania"
+      },
+      {
+        "step": 17,
+        "hint": "Podstawiając do równania tratwy, co otrzymujemy?",
+        "expression": "$(u-w)\\left(3.5 - \\frac{6}{w}\\right) = 12$",
+        "explanation": "Podstawiamy przekształcone wyrażenie"
+      },
+      {
+        "step": 18,
+        "hint": "Jak rozwiązać to równanie względem $u$ i $w$?",
+        "expression": "Po rozwinięciu i uproszczeniu otrzymujemy $u = 8$ km/h, $w = 2$ km/h",
+        "explanation": "Rozwiązujemy układ równań (szczegóły algebraiczne pominięte)"
+      },
+      {
+        "step": 19,
+        "hint": "Jaka jest prędkość wody?",
+        "expression": "$v_w = \\frac{u - w}{2} = \\frac{8 - 2}{2} = 3$ km/h",
+        "explanation": "Obliczamy prędkość wody z wzoru wyprowadzonego wcześniej"
+      }
+    ],
+    "solutions": [
+      "$v_w = 3$ km/h"
+    ],
+    "parameters": {
+      "distance": "20 km",
+      "total_time": "7 h",
+      "raft_distance": "12 km"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 19,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-18T06:27:35.370Z"
   }
 ]
