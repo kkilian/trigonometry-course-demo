@@ -1453,7 +1453,32 @@
         "step": 3,
         "hint": "Co oznacza wydajność pracy każdego zespołu?",
         "expression": "Wydajność pierwszego: $\\frac{1}{x}$, drugiego: $\\frac{1}{x+1}$, trzeciego: $\\frac{1}{x+4}$",
-        "explanation": "Wydajność to część pracy wykonana w ciągu jednego dnia"
+        "explanation": "Wydajność to część pracy wykonana w jeden dzień. Przykład: jeśli malujesz pokój w 4 dni, to dziennie malujesz $\\frac{1}{4}$ pokoju. Analogicznie, zespół pracujący $x$ dni wykonuje dziennie $\\frac{1}{x}$ całej pracy.",
+        "why": "Przejście od czasów do wydajności jest kluczowe - tylko wydajności można dodawać przy pracy równoczesnej.",
+        "interactive_choice": {
+          "prompt": "Jak zapisać wydajność dzienną każdego zespołu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy: $\\frac{1}{x}$, Drugi: $\\frac{1}{x+1}$, Trzeci: $\\frac{1}{x+4}$",
+              "feedback": "Świetnie! Wydajność to odwrotność czasu - im dłużej pracujesz, tym mniej robisz dziennie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pierwszy: $x$, Drugi: $x+1$, Trzeci: $x+4$",
+              "feedback": "To są czasy pracy w dniach, nie wydajności. Wydajność to $\\frac{1}{czas}$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Pierwszy: $\\frac{1}{x}$, Drugi: $\\frac{1}{x-1}$, Trzeci: $\\frac{1}{x-4}$",
+              "feedback": "Uważaj na znaki! Drugi pracuje DŁUŻEJ (x+1 dni), więc ma MNIEJSZĄ wydajność.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Im dłuższy czas pracy, tym mniejsza wydajność dzienna. Zespół pracujący 10 dni robi $\\frac{1}{10}$ dziennie, a pracujący 5 dni robi $\\frac{1}{5}$ dziennie."
+        }
       },
       {
         "step": 4,

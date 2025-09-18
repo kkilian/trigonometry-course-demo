@@ -5,6 +5,7 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
+import angDemoProblems from '../data/ang-demo-problems.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -65,7 +66,8 @@ const WelcomeScreen = ({ onSelectMode }) => {
       id: 'rational-equations-word-problems',
       title: 'Zadania tekstowe prowadzące do równań wymiernych',
       description: 'Problemy słowne wymagające rozwiązania równań wymiernych',
-      problemCount: rationalEquationsWordProblems.length
+      problemCount: rationalEquationsWordProblems.length,
+      hasGlow: true
     },
     {
       id: 'kombinatoryka-menu',
@@ -82,6 +84,13 @@ const WelcomeScreen = ({ onSelectMode }) => {
       description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
       problemCount: statystykaProblems.length,
       disabled: true
+    },
+    {
+      id: 'ang-demo',
+      title: 'English Demo - Nauka angielskiego',
+      description: 'Phrasal verbs, conditionals, transformacje zdań - system krokowy',
+      problemCount: angDemoProblems.length,
+      isNew: true
     }
   ];
 
@@ -168,8 +177,13 @@ const WelcomeScreen = ({ onSelectMode }) => {
                 className={`w-full text-left p-4 md:p-6 rounded-xl transition-all relative ${
                   module.disabled
                     ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60'
+                    : module.hasGlow
+                    ? 'bg-white border border-orange-400 hover:border-orange-500 hover:bg-orange-50/30 group shadow-lg shadow-orange-400/40'
                     : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
                 }`}
+                style={module.hasGlow ? {
+                  boxShadow: '0 0 30px rgba(251, 146, 60, 0.4), 0 0 60px rgba(251, 146, 60, 0.2)'
+                } : {}}
               >
                 {module.isPremium && (
                   <div className="absolute top-1 right-4 md:top-2 md:right-6">

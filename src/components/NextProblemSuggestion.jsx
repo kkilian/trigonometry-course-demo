@@ -187,6 +187,13 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for rational-equations-word-problems:', suggestedIds);
       }
 
+      // Save suggested problems to localStorage for ang-demo module
+      if (currentProblem.id && currentProblem.id.includes('ang_')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('ang-demo-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for ang-demo:', suggestedIds);
+      }
+
       return bestMatches;
 
     } catch (err) {
