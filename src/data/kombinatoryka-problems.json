@@ -8701,5 +8701,1897 @@
     },
     "timestamp": "2025-09-17T07:36:16.803Z",
     "module": "kombinatoryka"
+  },
+{
+    "id": "permutation_fixed_positions",
+    "topic": "Permutacje z warunkami",
+    "difficulty": 2,
+    "statement": "Na ile sposobów można ustawić w szereg osiem osób tak, aby: osoby A, B, C zajmowały odpowiednio pierwsze, drugie i trzecie miejsce w tym szeregu.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile osób mamy do ustawienia w szeregu?",
+        "expression": "Mamy 8 osób do ustawienia w szeregu",
+        "explanation": "Zadanie dotyczy permutacji 8 osób z dodatkowymi warunkami"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek że A, B, C zajmują pierwsze trzy miejsca?",
+        "expression": "Miejsca 1, 2, 3 są zajęte przez A, B, C w tej kolejności",
+        "explanation": "Pierwsze trzy pozycje są już określone",
+        "interactive_choice": {
+          "prompt": "Jak interpretować warunek o miejscach dla osób A, B, C?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A musi być na 1. miejscu, B na 2., C na 3. - pozycje są ustalone",
+              "feedback": "Dokładnie! Pozycje A, B, C są całkowicie określone.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "A, B, C mogą być na pierwszych trzech miejscach w dowolnej kolejności",
+              "feedback": "Nie - zadanie mówi 'odpowiednio', więc kolejność jest ustalona.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "A, B, C muszą być obok siebie, ale mogą być gdzie indziej",
+              "feedback": "Nie - zadanie jasno określa konkretne miejsca: 1., 2., 3.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Słowo 'odpowiednio' oznacza że A jest na 1. miejscu, B na 2., C na 3."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile osób pozostało do ustawienia na pozostałych miejscach?",
+        "expression": "Pozostało $8 - 3 = 5$ osób",
+        "explanation": "Po ustaleniu pozycji A, B, C zostaje 5 osób do rozmieszczenia"
+      },
+      {
+        "step": 4,
+        "hint": "Na ilu miejscach możemy ustawić pozostałe 5 osób?",
+        "expression": "Miejsca 4, 5, 6, 7, 8 są wolne dla pozostałych 5 osób",
+        "explanation": "Na miejscach 4-8 ustawiamy pozostałe osoby",
+        "interactive_choice": {
+          "prompt": "Ile wolnych miejsc pozostało dla 5 osób?",
+          "options": [
+            {
+              "id": "A",
+              "text": "3 miejsca (4., 5., 6.)",
+              "feedback": "Za mało - mamy 8 miejsc, pierwsze 3 zajęte, więc zostaje 5 miejsc.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "5 miejsc (4., 5., 6., 7., 8.)",
+              "feedback": "Dokładnie! Miejsca od 4. do 8. są wolne.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "8 miejsc - wszystkie",
+              "feedback": "Nie - pierwsze 3 miejsca są już zajęte przez A, B, C.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mamy 8 miejsc total, 3 zajęte, więc 5 wolnych dla pozostałych osób."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć liczbę sposobów ustawienia 5 osób na 5 miejscach?",
+        "expression": "Liczba permutacji 5 osób = $5!$",
+        "explanation": "To standardowa permutacja bez powtórzeń",
+        "why": "Gdy mamy n różnych obiektów do ustawienia na n miejscach, liczba sposobów to n!"
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $5!$?",
+        "expression": "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$",
+        "explanation": "Obliczamy wartość silni",
+        "interactive_choice": {
+          "prompt": "Oblicz wartość $5!$:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 60$",
+              "feedback": "Błąd w obliczeniu: $5 \\cdot 4 = 20$, $20 \\cdot 3 = 60$, $60 \\cdot 2 = 120$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$",
+              "feedback": "Świetnie! $5 \\cdot 4 = 20$, $20 \\cdot 3 = 60$, $60 \\cdot 2 = 120$, $120 \\cdot 1 = 120$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 100$",
+              "feedback": "Sprawdź obliczenia: $5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$, nie 100.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Silnia to iloczyn wszystkich liczb naturalnych od 1 do n."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest odpowiedź na pytanie zadania?",
+        "expression": "Liczba sposobów = $120$",
+        "explanation": "Osoby A, B, C mają ustalone miejsca, pozostałe 5 osób można ustawić na 120 sposobów"
+      }
+    ],
+    "solutions": [
+      "120"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:00:18.440Z"
+  },
+  {
+    "id": "arrangement_with_conditions",
+    "topic": "Permutacje z warunkami",
+    "difficulty": 4,
+    "statement": "Na ile sposobów można ustawić w szereg osiem osób tak, aby: osoby A i B stały obok siebie oraz pomiędzy tą parą osób a osobą C stały dwie inne osoby.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak najlepiej podejść do tego problemu z wieloma warunkami?",
+        "expression": "Traktujemy parę AB jako jeden obiekt (AB)",
+        "explanation": "Mamy teraz 7 obiektów do ustawienia: (AB), C i 5 innych osób",
+        "interactive_choice": {
+          "prompt": "Którą strategię wybierzesz do rozwiązania tego zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Traktować parę AB jako jeden obiekt",
+              "feedback": "Świetny start! To upraszcza pierwszy warunek - AB obok siebie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw ustawić osobę C, potem resztę",
+              "feedback": "Możliwe, ale trudniej kontrolować warunek odległości od pary AB.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Liczyć wszystkie permutacje i odejmować złe",
+              "feedback": "Bardzo skomplikowane - lepiej budować od razu dobre ustawienia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Traktowanie pary AB jako jednego obiektu znacznie upraszcza problem."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile sposobów jest na wewnętrzne ustawienie pary AB?",
+        "expression": "Para AB może być ustawiona jako AB lub BA, więc $2$ sposoby",
+        "explanation": "A może być z lewej lub prawej strony B"
+      },
+      {
+        "step": 3,
+        "hint": "Co oznacza warunek 'pomiędzy parą AB a osobą C stały dwie inne osoby'?",
+        "expression": "Między (AB) a C muszą być dokładnie 2 osoby: (AB)--X--Y--C lub C--X--Y--(AB)",
+        "explanation": "Odległość między parą AB a osobą C wynosi 3 pozycje",
+        "why": "Ten warunek ogranicza możliwe pozycje pary AB i osoby C w szeregu."
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są możliwe pozycje dla pary AB i osoby C w szeregu 7 obiektów?",
+        "expression": "Możliwe pozycje: (AB,C) na pozycjach (1,5), (2,6), (3,7), (5,1), (6,2), (7,3)",
+        "explanation": "6 sposobów ustawienia pary AB i osoby C z odpowiednią odległością",
+        "interactive_choice": {
+          "prompt": "Które pary pozycji (AB, C) spełniają warunek odległości w szeregu 1-2-3-4-5-6-7?",
+          "options": [
+            {
+              "id": "A",
+              "text": "(1,5), (2,6), (3,7), (5,1), (6,2), (7,3)",
+              "feedback": "Dokładnie! To wszystkie pary pozycji z odległością 3.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "(1,4), (2,5), (3,6), (4,7), (4,1), (5,2), (6,3), (7,4)",
+              "feedback": "Nie - to odległość 2, a potrzebujemy odległości 3.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "(1,6), (2,7), (6,1), (7,2)",
+              "feedback": "Nie - to odległość 4, za duża.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odległość 3 oznacza 2 pozycje między obiektami. Mamy 6 możliwych par pozycji."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile pozostało obiektów do ustawienia na pozostałych pozycjach?",
+        "expression": "Pozostało 5 osób na 5 pozostałych pozycjach",
+        "explanation": "Po ustaleniu pozycji AB i C, zostaje 5 pozycji dla 5 osób"
+      },
+      {
+        "step": 6,
+        "hint": "Na ile sposobów można ustawić 5 osób na 5 pozycjach?",
+        "expression": "$5! = 120$ sposobów",
+        "explanation": "Permutacja 5 elementów"
+      },
+      {
+        "step": 7,
+        "hint": "Jak połączyć wszystkie możliwości w końcowy wynik?",
+        "expression": "$6 \\times 120 \\times 2 = 1440$",
+        "explanation": "6 par pozycji dla AB i C, 120 permutacji pozostałych osób, 2 orientacje pary AB",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć całkowitą liczbę sposobów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$6 \\times 5! \\times 2 = 6 \\times 120 \\times 2$",
+              "feedback": "Perfekcyjnie! 6 par pozycji × 120 permutacji × 2 ustawienia AB.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$6 \\times 5! = 6 \\times 120$",
+              "feedback": "Zapomniałeś o 2 sposobach ustawienia wewnątrz pary AB!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$6 + 5! + 2$",
+              "feedback": "Nie - to dodawanie, a powinno być mnożenie niezależnych wyborów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożymy wszystkie niezależne wybory: pozycje × permutacje × orientacja pary."
+        }
+      }
+    ],
+    "solutions": [
+      "$1440$"
+    ],
+    "parameters": {
+      "total_people": 8,
+      "conditions": [
+        "A i B obok siebie",
+        "między AB a C dokładnie 2 osoby"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:00:58.771Z"
+  },
+  {
+    "id": "permutations_restriction",
+    "topic": "Permutacje z ograniczeniami",
+    "difficulty": 4,
+    "statement": "Na ile sposobów można ustawić w szereg osiem osób tak, aby osoby A i B nie stały obok siebie?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką metodę wybierzesz do rozwiązania tego problemu z ograniczeniem?",
+        "expression": "Szukane = Wszystkie permutacje - Permutacje z A i B obok siebie",
+        "explanation": "Stosujemy zasadę dopełnienia",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do problemu z ograniczeniem 'A i B nie mogą stać obok siebie'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednio policzyć dobre ustawienia",
+              "feedback": "Bardzo trudne - musisz rozpatrzyć wiele przypadków pozycji A i B.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć zasady dopełnienia: wszystkie - złe",
+              "feedback": "Świetny wybór! Łatwiej policzyć kiedy A i B stoją obok.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Najpierw ustawić pozostałe 6 osób, potem wstawić A i B",
+              "feedback": "Możliwe, ale skomplikowane - trzeba uważać na pozycje.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada dopełnienia: szukane = wszystkie permutacje - permutacje gdzie A i B są obok."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Na ile sposobów można ustawić 8 osób w szereg bez ograniczeń?",
+        "expression": "Wszystkie permutacje = $8! = 40320$",
+        "explanation": "Permutacje 8 różnych obiektów",
+        "why": "To standardowa permutacja bez powtórzeń - każda osoba może być na każdej pozycji."
+      },
+      {
+        "step": 3,
+        "hint": "Jak potraktować osoby A i B gdy mają stać obok siebie?",
+        "expression": "Traktujemy (AB) jako jeden blok",
+        "explanation": "Zamiast 8 osób mamy 7 obiektów: blok (AB) plus 6 innych osób",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej policzyć permutacje gdzie A i B stoją obok siebie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Traktować A i B jako jeden blok",
+              "feedback": "Doskonale! Mamy wtedy 7 obiektów do ustawienia.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozpatrzyć wszystkie pary sąsiadujących pozycji",
+              "feedback": "Możliwe, ale bardziej pracochłonne niż metoda bloku.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Najpierw ustawić A, potem B na sąsiedniej pozycji",
+              "feedback": "Skomplikowane - łatwo pomylić się z liczeniem przypadków.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Traktując A i B jako jeden blok, mamy 7 obiektów do permutacji, ale blok można ułożyć na 2 sposoby (AB lub BA)."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Na ile sposobów można ustawić 7 obiektów (blok plus 6 osób)?",
+        "expression": "Permutacje 7 obiektów = $7! = 5040$",
+        "explanation": "Ustawiamy 7 obiektów w szereg"
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów można ułożyć osoby A i B wewnątrz bloku?",
+        "expression": "Wewnątrz bloku: $2! = 2$ sposoby (AB lub BA)",
+        "explanation": "A może być przed B lub B przed A",
+        "why": "Blok może mieć kolejność AB lub BA - to są różne ustawienia osób."
+      },
+      {
+        "step": 6,
+        "hint": "Ile jest permutacji gdzie A i B stoją obok siebie?",
+        "expression": "Permutacje z A i B obok = $7! \\times 2! = 5040 \\times 2 = 10080$",
+        "explanation": "Mnożymy liczbę ustawień bloków przez liczbę ustawień wewnątrz bloku"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest wynik końcowy?",
+        "expression": "$8! - 7! \\times 2! = 40320 - 10080 = 30240$",
+        "explanation": "Stosujemy zasadę dopełnienia: wszystkie permutacje minus te z A i B obok siebie",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć liczbę permutacji gdzie A i B NIE stoją obok siebie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$8! - 7! \\times 2!$",
+              "feedback": "Dokładnie! Wszystkie minus te gdzie A i B są obok.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$8! + 7! \\times 2!$",
+              "feedback": "Nie - dodajesz zamiast odejmować. To nie ma sensu logicznego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$7! \\times 2!$",
+              "feedback": "To liczba permutacji gdzie A i B SĄ obok, nie przeciwnie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada dopełnienia: odejmujemy niechciane przypadki od wszystkich możliwych."
+        }
+      }
+    ],
+    "solutions": [
+      "$30240$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:01:27.168Z"
+  },
+  {
+    "id": "permutation_with_conditions",
+    "topic": "Permutacje z warunkami",
+    "difficulty": 4,
+    "statement": "Na ile sposobów można ustawić w szereg osiem osób tak, aby: osoba A stała pierwsza w szeregu, a w dalszej części szeregu osoba B stała bliżej A niż osoba C?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile osób pozostaje do ustawienia po ustaleniu pozycji osoby A?",
+        "expression": "Osoba A stoi na pozycji 1, pozostaje 7 osób na pozycjach 2-8",
+        "explanation": "Warunek że A stoi pierwsza jest już spełniony"
+      },
+      {
+        "step": 2,
+        "hint": "Jak najlepiej podejść do warunku że B jest bliżej A niż C?",
+        "expression": "Wykorzystujemy symetrię problemu",
+        "explanation": "Dla każdego ustawienia gdzie C jest bliżej A, istnieje dokładnie jedno gdzie B jest bliżej A",
+        "why": "To kluczowa obserwacja - pozwala uniknąć skomplikowanego liczenia przypadków.",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać warunek 'B bliżej A niż C' dla pozostałych 7 pozycji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć wszystkie możliwe pozycje B i C osobno",
+              "feedback": "Możliwe, ale bardzo pracochłonne - trzeba by sprawdzić 42 przypadki!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć symetrii - połowa ustawień B,C spełnia warunek",
+              "feedback": "Świetnie! Dla każdej pary pozycji, dokładnie w jednej B jest bliżej A.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Najpierw ustawić B, potem ograniczyć pozycje dla C",
+              "feedback": "Skomplikowane - różne przypadki w zależności od pozycji B.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Symetria jest kluczowa: z dwóch osób B i C, dokładnie jedna będzie bliżej A."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest wszystkich sposobów ustawienia 7 pozostałych osób?",
+        "expression": "Wszystkich ustawień 7 osób: $7! = 5040$",
+        "explanation": "Bez żadnych ograniczeń na pozycje B i C"
+      },
+      {
+        "step": 4,
+        "hint": "W ilu z tych ustawień B i C mogą zamienić się miejscami?",
+        "expression": "Każde ustawienie ma dokładnie jedno 'lustrzane' z zamienionymi B i C",
+        "explanation": "Ustawienia dzielą się na pary - w jednym B bliżej A, w drugim C bliżej A",
+        "interactive_choice": {
+          "prompt": "Co się stanie gdy w dowolnym ustawieniu zamienimy miejscami osoby B i C?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Otrzymamy to samo ustawienie",
+              "feedback": "Nie - B i C to różne osoby, zamiana daje nowe ustawienie.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Otrzymamy ustawienie gdzie warunek odległości się odwraca",
+              "feedback": "Dokładnie! Jeśli B była bliżej, to po zamianie C będzie bliżej.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Warunek może pozostać spełniony lub nie",
+              "feedback": "Nie - zamiana zawsze odwraca relację odległości od A.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zamiana B↔C zawsze odwraca warunek 'kto jest bliżej A'."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jaka część wszystkich ustawień spełnia nasz warunek?",
+        "expression": "Dokładnie połowa ustawień ma B bliżej A niż C",
+        "explanation": "Z symetrii: połowa ma B bliżej, połowa ma C bliżej",
+        "why": "To wynika z faktu że relacja 'bliżej A' dzieli wszystkie ustawienia B,C na dwie równe grupy."
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi połowa z $7!$ ustawień?",
+        "expression": "$\\frac{7!}{2} = \\frac{5040}{2} = 2520$",
+        "explanation": "Połowa wszystkich ustawień spełnia warunek",
+        "interactive_choice": {
+          "prompt": "Czy $7!$ na pewno jest liczbą parzystą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bo zawiera czynnik 2",
+              "feedback": "Dokładnie! $7! = 7 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1$ zawiera 2.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo 7 jest nieparzyste",
+              "feedback": "Mylisz się - silnia zawiera wszystkie liczby od 1 do 7, w tym parzyste.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie jestem pewien",
+              "feedback": "Silnia $n!$ dla $n \\geq 2$ zawsze zawiera czynnik 2, więc jest parzysta.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Każda silnia $n!$ dla $n \\geq 2$ jest parzysta, bo zawiera czynnik 2."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest ostateczna odpowiedź?",
+        "expression": "Liczba sposobów = $2520$",
+        "explanation": "Osiem osób można ustawić na 2520 sposobów spełniających wszystkie warunki"
+      }
+    ],
+    "solutions": [
+      "$2520$"
+    ],
+    "parameters": {
+      "total_people": 8,
+      "fixed_position": "A na pozycji 1",
+      "condition": "B bliżej A niż C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:01:56.101Z"
+  },
+  {
+    "id": "combinations_at_most_two_girls",
+    "topic": "Kombinacje z ograniczeniami",
+    "difficulty": 4,
+    "statement": "W klasie jest 15 dziewcząt i 16 chłopców. Spośród tych osób trzeba wybrać czteroosobową delegację. Na ile sposobów można to zrobić tak, aby w delegacji znalazły się co najwyżej dwie dziewczynki?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile łącznie uczniów jest w klasie?",
+        "expression": "$15 + 16 = 31$ uczniów",
+        "explanation": "Obliczamy całkowitą liczbę uczniów w klasie"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek 'co najwyżej dwie dziewczynki'?",
+        "expression": "Przypadki: 0, 1 lub 2 dziewczynki w 4-osobowej delegacji",
+        "explanation": "Rozkładamy problem na trzy rozłączne przypadki",
+        "interactive_choice": {
+          "prompt": "Jakie przypadki musimy rozpatrzyć dla warunku 'co najwyżej dwie dziewczynki'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0 dziewczynek, 1 dziewczynka, 2 dziewczynki",
+              "feedback": "Doskonale! To są wszystkie możliwe przypadki spełniające warunek.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko 2 dziewczynki",
+              "feedback": "Nie - 'co najwyżej' oznacza również mniej niż 2.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "1 dziewczynka, 2 dziewczynki, 3 dziewczynki",
+              "feedback": "Nie - 3 dziewczynki to więcej niż 'co najwyżej dwie'.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "'Co najwyżej dwie' oznacza 0, 1 lub 2 dziewczynki w delegacji."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile chłopców będzie w każdym przypadku?",
+        "expression": "Przypadek 1: 0 dziewczynek, 4 chłopców\nPrzypadek 2: 1 dziewczynka, 3 chłopców\nPrzypadek 3: 2 dziewczynki, 2 chłopców",
+        "explanation": "W 4-osobowej delegacji liczba chłopców = 4 - liczba dziewczynek",
+        "why": "Każdy przypadek wymaga osobnego obliczenia kombinacji, a następnie zsumowania wyników."
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć liczbę sposobów dla przypadku 1 (0 dziewczynek, 4 chłopców)?",
+        "expression": "$\\binom{16}{4} \\cdot \\binom{15}{0} = \\frac{16!}{4! \\cdot 12!} \\cdot 1 = \\frac{16 \\cdot 15 \\cdot 14 \\cdot 13}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 1820$",
+        "explanation": "Przypadek 1: wybieramy 4 chłopców z 16 i 0 dziewczynek z 15",
+        "interactive_choice": {
+          "prompt": "Który wzór użyć do obliczenia liczby sposobów wyboru 4 chłopców z 16?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\binom{16}{4} \\cdot \\binom{15}{0}$",
+              "feedback": "Świetnie! Wybieramy 4 z 16 chłopców i 0 z 15 dziewczynek.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$16 \\cdot 15 \\cdot 14 \\cdot 13$",
+              "feedback": "To wariacje, a nie kombinacje - kolejność nie ma znaczenia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{16!}{4!}$",
+              "feedback": "To niepełny wzór na kombinacje - brakuje $(16-4)!$ w mianowniku.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Używamy wzoru na kombinacje: $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć przypadek 2 (1 dziewczynka, 3 chłopców)?",
+        "expression": "$\\binom{15}{1} \\cdot \\binom{16}{3} = 15 \\cdot \\frac{16 \\cdot 15 \\cdot 14}{3 \\cdot 2 \\cdot 1} = 15 \\cdot 560 = 8400$",
+        "explanation": "Przypadek 2: wybieramy 1 dziewczynkę z 15 i 3 chłopców z 16"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć przypadek 3 (2 dziewczynki, 2 chłopców)?",
+        "expression": "$\\binom{15}{2} \\cdot \\binom{16}{2} = \\frac{15 \\cdot 14}{2 \\cdot 1} \\cdot \\frac{16 \\cdot 15}{2 \\cdot 1} = 105 \\cdot 120 = 12600$",
+        "explanation": "Przypadek 3: wybieramy 2 dziewczynki z 15 i 2 chłopców z 16"
+      },
+      {
+        "step": 7,
+        "hint": "Jak połączyć wyniki ze wszystkich przypadków?",
+        "expression": "$1820 + 8400 + 12600 = 22820$",
+        "explanation": "Sumujemy liczbę sposobów ze wszystkich trzech przypadków",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć całkowitą liczbę sposobów spełniających warunek?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać wyniki: $1820 + 8400 + 12600$",
+              "feedback": "Dokładnie! Przypadki są rozłączne, więc dodajemy ich liczności.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć wyniki: $1820 \\cdot 8400 \\cdot 12600$",
+              "feedback": "Nie - mnożymy gdy zdarzenia są niezależne i mają wystąpić jednocześnie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wybrać największy wynik: $12600$",
+              "feedback": "Nie - chcemy wszystkie sposoby spełniające warunek, nie tylko najliczniejszy przypadek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przypadki są rozłączne (wzajemnie wykluczające się), więc stosujemy regułę sumy."
+        }
+      }
+    ],
+    "solutions": [
+      "$22820$ sposobów"
+    ],
+    "parameters": {
+      "girls": 15,
+      "boys": 16,
+      "delegation_size": 4,
+      "max_girls": 2
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:02:30.346Z"
+  },
+  {
+    "id": "combinations_at_most_two_women",
+    "topic": "Kombinacje z ograniczeniami",
+    "difficulty": 4,
+    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najwyżej dwie kobiety?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile mężczyzn jest w grupie?",
+        "expression": "Mężczyzn: $20 - 12 = 8$",
+        "explanation": "W grupie jest 8 mężczyzn i 12 kobiet"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek 'co najwyżej dwie kobiety'?",
+        "expression": "Przypadki: 0K+5M, 1K+4M, 2K+3M",
+        "explanation": "Rozkładamy na przypadki według liczby kobiet w delegacji",
+        "why": "Warunek 'co najwyżej' wymaga sumowania wszystkich przypadków od 0 do maksymalnej dozwolonej liczby.",
+        "interactive_choice": {
+          "prompt": "Które przypadki musimy rozpatrzyć dla warunku 'co najwyżej 2 kobiety'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0 kobiet, 1 kobieta, 2 kobiety",
+              "feedback": "Doskonale! To wszystkie możliwe przypadki spełniające warunek.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko 2 kobiety",
+              "feedback": "Nie - 'co najwyżej 2' oznacza 0, 1 lub 2 kobiety.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "1 kobieta, 2 kobiety, 3 kobiety",
+              "feedback": "Nie - 3 kobiety to już więcej niż 'co najwyżej 2'.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "'Co najwyżej 2' oznacza maksymalnie 2, więc: 0, 1 lub 2 kobiety."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile sposobów jest wybrania 0 kobiet i 5 mężczyzn?",
+        "expression": "Przypadek 1: $\\binom{12}{0} \\cdot \\binom{8}{5}$",
+        "explanation": "Wybieramy 0 z 12 kobiet i 5 z 8 mężczyzn"
+      },
+      {
+        "step": 4,
+        "hint": "Czy można wybrać 5 mężczyzn z grupy 8?",
+        "expression": "$\\binom{12}{0} \\cdot \\binom{8}{5} = 1 \\cdot 56 = 56$",
+        "explanation": "Pierwszy przypadek daje 56 sposobów",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć $\\binom{8}{5}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\binom{8}{5} = \\frac{8!}{5! \\cdot 3!}$",
+              "feedback": "Tak, to standardowy wzór na kombinacje.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć własności $\\binom{8}{5} = \\binom{8}{3}$",
+              "feedback": "Świetnie! Ta własność często upraszcza obliczenia.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To niemożliwe, bo 5 > 8/2",
+              "feedback": "Mylisz się - można wybrać 5 z 8, to jest $\\binom{8}{5} = 56$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Można użyć wzoru lub własności $\\binom{n}{k} = \\binom{n}{n-k}$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile sposobów jest wybrania 1 kobiety i 4 mężczyzn?",
+        "expression": "Przypadek 2: $\\binom{12}{1} \\cdot \\binom{8}{4}$",
+        "explanation": "Wybieramy 1 z 12 kobiet i 4 z 8 mężczyzn"
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $\\binom{12}{1}$ i $\\binom{8}{4}$?",
+        "expression": "$\\binom{12}{1} \\cdot \\binom{8}{4} = 12 \\cdot 70 = 840$",
+        "explanation": "Drugi przypadek daje 840 sposobów"
+      },
+      {
+        "step": 7,
+        "hint": "Ile sposobów jest wybrania 2 kobiet i 3 mężczyzn?",
+        "expression": "Przypadek 3: $\\binom{12}{2} \\cdot \\binom{8}{3}$",
+        "explanation": "Wybieramy 2 z 12 kobiet i 3 z 8 mężczyzn"
+      },
+      {
+        "step": 8,
+        "hint": "Jak obliczyć $\\binom{12}{2}$ i $\\binom{8}{3}$?",
+        "expression": "$\\binom{12}{2} = \\frac{12 \\cdot 11}{2} = 66$ oraz $\\binom{8}{3} = \\frac{8 \\cdot 7 \\cdot 6}{3 \\cdot 2 \\cdot 1} = 56$",
+        "explanation": "Obliczamy kombinacje dla trzeciego przypadku"
+      },
+      {
+        "step": 9,
+        "hint": "Ile sposobów daje trzeci przypadek?",
+        "expression": "$\\binom{12}{2} \\cdot \\binom{8}{3} = 66 \\cdot 56 = 3696$",
+        "explanation": "Trzeci przypadek daje 3696 sposobów"
+      },
+      {
+        "step": 10,
+        "hint": "Jak otrzymać końcowy wynik?",
+        "expression": "$56 + 840 + 3696 = 4592$",
+        "explanation": "Sumujemy wszystkie przypadki spełniające warunek",
+        "why": "Reguła sumy: gdy zdarzenia się wykluczają, prawdopodobieństwa (lub liczności) się dodaje.",
+        "interactive_choice": {
+          "prompt": "Co zrobić z wynikami z trzech przypadków?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać wszystkie przypadki",
+              "feedback": "Tak! Przypadki się wykluczają, więc dodajemy ich liczności.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć wszystkie przypadki",
+              "feedback": "Nie - mnożymy gdy zdarzenia są niezależne, tu mamy alternatywę.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wybrać największy wynik",
+              "feedback": "Nie - chcemy wszystkie sposoby spełniające warunek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przypadki są rozłączne (wykluczają się wzajemnie), więc stosujemy regułę sumy."
+        }
+      }
+    ],
+    "solutions": [
+      "4592"
+    ],
+    "parameters": {
+      "total_people": 20,
+      "women": 12,
+      "men": 8,
+      "delegation_size": 5,
+      "max_women": 2
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-21T08:03:06.773Z"
+  },
+  {
+    "id": "delegation_at_least_one_woman",
+    "topic": "Kombinatoryka - zasada dopełnienia",
+    "difficulty": 3,
+    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazła się tam co najmniej jedna kobieta?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile mężczyzn jest w grupie?",
+        "expression": "Liczba mężczyzn = $20 - 12 = 8$",
+        "explanation": "W grupie 20 osób, jeśli 12 to kobiety, to pozostałe 8 to mężczyźni"
+      },
+      {
+        "step": 2,
+        "hint": "Którą strategię wybierzesz do rozwiązania problemu 'co najmniej jedna kobieta'?",
+        "expression": "Strategia: wszystkie delegacje - delegacje tylko z mężczyzn",
+        "explanation": "Używamy zasady dopełnienia",
+        "why": "Dla 'co najmniej jeden' zasada dopełnienia jest zwykle najefektywniejsza. Zamiast 5 przypadków liczymy tylko 2.",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej policzyć delegacje z co najmniej jedną kobietą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednio: 1 kobieta + 2 kobiety + 3 kobiety + 4 kobiety + 5 kobiet",
+              "feedback": "Możliwe, ale bardzo pracochłonne - musisz liczyć 5 przypadków!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Zasada dopełnienia: wszystkie delegacje minus delegacje bez kobiet",
+              "feedback": "Świetnie! To znacznie prostsze - tylko dwa obliczenia zamiast pięciu.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wzór na rozmieszczenia z powtórzeniami",
+              "feedback": "Nie - to problem kombinacji bez powtórzeń, nie rozmieszczenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada dopełnienia: jeśli trudno policzyć przypadki spełniające warunek, policz te które go nie spełniają."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest sposobów wybrania 5 osób z grupy 20?",
+        "expression": "Wszystkie delegacje = $\\binom{20}{5}$",
+        "explanation": "Wybieramy 5 osób z 20, kolejność nie ma znaczenia"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć $\\binom{20}{5}$?",
+        "expression": "$\\binom{20}{5} = \\frac{20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16}{5!} = \\frac{20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16}{120}$",
+        "explanation": "Używamy wzoru z iloczynem w liczniku",
+        "interactive_choice": {
+          "prompt": "Którym wzorem najwygodniej obliczyć $\\binom{20}{5}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\binom{20}{5} = \\frac{20!}{5! \\cdot 15!}$",
+              "feedback": "Poprawny wzór, ale można uprościć obliczenia używając mniejszych liczb.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\binom{20}{5} = \\binom{20}{15}$ i liczyć $\\frac{20!}{15! \\cdot 5!}$",
+              "feedback": "Dobra obserwacja! To ta sama wartość, ale nie upraszcza obliczeń.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\binom{20}{5} = \\frac{20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16}{5!}$",
+              "feedback": "Doskonale! Najwygodniejszy sposób - mnożysz tylko 5 liczb w liczniku.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Wszystkie wzory są poprawne, ale opcja C daje najłatwiejsze obliczenia."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16$?",
+        "expression": "$20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16 = 1,860,480$",
+        "explanation": "Obliczamy iloczyn w liczniku"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość $\\binom{20}{5}$?",
+        "expression": "$\\binom{20}{5} = \\frac{1,860,480}{120} = 15,504$",
+        "explanation": "Dzielimy przez $5! = 120$"
+      },
+      {
+        "step": 7,
+        "hint": "Ile jest delegacji składających się tylko z mężczyzn?",
+        "expression": "Delegacje bez kobiet = $\\binom{8}{5}$",
+        "explanation": "Wybieramy 5 mężczyzn z 8 dostępnych"
+      },
+      {
+        "step": 8,
+        "hint": "Jak obliczyć $\\binom{8}{5}$?",
+        "expression": "$\\binom{8}{5} = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5 \\cdot 4}{5!} = \\frac{6,720}{120} = 56$",
+        "explanation": "Obliczamy liczbę delegacji tylko z mężczyzn"
+      },
+      {
+        "step": 9,
+        "hint": "Ile jest delegacji z co najmniej jedną kobietą?",
+        "expression": "Delegacje z co najmniej jedną kobietą = $15,504 - 56 = 15,448$",
+        "explanation": "Stosujemy zasadę dopełnienia",
+        "interactive_choice": {
+          "prompt": "Jak zastosować zasadę dopełnienia do otrzymania wyniku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać: wszystkie delegacje + delegacje bez kobiet",
+              "feedback": "Nie - dodawanie nie ma sensu w zasadzie dopełnienia.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Odjąć: wszystkie delegacje - delegacje bez kobiet",
+              "feedback": "Dokładnie! $15,504 - 56 = 15,448$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pomnożyć: wszystkie delegacje × delegacje bez kobiet",
+              "feedback": "Nie - mnożenie nie ma zastosowania w zasadzie dopełnienia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada dopełnienia: odejmujemy przypadki 'złe' od wszystkich możliwych."
+        }
+      }
+    ],
+    "solutions": [
+      "15,448"
+    ],
+    "parameters": {
+      "total_people": 20,
+      "women": 12,
+      "men": 8,
+      "delegation_size": 5
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-21T08:03:35.445Z"
+  },
+  {
+    "id": "combinatorics_delegation",
+    "topic": "Kombinatoryka - kombinacje",
+    "difficulty": 4,
+    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najmniej dwie i nie więcej niż cztery kobiety?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile mężczyzn jest w grupie?",
+        "expression": "Mężczyzn: $20 - 12 = 8$",
+        "explanation": "Obliczamy liczbę mężczyzn w grupie"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są możliwe składy delegacji ze względu na liczbę kobiet?",
+        "expression": "Możliwe składy: (2K, 3M), (3K, 2M), (4K, 1M)",
+        "explanation": "Identyfikujemy wszystkie dopuszczalne składy delegacji",
+        "interactive_choice": {
+          "prompt": "Które składy delegacji spełniają warunek 'co najmniej 2 i nie więcej niż 4 kobiety'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "2 kobiety + 3 mężczyzn, 3 kobiety + 2 mężczyzn, 4 kobiety + 1 mężczyzna",
+              "feedback": "Doskonale! To wszystkie możliwe składy spełniające warunki zadania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "1 kobieta + 4 mężczyzn, 2 kobiety + 3 mężczyzn, 3 kobiety + 2 mężczyzn",
+              "feedback": "Nie - 1 kobieta to za mało (warunek: co najmniej 2).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "2 kobiety + 3 mężczyzn, 3 kobiety + 2 mężczyzn, 4 kobiety + 1 mężczyzna, 5 kobiet + 0 mężczyzn",
+              "feedback": "Nie - 5 kobiet to za dużo (warunek: nie więcej niż 4).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Warunek 'co najmniej 2 i nie więcej niż 4' oznacza dokładnie 2, 3 lub 4 kobiety."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę zastosować do obliczenia liczby sposobów?",
+        "expression": "Dla składu (kK, mM): $\\binom{12}{k} \\cdot \\binom{8}{m}$ sposobów",
+        "explanation": "Stosujemy regułę iloczynu dla niezależnych wyborów",
+        "why": "Wybór kobiet i mężczyzn to niezależne zdarzenia, więc mnożymy liczby możliwości.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć liczbę sposobów wyboru dla każdego składu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru na kombinacje $\\binom{n}{k}$ dla każdej grupy osobno",
+              "feedback": "Świetnie! To standardowa metoda - wybieramy kobiety i mężczyzn niezależnie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru na wariacje z powtórzeniami",
+              "feedback": "Nie - kolejność nie ma znaczenia, więc to kombinacje, nie wariacje.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Policzyć wszystkie możliwe delegacje i odjąć niepożądane",
+              "feedback": "Możliwe, ale znacznie bardziej pracochłonne niż bezpośrednie liczenie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla każdego składu mnożymy liczbę sposobów wyboru kobiet przez liczbę sposobów wyboru mężczyzn."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile sposobów wyboru 2 kobiet z 12 i 3 mężczyzn z 8?",
+        "expression": "$\\binom{12}{2} \\cdot \\binom{8}{3} = \\frac{12!}{2! \\cdot 10!} \\cdot \\frac{8!}{3! \\cdot 5!} = 66 \\cdot 56 = 3696$",
+        "explanation": "Obliczamy liczbę sposobów dla składu (2K, 3M)"
+      },
+      {
+        "step": 5,
+        "hint": "Ile sposobów wyboru 3 kobiet z 12 i 2 mężczyzn z 8?",
+        "expression": "$\\binom{12}{3} \\cdot \\binom{8}{2} = \\frac{12!}{3! \\cdot 9!} \\cdot \\frac{8!}{2! \\cdot 6!} = 220 \\cdot 28 = 6160$",
+        "explanation": "Obliczamy liczbę sposobów dla składu (3K, 2M)"
+      },
+      {
+        "step": 6,
+        "hint": "Ile sposobów wyboru 4 kobiet z 12 i 1 mężczyzny z 8?",
+        "expression": "$\\binom{12}{4} \\cdot \\binom{8}{1} = \\frac{12!}{4! \\cdot 8!} \\cdot \\frac{8!}{1! \\cdot 7!} = 495 \\cdot 8 = 3960$",
+        "explanation": "Obliczamy liczbę sposobów dla składu (4K, 1M)"
+      },
+      {
+        "step": 7,
+        "hint": "Jak połączyć wyniki dla wszystkich możliwych składów?",
+        "expression": "$3696 + 6160 + 3960 = 13816$",
+        "explanation": "Sumujemy liczbę sposobów dla wszystkich dopuszczalnych składów",
+        "interactive_choice": {
+          "prompt": "Co zrobić z liczbami sposobów dla różnych składów delegacji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać wszystkie wyniki",
+              "feedback": "Dokładnie! Składy się wykluczają, więc dodajemy możliwości.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć wszystkie wyniki",
+              "feedback": "Nie - mnożenie byłoby gdyby wszystkie składy musiały wystąpić jednocześnie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wybrać największy wynik",
+              "feedback": "Nie - chcemy policzyć wszystkie możliwe sposoby, nie tylko najliczniejszy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Różne składy to rozłączne przypadki, więc stosujemy regułę sumy."
+        }
+      }
+    ],
+    "solutions": [
+      "13816"
+    ],
+    "parameters": {
+      "total_people": 20,
+      "women": 12,
+      "men": 8,
+      "delegation_size": 5,
+      "min_women": 2,
+      "max_women": 4
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:04:04.556Z"
+  },
+  {
+    "id": "subset_counting_problem",
+    "topic": "Kombinatoryka - liczba podzbiorów",
+    "difficulty": 4,
+    "statement": "Pewien niepusty zbiór ma 211 podzbiorów, z których każdy ma co najwyżej dwa elementy. Ile elementów ma ten zbiór?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie rodzaje podzbiorów może mieć zbiór n-elementowy, jeśli każdy ma co najwyżej 2 elementy?",
+        "expression": "Podzbiory: $\\emptyset$, jednoelementowe, dwuelementowe",
+        "explanation": "Identyfikujemy rodzaje podzbiorów spełniających warunek",
+        "interactive_choice": {
+          "prompt": "Które podzbiory zbioru n-elementowego mają co najwyżej 2 elementy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko zbiór pusty i jednoelementowe",
+              "feedback": "Nie - zapomniałeś o podzbiorach dwuelementowych!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Zbiór pusty, jednoelementowe i dwuelementowe",
+              "feedback": "Dokładnie! To wszystkie podzbiory o mocy 0, 1 lub 2.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie podzbiory oprócz całego zbioru",
+              "feedback": "Nie - podzbiory 3-elementowe i większe też mają więcej niż 2 elementy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Szukamy podzbiorów o mocy 0, 1 i 2. To znaczy: $\\emptyset$, wszystkie jednoelementowe i wszystkie dwuelementowe."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile jest podzbiorów każdego typu dla zbioru n-elementowego?",
+        "expression": "Liczba podzbiorów: $\\binom{n}{0} + \\binom{n}{1} + \\binom{n}{2}$",
+        "explanation": "Używamy symboli Newtona do policzenia podzbiorów każdego typu",
+        "why": "Symbol $\\binom{n}{k}$ oznacza liczbę sposobów wyboru k elementów z n elementów, czyli liczbę k-elementowych podzbiorów."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są wartości tych symboli Newtona?",
+        "expression": "$\\binom{n}{0} = 1$, $\\binom{n}{1} = n$, $\\binom{n}{2} = \\frac{n(n-1)}{2}$",
+        "explanation": "Obliczamy podstawowe symbole Newtona"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać równanie na podstawie danych z zadania?",
+        "expression": "$1 + n + \\frac{n(n-1)}{2} = 211$",
+        "explanation": "Suma wszystkich podzbiorów o mocy co najwyżej 2 równa się 211"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć to równanie?",
+        "expression": "$2 + 2n + n(n-1) = 422$",
+        "explanation": "Mnożymy całe równanie przez 2",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić równanie $1 + n + \\frac{n(n-1)}{2} = 211$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć przez 2 i uporządkować",
+              "feedback": "Świetnie! To eliminuje ułamek i da równanie kwadratowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić konkretne wartości n",
+              "feedback": "Możliwe, ale mniej eleganckie - lepiej rozwiązać algebraicznie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozwinąć ułamek bez mnożenia przez 2",
+              "feedback": "Skomplikuje obliczenia - lepiej pozbyć się ułamka na początku.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez 2 eliminuje ułamek i prowadzi do standardowego równania kwadratowego."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwinąć i uporządkować to równanie?",
+        "expression": "$2 + 2n + n^2 - n = 422$",
+        "explanation": "Rozwijamy $n(n-1) = n^2 - n$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaką postać ma równanie po uporządkowaniu?",
+        "expression": "$n^2 + n + 2 = 422$",
+        "explanation": "Łączymy podobne składniki: $2n - n = n$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak zapisać równanie w postaci standardowej?",
+        "expression": "$n^2 + n - 420 = 0$",
+        "explanation": "Przenosimy 422 na lewą stronę: $422 - 2 = 420$"
+      },
+      {
+        "step": 9,
+        "hint": "Którą metodą rozwiążesz to równanie kwadratowe?",
+        "expression": "$\\Delta = 1^2 - 4 \\cdot 1 \\cdot (-420) = 1 + 1680 = 1681$",
+        "explanation": "Obliczamy dyskryminantę",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać równanie $n^2 + n - 420 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór z deltą",
+              "feedback": "Dobry wybór - zawsze działa, choć obliczenia mogą być duże.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Szukać rozkładu na czynniki",
+              "feedback": "Możliwe, ale 420 to duża liczba - trudno zgadnąć rozkład.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe, ale wzór z deltą będzie prostszy dla tego równania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla dużych współczynników wzór z deltą jest najniezawodniejszy."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi pierwiastek z delty?",
+        "expression": "$\\sqrt{1681} = 41$",
+        "explanation": "Sprawdzamy: $41^2 = 1681$"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są rozwiązania równania?",
+        "expression": "$n = \\frac{-1 \\pm 41}{2}$",
+        "explanation": "Stosujemy wzór na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 12,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$n_1 = \\frac{-1 + 41}{2} = 20$ lub $n_2 = \\frac{-1 - 41}{2} = -21$",
+        "explanation": "Otrzymujemy $n = 20$ lub $n = -21$, ale liczba elementów musi być dodatnia"
+      },
+      {
+        "step": 13,
+        "hint": "Czy warto sprawdzić poprawność wyniku?",
+        "expression": "$\\binom{20}{0} + \\binom{20}{1} + \\binom{20}{2} = 1 + 20 + 190 = 211$ ✓",
+        "explanation": "Sprawdzenie: $\\binom{20}{2} = \\frac{20 \\cdot 19}{2} = 190$"
+      }
+    ],
+    "solutions": [
+      "$n = 20$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:04:50.919Z"
+  },
+  {
+    "id": "combinations_women_only",
+    "topic": "Kombinacje",
+    "difficulty": 2,
+    "statement": "Z grupy trzech kobiet i czterech mężczyzn wybieramy trzy osoby. Ile jest takich sposobów wyboru, aby wśród wybranych osób były same kobiety?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile kobiet i mężczyzn mamy w grupie?",
+        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: 7 osób",
+        "explanation": "Identyfikujemy składniki grupy"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek 'same kobiety' w kontekście wyboru trzech osób?",
+        "expression": "Musimy wybrać 3 kobiety z 3 dostępnych kobiet",
+        "explanation": "Precyzujemy zadanie: wybieramy wszystkie 3 kobiety",
+        "interactive_choice": {
+          "prompt": "Jak interpretować warunek 'wśród wybranych osób były same kobiety'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybieramy dokładnie 3 kobiety (i 0 mężczyzn)",
+              "feedback": "Dokładnie! 'Same kobiety' oznacza żadnego mężczyzny w wyborze.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wybieramy co najmniej 2 kobiety",
+              "feedback": "Nie - 'same kobiety' oznacza wyłącznie kobiety, bez mężczyzn.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wybieramy więcej kobiet niż mężczyzn",
+              "feedback": "Nie - 'same kobiety' to znacznie silniejszy warunek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Warunek 'same kobiety' oznacza wybór 3 kobiet i 0 mężczyzn."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakiego wzoru użyjemy do obliczenia liczby sposobów wyboru?",
+        "expression": "Obliczamy $\\binom{3}{3}$",
+        "explanation": "Stosujemy wzór na kombinacje dla wyboru 3 z 3",
+        "why": "Kombinacje używamy gdy kolejność nie ma znaczenia. Tu wybieramy zespół, nie ustawiamy w kolejce.",
+        "interactive_choice": {
+          "prompt": "Który wzór zastosować do wyboru 3 kobiet z 3 dostępnych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na kombinacje $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$",
+              "feedback": "Świetnie! To klasyczne zadanie na kombinacje bez powtórzeń.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór na wariacje $V_n^k = \\frac{n!}{(n-k)!}$",
+              "feedback": "Nie - kolejność wyboru nie ma znaczenia, więc to kombinacje.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zasada mnożenia",
+              "feedback": "Nie jest potrzebna - mamy prosty wybór z jednej grupy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Używamy kombinacji, bo kolejność wyboru osób nie ma znaczenia."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi $\\binom{3}{3}$?",
+        "expression": "$\\binom{3}{3} = \\frac{3!}{3!(3-3)!} = \\frac{3!}{3! \\cdot 0!}$",
+        "explanation": "Podstawiamy do wzoru na kombinacje"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $0!$ i jak to wpływa na obliczenia?",
+        "expression": "$\\binom{3}{3} = \\frac{3!}{3! \\cdot 1} = \\frac{6}{6 \\cdot 1} = 1$",
+        "explanation": "Pamiętamy, że $0! = 1$, więc otrzymujemy 1"
+      },
+      {
+        "step": 6,
+        "hint": "Czy wynik ma sens intuicyjnie?",
+        "expression": "Jest dokładnie 1 sposób wybrania wszystkich 3 kobiet",
+        "explanation": "Logiczne - mamy tylko jeden sposób wybrania wszystkich dostępnych kobiet"
+      }
+    ],
+    "solutions": [
+      "1"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-21T08:05:09.920Z"
+  },
+  {
+    "id": "combinations_men_only",
+    "topic": "Kombinacje",
+    "difficulty": 2,
+    "statement": "Z grupy trzech kobiet i czterech mężczyzn wybieramy trzy osoby. Ile jest takich sposobów wyboru, aby wśród wybranych osób byli sami mężczyźni?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile osób mamy w całej grupie i jakie są ograniczenia?",
+        "expression": "Grupa: 3 kobiety + 4 mężczyzn = 7 osób. Wybieramy 3 osoby - tylko mężczyzn",
+        "explanation": "Identyfikujemy dane i warunek zadania"
+      },
+      {
+        "step": 2,
+        "hint": "Jaką metodę kombinatoryczną zastosować do tego problemu?",
+        "expression": "Stosujemy wzór na kombinacje: $\\binom{4}{3}$",
+        "explanation": "Wybieramy 3 mężczyzn z 4 dostępnych, kolejność nie ma znaczenia",
+        "interactive_choice": {
+          "prompt": "Jak podejść do problemu wyboru 3 mężczyzn z 4 dostępnych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru na kombinacje $C_n^k = \\binom{n}{k}$",
+              "feedback": "Doskonale! To klasyczny problem kombinacji bez powtórzeń.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru na wariacje $V_n^k$",
+              "feedback": "Nie - kolejność wyboru nie ma znaczenia, więc to kombinacje.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Policzyć wszystkie możliwości i odjąć niepożądane",
+              "feedback": "Możliwe, ale niepotrzebnie skomplikowane - lepiej bezpośrednio.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy kolejność nie ma znaczenia, używamy kombinacji. Tu wybieramy 3 z 4 mężczyzn."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest wzór na kombinacje $\\binom{n}{k}$?",
+        "expression": "$\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$",
+        "explanation": "Podstawowy wzór na kombinacje",
+        "why": "Ten wzór liczy liczbę sposobów wyboru k elementów z n elementów, gdy kolejność nie ma znaczenia."
+      },
+      {
+        "step": 4,
+        "hint": "Jak podstawić nasze wartości do wzoru?",
+        "expression": "$\\binom{4}{3} = \\frac{4!}{3!(4-3)!} = \\frac{4!}{3! \\cdot 1!}$",
+        "explanation": "Podstawiamy n = 4, k = 3"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć wartości silni?",
+        "expression": "$\\binom{4}{3} = \\frac{4 \\cdot 3!}{3! \\cdot 1!} = \\frac{4 \\cdot 3!}{3! \\cdot 1} = \\frac{4}{1} = 4$",
+        "explanation": "Skracamy $3!$ i obliczamy wynik",
+        "interactive_choice": {
+          "prompt": "Którą właściwość silni najlepiej wykorzystać do uproszczenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpisać wszystkie silnie: $4! = 24$, $3! = 6$, $1! = 1$",
+              "feedback": "Można tak, ale jest prostszy sposób używając $4! = 4 \\cdot 3!$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć $4! = 4 \\cdot 3!$ do skrócenia",
+              "feedback": "Świetnie! To pozwala od razu skrócić $3!$ w liczniku i mianowniku.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $\\binom{n}{k} = \\binom{n}{n-k}$",
+              "feedback": "Tu nie pomoże - $\\binom{4}{3} = \\binom{4}{1}$ nie upraszcza obliczeń.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Najefektywniej jest skorzystać z $4! = 4 \\cdot 3!$ i skrócić wspólne czynniki."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest interpretacja tego wyniku?",
+        "expression": "Istnieją 4 sposoby wyboru 3 mężczyzn z grupy 4 mężczyzn",
+        "explanation": "Każdy sposób to pominięcie jednego z czterech mężczyzn"
+      }
+    ],
+    "solutions": [
+      "4"
+    ],
+    "parameters": {
+      "women": 3,
+      "men": 4,
+      "selected": 3,
+      "condition": "tylko mężczyźni"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:05:37.097Z"
+  },
+  {
+    "id": "combinations_two_groups",
+    "topic": "Kombinacje z dwóch grup",
+    "difficulty": 3,
+    "statement": "Z grupy trzech kobiet i czterech mężczyzn wybieramy trzy osoby. Ile jest takich sposobów wyboru, aby wśród wybranych osób były dwie kobiety i jeden mężczyzna?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile mamy kobiet i mężczyzn w grupie?",
+        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: 7 osób",
+        "explanation": "Identyfikujemy składniki grupy"
+      },
+      {
+        "step": 2,
+        "hint": "Ile osób i jakiej płci mamy wybrać?",
+        "expression": "Wybieramy: 2 kobiety + 1 mężczyzna = 3 osoby",
+        "explanation": "Określamy warunki zadania"
+      },
+      {
+        "step": 3,
+        "hint": "Jak podejść do tego problemu wyboru z dwóch różnych grup?",
+        "expression": "Liczba sposobów = $\\binom{3}{2} \\cdot \\binom{4}{1}$",
+        "explanation": "Zasada mnożenia: wybory z różnych grup są niezależne",
+        "why": "To kluczowa zasada kombinatoryki: gdy mamy niezależne wybory z różnych grup, mnożymy liczby możliwości.",
+        "interactive_choice": {
+          "prompt": "Jaką metodę zastosować do wyboru 2 kobiet z 3 i 1 mężczyzny z 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obliczyć $\\binom{7}{3}$ i odjąć niepożądane przypadki",
+              "feedback": "Możliwe, ale skomplikowane - trzeba odejmować różne kombinacje",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Osobno wybrać kobiety i mężczyzn, potem pomnożyć",
+              "feedback": "Doskonale! To zasada mnożenia: $\\binom{3}{2} \\cdot \\binom{4}{1}$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na permutacje z powtórzeniami",
+              "feedback": "Nie - to problem kombinacji, nie permutacji",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy wybieramy z różnych grup, liczymy wybory osobno i mnożymy wyniki."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile jest sposobów wyboru 2 kobiet z 3?",
+        "expression": "$\\binom{3}{2} = \\frac{3!}{2! \\cdot 1!} = \\frac{6}{2 \\cdot 1} = 3$",
+        "explanation": "Obliczamy liczbę sposobów wyboru 2 kobiet z 3",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć $\\binom{3}{2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$",
+              "feedback": "Poprawnie! $\\binom{3}{2} = \\frac{3!}{2!1!} = \\frac{6}{2 \\cdot 1} = 3$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zastosować własność $\\binom{n}{k} = \\binom{n}{n-k}$",
+              "feedback": "Mądre! $\\binom{3}{2} = \\binom{3}{1} = 3$ - szybszy sposób",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Po prostu $3 \\cdot 2 = 6$",
+              "feedback": "Nie - to byłyby wariacje. W kombinacjach kolejność nie ma znaczenia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oba sposoby A i B są poprawne. Własność symetrii często upraszcza obliczenia."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile jest sposobów wyboru 1 mężczyzny z 4?",
+        "expression": "$\\binom{4}{1} = 4$",
+        "explanation": "Wybór 1 osoby z 4 to po prostu 4 możliwości"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$\\binom{3}{2} \\cdot \\binom{4}{1} = 3 \\cdot 4 = 12$",
+        "explanation": "Mnożymy liczbę sposobów wyboru kobiet przez liczbę sposobów wyboru mężczyzn",
+        "interactive_choice": {
+          "prompt": "Jak połączyć wyniki $\\binom{3}{2} = 3$ i $\\binom{4}{1} = 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać: $3 + 4 = 7$",
+              "feedback": "Nie - dodawanie to wybór ALBO jeden ALBO drugi",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć: $3 \\cdot 4 = 12$",
+              "feedback": "Tak! Mnożenie bo wybieramy I kobiety I mężczyznę",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podnieść do potęgi: $3^4 = 81$",
+              "feedback": "Nie ma podstaw do potęgowania w tym zadaniu",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zasada mnożenia: gdy zdarzenia muszą wystąpić jednocześnie, mnożymy prawdopodobieństwa."
+        }
+      }
+    ],
+    "solutions": [
+      "12"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-21T08:06:09.046Z"
+  },
+  {
+    "id": "combinations_student_topics",
+    "topic": "Kombinacje",
+    "difficulty": 3,
+    "statement": "Na egzaminie było n tematów (n ≥ 2), z których student losował dwa. Oblicz n, wiedząc, że student miał 190 możliwości wylosowania zestawu tematów.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy kolejność losowania tematów ma znaczenie dla zestawu?",
+        "expression": "Liczba sposobów wyboru 2 tematów z n to $C_n^2 = \\binom{n}{2}$",
+        "explanation": "Stosujemy kombinacje, bo kolejność nie ma znaczenia",
+        "interactive_choice": {
+          "prompt": "Jak interpretować \"zestaw tematów\" - czy kolejność ma znaczenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kolejność ma znaczenie - używamy wariacji $V_n^2$",
+              "feedback": "Nie - zestaw to nieuporządkowana para tematów",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Kolejność nie ma znaczenia - używamy kombinacji $C_n^2$",
+              "feedback": "Dokładnie! Zestaw {temat1, temat2} to to samo co {temat2, temat1}",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To permutacja wszystkich tematów",
+              "feedback": "Nie - student wybiera tylko 2 tematy z n dostępnych",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zestaw to nieuporządkowana para - używamy kombinacji bez powtórzeń."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest wzór na liczbę kombinacji $C_n^2$?",
+        "expression": "$C_n^2 = \\binom{n}{2} = \\frac{n!}{2!(n-2)!} = \\frac{n(n-1)}{2}$",
+        "explanation": "Wzór na kombinacje 2 elementów z n",
+        "why": "Ten wzór liczy wszystkie możliwe pary bez uwzględnienia kolejności. Dzielimy przez 2! bo każda para może być ułożona na 2 sposoby."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równanie możemy zapisać na podstawie danych?",
+        "expression": "$\\frac{n(n-1)}{2} = 190$",
+        "explanation": "Liczba możliwości równa się 190"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć to równanie?",
+        "expression": "$n(n-1) = 380$",
+        "explanation": "Mnożymy obie strony przez 2"
+      },
+      {
+        "step": 5,
+        "hint": "W jaką postać przekształcić równanie $n(n-1) = 380$?",
+        "expression": "$n^2 - n - 380 = 0$",
+        "explanation": "Równanie kwadratowe w postaci standardowej",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $n(n-1) = 380$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozwinąć i użyć wzoru kwadratowego",
+              "feedback": "Dobry sposób - daje $n^2 - n - 380 = 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zgadywać wartości n metodą prób i błędów",
+              "feedback": "Możliwe, ale mniej systematyczne niż algebraiczne rozwiązanie",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $n-1 = k$ i rozwiązać $k(k+1) = 380$",
+              "feedback": "Skomplikowane podstawienie - lepiej rozwinąć bezpośrednio",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozwinięcie do postaci standardowej pozwala użyć sprawdzonych metod."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są współczynniki tego równania kwadratowego?",
+        "expression": "$a = 1$, $b = -1$, $c = -380$",
+        "explanation": "Identyfikujemy współczynniki dla wzoru kwadratowego"
+      },
+      {
+        "step": 7,
+        "hint": "Ile wynosi delta tego równania?",
+        "expression": "$\\Delta = (-1)^2 - 4 \\cdot 1 \\cdot (-380) = 1 + 1520 = 1521$",
+        "explanation": "Obliczamy dyskryminantę"
+      },
+      {
+        "step": 8,
+        "hint": "Czy 1521 to kwadrat liczby całkowitej?",
+        "expression": "$\\sqrt{1521} = 39$",
+        "explanation": "Delta jest kwadratem doskonałym",
+        "interactive_choice": {
+          "prompt": "Ile wynosi $\\sqrt{1521}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\sqrt{1521} = 39$",
+              "feedback": "Dokładnie! $39^2 = 1521$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\sqrt{1521} = 38$",
+              "feedback": "Nie - $38^2 = 1444$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\sqrt{1521} = 40$",
+              "feedback": "Nie - $40^2 = 1600$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Sprawdzenie: $39^2 = (40-1)^2 = 1600 - 80 + 1 = 1521$ ✓"
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są rozwiązania równania kwadratowego?",
+        "expression": "$n = \\frac{1 \\pm 39}{2}$",
+        "explanation": "Stosujemy wzór kwadratowy"
+      },
+      {
+        "step": 10,
+        "hint": "Które rozwiązanie ma sens w kontekście zadania?",
+        "expression": "$n_1 = \\frac{1 + 39}{2} = 20$ lub $n_2 = \\frac{1 - 39}{2} = -19$",
+        "explanation": "Otrzymujemy dwa rozwiązania matematyczne"
+      },
+      {
+        "step": 11,
+        "hint": "Dlaczego odrzucamy jedno z rozwiązań?",
+        "expression": "$n = 20$",
+        "explanation": "Liczba tematów musi być dodatnia, więc $n = 20$",
+        "why": "W kontekście zadania n oznacza liczbę tematów, więc musi być liczbą naturalną większą od 1."
+      },
+      {
+        "step": 12,
+        "hint": "Jak sprawdzić poprawność wyniku?",
+        "expression": "$C_{20}^2 = \\frac{20 \\cdot 19}{2} = \\frac{380}{2} = 190$ ✓",
+        "explanation": "Weryfikacja: dla n = 20 otrzymujemy rzeczywiście 190 możliwości"
+      }
+    ],
+    "solutions": [
+      "$n = 20$"
+    ],
+    "parameters": {
+      "constraint": "$n \\geq 2$",
+      "combinations": "$C_n^2 = 190$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-21T08:06:38.191Z"
   }
 ]
