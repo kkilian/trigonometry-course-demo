@@ -134,44 +134,51 @@
       },
       {
         "step": 2,
-        "hint": "Ile czynników 2 wnosi każda cyfra z poszczególnych zbiorów?",
-        "expression": "$A: 8 = 2^3, 9 = 3^2$ (0 czynników 2)\n$B: 0, 1$ (0 czynników 2), $2 = 2^1$ (1 czynnik 2)\n$C: 3, 5, 7$ (0 czynników 2), $4 = 2^2$ (2 czynniki 2), $6 = 2 \\cdot 3$ (1 czynnik 2)",
-        "explanation": "Rozkładamy cyfry na czynniki pierwsze i liczymy potęgi liczby 2"
+        "hint": "Czy cyfra 0 wpływa na iloczyn cyfr?",
+        "expression": "Jeśli cyfra dziesiątek = 0, to iloczyn cyfr = 0, który jest podzielny przez 8",
+        "explanation": "Zero w iloczynie zawsze daje zero, które jest podzielne przez każdą liczbę",
+        "why": "0 jest podzielne przez 8, bo $0 = 8 \\cdot 0$"
       },
       {
         "step": 3,
-        "hint": "Które kombinacje cyfr dadzą co najmniej 3 czynniki liczby 2?",
-        "expression": "Przypadek 1: cyfra setek = 8 (3 czynniki 2)\nPrzypadek 2: cyfra setek = 9 (0 czynników 2)",
-        "explanation": "Rozdzielamy na przypadki w zależności od cyfry setek"
+        "hint": "Ile sposobów daje cyfra dziesiątek równa 0?",
+        "expression": "Cyfra dziesiątek = 0: cyfra setek może być 8 lub 9, cyfra jedności dowolna z C\nLiczba sposobów: $2 \\times 1 \\times 5 = 10$",
+        "explanation": "Gdy cyfra dziesiątek to 0, iloczyn jest zawsze podzielny przez 8"
       },
       {
         "step": 4,
-        "hint": "Ile sposobów mamy w przypadku, gdy cyfra setek to 8?",
-        "expression": "Cyfra setek = 8: mamy już 3 czynniki 2, więc cyfry dziesiątek i jedności mogą być dowolne\nLiczba sposobów: $1 \\times 3 \\times 5 = 15$",
-        "explanation": "Gdy cyfra setek to 8, warunek jest już spełniony"
+        "hint": "Gdy cyfra dziesiątek ≠ 0, ile czynników 2 wnosi każda cyfra?",
+        "expression": "$A: 8 = 2^3$ (3 czynniki), $9 = 3^2$ (0 czynników)\n$B$ (bez 0): $1$ (0 czynników), $2 = 2^1$ (1 czynnik)\n$C: 3, 5, 7$ (0 czynników), $4 = 2^2$ (2 czynniki), $6 = 2 \\cdot 3$ (1 czynnik)",
+        "explanation": "Rozkładamy cyfry na czynniki pierwsze i liczymy potęgi liczby 2"
       },
       {
         "step": 5,
-        "hint": "Co musi się stać w przypadku cyfry setek równej 9, żeby uzyskać 3 czynniki 2?",
-        "expression": "Cyfra setek = 9: potrzebujemy 3 czynników 2 z cyfr dziesiątek i jedności",
-        "explanation": "Cyfra 9 nie wnosi czynników 2, więc musimy je uzyskać z pozostałych pozycji",
-        "why": "Jedyne możliwości to: cyfra dziesiątek = 2 (1 czynnik) + cyfra jedności = 4 (2 czynniki) = 3 czynniki łącznie."
+        "hint": "Przypadek: cyfra setek = 8, cyfra dziesiątek ≠ 0",
+        "expression": "Cyfra setek = 8 (3 czynniki 2): iloczyn jest podzielny przez 8 niezależnie od pozostałych cyfr\nCyfra dziesiątek: 1 lub 2\nLiczba sposobów: $1 \\times 2 \\times 5 = 10$",
+        "explanation": "Gdy cyfra setek to 8, mamy już 3 czynniki 2"
       },
       {
         "step": 6,
-        "hint": "Która kombinacja cyfr dziesiątek i jedności da dokładnie 3 czynniki 2?",
-        "expression": "Cyfra dziesiątek = 2, cyfra jedności = 4\nLiczba sposobów: $1 \\times 1 \\times 1 = 1$",
-        "explanation": "Tylko jedna kombinacja: 2 (1 czynnik) + 4 (2 czynniki) = 3 czynniki"
+        "hint": "Przypadek: cyfra setek = 9, cyfra dziesiątek ≠ 0",
+        "expression": "Cyfra setek = 9 (0 czynników 2): potrzebujemy 3 czynników z cyfr dziesiątek i jedności",
+        "explanation": "Musimy uzyskać wszystkie 3 czynniki 2 z pozostałych pozycji",
+        "why": "Jedyna możliwość: cyfra dziesiątek = 2 (1 czynnik) i cyfra jedności = 4 (2 czynniki)"
       },
       {
         "step": 7,
-        "hint": "Jak połączyć wyniki z obu przypadków?",
-        "expression": "Łączna liczba sposobów: $15 + 1 = 16$",
-        "explanation": "Dodajemy liczbę sposobów z obu rozłącznych przypadków"
+        "hint": "Ile sposobów daje przypadek z cyfrą setek = 9 i cyfrą dziesiątek ≠ 0?",
+        "expression": "Cyfra dziesiątek = 2, cyfra jedności = 4\nLiczba sposobów: $1 \\times 1 \\times 1 = 1$",
+        "explanation": "Tylko jedna kombinacja: 924"
+      },
+      {
+        "step": 8,
+        "hint": "Jak połączyć wyniki ze wszystkich przypadków?",
+        "expression": "Łączna liczba sposobów: $10 + 10 + 1 = 21$",
+        "explanation": "Dodajemy: cyfra dziesiątek = 0 (10) + cyfra setek = 8 i dziesiątek ≠ 0 (10) + cyfra setek = 9 i dziesiątek ≠ 0 (1)"
       }
     ],
     "solutions": [
-      "16"
+      "21"
     ],
     "parameters": {
       "sets": "$A = \\{8,9\\}$, $B = \\{0,1,2\\}$, $C = \\{3,4,5,6,7\\}$",
@@ -182,8 +189,8 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 7,
-        "stepsWithWhy": 2
+        "totalSteps": 8,
+        "stepsWithWhy": 3
       }
     },
     "timestamp": "2025-09-22T12:25:07.149Z"
