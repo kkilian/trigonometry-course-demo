@@ -187,6 +187,13 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for rational-equations-word-problems:', suggestedIds);
       }
 
+      // Save suggested problems to localStorage for matura module
+      if (currentProblem.id && currentProblem.id.includes('#2025-marzec')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('matura-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for matura:', suggestedIds);
+      }
+
 
       return bestMatches;
 

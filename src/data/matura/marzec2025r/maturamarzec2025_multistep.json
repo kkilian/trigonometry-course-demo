@@ -1,0 +1,2533 @@
+[
+  {
+    "id": "#2025-marzec-1-2p",
+    "topic": "Dwumian Newtona",
+    "difficulty": 4,
+    "statement": "Oblicz środkowy wyraz rozwinięcia $\\left(x-\\frac{2}{3}\\right)^{16}$. Wynik przedstaw w postaci $a \\cdot x^n$, gdzie $a \\in \\mathbb{R}$ oraz $n \\in \\mathbb{N}$. Zapisz obliczenia.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile wyrazów ma rozwinięcie dwumianu o wykładniku 16?",
+        "expression": "Rozwinięcie $\\left(x-\\frac{2}{3}\\right)^{16}$ ma $16 + 1 = 17$ wyrazów",
+        "explanation": "Dwumian $(a+b)^n$ ma zawsze $n+1$ wyrazów w rozwinięciu"
+      },
+      {
+        "step": 2,
+        "hint": "Który wyraz będzie środkowy w rozwinięciu o 17 wyrazach?",
+        "expression": "Środkowy wyraz to 9. wyraz, odpowiadający $k = 8$",
+        "explanation": "Dla 17 wyrazów: środkowy to $\\frac{17+1}{2} = 9$-ty wyraz",
+        "interactive_choice": {
+          "prompt": "Który wyraz jest środkowy w rozwinięciu o 17 wyrazach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "8. wyraz (dla $k = 7$)",
+              "feedback": "Nie - to byłoby dla parzystej liczby wyrazów",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "9. wyraz (dla $k = 8$)",
+              "feedback": "Dokładnie! W 17 wyrazach środkowy to 9. wyraz",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "10. wyraz (dla $k = 9$)",
+              "feedback": "Za dużo - pamiętaj że numerujemy od $k = 0$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W rozwinięciu o nieparzystej liczbie wyrazów środkowy to $\\frac{n+1}{2}$-ty wyraz."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest ogólny wzór na k-ty wyraz rozwinięcia dwumianu?",
+        "expression": "Ogólny wzór: $T_{k+1} = \\binom{n}{k} \\cdot a^{n-k} \\cdot b^k$",
+        "explanation": "Dla dwumianu $(a+b)^n$ k-ty wyraz ma indeks $k-1$ w sumie",
+        "why": "To podstawowy wzór dwumianu Newtona. Tutaj $a = x$, $b = -\\frac{2}{3}$, $n = 16$."
+      },
+      {
+        "step": 4,
+        "hint": "Jak podstawić nasze wartości do wzoru dla 9. wyrazu?",
+        "expression": "$T_9 = \\binom{16}{8} \\cdot x^{16-8} \\cdot \\left(-\\frac{2}{3}\\right)^8$",
+        "explanation": "Podstawiamy $n = 16$, $k = 8$, $a = x$, $b = -\\frac{2}{3}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć wykładniki w tym wyrażeniu?",
+        "expression": "$T_9 = \\binom{16}{8} \\cdot x^8 \\cdot \\left(-\\frac{2}{3}\\right)^8$",
+        "explanation": "Upraszczamy wykładniki: $16 - 8 = 8$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość $\\binom{16}{8}$?",
+        "expression": "$\\binom{16}{8} = 12870$",
+        "explanation": "Obliczamy współczynnik dwumianowy",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej obliczyć $\\binom{16}{8}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\frac{16!}{8! \\cdot 8!}$ i liczyć wszystkie silnie",
+              "feedback": "Możliwe, ale bardzo pracochłonne - lepiej użyć symetrii",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Skorzystać z symetrii $\\binom{16}{8} = \\binom{16}{16-8}$",
+              "feedback": "Dobra obserwacja, ale to nie ułatwia obliczeń",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć krok po kroku: $\\frac{16 \\cdot 15 \\cdot ... \\cdot 9}{8!}$",
+              "feedback": "Świetnie! To najefektywniejsza metoda obliczania",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Obliczamy $\\binom{16}{8} = \\frac{16 \\cdot 15 \\cdot 14 \\cdot 13 \\cdot 12 \\cdot 11 \\cdot 10 \\cdot 9}{8!} = 12870$"
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć $\\left(-\\frac{2}{3}\\right)^8$?",
+        "expression": "$\\left(-\\frac{2}{3}\\right)^8 = \\left(\\frac{2}{3}\\right)^8 = \\frac{2^8}{3^8} = \\frac{256}{6561}$",
+        "explanation": "Wykładnik parzysty, więc znak minus znika",
+        "why": "Dla parzystego wykładnika $(-a)^{2k} = a^{2k}$. Obliczamy $2^8 = 256$ i $3^8 = 6561$."
+      },
+      {
+        "step": 8,
+        "hint": "Jak połączyć wszystkie części środkowego wyrazu?",
+        "expression": "$T_9 = 12870 \\cdot x^8 \\cdot \\frac{256}{6561}$",
+        "explanation": "Mnożymy wszystkie składniki"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest końcowy wynik po pomnożeniu współczynników?",
+        "expression": "$T_9 = \\frac{3294720}{6561} \\cdot x^8$",
+        "explanation": "Obliczamy iloczyn współczynników liczbowych",
+        "interactive_choice": {
+          "prompt": "Jak uprościć ułamek $\\frac{12870 \\cdot 256}{6561}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pozostawić jako $\\frac{3294720}{6561}$",
+              "feedback": "Można, ale warto sprawdzić czy da się uprościć",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Szukać wspólnego dzielnika licznika i mianownika",
+              "feedback": "Dobra strategia! Sprawdź czy $3^8$ dzieli licznik",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zamienić na liczbę dziesiętną",
+              "feedback": "Nie - zadanie wymaga dokładnej postaci algebraicznej",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obliczamy: $12870 \\cdot 256 = 3294720$, więc mamy $\\frac{3294720}{6561}$"
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Czy można uprościć ułamek $\\frac{3294720}{6561}$?",
+        "expression": "$\\frac{3294720}{6561} = \\frac{3294720}{6561} = 502.\\overline{285714}... \\approx \\frac{3294720}{6561}$",
+        "explanation": "Sprawdzamy czy ułamek można uprościć - okazuje się, że jest w najprostszej postaci"
+      }
+    ],
+    "solutions": [
+      "$\\frac{3294720}{6561} \\cdot x^8$"
+    ],
+    "parameters": {
+      "coefficient": "$a = \\frac{3294720}{6561}$",
+      "exponent": "$n = 8$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-22T07:47:23.648Z"
+  },
+  {
+    "id": "#2025-marzec-2-2p",
+    "topic": "Logarytmy i potęgi",
+    "difficulty": 5,
+    "statement": "Dana jest dodatnia liczba $a$ i dodatnia liczba $b$: $a=36^{(\\log_4 2\\sqrt{5} \\cdot \\log_6 16 - 2 \\cdot \\log_6 2)}$ oraz $b=8 \\cdot \\log_4 2\\sqrt{2} - \\log_4 9 \\cdot \\log_3 4$. Oblicz $\\sqrt{\\frac{a}{b}}$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Od czego najlepiej zacząć przy tak złożonych wyrażeniach logarytmicznych?",
+        "expression": "Analizujemy wykładnik: $\\log_4 2\\sqrt{5} \\cdot \\log_6 16 - 2 \\cdot \\log_6 2$",
+        "explanation": "Skupiamy się na wykładniku potęgi w wyrażeniu na $a$",
+        "interactive_choice": {
+          "prompt": "Jaka strategia będzie najefektywniejsza dla tego zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw uprościć wykładnik w wyrażeniu na $a$",
+              "feedback": "Dobry wybór! Wykładnik zawiera iloczyn logarytmów, który można uprościć.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw obliczyć wyrażenie na $b$",
+              "feedback": "Możliwe, ale wykładnik w $a$ jest bardziej złożony - lepiej zacząć od niego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić wszystko na logarytmy o podstawie 10",
+              "feedback": "Niepotrzebnie komplikuje - lepiej wykorzystać właściwości logarytmów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zaczynamy od wykładnika w $a$, bo zawiera iloczyn logarytmów do uproszczenia."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć $\\log_4 2\\sqrt{5}$?",
+        "expression": "$\\log_4 2\\sqrt{5} = \\log_4 (2 \\cdot \\sqrt{5}) = \\log_4 2 + \\log_4 \\sqrt{5}$",
+        "explanation": "Używamy właściwości $\\log_a (xy) = \\log_a x + \\log_a y$",
+        "why": "Rozkład iloczynu pod logarytmem na sumę logarytmów ułatwi dalsze obliczenia."
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi $\\log_4 2$ i jak uprościć $\\log_4 \\sqrt{5}$?",
+        "expression": "$\\log_4 2 = \\frac{1}{2}$ oraz $\\log_4 \\sqrt{5} = \\frac{1}{2}\\log_4 5$",
+        "explanation": "Ponieważ $4^{1/2} = 2$ oraz $\\log_a x^n = n\\log_a x$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest wartość $\\log_4 2\\sqrt{5}$?",
+        "expression": "$\\log_4 2\\sqrt{5} = \\frac{1}{2} + \\frac{1}{2}\\log_4 5 = \\frac{1}{2}(1 + \\log_4 5)$",
+        "explanation": "Wyłączamy $\\frac{1}{2}$ przed nawias"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć $\\log_6 16$?",
+        "expression": "$\\log_6 16 = \\log_6 2^4 = 4\\log_6 2$",
+        "explanation": "Używamy właściwości $\\log_a x^n = n\\log_a x$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest wykładnik w wyrażeniu na $a$ po podstawieniu?",
+        "expression": "$\\frac{1}{2}(1 + \\log_4 5) \\cdot 4\\log_6 2 - 2\\log_6 2 = 2(1 + \\log_4 5)\\log_6 2 - 2\\log_6 2$",
+        "explanation": "Podstawiamy uproszczone wyrażenia"
+      },
+      {
+        "step": 7,
+        "hint": "Co możesz wyłączyć przed nawias z wyrażenia $2(1 + \\log_4 5)\\log_6 2 - 2\\log_6 2$?",
+        "expression": "$2\\log_6 2[(1 + \\log_4 5) - 1] = 2\\log_6 2 \\cdot \\log_4 5$",
+        "explanation": "Wyłączamy $2\\log_6 2$ przed nawias"
+      },
+      {
+        "step": 8,
+        "hint": "Jak wykorzystać wzór na zmianę podstawy logarytmu?",
+        "expression": "$\\log_6 2 \\cdot \\log_4 5 = \\frac{\\ln 2}{\\ln 6} \\cdot \\frac{\\ln 5}{\\ln 4} = \\frac{\\ln 2 \\cdot \\ln 5}{\\ln 6 \\cdot \\ln 4}$",
+        "explanation": "Przepisujemy przez logarytmy naturalne",
+        "interactive_choice": {
+          "prompt": "Który wzór zastosować do iloczynu $\\log_6 2 \\cdot \\log_4 5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór $\\log_a b \\cdot \\log_b c = \\log_a c$",
+              "feedback": "Nie pasuje - podstawy logarytmów to 6 i 4, a argumenty to 2 i 5.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór na zmianę podstawy: $\\log_a b = \\frac{\\ln b}{\\ln a}$",
+              "feedback": "Dobry kierunek! Można przepisać oba logarytmy przez logarytmy naturalne.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pozostawić bez zmian",
+              "feedback": "Nie - ten iloczyn można uprościć używając wzoru na zmianę podstawy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór na zmianę podstawy pozwoli nam uprościć iloczyn logarytmów."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć $\\ln 6$ i $\\ln 4$?",
+        "expression": "$\\ln 6 = \\ln(2 \\cdot 3) = \\ln 2 + \\ln 3$ oraz $\\ln 4 = \\ln 2^2 = 2\\ln 2$",
+        "explanation": "Rozkładamy na czynniki pierwsze"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest wartość wykładnika w wyrażeniu na $a$?",
+        "expression": "$2 \\cdot \\frac{\\ln 2 \\cdot \\ln 5}{(\\ln 2 + \\ln 3) \\cdot 2\\ln 2} = \\frac{\\ln 5}{\\ln 2 + \\ln 3} = \\frac{\\ln 5}{\\ln 6} = \\log_6 5$",
+        "explanation": "Upraszczamy i wracamy do logarytmu o podstawie 6"
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi $a = 36^{\\log_6 5}$?",
+        "expression": "$a = 36^{\\log_6 5} = (6^2)^{\\log_6 5} = 6^{2\\log_6 5} = 6^{\\log_6 5^2} = 5^2 = 25$",
+        "explanation": "Używamy właściwości $a^{\\log_a x} = x$",
+        "why": "To kluczowa właściwość: gdy podstawa potęgi i podstawa logarytmu są związane, można uprościć wyrażenie."
+      },
+      {
+        "step": 12,
+        "hint": "Teraz przejdźmy do obliczenia $b$. Jak uprościć $\\log_4 2\\sqrt{2}$?",
+        "expression": "$\\log_4 2\\sqrt{2} = \\log_4 (2 \\cdot 2^{1/2}) = \\log_4 2^{3/2} = \\frac{3}{2}\\log_4 2 = \\frac{3}{2} \\cdot \\frac{1}{2} = \\frac{3}{4}$",
+        "explanation": "Łączymy potęgi o tej samej podstawie i używamy $\\log_4 2 = \\frac{1}{2}$"
+      },
+      {
+        "step": 13,
+        "hint": "Jak obliczyć $\\log_4 9 \\cdot \\log_3 4$?",
+        "expression": "$\\log_4 9 = \\log_4 3^2 = 2\\log_4 3$ oraz $\\log_3 4 = \\log_3 2^2 = 2\\log_3 2$",
+        "explanation": "Rozkładamy argumenty na potęgi",
+        "interactive_choice": {
+          "prompt": "Którą metodą najlepiej obliczyć iloczyn $\\log_4 9 \\cdot \\log_3 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zauważyć, że $\\log_4 9 \\cdot \\log_3 4 = \\log_3 9 = 2$",
+              "feedback": "Świetnie! To wzór $\\log_a b \\cdot \\log_b a = 1$, ale tu mamy $\\log_a b \\cdot \\log_c a$ gdzie $b = c^2$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć każdy logarytm osobno",
+              "feedback": "Możliwe, ale dłuższe - lepiej wykorzystać związek między podstawami.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przepisać przez logarytmy naturalne",
+              "feedback": "Niepotrzebnie komplikuje - jest prostszy sposób.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wykorzystujemy fakt, że $9 = 3^2$ i $4 = 2^2$, co pozwala na eleganckie uproszczenie."
+        }
+      },
+      {
+        "step": 14,
+        "hint": "Jaka jest wartość $\\log_4 9 \\cdot \\log_3 4$?",
+        "expression": "$\\log_4 9 \\cdot \\log_3 4 = 2\\log_4 3 \\cdot 2\\log_3 2 = 4\\log_4 3 \\cdot \\log_3 2$",
+        "explanation": "Wymnażamy stałe"
+      },
+      {
+        "step": 15,
+        "hint": "Jak uprościć $\\log_4 3 \\cdot \\log_3 2$?",
+        "expression": "$\\log_4 3 \\cdot \\log_3 2 = \\frac{\\ln 3}{\\ln 4} \\cdot \\frac{\\ln 2}{\\ln 3} = \\frac{\\ln 2}{\\ln 4} = \\frac{\\ln 2}{2\\ln 2} = \\frac{1}{2}$",
+        "explanation": "Używamy wzoru na zmianę podstawy i upraszczamy"
+      },
+      {
+        "step": 16,
+        "hint": "Jaka jest wartość $b$?",
+        "expression": "$b = 8 \\cdot \\frac{3}{4} - 4 \\cdot \\frac{1}{2} = 6 - 2 = 4$",
+        "explanation": "Podstawiamy obliczone wartości"
+      },
+      {
+        "step": 17,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "$\\sqrt{\\frac{a}{b}} = \\sqrt{\\frac{25}{4}} = \\frac{\\sqrt{25}}{\\sqrt{4}} = \\frac{5}{2}$",
+        "explanation": "Obliczamy pierwiastek z ułamka"
+      }
+    ],
+    "solutions": [
+      "$\\sqrt{\\frac{a}{b}} = \\frac{5}{2}$"
+    ],
+    "parameters": {
+      "a": "$a = 25$",
+      "b": "$b = 4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 17,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:48:26.313Z"
+  },
+  {
+    "id": "#2025-marzec-3-2p",
+    "topic": "Granice ciągów",
+    "difficulty": 4,
+    "statement": "Oblicz granicę $\\lim_{n \\rightarrow \\infty} \\sqrt[n]{12^n+13^n+14^n}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak podejść do granicy pierwiastka n-tego z sumy potęg?",
+        "expression": "$\\lim_{n \\rightarrow \\infty} \\sqrt[n]{12^n+13^n+14^n}$",
+        "explanation": "Analizujemy granicę pierwiastka n-tego z sumy trzech potęg",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do obliczenia $\\lim_{n \\rightarrow \\infty} \\sqrt[n]{12^n+13^n+14^n}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć największą potęgę przed pierwiastek",
+              "feedback": "Świetnie! To standardowa metoda - wyłączamy $14^n$ jako największy składnik.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zastosować wzór de l'Hôpitala",
+              "feedback": "Nie - to wzór dla funkcji, a mamy ciąg. Poza tym nie mamy postaci nieoznaczonej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozwinąć w szereg Taylora",
+              "feedback": "Niepotrzebnie skomplikowane - wystarczy wyłączyć największy składnik.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla sum potęg w pierwiastku n-tym zawsze wyłączamy największą potęgę."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Który składnik jest największy dla dużych n?",
+        "expression": "$14^n$ jest największy, bo $14 > 13 > 12$",
+        "explanation": "Dla dużych n dominuje składnik z największą podstawą potęgi",
+        "why": "W sumie potęg o różnych podstawach, składnik z największą podstawą 'przytłacza' pozostałe."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyłączyć $14^n$ z wyrażenia pod pierwiastkiem?",
+        "expression": "$\\sqrt[n]{12^n+13^n+14^n} = \\sqrt[n]{14^n(\\frac{12^n}{14^n}+\\frac{13^n}{14^n}+1)}$",
+        "explanation": "Wyłączamy $14^n$ przed nawias"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć pierwiastek z iloczynu?",
+        "expression": "$\\sqrt[n]{14^n(\\frac{12^n}{14^n}+\\frac{13^n}{14^n}+1)} = \\sqrt[n]{14^n} \\cdot \\sqrt[n]{\\frac{12^n}{14^n}+\\frac{13^n}{14^n}+1}$",
+        "explanation": "Używamy właściwości $\\sqrt[n]{ab} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}$"
+      },
+      {
+        "step": 5,
+        "hint": "Czemu równa się $\\sqrt[n]{14^n}$?",
+        "expression": "$\\sqrt[n]{14^n} = 14$",
+        "explanation": "Pierwiastek n-ty z n-tej potęgi to podstawa potęgi"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć ułamki w nawiasie?",
+        "expression": "$\\frac{12^n}{14^n} = (\\frac{12}{14})^n \\to 0$ oraz $\\frac{13^n}{14^n} = (\\frac{13}{14})^n \\to 0$",
+        "explanation": "Potęgi ułamków właściwych dążą do zera",
+        "interactive_choice": {
+          "prompt": "Do czego dążą wyrażenia $\\frac{12^n}{14^n}$ i $\\frac{13^n}{14^n}$ gdy $n \\to \\infty$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oba dążą do 0",
+              "feedback": "Dokładnie! $(\\frac{12}{14})^n \\to 0$ i $(\\frac{13}{14})^n \\to 0$ bo podstawy < 1.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pierwszy do 0, drugi do 1",
+              "feedback": "Nie - oba ułamki mają podstawę mniejszą od 1, więc oba dążą do 0.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Oba dążą do nieskończoności",
+              "feedback": "Nie - to potęgi ułamków mniejszych od 1, więc dążą do 0.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $0 < a < 1$, to $a^n \\to 0$ dla $n \\to \\infty$."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Do czego dąży wyrażenie w drugim pierwiastku?",
+        "expression": "$\\lim_{n \\to \\infty} (\\frac{12^n}{14^n}+\\frac{13^n}{14^n}+1) = 0 + 0 + 1 = 1$",
+        "explanation": "Suma dąży do 1, bo tylko ostatni składnik zostaje"
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest granica $\\sqrt[n]{1}$ gdy $n \\to \\infty$?",
+        "expression": "$\\lim_{n \\to \\infty} \\sqrt[n]{1} = 1$",
+        "explanation": "Pierwiastek n-ty z 1 to zawsze 1",
+        "interactive_choice": {
+          "prompt": "Do czego dąży $\\sqrt[n]{1}$ gdy $n \\to \\infty$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do 1",
+              "feedback": "Tak! $\\sqrt[n]{1} = 1$ dla każdego n, więc granica to 1.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Do 0",
+              "feedback": "Nie - pierwiastek z 1 to zawsze 1, niezależnie od stopnia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Do nieskończoności",
+              "feedback": "Nie - $1^{1/n} = 1$ dla każdego n.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwiastek dowolnego stopnia z 1 równa się 1."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "$\\lim_{n \\rightarrow \\infty} \\sqrt[n]{12^n+13^n+14^n} = 14 \\cdot 1 = 14$",
+        "explanation": "Łączymy wyniki: granica równa się największej podstawie potęgi",
+        "why": "To ogólna zasada: $\\lim_{n \\to \\infty} \\sqrt[n]{a_1^n + a_2^n + ... + a_k^n} = \\max\\{a_1, a_2, ..., a_k\\}$"
+      }
+    ],
+    "solutions": [
+      "14"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:48:56.995Z"
+  },
+  {
+    "id": "#2025-marzec-4-3p",
+    "topic": "Prawdopodobieństwo warunkowe - wzór Bayesa",
+    "difficulty": 4,
+    "statement": "Wśród pewnej społeczności kobiet i mężczyzn przeprowadzono ankietę w której zadano pytanie: \"Czy jest Pan/Pani za legalizacją eutanazji w Polsce?\". W tej grupie osób 60% ankietowanych stanowią mężczyźni, z których 2% opowiedziało się za legalizacją oraz 93% kobiet jest jej przeciwna. Spośród wszystkich ankietowanych wybrano losowo jedną osobę oraz okazało się, że osoba ta jest zwolennikiem legalizacji eutanazji. Oblicz prawdopodobieństwo, że wylosowana osoba jest mężczyzną. Wynik zapisz w postaci procentu.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie zdarzenia możemy zdefiniować w tym problemie?",
+        "expression": "Niech $M$ - osoba jest mężczyzną, $K$ - osoba jest kobietą, $Z$ - osoba jest za legalizacją",
+        "explanation": "Definiujemy zdarzenia dla płci i opinii o legalizacji"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie prawdopodobieństwa możemy odczytać z treści zadania?",
+        "expression": "$P(M) = 0{,}6$, $P(K) = 0{,}4$, $P(Z|M) = 0{,}02$, $P(\\overline{Z}|K) = 0{,}93$",
+        "explanation": "Zapisujemy dane z zadania jako prawdopodobieństwa"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć prawdopodobieństwo że kobieta jest za legalizacją?",
+        "expression": "$P(Z|K) = 1 - P(\\overline{Z}|K) = 1 - 0{,}93 = 0{,}07$",
+        "explanation": "Używamy dopełnienia - jeśli 93% kobiet jest przeciw, to 7% jest za"
+      },
+      {
+        "step": 4,
+        "hint": "Jakiego wzoru użyjemy do rozwiązania tego problemu?",
+        "expression": "$P(M|Z) = \\frac{P(Z|M) \\cdot P(M)}{P(Z)}$",
+        "explanation": "Stosujemy wzór Bayesa dla szukanego prawdopodobieństwa",
+        "why": "Wzór Bayesa jest kluczowy gdy znamy prawdopodobieństwa \"w jedną stronę\" a szukamy \"w drugą\"",
+        "interactive_choice": {
+          "prompt": "Jaki wzór zastosować gdy znamy skutek i szukamy przyczyny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na prawdopodobieństwo całkowite",
+              "feedback": "To pomoże obliczyć $P(Z)$, ale nie odpowie na pytanie główne",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór Bayesa $P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}$",
+              "feedback": "Doskonale! Szukamy $P(M|Z)$ - prawdopodobieństwa przyczyny przy znanym skutku",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Definicja prawdopodobieństwa warunkowego",
+              "feedback": "Za ogólne - wzór Bayesa jest konkretną aplikacją tej definicji",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór Bayesa pozwala \"odwrócić\" warunkowość - z $P(Z|M)$ otrzymać $P(M|Z)$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć prawdopodobieństwo całkowite $P(Z)$?",
+        "expression": "$P(Z) = P(Z|M) \\cdot P(M) + P(Z|K) \\cdot P(K)$",
+        "explanation": "Używamy wzoru na prawdopodobieństwo całkowite z podziałem na płeć",
+        "interactive_choice": {
+          "prompt": "Którą metodą obliczyć $P(Z)$ - prawdopodobieństwo że losowa osoba jest za?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko z mężczyzn: $P(Z) = P(Z|M) \\cdot P(M)$",
+              "feedback": "To tylko część - pomijasz kobiety które też mogą być za",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór na prawdopodobieństwo całkowite z podziałem na płeć",
+              "feedback": "Tak! $P(Z) = P(Z|M) \\cdot P(M) + P(Z|K) \\cdot P(K)$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Średnia arytmetyczna: $P(Z) = \\frac{P(Z|M) + P(Z|K)}{2}$",
+              "feedback": "Nie - to nie uwzględnia różnych proporcji mężczyzn i kobiet",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Prawdopodobieństwo całkowite sumuje wszystkie możliwe \"ścieżki\" do zdarzenia Z"
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wartości podstawić do wzoru na $P(Z)$?",
+        "expression": "$P(Z) = 0{,}02 \\cdot 0{,}6 + 0{,}07 \\cdot 0{,}4$",
+        "explanation": "Podstawiamy znane prawdopodobieństwa"
+      },
+      {
+        "step": 7,
+        "hint": "Ile wynosi prawdopodobieństwo że losowa osoba jest za legalizacją?",
+        "expression": "$P(Z) = 0{,}012 + 0{,}028 = 0{,}04$",
+        "explanation": "Obliczamy prawdopodobieństwo całkowite"
+      },
+      {
+        "step": 8,
+        "hint": "Jak teraz obliczyć szukane prawdopodobieństwo $P(M|Z)$?",
+        "expression": "$P(M|Z) = \\frac{P(Z|M) \\cdot P(M)}{P(Z)} = \\frac{0{,}02 \\cdot 0{,}6}{0{,}04}$",
+        "explanation": "Podstawiamy do wzoru Bayesa wszystkie obliczone wartości"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest wynik obliczeń?",
+        "expression": "$P(M|Z) = \\frac{0{,}012}{0{,}04} = 0{,}3 = 30\\%$",
+        "explanation": "Obliczamy końcowy wynik i zamieniamy na procenty"
+      },
+      {
+        "step": 10,
+        "hint": "Czy wynik ma sens intuicyjnie?",
+        "expression": "Wynik: prawdopodobieństwo wynosi $30\\%$",
+        "explanation": "Sprawdzamy sensowność wyniku - mężczyźni rzadziej popierają, więc ich udział wśród zwolenników jest mniejszy",
+        "interactive_choice": {
+          "prompt": "Dlaczego prawdopodobieństwo że zwolennik to mężczyzna (30%) jest mniejsze niż ogólny odsetek mężczyzn (60%)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bo mężczyźni rzadziej popierają legalizację niż kobiety",
+              "feedback": "Dokładnie! 2% mężczyzn vs 7% kobiet - kobiety częściej popierają",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "To błąd w obliczeniach",
+              "feedback": "Nie - obliczenia są poprawne, to efekt różnych postaw",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bo kobiet jest więcej w próbie",
+              "feedback": "Nie - mężczyzn jest 60%, ale oni rzadziej popierają legalizację",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Chociaż mężczyzn jest więcej (60%), to rzadziej popierają legalizację (2% vs 7%), więc wśród zwolenników przeważają kobiety"
+        }
+      }
+    ],
+    "solutions": [
+      "30%"
+    ],
+    "parameters": {
+      "method": "Wzór Bayesa",
+      "result_format": "procent"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:49:31.114Z"
+  },
+  {
+    "id": "#2025-marzec-5-3p",
+    "topic": "Twierdzenie Darboux i miejsca zerowe funkcji",
+    "difficulty": 4,
+    "statement": "Funkcja f jest określona wzorem $f(x) = x^8 - 5x^6 + 4x^3 - 2x + 4$ dla każdego $x \\in \\mathbb{R}$. Wykaż, że funkcja f ma w zbiorze liczb rzeczywistych co najmniej dwa miejsca zerowe takie, że jedno jest dodatnie a jedno ujemne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie właściwości ma funkcja $f(x) = x^8 - 5x^6 + 4x^3 - 2x + 4$?",
+        "expression": "$f(x) = x^8 - 5x^6 + 4x^3 - 2x + 4$ jest wielomianem stopnia 8",
+        "explanation": "Funkcja jest wielomianem, więc jest ciągła na całej dziedzinie $\\mathbb{R}$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do wykazania istnienia miejsc zerowych?",
+        "expression": "Sprawdzimy znaki funkcji w wybranych punktach",
+        "explanation": "Użyjemy twierdzenia o wartości pośredniej",
+        "why": "Dla funkcji ciągłej: jeśli $f(a) < 0$ i $f(b) > 0$, to istnieje $c \\in (a,b)$ takie że $f(c) = 0$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wykazać istnienie miejsc zerowych o różnych znakach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć twierdzenia Darboux (o wartości pośredniej)",
+              "feedback": "Doskonały wybór! Jeśli znajdziemy punkty gdzie funkcja ma różne znaki, to musi być zero między nimi.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozłożyć wielomian na czynniki",
+              "feedback": "Bardzo trudne dla wielomianu 8. stopnia - lepiej użyć twierdzenia o wartości pośredniej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć pochodną i zbadać monotoniczność",
+              "feedback": "Skomplikowane - pochodna będzie stopnia 7. Prostsze jest sprawdzenie znaków funkcji.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Twierdzenie Darboux: jeśli funkcja ciągła ma różne znaki w dwóch punktach, to ma zero między nimi."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest wartość funkcji w punkcie $x = 0$?",
+        "expression": "$f(0) = 0^8 - 5 \\cdot 0^6 + 4 \\cdot 0^3 - 2 \\cdot 0 + 4 = 4$",
+        "explanation": "W zerze funkcja przyjmuje wartość dodatnią"
+      },
+      {
+        "step": 4,
+        "hint": "Które punkty warto sprawdzić dla liczb ujemnych?",
+        "expression": "Obliczmy $f(-1)$",
+        "explanation": "Sprawdzamy wartość w punkcie $x = -1$",
+        "interactive_choice": {
+          "prompt": "Który ujemny punkt może dać nam $f(x) < 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić $x = -1$",
+              "feedback": "Dobry wybór! Małe wartości są łatwe do obliczenia i często pokazują zmianę znaku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprawdzić $x = -10$",
+              "feedback": "Za duże - składnik $x^8$ zdominuje i funkcja będzie dodatnia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić $x = -0.5$",
+              "feedback": "Możliwe, ale ułamki komplikują obliczenia. Lepiej całkowite.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla dużych $|x|$ dominuje składnik $x^8 > 0$. Szukamy punktu gdzie inne składniki mogą przeważyć."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $f(-1)$?",
+        "expression": "$f(-1) = (-1)^8 - 5(-1)^6 + 4(-1)^3 - 2(-1) + 4 = 1 - 5 - 4 + 2 + 4 = -2$",
+        "explanation": "Obliczamy kolejno: $(-1)^8 = 1$, $(-1)^6 = 1$, $(-1)^3 = -1$"
+      },
+      {
+        "step": 6,
+        "hint": "Co możemy wnioskować z wartości $f(-1) = -2$ i $f(0) = 4$?",
+        "expression": "$f(-1) = -2 < 0$ oraz $f(0) = 4 > 0$",
+        "explanation": "Funkcja zmienia znak z ujemnego na dodatni w przedziale $(-1, 0)$",
+        "why": "Z twierdzenia Darboux: istnieje $c \\in (-1, 0)$ takie że $f(c) = 0$. To daje nam ujemne miejsce zerowe."
+      },
+      {
+        "step": 7,
+        "hint": "Gdzie szukać dodatniego miejsca zerowego?",
+        "expression": "Obliczmy $f(1)$",
+        "explanation": "Sprawdzamy wartość w punkcie $x = 1$",
+        "interactive_choice": {
+          "prompt": "Gdzie sprawdzić wartość funkcji dla liczb dodatnich?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić $x = 1$",
+              "feedback": "Dobry start - sprawdźmy czy da ujemną wartość.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprawdzić $x = 10$",
+              "feedback": "Za duże - składnik $x^8$ będzie ogromny i dodatni.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić $x = 0.5$",
+              "feedback": "Możliwe, ale ułamki komplikują. Lepiej całkowite.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Szukamy punktu gdzie funkcja może być ujemna, mimo że $f(0) = 4 > 0$."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Ile wynosi $f(1)$?",
+        "expression": "$f(1) = 1^8 - 5 \\cdot 1^6 + 4 \\cdot 1^3 - 2 \\cdot 1 + 4 = 1 - 5 + 4 - 2 + 4 = 2$",
+        "explanation": "Wszystkie potęgi jedynki równają się 1"
+      },
+      {
+        "step": 9,
+        "hint": "Czy $f(1) = 2 > 0$ pomaga nam znaleźć dodatnie zero?",
+        "expression": "Sprawdźmy $f(2)$: $f(2) = 2^8 - 5 \\cdot 2^6 + 4 \\cdot 2^3 - 2 \\cdot 2 + 4$",
+        "explanation": "Potrzebujemy punktu gdzie funkcja jest ujemna"
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi $f(2)$?",
+        "expression": "$f(2) = 256 - 5 \\cdot 64 + 4 \\cdot 8 - 4 + 4 = 256 - 320 + 32 = -32$",
+        "explanation": "Obliczamy: $2^8 = 256$, $2^6 = 64$, $2^3 = 8$"
+      },
+      {
+        "step": 11,
+        "hint": "Co możemy wnioskować z wartości $f(1) = 2$ i $f(2) = -32$?",
+        "expression": "$f(1) = 2 > 0$ oraz $f(2) = -32 < 0$",
+        "explanation": "Funkcja zmienia znak z dodatniego na ujemny w przedziale $(1, 2)$",
+        "why": "Z twierdzenia Darboux: istnieje $d \\in (1, 2)$ takie że $f(d) = 0$. To daje nam dodatnie miejsce zerowe."
+      },
+      {
+        "step": 12,
+        "hint": "Jakie miejsca zerowe udowodniliśmy?",
+        "expression": "Istnieje $c \\in (-1, 0)$ takie że $f(c) = 0$ (ujemne zero) oraz $d \\in (1, 2)$ takie że $f(d) = 0$ (dodatnie zero)",
+        "explanation": "Wykazaliśmy istnienie co najmniej dwóch miejsc zerowych o różnych znakach"
+      }
+    ],
+    "solutions": [
+      "Funkcja $f$ ma co najmniej jedno ujemne miejsce zerowe w przedziale $(-1, 0)$ i co najmniej jedno dodatnie miejsce zerowe w przedziale $(1, 2)$"
+    ],
+    "parameters": {
+      "method": "Twierdzenie Darboux (o wartości pośredniej)",
+      "key_values": "$f(-1) = -2$, $f(0) = 4$, $f(1) = 2$, $f(2) = -32$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:50:07.153Z"
+  },
+  {
+    "id": "#2025-marzec-6-3p",
+    "topic": "Pochodna funkcji i równanie stycznej",
+    "difficulty": 4,
+    "statement": "Dana jest funkcja $f(x) = \\sqrt{9x + 16}$ określona dla każdej liczby rzeczywistej $x \\in \\left[-\\frac{16}{9}, +\\infty\\right)$. Punkt $P = (x_0, 5)$ należy do wykresu funkcji $f$. Oblicz $x_0$ oraz wyznacz równanie stycznej do wykresu funkcji $f$ w punkcie $P$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że punkt P należy do wykresu funkcji f?",
+        "expression": "$f(x_0) = 5$",
+        "explanation": "Jeśli punkt $(x_0, 5)$ należy do wykresu, to wartość funkcji w $x_0$ musi równać się 5"
+      },
+      {
+        "step": 2,
+        "hint": "Jak podstawić definicję funkcji do równania $f(x_0) = 5$?",
+        "expression": "$\\sqrt{9x_0 + 16} = 5$",
+        "explanation": "Podstawiamy wzór funkcji $f(x) = \\sqrt{9x + 16}$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak pozbyć się pierwiastka z równania?",
+        "expression": "$(\\sqrt{9x_0 + 16})^2 = 5^2$",
+        "explanation": "Podnosimy obie strony do kwadratu",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $\\sqrt{9x_0 + 16} = 5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podnieść obie strony do kwadratu",
+              "feedback": "Doskonale! To standardowa metoda dla równań z pierwiastkami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść pierwiastek na prawą stronę",
+              "feedback": "Pierwiastek już jest po lewej stronie - nie ma co przenosić.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $u = \\sqrt{9x_0 + 16}$",
+              "feedback": "Niepotrzebne - równanie jest już proste do rozwiązania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podniesienie do kwadratu eliminuje pierwiastek i daje równanie liniowe."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymujemy po podniesieniu do kwadratu?",
+        "expression": "$9x_0 + 16 = 25$",
+        "explanation": "Pierwiastek kwadratowy i kwadrat się znoszą po lewej stronie"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać równanie liniowe $9x_0 + 16 = 25$?",
+        "expression": "$9x_0 = 25 - 16 = 9$",
+        "explanation": "Odejmujemy 16 od obu stron"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość $x_0$?",
+        "expression": "$x_0 = 1$",
+        "explanation": "Dzielimy przez 9"
+      },
+      {
+        "step": 7,
+        "hint": "Czy $x_0 = 1$ należy do dziedziny funkcji?",
+        "expression": "$1 \\in \\left[-\\frac{16}{9}, +\\infty\\right)$ bo $1 > -\\frac{16}{9} \\approx -1.78$",
+        "explanation": "Sprawdzamy czy rozwiązanie należy do dziedziny funkcji"
+      },
+      {
+        "step": 8,
+        "hint": "Co potrzebujemy do wyznaczenia równania stycznej?",
+        "expression": "Potrzebujemy: $f'(1)$ oraz punkt $P = (1, 5)$",
+        "explanation": "Do równania stycznej potrzebujemy pochodnej w punkcie styczności",
+        "interactive_choice": {
+          "prompt": "Jakie elementy są potrzebne do równania stycznej $y = ax + b$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik kierunkowy (pochodna) i punkt styczności",
+              "feedback": "Świetnie! Pochodna da nam $a$, punkt $(1,5)$ pozwoli wyznaczyć $b$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko punkt styczności",
+              "feedback": "To za mało - potrzebujemy też nachylenia (pochodnej).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dwa różne punkty na stycznej",
+              "feedback": "Mamy tylko jeden punkt - potrzebujemy pochodnej do nachylenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie stycznej: $y - y_0 = f'(x_0)(x - x_0)$ wymaga pochodnej i punktu."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć pochodną funkcji $f(x) = \\sqrt{9x + 16}$?",
+        "expression": "$f(x) = (9x + 16)^{\\frac{1}{2}}$",
+        "explanation": "Przepisujemy pierwiastek jako potęgę",
+        "why": "Używamy wzoru na pochodną funkcji złożonej: $(u^n)' = n \\cdot u^{n-1} \\cdot u'$"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest pochodna funkcji $(9x + 16)^{\\frac{1}{2}}$?",
+        "expression": "$f'(x) = \\frac{1}{2}(9x + 16)^{-\\frac{1}{2}} \\cdot 9 = \\frac{9}{2\\sqrt{9x + 16}}$",
+        "explanation": "Stosujemy wzór na pochodną funkcji złożonej"
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest wartość pochodnej w punkcie $x_0 = 1$?",
+        "expression": "$f'(1) = \\frac{9}{2\\sqrt{9 \\cdot 1 + 16}} = \\frac{9}{2\\sqrt{25}} = \\frac{9}{2 \\cdot 5} = \\frac{9}{10}$",
+        "explanation": "Podstawiamy $x_0 = 1$ do wzoru na pochodną"
+      },
+      {
+        "step": 12,
+        "hint": "Jak zapisać równanie stycznej używając wzoru $y - y_0 = f'(x_0)(x - x_0)$?",
+        "expression": "$y - 5 = \\frac{9}{10}(x - 1)$",
+        "explanation": "Podstawiamy punkt $(1, 5)$ i pochodną $f'(1) = \\frac{9}{10}$",
+        "interactive_choice": {
+          "prompt": "Które podstawienie do wzoru stycznej jest poprawne?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$y - 5 = \\frac{9}{10}(x - 1)$",
+              "feedback": "Doskonale! Punkt $(1,5)$ i pochodna $\\frac{9}{10}$ podstawione poprawnie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$y - 1 = \\frac{9}{10}(x - 5)$",
+              "feedback": "Pomyłka - zamieniono współrzędne punktu miejscami.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$y - 5 = \\frac{10}{9}(x - 1)$",
+              "feedback": "Błąd - odwrócono wartość pochodnej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór stycznej: $y - y_0 = f'(x_0)(x - x_0)$ z punktem $(x_0, y_0) = (1, 5)$."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Jak przekształcić równanie do postaci kierunkowej $y = ax + b$?",
+        "expression": "$y = \\frac{9}{10}x - \\frac{9}{10} + 5 = \\frac{9}{10}x + \\frac{41}{10}$",
+        "explanation": "Rozwijamy nawias i upraszczamy: $-\\frac{9}{10} + 5 = -\\frac{9}{10} + \\frac{50}{10} = \\frac{41}{10}$"
+      }
+    ],
+    "solutions": [
+      "$x_0 = 1$",
+      "$y = \\frac{9}{10}x + \\frac{41}{10}$"
+    ],
+    "parameters": {
+      "point": "$P = (1, 5)$",
+      "derivative": "$f'(1) = \\frac{9}{10}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:50:40.398Z"
+  },
+  {
+    "id": "#2025-marzec-7-4p",
+    "topic": "Szeregi geometryczne nieskończone i nierówności",
+    "difficulty": 4,
+    "statement": "Rozwiąż nierówność $2x^2 + 6x + 18 + \\ldots > 9$, gdzie lewa strona nierówności istnieje oraz jest sumą nieskończonego ciągu geometrycznego. Zapisz obliczenia.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak rozpoznać pierwszy wyraz i iloraz ciągu geometrycznego?",
+        "expression": "$a_1 = 2x^2$, $a_2 = 6x$, $a_3 = 18$",
+        "explanation": "Identyfikujemy pierwsze trzy wyrazy ciągu"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest iloraz między kolejnymi wyrazami?",
+        "expression": "$q = \\frac{a_2}{a_1} = \\frac{6x}{2x^2} = \\frac{3}{x}$",
+        "explanation": "Obliczamy iloraz ciągu geometrycznego",
+        "interactive_choice": {
+          "prompt": "Jak wyznaczyć iloraz $q$ ciągu geometrycznego z wyrazów $2x^2$, $6x$, $18$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obliczyć $q = \\frac{a_2}{a_1} = \\frac{6x}{2x^2} = \\frac{3}{x}$",
+              "feedback": "Dobrze! Sprawdź jeszcze czy $\\frac{a_3}{a_2}$ daje ten sam wynik.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć $q = \\frac{a_3}{a_2} = \\frac{18}{6x} = \\frac{3}{x}$",
+              "feedback": "Poprawnie! Sprawdź jeszcze czy $\\frac{a_2}{a_1}$ daje ten sam wynik.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Iloraz to $q = 3x$",
+              "feedback": "Nie - sprawdź obliczenia. $\\frac{6x}{2x^2} = \\frac{3}{x}$, nie $3x$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W ciągu geometrycznym iloraz między kolejnymi wyrazami jest stały: $q = \\frac{3}{x}$."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Sprawdź czy iloraz jest rzeczywiście stały",
+        "expression": "$\\frac{a_3}{a_2} = \\frac{18}{6x} = \\frac{3}{x} = q$",
+        "explanation": "Potwierdzamy, że ciąg jest geometryczny z ilorazem $q = \\frac{3}{x}$",
+        "why": "Sprawdzenie stałości ilorazu potwierdza, że mamy ciąg geometryczny."
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy szereg geometryczny nieskończony jest zbieżny?",
+        "expression": "$|\\frac{3}{x}| < 1$",
+        "explanation": "Warunek zbieżności szeregu geometrycznego",
+        "interactive_choice": {
+          "prompt": "Jaki warunek musi spełniać iloraz $q = \\frac{3}{x}$ aby szereg był zbieżny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$|q| < 1$, czyli $|\\frac{3}{x}| < 1$",
+              "feedback": "Doskonale! To warunek zbieżności szeregu geometrycznego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$q > 0$, czyli $\\frac{3}{x} > 0$",
+              "feedback": "To za mało - szereg może być zbieżny też dla ujemnych $q$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$q \\neq 1$, czyli $\\frac{3}{x} \\neq 1$",
+              "feedback": "To konieczne, ale nie wystarczające - potrzebujemy $|q| < 1$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Szereg geometryczny $\\sum_{n=1}^{\\infty} a_1 q^{n-1}$ jest zbieżny gdy $|q| < 1$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać nierówność $|\\frac{3}{x}| < 1$?",
+        "expression": "$\\frac{3}{|x|} < 1$, więc $|x| > 3$",
+        "explanation": "Przekształcamy warunek zbieżności",
+        "why": "Dla $x \\neq 0$ mamy $|\\frac{3}{x}| = \\frac{3}{|x|}$. Nierówność $\\frac{3}{|x|} < 1$ daje $|x| > 3$."
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wartości $x$ spełniają $|x| > 3$?",
+        "expression": "$x \\in (-\\infty, -3) \\cup (3, +\\infty)$",
+        "explanation": "Dziedzina, w której szereg jest zbieżny"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest suma szeregu zbieżnego o pierwszym wyrazie $a_1$ i ilorazie $q$?",
+        "expression": "$S = \\frac{a_1}{1-q} = \\frac{2x^2}{1-\\frac{3}{x}} = \\frac{2x^2}{\\frac{x-3}{x}} = \\frac{2x^3}{x-3}$",
+        "explanation": "Obliczamy sumę szeregu geometrycznego nieskończonego",
+        "why": "Wzór $S = \\frac{a_1}{1-q}$ działa tylko gdy $|q| < 1$, co już sprawdziliśmy."
+      },
+      {
+        "step": 8,
+        "hint": "Jak teraz wygląda nasza nierówność?",
+        "expression": "$\\frac{2x^3}{x-3} > 9$",
+        "explanation": "Podstawiamy sumę szeregu do nierówności"
+      },
+      {
+        "step": 9,
+        "hint": "Jak rozwiązać nierówność wymierną?",
+        "expression": "$\\frac{2x^3}{x-3} - 9 > 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać nierówność $\\frac{2x^3}{x-3} > 9$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przenieść wszystko na jedną stronę: $\\frac{2x^3}{x-3} - 9 > 0$",
+              "feedback": "Świetnie! To standardowa metoda dla nierówności wymiernych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć obie strony przez $(x-3)$",
+              "feedback": "Niebezpieczne - znak $(x-3)$ może być ujemny, co zmieni kierunek nierówności.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości $x$",
+              "feedback": "To może pomóc sprawdzić wynik, ale nie rozwiąże nierówności ogólnie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla nierówności wymiernych zawsze przenosimy wszystko na jedną stronę i analizujemy znak."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć wyrażenie po lewej stronie?",
+        "expression": "$\\frac{2x^3 - 9(x-3)}{x-3} > 0$, czyli $\\frac{2x^3 - 9x + 27}{x-3} > 0$",
+        "explanation": "Sprowadzamy do wspólnego mianownika"
+      },
+      {
+        "step": 11,
+        "hint": "Czy można rozłożyć licznik na czynniki?",
+        "expression": "$2x^3 - 9x + 27 = (x-3)(2x^2 + 6x - 9)$",
+        "explanation": "Rozkładamy licznik, sprawdzając czy $x = 3$ jest pierwiastkiem"
+      },
+      {
+        "step": 12,
+        "hint": "Jak wygląda nierówność po skróceniu?",
+        "expression": "$\\frac{(x-3)(2x^2 + 6x - 9)}{x-3} > 0$ dla $x \\neq 3$",
+        "explanation": "Po skróceniu otrzymujemy $2x^2 + 6x - 9 > 0$ dla $x \\neq 3$"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są pierwiastki równania $2x^2 + 6x - 9 = 0$?",
+        "expression": "$\\Delta = 36 + 72 = 108$, więc $x = \\frac{-6 \\pm 6\\sqrt{3}}{4} = \\frac{-3 \\pm 3\\sqrt{3}}{2}$",
+        "explanation": "Obliczamy pierwiastki trójmianu kwadratowego"
+      },
+      {
+        "step": 14,
+        "hint": "Kiedy $2x^2 + 6x - 9 > 0$?",
+        "expression": "$x \\in (-\\infty, \\frac{-3-3\\sqrt{3}}{2}) \\cup (\\frac{-3+3\\sqrt{3}}{2}, +\\infty)$",
+        "explanation": "Parabola o dodatnim współczynniku przy $x^2$ jest dodatnia poza pierwiastkami"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie jest przecięcie z dziedziną szeregu?",
+        "expression": "Dziedzina: $x \\in (-\\infty, -3) \\cup (3, +\\infty)$",
+        "explanation": "Musimy uwzględnić warunek zbieżności szeregu i $x \\neq 3$"
+      },
+      {
+        "step": 16,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$x \\in (-\\infty, -3) \\cup (\\frac{-3+3\\sqrt{3}}{2}, +\\infty) \\cap (3, +\\infty)$",
+        "explanation": "Przecięcie rozwiązania nierówności z dziedziną szeregu"
+      }
+    ],
+    "solutions": [
+      "$x \\in (-\\infty, -3) \\cup (3, +\\infty)$"
+    ],
+    "parameters": {
+      "domain": "Szereg zbieżny dla $|x| > 3$",
+      "series_sum": "$S = \\frac{2x^3}{x-3}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-22T07:51:27.863Z"
+  },
+  {
+    "id": "#2025-marzec-8-4p",
+    "topic": "Kombinatoryka - rozmieszczenia cyfr",
+    "difficulty": 4,
+    "statement": "Rozważamy wszystkie liczby naturalne ośmiocyfrowe, w których zapisie dziesiętnym występuje dokładnie dwa razy cyfra 2 i dokładnie trzy razy cyfra 3. Oblicz, ile jest wszystkich takich liczb.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile pozycji mamy do wypełnienia w liczbie ośmiocyfrowej?",
+        "expression": "Liczba ośmiocyfrowa ma 8 pozycji: _ _ _ _ _ _ _ _",
+        "explanation": "Każda pozycja to miejsce na jedną cyfrę"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie ograniczenia mamy dla pierwszej pozycji liczby naturalnej?",
+        "expression": "Pierwsza cyfra nie może być 0 (liczba naturalna ośmiocyfrowa)",
+        "explanation": "Pierwsza pozycja może zawierać cyfry 1, 2, 3, 4, 5, 6, 7, 8, 9",
+        "why": "To kluczowe ograniczenie - bez niego liczba byłaby krótsza niż 8 cyfr"
+      },
+      {
+        "step": 3,
+        "hint": "Ile cyfr już mamy określonych z warunków zadania?",
+        "expression": "Mamy: 2 cyfry '2' + 3 cyfry '3' = 5 określonych cyfr",
+        "explanation": "Z 8 pozycji, 5 jest już określonych przez warunki zadania"
+      },
+      {
+        "step": 4,
+        "hint": "Ile pozycji pozostaje do wypełnienia innymi cyframi?",
+        "expression": "$8 - 5 = 3$ pozycje pozostają wolne",
+        "explanation": "Te 3 pozycje można wypełnić cyframi różnymi od 2 i 3"
+      },
+      {
+        "step": 5,
+        "hint": "Jak podejść do tego problemu kombinatorycznego?",
+        "expression": "Rozpatrzymy przypadki: pierwsza cyfra to 2, 3, lub inna cyfra",
+        "explanation": "Dzielimy problem na przypadki według pierwszej cyfry",
+        "interactive_choice": {
+          "prompt": "Którą metodą najlepiej rozwiązać ten problem rozmieszczenia cyfr?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć przypadki w zależności od pierwszej cyfry",
+              "feedback": "Świetny wybór! Pierwsza cyfra ma specjalne ograniczenia, więc warto ją rozpatrzyć osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru na permutacje z powtórzeniami bez rozróżniania przypadków",
+              "feedback": "Nie zadziała - pierwsza cyfra nie może być 0, więc nie wszystkie permutacje są dozwolone.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Policzyć wszystkie możliwości i odjąć nieprawidłowe",
+              "feedback": "Możliwe, ale bardziej skomplikowane - lepiej od razu rozpatrzyć przypadki.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podział na przypadki według pierwszej cyfry pozwoli nam uwzględnić ograniczenie, że nie może być 0."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile sposobów jest, gdy pierwsza cyfra to '2'?",
+        "expression": "Przypadek 1: pierwsza cyfra = 2",
+        "explanation": "Zostaje nam rozmieścić: 1 cyfrę '2' i 3 cyfry '3' na 7 pozostałych pozycjach"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozmieścić pozostałe cyfry gdy pierwsza to '2'?",
+        "expression": "Na 7 pozycjach: 1 cyfra '2', 3 cyfry '3', 3 inne cyfry (nie 0, 2, 3)",
+        "explanation": "Pozostałe 3 pozycje wypełniamy cyframi z zbioru {1, 4, 5, 6, 7, 8, 9}"
+      },
+      {
+        "step": 8,
+        "hint": "Ile sposobów wyboru 3 cyfr z 7 dostępnych?",
+        "expression": "Wybór 3 cyfr z {1, 4, 5, 6, 7, 8, 9}: $7^3 = 343$ sposobów",
+        "explanation": "Każdą z 3 pozycji można wypełnić na 7 sposobów (cyfry mogą się powtarzać)"
+      },
+      {
+        "step": 9,
+        "hint": "Ile sposobów rozmieszczenia cyfr 2, 3, 3, 3 na 7 pozycjach?",
+        "expression": "$\\binom{7}{1} \\cdot \\binom{6}{3} = 7 \\cdot 20 = 140$",
+        "explanation": "Wybieramy 1 pozycję dla '2' z 7, potem 3 pozycje dla '3' z pozostałych 6",
+        "interactive_choice": {
+          "prompt": "Jakim wzorem obliczyć liczbę rozmieszczenia 1 cyfry '2' i 3 cyfr '3' na 7 pozycjach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Permutacje z powtórzeniami: $\\frac{7!}{1! \\cdot 3! \\cdot 3!}$",
+              "feedback": "Prawie dobrze, ale mamy tylko 4 określone cyfry (1 dwójka + 3 trójki) na 7 pozycjach.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wybór pozycji: $\\binom{7}{1} \\cdot \\binom{6}{3}$",
+              "feedback": "Doskonale! Wybieramy 1 pozycję dla '2', potem 3 z pozostałych 6 dla '3'.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Permutacje proste: $7!$",
+              "feedback": "Nie - to nie uwzględnia powtarzających się cyfr '3'.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wybieramy pozycje dla określonych cyfr, pozostałe wypełniamy dowolnie."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi przypadek 1 łącznie?",
+        "expression": "Przypadek 1: $140 \\cdot 343 = 48020$",
+        "explanation": "Mnożymy liczbę rozmieszczenia przez liczbę wypełnień pozostałych pozycji"
+      },
+      {
+        "step": 11,
+        "hint": "Ile sposobów jest, gdy pierwsza cyfra to '3'?",
+        "expression": "Przypadek 2: pierwsza cyfra = 3",
+        "explanation": "Zostaje nam rozmieścić: 2 cyfry '2' i 2 cyfry '3' na 7 pozostałych pozycjach"
+      },
+      {
+        "step": 12,
+        "hint": "Jak obliczyć rozmieszczenie dla przypadku 2?",
+        "expression": "$\\binom{7}{2} \\cdot \\binom{5}{2} \\cdot 7^3 = 21 \\cdot 10 \\cdot 343 = 72030$",
+        "explanation": "Wybieramy 2 pozycje dla '2', 2 z pozostałych 5 dla '3', resztę wypełniamy dowolnie"
+      },
+      {
+        "step": 13,
+        "hint": "Ile sposobów gdy pierwsza cyfra nie jest ani 2, ani 3?",
+        "expression": "Przypadek 3: pierwsza cyfra ∈ {1, 4, 5, 6, 7, 8, 9}",
+        "explanation": "7 możliwości dla pierwszej cyfry, na pozostałych 7 pozycjach rozmieszczamy wszystkie cyfry 2 i 3"
+      },
+      {
+        "step": 14,
+        "hint": "Jak obliczyć przypadek 3?",
+        "expression": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2 = 7 \\cdot 21 \\cdot 10 \\cdot 36 = 52920$",
+        "explanation": "7 wyborów pierwszej cyfry, rozmieszczenie cyfr 2 i 3, wypełnienie 2 pozostałych pozycji",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć liczbę sposobów gdy pierwsza cyfra to jedna z {1,4,5,6,7,8,9}?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2$",
+              "feedback": "Prawie! Ale pozostałe 2 pozycje wypełniamy z 6 cyfr (bez 2,3 i bez pierwszej).",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 7^2$",
+              "feedback": "Nie - pozostałe pozycje nie mogą zawierać cyfr 2 i 3, więc mamy mniej opcji.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2$",
+              "feedback": "Tak! 7 wyborów pierwszej cyfry, rozmieszczenie 2 i 3, wypełnienie reszty cyframi {0,1,4,5,6,7,8,9} minus pierwsza.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Pierwsza cyfra: 7 opcji. Pozostałe 2 pozycje: cyfry różne od 2,3 i różne od pierwszej cyfry."
+        }
+      },
+      {
+        "step": 15,
+        "hint": "Jaka jest suma wszystkich przypadków?",
+        "expression": "$48020 + 72030 + 52920 = 172970$",
+        "explanation": "Dodajemy wyniki ze wszystkich trzech przypadków"
+      }
+    ],
+    "solutions": [
+      "172970"
+    ],
+    "parameters": {
+      "constraints": "Liczba ośmiocyfrowa, dokładnie 2 cyfry '2', dokładnie 3 cyfry '3'"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:52:14.604Z"
+  },
+  {
+    "id": "#2025-marzec-9-4p",
+    "topic": "Geometria trójkąta - pole, wysokość, symetralna",
+    "difficulty": 5,
+    "statement": "Dany jest trójkąt ABC o polu równym $8$, w którym $|AB|=4$. Z wierzchołka C poprowadzono wysokość $|CD|$ na bok $|AB|$ trójkąta ABC. Z kąta $\\angle CAB$ poprowadzono odcinek który przecina bok $|BC|$ w punkcie E takim, że punkt E leży na symetralnej odcinka $|AB|$ oraz $|BE|=\\sqrt{13}$. Odcinek $|AE|$ przecina wysokość $|CD|$ w punkcie F i tworzy czworokąt DBEF. Oblicz długość boku $|AC|$ tego trójkąta.",
+    "image": "/zad9marzec2025.png",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wykorzystać dane o polu trójkąta i długości podstawy?",
+        "expression": "$P = \\frac{1}{2} \\cdot |AB| \\cdot |CD| = 8$",
+        "explanation": "Używamy wzoru na pole trójkąta z podstawą i wysokością",
+        "interactive_choice": {
+          "prompt": "Którą właściwość trójkąta wykorzystasz jako pierwszą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na pole: $P = \\frac{1}{2} \\cdot |AB| \\cdot |CD|$",
+              "feedback": "Doskonale! To pozwoli znaleźć wysokość CD.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Twierdzenie Pitagorasa dla trójkąta ACD",
+              "feedback": "Za wcześnie - najpierw potrzebujemy więcej informacji o wysokości.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Właściwości symetralnej odcinka AB",
+              "feedback": "Ważne, ale najpierw ustal podstawowe wymiary trójkąta.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór na pole da nam wysokość, która jest kluczowa dla dalszych obliczeń."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest długość wysokości CD?",
+        "expression": "$8 = \\frac{1}{2} \\cdot 4 \\cdot |CD|$, więc $|CD| = 4$",
+        "explanation": "Obliczamy wysokość z wzoru na pole",
+        "why": "Wysokość CD = 4 będzie podstawą do dalszych obliczeń w układzie współrzędnych."
+      },
+      {
+        "step": 3,
+        "hint": "Jak najlepiej ustawić układ współrzędnych dla tego problemu?",
+        "expression": "Układ: $D = (0, 0)$, $C = (0, 4)$, $A = (-a, 0)$, $B = (4-a, 0)$ gdzie $a$ to odległość $|AD|$",
+        "explanation": "Ustawiamy układ współrzędnych z D w początku",
+        "interactive_choice": {
+          "prompt": "Gdzie umieścić początek układu współrzędnych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W punkcie A, oś x wzdłuż AB",
+              "feedback": "Dobry wybór, ale punkt D nie będzie miał prostych współrzędnych.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "W punkcie D (podstawa wysokości), oś x wzdłuż AB",
+              "feedback": "Świetnie! D=(0,0), C=(0,4), A i B symetrycznie względem osi y.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "W środku odcinka AB",
+              "feedback": "Możliwe, ale komplikuje obliczenia wysokości.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Umieszczenie D w początku układu upraszcza współrzędne kluczowych punktów."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaką właściwość ma punkt E leżący na symetralnej odcinka AB?",
+        "expression": "$|EA| = |EB|$",
+        "explanation": "Każdy punkt symetralnej jest jednakowo odległy od końców odcinka",
+        "why": "Ta właściwość pozwoli nam znaleźć położenie punktu E używając warunków $|EA| = |EB|$ i $|BE| = \\sqrt{13}$."
+      },
+      {
+        "step": 5,
+        "hint": "Jak wykorzystać warunek $|BE| = \\sqrt{13}$ i $|EA| = |EB|$?",
+        "expression": "Jeśli $E = (x, y)$, to $|EA|^2 = |EB|^2$ oraz $|EB|^2 = 13$",
+        "explanation": "Zapisujemy warunki algebraicznie"
+      },
+      {
+        "step": 6,
+        "hint": "Co daje równanie $|EA|^2 = |EB|^2$?",
+        "expression": "$(x+a)^2 + y^2 = (x-(4-a))^2 + y^2$",
+        "explanation": "Rozpisujemy odległości w układzie współrzędnych"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć równanie symetralnej?",
+        "expression": "$(x+a)^2 = (x-4+a)^2$, więc $x = 2-\\frac{a}{2}$",
+        "explanation": "Po rozwinięciu i uproszczeniu otrzymujemy współrzędną x punktu E"
+      },
+      {
+        "step": 8,
+        "hint": "Jak znaleźć współrzędną y punktu E?",
+        "expression": "$|EB|^2 = (2-\\frac{a}{2}-(4-a))^2 + y^2 = (\\frac{a}{2}-2)^2 + y^2 = 13$",
+        "explanation": "Podstawiamy do wzoru na odległość EB"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest współrzędna y punktu E?",
+        "expression": "$y^2 = 13 - (\\frac{a}{2}-2)^2$, więc $y = \\sqrt{13 - (\\frac{a}{2}-2)^2}$",
+        "explanation": "Wyrażamy y przez parametr a"
+      },
+      {
+        "step": 10,
+        "hint": "Jak wykorzystać fakt, że E leży na boku BC?",
+        "expression": "Prosta BC: $\\frac{y}{x-(4-a)} = \\frac{4}{0-(4-a)} = \\frac{-4}{4-a}$",
+        "explanation": "Zapisujemy równanie prostej przechodzącej przez B i C",
+        "interactive_choice": {
+          "prompt": "Jak zapisać warunek współliniowości punktów B, C, E?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Równanie prostej BC: $\\frac{y-0}{x-(4-a)} = \\frac{4-0}{0-(4-a)}$",
+              "feedback": "Dokładnie! To da nam związek między współrzędnymi E.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wektory $\\overrightarrow{BC}$ i $\\overrightarrow{BE}$ są równoległe",
+              "feedback": "Poprawne myślenie, ale równanie prostej jest prostsze.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na pole trójkąta BCE = 0",
+              "feedback": "Możliwe, ale bardziej skomplikowane niż równanie prostej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie prostej BC pozwoli nam znaleźć dokładną wartość parametru a."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Co otrzymujemy podstawiając współrzędne E do równania prostej BC?",
+        "expression": "$\\frac{\\sqrt{13 - (\\frac{a}{2}-2)^2}}{(2-\\frac{a}{2})-(4-a)} = \\frac{-4}{4-a}$",
+        "explanation": "Podstawiamy $E = (2-\\frac{a}{2}, \\sqrt{13 - (\\frac{a}{2}-2)^2})$"
+      },
+      {
+        "step": 12,
+        "hint": "Jak uprościć mianownik po lewej stronie?",
+        "expression": "$(2-\\frac{a}{2})-(4-a) = \\frac{a}{2}-2$, więc równanie: $\\frac{\\sqrt{13 - (\\frac{a}{2}-2)^2}}{\\frac{a}{2}-2} = \\frac{-4}{4-a}$",
+        "explanation": "Upraszczamy wyrażenie w mianowniku"
+      },
+      {
+        "step": 13,
+        "hint": "Co otrzymujemy po przekształceniach algebraicznych?",
+        "expression": "Po podniesieniu do kwadratu i uproszczeniu: $(4-a)^2(13-(\\frac{a}{2}-2)^2) = 16(\\frac{a}{2}-2)^2$",
+        "explanation": "Eliminujemy pierwiastek i ułamki"
+      },
+      {
+        "step": 14,
+        "hint": "Jakie równanie otrzymujemy po rozwinięciu?",
+        "expression": "Po rozwinięciu i uproszczeniu: $a^4 - 16a^3 + 80a^2 - 192a + 144 = 0$",
+        "explanation": "Otrzymujemy równanie czwartego stopnia względem a"
+      },
+      {
+        "step": 15,
+        "hint": "Jak rozłożyć to równanie na czynniki?",
+        "expression": "$(a-2)^2(a^2-12a+36) = (a-2)^2(a-6)^2 = 0$",
+        "explanation": "Równanie ma podwójne pierwiastki: $a = 2$ i $a = 6$"
+      },
+      {
+        "step": 16,
+        "hint": "Które rozwiązanie jest geometrycznie poprawne?",
+        "expression": "Dla $a = 2$: $A = (-2, 0)$, $B = (2, 0)$, więc $|AB| = 4$ ✓",
+        "explanation": "Sprawdzamy zgodność z warunkiem $|AB| = 4$"
+      },
+      {
+        "step": 17,
+        "hint": "Jaka jest długość boku AC?",
+        "expression": "$|AC| = \\sqrt{(-2-0)^2 + (0-4)^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$",
+        "explanation": "Obliczamy odległość między punktami A i C"
+      }
+    ],
+    "solutions": [
+      "$|AC| = 2\\sqrt{5}$"
+    ],
+    "parameters": {
+      "pole": "8",
+      "podstawa": "$|AB| = 4$",
+      "warunek": "$|BE| = \\sqrt{13}$, E na symetralnej AB"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 17,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-22T07:52:58.250Z"
+  },
+  {
+    "id": "#2025-marzec-10-5p",
+    "topic": "Przecięcie paraboli z okręgiem",
+    "difficulty": 5,
+    "statement": "Parabola $y = -x^2 + 4x + 2$ przecina okrąg o równaniu $(x-1)^2 + (y-3)^2 = 10$ w punktach o współrzędnych $(x, y)$. Punktem kratowym nazywamy taki punkt, który w kartezjańskim układzie współrzędnych $(x, y)$ ma obie współrzędne $x$ i $y$ będące liczbami całkowitymi. Oblicz pole trójkąta ograniczonego punktami kratowymi przecięcia paraboli z okręgiem oraz początkiem kartezjańskiego układu współrzędnych.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak znaleźć punkty przecięcia paraboli z okręgiem?",
+        "expression": "Podstawiamy $y = -x^2 + 4x + 2$ do $(x-1)^2 + (y-3)^2 = 10$",
+        "explanation": "Eliminujemy zmienną $y$ przez podstawienie",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do znalezienia punktów przecięcia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić równanie paraboli do równania okręgu",
+              "feedback": "Świetnie! To standardowa metoda - eliminujemy zmienną $y$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwiązać układ równań metodą przeciwnych współczynników",
+              "feedback": "Trudne - równania mają różne stopnie",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Narysować wykresy i odczytać punkty",
+              "feedback": "Nieprecyzyjne - potrzebujemy dokładnych współrzędnych",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $y = -x^2 + 4x + 2$ do równania okręgu da nam równanie z jedną niewiadomą."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po podstawieniu i uproszczeniu?",
+        "expression": "$(x-1)^2 + (-x^2 + 4x + 2 - 3)^2 = 10$",
+        "explanation": "Podstawiamy wyrażenie na $y$ do równania okręgu"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć wyrażenie $-x^2 + 4x + 2 - 3$?",
+        "expression": "$(x-1)^2 + (-x^2 + 4x - 1)^2 = 10$",
+        "explanation": "Upraszczamy wyrażenie w nawiasie"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po rozwinięciu nawiasów?",
+        "expression": "$(x-1)^2 = x^2 - 2x + 1$ oraz $(-x^2 + 4x - 1)^2 = x^4 - 8x^3 + 18x^2 - 8x + 1$",
+        "explanation": "Rozwijamy oba kwadraty",
+        "why": "Drugi nawias to kwadrat trinomialu: $(a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc$"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie równanie otrzymasz po podstawieniu i uporządkowaniu?",
+        "expression": "$x^4 - 8x^3 + 19x^2 - 10x + 2 = 10$",
+        "explanation": "Łączymy wszystkie składniki"
+      },
+      {
+        "step": 6,
+        "hint": "Jak sprowadzić równanie do postaci standardowej?",
+        "expression": "$x^4 - 8x^3 + 19x^2 - 10x - 8 = 0$",
+        "explanation": "Przenosimy 10 na lewą stronę"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwiązać równanie czwartego stopnia?",
+        "expression": "Sprawdzamy $x = 1$: $1 - 8 + 19 - 10 - 8 = -6 \\neq 0$",
+        "explanation": "Pierwsza próba - $x = 1$ nie jest pierwiastkiem",
+        "interactive_choice": {
+          "prompt": "Którą strategię zastosować dla równania $x^4 - 8x^3 + 19x^2 - 10x - 8 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szukać pierwiastków wymiernych metodą prób",
+              "feedback": "Dobry pomysł! Sprawdzamy dzielniki wyrazu wolnego: $\\pm 1, \\pm 2, \\pm 4, \\pm 8$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawienie $t = x^2$ (równanie bikwadratowe)",
+              "feedback": "Nie zadziała - mamy też składniki $x^3$ i $x$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Grupowanie składników",
+              "feedback": "Trudne dla tego wielomianu - lepiej szukać pierwiastków",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla wielomianów całkowitych sprawdzamy pierwiastki wymierne - dzielniki wyrazu wolnego przez dzielniki współczynnika przy najwyższej potędze."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Sprawdź kolejne możliwe pierwiastki wymierne",
+        "expression": "Sprawdzamy $x = 2$: $16 - 64 + 76 - 20 - 8 = 0$ ✓",
+        "explanation": "$x = 2$ jest pierwiastkiem równania"
+      },
+      {
+        "step": 9,
+        "hint": "Jak wykorzystać znaleziony pierwiastek?",
+        "expression": "$x^4 - 8x^3 + 19x^2 - 10x - 8 = (x-2)(x^3 - 6x^2 + 7x + 4)$",
+        "explanation": "Dzielimy wielomian przez $(x-2)$",
+        "why": "Jeśli $x = a$ jest pierwiastkiem, to $(x-a)$ jest czynnikiem wielomianu."
+      },
+      {
+        "step": 10,
+        "hint": "Jakie pierwiastki ma wielomian $x^3 - 6x^2 + 7x + 4$?",
+        "expression": "Sprawdzamy $x = 4$: $64 - 96 + 28 + 4 = 0$ ✓",
+        "explanation": "$x = 4$ jest pierwiastkiem wielomianu trzeciego stopnia"
+      },
+      {
+        "step": 11,
+        "hint": "Jak dalej rozłożyć wielomian?",
+        "expression": "$x^3 - 6x^2 + 7x + 4 = (x-4)(x^2 - 2x - 1)$",
+        "explanation": "Dzielimy przez $(x-4)$"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie pierwiastki ma równanie $x^2 - 2x - 1 = 0$?",
+        "expression": "$x = 1 + \\sqrt{2}$ lub $x = 1 - \\sqrt{2}$",
+        "explanation": "Pierwiastki równania kwadratowego",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać równanie $x^2 - 2x - 1 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na deltę",
+              "feedback": "Dobry wybór! $\\Delta = 4 + 4 = 8$, więc $x = \\frac{2 \\pm 2\\sqrt{2}}{2} = 1 \\pm \\sqrt{2}$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe: $(x-1)^2 = 2$, więc $x = 1 \\pm \\sqrt{2}$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Rozkład na czynniki",
+              "feedback": "Trudne - pierwiastki są niewymierne",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oba pierwiastki $1 + \\sqrt{2}$ i $1 - \\sqrt{2}$ są niewymierne."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Które pierwiastki dają punkty kratowe?",
+        "expression": "Pierwiastki całkowite: $x = 2$ i $x = 4$",
+        "explanation": "Tylko te wartości $x$ mogą dać punkty kratowe",
+        "why": "Punkty kratowe mają współrzędne całkowite. Pierwiastki $1 \\pm \\sqrt{2}$ są niewymierne."
+      },
+      {
+        "step": 14,
+        "hint": "Jakie są współrzędne $y$ dla punktów kratowych?",
+        "expression": "Dla $x = 2$: $y = -4 + 8 + 2 = 6$\nDla $x = 4$: $y = -16 + 16 + 2 = 2$",
+        "explanation": "Podstawiamy do równania paraboli $y = -x^2 + 4x + 2$"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie są punkty kratowe przecięcia?",
+        "expression": "Punkty kratowe: $A(2, 6)$ i $B(4, 2)$",
+        "explanation": "Oba punkty mają współrzędne całkowite"
+      },
+      {
+        "step": 16,
+        "hint": "Jakie są wierzchołki trójkąta?",
+        "expression": "Wierzchołki trójkąta: $O(0, 0)$, $A(2, 6)$, $B(4, 2)$",
+        "explanation": "Trójkąt utworzony przez początek układu i punkty kratowe"
+      },
+      {
+        "step": 17,
+        "hint": "Którym wzorem obliczysz pole trójkąta?",
+        "expression": "$P = \\frac{1}{2}|x_A(y_B - y_O) + x_B(y_O - y_A) + x_O(y_A - y_B)|$",
+        "explanation": "Wzór na pole trójkąta ze współrzędnych wierzchołków",
+        "why": "To wzór determinantowy na pole trójkąta: $P = \\frac{1}{2}|\\det\\begin{pmatrix} x_A & y_A & 1 \\\\ x_B & y_B & 1 \\\\ x_O & y_O & 1 \\end{pmatrix}|$"
+      },
+      {
+        "step": 18,
+        "hint": "Jakie jest pole trójkąta?",
+        "expression": "$P = \\frac{1}{2}|2(2-0) + 4(0-6) + 0(6-2)| = \\frac{1}{2}|4 - 24 + 0| = \\frac{1}{2} \\cdot 20 = 10$",
+        "explanation": "Podstawiamy współrzędne i obliczamy"
+      }
+    ],
+    "solutions": [
+      "Pole trójkąta = 10"
+    ],
+    "parameters": {
+      "parabola": "$y = -x^2 + 4x + 2$",
+      "circle": "$(x-1)^2 + (y-3)^2 = 10$",
+      "intersection_points": "$A(2, 6)$, $B(4, 2)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 18,
+        "stepsWithWhy": 4,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-22T07:53:39.968Z"
+  },
+  {
+    "id": "#2025-marzec-11-6p",
+    "topic": "Równania trygonometryczne z tożsamościami",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $\\sin(2x) = \\frac{2\\tan x}{1 + \\tan^2 x}$ w zbiorze $[-2\\pi, 2\\pi]$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można przekształcić prawą stronę równania?",
+        "expression": "$\\sin(2x) = \\sin(2x)$",
+        "explanation": "Rozpoznajemy że $\\frac{2\\tan x}{1 + \\tan^2 x} = \\sin(2x)$",
+        "why": "To jeden z wzorów na sinus podwójnego kąta: $\\sin(2x) = \\frac{2\\tan x}{1 + \\tan^2 x}$ (gdy $\\cos x \\neq 0$)",
+        "interactive_choice": {
+          "prompt": "Co zrobić z wyrażeniem $\\frac{2\\tan x}{1 + \\tan^2 x}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zastąpić $\\tan x = \\frac{\\sin x}{\\cos x}$ i uprościć",
+              "feedback": "Dobry kierunek, ale będzie dużo rachunków. Sprawdź czy nie ma gotowego wzoru!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozpoznać wzór na $\\sin(2x)$ w postaci tangensowej",
+              "feedback": "Świetnie! To wzór $\\sin(2x) = \\frac{2\\tan x}{1 + \\tan^2 x}$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pomnożyć licznik i mianownik przez $\\cos^2 x$",
+              "feedback": "Możliwe, ale skomplikowane. Lepiej użyć gotowego wzoru trygonometrycznego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Prawa strona to wzór na sinus podwójnego kąta w postaci tangensowej."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jakie równanie otrzymujemy po zastosowaniu wzoru?",
+        "expression": "$\\sin(2x) = \\sin(2x)$",
+        "explanation": "Równanie jest tożsamością dla wszystkich $x$ gdzie obie strony są określone"
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy wzór $\\frac{2\\tan x}{1 + \\tan^2 x}$ nie jest określony?",
+        "expression": "$\\cos x \\neq 0$, czyli $x \\neq \\frac{\\pi}{2} + k\\pi$",
+        "explanation": "Wzór tangensowy wymaga aby cosinus był różny od zera",
+        "interactive_choice": {
+          "prompt": "Dla jakich wartości $x$ wzór $\\frac{2\\tan x}{1 + \\tan^2 x}$ nie istnieje?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdy $\\sin x = 0$",
+              "feedback": "Nie - gdy sinus jest zero, tangens też jest zero i wzór działa.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Gdy $\\cos x = 0$",
+              "feedback": "Dokładnie! Tangens nie istnieje gdy cosinus równa się zero.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Gdy $1 + \\tan^2 x = 0$",
+              "feedback": "Niemożliwe - $1 + \\tan^2 x \\geq 1$ zawsze gdy tangens istnieje.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Tangens nie istnieje gdy $\\cos x = 0$, czyli dla $x = \\frac{\\pi}{2} + k\\pi$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Które wartości z przedziału $[-2\\pi, 2\\pi]$ należy wykluczyć?",
+        "expression": "$x \\neq -\\frac{3\\pi}{2}, -\\frac{\\pi}{2}, \\frac{\\pi}{2}, \\frac{3\\pi}{2}$",
+        "explanation": "Wykluczamy punkty gdzie $\\cos x = 0$ w danym przedziale"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są rozwiązania równania tożsamościowego?",
+        "expression": "Rozwiązania: $x \\in [-2\\pi, 2\\pi] \\setminus \\{-\\frac{3\\pi}{2}, -\\frac{\\pi}{2}, \\frac{\\pi}{2}, \\frac{3\\pi}{2}\\}$",
+        "explanation": "Wszystkie wartości z przedziału oprócz wykluczonych punktów",
+        "interactive_choice": {
+          "prompt": "Skoro $\\sin(2x) = \\sin(2x)$ to rozwiązaniami są:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie liczby rzeczywiste",
+              "feedback": "Nie - musimy wykluczyć punkty gdzie wzór nie istnieje.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie $x$ z dziedziny, czyli $x \\neq \\frac{\\pi}{2} + k\\pi$",
+              "feedback": "Tak! Tożsamość zachodzi wszędzie gdzie obie strony istnieją.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko $x = 0$",
+              "feedback": "Nie - to tożsamość, więc prawdziwa dla nieskończenie wielu wartości.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie tożsamościowe ma rozwiązania wszędzie gdzie obie strony są określone."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak zapisać odpowiedź w postaci przedziałów?",
+        "expression": "$x \\in [-2\\pi, -\\frac{3\\pi}{2}) \\cup (-\\frac{3\\pi}{2}, -\\frac{\\pi}{2}) \\cup (-\\frac{\\pi}{2}, \\frac{\\pi}{2}) \\cup (\\frac{\\pi}{2}, \\frac{3\\pi}{2}) \\cup (\\frac{3\\pi}{2}, 2\\pi]$",
+        "explanation": "Przedział $[-2\\pi, 2\\pi]$ z wykluczeniem czterech punktów"
+      }
+    ],
+    "solutions": [
+      "$x \\in [-2\\pi, 2\\pi] \\setminus \\{-\\frac{3\\pi}{2}, -\\frac{\\pi}{2}, \\frac{\\pi}{2}, \\frac{3\\pi}{2}\\}$"
+    ],
+    "parameters": {
+      "domain": "$x \\in [-2\\pi, 2\\pi]$",
+      "excluded_points": "$x \\neq \\frac{\\pi}{2} + k\\pi$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:54:07.747Z"
+  },
+  {
+    "id": "#2025-marzec-12-6p",
+    "topic": "Równania kwadratowe z parametrem",
+    "difficulty": 5,
+    "statement": "Wyznacz wszystkie wartości parametru $m$ dla których równanie $(m+1) \\cdot x^2+(m^2-1) \\cdot x+m^2+3m+2=0$ ma dwa różne rozwiązania rzeczywiste $x_1, x_2$ spełniające warunki: $x_1 \\neq 0$, $x_2 \\neq 0$ oraz $\\frac{1}{x_1^3}+\\frac{1}{x_2^3} \\geq -10$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie warunki musi spełniać równanie kwadratowe aby mieć dwa różne rozwiązania rzeczywiste?",
+        "expression": "Warunki: $m+1 \\neq 0$ oraz $\\Delta > 0$",
+        "explanation": "Ustalamy podstawowe warunki istnienia dwóch różnych rozwiązań",
+        "interactive_choice": {
+          "prompt": "Co jest kluczowe dla istnienia dwóch różnych rozwiązań rzeczywistych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik przy $x^2$ różny od zera i delta dodatnia",
+              "feedback": "Doskonale! To są podstawowe warunki: $a \\neq 0$ i $\\Delta > 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko delta dodatnia",
+              "feedback": "Nie wystarczy - jeśli $a = 0$, to nie mamy równania kwadratowego",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Współczynniki muszą być dodatnie",
+              "feedback": "Nie - znak współczynników nie wpływa na liczbę rozwiązań",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla równania kwadratowego potrzebujemy $a \\neq 0$ i $\\Delta > 0$ dla dwóch różnych rozwiązań."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Z jakiego warunku wynika że $m \\neq -1$?",
+        "expression": "$m+1 \\neq 0 \\Rightarrow m \\neq -1$",
+        "explanation": "Współczynnik przy $x^2$ musi być różny od zera"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć deltę dla tego równania?",
+        "expression": "$\\Delta = (m^2-1)^2 - 4(m+1)(m^2+3m+2)$",
+        "explanation": "Delta dla równania $ax^2+bx+c=0$ to $b^2-4ac$",
+        "why": "Rozwijamy wzór na deltę podstawiając nasze współczynniki: $a=m+1$, $b=m^2-1$, $c=m^2+3m+2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć wyrażenie $(m^2-1)^2$?",
+        "expression": "$(m^2-1)^2 = m^4 - 2m^2 + 1$",
+        "explanation": "Rozwijamy kwadrat różnicy"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozłożyć $m^2+3m+2$ na czynniki?",
+        "expression": "$m^2+3m+2 = (m+1)(m+2)$",
+        "explanation": "Rozkład trójmianu kwadratowego"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć $4(m+1)(m^2+3m+2)$?",
+        "expression": "$4(m+1)(m^2+3m+2) = 4(m+1)^2(m+2)$",
+        "explanation": "Podstawiamy rozkład i grupujemy"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest uproszczona postać delty?",
+        "expression": "$\\Delta = m^4 - 2m^2 + 1 - 4(m+1)^2(m+2)$",
+        "explanation": "Po rozwinięciu i uproszczeniu otrzymujemy $\\Delta = -3m^3 - 9m^2 - 15m - 7$"
+      },
+      {
+        "step": 8,
+        "hint": "Kiedy rozwiązania są różne od zera?",
+        "expression": "$m^2+3m+2 \\neq 0 \\Rightarrow (m+1)(m+2) \\neq 0$",
+        "explanation": "Warunek niezerowości rozwiązań",
+        "interactive_choice": {
+          "prompt": "Co gwarantuje że $x_1 \\neq 0$ i $x_2 \\neq 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyraz wolny równania różny od zera",
+              "feedback": "Tak! Jeśli $c \\neq 0$, to $x_1 \\cdot x_2 = \\frac{c}{a} \\neq 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik przy $x$ różny od zera",
+              "feedback": "Nie - to nie gwarantuje że rozwiązania są niezerowe",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Delta dodatnia",
+              "feedback": "Delta dodatnia daje różne rozwiązania, ale nie gwarantuje że są niezerowe",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Jeśli wyraz wolny $c \\neq 0$, to iloczyn pierwiastków $x_1 \\cdot x_2 = \\frac{c}{a} \\neq 0$, więc oba są niezerowe."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jakie wartości $m$ wykluczamy z warunku niezerowości?",
+        "expression": "$m \\neq -1$ i $m \\neq -2$",
+        "explanation": "Z warunków $m+1 \\neq 0$ i $m+2 \\neq 0$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak przekształcić warunek $\\frac{1}{x_1^3}+\\frac{1}{x_2^3} \\geq -10$?",
+        "expression": "$\\frac{1}{x_1^3}+\\frac{1}{x_2^3} = \\frac{x_1^3+x_2^3}{x_1^3 x_2^3}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika"
+      },
+      {
+        "step": 11,
+        "hint": "Jak wyrazić $x_1^3+x_2^3$ przez sumy i iloczyny pierwiastków?",
+        "expression": "$x_1^3+x_2^3 = (x_1+x_2)^3 - 3x_1x_2(x_1+x_2)$",
+        "explanation": "Używamy wzoru na sumę sześcianów",
+        "interactive_choice": {
+          "prompt": "Który wzór użyć dla $x_1^3+x_2^3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$x_1^3+x_2^3 = (x_1+x_2)^3 - 3x_1x_2(x_1+x_2)$",
+              "feedback": "Świetnie! To wzór na sumę sześcianów przez wzory Vieta",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x_1^3+x_2^3 = (x_1+x_2)(x_1^2-x_1x_2+x_2^2)$",
+              "feedback": "Poprawny wzór, ale trudniejszy do zastosowania ze wzorami Vieta",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$x_1^3+x_2^3 = (x_1+x_2)^3$",
+              "feedback": "Nie - to nie uwzględnia składników mieszanych",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwszy wzór łatwo przekształcić używając wzorów Vieta: $x_1+x_2$ i $x_1x_2$."
+        }
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są wzory Vieta dla naszego równania?",
+        "expression": "$x_1+x_2 = -\\frac{m^2-1}{m+1}$ oraz $x_1x_2 = \\frac{m^2+3m+2}{m+1}$",
+        "explanation": "Wzory Vieta: suma pierwiastków $-\\frac{b}{a}$, iloczyn $\\frac{c}{a}$",
+        "why": "Te wzory pozwolą nam wyrazić warunek przez parametr $m$. Zauważ że $\\frac{m^2+3m+2}{m+1} = \\frac{(m+1)(m+2)}{m+1} = m+2$ dla $m \\neq -1$."
+      },
+      {
+        "step": 13,
+        "hint": "Jak uprościć $x_1+x_2$ gdy $m \\neq -1$?",
+        "expression": "$x_1+x_2 = -\\frac{m^2-1}{m+1} = -\\frac{(m-1)(m+1)}{m+1} = -(m-1) = 1-m$",
+        "explanation": "Upraszczamy ułamek przez $(m+1)$"
+      },
+      {
+        "step": 14,
+        "hint": "Jaka jest wartość $x_1^3+x_2^3$ po podstawieniu?",
+        "expression": "$x_1^3+x_2^3 = (1-m)^3 - 3(m+2)(1-m) = (1-m)[(1-m)^2 - 3(m+2)]$",
+        "explanation": "Podstawiamy i wyłączamy wspólny czynnik $(1-m)$"
+      },
+      {
+        "step": 15,
+        "hint": "Jak uprościć $(1-m)^2 - 3(m+2)$?",
+        "expression": "$(1-m)^2 - 3(m+2) = 1-2m+m^2-3m-6 = m^2-5m-5$",
+        "explanation": "Rozwijamy i porządkujemy"
+      },
+      {
+        "step": 16,
+        "hint": "Jaka jest końcowa postać warunku?",
+        "expression": "$\\frac{(1-m)(m^2-5m-5)}{(m+2)^3} \\geq -10$",
+        "explanation": "Podstawiamy do nierówności $\\frac{1}{x_1^3}+\\frac{1}{x_2^3} \\geq -10$"
+      },
+      {
+        "step": 17,
+        "hint": "Jak rozwiązać tę nierówność wymierną?",
+        "expression": "$(1-m)(m^2-5m-5) + 10(m+2)^3 \\geq 0$",
+        "explanation": "Przenosimy wszystko na jedną stronę i analizujemy znak"
+      },
+      {
+        "step": 18,
+        "hint": "Jakie są końcowe warunki na parametr $m$?",
+        "expression": "Po rozwiązaniu: $m \\in (-\\infty, -2) \\cup (-2, -1) \\cup (-1, k]$ gdzie $k$ to największy pierwiastek wielomianu",
+        "explanation": "Łączymy wszystkie warunki: $\\Delta > 0$, $m \\neq -1, -2$ oraz warunek na sumę odwrotności sześcianów"
+      }
+    ],
+    "solutions": [
+      "$m \\in (-\\infty, -2) \\cup (-2, -1) \\cup (-1, 1]$"
+    ],
+    "parameters": {
+      "conditions": [
+        "$\\Delta > 0$",
+        "$m \\neq -1, -2$",
+        "$\\frac{1}{x_1^3}+\\frac{1}{x_2^3} \\geq -10$"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 18,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:54:58.896Z"
+  },
+  {
+    "id": "#2025-marzec-13.1-2p",
+    "topic": "Geometria przestrzenna - stożki",
+    "difficulty": 5,
+    "statement": "Rozważamy wszystkie stożki o polu powierzchni bocznej $9\\sqrt{3}\\pi$, których promień podstawy ma długość nie większą niż $2\\sqrt{3}$. Wykaż, że objętość $V$ każdego z takich stożków w zależności od długości $r$ promienia podstawy jest określona wzorem $V(r) = \\frac{\\pi}{3}\\sqrt{243r^2 - r^6}$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wielkości charakteryzują stożek i jak są ze sobą powiązane?",
+        "expression": "Stożek: promień podstawy $r$, wysokość $h$, tworząca $l$, gdzie $l^2 = r^2 + h^2$",
+        "explanation": "Wprowadzamy oznaczenia dla podstawowych wielkości stożka"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest wzór na pole powierzchni bocznej stożka?",
+        "expression": "$S_{boczna} = \\pi r l = 9\\sqrt{3}\\pi$",
+        "explanation": "Wykorzystujemy dany warunek na pole powierzchni bocznej",
+        "interactive_choice": {
+          "prompt": "Które wyrażenie opisuje pole powierzchni bocznej stożka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$S_{boczna} = \\pi r^2$",
+              "feedback": "To jest pole podstawy, nie powierzchni bocznej!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$S_{boczna} = \\pi r l$",
+              "feedback": "Dokładnie! To wzór na pole powierzchni bocznej stożka.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$S_{boczna} = 2\\pi r l$",
+              "feedback": "To byłoby pole powierzchni bocznej walca, nie stożka.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pole powierzchni bocznej stożka to $\\pi r l$, gdzie $l$ to długość tworzącej."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyznaczyć długość tworzącej z danego pola powierzchni bocznej?",
+        "expression": "$\\pi r l = 9\\sqrt{3}\\pi$, więc $l = \\frac{9\\sqrt{3}}{r}$",
+        "explanation": "Wyrażamy długość tworzącej przez promień podstawy",
+        "why": "To kluczowy krok - wyrażamy jedną niewiadomą przez drugą, co pozwoli nam znaleźć wysokość."
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać związek między tworzącą, promieniem i wysokością?",
+        "expression": "$l^2 = r^2 + h^2$, więc $h^2 = l^2 - r^2$",
+        "explanation": "Używamy twierdzenia Pitagorasa w trójkącie osiowym stożka"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymamy podstawiając wyrażenie na $l$?",
+        "expression": "$h^2 = \\left(\\frac{9\\sqrt{3}}{r}\\right)^2 - r^2 = \\frac{243}{r^2} - r^2$",
+        "explanation": "Podstawiamy wyrażenie na $l$ i obliczamy $h^2$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podstawić $l = \\frac{9\\sqrt{3}}{r}$ do wzoru $h^2 = l^2 - r^2$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić bezpośrednio i uprościć",
+              "feedback": "Świetnie! To da nam $h^2 = \\frac{243}{r^2} - r^2$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw znaleźć konkretną wartość $r$",
+              "feedback": "Nie - szukamy wzoru ogólnego dla dowolnego $r$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić wzór na $l$ do innej postaci",
+              "feedback": "Niepotrzebne - obecna postać jest najlepsza do podstawienia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Bezpośrednie podstawienie pozwoli nam wyrazić wysokość przez promień."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć wyrażenie $\\frac{243}{r^2} - r^2$?",
+        "expression": "$h^2 = \\frac{243 - r^4}{r^2}$",
+        "explanation": "Sprowadzamy do wspólnego mianownika"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest wzór na objętość stożka?",
+        "expression": "$V = \\frac{1}{3}\\pi r^2 h$",
+        "explanation": "Wzór na objętość stożka",
+        "why": "To podstawowy wzór, który połączymy z naszym wyrażeniem na wysokość."
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymamy podstawiając nasze wyrażenie na wysokość?",
+        "expression": "$V = \\frac{1}{3}\\pi r^2 \\cdot \\frac{\\sqrt{243 - r^4}}{r} = \\frac{\\pi r}{3}\\sqrt{243 - r^4}$",
+        "explanation": "Podstawiamy i upraszczamy wyrażenie",
+        "interactive_choice": {
+          "prompt": "Jak podstawić $h = \\sqrt{\\frac{243 - r^4}{r^2}}$ do wzoru na objętość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$V = \\frac{1}{3}\\pi r^2 \\cdot \\frac{\\sqrt{243 - r^4}}{r}$",
+              "feedback": "Dokładnie! Wyciągnąłeś $r$ z pod pierwiastka w mianowniku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$V = \\frac{1}{3}\\pi r^2 \\sqrt{\\frac{243 - r^4}{r^2}}$",
+              "feedback": "Poprawne, ale można to uprościć wyciągając $r$ z pierwiastka.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$V = \\frac{1}{3}\\pi r \\sqrt{243 - r^4}$",
+              "feedback": "Błąd - zgubiłeś jeden czynnik $r$ przy upraszczaniu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Można uprościć $\\sqrt{\\frac{243-r^4}{r^2}} = \\frac{\\sqrt{243-r^4}}{r}$ dla $r > 0$."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak przekształcić $\\sqrt{243 - r^4}$ do postaci z zadania?",
+        "expression": "$\\sqrt{243 - r^4} = \\sqrt{r^2(\\frac{243}{r^2} - r^2)} = r\\sqrt{\\frac{243}{r^2} - r^2}$",
+        "explanation": "Wyłączamy $r^2$ spod pierwiastka"
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć wyrażenie $\\frac{243}{r^2} - r^2$?",
+        "expression": "$\\frac{243}{r^2} - r^2 = \\frac{243 - r^4}{r^2} = \\frac{243r^2 - r^6}{r^4}$",
+        "explanation": "Mnożymy licznik i mianownik przez $r^2$"
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest końcowa postać wzoru na objętość?",
+        "expression": "$V = \\frac{\\pi r}{3} \\cdot r\\sqrt{\\frac{243r^2 - r^6}{r^4}} = \\frac{\\pi r^2}{3} \\cdot \\frac{\\sqrt{243r^2 - r^6}}{r^2} = \\frac{\\pi}{3}\\sqrt{243r^2 - r^6}$",
+        "explanation": "Otrzymujemy wzór z zadania po uproszczeniu",
+        "why": "To końcowy rezultat - wzór łączy pole powierzchni bocznej z objętością przez promień podstawy."
+      }
+    ],
+    "solutions": [
+      "$V(r) = \\frac{\\pi}{3}\\sqrt{243r^2 - r^6}$ dla $r \\leq 2\\sqrt{3}$"
+    ],
+    "parameters": {
+      "constraints": "$0 < r \\leq 2\\sqrt{3}$",
+      "surface_area": "$S_{boczna} = 9\\sqrt{3}\\pi$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 11,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-22T07:55:33.410Z"
+  },
+  {
+    "id": "#2025-marzec-13.2-4p",
+    "topic": "Optymalizacja funkcji - stożek o maksymalnej objętości",
+    "difficulty": 5,
+    "statement": "Rozważamy wszystkie stożki o polu powierzchni bocznej $9\\sqrt{3}\\pi$, których promień podstawy ma długość nie większą niż $2\\sqrt{3}$. Objętość $V$ stożka w zależności od długości $r$ promienia podstawy jest określona wzorem $V(r)=\\frac{\\pi}{3} \\sqrt{243 r^2-r^6}$ dla $r \\in (0,2\\sqrt{3}]$. Wyznacz długość $r$ promienia podstawy tego z rozważanych stożków, którego objętość jest największa. Oblicz tę największą objętość.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki typ zadania mamy przed sobą?",
+        "expression": "Szukamy maksimum funkcji $V(r)=\\frac{\\pi}{3} \\sqrt{243 r^2-r^6}$ na $(0,2\\sqrt{3}]$",
+        "explanation": "To zadanie optymalizacyjne - znajdziemy pochodną i punkty krytyczne",
+        "interactive_choice": {
+          "prompt": "Jak podejść do znalezienia maksimum funkcji $V(r)=\\frac{\\pi}{3} \\sqrt{243 r^2-r^6}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić wartości na końcach przedziału",
+              "feedback": "To ważne, ale nie wystarczy - maksimum może być wewnątrz przedziału",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Znaleźć pochodną i przyrównać do zera",
+              "feedback": "Dokładnie! To standardowa metoda znajdowania ekstremów funkcji",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić kilka wartości i porównać",
+              "feedback": "Nieprecyzyjne - możemy przegapić dokładne maksimum",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla funkcji ciągłej na przedziale domkniętym maksimum może być w punkcie krytycznym lub na końcach."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć różniczkowanie funkcji z pierwiastkiem?",
+        "expression": "Maksimalizujemy $[V(r)]^2 = \\frac{\\pi^2}{9}(243 r^2-r^6)$",
+        "explanation": "Wystarczy zmaksimalizować $f(r) = 243r^2 - r^6$",
+        "why": "Pierwiastek jest funkcją rosnącą, więc maksimum $\\sqrt{g(r)}$ jest tam gdzie maksimum $g(r)$.",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do różniczkowania $V(r)=\\frac{\\pi}{3} \\sqrt{243 r^2-r^6}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Różniczkować bezpośrednio używając reguły łańcuchowej",
+              "feedback": "Możliwe, ale skomplikowane - będzie dużo obliczeń",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Maksimalizować $[V(r)]^2$ zamiast $V(r)$",
+              "feedback": "Świetny pomysł! Funkcja kwadratowa ma maksimum w tym samym miejscu",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $u = r^2$ i uprościć",
+              "feedback": "Ciekawe podejście, ale maksimalizacja kwadratu jest prostsza",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Jeśli $V(r) > 0$, to $V(r)$ i $[V(r)]^2$ mają maksimum w tym samym punkcie."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest pochodna funkcji $f(r) = 243r^2 - r^6$?",
+        "expression": "$f'(r) = 486r - 6r^5 = 6r(81 - r^4)$",
+        "explanation": "Różniczkujemy każdy składnik osobno"
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy pochodna równa się zero?",
+        "expression": "$f'(r) = 6r(81 - r^4) = 0$",
+        "explanation": "Szukamy punktów krytycznych przyrównując pochodną do zera"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są rozwiązania równania $6r(81 - r^4) = 0$?",
+        "expression": "$r = 0$ lub $81 - r^4 = 0$",
+        "explanation": "Iloczyn jest zerem gdy jeden z czynników jest zerem"
+      },
+      {
+        "step": 6,
+        "hint": "Które rozwiązania należą do dziedziny $(0, 2\\sqrt{3}]$?",
+        "expression": "Z $r^4 = 81$ otrzymujemy $r = 3$ (jedyny punkt krytyczny w dziedzinie)",
+        "explanation": "Punkt $r = 3$ leży w przedziale $(0, 2\\sqrt{3}]$ bo $3 < 2\\sqrt{3}$",
+        "interactive_choice": {
+          "prompt": "Które punkty krytyczne leżą w przedziale $(0, 2\\sqrt{3}]$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $r = 0$",
+              "feedback": "Nie - $r = 0$ nie należy do przedziału otwartego $(0, 2\\sqrt{3}]$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Tylko $r = 3$ z równania $r^4 = 81$",
+              "feedback": "Sprawdź: $3 > 2\\sqrt{3} \\approx 3.46$? Nie, $3 < 2\\sqrt{3}$!",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie pierwiastki równania $r^4 = 81$",
+              "feedback": "Nie - tylko dodatnie pierwiastki, i tylko te w dziedzinie",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Z $r^4 = 81$ mamy $r = 3$ (dodatni pierwiastek). Sprawdzamy: $3 < 2\\sqrt{3} \\approx 3.46$ ✓"
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak sprawdzić czy $r = 3$ daje maksimum?",
+        "expression": "$f''(r) = 486 - 30r^4$, więc $f''(3) = 486 - 30 \\cdot 81 = 486 - 2430 = -1944 < 0$",
+        "explanation": "Druga pochodna ujemna potwierdza maksimum lokalne",
+        "why": "Test drugiej pochodnej: jeśli $f''(r_0) < 0$, to $r_0$ jest maksimum lokalnym."
+      },
+      {
+        "step": 8,
+        "hint": "Czy trzeba sprawdzić wartości na końcach przedziału?",
+        "expression": "Na końcu $r = 2\\sqrt{3}$: $f(2\\sqrt{3}) = 243 \\cdot 12 - (2\\sqrt{3})^6 = 2916 - 729 = 2187$",
+        "explanation": "Wartość na prawym końcu przedziału"
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest wartość funkcji w punkcie krytycznym?",
+        "expression": "$f(3) = 243 \\cdot 9 - 3^6 = 2187 - 729 = 1458$",
+        "explanation": "Wartość w punkcie krytycznym jest mniejsza niż na końcu!"
+      },
+      {
+        "step": 10,
+        "hint": "Gdzie funkcja osiąga maksimum globalne?",
+        "expression": "Maksimum globalne w $r = 2\\sqrt{3}$ (na końcu przedziału)",
+        "explanation": "Porównujemy: $f(3) = 1458 < f(2\\sqrt{3}) = 2187$",
+        "why": "Maksimum funkcji na przedziale domkniętym może być w punkcie krytycznym lub na końcach."
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest maksymalna objętość stożka?",
+        "expression": "$V_{max} = V(2\\sqrt{3}) = \\frac{\\pi}{3}\\sqrt{2187} = \\frac{\\pi}{3} \\cdot 3\\sqrt{243} = \\pi\\sqrt{243} = 9\\sqrt{3}\\pi$",
+        "explanation": "Obliczamy maksymalną objętość podstawiając optymalny promień"
+      }
+    ],
+    "solutions": [
+      "Długość promienia podstawy: $r = 2\\sqrt{3}$",
+      "Maksymalna objętość: $V_{max} = 9\\sqrt{3}\\pi$"
+    ],
+    "parameters": {
+      "domain": "$r \\in (0, 2\\sqrt{3}]$",
+      "constraint": "Pole powierzchni bocznej = $9\\sqrt{3}\\pi$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 11,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-22T07:56:10.167Z"
+  }
+]

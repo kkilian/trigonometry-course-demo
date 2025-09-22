@@ -15,6 +15,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
   const [hasSeenSkipHint, setHasSeenSkipHint] = useState(
     localStorage.getItem('hasSeenSkipHint') === 'true'
   );
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -104,6 +106,23 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
     window.scrollTo(0, 0);
   }, [problem.id]);
 
+  // Handle scroll events for header animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const scrolled = scrollPosition > 20; // Header starts shrinking after 20px
+      const progress = Math.min(scrollPosition / 200, 1); // Full animation at 200px
+
+      setIsScrolled(scrolled);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Automatically mark skip hint as seen after 10 seconds
   useEffect(() => {
     if (!hasSeenSkipHint && onSkip) {
@@ -154,10 +173,18 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
   return (
     <div className="min-h-screen bg-stone-100">
       {/* Sticky Header with Back Button */}
-      <div className="sticky top-0 z-40 bg-stone-100 border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
+      <div className={`sticky top-0 z-40 border-b border-stone-200 transition-all duration-300 ${
+        isScrolled
+          ? 'shadow-md bg-stone-100/95 backdrop-blur-sm'
+          : 'bg-stone-100'
+      }`}>
+        <div className={`max-w-7xl mx-auto px-4 md:px-8 transition-all duration-300 ${
+          isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'
+        }`}>
           {/* Back Button and Skip Button */}
-          <div className="mb-4 flex items-center justify-between">
+          <div className={`flex items-center justify-between transition-all duration-300 ${
+            isScrolled ? 'mb-2' : 'mb-4'
+          }`}>
             <button
               onClick={onBack}
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
@@ -204,23 +231,98 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
           
           {/* Header */}
           <header>
-            <div className="mb-2 flex items-center justify-between">
+            <div className={`flex items-center justify-between transition-all duration-300 ${
+              isScrolled ? 'mb-1' : 'mb-2'
+            }`}>
               <div>
-                <span className="text-xs font-medium text-stone-600 uppercase tracking-wider">
+                <span className={`font-medium text-stone-600 uppercase tracking-wider transition-all duration-300 ${
+                  isScrolled ? 'text-[10px]' : 'text-xs'
+                }`}>
                   {problem.topic?.replace(/_/g, ' ')}
                 </span>
-                <span className="text-xs text-stone-500 font-mono ml-2 md:ml-4 hidden md:inline">
-                  {problem.id}
-                </span>
+                {!isScrolled && (
+                  <span className="text-xs text-stone-500 font-mono ml-2 md:ml-4 hidden md:inline">
+                    {problem.id}
+                  </span>
+                )}
               </div>
             </div>
-            
-            <h1 className="text-xl md:text-3xl font-bold text-stone-900 leading-relaxed mb-2">
-              <MathRenderer content={problem.statement} />
-            </h1>
-            
-            {/* Statement explanation button and content */}
-            {problem.statement_explanation && (
+
+            {/* When scrolled and has image - side by side layout */}
+            {isScrolled && problem.image ? (
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h1 className="font-bold text-stone-900 leading-relaxed text-base md:text-lg mb-1">
+                    <MathRenderer content={problem.statement} />
+                  </h1>
+                </div>
+                <div className="flex-shrink-0">
+                  <img
+                    src={problem.image}
+                    alt={`Rysunek do zadania ${problem.id || 'maturalnego'}`}
+                    className="rounded-lg border border-stone-200 shadow-sm bg-white p-1"
+                    style={{
+                      maxHeight: '150px',
+                      width: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="p-1 rounded-full hover:bg-stone-200 transition-colors text-stone-500 hover:text-stone-700 flex-shrink-0"
+                  title="Przewiń do góry"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7 7 7M5 18l7-7 7 7" />
+                  </svg>
+                </button>
+              </div>
+            ) : (
+              /* Normal layout (not scrolled or no image) */
+              <>
+                <div className="flex items-start justify-between gap-2">
+                  <h1 className={`font-bold text-stone-900 leading-relaxed transition-all duration-300 flex-1 ${
+                    isScrolled
+                      ? 'text-base md:text-lg mb-1'
+                      : 'text-xl md:text-3xl mb-2'
+                  }`}>
+                    <MathRenderer content={problem.statement} />
+                  </h1>
+                  {isScrolled && (
+                    <button
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      className="p-1 rounded-full hover:bg-stone-200 transition-colors text-stone-500 hover:text-stone-700"
+                      title="Przewiń do góry"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7 7 7M5 18l7-7 7 7" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+
+                {/* Problem image below statement when not scrolled */}
+                {problem.image && !isScrolled && (
+                  <div className="my-6 flex justify-center">
+                    <div className="max-w-2xl">
+                      <img
+                        src={problem.image}
+                        alt={`Rysunek do zadania ${problem.id || 'maturalnego'}`}
+                        className="w-full h-auto rounded-lg border border-stone-200 shadow-sm bg-white p-2"
+                        style={{ maxHeight: '500px', objectFit: 'contain' }}
+                      />
+                      <p className="text-center text-xs text-stone-500 mt-2">
+                        Rysunek do zadania
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* Statement explanation button and content - hide when scrolled */}
+            {problem.statement_explanation && !isScrolled && (
               <div className="mt-4">
                 <button
                   onClick={toggleStatementExplanation}
@@ -247,6 +349,26 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
               </div>
             )}
           </header>
+
+          {/* Compact progress bar when scrolled */}
+          {isScrolled && (
+            <div className="mt-2">
+              <div className="flex items-center gap-2">
+                <div className="flex-1 bg-stone-200 rounded-full h-1.5">
+                  <div
+                    className="h-1.5 rounded-full transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(to right, #facc15, #f97316)',
+                      width: `${progress}%`
+                    }}
+                  />
+                </div>
+                <span className="text-[10px] text-stone-500 font-medium">
+                  {completedSteps.size}/{problem.steps?.length || 0}
+                </span>
+              </div>
+            </div>
+          )}
 
           {/* Progress and Next Problem */}
           <div className="mt-6 flex items-start justify-between gap-4">
