@@ -8487,52 +8487,52 @@
       },
       {
         "step": 8,
-        "hint": "Jakimi cyframi możemy wypełnić pozostałe 3 pozycje? Zastanów się: czy mamy 4 czy 7 opcji?",
-        "expression": "Dostępnych cyfr na pozostałe pozycje: tylko nieparzyste $\\{1,3,5,9\\} = 4$ cyfry",
-        "explanation": "Ponieważ mamy mieć dokładnie jedną cyfrę parzystą (już użytą), pozostałe mogą być tylko nieparzyste",
+        "hint": "Jakimi cyframi możemy wypełnić pozostałe 3 pozycje?",
+        "expression": "Dostępnych cyfr na pozostałe pozycje: $9 - 2 = 7$",
+        "explanation": "Wykluczamy cyfrę 7 i jedną użytą cyfrę parzystą",
         "interactive_choice": {
           "prompt": "Które cyfry możemy użyć na pozostałych 3 pozycjach?",
           "options": [
             {
               "id": "A",
               "text": "Wszystkie cyfry oprócz 0, 7 i wybranej cyfry parzystej",
-              "feedback": "Nie! Jeśli ma być dokładnie jedna cyfra parzysta, pozostałe muszą być nieparzyste.",
-              "is_correct": false
+              "feedback": "Dokładnie! Zostaje nam 7 cyfr: 5 nieparzystych + 3 parzyste.",
+              "is_correct": true
             },
             {
               "id": "B",
               "text": "Tylko cyfry nieparzyste oprócz 7",
-              "feedback": "Dokładnie! Zostają nam 4 cyfry nieparzyste: {1,3,5,9}.",
-              "is_correct": true
+              "feedback": "Nie - możemy użyć pozostałych cyfr parzystych (3 z 4).",
+              "is_correct": false
             },
             {
               "id": "C",
               "text": "Wszystkie cyfry oprócz 0 i 7",
-              "feedback": "Nie - to by dało więcej niż jedną cyfrę parzystą w liczbie.",
+              "feedback": "Nie - musimy wykluczyć też już użytą cyfrę parzystą.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Warunek 'dokładnie jedna cyfra parzysta' oznacza, że pozostałe pozycje: tylko $\\{1,3,5,9\\}$."
+          "explanation_after": "Po użyciu cyfry 7 i jednej parzystej zostaje 7 cyfr: $\\{1,3,5,9\\}$ + 3 pozostałe parzyste."
         }
       },
       {
         "step": 9,
         "hint": "Na ile sposobów można wypełnić pozostałe 3 pozycje?",
-        "expression": "Sposobów wypełnienia 3 pozycji: $4^3 = 64$",
-        "explanation": "Na każdej z 3 pozycji mamy 4 możliwe cyfry nieparzyste",
+        "expression": "Sposobów wypełnienia 3 pozycji: $7^3 = 343$",
+        "explanation": "Na każdej z 3 pozycji mamy 7 możliwych cyfr",
         "why": "Cyfry mogą się powtarzać na różnych pozycjach, więc to wariacje z powtórzeniami."
       },
       {
         "step": 10,
         "hint": "Jak połączyć wszystkie obliczone elementy?",
-        "expression": "Wynik: $20 \\times 4 \\times 64 = 5120$",
+        "expression": "Wynik: $20 \\times 4 \\times 343 = 27440$",
         "explanation": "Mnożymy: sposoby wyboru pozycji × cyfry parzyste × wypełnienie reszty",
         "interactive_choice": {
           "prompt": "Jak obliczyć końcowy wynik łącząc wszystkie elementy?",
           "options": [
             {
               "id": "A",
-              "text": "Pozycje × cyfry parzyste × wypełnienie: $20 \\times 4 \\times 64$",
+              "text": "Pozycje × cyfry parzyste × wypełnienie: $20 \\times 4 \\times 343$",
               "feedback": "Perfekcyjnie! Mnożymy wszystkie niezależne wybory.",
               "is_correct": true
             },
@@ -8544,7 +8544,7 @@
             },
             {
               "id": "C",
-              "text": "Tylko pozycje × wypełnienie: $20 \\times 64$",
+              "text": "Tylko pozycje × wypełnienie: $20 \\times 343$",
               "feedback": "Zapomniałeś o wyborze konkretnej cyfry parzystej!",
               "is_correct": false
             }
@@ -8554,7 +8554,7 @@
       }
     ],
     "solutions": [
-      "$5120$"
+      "$27440$"
     ],
     "parameters": {
       "constraints": "pięciocyfrowe, bez zera, dokładnie jedna cyfra 7, dokładnie jedna cyfra parzysta"
@@ -11909,10 +11909,7 @@
       "warnings": [],
       "stats": {
         "totalSteps": 3,
-        "stepsWithWhy": 2,
-        "stepsWithChoice": 0,
-        "totalOptions": 0,
-        "correctOptions": 0
+        "stepsWithWhy": 2
       }
     },
     "timestamp": "2025-09-22T12:20:41.016Z"

@@ -5,7 +5,8 @@ const MaturaStartHere = ({
   problems,
   onSelectProblem,
   completedProblems = new Set(),
-  onBack
+  onBack,
+  examTitle = "Matura - Marzec 2025"
 }) => {
   const [suggestedProblems, setSuggestedProblems] = useState([]);
   const [showAllProblems, setShowAllProblems] = useState(false);
@@ -119,7 +120,7 @@ const MaturaStartHere = ({
           {/* Header */}
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-              Matura - Marzec 2025
+              {examTitle}
             </h1>
             {/* Progress Bar */}
             {transformedProblems && transformedProblems.length > 0 && (

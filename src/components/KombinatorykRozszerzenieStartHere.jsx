@@ -110,15 +110,7 @@ const KombinatorykRozszerzenieStartHere = ({
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-sm text-stone-600">
                   <span>Postęp</span>
-                  <div className="flex items-center gap-4">
-                    <span>{completedProblems.size} z {problems.length} zadań</span>
-                    <button
-                      onClick={() => setShowAllProblems(!showAllProblems)}
-                      className="w-2 h-2 rounded-full bg-stone-400 hover:bg-stone-600 transition-colors opacity-40 hover:opacity-100"
-                      title={showAllProblems ? 'Ukryj listę' : 'Pokaż wszystkie zadania'}
-                    >
-                    </button>
-                  </div>
+                  <span>{completedProblems.size} z {problems.length} zadań</span>
                 </div>
                 <div className="w-full bg-stone-200 rounded-full h-1.5">
                   <div
@@ -128,6 +120,30 @@ const KombinatorykRozszerzenieStartHere = ({
                       width: `${problems.length > 0 ? (completedProblems.size / problems.length) * 100 : 0}%`
                     }}
                   />
+                </div>
+
+                {/* Toggle Buttons - SOTA FUNCTIONALITY */}
+                <div className="flex gap-2 mt-4">
+                  <button
+                    onClick={() => setShowAllProblems(false)}
+                    className={`px-8 py-2.5 rounded-full text-sm font-medium transition-all ${
+                      !showAllProblems
+                        ? 'bg-white text-stone-900 border border-stone-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.05)]'
+                        : 'bg-transparent text-stone-500 border border-transparent hover:text-stone-700'
+                    }`}
+                  >
+                    Sugerowane zadania
+                  </button>
+                  <button
+                    onClick={() => setShowAllProblems(true)}
+                    className={`px-8 py-2.5 rounded-full text-sm font-medium transition-all ${
+                      showAllProblems
+                        ? 'bg-white text-stone-900 border border-stone-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.05)]'
+                        : 'bg-transparent text-stone-500 border border-transparent hover:text-stone-700'
+                    }`}
+                  >
+                    Wszystkie zadania ({problems.length})
+                  </button>
                 </div>
               </div>
             )}

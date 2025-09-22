@@ -1,0 +1,220 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\geometry{margin=2.5cm}
+
+\title{Metodologia generowania zadań maturalnych\\
+\large Pełne pokrycie wymagań CKE}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Proces zapewnienia pełnego pokrycia wymagań}
+
+\subsection{Krok 1: Analiza wymagań egzaminacyjnych CKE}
+
+Dla każdego działu należy zidentyfikować wymagania szczegółowe z podstawy programowej:
+
+\subsubsection{Poziom podstawowy}
+\begin{itemize}
+    \item P1 -- Wymagania podstawowe (definicje, proste operacje)
+    \item P2 -- Rozwiązywanie równań podstawowych
+    \item P3 -- Rozwiązywanie nierówności podstawowych
+    \item P4 -- Interpretacja i zastosowanie
+\end{itemize}
+
+\subsubsection{Poziom rozszerzony}
+\begin{itemize}
+    \item R1 -- Równania złożone
+    \item R2 -- Nierówności złożone i metody zaawansowane
+    \item R3 -- Zadania z parametrem
+    \item R4 -- Łączenie z innymi działami
+\end{itemize}
+
+\subsection{Krok 2: Tworzenie matrycy pokrycia}
+
+Matryca pokrycia to tabela krzyżowa gdzie:
+\begin{itemize}
+    \item \textbf{Wiersze}: konkretne wymagania z podstawy programowej
+    \item \textbf{Kolumny}: wygenerowane zadania
+    \item \textbf{Komórki}: oznaczenie które zadanie sprawdza które wymaganie
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Typ zadania} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P4} & \textbf{R1} & \textbf{R2} & \textbf{R3} & \textbf{R4} & \textbf{Liczba} \\
+\hline
+Podstawowe & $\checkmark$ & & & & & & & & 5 \\
+Równania proste & $\checkmark$ & $\checkmark$ & & & & & & & 7 \\
+Nierówności proste & $\checkmark$ & & $\checkmark$ & $\checkmark$ & & & & & 8 \\
+Równania złożone & $\checkmark$ & & & & $\checkmark$ & & & & 8 \\
+Metoda zaawansowana & $\checkmark$ & & & $\checkmark$ & & $\checkmark$ & & & 10 \\
+Z parametrem & $\checkmark$ & & & & & & $\checkmark$ & & 7 \\
+Zadania łączone & & & & & & & & $\checkmark$ & 5 \\
+\hline
+\textbf{SUMA} & & & & & & & & & \textbf{50} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Krok 3: Określenie minimalnej liczby zadań}
+
+\subsubsection{Zasada minimalnego pokrycia}
+\begin{itemize}
+    \item Każde wymaganie musi być pokryte przez \textbf{minimum 3 zadania}
+    \item Zadania mogą pokrywać więcej niż jedno wymaganie
+    \item Cel: minimalizacja liczby zadań przy zachowaniu pełnego pokrycia
+\end{itemize}
+
+\subsubsection{Rekomendowana liczba zadań}
+\begin{itemize}
+    \item \textbf{Poziom podstawowy}: 25--30 zadań
+    \item \textbf{Poziom rozszerzony}: dodatkowo 20--25 zadań
+    \item \textbf{RAZEM}: 45--55 zadań dla pełnego pokrycia
+\end{itemize}
+
+\subsection{Krok 4: Planowanie rozkładu trudności}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|l|}
+\hline
+\textbf{Poziom} & \textbf{Liczba zadań} & \textbf{Procent} & \textbf{Charakterystyka} \\
+\hline
+Łatwy & 15 & 30\% & Jedno przekształcenie, oczywista dziedzina \\
+Średni & 25 & 50\% & 2--3 przekształcenia, standardowe metody \\
+Trudny & 10 & 20\% & Wieloetapowe, parametr, łączenie działów \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Krok 5: System walidacji pokrycia}
+
+\subsubsection{Checklist weryfikacyjny}
+\begin{itemize}
+    \item[$\square$] Każde wymaganie pokryte min. 3 zadaniami
+    \item[$\square$] Rozkład trudności: 30\% łatwe, 50\% średnie, 20\% trudne
+    \item[$\square$] Min. 20\% zadań z kontekstem praktycznym
+    \item[$\square$] Każdy typ błędu uczniowskiego zaadresowany
+    \item[$\square$] Progresja trudności w ramach każdego typu
+\end{itemize}
+
+\subsubsection{Metryki pokrycia}
+\begin{itemize}
+    \item \textbf{Coverage ratio}: liczba pokrytych wymagań / wszystkie wymagania (cel: 100\%)
+    \item \textbf{Redundancja}: średnia liczba zadań na wymaganie (cel: 3--5)
+    \item \textbf{Balans}: odchylenie standardowe liczby zadań między wymaganiami (cel: $<2$)
+\end{itemize}
+
+\section{Schemat generowania zadań}
+
+\subsection{Etap 1: Losowanie struktury}
+\begin{enumerate}
+    \item Wybór typu zadania (równanie/nierówność)
+    \item Określenie złożoności wyrażenia (prosty/złożony ułamek)
+    \item Decyzja o dodaniu parametru
+\end{enumerate}
+
+\subsection{Etap 2: Dobór współczynników}
+\begin{enumerate}
+    \item Unikanie skomplikowanych obliczeń (preferowane małe liczby całkowite)
+    \item Zapewnienie sensownych rozwiązań (nie za dużo rozwiązań)
+    \item Kontrola dziedziny (miejsca zerowe mianownika)
+\end{enumerate}
+
+\subsection{Etap 3: Weryfikacja rozwiązalności}
+\begin{enumerate}
+    \item Sprawdzenie czy zadanie ma rozwiązanie
+    \item Weryfikacja poziomu trudności
+    \item Test czasu rozwiązania (zgodny z normami CKE)
+\end{enumerate}
+
+\subsection{Etap 4: Generowanie dystraktorów}
+\begin{enumerate}
+    \item Typowe błędy (zapomnienie o dziedzinie)
+    \item Błędy znaku przy mnożeniu nierówności
+    \item Gubienie rozwiązań
+    \item Błędne przekształcenia algebraiczne
+\end{enumerate}
+
+\subsection{Etap 5: Dodanie kontekstu (opcjonalne)}
+\begin{enumerate}
+    \item 30\% zadań z treścią praktyczną
+    \item Konteksty: fizyka, ekonomia, geometria
+    \item Zachowanie realizmu matematycznego
+\end{enumerate}
+
+\section{Przykład zastosowania dla działu ``Równania i nierówności wymierne''}
+
+\subsection{Zidentyfikowane wymagania}
+\begin{itemize}
+    \item P1: Wyznaczanie dziedziny wyrażenia wymiernego
+    \item P2: Rozwiązywanie równań wymiernych sprowadzalnych do liniowych
+    \item P3: Rozwiązywanie prostych nierówności wymiernych
+    \item P4: Interpretacja rozwiązań na osi liczbowej
+    \item R1: Równania wymierne prowadzące do kwadratowych/wielomianowych
+    \item R2: Stosowanie metody przedziałów dla złożonych nierówności
+    \item R3: Rozwiązywanie równań i nierówności z parametrem
+    \item R4: Łączenie równań wymiernych z innymi działami
+\end{itemize}
+
+\subsection{Rozkład 50 zadań}
+\begin{longtable}{|l|l|c|}
+\hline
+\textbf{Blok} & \textbf{Opis} & \textbf{Liczba zadań} \\
+\hline
+\endhead
+Dziedzina & Proste i złożone wyrażenia wymierne & 5 \\
+Równania liniowe & Typ $\frac{ax+b}{cx+d} = k$ & 7 \\
+Nierówności proste & Typ $\frac{1}{x-a} > 0$ & 8 \\
+Równania kwadratowe & Sprowadzalne do $ax^2+bx+c=0$ & 8 \\
+Metoda przedziałów & Iloczyn wielu czynników & 10 \\
+Zadania z parametrem & Dyskusja rozwiązań & 7 \\
+Zadania łączone & Z funkcją kwadratową, trygonometrią, ciągami & 5 \\
+\hline
+\textbf{SUMA} & & \textbf{50} \\
+\hline
+\end{longtable}
+
+\subsection{Typowe błędy do zaadresowania}
+\begin{enumerate}
+    \item \textbf{Zapominanie o dziedzinie} -- minimum 5 zadań
+    \item \textbf{Błędne mnożenie przez mianownik} -- minimum 3 zadania
+    \item \textbf{Zmiana znaku nierówności} -- minimum 4 zadania
+    \item \textbf{Błędy w metodzie przedziałów} -- cały blok 10 zadań
+    \item \textbf{Gubienie rozwiązań} -- zadania z parametrem
+\end{enumerate}
+
+\section{Proces iteracyjnego uzupełniania}
+
+\begin{enumerate}
+    \item Wygeneruj pierwsze 30 zadań według planu
+    \item Sprawdź matrycę pokrycia
+    \item Zidentyfikuj luki w pokryciu wymagań
+    \item Dogeneruj brakujące typy (15--25 zadań)
+    \item Walidacja z arkuszami maturalnymi z ostatnich 5 lat
+    \item Korekta i finalne dostosowanie
+\end{enumerate}
+
+\section{Podsumowanie}
+
+Ten proces zapewnia:
+\begin{itemize}
+    \item \textbf{100\% pokrycie wymagań CKE}
+    \item \textbf{Optymalną liczbę zadań} (bez nadmiarowej redundancji)
+    \item \textbf{Zgodność z rzeczywistymi arkuszami maturalnymi}
+    \item \textbf{Adresowanie typowych błędów uczniowskich}
+    \item \textbf{Możliwość systematycznej weryfikacji pokrycia}
+\end{itemize}
+
+\end{document}

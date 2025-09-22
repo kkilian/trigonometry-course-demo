@@ -79,10 +79,13 @@ const WelcomeScreen = ({ onSelectMode }) => {
       disabled: false
     },
     {
-      id: 'matura',
-      title: 'Matura - Marzec 2025',
-      description: 'Próbny egzamin maturalny z marca 2025 - matematyka rozszerzona',
-      problemCount: maturaProblems.length
+      id: 'matura-2025-topics',
+      title: 'Matura 2025',
+      description: 'Wszystkie sesje egzaminacyjne 2025 - marzec, maj, czerwiec',
+      problemCount: maturaProblems.length,
+      hasSubmenu: true,
+      topicsCount: 3,
+      isNew: true
     },
     {
       id: 'statystyka',
