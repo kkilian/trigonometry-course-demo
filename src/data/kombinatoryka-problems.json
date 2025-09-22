@@ -8,13 +8,13 @@
       {
         "step": 1,
         "hint": "Ile pięter ma do wyboru każda osoba?",
-        "expression": "Każda z 5 osób może wysiąść na jednym z 8 pięter",
-        "explanation": "Wieżowiec ma 8 pięter, więc każda osoba ma 8 możliwości wyboru"
+        "expression": "Każda z $5$ osób może wysiąść na jednym z $8$ pięter",
+        "explanation": "Wieżowiec ma $8$ pięter, więc każda osoba ma $8$ możliwości wyboru"
       },
       {
         "step": 2,
         "hint": "Czy wybory poszczególnych osób wpływają na siebie nawzajem?",
-        "expression": "Wybory są niezależne - każda osoba ma 8 opcji",
+        "expression": "Wybory są niezależne - każda osoba ma $8$ opcji",
         "explanation": "Nie ma ograniczeń - kilka osób może wysiąść na tym samym piętrze",
         "interactive_choice": {
           "prompt": "Jak interpretować fakt, że każda osoba wybiera piętro dowolnie?",
@@ -44,16 +44,16 @@
       {
         "step": 3,
         "hint": "Jaki typ problemu kombinatorycznego to jest?",
-        "expression": "Wariacje z powtórzeniami: $8^5$",
-        "explanation": "Wzór na wariacje z powtórzeniami k-elementowe ze zbioru n-elementowego",
-        "why": "Każda z 5 osób (pozycji) może wybrać jedno z 8 pięter (elementów), z możliwością powtórzeń.",
+        "expression": "Wariacje z powtórzeniami: $8^{5}$",
+        "explanation": "Wzór na wariacje z powtórzeniami k-elementowe ze zbioru $n$-elementowego",
+        "why": "Każda z $5$ osób (pozycji) może wybrać jedno z $8$ pięter (elementów), z możliwością powtórzeń.",
         "interactive_choice": {
           "prompt": "Którą metodę kombinatoryczną zastosować do tego problemu?",
           "options": [
             {
               "id": "A",
               "text": "Wariacje z powtórzeniami",
-              "feedback": "Świetnie! Mamy 5 osób (pozycji) i 8 pięter (elementów) z możliwością powtórzeń.",
+              "feedback": "Świetnie! Mamy $5$ osób (pozycji) i $8$ pięter (elementów) z możliwością powtórzeń.",
               "is_correct": true
             },
             {
@@ -75,33 +75,33 @@
       {
         "step": 4,
         "hint": "Jak zastosować regułę iloczynu do tego problemu?",
-        "expression": "Osoba 1: 8 możliwości, Osoba 2: 8 możliwości, ..., Osoba 5: 8 możliwości",
+        "expression": "Osoba 1: $8$ możliwości, Osoba 2: $8$ możliwości, ..., Osoba 5: $8$ możliwości",
         "explanation": "Każda osoba ma niezależnie 8 wyborów"
       },
       {
         "step": 5,
         "hint": "Ile wynosi iloczyn $8 \\times 8 \\times 8 \\times 8 \\times 8$?",
-        "expression": "$8^5 = 8 \\times 8 \\times 8 \\times 8 \\times 8$",
+        "expression": "$8^{5} = 8$ \\times 8 \\times 8 \\times 8 \\times 8$",
         "explanation": "Obliczamy potęgę piątą liczby 8",
         "interactive_choice": {
           "prompt": "Jak najłatwiej obliczyć $8^5$?",
           "options": [
             {
               "id": "A",
-              "text": "Obliczyć krok po kroku: $8^2 = 64$, $8^3 = 512$, itd.",
+              "text": "Obliczyć krok po kroku: $8^{2} = 64$, $8^{3} = 512$, itd.",
               "feedback": "Dobra metoda - systematyczne podejście daje pewność wyniku.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Użyć wzoru $(2^3)^5 = 2^{15}$",
-              "feedback": "Sprytnie! $8 = 2^3$, więc $8^5 = 2^{15} = 32768$.",
+              "text": "Użyć wzoru $($2^{3}$)^5 = 2^{15}$",
+              "feedback": "Sprytnie! $8 = 2^{3}$, więc $8^{5} = 2^{15}$ = 32768$.",
               "is_correct": true
             },
             {
               "id": "C",
               "text": "Pomnożyć $8 \\times 5 = 40$",
-              "feedback": "Nie - to nie jest mnożenie, tylko potęgowanie $8^5$.",
+              "feedback": "Nie - to nie jest mnożenie, tylko potęgowanie $8^{5}$.",
               "is_correct": false
             }
           ],
@@ -117,7 +117,7 @@
       {
         "step": 7,
         "hint": "Ile jest wszystkich możliwych sposobów wysiadania?",
-        "expression": "Liczba sposobów = $32768$",
+        "expression": "Liczba $sposobów = 32768$",
         "explanation": "Otrzymujemy ostateczną odpowiedź"
       }
     ],
@@ -153,14 +153,14 @@
       {
         "step": 1,
         "hint": "Co dokładnie musimy policzyć w tym zadaniu?",
-        "expression": "Każda z 5 osób może wysiąść na jednym z 3 pięter (4., 5. lub 6.)",
-        "explanation": "Analizujemy sytuację - mamy 5 osób i 3 możliwe piętra do wyboru"
+        "expression": "Każda z $5$ osób może wysiąść na jednym z $3$ pięter (4., 5. lub 6.)",
+        "explanation": "Analizujemy sytuację - mamy $5$ osób i 3 możliwe piętra do wyboru"
       },
       {
         "step": 2,
         "hint": "Czy kolejność osób ma znaczenie w tym problemie?",
-        "expression": "Problem: przypisać każdej z 5 osób jedno z 3 pięter",
-        "explanation": "Każda osoba ma 3 możliwości wyboru piętra",
+        "expression": "Problem: przypisać każdej z $5$ osób jedno z $3$ pięter",
+        "explanation": "Każda osoba ma $3$ możliwości wyboru piętra",
         "interactive_choice": {
           "prompt": "Jak interpretować sformułowanie 'pomijamy kolejność wysiadania z windy'?",
           "options": [
@@ -189,7 +189,7 @@
       {
         "step": 3,
         "hint": "Jaką metodę kombinatoryczną zastosować?",
-        "expression": "Stosujemy wzór na wariacje z powtórzeniami: $n^k$",
+        "expression": "Stosujemy wzór na wariacje z powtórzeniami: $n^{k}$",
         "explanation": "Mamy $n = 3$ piętra i $k = 5$ osób do rozmieszczenia",
         "why": "Wariacje z powtórzeniami to sytuacje gdzie każdy obiekt może trafić do dowolnej grupy, niezależnie od innych.",
         "interactive_choice": {
@@ -198,7 +198,7 @@
             {
               "id": "A",
               "text": "Wariacje z powtórzeniami $V_n^k = n^k$",
-              "feedback": "Świetnie! Każda osoba może wybrać dowolne piętro - to właśnie $3^5$.",
+              "feedback": "Świetnie! Każda osoba może wybrać dowolne piętro - to właśnie $3^{5}$.",
               "is_correct": true
             },
             {
@@ -220,20 +220,20 @@
       {
         "step": 4,
         "hint": "Ile możliwości ma pierwsza osoba?",
-        "expression": "Pierwsza osoba: 3 możliwości (piętro 4, 5 lub 6)",
+        "expression": "Pierwsza osoba: $3$ możliwości (piętro 4, 5 lub 6)",
         "explanation": "Każda osoba może wybrać dowolne z trzech pięter"
       },
       {
         "step": 5,
         "hint": "Czy wybór pierwszej osoby wpływa na możliwości pozostałych?",
-        "expression": "Druga osoba: również 3 możliwości (niezależnie od pierwszej)",
+        "expression": "Druga osoba: również $3$ możliwości (niezależnie od pierwszej)",
         "explanation": "Powtórzenia są dozwolone - na jednym piętrze może wysiąść więcej osób"
       },
       {
         "step": 6,
         "hint": "Jak obliczyć całkowitą liczbę sposobów?",
-        "expression": "$3^5 = 3 \\times 3 \\times 3 \\times 3 \\times 3$",
-        "explanation": "Każda z 5 osób ma 3 niezależne możliwości",
+        "expression": "$3^{5} = 3$ \\times 3 \\times 3 \\times 3 \\times 3$",
+        "explanation": "Każda z $5$ osób ma 3 niezależne możliwości",
         "interactive_choice": {
           "prompt": "Jak połączyć wybory wszystkich pięciu osób?",
           "options": [
@@ -245,7 +245,7 @@
             },
             {
               "id": "B",
-              "text": "Pomnożyć: $3 \\times 3 \\times 3 \\times 3 \\times 3 = 3^5$",
+              "text": "Pomnożyć: $3 \\times 3 \\times 3 \\times 3 \\times $3 = 3^{5}$",
               "feedback": "Dokładnie! Zasada mnożenia - każdy wybór jest niezależny.",
               "is_correct": true
             },
@@ -261,9 +261,9 @@
       },
       {
         "step": 7,
-        "hint": "Ile wynosi $3^5$?",
-        "expression": "$3^5 = 243$",
-        "explanation": "Obliczamy potęgę: $3^5 = 243$"
+        "hint": "Ile wynosi $3^{5}$?",
+        "expression": "$3^{5} = 243$",
+        "explanation": "Obliczamy potęgę: $3^{5} = 243$"
       }
     ],
     "solutions": [
@@ -298,14 +298,14 @@
       {
         "step": 1,
         "hint": "Co oznacza warunek, że żadne dwie osoby nie wysiadają na tym samym piętrze?",
-        "expression": "Każda z 5 osób musi wysiąść na innym piętrze spośród 8 dostępnych pięter",
+        "expression": "Każda z $5$ osób musi wysiąść na innym piętrze spośród 8 dostępnych pięter",
         "explanation": "To oznacza, że wybieramy 5 różnych pięter z 8 możliwych i przypisujemy je osobom"
       },
       {
         "step": 2,
         "hint": "Czy kolejność przypisania osób do pięter ma znaczenie?",
-        "expression": "To zadanie na wariacje bez powtórzeń: $V_8^5$",
-        "explanation": "Wybieramy 5 pięter z 8 i przypisujemy je konkretnym osobom",
+        "expression": "To zadanie na wariacje bez powtórzeń: $V_$8^{5}$",
+        "explanation": "Wybieramy $5$ pięter z 8 i przypisujemy je konkretnym osobom",
         "interactive_choice": {
           "prompt": "Jak interpretować frazę 'pomijamy kolejność wysiadania z windy'?",
           "options": [
@@ -334,7 +334,7 @@
       {
         "step": 3,
         "hint": "Jak obliczyć liczbę wariacji bez powtórzeń?",
-        "expression": "$V_8^5 = \\frac{8!}{3!}$",
+        "expression": "$V_$8^{5} = \\frac{8!}{3!}$",
         "explanation": "Stosujemy wzór na wariacje bez powtórzeń",
         "why": "Wariacje bez powtórzeń to wybór k elementów z n, gdzie kolejność ma znaczenie i nie ma powtórzeń.",
         "interactive_choice": {
@@ -342,19 +342,19 @@
           "options": [
             {
               "id": "A",
-              "text": "$V_8^5 = \\frac{8!}{5!}$",
+              "text": "$V_$8^{5} = \\frac{8!}{5!}$",
               "feedback": "Nie, to byłoby $\\frac{8!}{(8-5)!} = \\frac{8!}{3!}$",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "$V_8^5 = \\frac{8!}{(8-5)!} = \\frac{8!}{3!}$",
+              "text": "$V_$8^{5} = \\frac{8!}{(8-5)!}$ = \\frac{8!}{3!}$",
               "feedback": "Świetnie! To jest poprawny wzór na wariacje bez powtórzeń",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "$V_8^5 = 8 \\cdot 5$",
+              "text": "$V_$8^{5} = 8$ \\cdot 5$",
               "feedback": "To zbyt proste - nie uwzględnia wszystkich możliwości wyboru",
               "is_correct": false
             }
@@ -435,8 +435,8 @@
       {
         "step": 1,
         "hint": "Ile pięter jest dostępnych dla wysiadania?",
-        "expression": "Piętro 1, 2, 3, 4, 5, 6, 7, 8 - razem 8 pięter",
-        "explanation": "Każda z 5 osób może wysiąść na dowolnym z 8 pięter"
+        "expression": "Piętro 1, 2, 3, 4, 5, 6, 7, 8 - razem $8$ pięter",
+        "explanation": "Każda z $5$ osób może wysiąść na dowolnym z $8$ pięter"
       },
       {
         "step": 2,
@@ -450,7 +450,7 @@
             {
               "id": "A",
               "text": "Bezpośrednio liczyć przypadki z osobami na 7. piętrze",
-              "feedback": "Możliwe, ale bardzo skomplikowane - trzeba rozpatrywać 1, 2, 3, 4 lub 5 osób na 7. piętrze",
+              "feedback": "Możliwe, ale bardzo skomplikowane - trzeba rozpatrywać 1, 2, 3, 4 lub $5$ osób na 7. piętrze",
               "is_correct": false
             },
             {
@@ -471,39 +471,39 @@
       },
       {
         "step": 3,
-        "hint": "Na ile sposobów 5 osób może wysiąść na 8 piętrach bez ograniczeń?",
-        "expression": "Każda osoba ma 8 wyborów, więc $8^5$ sposobów",
-        "explanation": "Każda z 5 osób niezależnie wybiera jedno z 8 pięter"
+        "hint": "Na ile sposobów $5$ osób może wysiąść na 8 piętrach bez ograniczeń?",
+        "expression": "Każda osoba ma $8$ wyborów, więc $8^{5}$ sposobów",
+        "explanation": "Każda z $5$ osób niezależnie wybiera jedno z $8$ pięter"
       },
       {
         "step": 4,
-        "hint": "Ile wynosi $8^5$?",
-        "expression": "$8^5 = 32768$",
+        "hint": "Ile wynosi $8^{5}$?",
+        "expression": "$8^{5} = 32768$",
         "explanation": "Obliczamy całkowitą liczbę sposobów"
       },
       {
         "step": 5,
-        "hint": "Na ile sposobów 5 osób może wysiąść, jeśli NIKT nie wysiada na 7. piętrze?",
-        "expression": "Każda osoba ma 7 wyborów, więc $7^5$ sposobów",
-        "explanation": "5 osób, każda wybiera z 7 dostępnych pięter (bez 7. piętra)",
+        "hint": "Na ile sposobów $5$ osób może wysiąść, jeśli NIKT nie wysiada na 7. piętrze?",
+        "expression": "Każda osoba ma $7$ wyborów, więc $7^{5}$ sposobów",
+        "explanation": "$5$ osób, każda wybiera z 7 dostępnych pięter (bez 7. piętra)",
         "interactive_choice": {
           "prompt": "Ile pięter jest dostępnych, gdy wykluczamy 7. piętro?",
           "options": [
             {
               "id": "A",
-              "text": "7 pięter (wszystkie oprócz 7.)",
+              "text": "$7$ pięter (wszystkie oprócz 7.)",
               "feedback": "Dokładnie! Zostają piętra 1, 2, 3, 4, 5, 6, 8",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "6 pięter (1-6)",
+              "text": "$6$ pięter (1-6)",
               "feedback": "Nie - zapominasz o 8. piętrze, które nadal jest dostępne",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "8 pięter (bez zmian)",
+              "text": "$8$ pięter (bez zmian)",
               "feedback": "Nie - wykluczamy 7. piętro, więc zostaje mniej opcji",
               "is_correct": false
             }
@@ -513,33 +513,33 @@
       },
       {
         "step": 6,
-        "hint": "Ile wynosi $7^5$?",
-        "expression": "$7^5 = 16807$",
+        "hint": "Ile wynosi $7^{5}$?",
+        "expression": "$7^{5} = 16807$",
         "explanation": "Obliczamy liczbę sposobów bez nikogo na 7. piętrze"
       },
       {
         "step": 7,
         "hint": "Jaka jest różnica między wszystkimi sposobami a sposobami bez nikogo na 7. piętrze?",
-        "expression": "$8^5 - 7^5 = 32768 - 16807 = 15961$",
+        "expression": "$8^{5} - 7^{5} = 32768$ - 16807 = 15961$",
         "explanation": "Stosujemy zasadę dopełnienia",
         "interactive_choice": {
           "prompt": "Jak obliczyć liczbę sposobów z co najmniej jedną osobą na 7. piętrze?",
           "options": [
             {
               "id": "A",
-              "text": "$8^5 + 7^5$",
+              "text": "$8^{5} + 7^{5}$",
               "feedback": "Nie - to by dodawało przypadki, a nie odejmowało niepożądane",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "$8^5 - 7^5$",
+              "text": "$8^{5} - 7^{5}$",
               "feedback": "Perfekcyjnie! Wszystkie sposoby minus te bez nikogo na 7. piętrze",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "$7^5 - 8^5$",
+              "text": "$7^{5} - 8^{5}$",
               "feedback": "Nie - to dałoby liczbę ujemną, co nie ma sensu",
               "is_correct": false
             }
@@ -586,7 +586,7 @@
       {
         "step": 2,
         "hint": "Jaki typ problemu kombinatorycznego to jest?",
-        "expression": "Szukamy liczby wariacji bez powtórzeń: $V_6^4$",
+        "expression": "Szukamy liczby wariacji bez powtórzeń: $V_$6^{4}$",
         "explanation": "Wybieramy 4 różne oceny z 6 możliwych i przypisujemy je 4 uczniom",
         "interactive_choice": {
           "prompt": "Jak podejść do tego problemu przyporządkowania ocen?",
@@ -610,13 +610,13 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "To wariacje bez powtórzeń: $V_6^4$ - wybieramy 4 różne oceny z 6 dostępnych i przypisujemy je uczniom."
+          "explanation_after": "To wariacje bez powtórzeń: $V_$6^{4}$ - wybieramy 4 różne oceny z 6 dostępnych i przypisujemy je uczniom."
         }
       },
       {
         "step": 3,
-        "hint": "Jak obliczyć liczbę wariacji $V_6^4$?",
-        "expression": "$V_6^4 = \\frac{6!}{2!} = 6 \\cdot 5 \\cdot 4 \\cdot 3$",
+        "hint": "Jak obliczyć liczbę wariacji $V_$6^{4}$?",
+        "expression": "$V_$6^{4} = \\frac{6!}{2!}$ = 6 \\cdot 5 \\cdot 4 \\cdot 3$",
         "explanation": "Używamy wzoru na wariacje bez powtórzeń",
         "why": "Wariacje bez powtórzeń to wybór k elementów z n, gdzie kolejność ma znaczenie i elementy się nie powtarzają.",
         "interactive_choice": {
@@ -624,19 +624,19 @@
           "options": [
             {
               "id": "A",
-              "text": "$V_6^4 = \\frac{6!}{4!}$",
+              "text": "$V_$6^{4} = \\frac{6!}{4!}$",
               "feedback": "Nie - to byłoby $\\frac{6!}{(6-4)!} = \\frac{6!}{2!}$",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "$V_6^4 = \\frac{6!}{(6-4)!} = \\frac{6!}{2!}$",
+              "text": "$V_$6^{4} = \\frac{6!}{(6-4)!}$ = \\frac{6!}{2!}$",
               "feedback": "Świetnie! To jest poprawny wzór na wariacje bez powtórzeń",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "$V_6^4 = 6 \\cdot 5 \\cdot 4 \\cdot 3$",
+              "text": "$V_$6^{4} = 6$ \\cdot 5 \\cdot 4 \\cdot 3$",
               "feedback": "Tak! To jest równoważny sposób - mnożymy kolejne malejące liczby",
               "is_correct": true
             }
@@ -647,7 +647,7 @@
       {
         "step": 4,
         "hint": "Dlaczego mnożymy właśnie te liczby: 6, 5, 4, 3?",
-        "expression": "Pierwszy uczeń: 6 możliwości, drugi: 5, trzeci: 4, czwarty: 3",
+        "expression": "Pierwszy uczeń: $6$ możliwości, drugi: 5, trzeci: 4, czwarty: 3",
         "explanation": "Każdy kolejny uczeń ma o jedną ocenę mniej do wyboru"
       },
       {
@@ -684,7 +684,7 @@
         "step": 6,
         "hint": "Ile jest możliwych przyporządkowań ocen uczniom?",
         "expression": "Liczba możliwych przyporządkowań = 360",
-        "explanation": "Każdy z 360 sposobów daje inne przyporządkowanie ocen uczniom"
+        "explanation": "Każdy z $360$ sposobów daje inne przyporządkowanie ocen uczniom"
       }
     ],
     "solutions": [
@@ -719,7 +719,7 @@
       {
         "step": 1,
         "hint": "Ile różnych ocen może otrzymać jeden uczeń?",
-        "expression": "Oceny: 1, 2, 3, 4, 5, 6 - razem 6 możliwości",
+        "expression": "Oceny: 1, 2, 3, 4, 5, 6 - razem $6$ możliwości",
         "explanation": "Każdy uczeń może otrzymać jedną z sześciu ocen"
       },
       {
@@ -755,7 +755,7 @@
       {
         "step": 3,
         "hint": "Jaką metodę kombinatoryczną zastosować dla niezależnych wyborów?",
-        "expression": "Liczba sposobów = $6 \\times 6 \\times 6 \\times 6$",
+        "expression": "Liczba $sposobów = 6 \\times 6 \\times 6 \\times 6$",
         "explanation": "Mnożymy liczbę możliwości dla każdego z czterech uczniów",
         "why": "Reguła iloczynu: gdy wykonujemy sekwencję niezależnych wyborów, mnożymy liczbę możliwości na każdym etapie.",
         "interactive_choice": {
@@ -785,8 +785,8 @@
       },
       {
         "step": 4,
-        "hint": "Jak obliczyć $6^4$?",
-        "expression": "$6^4 = 6 \\times 6 \\times 6 \\times 6 = 1296$",
+        "hint": "Jak obliczyć $6^{4}$?",
+        "expression": "$6^{4} = 6$ \\times 6 \\times 6 \\times 6 = 1296$",
         "explanation": "Obliczamy potęgę czwartą liczby 6"
       },
       {
@@ -799,8 +799,8 @@
           "options": [
             {
               "id": "A",
-              "text": "Sprawdzić dla 2 uczniów: $6^2 = 36$ sposobów",
-              "feedback": "Dobra idea! Dla 2 uczniów rzeczywiście jest 36 par (ocena1, ocena2).",
+              "text": "Sprawdzić dla 2 uczniów: $6^{2} = 36$ sposobów",
+              "feedback": "Dobra idea! Dla 2 uczniów rzeczywiście jest $36$ par (ocena1, ocena2).",
               "is_correct": true
             },
             {
@@ -895,19 +895,19 @@
         "step": 4,
         "hint": "Ile jest liczb dwucyfrowych złożonych tylko z cyfr nieparzystych?",
         "expression": "Pierwsza cyfra: 5 wybory $\\{1,3,5,7,9\\}$, druga cyfra: 5 wyborów $\\{1,3,5,7,9\\}$",
-        "explanation": "Każda pozycja ma 5 możliwości cyfr nieparzystych",
+        "explanation": "Każda pozycja ma $5$ możliwości cyfr nieparzystych",
         "interactive_choice": {
           "prompt": "Jak policzyć liczby dwucyfrowe z samymi nieparzystymi cyframi?",
           "options": [
             {
               "id": "A",
-              "text": "Pierwsza cyfra: 5 możliwości, druga cyfra: 5 możliwości",
+              "text": "Pierwsza cyfra: $5$ możliwości, druga cyfra: $5$ możliwości",
               "feedback": "Dokładnie! Zasada mnożenia: $5 \\times 5 = 25$ liczb",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Pierwsza cyfra: 4 możliwości (bez 0), druga: 5 możliwości",
+              "text": "Pierwsza cyfra: $4$ możliwości (bez 0), druga: $5$ możliwości",
               "feedback": "Nie - cyfra 0 jest parzysta, więc i tak jej nie używamy",
               "is_correct": false
             },
@@ -1065,7 +1065,7 @@
         "step": 6,
         "hint": "Ile jest liczb dwucyfrowych z samymi parzystymi cyframi?",
         "expression": "$4 \\times 5 = 20$ liczb",
-        "explanation": "Zasada mnożenia: 4 wybory dla dziesiątek × 5 wyborów dla jedności"
+        "explanation": "Zasada mnożenia: 4 wybory dla $dziesiątek \\cdot 5$ wyborów dla jedności"
       },
       {
         "step": 7,
@@ -1331,7 +1331,7 @@
             },
             {
               "id": "B",
-              "text": "Rozpatrzyć każdą parę $(a,b)$ osobno",
+              "text": "Rozpatrzyć każdą parę $(a, b)$ osobno",
               "feedback": "Możliwe, ale bardzo pracochłonne - jest $100$ par do sprawdzenia",
               "is_correct": false
             },
@@ -1486,7 +1486,7 @@
             {
               "id": "A",
               "text": "Żaden element",
-              "feedback": "Nieprawda - sprawdź liczby podzielne przez 15 = 3 × 5",
+              "feedback": "Nieprawda - sprawdź liczby podzielne przez $15 = 3 \\cdot 5$",
               "is_correct": false
             },
             {
@@ -1528,7 +1528,7 @@
             },
             {
               "id": "B",
-              "text": "7 × 5 = 35 par",
+              "text": "$7 \\cdot 5 = 35$ par",
               "feedback": "Świetnie! Każde z 7 możliwych a można sparować z każdym z 5 możliwych b",
               "is_correct": true
             },
@@ -1596,7 +1596,7 @@
             {
               "id": "A",
               "text": "Zliczyć wszystkie możliwe pary i sprawdzić każdą",
-              "feedback": "Możliwe, ale pracochłonne - jest 100 par do sprawdzenia",
+              "feedback": "Możliwe, ale pracochłonne - jest $100$ par do sprawdzenia",
               "is_correct": false
             },
             {
@@ -1811,7 +1811,7 @@
             {
               "id": "A",
               "text": "Dzielić każdą liczbę przez 3 i sprawdzać resztę",
-              "feedback": "Możliwe, ale czasochłonne dla 18 liczb.",
+              "feedback": "Możliwe, ale czasochłonne dla $18$ liczb.",
               "is_correct": false
             },
             {
@@ -1833,26 +1833,26 @@
       {
         "step": 9,
         "hint": "Które sumy cyfr są podzielne przez 3?",
-        "expression": "Podzielne przez 3: sumy cyfr równe 3 lub 6",
+        "expression": "Podzielne przez 3: sumy cyfr równe $3$ lub 6",
         "explanation": "Identyfikujemy które sumy cyfr dają podzielność przez 3",
         "interactive_choice": {
           "prompt": "Jakie sumy cyfr z naszych liczb będą podzielne przez 3?",
           "options": [
             {
               "id": "A",
-              "text": "Sumy równe 3 i 6",
+              "text": "Sumy równe $3$ i 6",
               "feedback": "Dokładnie! Z cyfr $\\{0,1,2,3\\}$ możemy otrzymać sumy 3, 4, 5, 6. Podzielne przez 3 to: 3 i 6.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Sumy równe 6 i 9",
+              "text": "Sumy równe $6$ i 9",
               "feedback": "Suma 9 nie jest możliwa - maksymalna suma to $1+2+3=6$.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Tylko suma równa 6",
+              "text": "Tylko suma równa $6$",
               "feedback": "Nie tylko - suma 3 też jest podzielna przez 3!",
               "is_correct": false
             }
@@ -1924,7 +1924,7 @@
       {
         "step": 3,
         "hint": "Jaką metodę kombinatoryczną zastosować do tego problemu?",
-        "expression": "Stosujemy permutacje bez powtórzeń: $P_9^3$",
+        "expression": "Stosujemy permutacje bez powtórzeń: $P_$9^{3}$",
         "explanation": "Wybieramy 3 cyfry z 9 dostępnych, gdzie kolejność ma znaczenie",
         "why": "Używamy permutacji, bo pozycja cyfry (setki, dziesiątki, jedności) wpływa na wartość liczby. Bez powtórzeń, bo cyfry nie mogą się powtarzać.",
         "interactive_choice": {
@@ -1932,19 +1932,19 @@
           "options": [
             {
               "id": "A",
-              "text": "Użyć wzoru na kombinacje $C_9^3$",
+              "text": "Użyć wzoru na kombinacje $C_$9^{3}$",
               "feedback": "Nie - kombinacje nie uwzględniają kolejności, a tu pozycje mają znaczenie!",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "Użyć wzoru na permutacje $P_9^3$",
+              "text": "Użyć wzoru na permutacje $P_$9^{3}$",
               "feedback": "Świetnie! Kolejność ma znaczenie - inna cyfra na setki to inna liczba.",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "Policzyć wszystkie możliwości $9^3$",
+              "text": "Policzyć wszystkie możliwości $9^{3}$",
               "feedback": "Nie - to by uwzględniało powtórzenia cyfr, a zadanie tego zabrania.",
               "is_correct": false
             }
@@ -1954,14 +1954,14 @@
       },
       {
         "step": 4,
-        "hint": "Jak obliczyć $P_9^3$ używając wzoru?",
-        "expression": "$P_9^3 = \\frac{9!}{(9-3)!} = \\frac{9!}{6!}$",
-        "explanation": "Wzór na permutacje k-elementowe z n elementów"
+        "hint": "Jak obliczyć $P_$9^{3}$ używając wzoru?",
+        "expression": "$P_$9^{3} = \\frac{9!}{(9-3)!}$ = \\frac{9!}{6!}$",
+        "explanation": "Wzór na permutacje $k$-elementowe z n elementów"
       },
       {
         "step": 5,
         "hint": "Jak uprościć wyrażenie $\\frac{9!}{6!}$?",
-        "expression": "$P_9^3 = 9 \\cdot 8 \\cdot 7$",
+        "expression": "$P_$9^{3} = 9$ \\cdot 8 \\cdot 7$",
         "explanation": "Po skróceniu zostają tylko 3 największe czynniki z 9!",
         "interactive_choice": {
           "prompt": "Jak najłatwiej obliczyć $\\frac{9!}{6!}$?",
@@ -2004,21 +2004,21 @@
       {
         "step": 8,
         "hint": "Czy możemy sprawdzić poprawność wyniku inną metodą?",
-        "expression": "Odpowiedź: 504 liczby trzycyfrowe",
+        "expression": "Odpowiedź: $504$ liczby trzycyfrowe",
         "explanation": "Istnieje 504 różne liczby trzycyfrowe z podanych cyfr bez powtórzeń",
         "interactive_choice": {
           "prompt": "Jak można zweryfikować wynik 504?",
           "options": [
             {
               "id": "A",
-              "text": "Sprawdzić czy $504 = P_9^3$ w kalkulatorze",
+              "text": "Sprawdzić czy $504 = P_$9^{3}$ w kalkulatorze",
               "feedback": "Dobra weryfikacja - potwierdza obliczenia.",
               "is_correct": true
             },
             {
               "id": "B",
               "text": "Policzyć wszystkie liczby ręcznie",
-              "feedback": "Niemożliwe - 504 liczby to za dużo do ręcznego liczenia!",
+              "feedback": "Niemożliwe - $504$ liczby to za dużo do ręcznego liczenia!",
               "is_correct": false
             },
             {
@@ -2103,7 +2103,7 @@
         "step": 4,
         "hint": "Ile wzorów może mieć jedna strona ulotki?",
         "expression": "$7 \\times 6 = 42$ wzory dla jednej strony",
-        "explanation": "Stosujemy zasadę mnożenia: 7 możliwości dla górnej × 6 dla dolnej"
+        "explanation": "Stosujemy zasadę mnożenia: $7$ możliwości dla $górnej \\cdot 6$ dla dolnej"
       },
       {
         "step": 5,
@@ -2139,7 +2139,7 @@
         "step": 6,
         "hint": "Ile różnych wzorów ulotek można utworzyć?",
         "expression": "$42 \\times 42 = 1764$ różnych wzorów ulotek",
-        "explanation": "Ponownie zasada mnożenia: 42 wzory przedniej strony × 42 wzory tylnej strony"
+        "explanation": "Ponownie zasada mnożenia: 42 wzory przedniej $strony \\cdot 42$ wzory tylnej strony"
       }
     ],
     "solutions": [
@@ -2259,7 +2259,7 @@
       {
         "step": 7,
         "hint": "Ile liczb gdy $a = 4$ i $b \\in \\{1,2,3\\}$?",
-        "expression": "Dla każdego $b \\in \\{1,2,3\\}$: cyfra $c$ ma 5 wyborów (różna od 4 i od $b$)",
+        "expression": "Dla każdego $b \\in \\{1,2,3\\}$: cyfra $c$ ma $5$ wyborów (różna od 4 i od $b$)",
         "explanation": "Przypadek $a = 4$: $3 \\times 5 = 15$ liczb"
       },
       {
@@ -2366,7 +2366,7 @@
       {
         "step": 3,
         "hint": "Ile możliwości mamy gdy pierwsza cyfra $a \\in \\{1, 2, 3, 4, 5, 6\\}$?",
-        "expression": "Dla $a \\in \\{1, 2, 3, 4, 5, 6\\}$: druga cyfra $b$ ma 8 wyborów, trzecia cyfra $c$ ma 7 wyborów",
+        "expression": "Dla $a \\in \\{1, 2, 3, 4, 5, 6\\}$: druga cyfra $b$ ma $8$ wyborów, trzecia cyfra $c$ ma $7$ wyborów",
         "explanation": "Gdy a jest ustalone, b może być dowolną z pozostałych 8 cyfr, c z pozostałych 7",
         "why": "To standardowe liczenie wariacji: z 9 cyfr wybieramy 3 różne w określonej kolejności, ale z ograniczeniem na pierwszą cyfrę."
       },
@@ -2409,8 +2409,8 @@
       {
         "step": 6,
         "hint": "Czy dla $a = 7$ i $b \\in \\{1, 2, 3, 4, 5, 6\\}$ trzecia cyfra ma ograniczenia?",
-        "expression": "Dla każdego $b \\in \\{1, 2, 3, 4, 5, 6\\}$: cyfra $c$ ma 7 wyborów",
-        "explanation": "Z 9 cyfr wykluczamy a = 7 i wybrane b, zostaje 7 możliwości dla c",
+        "expression": "Dla każdego $b \\in \\{1, 2, 3, 4, 5, 6\\}$: cyfra $c$ ma $7$ wyborów",
+        "explanation": "Z 9 cyfr wykluczamy a = 7 i wybrane b, zostaje $7$ możliwości dla c",
         "interactive_choice": {
           "prompt": "Jakie ograniczenia ma trzecia cyfra c gdy a = 7 i b ∈ {1,2,3,4,5,6}?",
           "options": [
@@ -2446,7 +2446,7 @@
         "step": 8,
         "hint": "Jaka jest całkowita liczba szukanych liczb trzycyfrowych?",
         "expression": "$336 + 42 = 378$",
-        "explanation": "Sumujemy przypadki: a ∈ {1,2,3,4,5,6} daje 336 liczb, a = 7 daje 42 liczby"
+        "explanation": "Sumujemy przypadki: a ∈ {1,2,3,4,5,6} daje $336$ liczb, a = 7 daje $42$ liczby"
       }
     ],
     "solutions": [
@@ -2553,7 +2553,7 @@
       {
         "step": 5,
         "hint": "Ile to daje możliwości dla zakończenia 25?",
-        "expression": "Liczby kończące się na 25: 7 możliwości",
+        "expression": "Liczby kończące się na 25: $7$ możliwości",
         "explanation": "Cyfry {1,3,4,6,7,8,9} dają 7 różnych liczb trzycyfrowych"
       },
       {
@@ -2565,7 +2565,7 @@
       {
         "step": 7,
         "hint": "Ile to daje możliwości dla zakończenia 50?",
-        "expression": "Liczby kończące się na 50: 8 możliwości",
+        "expression": "Liczby kończące się na 50: $8$ możliwości",
         "explanation": "Cyfry {1,2,3,4,6,7,8,9} dają 8 różnych liczb trzycyfrowych"
       },
       {
@@ -2577,7 +2577,7 @@
       {
         "step": 9,
         "hint": "Ile to daje możliwości dla zakończenia 75?",
-        "expression": "Liczby kończące się na 75: 7 możliwości",
+        "expression": "Liczby kończące się na 75: $7$ możliwości",
         "explanation": "Cyfry {1,2,3,4,6,8,9} dają 7 różnych liczb trzycyfrowych"
       },
       {
@@ -2665,7 +2665,7 @@
             {
               "id": "C",
               "text": "Sprawdzam wszystkie liczby trzycyfrowe i liczę te podzielne przez 4",
-              "feedback": "Zbyt pracochłonne - jest 900 liczb trzycyfrowych do sprawdzenia.",
+              "feedback": "Zbyt pracochłonne - jest $900$ liczb trzycyfrowych do sprawdzenia.",
               "is_correct": false
             }
           ],
@@ -2723,27 +2723,27 @@
       {
         "step": 7,
         "hint": "Ile pierwszych cyfr możemy wybrać dla każdej końcówki?",
-        "expression": "Dla każdej końcówki: 10 - 1 (zero) - 2 (cyfry z końcówki) = 7 możliwości pierwszej cyfry",
-        "explanation": "Każda końcówka daje 7 możliwości wyboru pierwszej cyfry",
+        "expression": "Dla każdej końcówki: 10 - 1 (zero) - 2 (cyfry z $końcówki) = 7$ możliwości pierwszej cyfry",
+        "explanation": "Każda końcówka daje $7$ możliwości wyboru pierwszej cyfry",
         "interactive_choice": {
           "prompt": "Dla końcówki np. 24, ile mamy możliwości wyboru pierwszej cyfry?",
           "options": [
             {
               "id": "A",
-              "text": "9 możliwości (1,3,5,6,7,8,9 - wykluczamy 0,2,4)",
+              "text": "$9$ możliwości (1,3,5,6,7,8,9 - wykluczamy 0,2,4)",
               "feedback": "Prawidłowo! Wykluczamy 0 (nie może być pierwszą cyfrą) oraz 2,4 (już użyte).",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "8 możliwości (wykluczamy tylko 2,4)",
+              "text": "$8$ możliwości (wykluczamy tylko 2,4)",
               "feedback": "Nie - pamiętaj, że 0 nie może być pierwszą cyfrą liczby trzycyfrowej.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "7 możliwości (1,3,5,6,7,8,9)",
-              "feedback": "Prawie dobrze, ale to jest 7 cyfr, więc 7 możliwości.",
+              "text": "$7$ możliwości (1,3,5,6,7,8,9)",
+              "feedback": "Prawie dobrze, ale to jest $7$ cyfr, więc $7$ możliwości.",
               "is_correct": true
             }
           ],
@@ -2753,7 +2753,7 @@
       {
         "step": 8,
         "hint": "Jaka jest końcowa liczba trzycyfrowych liczb?",
-        "expression": "Liczba liczb = 20 końcówek × 7 pierwszych cyfr = 140",
+        "expression": "Liczba liczb = 20 $końcówek \\cdot 7$ pierwszych cyfr = 140",
         "explanation": "Mnożymy liczbę odpowiednich końcówek przez liczbę możliwości pierwszej cyfry"
       }
     ],
@@ -2830,7 +2830,7 @@
       {
         "step": 4,
         "hint": "Ile możliwości mamy na pierwszą cyfrę a?",
-        "expression": "Pierwsza cyfra $a$: 7 możliwości",
+        "expression": "Pierwsza cyfra $a$: $7$ możliwości",
         "explanation": "Cyfry 1,3,4,6,7,8,9 (bez 0,2,5)",
         "interactive_choice": {
           "prompt": "Ile cyfr możemy wybrać na pierwszą pozycję w liczbie $\\overline{ab25}$?",
@@ -2854,15 +2854,15 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Pierwsza cyfra: 7 możliwości (1,3,4,6,7,8,9)."
+          "explanation_after": "Pierwsza cyfra: $7$ możliwości (1,3,4,6,7,8,9)."
         }
       },
       {
         "step": 5,
         "hint": "Ile możliwości na drugą cyfrę b?",
-        "expression": "Druga cyfra $b$: 7 możliwości",
+        "expression": "Druga cyfra $b$: $7$ możliwości",
         "explanation": "Pozostałe cyfry po wybraniu a, wykluczając 2 i 5 (włącznie z 0)",
-        "why": "Po wybraniu pierwszej cyfry zostaje 9 cyfr, ale musimy wykluczyć 2 i 5, więc 7 możliwości"
+        "why": "Po wybraniu pierwszej cyfry zostaje 9 cyfr, ale musimy wykluczyć 2 i 5, więc $7$ możliwości"
       },
       {
         "step": 6,
@@ -3029,7 +3029,7 @@
         "step": 7,
         "hint": "Ile liczb w przypadku I.2 z podziałem na wartości $c$?",
         "expression": "Dla $c = 4$: 1 wybór ($d = 9$), dla $c \\in \\{6, 7, 8, 9\\}$: $4 \\times 6 = 24$",
-        "explanation": "Przypadek $c = 4$: 1 liczba, przypadek $c > 4$: 24 liczby",
+        "explanation": "Przypadek $c = 4$: $1$ liczba, przypadek $c > 4$: $24$ liczby",
         "interactive_choice": {
           "prompt": "Jak policzyć liczby $\\overline{52cd}$ gdzie $c \\geq 4$ i $c \\notin \\{2, 5\\}$?",
           "options": [
@@ -3290,7 +3290,7 @@
       {
         "step": 3,
         "hint": "Ile mamy możliwości wyboru dla każdej pozycji gdy pierwsza cyfra jest ustalona?",
-        "expression": "Pierwsza cyfra: 1 sposób (ustalona), pozostałe pozycje: 9, 8, 7, 6 sposobów",
+        "expression": "Pierwsza cyfra: 1 sposób (ustalona), pozostałe pozycje: 9, 8, 7, $6$ sposobów",
         "explanation": "Po wyborze pierwszej cyfry, na każdej kolejnej pozycji mamy o jeden wybór mniej",
         "why": "Cyfry muszą być różne, więc z każdą wybraną cyfrą zmniejsza się liczba dostępnych opcji. Mamy 10 cyfr (0-9), więc po wyborze pierwszej zostaje 9, potem 8, itd."
       },
@@ -3347,7 +3347,7 @@
             {
               "id": "B",
               "text": "Dodać: $4 \\times 3024$",
-              "feedback": "Dokładnie! Każdy przypadek daje 3024 liczby, więc sumujemy wszystkie.",
+              "feedback": "Dokładnie! Każdy przypadek daje $3024$ liczby, więc sumujemy wszystkie.",
               "is_correct": true
             },
             {
@@ -3386,7 +3386,7 @@
     "id": "mobile_numbers_counting",
     "topic": "Zasada mnożenia w kombinatoryce",
     "difficulty": 3,
-    "statement": "Ile jest telefonicznych numerów komórkowych, składających się z dziewięciu cyfr takich, że pierwszą cyfrą jest 5 lub 6, trzecią cyfrą jest 0, a pozostałe cyfry nie są ani piątką, ani szóstką, ani zerem?",
+    "statement": "Ile jest telefonicznych numerów komórkowych, składających się z dziewięciu cyfr takich, że pierwszą cyfrą jest $5$ lub 6, trzecią cyfrą jest $0$, a pozostałe cyfry nie są ani piątką, ani szóstką, ani zerem?",
     "steps": [
       {
         "step": 1,
@@ -3397,7 +3397,7 @@
       {
         "step": 2,
         "hint": "Jakie cyfry mogą stać na pierwszej pozycji?",
-        "expression": "Pozycja 1: cyfra 5 lub 6 → 2 możliwości",
+        "expression": "Pozycja 1: cyfra 5 lub 6 → $2$ możliwości",
         "explanation": "Pierwsza cyfra jest ściśle określona warunkami zadania"
       },
       {
@@ -3439,27 +3439,27 @@
       {
         "step": 5,
         "hint": "Ile możliwości mamy dla każdej z pozostałych pozycji?",
-        "expression": "Pozycje 2, 4, 5, 6, 7, 8, 9: każda ma 7 możliwości",
+        "expression": "Pozycje 2, 4, 5, 6, 7, 8, 9: każda ma $7$ możliwości",
         "explanation": "Każda z 7 pozostałych pozycji może być wypełniona jedną z 7 dozwolonych cyfr"
       },
       {
         "step": 6,
         "hint": "Którą zasadę kombinatoryki zastosujemy do policzenia wszystkich numerów?",
-        "expression": "Całkowita liczba = 2 × 1 × 7^7",
+        "expression": "Całkowita $liczba = 2 \\cdot 1 × 7^{7}$",
         "explanation": "Mnożymy możliwości dla każdej pozycji",
-        "why": "Zasada mnożenia mówi, że jeśli mamy k niezależnych wyborów z odpowiednio n₁, n₂, ..., nₖ możliwości, to łącznie mamy n₁ × n₂ × ... × nₖ sposobów.",
+        "why": "Zasada mnożenia mówi, że jeśli mamy k niezależnych wyborów z odpowiednio n₁, n₂, ..., nₖ możliwości, to łącznie mamy $n₁ \\cdot n₂$ × ... × nₖ sposobów.",
         "interactive_choice": {
           "prompt": "Jak policzyć całkowitą liczbę różnych numerów?",
           "options": [
             {
               "id": "A",
-              "text": "Zasada dodawania: 2 + 1 + 7×7",
+              "text": "Zasada dodawania: 2 + 1 + $7 \\cdot 7$",
               "feedback": "Nie - dodawanie używamy gdy mamy alternatywy, tu mamy kolejne wybory.",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "Zasada mnożenia: 2 × 1 × 7^7",
+              "text": "Zasada mnożenia: $2 \\cdot 1 × 7^{7}$",
               "feedback": "Świetnie! Każdy wybór jest niezależny, więc mnożymy możliwości.",
               "is_correct": true
             },
@@ -3475,8 +3475,8 @@
       },
       {
         "step": 7,
-        "hint": "Ile wynosi 7^7?",
-        "expression": "$7^2 = 49$, $7^4 = 2401$, $7^7 = 7^4 \\times 7^2 \\times 7^1 = 2401 \\times 49 \\times 7 = 823543$",
+        "hint": "Ile wynosi $7^{7}$?",
+        "expression": "$7^{2} = 49$, $7^{4} = 2401$, $7^{7} = 7^{4}$ \\times $7^{2}$ \\times $7^{1} = 2401$ \\times 49 \\times 7 = 823543$",
         "explanation": "Obliczamy potęgę krok po kroku używając właściwości potęg",
         "interactive_choice": {
           "prompt": "Jak najlepiej obliczyć 7^7?",
@@ -3489,7 +3489,7 @@
             },
             {
               "id": "B",
-              "text": "Bezpośrednio: 7×7×7×7×7×7×7",
+              "text": "Bezpośrednio: $7 \\cdot 7 × 7 \\cdot 7$×$7 \\cdot 7$×7",
               "feedback": "Możliwe, ale pracochłonne - lepiej użyć właściwości potęg.",
               "is_correct": true
             },
@@ -3500,13 +3500,13 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Najefektywniej: 7² = 49, 7⁴ = 2401, 7⁷ = 7⁴ × 7² × 7¹ = 2401 × 49 × 7."
+          "explanation_after": "Najefektywniej: 7² = 49, 7⁴ = 2401, $7⁷ = 7⁴ \\cdot 7²$ × $7¹ = 2401 \\cdot 49$ × 7."
         }
       },
       {
         "step": 8,
         "hint": "Jaki jest końcowy wynik?",
-        "expression": "Liczba numerów = $2 \\times 1 \\times 823543 = 1647086$",
+        "expression": "Liczba $numerów = 2 \\times 1 \\times 823543 = 1647086$",
         "explanation": "Mnożymy wszystkie składniki zgodnie z zasadą mnożenia"
       }
     ],
@@ -3600,7 +3600,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Najprościej: wybieramy pierwszą cyfrę (9 możliwości), potem układamy pozostałe."
+          "explanation_after": "Najprościej: wybieramy pierwszą cyfrę ($9$ możliwości), potem układamy pozostałe."
         }
       },
       {
@@ -3806,7 +3806,7 @@
       {
         "step": 8,
         "hint": "Ile jest takich numerów komórkowych?",
-        "expression": "Liczba numerów = liczba możliwych wartości $a$ = $2$",
+        "expression": "Liczba numerów = liczba możliwych wartości $a = 2$",
         "explanation": "Mamy dokładnie 2 możliwe numery: $876543210$ i $987654321$"
       }
     ],
@@ -3877,7 +3877,7 @@
         "step": 3,
         "hint": "Ile jest cyfr nieparzystych do wyboru?",
         "expression": "Cyfry nieparzyste: $\\{1, 3, 5, 7, 9\\}$ - jest ich 5",
-        "explanation": "Mamy 5 możliwości wyboru cyfry nieparzystej"
+        "explanation": "Mamy $5$ możliwości wyboru cyfry nieparzystej"
       },
       {
         "step": 4,
@@ -3918,7 +3918,7 @@
       {
         "step": 6,
         "hint": "W ilu sposobów można wybrać 4 różne cyfry parzyste na 4 pozycje?",
-        "expression": "$V_5^4 = 5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$",
+        "expression": "$V_$5^{4} = 5$ \\cdot 4 \\cdot 3 \\cdot 2 = 120$",
         "explanation": "Na pierwszą pozycję 5 wyborów, na drugą 4, na trzecią 3, na czwartą 2",
         "why": "Używamy wariacji bez powtórzeń, bo cyfry mają być różne i kolejność ma znaczenie.",
         "interactive_choice": {
@@ -3926,19 +3926,19 @@
           "options": [
             {
               "id": "A",
-              "text": "Kombinacje $C_5^4 = 5$ sposobów",
+              "text": "Kombinacje $C_$5^{4} = 5$ sposobów",
               "feedback": "Nie - kombinacje nie uwzględniają kolejności, a tu kolejność ma znaczenie!",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "Wariacje $V_5^4 = 5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$ sposobów",
+              "text": "Wariacje $V_$5^{4} = 5$ \\cdot 4 \\cdot 3 \\cdot 2 = 120$ sposobów",
               "feedback": "Dokładnie! Wybieramy 4 z 5 cyfr z uwzględnieniem kolejności.",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "Po prostu $5^4 = 625$ sposobów",
+              "text": "Po prostu $5^{4} = 625$ sposobów",
               "feedback": "Nie - cyfry mają być różne, więc nie można powtarzać!",
               "is_correct": false
             }
@@ -3956,7 +3956,7 @@
         "step": 8,
         "hint": "Jaki jest końcowy wynik?",
         "expression": "$5 \\times 120 = 600$",
-        "explanation": "5 sposobów wyboru cyfry nieparzystej razy 120 sposobów ustawienia cyfr parzystych"
+        "explanation": "$5$ sposobów wyboru cyfry nieparzystej razy $120$ sposobów ustawienia cyfr parzystych"
       }
     ],
     "solutions": [
@@ -4017,13 +4017,13 @@
       {
         "step": 2,
         "hint": "Ile mamy możliwości wyboru dla pierwszej pozycji?",
-        "expression": "Na pierwszej pozycji: 5 możliwości",
+        "expression": "Na pierwszej pozycji: $5$ możliwości",
         "explanation": "Możemy wybrać dowolną z 5 książek na pierwszą pozycję"
       },
       {
         "step": 3,
         "hint": "Ile pozostaje możliwości dla drugiej pozycji?",
-        "expression": "Na drugiej pozycji: 4 możliwości",
+        "expression": "Na drugiej pozycji: $4$ możliwości",
         "explanation": "Po wyborze pierwszej książki zostają 4 książki do wyboru"
       },
       {
@@ -4085,7 +4085,7 @@
             },
             {
               "id": "C",
-              "text": "$C_5^5$ (kombinacje)",
+              "text": "$C_$5^{5}$ (kombinacje)",
               "feedback": "Nie - to oznaczenie dla kombinacji, a tu mamy permutacje.",
               "is_correct": false
             }
@@ -4116,7 +4116,7 @@
     "id": "permutations_class_positions",
     "topic": "Permutacje",
     "difficulty": 2,
-    "statement": "W klasie jest 12 uczniów. Na ile sposobów można wybrać przewodniczącego i jego zastępcę, jeśli te funkcje nie mogą być pełnione przez tę samą osobę?",
+    "statement": "W klasie jest $12$ uczniów. Na ile sposobów można wybrać przewodniczącego i jego zastępcę, jeśli te funkcje nie mogą być pełnione przez tę samą osobę?",
     "steps": [
       {
         "step": 1,
@@ -4140,7 +4140,7 @@
             },
             {
               "id": "C",
-              "text": "To zwykłe mnożenie - 12 × 12",
+              "text": "To zwykłe mnożenie - $12 \\cdot 12$",
               "feedback": "Nie - jedna osoba nie może pełnić obu funkcji jednocześnie!",
               "is_correct": false
             }
@@ -4202,7 +4202,7 @@
             {
               "id": "A",
               "text": "$P(12,2) = \\frac{12!}{(12-2)!} = \\frac{12!}{10!}$",
-              "feedback": "Dokładnie! To wzór na permutacje 2-elementowe z 12 elementów.",
+              "feedback": "Dokładnie! To wzór na permutacje 2-elementowe z $12$ elementów.",
               "is_correct": true
             },
             {
@@ -4213,12 +4213,12 @@
             },
             {
               "id": "C",
-              "text": "$12^2 = 144$",
+              "text": "$12^{2} = 144$",
               "feedback": "To byłoby gdyby ta sama osoba mogła pełnić obie funkcje.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Wzór $P(n,k) = \\frac{n!}{(n-k)!}$ daje liczbę sposobów wyboru $k$ elementów z $n$ z uwzględnieniem kolejności."
+          "explanation_after": "Wzór $P$(n, k) = \\frac{n!}{(n-k)!}$ daje liczbę sposobów wyboru $k$ elementów z $n$ z uwzględnieniem kolejności."
         }
       }
     ],
@@ -4255,9 +4255,9 @@
       {
         "step": 2,
         "hint": "Jaką metodę kombinatoryczną zastosować do tego problemu?",
-        "expression": "Liczba sposobów = 4 × 6 × 3",
+        "expression": "Liczba $sposobów = 4 \\cdot 6$ × 3",
         "explanation": "Stosujemy regułę iloczynu dla kolejnych wyborów",
-        "why": "Reguła iloczynu: jeśli mamy k etapów wyboru z odpowiednio n₁, n₂, ..., nₖ możliwości, to łączna liczba sposobów to n₁ × n₂ × ... × nₖ",
+        "why": "Reguła iloczynu: jeśli mamy k etapów wyboru z odpowiednio n₁, n₂, ..., nₖ możliwości, to łączna liczba sposobów to $n₁ \\cdot n₂$ × ... × nₖ",
         "interactive_choice": {
           "prompt": "Jak podejść do zliczania sposobów wyboru pełnego obiadu?",
           "options": [
@@ -4269,7 +4269,7 @@
             },
             {
               "id": "B",
-              "text": "Pomnożyć liczby: 4 × 6 × 3",
+              "text": "Pomnożyć liczby: $4 \\cdot 6$ × 3",
               "feedback": "Świetnie! To reguła iloczynu - wybieramy I jedno I drugie I trzecie",
               "is_correct": true
             },
@@ -4286,7 +4286,7 @@
       {
         "step": 3,
         "hint": "Dlaczego mnożymy te liczby?",
-        "expression": "Dla każdej z 4 zup mamy 6 × 3 = 18 sposobów wyboru reszty",
+        "expression": "Dla każdej z 4 zup mamy $6 \\cdot 3 = 18$ sposobów wyboru reszty",
         "explanation": "Każdy wybór zupy można połączyć z każdym wyborem dania głównego i każdym deserem",
         "interactive_choice": {
           "prompt": "Dlaczego dla każdej zupy mamy 6 × 3 = 18 sposobów dokończenia obiadu?",
@@ -4294,7 +4294,7 @@
             {
               "id": "A",
               "text": "Bo do każdej zupy możemy wybrać dowolne z 6 dań głównych, a do każdego dania głównego dowolny z 3 deserów",
-              "feedback": "Dokładnie! To pokazuje dlaczego mnożymy - każdy wybór zupy daje 18 możliwości reszty",
+              "feedback": "Dokładnie! To pokazuje dlaczego mnożymy - każdy wybór zupy daje $18$ możliwości reszty",
               "is_correct": true
             },
             {
@@ -4315,14 +4315,14 @@
       },
       {
         "step": 4,
-        "hint": "Ile wynosi iloczyn 4 × 6 × 3?",
-        "expression": "4 × 6 × 3 = 24 × 3 = 72",
+        "hint": "Ile wynosi iloczyn $4 \\cdot 6$ × 3?",
+        "expression": "$4 \\cdot 6$ × $3 = 24 \\cdot 3 = 72$",
         "explanation": "Obliczamy krok po kroku"
       },
       {
         "step": 5,
         "hint": "Czy możemy sprawdzić wynik innym sposobem?",
-        "expression": "Weryfikacja: 4 zupy × (6 dań × 3 desery) = 4 × 18 = 72",
+        "expression": "Weryfikacja: 4 zupy × (6 $dań \\cdot 3$ $desery) = 4 \\cdot 18 = 72$",
         "explanation": "Potwierdzamy wynik myśląc o problemie krok po kroku",
         "interactive_choice": {
           "prompt": "Jak można zweryfikować wynik 72?",
@@ -4341,12 +4341,12 @@
             },
             {
               "id": "C",
-              "text": "Pomyśleć: czy dla każdej zupy rzeczywiście mamy 18 sposobów dokończenia?",
+              "text": "Pomyśleć: czy dla każdej zupy rzeczywiście mamy $18$ sposobów dokończenia?",
               "feedback": "Tak! To dobry sposób weryfikacji - logiczne myślenie o problemie",
               "is_correct": true
             }
           ],
-          "explanation_after": "Najlepsze sprawdzenie to przemyślenie logiki: każda zupa × każde danie × każdy deser."
+          "explanation_after": "Najlepsze sprawdzenie to przemyślenie logiki: każda $zupa \\cdot każde$ $danie \\cdot każdy$ deser."
         }
       }
     ],
@@ -4433,7 +4433,7 @@
             {
               "id": "A",
               "text": "4 pozycje",
-              "feedback": "Nie - sprawdź ponownie: pozycje 1,2,3,4,5 to już 5 możliwości.",
+              "feedback": "Nie - sprawdź ponownie: pozycje 1,2,3,4,5 to już $5$ możliwości.",
               "is_correct": false
             },
             {
@@ -4492,7 +4492,7 @@
         "step": 7,
         "hint": "Jaka jest końcowa odpowiedź?",
         "expression": "$5 \\times 8! = 201600$",
-        "explanation": "8 różnych samochodów można rozmieścić na 201600 sposobów"
+        "explanation": "8 różnych samochodów można rozmieścić na $201600$ sposobów"
       }
     ],
     "solutions": [
@@ -4546,7 +4546,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Rozpatrzyć wszystkie możliwe pary $(a,d)$ gdzie $a > d$",
+              "text": "Rozpatrzyć wszystkie możliwe pary $(a, d)$ gdzie $a > d$",
               "feedback": "Świetny wybór! Systematyczne przejście przez wszystkie przypadki.",
               "is_correct": true
             },
@@ -4563,19 +4563,19 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Systematyczne przejście przez pary $(a,d)$ jest najjaśniejsze i najmniej podatne na błędy."
+          "explanation_after": "Systematyczne przejście przez pary $(a, d)$ jest najjaśniejsze i najmniej podatne na błędy."
         }
       },
       {
         "step": 4,
         "hint": "Ile jest możliwości dla cyfr środkowych $b$ i $c$?",
         "expression": "Cyfry $b$ i $c$ mogą być dowolne: $b,c \\in \\{0,1,2,3,4,5,6,7,8,9\\}$",
-        "explanation": "Każda z cyfr środkowych ma 10 możliwości, więc razem $10 \\times 10 = 100$ możliwości",
-        "why": "Cyfry środkowe są niezależne od warunku $a > d$, więc zawsze mamy $10^2 = 100$ możliwości."
+        "explanation": "Każda z cyfr środkowych ma $10$ możliwości, więc razem $10 \\times 10 = 100$ możliwości",
+        "why": "Cyfry środkowe są niezależne od warunku $a > d$, więc zawsze mamy $10^{2} = 100$ możliwości."
       },
       {
         "step": 5,
-        "hint": "Ile jest par $(a,d)$ dla każdej wartości $a$?",
+        "hint": "Ile jest par $(a, d)$ dla każdej wartości $a$?",
         "expression": "Dla $a = k$ mamy $d \\in \\{0,1,2,...,k-1\\}$, czyli $k$ możliwości",
         "explanation": "Liczba możliwych wartości $d$ równa się wartości $a$",
         "interactive_choice": {
@@ -4612,7 +4612,7 @@
       {
         "step": 7,
         "hint": "Jak zsumować wszystkie przypadki?",
-        "expression": "Suma = $1 \\times 100 + 2 \\times 100 + 3 \\times 100 + ... + 9 \\times 100$",
+        "expression": "$Suma = 1 \\times 100 + 2 \\times 100 + 3 \\times 100 + ... + 9 \\times 100$",
         "explanation": "Sumujemy po wszystkich możliwych wartościach pierwszej cyfry od 1 do 9"
       },
       {
@@ -4637,8 +4637,8 @@
             },
             {
               "id": "C",
-              "text": "Obliczyć $100 \\times 9^2$",
-              "feedback": "Nie - to byłoby gdyby wszystkie składniki były równe 9.",
+              "text": "Obliczyć $100 \\times $9^{2}$",
+              "feedback": "Nie - to byłoby gdyby wszystkie składniki były równe $9$.",
               "is_correct": false
             }
           ],
@@ -4674,7 +4674,7 @@
       {
         "step": 1,
         "hint": "Co musimy najpierw ustalić - ile jest meczy w turnieju?",
-        "expression": "Liczba meczy = $\\binom{16}{2} = \\frac{16!}{2!(16-2)!} = \\frac{16 \\cdot 15}{2} = 120$",
+        "expression": "Liczba $meczy = \\binom{16}{2} = \\frac{16!}{2!(16-2)!} = \\frac{16 \\cdot 15}{2} = 120$",
         "explanation": "Obliczamy liczbę par graczy - każda para gra jeden mecz",
         "why": "W kombinatoryce, gdy wybieramy pary bez znaczenia kolejności, używamy wzoru na kombinacje $\\binom{n}{2}$",
         "interactive_choice": {
@@ -4682,7 +4682,7 @@
           "options": [
             {
               "id": "A",
-              "text": "16 × 15 = 240 meczy",
+              "text": "$16 \\cdot 15 = 240$ meczy",
               "feedback": "Nie - to liczyłoby każdy mecz dwukrotnie (A vs B i B vs A to ten sam mecz)",
               "is_correct": false
             },
@@ -4711,7 +4711,7 @@
       {
         "step": 3,
         "hint": "Jak połączyć liczbę meczy z liczbą możliwych wyników każdego meczu?",
-        "expression": "Liczba możliwych wyników turnieju = $3^{120}$",
+        "expression": "Liczba możliwych wyników $turnieju = 3^{120}$",
         "explanation": "Każdy z 120 meczy może zakończyć się na 3 sposoby, więc łącznie mamy $3^{120}$ możliwości",
         "why": "To zastosowanie fundamentalnej zasady zliczania: jeśli mamy $n$ niezależnych wyborów, każdy z $k$ możliwości, to łącznie jest $k^n$ kombinacji",
         "interactive_choice": {
@@ -4731,8 +4731,8 @@
             },
             {
               "id": "C",
-              "text": "$120^3$",
-              "feedback": "Nie - to byłoby gdyby 3 mecze miały po 120 możliwości każdy",
+              "text": "$120^{3}$",
+              "feedback": "Nie - to byłoby gdyby 3 mecze miały po $120$ możliwości każdy",
               "is_correct": false
             }
           ],
@@ -4797,19 +4797,19 @@
     "id": "team_division_combinatorics",
     "topic": "Kombinatoryka - podział na grupy",
     "difficulty": 4,
-    "statement": "Na ile sposobów można podzielić grupę 10 osób na dwie drużyny po 5 osób każda, jeśli jedna drużyna gra w czerwonych koszulkach, a druga w niebieskich? Ile będzie takich podziałów, jeśli kolor koszulek nie ma znaczenia?",
+    "statement": "Na ile sposobów można podzielić grupę $10$ osób na dwie drużyny po $5$ osób każda, jeśli jedna drużyna gra w czerwonych koszulkach, a druga w niebieskich? Ile będzie takich podziałów, jeśli kolor koszulek nie ma znaczenia?",
     "steps": [
       {
         "step": 1,
         "hint": "Czy w tym zadaniu ma znaczenie, która drużyna jest czerwona, a która niebieska?",
-        "expression": "Wybieramy 5 osób z 10 do czerwonej drużyny: $\\binom{10}{5}$",
-        "explanation": "Pozostałe 5 osób automatycznie trafia do niebieskiej drużyny",
+        "expression": "Wybieramy $5$ osób z 10 do czerwonej drużyny: $\\binom{10}{5}$",
+        "explanation": "Pozostałe $5$ osób automatycznie trafia do niebieskiej drużyny",
         "interactive_choice": {
           "prompt": "Jak podejść do pierwszej części zadania z kolorowymi koszulkami?",
           "options": [
             {
               "id": "A",
-              "text": "Drużyny są różne (czerwona ≠ niebieska), więc wybieramy 5 osób do czerwonej",
+              "text": "Drużyny są różne (czerwona ≠ niebieska), więc wybieramy $5$ osób do czerwonej",
               "feedback": "Świetnie! Gdy drużyny są rozróżnialne, wystarczy wybrać jedną z nich.",
               "is_correct": true
             },
@@ -4888,8 +4888,8 @@
           "options": [
             {
               "id": "A",
-              "text": "Wynik z kolorami = 2 × wynik bez kolorów",
-              "feedback": "Tak! 252 = 2 × 126. Każdy podział bez kolorów można pokolorować na 2 sposoby.",
+              "text": "Wynik z $kolorami = 2 \\cdot wynik$ bez kolorów",
+              "feedback": "Tak! $252 = 2 \\cdot 126$. Każdy podział bez kolorów można pokolorować na 2 sposoby.",
               "is_correct": true
             },
             {
@@ -4900,12 +4900,12 @@
             },
             {
               "id": "C",
-              "text": "Wynik bez kolorów = 2 × wynik z kolorami",
+              "text": "Wynik bez $kolorów = 2 \\cdot wynik$ z kolorami",
               "feedback": "Odwrotnie! Rozróżnialne drużyny dają więcej możliwości.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Sprawdzenie: 252 = 2 × 126 ✓. Każdy podział nierozróżnialny można pokolorować na 2 sposoby."
+          "explanation_after": "Sprawdzenie: $252 = 2 \\cdot 126$ ✓. Każdy podział nierozróżnialny można pokolorować na 2 sposoby."
         }
       }
     ],
@@ -5060,7 +5060,7 @@
       {
         "step": 9,
         "hint": "Jaka jest ostateczna odpowiedź?",
-        "expression": "Liczba różnych kolorowań sześcianu = $30$",
+        "expression": "Liczba różnych kolorowań $sześcianu = 30$",
         "explanation": "Po uwzględnieniu wszystkich obrotów otrzymujemy 30 różnych sposobów kolorowania"
       }
     ],
@@ -5242,7 +5242,7 @@
     "id": "graph_theory_clique_problem",
     "topic": "Teoria grafów - kliki",
     "difficulty": 5,
-    "statement": "W grupie 20 osób każda zna co najmniej 3 inne osoby z grupy. Udowodnij, że można wybrać 4 osoby tak, żeby każda znała każdą z pozostałych trzech. Ile jest minimalnie różnych sposobów takiego wyboru w najgorszym przypadku?",
+    "statement": "W grupie $20$ osób każda zna co najmniej 3 inne osoby z grupy. Udowodnij, że można wybrać 4 osoby tak, żeby każda znała każdą z pozostałych trzech. Ile jest minimalnie różnych sposobów takiego wyboru w najgorszym przypadku?",
     "steps": [
       {
         "step": 1,
@@ -5261,7 +5261,7 @@
             },
             {
               "id": "B",
-              "text": "Macierz 20×20 z jedynkami i zerami",
+              "text": "Macierz $20 \\cdot 20$ z jedynkami i zerami",
               "feedback": "Możliwe, ale graf jest bardziej intuicyjny dla tego problemu.",
               "is_correct": false
             },
@@ -5279,13 +5279,13 @@
         "step": 2,
         "hint": "Czego szukamy w terminach teorii grafów?",
         "expression": "Szukamy kliki $K_4$ - podzbioru 4 wierzchołków połączonych wszystkimi możliwymi krawędziami",
-        "explanation": "4-klika oznacza, że każda z 4 osób zna pozostałe 3",
+        "explanation": "4-klika oznacza, że każda z $4$ osób zna pozostałe 3",
         "why": "Klika to kompletny podgraf - każdy wierzchołek połączony z każdym innym."
       },
       {
         "step": 3,
         "hint": "Ile krawędzi ma nasz graf minimalnie?",
-        "expression": "Suma stopni = $2|E| \\geq 20 \\cdot 3 = 60$, więc $|E| \\geq 30$",
+        "expression": "Suma $stopni = 2|E| \\geq 20 \\cdot 3 = 60$, więc $|E| \\geq 30$",
         "explanation": "Każda krawędź przyczynia się do stopnia dwóch wierzchołków"
       },
       {
@@ -5327,7 +5327,7 @@
       {
         "step": 6,
         "hint": "Jak obliczyć $t_3(20)$ krok po kroku?",
-        "expression": "$20 = 3 \\cdot 6 + 2$, więc $t_3(20) = \\frac{3 \\cdot (20^2 - 4)}{8} + \\binom{2}{2} = \\frac{3 \\cdot 396}{8} + 1 = \\frac{1188}{8} + 1 = 148.5 + 1 = 149.5$",
+        "expression": "$20 = 3 \\cdot 6 + 2$, więc $t_3(20) = \\frac{3 \\cdot ($20^{2}$ - 4)}{8} + \\binom{2}{2} = \\frac{3 \\cdot 396}{8} + 1 = \\frac{1188}{8} + 1 = 148.5 + 1 = 149.5$",
         "explanation": "Obliczamy dokładną wartość - ale to musi być liczba całkowita!"
       },
       {
@@ -5429,7 +5429,7 @@
         "step": 1,
         "hint": "Jakie są możliwe składy drużyny spełniające warunki zadania?",
         "expression": "Możliwe składy: (2D, 3Ch) lub (3D, 2Ch)",
-        "explanation": "Analizujemy wszystkie możliwe podziały 5 osób na dziewczynki i chłopców",
+        "explanation": "Analizujemy wszystkie możliwe podziały $5$ osób na dziewczynki i chłopców",
         "interactive_choice": {
           "prompt": "Które składy 5-osobowej drużyny spełniają warunek co najmniej 2 dziewczynek i co najmniej 2 chłopców?",
           "options": [
@@ -5638,7 +5638,7 @@
         "step": 4,
         "hint": "Jak zapisać warunek, że żadne dwie wieże nie są na głównej przekątnej?",
         "expression": "Dla każdego $i \\in \\{1,2,3,4\\}$: $\\pi(i) \\neq i$",
-        "explanation": "Żadna wieża nie może być na pozycji $(i,i)$, więc $\\pi(i) \\neq i$ dla wszystkich $i$"
+        "explanation": "Żadna wieża nie może być na pozycji $(i, i)$, więc $\\pi(i) \\neq i$ dla wszystkich $i$"
       },
       {
         "step": 5,
@@ -5704,25 +5704,25 @@
         "step": 7,
         "hint": "Jakie są wartości początkowe $D_0$, $D_1$, $D_2$?",
         "expression": "$D_0 = 1$, $D_1 = 0$, $D_2 = 1$",
-        "explanation": "Wartości bazowe: brak elementów (1 sposób), jeden element (0 sposobów), dwa elementy (1 sposób)",
+        "explanation": "Wartości bazowe: brak elementów (1 sposób), jeden element ($0$ sposobów), dwa elementy (1 sposób)",
         "why": "$D_0 = 1$ (pusta permutacja), $D_1 = 0$ (element musi zostać na miejscu), $D_2 = 1$ (tylko zamiana $(1,2) \\to (2,1)$)"
       },
       {
         "step": 8,
         "hint": "Oblicz $D_3$ używając wzoru rekurencyjnego",
         "expression": "$D_3 = (3-1)(D_2 + D_1) = 2(1 + 0) = 2$",
-        "explanation": "Dla 3 elementów mamy 2 derangements"
+        "explanation": "Dla $3$ elementów mamy 2 derangements"
       },
       {
         "step": 9,
         "hint": "Oblicz $D_4$ używając wzoru rekurencyjnego",
         "expression": "$D_4 = (4-1)(D_3 + D_2) = 3(2 + 1) = 9$",
-        "explanation": "Dla 4 elementów mamy 9 derangements"
+        "explanation": "Dla $4$ elementów mamy 9 derangements"
       },
       {
         "step": 10,
         "hint": "Jaka jest odpowiedź na pytanie zadania?",
-        "expression": "Liczba sposobów umieszczenia wież = $D_4 = 9$",
+        "expression": "Liczba sposobów umieszczenia $wież = D_4 = 9$",
         "explanation": "Każdy derangement odpowiada jednemu poprawnemu rozmieszczeniu wież"
       }
     ],
@@ -5814,32 +5814,32 @@
       {
         "step": 6,
         "hint": "Ile możliwości mamy dla cyfry setek tysięcy $a$?",
-        "expression": "$a \\in \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ - 9 możliwości",
+        "expression": "$a \\in \\{1, 2, 3, 4, 5, 6, 7, 8, 9\\} - 9$ możliwości",
         "explanation": "Pierwsza cyfra nie może być zerem"
       },
       {
         "step": 7,
         "hint": "Ile możliwości dla cyfry tysięcy $c$ (musi być parzysta)?",
-        "expression": "$c \\in \\{0, 2, 4, 6, 8\\}$ - 5 możliwości",
+        "expression": "$c \\in \\{0, 2, 4, 6, 8\\} - 5$ możliwości",
         "explanation": "Cyfra tysięcy może być zerem, bo nie jest pierwszą cyfrą",
         "interactive_choice": {
           "prompt": "Które cyfry są parzyste i można je użyć na pozycji tysięcy?",
           "options": [
             {
               "id": "A",
-              "text": "Cyfry: 2, 4, 6, 8 (4 możliwości)",
+              "text": "Cyfry: 2, 4, 6, 8 ($4$ możliwości)",
               "feedback": "Nie! Zapomniałeś o zerze - zero też jest parzyste.",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "Cyfry: 0, 2, 4, 6, 8 (5 możliwości)",
+              "text": "Cyfry: 0, 2, 4, 6, 8 ($5$ możliwości)",
               "feedback": "Dokładnie! Zero jest parzyste i może być na pozycji tysięcy.",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "Cyfry: 1, 3, 5, 7, 9 (5 możliwości)",
+              "text": "Cyfry: 1, 3, 5, 7, 9 ($5$ możliwości)",
               "feedback": "To są cyfry nieparzyste! Potrzebujemy parzystych.",
               "is_correct": false
             }
@@ -5850,7 +5850,7 @@
       {
         "step": 8,
         "hint": "Ile możliwości dla cyfry dziesiątek tysięcy $b$?",
-        "expression": "$b \\in \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ - 10 możliwości",
+        "expression": "$b \\in \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\} - 10$ możliwości",
         "explanation": "Brak ograniczeń dla tej pozycji"
       },
       {
@@ -5971,7 +5971,7 @@
             {
               "id": "A",
               "text": "Wszystkie książki danego przedmiotu w jednym bloku",
-              "feedback": "To standardowa interpretacja - daje 0 rozwiązań z powodu sprzeczności",
+              "feedback": "To standardowa interpretacja - daje $0$ rozwiązań z powodu sprzeczności",
               "is_correct": true
             },
             {
@@ -6012,7 +6012,7 @@
             },
             {
               "id": "B",
-              "text": "4 pary - bo 5 książek razem daje 4 pary",
+              "text": "4 pary - bo 5 książek razem daje $4$ pary",
               "feedback": "Dokładnie! I to jest sprzeczne z warunkiem 'żadne dwie obok'",
               "is_correct": true
             },
@@ -6062,7 +6062,7 @@
     "id": "tourist_group_division",
     "topic": "Kombinatoryka - podział na grupy z ograniczeniami",
     "difficulty": 5,
-    "statement": "Grupa 20 turystów chce się podzielić na 4 grupy zwiedzające różne muzea. Pierwsze muzeum może przyjąć maksymalnie 6 osób, drugie 7 osób, trzecie 4 osoby, a czwarte 5 osób. Na ile sposobów można podzielić turystów, jeśli każda grupa musi mieć co najmniej 2 osoby?",
+    "statement": "Grupa 20 turystów chce się podzielić na $4$ grupy zwiedzające różne muzea. Pierwsze muzeum może przyjąć maksymalnie $6$ osób, drugie $7$ osób, trzecie 4 osoby, a czwarte $5$ osób. Na ile sposobów można podzielić turystów, jeśli każda grupa musi mieć co najmniej 2 osoby?",
     "steps": [
       {
         "step": 1,
@@ -6111,7 +6111,7 @@
         "hint": "Ile minimalnie osób musi być w grupach?",
         "expression": "$2 + 2 + 2 + 2 = 8$ osób minimum",
         "explanation": "Sprawdzamy czy podział jest w ogóle możliwy",
-        "why": "Mamy 20 osób, minimum 8, więc zostaje 12 osób do rozdzielenia. To potwierdza, że zadanie ma sens."
+        "why": "Mamy $20$ osób, minimum 8, więc zostaje $12$ osób do rozdzielenia. To potwierdza, że zadanie ma sens."
       },
       {
         "step": 5,
@@ -6135,13 +6135,13 @@
             },
             {
               "id": "B",
-              "text": "Od grupy 2 (największa pojemność: 2-7 osób)",
+              "text": "Od grupy 2 (największa pojemność: 2-$7$ osób)",
               "feedback": "Możliwe, ale więcej przypadków do sprawdzenia. Lepiej zacząć od najbardziej ograniczonej.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Od grupy 1 (pojemność: 2-6 osób)",
+              "text": "Od grupy 1 (pojemność: 2-$6$ osób)",
               "feedback": "Można, ale grupa 3 ma mniej możliwości, więc lepiej od niej zacząć.",
               "is_correct": false
             }
@@ -6153,7 +6153,7 @@
         "step": 7,
         "hint": "Jakie są dopuszczalne składy gdy $n_3 = 2$?",
         "expression": "Dla $n_3 = 2$: $n_1 + n_2 + n_4 = 18$ z ograniczeniami $2 \\leq n_1 \\leq 6$, $2 \\leq n_2 \\leq 7$, $2 \\leq n_4 \\leq 5$",
-        "explanation": "Pozostaje 18 osób do rozdzielenia między 3 grupy"
+        "explanation": "Pozostaje $18$ osób do rozdzielenia między $3$ grupy"
       },
       {
         "step": 8,
@@ -6171,7 +6171,7 @@
       {
         "step": 10,
         "hint": "Jak policzyć liczbę sposobów przydziału osób dla danego składu $(n_1, n_2, n_3, n_4)$?",
-        "expression": "Dla składu $(n_1, n_2, n_3, n_4)$ liczba sposobów = $\\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
+        "expression": "Dla składu $(n_1, n_2, n_3, n_4)$ liczba $sposobów = \\frac{20!}{n_1! \\cdot n_2! \\cdot n_3! \\cdot n_4!}$",
         "explanation": "Używamy wzoru na współczynnik wielomianowy dla rozróżnialnych grup",
         "interactive_choice": {
           "prompt": "Jakim wzorem obliczyć liczbę sposobów podziału 20 osób na grupy o wielkościach $(n_1, n_2, n_3, n_4)$?",
@@ -6207,7 +6207,7 @@
       {
         "step": 12,
         "hint": "Ile wynosi końcowy wynik po obliczeniach?",
-        "expression": "Łączna liczba sposobów = $1,235,520$",
+        "expression": "Łączna liczba $sposobów = 1,235,520$",
         "explanation": "Po obliczeniu wszystkich współczynników wielomianowych i ich zsumowaniu"
       }
     ],
@@ -6310,7 +6310,7 @@
       {
         "step": 8,
         "hint": "Na ile sposobów można wypełnić pozycje cyframi każdego typu?",
-        "expression": "3 pozycje parzyste: $5^3$ sposobów\n2 pozycje nieparzyste > 5: $2^2$ sposobów\n1 pozycja nieparzysta ≤ 5: $3^1$ sposobów",
+        "expression": "3 pozycje parzyste: $5^{3}$ sposobów\n2 pozycje nieparzyste > 5: $2^{2}$ sposobów\n1 pozycja nieparzysta ≤ 5: $3^{1}$ sposobów",
         "explanation": "Każda pozycja ma wybór ze wszystkich cyfr swojego typu",
         "interactive_choice": {
           "prompt": "Jak wypełnić wybrane pozycje odpowiednimi cyframi?",
@@ -6340,7 +6340,7 @@
       {
         "step": 9,
         "hint": "Ile sposobów wypełnienia wszystkich pozycji?",
-        "expression": "$5^3 \\cdot 2^2 \\cdot 3^1 = 125 \\cdot 4 \\cdot 3 = 1500$",
+        "expression": "$5^{3}$ \\cdot $2^{2}$ \\cdot $3^{1} = 125$ \\cdot 4 \\cdot 3 = 1500$",
         "explanation": "Mnożymy sposoby wypełnienia dla każdego typu pozycji"
       },
       {
@@ -6360,7 +6360,7 @@
             },
             {
               "id": "B",
-              "text": "Pomnożyć: sposoby pozycji × sposoby wypełnienia",
+              "text": "Pomnożyć: sposoby $pozycji \\cdot sposoby$ wypełnienia",
               "feedback": "Tak! Dla każdego wyboru pozycji mamy wszystkie sposoby wypełnienia.",
               "is_correct": true
             },
@@ -6371,7 +6371,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Zasada mnożenia: dla każdego z 60 sposobów wyboru pozycji mamy 1500 sposobów wypełnienia."
+          "explanation_after": "Zasada mnożenia: dla każdego z $60$ sposobów wyboru pozycji mamy $1500$ sposobów wypełnienia."
         }
       }
     ],
@@ -6438,7 +6438,7 @@
       {
         "step": 2,
         "hint": "Na ile sposobów można rozmieścić 8 pionków (4 białe, 4 czarne) na 8 pozycjach?",
-        "expression": "Wszystkie rozmieszczenia = $\\binom{8}{4} = \\frac{8!}{4! \\cdot 4!} = 70$",
+        "expression": "Wszystkie $rozmieszczenia = \\binom{8}{4} = \\frac{8!}{4! \\cdot 4!} = 70$",
         "explanation": "Wybieramy 4 pozycje z 8 dla białych pionków, reszta dla czarnych",
         "why": "To klasyczny problem wyboru - ile sposobów wyboru 4 pozycji z 8 dla pionków jednego koloru."
       },
@@ -6530,7 +6530,7 @@
       {
         "step": 9,
         "hint": "Ile jest pożądanych rozmieszczeń?",
-        "expression": "Pożądane rozmieszczenia = $70 - 2 = 68$",
+        "expression": "Pożądane $rozmieszczenia = 70 - 2 = 68$",
         "explanation": "Odejmujemy niepożądane od wszystkich możliwych"
       }
     ],
@@ -6620,18 +6620,18 @@
       {
         "step": 6,
         "hint": "Ile liczb czterocyfrowych możemy utworzyć z każdą z tych końcówek?",
-        "expression": "Dla każdej końcówki: pozostają 5 cyfr na 2 pierwsze pozycje = $5 \\times 4 = 20$ liczb",
+        "expression": "Dla każdej końcówki: pozostają 5 cyfr na 2 pierwsze $pozycje = 5 \\times 4 = 20$ liczb",
         "explanation": "Na pierwszą pozycję 5 wyborów, na drugą 4 wybory (bez powtórzeń)"
       },
       {
         "step": 7,
         "hint": "Ile łącznie mamy liczb podzielnych przez 4?",
         "expression": "$10 \\times 20 = 200$ liczb podzielnych przez 4",
-        "explanation": "10 możliwych końcówek × 20 sposobów uzupełnienia = 200 liczb"
+        "explanation": "10 możliwych końcówek × $20$ sposobów $uzupełnienia = 200$ liczb"
       },
       {
         "step": 8,
-        "hint": "Teraz który warunek sprawdzimy dla tych 200 liczb?",
+        "hint": "Teraz który warunek sprawdzimy dla tych $200$ liczb?",
         "expression": "Sprawdzamy warunek sumy cyfr dla każdej z 10 końcówek",
         "explanation": "Dla każdej końcówki znajdziemy ile uzupełnień daje sumę podzielną przez 3",
         "interactive_choice": {
@@ -6639,7 +6639,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Sprawdzić każdą z 200 liczb osobno",
+              "text": "Sprawdzić każdą z $200$ liczb osobno",
               "feedback": "Bardzo pracochłonne - lepiej pogrupować według końcówek.",
               "is_correct": false
             },
@@ -6667,7 +6667,7 @@
       },
       {
         "step": 10,
-        "hint": "Jak wykorzystać fakt, że suma wszystkich cyfr wynosi 28?",
+        "hint": "Jak wykorzystać fakt, że suma wszystkich cyfr wynosi $28$?",
         "expression": "Jeśli wybieramy 4 cyfry o sumie $S$, to pozostałe 3 cyfry mają sumę $28 - S$",
         "explanation": "To pozwoli nam efektywnie sprawdzać warunek podzielności przez 3",
         "why": "Liczba jest podzielna przez 3, gdy suma jej cyfr jest podzielna przez 3. Ponieważ $28 \\equiv 1 \\pmod{3}$, suma 4 cyfr musi dawać resztę 1 przy dzieleniu przez 3."
@@ -6759,7 +6759,7 @@
     "id": "graph_cycle_counting",
     "topic": "Kombinatoryka - cykle w grafach",
     "difficulty": 4,
-    "statement": "W małym miasteczku jest 5 skrzyżowań połączonych drogami w kształcie pełnego grafu (każde skrzyżowanie połączone jest z każdym innym). Turysta chce przejść trasę odwiedzającą dokładnie 4 różne skrzyżowania, zaczynając i kończąc w tym samym punkcie. Ile jest takich tras, jeśli nie może przechodzić tą samą drogą dwukrotnie?",
+    "statement": "W małym miasteczku jest $5$ skrzyżowań połączonych drogami w kształcie pełnego grafu (każde skrzyżowanie połączone jest z każdym innym). Turysta chce przejść trasę odwiedzającą dokładnie 4 różne skrzyżowania, zaczynając i kończąc w tym samym punkcie. Ile jest takich tras, jeśli nie może przechodzić tą samą drogą dwukrotnie?",
     "steps": [
       {
         "step": 1,
@@ -7045,7 +7045,7 @@
       {
         "step": 11,
         "hint": "Jak połączyć liczbę sposobów dla nagród głównych i pocieszenia?",
-        "expression": "Całkowita liczba = $\\binom{25}{3} \\cdot \\binom{75}{7} \\cdot \\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$",
+        "expression": "Całkowita $liczba = \\binom{25}{3} \\cdot \\binom{75}{7} \\cdot \\sum_{k=8}^{20} \\binom{22}{k} \\cdot \\binom{68}{20-k}$",
         "explanation": "Mnożymy sposoby rozdania nagród głównych przez sposoby rozdania nagród pocieszenia"
       },
       {
@@ -7165,7 +7165,7 @@
             {
               "id": "C",
               "text": "$4$ sposoby",
-              "feedback": "Za dużo - to tylko permutacja 2 elementów na 2 pozycjach",
+              "feedback": "Za dużo - to tylko permutacja $2$ elementów na 2 pozycjach",
               "is_correct": false
             }
           ],
@@ -7189,7 +7189,7 @@
         "step": 9,
         "hint": "W podpunkcie c) jakie mamy ograniczenie?",
         "expression": "Podpunkt c): 2 kobiety i 3 mężczyzn, kobiety NIE obok siebie",
-        "explanation": "Mamy 5 osób, ale kobiety nie mogą stać na sąsiadujących pozycjach"
+        "explanation": "Mamy $5$ osób, ale kobiety nie mogą stać na sąsiadujących pozycjach"
       },
       {
         "step": 10,
@@ -7230,7 +7230,7 @@
       {
         "step": 12,
         "hint": "Ile luk powstaje między 3 mężczyznami?",
-        "expression": "Luki: _M_M_M_ daje 4 możliwe pozycje dla kobiet",
+        "expression": "Luki: _M_M_M_ daje $4$ możliwe pozycje dla kobiet",
         "explanation": "3 mężczyzn tworzy 4 luki (przed pierwszym, między nimi, po ostatnim)",
         "why": "n elementów tworzy n+1 luk do wstawienia innych elementów."
       },
@@ -7250,7 +7250,7 @@
         "step": 15,
         "hint": "Jaka jest całkowita liczba sposobów w podpunkcie c)?",
         "expression": "Podpunkt c): $3! \\cdot \\binom{4}{2} \\cdot 2! = 6 \\cdot 6 \\cdot 2 = 72$ sposoby",
-        "explanation": "Mnożymy: sposoby ustawienia mężczyzn × wybór luk × ustawienie kobiet w lukach"
+        "explanation": "Mnożymy: sposoby ustawienia $mężczyzn \\cdot wybór$ $luk \\cdot ustawienie$ kobiet w lukach"
       }
     ],
     "solutions": [
@@ -7293,7 +7293,7 @@
       {
         "step": 2,
         "hint": "Które cyfry mogą stać na pierwszej pozycji liczby pięciocyfrowej?",
-        "expression": "Pierwsza cyfra: $\\{1, 2, 3, 4\\}$ - 4 możliwości",
+        "expression": "Pierwsza cyfra: $\\{1, 2, 3, 4\\} - 4$ możliwości",
         "explanation": "Zero nie może być pierwszą cyfrą liczby pięciocyfrowej",
         "interactive_choice": {
           "prompt": "Jakie cyfry mogą być pierwszą cyfrą liczby pięciocyfrowej?",
@@ -7317,7 +7317,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Pierwsza cyfra liczby pięciocyfrowej musi być różna od zera, więc mamy 4 możliwości."
+          "explanation_after": "Pierwsza cyfra liczby pięciocyfrowej musi być różna od zera, więc mamy $4$ możliwości."
         }
       },
       {
@@ -7366,7 +7366,7 @@
       {
         "step": 6,
         "hint": "Ile sposobów ułożenia cyfr gdy ostatnia to 0?",
-        "expression": "4 sposoby na pierwszą × 3! sposobów na środkowe = $4 \\times 6 = 24$",
+        "expression": "4 sposoby na $pierwszą \\cdot 3$! sposobów na $środkowe = 4 \\times 6 = 24$",
         "explanation": "Pierwsza cyfra: 4 wybory, pozostałe 3 cyfry permutujemy na 3 środkowych pozycjach"
       },
       {
@@ -7379,7 +7379,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Tak samo jak dla 0 - każda da 24 liczby",
+              "text": "Tak samo jak dla 0 - każda da $24$ liczby",
               "feedback": "Nie! Gdy ostatnia cyfra to 2 lub 4, może być pierwszą, więc mniej możliwości.",
               "is_correct": false
             },
@@ -7402,7 +7402,7 @@
       {
         "step": 8,
         "hint": "Ile sposobów gdy ostatnia cyfra to 2?",
-        "expression": "3 sposoby na pierwszą × 3! sposobów na środkowe = $3 \\times 6 = 18$",
+        "expression": "3 sposoby na $pierwszą \\cdot 3$! sposobów na $środkowe = 3 \\times 6 = 18$",
         "explanation": "Pierwsza: 3 wybory, pozostałe 3 cyfry (w tym 0) na środkowych pozycjach"
       },
       {
@@ -7519,7 +7519,7 @@
         "step": 6,
         "hint": "Jaka jest odpowiedź dla części a)?",
         "expression": "Część a): $2 \\times 2 \\times 2 \\times 1 = 8$ liczb",
-        "explanation": "Mnożymy możliwości dla każdej pozycji: tysiące × setki × dziesiątki × jedności"
+        "explanation": "Mnożymy możliwości dla każdej pozycji: $tysiące \\cdot setki × dziesiątki \\cdot jedności$"
       },
       {
         "step": 7,
@@ -7554,7 +7554,7 @@
       {
         "step": 8,
         "hint": "Które cyfry mogą być na ostatniej pozycji w części b)?",
-        "expression": "Ostatnia pozycja: 5 możliwości {1, 3, 5, 7, 9}",
+        "expression": "Ostatnia pozycja: $5$ możliwości {1, 3, 5, 7, 9}",
         "explanation": "Cyfry nieparzyste dostępne w naszym zbiorze",
         "interactive_choice": {
           "prompt": "Jakie cyfry mogą kończyć liczbę nieparzystą w części b)?",
@@ -7568,7 +7568,7 @@
             {
               "id": "B",
               "text": "Cyfra 5 lub nieparzyste z {0,1,2,3,6,7,8,9}",
-              "feedback": "Tak! To daje nam 5 lub {1,3,7,9} = 5 możliwości.",
+              "feedback": "Tak! To daje nam 5 lub ${1,3,7,9} = 5$ możliwości.",
               "is_correct": true
             },
             {
@@ -7634,7 +7634,7 @@
         "step": 17,
         "hint": "Ile możliwości w przypadku 2?",
         "expression": "Przypadek 2: $4 \\times 6 \\times 7 = 168$ liczb",
-        "explanation": "4 wybory ostatniej cyfry × 6 rozmieszczenia 4,5 × 7 wyborów trzeciej cyfry"
+        "explanation": "4 wybory ostatniej $cyfry \\cdot 6$ rozmieszczenia 4,$5 \\cdot 7$ wyborów trzeciej cyfry"
       },
       {
         "step": 18,
@@ -7670,7 +7670,7 @@
     "id": "even_product_pairs",
     "topic": "Kombinatoryka i prawdopodobieństwo",
     "difficulty": 3,
-    "statement": "Ze zbioru liczb {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} losujemy bez zwracania dwa razy po jednej liczbie. Wylosowane liczby tworzą parę (a, b), gdzie a jest wynikiem pierwszego losowania, b jest wynikiem drugiego losowania. Oblicz, ile jest wszystkich par (a, b) takich, że iloczyn $a \\cdot b$ jest liczbą parzystą.",
+    "statement": "Ze zbioru liczb {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} losujemy bez zwracania dwa razy po jednej liczbie. Wylosowane liczby tworzą parę $(a, b)$, gdzie a jest wynikiem pierwszego losowania, b jest wynikiem drugiego losowania. Oblicz, ile jest wszystkich par $(a, b)$ takich, że iloczyn $a \\cdot b$ jest liczbą parzystą.",
     "steps": [
       {
         "step": 1,
@@ -7717,9 +7717,9 @@
       },
       {
         "step": 4,
-        "hint": "Ile jest wszystkich możliwych par (a,b) przy losowaniu bez zwracania?",
+        "hint": "Ile jest wszystkich możliwych par $(a, b)$ przy losowaniu bez zwracania?",
         "expression": "Wszystkich par: $15 \\cdot 14 = 210$",
-        "explanation": "Pierwsza liczba: 15 możliwości, druga: 14 możliwości (bez zwracania)"
+        "explanation": "Pierwsza liczba: $15$ możliwości, druga: $14$ możliwości (bez zwracania)"
       },
       {
         "step": 5,
@@ -7729,7 +7729,7 @@
       },
       {
         "step": 6,
-        "hint": "Ile jest par (a,b) gdzie obie liczby są nieparzyste?",
+        "hint": "Ile jest par $(a, b)$ gdzie obie liczby są nieparzyste?",
         "expression": "Par nieparzystych: $8 \\cdot 7 = 56$",
         "explanation": "Pierwsza nieparzysta: 8 wybory, druga nieparzysta: 7 pozostałych",
         "interactive_choice": {
@@ -7744,13 +7744,13 @@
             {
               "id": "B",
               "text": "$8 \\times 7 = 56$ par",
-              "feedback": "Dokładnie! Pierwsza nieparzysta: 8 możliwości, druga nieparzysta: 7 pozostałych",
+              "feedback": "Dokładnie! Pierwsza nieparzysta: $8$ możliwości, druga nieparzysta: 7 pozostałych",
               "is_correct": true
             },
             {
               "id": "C",
               "text": "$\\binom{8}{2} = 28$ par",
-              "feedback": "To liczba kombinacji - ale tutaj kolejność ma znaczenie (a,b) ≠ (b,a)",
+              "feedback": "To liczba kombinacji - ale tutaj kolejność ma znaczenie $(a, b)$ ≠ $(b, a)$",
               "is_correct": false
             }
           ],
@@ -7864,26 +7864,26 @@
       {
         "step": 4,
         "hint": "Jak obliczyć liczbę sposobów wypełnienia pozycji 4, 5, 6?",
-        "expression": "$V_7^3 = 7 \\cdot 6 \\cdot 5 = 210$",
+        "expression": "$V_$7^{3} = 7$ \\cdot 6 \\cdot 5 = 210$",
         "explanation": "Liczba sposobów wypełnienia ostatnich trzech pozycji",
         "interactive_choice": {
           "prompt": "Jaką metodą obliczyć liczbę sposobów ustawienia 3 różnych cyfr z 7 dostępnych?",
           "options": [
             {
               "id": "A",
-              "text": "Wariacje: $V_7^3 = 7 \\cdot 6 \\cdot 5$",
+              "text": "Wariacje: $V_$7^{3} = 7$ \\cdot 6 \\cdot 5$",
               "feedback": "Perfekcyjnie! Kolejność ma znaczenie, cyfry muszą być różne.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Kombinacje: $C_7^3 = \\frac{7!}{3!4!}$",
+              "text": "Kombinacje: $C_$7^{3} = \\frac{7!}{3!4!}$",
               "feedback": "Nie - kombinacje ignorują kolejność, a tu pozycje się różnią.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Po prostu $7^3$",
+              "text": "Po prostu $7^{3}$",
               "feedback": "Nie - to pozwalałoby na powtarzanie cyfr.",
               "is_correct": false
             }
@@ -7902,7 +7902,7 @@
         "hint": "Jak obliczyć całkowitą liczbę numerów CAN?",
         "expression": "$4 \\cdot 210 = 840$",
         "explanation": "Mnożymy liczbę możliwych trójek przez liczbę sposobów wypełnienia pozostałych pozycji",
-        "why": "Zasada mnożenia: dla każdej z 4 trójek mamy 210 sposobów dokończenia numeru."
+        "why": "Zasada mnożenia: dla każdej z 4 trójek mamy $210$ sposobów dokończenia numeru."
       }
     ],
     "solutions": [
@@ -8022,14 +8022,14 @@
             },
             {
               "id": "B",
-              "text": "Przez 90 (iloczyn 6 × 15)",
+              "text": "Przez 90 (iloczyn $6 \\cdot 15$)",
               "feedback": "Nie - iloczyn jest za duży, potrzebujemy NWW.",
               "is_correct": false
             },
             {
               "id": "C",
               "text": "Przez 30 (NWW(6,15))",
-              "feedback": "Dokładnie! NWW(6,15) = 30, bo 6 = 2×3, 15 = 3×5.",
+              "feedback": "Dokładnie! NWW(6,15) = 30, bo $6 = 2 \\cdot 3$, $15 = 3 \\cdot 5$.",
               "is_correct": true
             }
           ],
@@ -8196,13 +8196,13 @@
       {
         "step": 6,
         "hint": "Ile sposobów wyboru cyfry a?",
-        "expression": "Cyfra $a$: 8 możliwości",
+        "expression": "Cyfra $a$: $8$ możliwości",
         "explanation": "Cyfra dziesiątek tysięcy może być dowolną z 8 dostępnych cyfr"
       },
       {
         "step": 7,
         "hint": "Ile sposobów wyboru cyfry b?",
-        "expression": "Cyfra $b$: 9 możliwości",
+        "expression": "Cyfra $b$: $9$ możliwości",
         "explanation": "Cyfra tysięcy może być dowolną z 9 dostępnych cyfr (włącznie z 0)"
       },
       {
@@ -8320,13 +8320,13 @@
       {
         "step": 5,
         "hint": "Ile możliwych wartości ma cyfra setek $b$?",
-        "expression": "$b \\in \\{0,1,2,3,4,5,6\\}$ - czyli 7 możliwości",
+        "expression": "$b \\in \\{0,1,2,3,4,5,6\\}$ - czyli $7$ możliwości",
         "explanation": "Cyfra setek może przyjąć 7 różnych wartości"
       },
       {
         "step": 6,
         "hint": "Jak policzyć liczbę możliwości dla każdej cyfry osobno?",
-        "expression": "Niezależne wybory: $a$ (9 możliwości), $b$ (7 możliwości), $c$ (10 możliwości)",
+        "expression": "Niezależne wybory: $a$ ($9$ możliwości), $b$ ($7$ możliwości), $c$ ($10$ możliwości)",
         "explanation": "Identyfikujemy niezależne wybory cyfr",
         "interactive_choice": {
           "prompt": "Które cyfry możemy wybierać niezależnie od siebie?",
@@ -8482,7 +8482,7 @@
       {
         "step": 7,
         "hint": "Ile mamy do wyboru cyfr parzystych?",
-        "expression": "Cyfr parzystych: 4 możliwości $\\{2, 4, 6, 8\\}$",
+        "expression": "Cyfr parzystych: $4$ możliwości $\\{2, 4, 6, 8\\}$",
         "explanation": "Wybieramy konkretną cyfrę parzystą spośród dostępnych"
       },
       {
@@ -8518,7 +8518,7 @@
       {
         "step": 9,
         "hint": "Na ile sposobów można wypełnić pozostałe 3 pozycje?",
-        "expression": "Sposobów wypełnienia 3 pozycji: $7^3 = 343$",
+        "expression": "Sposobów wypełnienia 3 pozycji: $7^{3} = 343$",
         "explanation": "Na każdej z 3 pozycji mamy 7 możliwych cyfr",
         "why": "Cyfry mogą się powtarzać na różnych pozycjach, więc to wariacje z powtórzeniami."
       },
@@ -8526,13 +8526,13 @@
         "step": 10,
         "hint": "Jak połączyć wszystkie obliczone elementy?",
         "expression": "Wynik: $20 \\times 4 \\times 343 = 27440$",
-        "explanation": "Mnożymy: sposoby wyboru pozycji × cyfry parzyste × wypełnienie reszty",
+        "explanation": "Mnożymy: sposoby wyboru $pozycji \\cdot cyfry$ $parzyste \\cdot wypełnienie$ reszty",
         "interactive_choice": {
           "prompt": "Jak obliczyć końcowy wynik łącząc wszystkie elementy?",
           "options": [
             {
               "id": "A",
-              "text": "Pozycje × cyfry parzyste × wypełnienie: $20 \\times 4 \\times 343$",
+              "text": "$Pozycje \\cdot cyfry$ $parzyste \\cdot wypełnienie$: $20 \\times 4 \\times 343$",
               "feedback": "Perfekcyjnie! Mnożymy wszystkie niezależne wybory.",
               "is_correct": true
             },
@@ -8544,7 +8544,7 @@
             },
             {
               "id": "C",
-              "text": "Tylko pozycje × wypełnienie: $20 \\times 343$",
+              "text": "Tylko $pozycje \\cdot wypełnienie$: $20 \\times 343$",
               "feedback": "Zapomniałeś o wyborze konkretnej cyfry parzystej!",
               "is_correct": false
             }
@@ -8583,7 +8583,7 @@
       {
         "step": 1,
         "hint": "Jakie cyfry mogą stać na pierwszej pozycji w liczbie czterocyfrowej?",
-        "expression": "Pierwsza cyfra: $\\{2, 4, 6, 8\\}$ - mamy 4 możliwości",
+        "expression": "Pierwsza cyfra: $\\{2, 4, 6, 8\\}$ - mamy $4$ możliwości",
         "explanation": "Cyfra parzysta różna od zera na pierwszej pozycji",
         "interactive_choice": {
           "prompt": "Które cyfry parzyste mogą być pierwszą cyfrą liczby czterocyfrowej?",
@@ -8607,13 +8607,13 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Pierwsza cyfra liczby czterocyfrowej nie może być zerem, więc mamy 4 możliwości: 2, 4, 6, 8."
+          "explanation_after": "Pierwsza cyfra liczby czterocyfrowej nie może być zerem, więc mamy $4$ możliwości: 2, 4, 6, 8."
         }
       },
       {
         "step": 2,
         "hint": "Które cyfry mogą stać na pozostałych trzech pozycjach?",
-        "expression": "Cyfry nieparzyste: $\\{1, 3, 5, 7, 9\\}$ - mamy 5 możliwości na każdej pozycji",
+        "expression": "Cyfry nieparzyste: $\\{1, 3, 5, 7, 9\\}$ - mamy $5$ możliwości na każdej pozycji",
         "explanation": "Na pozycjach 2, 3 i 4 mogą stać tylko cyfry nieparzyste"
       },
       {
@@ -8649,7 +8649,7 @@
       {
         "step": 4,
         "hint": "Którą metodę zastosować do policzenia wszystkich możliwości?",
-        "expression": "Liczba możliwości = $4 \\times 5 \\times 5 \\times 5$",
+        "expression": "Liczba $możliwości = 4 \\times 5 \\times 5 \\times 5$",
         "explanation": "Stosujemy zasadę mnożenia dla niezależnych wyborów",
         "why": "Zasada mnożenia: jeśli pierwszy wybór można wykonać na $a$ sposobów, drugi na $b$ sposobów itd., to wszystkich kombinacji jest $a \\times b \\times c \\times d$.",
         "interactive_choice": {
@@ -8663,7 +8663,7 @@
             },
             {
               "id": "B",
-              "text": "Pomnożyć liczby możliwości: 4 × 5 × 5 × 5",
+              "text": "Pomnożyć liczby możliwości: $4 \\cdot 5 × 5 \\cdot 5$",
               "feedback": "Dokładnie! Zasada mnożenia - każdy wybór jest niezależny.",
               "is_correct": true
             },
@@ -8679,8 +8679,8 @@
       },
       {
         "step": 5,
-        "hint": "Ile wynosi $4 \\times 5^3$?",
-        "expression": "$4 \\times 5^3 = 4 \\times 125 = 500$",
+        "hint": "Ile wynosi $4 \\times $5^{3}$?",
+        "expression": "$4 \\times $5^{3} = 4$ \\times 125 = 500$",
         "explanation": "Obliczamy końcowy wynik"
       }
     ],
@@ -8702,7 +8702,7 @@
     "timestamp": "2025-09-17T07:36:16.803Z",
     "module": "kombinatoryka"
   },
-{
+  {
     "id": "permutation_fixed_positions",
     "topic": "Permutacje z warunkami",
     "difficulty": 2,
@@ -8711,8 +8711,8 @@
       {
         "step": 1,
         "hint": "Ile osób mamy do ustawienia w szeregu?",
-        "expression": "Mamy 8 osób do ustawienia w szeregu",
-        "explanation": "Zadanie dotyczy permutacji 8 osób z dodatkowymi warunkami"
+        "expression": "Mamy $8$ osób do ustawienia w szeregu",
+        "explanation": "Zadanie dotyczy permutacji $8$ osób z dodatkowymi warunkami"
       },
       {
         "step": 2,
@@ -8748,12 +8748,12 @@
         "step": 3,
         "hint": "Ile osób pozostało do ustawienia na pozostałych miejscach?",
         "expression": "Pozostało $8 - 3 = 5$ osób",
-        "explanation": "Po ustaleniu pozycji A, B, C zostaje 5 osób do rozmieszczenia"
+        "explanation": "Po ustaleniu pozycji A, B, C zostaje $5$ osób do rozmieszczenia"
       },
       {
         "step": 4,
-        "hint": "Na ilu miejscach możemy ustawić pozostałe 5 osób?",
-        "expression": "Miejsca 4, 5, 6, 7, 8 są wolne dla pozostałych 5 osób",
+        "hint": "Na ilu miejscach możemy ustawić pozostałe $5$ osób?",
+        "expression": "Miejsca 4, 5, 6, 7, 8 są wolne dla pozostałych $5$ osób",
         "explanation": "Na miejscach 4-8 ustawiamy pozostałe osoby",
         "interactive_choice": {
           "prompt": "Ile wolnych miejsc pozostało dla 5 osób?",
@@ -8782,8 +8782,8 @@
       },
       {
         "step": 5,
-        "hint": "Jak obliczyć liczbę sposobów ustawienia 5 osób na 5 miejscach?",
-        "expression": "Liczba permutacji 5 osób = $5!$",
+        "hint": "Jak obliczyć liczbę sposobów ustawienia $5$ osób na 5 miejscach?",
+        "expression": "Liczba permutacji $5$ $osób = 5!$",
         "explanation": "To standardowa permutacja bez powtórzeń",
         "why": "Gdy mamy n różnych obiektów do ustawienia na n miejscach, liczba sposobów to n!"
       },
@@ -8820,8 +8820,8 @@
       {
         "step": 7,
         "hint": "Jaka jest odpowiedź na pytanie zadania?",
-        "expression": "Liczba sposobów = $120$",
-        "explanation": "Osoby A, B, C mają ustalone miejsca, pozostałe 5 osób można ustawić na 120 sposobów"
+        "expression": "Liczba $sposobów = 120$",
+        "explanation": "Osoby A, B, C mają ustalone miejsca, pozostałe $5$ osób można ustawić na $120$ sposobów"
       }
     ],
     "solutions": [
@@ -8887,14 +8887,14 @@
         "step": 3,
         "hint": "Co oznacza warunek 'pomiędzy parą AB a osobą C stały dwie inne osoby'?",
         "expression": "Między (AB) a C muszą być dokładnie 2 osoby: (AB)--X--Y--C lub C--X--Y--(AB)",
-        "explanation": "Odległość między parą AB a osobą C wynosi 3 pozycje",
+        "explanation": "Odległość między parą AB a osobą C wynosi $3$ pozycje",
         "why": "Ten warunek ogranicza możliwe pozycje pary AB i osoby C w szeregu."
       },
       {
         "step": 4,
         "hint": "Jakie są możliwe pozycje dla pary AB i osoby C w szeregu 7 obiektów?",
         "expression": "Możliwe pozycje: (AB,C) na pozycjach (1,5), (2,6), (3,7), (5,1), (6,2), (7,3)",
-        "explanation": "6 sposobów ustawienia pary AB i osoby C z odpowiednią odległością",
+        "explanation": "$6$ sposobów ustawienia pary AB i osoby C z odpowiednią odległością",
         "interactive_choice": {
           "prompt": "Które pary pozycji (AB, C) spełniają warunek odległości w szeregu 1-2-3-4-5-6-7?",
           "options": [
@@ -8923,27 +8923,27 @@
       {
         "step": 5,
         "hint": "Ile pozostało obiektów do ustawienia na pozostałych pozycjach?",
-        "expression": "Pozostało 5 osób na 5 pozostałych pozycjach",
-        "explanation": "Po ustaleniu pozycji AB i C, zostaje 5 pozycji dla 5 osób"
+        "expression": "Pozostało $5$ osób na 5 pozostałych pozycjach",
+        "explanation": "Po ustaleniu pozycji AB i C, zostaje 5 pozycji dla $5$ osób"
       },
       {
         "step": 6,
-        "hint": "Na ile sposobów można ustawić 5 osób na 5 pozycjach?",
+        "hint": "Na ile sposobów można ustawić $5$ osób na 5 pozycjach?",
         "expression": "$5! = 120$ sposobów",
-        "explanation": "Permutacja 5 elementów"
+        "explanation": "Permutacja $5$ elementów"
       },
       {
         "step": 7,
         "hint": "Jak połączyć wszystkie możliwości w końcowy wynik?",
         "expression": "$6 \\times 120 \\times 2 = 1440$",
-        "explanation": "6 par pozycji dla AB i C, 120 permutacji pozostałych osób, 2 orientacje pary AB",
+        "explanation": "6 par pozycji dla AB i C, $120$ permutacji pozostałych osób, 2 orientacje pary AB",
         "interactive_choice": {
           "prompt": "Jak obliczyć całkowitą liczbę sposobów?",
           "options": [
             {
               "id": "A",
               "text": "$6 \\times 5! \\times 2 = 6 \\times 120 \\times 2$",
-              "feedback": "Perfekcyjnie! 6 par pozycji × 120 permutacji × 2 ustawienia AB.",
+              "feedback": "Perfekcyjnie! 6 par pozycji × $120$ $permutacji \\cdot 2$ ustawienia AB.",
               "is_correct": true
             },
             {
@@ -8959,7 +8959,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Mnożymy wszystkie niezależne wybory: pozycje × permutacje × orientacja pary."
+          "explanation_after": "Mnożymy wszystkie niezależne wybory: $pozycje \\cdot permutacje$ × orientacja pary."
         }
       }
     ],
@@ -9015,7 +9015,7 @@
             },
             {
               "id": "C",
-              "text": "Najpierw ustawić pozostałe 6 osób, potem wstawić A i B",
+              "text": "Najpierw ustawić pozostałe $6$ osób, potem wstawić A i B",
               "feedback": "Możliwe, ale skomplikowane - trzeba uważać na pozycje.",
               "is_correct": false
             }
@@ -9025,8 +9025,8 @@
       },
       {
         "step": 2,
-        "hint": "Na ile sposobów można ustawić 8 osób w szereg bez ograniczeń?",
-        "expression": "Wszystkie permutacje = $8! = 40320$",
+        "hint": "Na ile sposobów można ustawić $8$ osób w szereg bez ograniczeń?",
+        "expression": "Wszystkie $permutacje = 8! = 40320$",
         "explanation": "Permutacje 8 różnych obiektów",
         "why": "To standardowa permutacja bez powtórzeń - każda osoba może być na każdej pozycji."
       },
@@ -9034,7 +9034,7 @@
         "step": 3,
         "hint": "Jak potraktować osoby A i B gdy mają stać obok siebie?",
         "expression": "Traktujemy (AB) jako jeden blok",
-        "explanation": "Zamiast 8 osób mamy 7 obiektów: blok (AB) plus 6 innych osób",
+        "explanation": "Zamiast $8$ osób mamy 7 obiektów: blok (AB) plus 6 innych osób",
         "interactive_choice": {
           "prompt": "Jak najlepiej policzyć permutacje gdzie A i B stoją obok siebie?",
           "options": [
@@ -9062,8 +9062,8 @@
       },
       {
         "step": 4,
-        "hint": "Na ile sposobów można ustawić 7 obiektów (blok plus 6 osób)?",
-        "expression": "Permutacje 7 obiektów = $7! = 5040$",
+        "hint": "Na ile sposobów można ustawić 7 obiektów (blok plus $6$ osób)?",
+        "expression": "Permutacje 7 $obiektów = 7! = 5040$",
         "explanation": "Ustawiamy 7 obiektów w szereg"
       },
       {
@@ -9076,7 +9076,7 @@
       {
         "step": 6,
         "hint": "Ile jest permutacji gdzie A i B stoją obok siebie?",
-        "expression": "Permutacje z A i B obok = $7! \\times 2! = 5040 \\times 2 = 10080$",
+        "expression": "Permutacje z A i B $obok = 7! \\times 2! = 5040 \\times 2 = 10080$",
         "explanation": "Mnożymy liczbę ustawień bloków przez liczbę ustawień wewnątrz bloku"
       },
       {
@@ -9137,7 +9137,7 @@
       {
         "step": 1,
         "hint": "Ile osób pozostaje do ustawienia po ustaleniu pozycji osoby A?",
-        "expression": "Osoba A stoi na pozycji 1, pozostaje 7 osób na pozycjach 2-8",
+        "expression": "Osoba A stoi na pozycji 1, pozostaje $7$ osób na pozycjach 2-8",
         "explanation": "Warunek że A stoi pierwsza jest już spełniony"
       },
       {
@@ -9174,7 +9174,7 @@
       {
         "step": 3,
         "hint": "Ile jest wszystkich sposobów ustawienia 7 pozostałych osób?",
-        "expression": "Wszystkich ustawień 7 osób: $7! = 5040$",
+        "expression": "Wszystkich ustawień $7$ osób: $7! = 5040$",
         "explanation": "Bez żadnych ograniczeń na pozycje B i C"
       },
       {
@@ -9247,8 +9247,8 @@
       {
         "step": 7,
         "hint": "Jaka jest ostateczna odpowiedź?",
-        "expression": "Liczba sposobów = $2520$",
-        "explanation": "Osiem osób można ustawić na 2520 sposobów spełniających wszystkie warunki"
+        "expression": "Liczba $sposobów = 2520$",
+        "explanation": "Osiem osób można ustawić na $2520$ sposobów spełniających wszystkie warunki"
       }
     ],
     "solutions": [
@@ -9277,7 +9277,7 @@
     "id": "combinations_at_most_two_girls",
     "topic": "Kombinacje z ograniczeniami",
     "difficulty": 4,
-    "statement": "W klasie jest 15 dziewcząt i 16 chłopców. Spośród tych osób trzeba wybrać czteroosobową delegację. Na ile sposobów można to zrobić tak, aby w delegacji znalazły się co najwyżej dwie dziewczynki?",
+    "statement": "W klasie jest $15$ dziewcząt i 16 chłopców. Spośród tych osób trzeba wybrać czteroosobową delegację. Na ile sposobów można to zrobić tak, aby w delegacji znalazły się co najwyżej dwie dziewczynki?",
     "steps": [
       {
         "step": 1,
@@ -9422,13 +9422,13 @@
     "id": "combinations_at_most_two_women",
     "topic": "Kombinacje z ograniczeniami",
     "difficulty": 4,
-    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najwyżej dwie kobiety?",
+    "statement": "W grupie $20$ osób jest $12$ kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najwyżej dwie kobiety?",
     "steps": [
       {
         "step": 1,
         "hint": "Ile mężczyzn jest w grupie?",
         "expression": "Mężczyzn: $20 - 12 = 8$",
-        "explanation": "W grupie jest 8 mężczyzn i 12 kobiet"
+        "explanation": "W grupie jest $8$ mężczyzn i 12 kobiet"
       },
       {
         "step": 2,
@@ -9471,7 +9471,7 @@
         "step": 4,
         "hint": "Czy można wybrać 5 mężczyzn z grupy 8?",
         "expression": "$\\binom{12}{0} \\cdot \\binom{8}{5} = 1 \\cdot 56 = 56$",
-        "explanation": "Pierwszy przypadek daje 56 sposobów",
+        "explanation": "Pierwszy przypadek daje $56$ sposobów",
         "interactive_choice": {
           "prompt": "Jak obliczyć $\\binom{8}{5}$?",
           "options": [
@@ -9507,7 +9507,7 @@
         "step": 6,
         "hint": "Ile wynosi $\\binom{12}{1}$ i $\\binom{8}{4}$?",
         "expression": "$\\binom{12}{1} \\cdot \\binom{8}{4} = 12 \\cdot 70 = 840$",
-        "explanation": "Drugi przypadek daje 840 sposobów"
+        "explanation": "Drugi przypadek daje $840$ sposobów"
       },
       {
         "step": 7,
@@ -9525,7 +9525,7 @@
         "step": 9,
         "hint": "Ile sposobów daje trzeci przypadek?",
         "expression": "$\\binom{12}{2} \\cdot \\binom{8}{3} = 66 \\cdot 56 = 3696$",
-        "explanation": "Trzeci przypadek daje 3696 sposobów"
+        "explanation": "Trzeci przypadek daje $3696$ sposobów"
       },
       {
         "step": 10,
@@ -9587,13 +9587,13 @@
     "id": "delegation_at_least_one_woman",
     "topic": "Kombinatoryka - zasada dopełnienia",
     "difficulty": 3,
-    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazła się tam co najmniej jedna kobieta?",
+    "statement": "W grupie $20$ osób jest $12$ kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazła się tam co najmniej jedna kobieta?",
     "steps": [
       {
         "step": 1,
         "hint": "Ile mężczyzn jest w grupie?",
-        "expression": "Liczba mężczyzn = $20 - 12 = 8$",
-        "explanation": "W grupie 20 osób, jeśli 12 to kobiety, to pozostałe 8 to mężczyźni"
+        "expression": "Liczba $mężczyzn = 20 - 12 = 8$",
+        "explanation": "W grupie $20$ osób, jeśli 12 to kobiety, to pozostałe 8 to mężczyźni"
       },
       {
         "step": 2,
@@ -9628,9 +9628,9 @@
       },
       {
         "step": 3,
-        "hint": "Ile jest sposobów wybrania 5 osób z grupy 20?",
-        "expression": "Wszystkie delegacje = $\\binom{20}{5}$",
-        "explanation": "Wybieramy 5 osób z 20, kolejność nie ma znaczenia"
+        "hint": "Ile jest sposobów wybrania $5$ osób z grupy 20?",
+        "expression": "Wszystkie $delegacje = \\binom{20}{5}$",
+        "explanation": "Wybieramy $5$ osób z 20, kolejność nie ma znaczenia"
       },
       {
         "step": 4,
@@ -9655,7 +9655,7 @@
             {
               "id": "C",
               "text": "$\\binom{20}{5} = \\frac{20 \\cdot 19 \\cdot 18 \\cdot 17 \\cdot 16}{5!}$",
-              "feedback": "Doskonale! Najwygodniejszy sposób - mnożysz tylko 5 liczb w liczniku.",
+              "feedback": "Doskonale! Najwygodniejszy sposób - mnożysz tylko $5$ liczb w liczniku.",
               "is_correct": true
             }
           ],
@@ -9677,7 +9677,7 @@
       {
         "step": 7,
         "hint": "Ile jest delegacji składających się tylko z mężczyzn?",
-        "expression": "Delegacje bez kobiet = $\\binom{8}{5}$",
+        "expression": "Delegacje bez $kobiet = \\binom{8}{5}$",
         "explanation": "Wybieramy 5 mężczyzn z 8 dostępnych"
       },
       {
@@ -9689,7 +9689,7 @@
       {
         "step": 9,
         "hint": "Ile jest delegacji z co najmniej jedną kobietą?",
-        "expression": "Delegacje z co najmniej jedną kobietą = $15,504 - 56 = 15,448$",
+        "expression": "Delegacje z co najmniej jedną $kobietą = 15,504 - 56 = 15,448$",
         "explanation": "Stosujemy zasadę dopełnienia",
         "interactive_choice": {
           "prompt": "Jak zastosować zasadę dopełnienia do otrzymania wyniku?",
@@ -9708,7 +9708,7 @@
             },
             {
               "id": "C",
-              "text": "Pomnożyć: wszystkie delegacje × delegacje bez kobiet",
+              "text": "Pomnożyć: wszystkie $delegacje \\cdot delegacje$ bez kobiet",
               "feedback": "Nie - mnożenie nie ma zastosowania w zasadzie dopełnienia.",
               "is_correct": false
             }
@@ -9744,7 +9744,7 @@
     "id": "combinatorics_delegation",
     "topic": "Kombinatoryka - kombinacje",
     "difficulty": 4,
-    "statement": "W grupie 20 osób jest 12 kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najmniej dwie i nie więcej niż cztery kobiety?",
+    "statement": "W grupie $20$ osób jest $12$ kobiet. Ile jest sposobów wybrania pięcioosobowej delegacji z tej grupy tak, aby znalazły się tam co najmniej dwie i nie więcej niż cztery kobiety?",
     "steps": [
       {
         "step": 1,
@@ -9925,7 +9925,7 @@
       },
       {
         "step": 2,
-        "hint": "Ile jest podzbiorów każdego typu dla zbioru n-elementowego?",
+        "hint": "Ile jest podzbiorów każdego typu dla zbioru $n$-elementowego?",
         "expression": "Liczba podzbiorów: $\\binom{n}{0} + \\binom{n}{1} + \\binom{n}{2}$",
         "explanation": "Używamy symboli Newtona do policzenia podzbiorów każdego typu",
         "why": "Symbol $\\binom{n}{k}$ oznacza liczbę sposobów wyboru k elementów z n elementów, czyli liczbę k-elementowych podzbiorów."
@@ -9993,7 +9993,7 @@
       {
         "step": 9,
         "hint": "Którą metodą rozwiążesz to równanie kwadratowe?",
-        "expression": "$\\Delta = 1^2 - 4 \\cdot 1 \\cdot (-420) = 1 + 1680 = 1681$",
+        "expression": "$\\Delta = 1^{2}$ - 4 \\cdot 1 \\cdot (-420) = 1 + 1680 = 1681$",
         "explanation": "Obliczamy dyskryminantę",
         "interactive_choice": {
           "prompt": "Jak rozwiązać równanie $n^2 + n - 420 = 0$?",
@@ -10024,7 +10024,7 @@
         "step": 10,
         "hint": "Ile wynosi pierwiastek z delty?",
         "expression": "$\\sqrt{1681} = 41$",
-        "explanation": "Sprawdzamy: $41^2 = 1681$"
+        "explanation": "Sprawdzamy: $41^{2} = 1681$"
       },
       {
         "step": 11,
@@ -10072,7 +10072,7 @@
       {
         "step": 1,
         "hint": "Ile kobiet i mężczyzn mamy w grupie?",
-        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: 7 osób",
+        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: $7$ osób",
         "explanation": "Identyfikujemy składniki grupy"
       },
       {
@@ -10181,7 +10181,7 @@
       {
         "step": 1,
         "hint": "Ile osób mamy w całej grupie i jakie są ograniczenia?",
-        "expression": "Grupa: 3 kobiety + 4 mężczyzn = 7 osób. Wybieramy 3 osoby - tylko mężczyzn",
+        "expression": "Grupa: 3 kobiety + 4 $mężczyzn = 7$ osób. Wybieramy 3 osoby - tylko mężczyzn",
         "explanation": "Identyfikujemy dane i warunek zadania"
       },
       {
@@ -10296,7 +10296,7 @@
       {
         "step": 1,
         "hint": "Ile mamy kobiet i mężczyzn w grupie?",
-        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: 7 osób",
+        "expression": "Kobiety: 3, Mężczyźni: 4, Razem: $7$ osób",
         "explanation": "Identyfikujemy składniki grupy"
       },
       {
@@ -10308,7 +10308,7 @@
       {
         "step": 3,
         "hint": "Jak podejść do tego problemu wyboru z dwóch różnych grup?",
-        "expression": "Liczba sposobów = $\\binom{3}{2} \\cdot \\binom{4}{1}$",
+        "expression": "Liczba $sposobów = \\binom{3}{2} \\cdot \\binom{4}{1}$",
         "explanation": "Zasada mnożenia: wybory z różnych grup są niezależne",
         "why": "To kluczowa zasada kombinatoryki: gdy mamy niezależne wybory z różnych grup, mnożymy liczby możliwości.",
         "interactive_choice": {
@@ -10370,7 +10370,7 @@
         "step": 5,
         "hint": "Ile jest sposobów wyboru 1 mężczyzny z 4?",
         "expression": "$\\binom{4}{1} = 4$",
-        "explanation": "Wybór 1 osoby z 4 to po prostu 4 możliwości"
+        "explanation": "Wybór 1 osoby z 4 to po prostu $4$ możliwości"
       },
       {
         "step": 6,
@@ -10394,7 +10394,7 @@
             },
             {
               "id": "C",
-              "text": "Podnieść do potęgi: $3^4 = 81$",
+              "text": "Podnieść do potęgi: $3^{4} = 81$",
               "feedback": "Nie ma podstaw do potęgowania w tym zadaniu",
               "is_correct": false
             }
@@ -10424,7 +10424,7 @@
     "id": "combinations_student_topics",
     "topic": "Kombinacje",
     "difficulty": 3,
-    "statement": "Na egzaminie było n tematów (n ≥ 2), z których student losował dwa. Oblicz n, wiedząc, że student miał 190 możliwości wylosowania zestawu tematów.",
+    "statement": "Na egzaminie było n tematów (n ≥ 2), z których student losował dwa. Oblicz n, wiedząc, że student miał $190$ możliwości wylosowania zestawu tematów.",
     "steps": [
       {
         "step": 1,
@@ -10460,7 +10460,7 @@
         "step": 2,
         "hint": "Jaki jest wzór na liczbę kombinacji $C_n^2$?",
         "expression": "$C_n^2 = \\binom{n}{2} = \\frac{n!}{2!(n-2)!} = \\frac{n(n-1)}{2}$",
-        "explanation": "Wzór na kombinacje 2 elementów z n",
+        "explanation": "Wzór na kombinacje $2$ elementów z n",
         "why": "Ten wzór liczy wszystkie możliwe pary bez uwzględnienia kolejności. Dzielimy przez 2! bo każda para może być ułożona na 2 sposoby."
       },
       {
@@ -10528,23 +10528,23 @@
             {
               "id": "A",
               "text": "$\\sqrt{1521} = 39$",
-              "feedback": "Dokładnie! $39^2 = 1521$",
+              "feedback": "Dokładnie! $39^{2} = 1521$",
               "is_correct": true
             },
             {
               "id": "B",
               "text": "$\\sqrt{1521} = 38$",
-              "feedback": "Nie - $38^2 = 1444$",
+              "feedback": "Nie - $38^{2} = 1444$",
               "is_correct": false
             },
             {
               "id": "C",
               "text": "$\\sqrt{1521} = 40$",
-              "feedback": "Nie - $40^2 = 1600$",
+              "feedback": "Nie - $40^{2} = 1600$",
               "is_correct": false
             }
           ],
-          "explanation_after": "Sprawdzenie: $39^2 = (40-1)^2 = 1600 - 80 + 1 = 1521$ ✓"
+          "explanation_after": "Sprawdzenie: $39^{2} = (40-1)^2$ = 1600 - 80 + 1 = 1521$ ✓"
         }
       },
       {
@@ -10570,7 +10570,7 @@
         "step": 12,
         "hint": "Jak sprawdzić poprawność wyniku?",
         "expression": "$C_{20}^2 = \\frac{20 \\cdot 19}{2} = \\frac{380}{2} = 190$ ✓",
-        "explanation": "Weryfikacja: dla n = 20 otrzymujemy rzeczywiście 190 możliwości"
+        "explanation": "Weryfikacja: dla n = 20 otrzymujemy rzeczywiście $190$ możliwości"
       }
     ],
     "solutions": [
@@ -10593,5 +10593,1447 @@
       }
     },
     "timestamp": "2025-09-21T08:06:38.191Z"
+  },
+  {
+    "id": "three_digit_sum_1234",
+    "topic": "Kombinatoryka i sumy arytmetyczne",
+    "difficulty": 4,
+    "statement": "Oblicz sumę wszystkich liczb trzycyfrowych zapisanych wyłącznie za pomocą cyfr 1,2,3,4 (cyfry mogą się powtarzać).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile różnych liczb trzycyfrowych można utworzyć z cyfr 1,2,3,4?",
+        "expression": "Liczba wszystkich liczb trzycyfrowych: $4^{3} = 64$",
+        "explanation": "Każda z trzech pozycji może być wypełniona jedną z 4 cyfr",
+        "why": "Cyfry mogą się powtarzać, więc na każdej pozycji mamy 4 wybory niezależnie od pozostałych. To jest wariacja z powtórzeniami."
+      },
+      {
+        "step": 2,
+        "hint": "Ile razy każda cyfra pojawi się na pozycji setek?",
+        "expression": "Każda cyfra (1,2,3,4) pojawia się na pozycji setek: $\\frac{64}{4} = 16$ razy",
+        "explanation": "Cyfry rozkładają się równomiernie na każdej pozycji"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest wkład pozycji setek do całkowitej sumy?",
+        "expression": "Suma cyfr setek: $16 \\cdot (1 + 2 + 3 + 4) \\cdot 100 = 16 \\cdot 10 \\cdot 100 = 16000$",
+        "explanation": "Każda cyfra występuje 16 razy na pozycji setek, więc mnożymy przez 100",
+        "why": "Pozycja setek ma wartość miejscową 100. Suma cyfr 1+2+3+4=10 to kluczowa wartość, która pojawi się w każdym kroku."
+      },
+      {
+        "step": 4,
+        "hint": "Czy rozkład cyfr na pozycji dziesiątek będzie taki sam?",
+        "expression": "Suma cyfr dziesiątek: $16 \\cdot (1 + 2 + 3 + 4) \\cdot 10 = 16 \\cdot 10 \\cdot 10 = 1600$",
+        "explanation": "Każda cyfra występuje 16 razy na pozycji dziesiątek, mnożymy przez 10"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć wkład pozycji jedności?",
+        "expression": "Suma cyfr jedności: $16 \\cdot (1 + 2 + 3 + 4) \\cdot 1 = 16 \\cdot 10 \\cdot 1 = 160$",
+        "explanation": "Każda cyfra występuje 16 razy na pozycji jedności, mnożymy przez 1"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz dodając wkłady wszystkich pozycji?",
+        "expression": "Suma całkowita: $16000 + 1600 + 160 = 17760$",
+        "explanation": "Dodajemy sumy z każdej pozycji dziesiętnej"
+      }
+    ],
+    "solutions": [
+      "$17760$"
+    ],
+    "parameters": {
+      "digits": "1, 2, 3, 4",
+      "repetition": "dozwolone"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:15:17.150Z"
+  },
+  {
+    "id": "five_digit_counting",
+    "topic": "Kombinatoryka - zliczanie z warunkami",
+    "difficulty": 4,
+    "statement": "Ile jest liczb pięciocyfrowych, spełniających jednocześnie następujące cztery warunki: (1) cyfry setek, dziesiątek i jedności są parzyste, (2) cyfra setek jest większa od cyfry dziesiątek, (3) cyfra dziesiątek jest większa od cyfry jedności, (4) w zapisie tej liczby nie występuje cyfra 9.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry mogą wystąpić w tej liczbie, skoro nie ma cyfry 9?",
+        "expression": "Dostępne cyfry: $\\{0, 1, 2, 3, 4, 5, 6, 7, 8\\}$",
+        "explanation": "Wykluczamy cyfrę 9 zgodnie z warunkiem (4)"
+      },
+      {
+        "step": 2,
+        "hint": "Które z dostępnych cyfr są parzyste i mogą być cyframi setek, dziesiątek i jedności?",
+        "expression": "Cyfry parzyste (bez 9): $\\{0, 2, 4, 6, 8\\}$",
+        "explanation": "Te cyfry mogą wystąpić na pozycjach setek, dziesiątek i jedności",
+        "why": "Warunek (1) ogranicza nas do cyfr parzystych na trzech ostatnich pozycjach. Cyfra 0 może być cyfrą jedności lub dziesiątek, ale nie setek w liczbie pięciocyfrowej."
+      },
+      {
+        "step": 3,
+        "hint": "Ile sposobów mamy na wybór cyfr dziesiątek tysięcy i tysięcy?",
+        "expression": "Cyfra dziesiątek tysięcy: $8$ możliwości $\\{1,2,3,4,5,6,7,8\\}$ Cyfra tysięcy: $8$ możliwości $\\{0,1,2,3,4,5,6,7,8\\}$",
+        "explanation": "Te pozycje nie mają ograniczeń parzystości, tylko brak cyfry 9",
+        "why": "Cyfra dziesiątek tysięcy nie może być 0 (bo to liczba pięciocyfrowa) ani 9. Cyfra tysięcy może być dowolna oprócz 9."
+      },
+      {
+        "step": 4,
+        "hint": "Ile jest sposobów wyboru trzech różnych cyfr parzystych w porządku malejącym?",
+        "expression": "Wybieramy 3 cyfry z $\\{0, 2, 4, 6, 8\\}$ i ustawiamy malejąco: $\\binom{5}{3} = 10$",
+        "explanation": "Każdy wybór 3 cyfr daje dokładnie jedno ustawienie malejące",
+        "why": "Warunki (2) i (3) oznaczają porządek: setki > dziesiątki > jedności. Gdy wybierzemy 3 cyfry, jest tylko jeden sposób ich malejącego ustawienia."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie konkretnie są te $10$ kombinacji cyfr (setki, dziesiątki, jedności)?",
+        "expression": "$(8,6,4), (8,6,2), (8,6,0), (8,4,2), (8,4,0), (8,2,0),$ $(6,4,2), (6,4,0), (6,2,0), (4,2,0)$",
+        "explanation": "Wszystkie możliwe kombinacje trzech cyfr parzystych w porządku malejącym"
+      },
+      {
+        "step": 6,
+        "hint": "Jak połączyć wybory dla wszystkich pozycji w liczbie pięciocyfrowej?",
+        "expression": "$8 \\times 8 \\times 10 = 640$",
+        "explanation": "Mnożymy liczbę możliwości dla każdej pozycji",
+        "why": "Zasada mnożenia: wybory dla różnych pozycji są niezależne. Dziesiątki tysięcy (8) × tysięcy (8) × (setki,dziesiątki,jedności) (10)."
+      }
+    ],
+    "solutions": [
+      "640"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-22T12:15:36.857Z"
+  },
+  {
+    "id": "five_digit_counting",
+    "topic": "Kombinatoryka - zliczanie z ograniczeniami",
+    "difficulty": 4,
+    "statement": "Oblicz, ile jest liczb naturalnych pięciocyfrowych, w zapisie których nie występuje zero, jest dokładnie jedna cyfra 7 i dokładnie jedna cyfra parzysta.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry możemy użyć, jeśli zero jest zabronione?",
+        "expression": "Dostępne cyfry: $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$",
+        "explanation": "Mamy 9 cyfr do dyspozycji, bez zera"
+      },
+      {
+        "step": 2,
+        "hint": "Które z dostępnych cyfr są parzyste, a które nieparzyste?",
+        "expression": "Parzyste: $\\{2, 4, 6, 8\\}$ (4 cyfry), Nieparzyste: $\\{1, 3, 5, 7, 9\\}$ (5 cyfr)",
+        "explanation": "Dzielimy cyfry na parzyste i nieparzyste",
+        "why": "To kluczowy podział - musimy wybrać dokładnie jedną cyfrę parzystą i jedną siódemkę (która jest nieparzysta)."
+      },
+      {
+        "step": 3,
+        "hint": "Na ile sposobów możemy wybrać pozycje dla cyfry 7 i cyfry parzystej?",
+        "expression": "$5 \\times 4 = 20$ sposobów",
+        "explanation": "Wybieramy 1 pozycję z 5 dla cyfry 7, potem 1 z pozostałych 4 dla cyfry parzystej",
+        "why": "Kolejność wyboru ma znaczenie - najpierw pozycja dla 7, potem dla cyfry parzystej z pozostałych miejsc."
+      },
+      {
+        "step": 4,
+        "hint": "Ile mamy sposobów wyboru konkretnej cyfry parzystej?",
+        "expression": "$4$ sposoby wyboru cyfry parzystej",
+        "explanation": "Możemy wybrać jedną z czterech cyfr parzystych: 2, 4, 6 lub 8"
+      },
+      {
+        "step": 5,
+        "hint": "Jakimi cyframi możemy wypełnić pozostałe 3 pozycje?",
+        "expression": "Pozostałe cyfry nieparzyste (bez 7): $\\{1, 3, 5, 9\\}$ - mamy 4 cyfry",
+        "explanation": "Na pozostałych 3 pozycjach mogą być tylko cyfry nieparzyste różne od 7",
+        "why": "Już użyliśmy cyfry 7 i jednej parzystej, więc pozostałe miejsca muszą być wypełnione cyframi nieparzystymi różnymi od 7."
+      },
+      {
+        "step": 6,
+        "hint": "Na ile sposobów można wypełnić 3 pozycje, mając 4 dostępne cyfry?",
+        "expression": "$4^{3} = 64$ sposobów",
+        "explanation": "Każdą z 3 pozycji można wypełnić na 4 sposoby (cyfry mogą się powtarzać)"
+      },
+      {
+        "step": 7,
+        "hint": "Jak połączyć wszystkie możliwości w jeden wynik?",
+        "expression": "$20 \\times 4 \\times 64 = 5120$",
+        "explanation": "Mnożymy: sposoby wyboru $pozycji \\cdot sposoby$ wyboru cyfry $parzystej \\cdot sposoby$ wypełnienia pozostałych pozycji"
+      }
+    ],
+    "solutions": [
+      "$5120$"
+    ],
+    "parameters": {
+      "constraints": "Liczby pięciocyfrowe bez zera, dokładnie jedna cyfra 7, dokładnie jedna cyfra parzysta"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:15:54.180Z"
+  },
+  {
+    "id": "four_digit_numbers_constraint",
+    "topic": "Kombinatoryka - liczby z warunkami",
+    "difficulty": 3,
+    "statement": "Oblicz, ile jest liczb naturalnych czterocyfrowych, w których cyfra jedności jest o 3 większa od cyfry setek.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda ogólna postać liczby czterocyfrowej?",
+        "expression": "Liczba czterocyfrowa: $\\overline{abcd}$, gdzie $a \\in \\{1,2,3,4,5,6,7,8,9\\}$, $b,c,d \\in \\{0,1,2,3,4,5,6,7,8,9\\}$",
+        "explanation": "Cyfra tysięcy nie może być zerem"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki warunek musi spełniać cyfra jedności względem cyfry setek?",
+        "expression": "$d = c + 3$",
+        "explanation": "Cyfra jedności (d) jest o 3 większa od cyfry setek (c)",
+        "why": "To kluczowy warunek zadania. Musimy sprawdzić, dla jakich wartości c cyfra d będzie jeszcze cyfrą (≤ 9)."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości może przyjąć cyfra setek, żeby cyfra jedności była jeszcze cyfrą?",
+        "expression": "$c \\in \\{0,1,2,3,4,5,6\\}$, bo $d = c + 3 \\leq 9$",
+        "explanation": "Cyfra setek może być od 0 do 6, dając cyfry jedności od 3 do 9"
+      },
+      {
+        "step": 4,
+        "hint": "Ile mamy możliwości wyboru dla każdej pozycji cyfry?",
+        "expression": "Cyfra tysięcy: $9$ możliwości, cyfra dziesiątek: $10$ możliwości, cyfra setek: $7$ możliwości",
+        "explanation": "Po ustaleniu cyfry setek, cyfra jedności jest już określona"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć całkowitą liczbę takich liczb?",
+        "expression": "$9 \\times 10 \\times 7 = 630$",
+        "explanation": "Mnożymy liczbę możliwości dla każdej niezależnej pozycji",
+        "why": "Używamy reguły iloczynu, bo wybory są niezależne. Cyfra jedności nie daje dodatkowych możliwości - jest zdeterminowana przez cyfrę setek."
+      }
+    ],
+    "solutions": [
+      "630"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:16:06.940Z"
+  },
+  {
+    "id": "five_digit_numbers_even_ends",
+    "topic": "Kombinatoryka - permutacje z ograniczeniami",
+    "difficulty": 4,
+    "statement": "Tworzymy liczby pięciocyfrowe biorąc pięć różnych cyfr ze zbioru {1,2,3,4,5,6}. Ile jest liczb takich, że ostatnia i pierwsza cyfra są cyframi parzystymi?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które cyfry ze zbioru {1,2,3,4,5,6} są parzyste, a które nieparzyste?",
+        "expression": "Cyfry parzyste: {2, 4, 6}, cyfry nieparzyste: {1, 3, 5}",
+        "explanation": "Identyfikujemy dostępne cyfry według parzystości"
+      },
+      {
+        "step": 2,
+        "hint": "Ile cyfr musimy wybrać ze zbioru 6 cyfr do utworzenia liczby pięciocyfrowej?",
+        "expression": "Wybieramy 5 cyfr z 6 dostępnych: $\\binom{6}{5} = 6$ sposobów",
+        "explanation": "Każdy wybór to pominięcie jednej cyfry ze zbioru",
+        "why": "Musimy najpierw wybrać, które 5 cyfr użyjemy. To kluczowy krok - bez tego nie możemy przejść do układania liczb."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są możliwe przypadki dla wybranego zbioru 5 cyfr?",
+        "expression": "Przypadek 1: 3 parzyste, 2 nieparzyste lub Przypadek 2: 2 parzyste, 3 nieparzyste",
+        "explanation": "Analizujemy strukturę wybranego podzbioru",
+        "why": "Liczba cyfr parzystych w wybranym zbiorze determinuje, czy możemy utworzyć liczbę z parzystymi końcami."
+      },
+      {
+        "step": 4,
+        "hint": "W którym przypadku możemy mieć parzyste cyfry na pierwszej I ostatniej pozycji?",
+        "expression": "Tylko przypadek 1: gdy mamy 3 cyfry parzyste i 2 nieparzyste",
+        "explanation": "Potrzebujemy co najmniej 2 cyfr parzystych na końcowe pozycje",
+        "why": "W przypadku 2 mamy tylko 2 cyfry parzyste, więc po użyciu ich na pozycjach 1 i 5, środkowe pozycje musiałyby być nieparzyste - ale to wyczerpuje wszystkie cyfry."
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów możemy wybrać 3 cyfry parzyste z 3 dostępnych?",
+        "expression": "$\\binom{3}{3} = 1$ sposób (wszystkie parzyste) i $\\binom{3}{2} = 3$ sposoby (2 nieparzyste)",
+        "explanation": "Liczymy sposoby utworzenia zbioru z 3 cyframi parzystymi"
+      },
+      {
+        "step": 6,
+        "hint": "Mając 5 wybranych cyfr (3 parzyste, 2 nieparzyste), na ile sposobów ustawimy cyfry parzyste na pozycjach 1 i 5?",
+        "expression": "$3 \\cdot 2 = 6$ sposobów",
+        "explanation": "3 wybory na pierwszą pozycję, 2 na ostatnią (z pozostałych parzystych)"
+      },
+      {
+        "step": 7,
+        "hint": "Ile sposobów jest na ułożenie pozostałych 3 cyfr na środkowych pozycjach?",
+        "expression": "$3! = 6$ sposobów",
+        "explanation": "Permutujemy 3 pozostałe cyfry na pozycjach 2, 3, 4"
+      },
+      {
+        "step": 8,
+        "hint": "Jak połączyć wszystkie obliczenia w końcowy wynik?",
+        "expression": "$\\binom{3}{2} \\cdot 2! \\cdot \\binom{4}{3} \\cdot 3! = 3 \\cdot 2 \\cdot 4 \\cdot 6 = 144$",
+        "explanation": "Mnożymy: sposoby wyboru $cyfr \\cdot sposoby$ ustawienia na $końcach \\cdot sposoby$ ułożenia środka",
+        "why": "To odpowiada opcji F. Alternatywnie: $\\binom{6}{5} \\cdot 5! = 6 \\cdot 120 = 720$ to wszystkie liczby, ale nas interesują tylko te z parzystymi końcami."
+      }
+    ],
+    "solutions": [
+      "A. $3! \\cdot 4! = 144$",
+      "F. $\\binom{3}{2} \\cdot 2! \\cdot \\binom{4}{3} \\cdot 3! = 144$"
+    ],
+    "parameters": {
+      "correct_answers": [
+        "A",
+        "F"
+      ],
+      "total_count": 144
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-22T12:16:30.175Z"
+  },
+  {
+    "id": "combinations_selection",
+    "topic": "Kombinacje i wybory",
+    "difficulty": 3,
+    "statement": "W grupie dziewięciu osób są trzy kobiety i trzech mężczyzn oraz trójka dzieci. Dokończ zdania. Zaznacz odpowiedź spośród A-C oraz odpowiedź spośród D-F. Trzy osoby z tej grupy osób możemy wybrać na: A. $504$ sposobów. B. 84 sposoby. C. $27$ sposobów. Dwie osoby: kobietę i mężczyznę można wybrać na: D. 3 sposoby. E. $6$ sposobów. F. $9$ sposobów.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy kolejność wyboru osób ma znaczenie w tym zadaniu?",
+        "expression": "Mamy $9$ osób: 3 kobiety + 3 mężczyzn + 3 $dzieci = 9$ osób",
+        "explanation": "Analizujemy skład grupy i typ problemu"
+      },
+      {
+        "step": 2,
+        "hint": "Który wzór użyjemy gdy kolejność nie ma znaczenia?",
+        "expression": "Liczba sposobów wyboru $3$ osób z 9: $\\binom{9}{3} = \\frac{9!}{3!(9-3)!} = \\frac{9!}{3! \\cdot 6!}$",
+        "explanation": "Używamy wzoru na kombinacje bez powtórzeń",
+        "why": "To kombinacje, nie wariacje - kolejność wyboru nie ma znaczenia. Wzór $\\binom{n}{k}$ oznacza wybór k elementów z n."
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć ten ułamek nie licząc całych silni?",
+        "expression": "$\\binom{9}{3} = \\frac{9 \\cdot 8 \\cdot 7}{3 \\cdot 2 \\cdot 1} = \\frac{504}{6} = 84$",
+        "explanation": "Upraszczamy przez skrócenie powtarzających się czynników",
+        "why": "Zamiast liczyć $9! = 362880$, używamy tylko potrzebne czynniki: $\\frac{9!}{6!} = 9 \\cdot 8 \\cdot 7$."
+      },
+      {
+        "step": 4,
+        "hint": "Ile mamy kobiet i ile mężczyzn do wyboru?",
+        "expression": "Wybór kobiety: 3 sposoby, wybór mężczyzny: 3 sposoby",
+        "explanation": "Każdą kobietę możemy połączyć z każdym mężczyzną"
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć niezależne wybory w jeden wynik?",
+        "expression": "Liczba sposobów wyboru pary kobieta-mężczyzna: $3 \\times 3 = 9$",
+        "explanation": "Mnożymy liczbę możliwości dla każdego wyboru",
+        "why": "Reguła iloczynu: gdy mamy niezależne wybory, mnożymy ich liczby. Każda z 3 kobiet może być sparowana z każdym z 3 mężczyzn."
+      }
+    ],
+    "solutions": [
+      "Odpowiedź A-C: B. 84 sposoby",
+      "Odpowiedź D-F: F. 9 sposobów"
+    ],
+    "parameters": {
+      "group_composition": "3 kobiety + 3 mężczyzn + 3 dzieci = 9 osób"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:16:45.656Z"
+  },
+  {
+    "id": "counting_even_numbers",
+    "topic": "Kombinatoryka - liczenie liczb o określonych właściwościach",
+    "difficulty": 4,
+    "statement": "Mamy do dyspozycji cyfry 0,1,2. Dokończ zdania. Zaznacz odpowiedź spośród A-D oraz odpowiedź spośród E-H. Wszystkich liczb parzystych sześciocyfrowych utworzonych z tych cyfr (nie koniecznie wszystkich) bez wykorzystania cyfry 0 jest: A. 16 B. 32 C. 63 D. 64. Wszystkich liczb parzystych pięciocyfrowych utworzonych z tych cyfr (nie koniecznie wszystkich) jest: E. 54 F. 108 G. 162 H. 243.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które cyfry sprawiają, że liczba jest parzysta?",
+        "expression": "Liczba jest parzysta, gdy kończy się cyfrą 0 lub 2",
+        "explanation": "Z dostępnych cyfr {0, 1, 2} tylko 0 i 2 dają liczby parzyste"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza 'bez wykorzystania cyfry 0' w pierwszym pytaniu?",
+        "expression": "Dla liczb sześciocyfrowych bez cyfry 0: dostępne cyfry to {1, 2}",
+        "explanation": "Cyfra 0 jest całkowicie wykluczona z tworzenia liczby",
+        "why": "To ograniczenie dotyczy wszystkich pozycji w liczbie, nie tylko pierwszej. Parzyste liczby mogą kończyć się tylko cyfrą 2."
+      },
+      {
+        "step": 3,
+        "hint": "Ile sposobów mamy na wypełnienie każdej pozycji w liczbie sześciocyfrowej?",
+        "expression": "Każda z 6 pozycji: $2$ możliwości (cyfra 1 lub 2), ale ostatnia pozycja: tylko cyfra 2",
+        "explanation": "5 pierwszych pozycji dowolnie, ostatnia musi być 2 dla parzystości"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć całkowitą liczbę możliwości dla liczb sześciocyfrowych?",
+        "expression": "$2^{5}$ \\times 1 = 32$",
+        "explanation": "5 pozycji po $2$ możliwości każda, ostatnia pozycja ustalona na 2",
+        "why": "Reguła iloczynu: jeśli mamy niezależne wybory, mnożymy liczby możliwości. Odpowiedź: B. 32"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zmienia się sytuacja dla liczb pięciocyfrowych z cyfrą 0?",
+        "expression": "Pierwsza pozycja: {1, 2} ($2$ możliwości), ostatnia pozycja: {0, 2} ($2$ możliwości)",
+        "explanation": "Liczba pięciocyfrowa nie może zaczynać się od 0, ale może kończyć się 0 lub 2"
+      },
+      {
+        "step": 6,
+        "hint": "Ile sposobów na wypełnienie środkowych pozycji w liczbie pięciocyfrowej?",
+        "expression": "Pozycje 2, 3, 4: każda po $3$ możliwości (cyfry 0, 1, 2)",
+        "explanation": "Środkowe pozycje mogą być wypełnione dowolną z trzech cyfr"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest całkowita liczba parzystych liczb pięciocyfrowych?",
+        "expression": "$2 \\times $3^{3}$ \\times 2 = 2 \\times 27 \\times 2 = 108$",
+        "explanation": "Pierwsza pozycja: $2$ możliwości, środkowe 3 pozycje: po $3$ możliwości, ostatnia: $2$ możliwości",
+        "why": "Struktura: (1 lub 2)(0,1,2)(0,1,2)(0,1,2)(0 lub 2). Odpowiedź: F. 108"
+      }
+    ],
+    "solutions": [
+      "Odpowiedź A-D: B. 32",
+      "Odpowiedź E-H: F. 108"
+    ],
+    "parameters": {
+      "available_digits": "{0, 1, 2}",
+      "constraints": "liczby parzyste, określona liczba cyfr"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:17:09.166Z"
+  },
+  {
+    "id": "combinations_basic",
+    "topic": "Kombinacje",
+    "difficulty": 2,
+    "statement": "Na ile sposobów można wybrać dwóch graczy spośród 10 zawodników?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy kolejność wyboru graczy ma znaczenie w tym zadaniu?",
+        "expression": "Wybieramy 2 graczy z 10, kolejność nie ma znaczenia",
+        "explanation": "To zadanie na kombinacje, nie permutacje",
+        "why": "Drużyna składająca się z gracza A i B to ta sama co z B i A. Gdyby kolejność miała znaczenie (np. kapitan i wicekapitan), użylibyśmy wariacji."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki wzór na kombinacje bez powtórzeń znasz?",
+        "expression": "$C$(n, k) = \\binom{n}{k}$ = \\frac{n!}{k!(n-k)!}$",
+        "explanation": "Wzór na liczbę kombinacji k elementów z n elementów"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości podstawisz za n i k?",
+        "expression": "$C(10,2) = \\binom{10}{2} = \\frac{10!}{2!(10-2)!} = \\frac{10!}{2! \\cdot 8!}$",
+        "explanation": "Podstawiamy n = 10 (zawodników) i k = 2 (wybieranych graczy)"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć ten ułamek bez liczenia całych silni?",
+        "expression": "$\\frac{10!}{2! \\cdot 8!} = \\frac{10 \\cdot 9 \\cdot 8!}{2 \\cdot 1 \\cdot 8!} = \\frac{10 \\cdot 9}{2}$",
+        "explanation": "Skracamy 8! i obliczamy",
+        "why": "Silnia $10! = 10 \\cdot 9$·8!, więc 8! się skraca. To oszczędza mnóstwo obliczeń!"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $90$ podzielone przez 2?",
+        "expression": "$\\frac{10 \\cdot 9}{2} = \\frac{90}{2} = 45$",
+        "explanation": "Otrzymujemy ostateczny wynik"
+      }
+    ],
+    "solutions": [
+      "45"
+    ],
+    "parameters": {
+      "answer": "C. 45"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:17:21.052Z"
+  },
+  {
+    "id": "four_digit_divisible_by_9",
+    "topic": "Podzielność przez 9 - liczby czterocyfrowe",
+    "difficulty": 3,
+    "statement": "Ile jest wszystkich liczb czterocyfrowych podzielnych przez 9?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są granice dla liczb czterocyfrowych?",
+        "expression": "Liczby czterocyfrowe: od $1000$ do $9999$",
+        "explanation": "Określamy zakres liczb, które nas interesują"
+      },
+      {
+        "step": 2,
+        "hint": "Która jest pierwszą liczbą czterocyfrową podzielną przez 9?",
+        "expression": "$1000 \\div 9 = 111$ reszty $1$, więc pierwsza to $1000 + (9-1) = 1008$",
+        "explanation": "Szukamy najmniejszej liczby czterocyfrowej podzielnej przez 9",
+        "why": "Gdy dzielimy 1000 przez 9, otrzymujemy resztę 1. Aby otrzymać liczbę podzielną przez 9, musimy dodać 9-1=8 do 1000."
+      },
+      {
+        "step": 3,
+        "hint": "Która jest ostatnią liczbą czterocyfrową podzielną przez 9?",
+        "expression": "$9999 \\div 9 = 1111$ reszty $0$, więc ostatnia to $9999$",
+        "explanation": "Sprawdzamy największą liczbę czterocyfrową"
+      },
+      {
+        "step": 4,
+        "hint": "Jak policzyć ile jest liczb w ciągu arytmetycznym?",
+        "expression": "Ciąg: $1008, 1017, 1026, ..., 9999$ z różnicą $d = 9$",
+        "explanation": "Liczby podzielne przez 9 tworzą ciąg arytmetyczny",
+        "why": "Każda kolejna liczba podzielna przez 9 różni się od poprzedniej o 9. To klasyczny ciąg arytmetyczny."
+      },
+      {
+        "step": 5,
+        "hint": "Jaki wzór użyjesz do obliczenia liczby wyrazów ciągu arytmetycznego?",
+        "expression": "$n = \\frac{a_n - a_1}{d} + 1 = \\frac{9999 - 1008}{9} + 1$",
+        "explanation": "Stosujemy wzór na liczbę wyrazów ciągu arytmetycznego"
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi końcowy wynik obliczeń?",
+        "expression": "$n = \\frac{8991}{9} + 1 = 999 + 1 = 1000$",
+        "explanation": "Otrzymujemy $1000$ liczb czterocyfrowych podzielnych przez 9"
+      }
+    ],
+    "solutions": [
+      "1000"
+    ],
+    "parameters": {
+      "answer": "A. 1000"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:17:33.773Z"
+  },
+  {
+    "id": "three_digit_product_4",
+    "topic": "Kombinatoryka - liczby trzycyfrowe",
+    "difficulty": 3,
+    "statement": "Ile jest wszystkich liczb naturalnych trzycyfrowych, których iloczyn cyfr jest równy 4?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Na jakie sposoby można rozłożyć liczbę 4 na czynniki pierwsze?",
+        "expression": "$4 = 2^{2} = 2$ \\cdot 2 \\cdot 1 = 4 \\cdot 1 \\cdot 1$",
+        "explanation": "Szukamy wszystkich możliwych rozkładów liczby 4 na trzy czynniki (cyfry)",
+        "why": "Każda cyfra musi być z zakresu 0-9, ale pierwsza cyfra nie może być 0. Rozkład na czynniki pomoże znaleźć wszystkie kombinacje cyfr."
+      },
+      {
+        "step": 2,
+        "hint": "Które z tych rozkładów dają cyfry od 0 do 9?",
+        "expression": "Możliwe zestawy cyfr: $(2, 2, 1)$, $(4, 1, 1)$",
+        "explanation": "Sprawdzamy, czy wszystkie czynniki są cyframi (0-9)",
+        "why": "Rozkład $1 \\cdot 1 \\cdot 4$ to ten sam zestaw co $4 \\cdot 1 \\cdot 1$, tylko w innej kolejności. Nie ma innych rozkładów - np. $8 \\cdot \\frac{1}{2}$ nie działa, bo $\\frac{1}{2}$ nie jest cyfrą."
+      },
+      {
+        "step": 3,
+        "hint": "Na ile sposobów można ustawić cyfry 2, 2, 1 w liczbie trzycyfrowej?",
+        "expression": "Dla $(2, 2, 1)$: $\\frac{3!}{2!} = 3$ permutacje",
+        "explanation": "Liczba permutacji z powtórzeniami: 221, 212, 122",
+        "why": "Wzór na permutacje z powtórzeniami: $\\frac{n!}{n_1! \\cdot n_2! \\cdot ...}$, gdzie $n_1, n_2, ...$ to liczby powtórzeń poszczególnych elementów."
+      },
+      {
+        "step": 4,
+        "hint": "Czy wszystkie permutacje cyfr 2, 2, 1 dają poprawne liczby trzycyfrowe?",
+        "expression": "Wszystkie permutacje: 221, 212, 122 - wszystkie są trzycyfrowe",
+        "explanation": "Żadna nie zaczyna się od 0, więc wszystkie 3 są poprawne"
+      },
+      {
+        "step": 5,
+        "hint": "Na ile sposobów można ustawić cyfry 4, 1, 1 w liczbie trzycyfrowej?",
+        "expression": "Dla $(4, 1, 1)$: $\\frac{3!}{2!} = 3$ permutacje",
+        "explanation": "Liczba permutacji z powtórzeniami: 411, 141, 114"
+      },
+      {
+        "step": 6,
+        "hint": "Ile łącznie otrzymujemy liczb trzycyfrowych?",
+        "expression": "$3 + 3 = 6$ liczb",
+        "explanation": "Sumujemy liczby z obu zestawów cyfr"
+      }
+    ],
+    "solutions": [
+      "6 liczb: 122, 212, 221, 114, 141, 411"
+    ],
+    "parameters": {
+      "answer": "C. 6"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:17:50.166Z"
+  },
+  {
+    "id": "four_digit_numbers_combinatorics",
+    "topic": "Kombinatoryka - zasada mnożenia",
+    "difficulty": 3,
+    "statement": "Ile jest wszystkich liczb czterocyfrowych, większych od 3000, utworzonych wyłącznie z cyfr 1,2,3, przy założeniu, że cyfry mogą się powtarzać, ale nie wszystkie z tych cyfr muszą być wykorzystane?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry mogą stać na pierwszym miejscu, aby liczba była większa od 3000?",
+        "expression": "Pierwsza cyfra: tylko $3$",
+        "explanation": "Liczba czterocyfrowa większa od 3000 musi zaczynać się od cyfry 3",
+        "why": "Cyfry 1 i 2 na pierwszym miejscu dałyby liczby mniejsze od 3000. Mamy tylko cyfry {1,2,3} do dyspozycji."
+      },
+      {
+        "step": 2,
+        "hint": "Ile możliwości mamy dla każdej z pozostałych trzech pozycji?",
+        "expression": "Druga cyfra: $3$ możliwości (1, 2, 3)",
+        "explanation": "Na drugiej pozycji możemy użyć dowolnej z dostępnych cyfr"
+      },
+      {
+        "step": 3,
+        "hint": "Czy ograniczenia dotyczą także trzeciej i czwartej pozycji?",
+        "expression": "Trzecia cyfra: $3$ możliwości (1, 2, 3)\nCzwarta cyfra: $3$ możliwości (1, 2, 3)",
+        "explanation": "Cyfry mogą się powtarzać, więc każda pozycja ma pełny wybór"
+      },
+      {
+        "step": 4,
+        "hint": "Jak połączyć wszystkie możliwości w jedną liczbę?",
+        "expression": "Całkowita liczba możliwości: $1 \\times 3 \\times 3 \\times 3 = 27$",
+        "explanation": "Stosujemy zasadę mnożenia dla niezależnych wyborów",
+        "why": "Zasada mnożenia: jeśli mamy k kroków z odpowiednio n₁, n₂, ..., nₖ możliwości, to łącznie jest $n₁ \\cdot n₂$ × ... × nₖ sposobów."
+      }
+    ],
+    "solutions": [
+      "27"
+    ],
+    "parameters": {
+      "available_digits": "{1, 2, 3}",
+      "condition": "liczba > 3000",
+      "repetition_allowed": true
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:18:01.834Z"
+  },
+  {
+    "id": "probability_even_product",
+    "topic": "Prawdopodobieństwo i kombinatoryka",
+    "difficulty": 3,
+    "statement": "Ze zbioru liczb 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 losujemy bez zwracania dwa razy po jednej liczbie. Wylosowane liczby tworzą parę $(a, b)$, gdzie $a$ jest wynikiem pierwszego losowania, $b$ jest wynikiem drugiego losowania. Oblicz, ile jest wszystkich par $(a, b)$ takich, że iloczyn $a \\cdot b$ jest liczbą parzystą.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile w ogóle można utworzyć różnych par $(a, b)$ z tego zbioru?",
+        "expression": "Liczba wszystkich par: $15 \\cdot 14 = 210$",
+        "explanation": "Pierwszą liczbę wybieramy na $15$ sposobów, drugą na 14 (bez zwracania)"
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy iloczyn dwóch liczb jest parzysty?",
+        "expression": "Iloczyn jest parzysty, gdy przynajmniej jedna z liczb jest parzysta",
+        "explanation": "Wystarczy, żeby jeden z czynników był parzysty",
+        "why": "Liczba parzysta to wielokrotność 2. Jeśli $a = 2k$, to $a \\cdot b = 2kb$ - zawsze parzyste. Alternatywa: policzyć kiedy iloczyn jest nieparzysty."
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest liczb parzystych i nieparzystych w naszym zbiorze?",
+        "expression": "Liczby parzyste: 2,4,6,8,10,12,14 ($7$ liczb), nieparzyste: 1,3,5,7,9,11,13,15 ($8$ liczb)",
+        "explanation": "Dzielimy zbiór na parzyste i nieparzyste"
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy iloczyn będzie nieparzysty? Czy to łatwiej policzyć?",
+        "expression": "Iloczyn nieparzysty: obie liczby nieparzyste, czyli $8 \\cdot 7 = 56$ par",
+        "explanation": "Używamy zasady dopełnienia - łatwiej policzyć przypadek przeciwny",
+        "why": "Iloczyn nieparzysty tylko gdy obie liczby nieparzyste. To jedyny przypadek do wykluczenia z wszystkich możliwych par."
+      },
+      {
+        "step": 5,
+        "hint": "Jak teraz otrzymać liczbę par z iloczynem parzystym?",
+        "expression": "Pary z iloczynem parzystym: $210 - 56 = 154$",
+        "explanation": "Od wszystkich par odejmujemy te z iloczynem nieparzystym"
+      }
+    ],
+    "solutions": [
+      "154"
+    ],
+    "parameters": {
+      "total_numbers": 15,
+      "even_numbers": 7,
+      "odd_numbers": 8
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:18:15.233Z"
+  },
+  {
+    "id": "natural_numbers_divisible_by_5",
+    "topic": "Liczby naturalne podzielne przez 5",
+    "difficulty": 3,
+    "statement": "Ile jest wszystkich liczb naturalnych czterocyfrowych mniejszych od 2018 i podzielnych przez 5?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są granice dla liczb czterocyfrowych w tym zadaniu?",
+        "expression": "Szukamy liczb z przedziału $[1000, 2017]$ podzielnych przez 5",
+        "explanation": "Najmniejsza liczba czterocyfrowa to 1000, a największa mniejsza od 2018 to 2017",
+        "why": "Liczby czterocyfrowe to 1000-9999, ale mamy dodatkowy warunek: mniejsze od 2018. Uwaga: 2018 nie wlicza się (mniejsze od, nie mniejsze równe)."
+      },
+      {
+        "step": 2,
+        "hint": "Na jaką cyfrę muszą kończyć się liczby podzielne przez 5?",
+        "expression": "Liczby podzielne przez 5 kończą się cyfrą 0 lub 5",
+        "explanation": "To podstawowa cecha podzielności przez 5"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest pierwsza i ostatnia liczba czterocyfrowa podzielna przez 5 w naszym przedziale?",
+        "expression": "Pierwsza: 1000, ostatnia: 2015",
+        "explanation": "1000 jest podzielne przez 5, a 2015 to największa liczba ≤ 2017 podzielna przez 5",
+        "why": "Sprawdzamy: 2016 nie jest podzielne przez 5 (kończy się na 6), 2017 też nie (kończy się na 7), ale 2015 tak (kończy się na 5)."
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć liczbę elementów ciągu arytmetycznego?",
+        "expression": "Ciąg: 1000, 1005, 1010, ..., 2015 z różnicą $d = 5$",
+        "explanation": "To ciąg arytmetyczny o pierwszym wyrazie 1000 i różnicy 5"
+      },
+      {
+        "step": 5,
+        "hint": "Który to numer wyrazu dla liczby 2015 w tym ciągu?",
+        "expression": "$a_n = a_1 + (n-1)d$, więc $2015 = 1000 + (n-1) \\cdot 5$",
+        "explanation": "Używamy wzoru na n-ty wyraz ciągu arytmetycznego"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwiązać równanie i znaleźć n?",
+        "expression": "$1015 = (n-1) \\cdot 5$, więc $n-1 = 203$, czyli $n = 204$",
+        "explanation": "Otrzymujemy liczbę wyrazów ciągu"
+      }
+    ],
+    "solutions": [
+      "204"
+    ],
+    "parameters": {
+      "range": "[1000, 2017]",
+      "divisor": "5",
+      "answer_options": [
+        "A. 402",
+        "B. 403",
+        "C. 203",
+        "D. 204"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:18:29.539Z"
+  },
+  {
+    "id": "counting_four_digit_even",
+    "topic": "Zasada mnożenia w kombinatoryce",
+    "difficulty": 3,
+    "statement": "Liczba wszystkich dodatnich liczb czterocyfrowych parzystych, w których zapisie nie występują cyfry 0 i 2, jest równa: A. $8 \\cdot 8 \\cdot 8 \\cdot 3$ B. $8 \\cdot 7 \\cdot 6 \\cdot 3$ C. $8 \\cdot 10 \\cdot 10 \\cdot 4$ D. $9 \\cdot 8 \\cdot 7 \\cdot 4$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry możemy użyć, jeśli wykluczamy 0 i 2?",
+        "expression": "Dostępne cyfry: $\\{1, 3, 4, 5, 6, 7, 8, 9\\}$ - razem 8 cyfr",
+        "explanation": "Z 10 cyfr usuwamy 0 i 2, zostaje nam 8 cyfr do wyboru"
+      },
+      {
+        "step": 2,
+        "hint": "Co sprawia, że liczba jest parzysta?",
+        "expression": "Ostatnia cyfra musi być parzysta: $\\{4, 6, 8\\}$ - razem $3$ możliwości",
+        "explanation": "Spośród dostępnych cyfr tylko 4, 6 i 8 są parzyste",
+        "why": "Liczba jest parzysta wtedy i tylko wtedy, gdy jej ostatnia cyfra jest parzysta. To kluczowe ograniczenie!"
+      },
+      {
+        "step": 3,
+        "hint": "Czy pierwsza cyfra ma jakieś specjalne ograniczenia?",
+        "expression": "Pierwsza cyfra: wszystkie 8 dostępnych cyfr $\\{1, 3, 4, 5, 6, 7, 8, 9\\}$",
+        "explanation": "Pierwsza cyfra nie może być 0 (ale 0 i tak jest wykluczone), więc mamy 8 wyborów",
+        "why": "W liczbie czterocyfrowej pierwsza cyfra nie może być 0, ale ponieważ 0 jest już wykluczone z warunków zadania, możemy użyć wszystkich 8 dostępnych cyfr."
+      },
+      {
+        "step": 4,
+        "hint": "Czy cyfry mogą się powtarzać na różnych pozycjach?",
+        "expression": "Druga cyfra: $8$ możliwości, trzecia cyfra: $8$ możliwości",
+        "explanation": "Nie ma zakazu powtarzania cyfr, więc na każdej pozycji środkowej mamy pełny wybór",
+        "why": "Zadanie nie mówi o cyfrach różnych, więc cyfry mogą się powtarzać. To częsty punkt nieporozumień!"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zastosować zasadę mnożenia do wszystkich pozycji?",
+        "expression": "Liczba wszystkich $liczb = 8 \\cdot 8 \\cdot 8 \\cdot 3$",
+        "explanation": "Mnożymy liczbę możliwości dla każdej pozycji: $pierwsza \\cdot druga × trzecia \\cdot czwarta$"
+      }
+    ],
+    "solutions": [
+      "A. $8 \\cdot 8 \\cdot 8 \\cdot 3$"
+    ],
+    "parameters": {
+      "excluded_digits": "0, 2",
+      "condition": "liczby czterocyfrowe parzyste"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:18:45.219Z"
+  },
+  {
+    "id": "five_digit_numbers_with_specific_digits",
+    "topic": "Kombinatoryka - liczby z ograniczonymi cyframi",
+    "difficulty": 3,
+    "statement": "Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry 0, 2, 5, jest:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czym różni się pierwsza cyfra od pozostałych w liczbie pięciocyfrowej?",
+        "expression": "Pierwsza cyfra: może być 2 lub 5 (nie może być 0)",
+        "explanation": "Liczba pięciocyfrowa nie może zaczynać się od zera",
+        "why": "Zero na początku oznaczałoby liczbę czterocyfrową, nie pięciocyfrową. To kluczowe ograniczenie w tego typu zadaniach."
+      },
+      {
+        "step": 2,
+        "hint": "Ile możliwości mamy dla każdej z pozostałych czterech pozycji?",
+        "expression": "Pozycje 2, 3, 4, 5: każda może być 0, 2 lub 5",
+        "explanation": "Na każdej z czterech pozostałych pozycji możemy użyć dowolnej z trzech dostępnych cyfr"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zastosować regułę iloczynu do policzenia wszystkich możliwości?",
+        "expression": "Liczba wszystkich $możliwości = 2 \\times 3 \\times 3 \\times 3 \\times 3$",
+        "explanation": "Mnożymy liczbę możliwości dla każdej pozycji",
+        "why": "Reguła iloczynu: jeśli mamy $n_1$ sposobów na pierwszy wybór, $n_2$ na drugi itd., to łącznie mamy $n_1 \\times n_2 \\times ... $ sposobów."
+      },
+      {
+        "step": 4,
+        "hint": "Jak można zapisać $3^{4}$ w prostszej formie do obliczenia?",
+        "expression": "$2 \\times $3^{4} = 2$ \\times 81 = 162$",
+        "explanation": "Obliczamy wynik: $3^{4} = 81$, więc $2 \\times 81 = 162$"
+      }
+    ],
+    "solutions": [
+      "162"
+    ],
+    "parameters": {
+      "answer": "C. 162"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:18:56.497Z"
+  },
+  {
+    "id": "natural_numbers_divisible_by_6",
+    "topic": "Liczby naturalne podzielne przez 6",
+    "difficulty": 2,
+    "statement": "Liczb naturalnych dwucyfrowych podzielnych przez 6 jest: A. 60 B. 45 C. 30 D. 15",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są granice dla liczb dwucyfrowych?",
+        "expression": "Liczby dwucyfrowe: od $10$ do $99$",
+        "explanation": "Określamy zakres, w którym szukamy liczb"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest najmniejsza liczba dwucyfrowa podzielna przez 6?",
+        "expression": "$10 \\div 6 = 1$ reszta $4$, więc pierwsza to $6 \\cdot 2 = 12$",
+        "explanation": "Szukamy pierwszej wielokrotności 6 większej lub równej 10",
+        "why": "Dzielimy 10 przez 6 i sprawdzamy resztę. Jeśli reszta nie wynosi $0$, bierzemy następną wielokrotność."
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest największa liczba dwucyfrowa podzielna przez 6?",
+        "expression": "$99 \\div 6 = 16$ reszta $3$, więc ostatnia to $6 \\cdot 16 = 96$",
+        "explanation": "Szukamy największej wielokrotności 6 nie większej niż 99"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wielokrotności 6 mieści się między 12 a 96 włącznie?",
+        "expression": "Od $6 \\cdot 2$ do $6 \\cdot 16$, czyli od 2 do 16",
+        "explanation": "Liczymy ile kolejnych liczb naturalnych jest od 2 do 16 włącznie",
+        "why": "Liczby podzielne przez 6 to: 12, 18, 24, ..., 96. To wielokrotności $6 \\cdot k$ gdzie k = 2, 3, 4, ..., 16."
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć ile liczb jest w ciągu od 2 do 16?",
+        "expression": "$16 - 2 + 1 = 15$",
+        "explanation": "Używamy wzoru: ostatni - pierwszy + 1"
+      }
+    ],
+    "solutions": [
+      "D. 15"
+    ],
+    "parameters": {
+      "range": "liczby dwucyfrowe [10, 99]",
+      "divisor": 6
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:19:11.736Z"
+  },
+  {
+    "id": "combinatorics_two_digit_numbers",
+    "topic": "Kombinatoryka - permutacje bez powtórzeń",
+    "difficulty": 2,
+    "statement": "Ile jest wszystkich dwucyfrowych liczb naturalnych utworzonych z cyfr: 1,3,5,7,9, w których cyfry się nie powtarzają?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Z ilu cyfr możesz wybierać cyfrę dziesiątek?",
+        "expression": "Cyfra dziesiątek: $5$ możliwości (1, 3, 5, 7, 9)",
+        "explanation": "Każda z podanych cyfr może być cyfrą dziesiątek"
+      },
+      {
+        "step": 2,
+        "hint": "Po wyborze cyfry dziesiątek, ile cyfr zostaje do wyboru na pozycję jedności?",
+        "expression": "Cyfra jedności: $4$ możliwości",
+        "explanation": "Po wyborze cyfry dziesiątek zostają 4 cyfry, bo cyfry się nie powtarzają",
+        "why": "To kluczowe ograniczenie - każdą cyfrę możemy użyć tylko raz. Gdyby cyfry mogły się powtarzać, mielibyśmy $5 \\cdot 5 = 25$ możliwości."
+      },
+      {
+        "step": 3,
+        "hint": "Jak połączyć liczbę wyborów dla obu pozycji?",
+        "expression": "Całkowita $liczba = 5 \\times 4 = 20$",
+        "explanation": "Stosujemy regułę iloczynu - mnożymy liczbę możliwości dla każdej pozycji"
+      }
+    ],
+    "solutions": [
+      "20"
+    ],
+    "parameters": {
+      "answer": "C. 20"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-22T12:19:20.723Z"
+  },
+  {
+    "id": "four_digit_counting",
+    "topic": "Zasada mnożenia w kombinatoryce",
+    "difficulty": 3,
+    "statement": "Wszystkich czterocyfrowych liczb naturalnych, w których cyfra tysięcy i cyfra setek są większe od 4, a każda z pozostałych cyfr jest mniejsza od 6, jest:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry mogą stać na miejscu tysięcy w liczbie czterocyfrowej?",
+        "expression": "Cyfra tysięcy > 4, więc może być: 5, 6, 7, 8, 9",
+        "explanation": "Cyfra tysięcy nie może być 0 (bo wtedy liczba nie byłaby czterocyfrowa) i musi być większa od 4",
+        "why": "W liczbie czterocyfrowej pierwsza cyfra nie może być zerem. Dodatkowo warunek > 4 ogranicza wybór do cyfr 5, 6, 7, 8, 9."
+      },
+      {
+        "step": 2,
+        "hint": "Ile możliwości mamy dla cyfry setek przy danym ograniczeniu?",
+        "expression": "Cyfra setek > 4, więc może być: 5, 6, 7, 8, 9",
+        "explanation": "Cyfra setek również musi być większa od 4, więc mamy $5$ możliwości"
+      },
+      {
+        "step": 3,
+        "hint": "Co oznacza warunek 'mniejsza od 6' dla cyfr dziesiątek i jedności?",
+        "expression": "Cyfra dziesiątek < 6, więc może być: 0, 1, 2, 3, 4, 5",
+        "explanation": "Cyfra dziesiątek może być dowolną cyfrą mniejszą od 6",
+        "why": "Uwaga: cyfra 0 jest dozwolona na miejscu dziesiątek i jedności, bo nie wpływa na to, że liczba pozostanie czterocyfrowa."
+      },
+      {
+        "step": 4,
+        "hint": "Ile opcji mamy dla ostatniej cyfry?",
+        "expression": "Cyfra jedności < 6, więc może być: 0, 1, 2, 3, 4, 5",
+        "explanation": "Cyfra jedności również może być dowolną cyfrą mniejszą od 6"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć całkowitą liczbę możliwych liczb?",
+        "expression": "Liczba $możliwości = 5 \\cdot 5 × 6 \\cdot 6 = 900$",
+        "explanation": "Stosujemy zasadę mnożenia: mnożymy liczbę możliwości dla każdej pozycji",
+        "why": "Zasada mnożenia: jeśli mamy niezależne wybory, to całkowita liczba możliwości to iloczyn liczby opcji dla każdego wyboru."
+      }
+    ],
+    "solutions": [
+      "C. 5 · 5 · 6 · 6"
+    ],
+    "parameters": {
+      "answer_choices": [
+        "A. 4 · 4 · 5 · 5",
+        "B. 5 · 4 · 6 · 5",
+        "C. 5 · 5 · 6 · 6",
+        "D. 4 · 3 · 5 · 4"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:19:34.797Z"
+  },
+  {
+    "id": "four_digit_divisible_by_4",
+    "topic": "Kombinatoryka i podzielność",
+    "difficulty": 3,
+    "statement": "Ile jest wszystkich liczb naturalnych czterocyfrowych mniejszych od 2020 i podzielnych przez 4?",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są granice dla liczb czterocyfrowych mniejszych od 2020?",
+        "expression": "Szukamy liczb z przedziału $[1000, 2019]$",
+        "explanation": "Najmniejsza liczba czterocyfrowa to 1000, a największa mniejsza od 2020 to 2019"
+      },
+      {
+        "step": 2,
+        "hint": "Kiedy liczba jest podzielna przez 4?",
+        "expression": "Liczba jest podzielna przez 4, gdy jej dwie ostatnie cyfry tworzą liczbę podzielną przez 4",
+        "explanation": "Używamy kryterium podzielności przez 4",
+        "why": "To wynika z faktu, że $100 = 4 \\cdot 25$, więc setki i tysiące nie wpływają na podzielność przez 4. Sprawdzamy tylko końcówki: 00, 04, 08, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96."
+      },
+      {
+        "step": 3,
+        "hint": "Ile jest dwucyfrowych końcówek podzielnych przez 4?",
+        "expression": "Końcówki od 00 do 96: $\\frac{96 - 0}{4} + 1 = 25$ końcówek",
+        "explanation": "Liczymy końcówki: 00, 04, 08, ..., 96"
+      },
+      {
+        "step": 4,
+        "hint": "Ile liczb z przedziału [1000, 1999] ma każdą z tych końcówek?",
+        "expression": "Dla każdej końcówki: liczby 1000-1099 ($100$ liczb), 1100-1199 ($100$ liczb), ..., 1900-1999 ($100$ $liczb) = 10 \\times 100 = 1000$ liczb",
+        "explanation": "W przedziale [1000, 1999] każda końcówka występuje dokładnie 100 razy"
+      },
+      {
+        "step": 5,
+        "hint": "Ile liczb z przedziału [2000, 2019] jest podzielnych przez 4?",
+        "expression": "Sprawdzamy: 2000, 2004, 2008, 2012, 2016 - to $5$ liczb",
+        "explanation": "Z przedziału [2000, 2019] tylko te $5$ liczb jest podzielnych przez 4",
+        "why": "Końcówki 00, 04, 08, 12, 16 są podzielne przez 4, ale 20 już nie (20 ÷ 4 = 5 reszty 0, ale sprawdzamy: 2020 > 2019)."
+      },
+      {
+        "step": 6,
+        "hint": "Jak połączyć wyniki z obu przedziałów?",
+        "expression": "Liczby z [1000, 1999]: $10 \\times 25 = 250$, liczby z [2000, 2019]: $5$",
+        "explanation": "W przedziale [1000, 1999] mamy 10 $setek \\cdot 25$ $końcówek = 250$ liczb"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest ostateczny wynik?",
+        "expression": "$250 + 5 = 255$",
+        "explanation": "Łączna liczba czterocyfrowych liczb mniejszych od 2020 i podzielnych przez 4"
+      }
+    ],
+    "solutions": [
+      "255"
+    ],
+    "parameters": {
+      "answer": "D. 255"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:19:51.283Z"
+  },
+  {
+    "id": "three_digit_even_with_seven",
+    "topic": "Kombinatoryka - zliczanie z warunkami",
+    "difficulty": 4,
+    "statement": "Wszystkich liczb naturalnych trzycyfrowych parzystych, w których cyfra 7 występuje dokładnie jeden raz, jest: A. 85 B. 90 C. 100 D. 150",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Na których pozycjach może wystąpić cyfra 7 w liczbie trzycyfrowej?",
+        "expression": "Cyfra 7 może być na pozycji setek, dziesiątek lub jedności",
+        "explanation": "Rozważamy trzy przypadki w zależności od pozycji cyfry 7"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza warunek 'parzysta' dla cyfry jedności?",
+        "expression": "Cyfra jedności musi być z zbioru $\\{0, 2, 4, 6, 8\\}$",
+        "explanation": "Liczba parzysta kończy się cyfrą parzystą",
+        "why": "To kluczowy warunek - ogranicza wybory na ostatniej pozycji. Uwaga: 0 też jest cyfrą parzystą!"
+      },
+      {
+        "step": 3,
+        "hint": "Ile mamy możliwości gdy 7 jest na pozycji setek?",
+        "expression": "Przypadek 1: $7ab$ gdzie $a \\in \\{0,1,2,3,4,5,6,8,9\\}$, $b \\in \\{0,2,4,6,8\\}$",
+        "explanation": "7 na pozycji setek: 9 wyborów dla $dziesiątek \\cdot 5$ wyborów dla $jedności = 45$ liczb"
+      },
+      {
+        "step": 4,
+        "hint": "Ile możliwości gdy 7 jest na pozycji dziesiątek?",
+        "expression": "Przypadek 2: $a7b$ gdzie $a \\in \\{1,2,3,4,5,6,8,9\\}$, $b \\in \\{0,2,4,6,8\\}$",
+        "explanation": "7 na pozycji dziesiątek: 8 wyborów dla $setek \\cdot 5$ wyborów dla $jedności = 40$ liczb",
+        "why": "Cyfra setek nie może być 0 (nie byłaby to liczba trzycyfrowa), więc tylko $8$ możliwości zamiast 9."
+      },
+      {
+        "step": 5,
+        "hint": "Co się dzieje gdy 7 ma być na pozycji jedności, ale liczba ma być parzysta?",
+        "expression": "Przypadek 3: $ab7$ - niemożliwy",
+        "explanation": "7 na pozycji jedności: $0$ liczb, bo 7 jest nieparzyste",
+        "why": "Sprzeczność warunków: liczba ma być parzysta, ale kończyć się na 7 (nieparzystą cyfrą)."
+      },
+      {
+        "step": 6,
+        "hint": "Jak połączyć wszystkie przypadki w końcowy wynik?",
+        "expression": "Łącznie: $45 + 40 + 0 = 85$ liczb",
+        "explanation": "Sumujemy wszystkie możliwe przypadki"
+      }
+    ],
+    "solutions": [
+      "A. 85"
+    ],
+    "parameters": {
+      "conditions": [
+        "liczba trzycyfrowa",
+        "parzysta",
+        "cyfra 7 występuje dokładnie raz"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-22T12:20:08.024Z"
+  },
+  {
+    "id": "braille_combinations",
+    "topic": "Kombinatoryka - zasada włączeń i wyłączeń",
+    "difficulty": 3,
+    "statement": "Pojedynczy znak w piśmie Braille'a dla niewidomych jest kombinacją od 1 do 6 wypukłych punktów, które mogą zajmować miejsca ułożone w dwóch kolumnach po trzy miejsca w każdej kolumnie. Pojedynczy znak w piśmie Braille'a musi zawierać co najmniej jeden punkt wypukły. Oblicz, ile różnych pojedynczych znaków można zapisać w piśmie Braille'a.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile mamy miejsc na punkty i jakie są możliwości dla każdego miejsca?",
+        "expression": "Mamy 6 miejsc, każde może być puste lub zawierać punkt wypukły",
+        "explanation": "Każde z 6 miejsc ma $2$ możliwości: punkt wypukły lub brak punktu"
+      },
+      {
+        "step": 2,
+        "hint": "Gdyby nie było ograniczeń, ile byłoby wszystkich możliwych kombinacji?",
+        "expression": "$2^{6} = 64$ kombinacje",
+        "explanation": "Bez ograniczeń każde z 6 miejsc ma 2 wybory, więc łącznie $2^{6}$ możliwości",
+        "why": "To podstawowa zasada mnożenia: jeśli mamy n niezależnych wyborów, każdy z k możliwości, to łącznie $k^n$ kombinacji."
+      },
+      {
+        "step": 3,
+        "hint": "Która kombinacja jest niedozwolona według warunków zadania?",
+        "expression": "Kombinacja z wszystkimi pustymi miejscami (0 punktów wypukłych)",
+        "explanation": "Znak musi zawierać co najmniej jeden punkt wypukły"
+      },
+      {
+        "step": 4,
+        "hint": "Ile jest takich niedozwolonych kombinacji?",
+        "expression": "1 kombinacja (wszystkie miejsca puste)",
+        "explanation": "Istnieje dokładnie jedna kombinacja bez żadnego punktu wypukłego"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć liczbę dozwolonych kombinacji?",
+        "expression": "$64 - 1 = 63$ różnych znaków",
+        "explanation": "Od wszystkich możliwych kombinacji odejmujemy niedozwoloną",
+        "why": "To zastosowanie zasady dopełnienia: łatwiej policzyć wszystkie możliwości i odjąć te niedozwolone, niż bezpośrednio liczyć dozwolone."
+      }
+    ],
+    "solutions": [
+      "63"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:20:23.309Z"
+  },
+  {
+    "id": "clothing_combinations",
+    "topic": "Reguła iloczynu w kombinatoryce",
+    "difficulty": 2,
+    "statement": "Andrzej ma w szafie 4 koszule: czerwoną, żółtą, zieloną i niebieską; 3 pary spodni: niebieskie, czarne i szare; oraz 5 par butów: czarne, szare, zielone, czerwone i niebieskie. Andrzej wybiera z szafy zestaw ubrania: jedną koszulę, jedną parę spodni i jedną parę butów. Zestawy ubrania wybierane przez Andrzeja określimy jako różne, gdy będą różniły się kolorem chociaż jednego rodzaju elementu ubioru w zestawie. Liczba wszystkich możliwych, różnych zestawów ubrania, jakie może wybrać Andrzej, jest równa: A. 12 B. 72 C. 60 D. 720",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile różnych wyborów ma Andrzej dla każdego elementu garderoby?",
+        "expression": "Koszule: 4 wybory, Spodnie: 3 wybory, Buty: 5 wyborów",
+        "explanation": "Zliczamy dostępne opcje dla każdego typu ubrania"
+      },
+      {
+        "step": 2,
+        "hint": "Czy wybór koszuli wpływa na wybór spodni lub butów?",
+        "expression": "Wybory są niezależne - każda koszula może być połączona z każdą parą spodni i każdą parą butów",
+        "explanation": "Nie ma ograniczeń kolorystycznych między elementami",
+        "why": "To kluczowe spostrzeżenie! Gdyby były ograniczenia (np. 'nie można łączyć tych samych kolorów'), musielibyśmy liczyć inaczej."
+      },
+      {
+        "step": 3,
+        "hint": "Jaką regułę kombinatoryczną zastosujemy dla niezależnych wyborów?",
+        "expression": "Liczba $zestawów = 4 \\times 3 \\times 5 = 60$",
+        "explanation": "Stosujemy regułę iloczynu: mnożymy liczbę możliwości dla każdego niezależnego wyboru",
+        "why": "Reguła iloczynu: jeśli mamy $n_1$ sposobów na pierwszy wybór, $n_2$ na drugi itd., to łącznie mamy $n_1 \\times n_2 \\times ... $ sposobów."
+      }
+    ],
+    "solutions": [
+      "60"
+    ],
+    "parameters": {
+      "answer": "C. 60"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:20:41.016Z"
+  },
+  {
+    "id": "clothing_combinations_one_blue",
+    "topic": "Kombinatoryka - zasada dodawania",
+    "difficulty": 3,
+    "statement": "Andrzej ma w szafie 4 koszule: czerwoną, żółtą, zieloną i niebieską; 3 pary spodni: niebieskie, czarne i szare; oraz 5 par butów: czarne, szare, zielone, czerwone i niebieskie. Oblicz, na ile sposobów można wybrać taki zestaw, w którym dokładnie jeden element ubioru będzie niebieski.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które elementy garderoby mogą być niebieskie?",
+        "expression": "Niebieskie mogą być: koszula, spodnie lub buty",
+        "explanation": "Identyfikujemy wszystkie niebieskie elementy w garderobie"
+      },
+      {
+        "step": 2,
+        "hint": "Dlaczego nie możemy po prostu pomnożyć wszystkich możliwości?",
+        "expression": "Przypadki się wykluczają: albo koszula, albo spodnie, albo buty są niebieskie",
+        "explanation": "Musi być dokładnie jeden niebieski element, więc używamy zasady dodawania",
+        "why": "Gdybyśmy użyli zasady mnożenia, policzylibyśmy zestawy z więcej niż jednym niebieskim elementem. Zasada dodawania dla zdarzeń wykluczających się."
+      },
+      {
+        "step": 3,
+        "hint": "Ile sposobów jest, gdy tylko koszula jest niebieska?",
+        "expression": "Przypadek 1: $1 \\times 2 \\times 4 = 8$ sposobów",
+        "explanation": "1 niebieska koszula, 2 nie-niebieskie spodnie (czarne, szare), 4 nie-niebieskie buty"
+      },
+      {
+        "step": 4,
+        "hint": "A gdy tylko spodnie są niebieskie?",
+        "expression": "Przypadek 2: $3 \\times 1 \\times 4 = 12$ sposobów",
+        "explanation": "3 nie-niebieskie koszule, 1 para niebieskich spodni, 4 nie-niebieskie buty"
+      },
+      {
+        "step": 5,
+        "hint": "Co z sytuacją, gdy tylko buty są niebieskie?",
+        "expression": "Przypadek 3: $3 \\times 2 \\times 1 = 6$ sposobów",
+        "explanation": "3 nie-niebieskie koszule, 2 nie-niebieskie spodnie, 1 para niebieskich butów"
+      },
+      {
+        "step": 6,
+        "hint": "Jak połączyć wszystkie przypadki w jeden wynik?",
+        "expression": "$8 + 12 + 6 = 26$ sposobów",
+        "explanation": "Sumujemy wszystkie rozłączne przypadki zgodnie z zasadą dodawania"
+      }
+    ],
+    "solutions": [
+      "26 sposobów"
+    ],
+    "parameters": {
+      "items": {
+        "koszule": 4,
+        "spodnie": 3,
+        "buty": 5
+      },
+      "constraint": "dokładnie jeden element niebieski"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-22T12:20:53.934Z"
+  },
+  {
+    "id": "three_digit_without_2",
+    "topic": "Kombinatoryka - zasada mnożenia",
+    "difficulty": 3,
+    "statement": "Wszystkich liczb naturalnych trzycyfrowych, w których zapisie dziesiętnym nie występuje cyfra 2, jest: A. 900 B. 729 C. 648 D. 512",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry możemy użyć, jeśli nie wolno nam użyć cyfry 2?",
+        "expression": "Dostępne cyfry: $\\{0, 1, 3, 4, 5, 6, 7, 8, 9\\}$ - razem 9 cyfr",
+        "explanation": "Ze zbioru wszystkich cyfr {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} usuwamy cyfrę 2"
+      },
+      {
+        "step": 2,
+        "hint": "Czy cyfra 0 może być pierwszą cyfrą liczby trzycyfrowej?",
+        "expression": "Pierwsza cyfra: $\\{1, 3, 4, 5, 6, 7, 8, 9\\}$ - razem $8$ możliwości",
+        "explanation": "Liczba trzycyfrowa nie może zaczynać się od 0",
+        "why": "Liczba zaczynająca się od 0 byłaby dwucyfrowa (np. 023 = 23). To kluczowa różnica między pierwszą a pozostałymi pozycjami!"
+      },
+      {
+        "step": 3,
+        "hint": "Ile możliwości mamy dla drugiej cyfry w liczbie trzycyfrowej?",
+        "expression": "Druga cyfra: $\\{0, 1, 3, 4, 5, 6, 7, 8, 9\\}$ - razem $9$ możliwości",
+        "explanation": "Na drugiej pozycji możemy użyć dowolnej cyfry oprócz 2, włącznie z 0"
+      },
+      {
+        "step": 4,
+        "hint": "A ile wyboru mamy dla trzeciej cyfry?",
+        "expression": "Trzecia cyfra: $\\{0, 1, 3, 4, 5, 6, 7, 8, 9\\}$ - razem $9$ możliwości",
+        "explanation": "Na trzeciej pozycji również możemy użyć dowolnej cyfry oprócz 2"
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć te wybory w jedną liczbę trzycyfrową?",
+        "expression": "Liczba $możliwości = 8 \\times 9 \\times 9 = 648$",
+        "explanation": "Stosujemy zasadę mnożenia: mnożymy liczbę możliwości dla każdej pozycji",
+        "why": "Zasada mnożenia: jeśli mamy k kroków, gdzie krok i ma $n_i$ możliwości, to łącznie mamy $n_1 \\times n_2 \\times ... \\times n_k$ sposobów."
+      }
+    ],
+    "solutions": [
+      "648"
+    ],
+    "parameters": {
+      "answer": "C. 648"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-22T12:21:07.229Z"
   }
 ]
