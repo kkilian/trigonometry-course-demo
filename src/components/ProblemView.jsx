@@ -372,18 +372,20 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
 
           {/* Progress and Next Problem */}
           <div className="mt-6 flex items-start justify-between gap-4">
-            <div className="flex-1">
-              <div className="flex items-center justify-between text-sm text-stone-600 mb-2">
-                <span>Postęp</span>
-                <span>{completedSteps.size} / {problem.steps?.length || 0} kroków</span>
+            {!isScrolled && (
+              <div className="flex-1">
+                <div className="flex items-center justify-between text-sm text-stone-600 mb-2">
+                  <span>Postęp</span>
+                  <span>{completedSteps.size} / {problem.steps?.length || 0} kroków</span>
+                </div>
+                <div className="w-full bg-stone-200 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
               </div>
-              <div className="w-full bg-stone-200 rounded-full h-2">
-                <div 
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all duration-500"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-            </div>
+            )}
             
             {/* Compact Next Problem Suggestion */}
             {showSolution && problems.length > 0 && (
