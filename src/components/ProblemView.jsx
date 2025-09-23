@@ -17,6 +17,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
   );
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [enlargedImage, setEnlargedImage] = useState(false);
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
@@ -101,6 +102,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
     setShowStatementExplanation(false);
     setCompletedInteractiveChoices(new Set());
     setShowMultiStepSteps(new Set());
+    setEnlargedImage(false);
     solveDurationRef.current = null;
     // Scroll to top when opening a new problem
     window.scrollTo(0, 0);
@@ -248,39 +250,9 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
               </div>
             </div>
 
-            {/* When scrolled and has image - side by side layout */}
-            {isScrolled && problem.image ? (
-              <div className="flex items-start gap-4">
-                <div className="flex-1">
-                  <h1 className="font-bold text-stone-900 leading-relaxed text-base md:text-lg mb-1">
-                    <MathRenderer content={problem.statement} />
-                  </h1>
-                </div>
-                <div className="flex-shrink-0">
-                  <img
-                    src={problem.image}
-                    alt={`Rysunek do zadania ${problem.id || 'maturalnego'}`}
-                    className="rounded-lg border border-stone-200 shadow-sm bg-white p-1"
-                    style={{
-                      maxHeight: '150px',
-                      width: 'auto',
-                      objectFit: 'contain'
-                    }}
-                  />
-                </div>
-                <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="p-1 rounded-full hover:bg-stone-200 transition-colors text-stone-500 hover:text-stone-700 flex-shrink-0"
-                  title="Przewiń do góry"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7 7 7M5 18l7-7 7 7" />
-                  </svg>
-                </button>
-              </div>
-            ) : (
-              /* Normal layout (not scrolled or no image) */
-              <>
+            {/* Statement with image always on the side */}
+            <div className="flex items-start gap-4">
+              <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h1 className={`font-bold text-stone-900 leading-relaxed transition-all duration-300 flex-1 ${
                     isScrolled
@@ -301,25 +273,40 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
                     </button>
                   )}
                 </div>
+              </div>
 
-                {/* Problem image below statement when not scrolled */}
-                {problem.image && !isScrolled && (
-                  <div className="my-6 flex justify-center">
-                    <div className="max-w-2xl">
-                      <img
-                        src={problem.image}
-                        alt={`Rysunek do zadania ${problem.id || 'maturalnego'}`}
-                        className="w-full h-auto rounded-lg border border-stone-200 shadow-sm bg-white p-2"
-                        style={{ maxHeight: '500px', objectFit: 'contain' }}
-                      />
-                      <p className="text-center text-xs text-stone-500 mt-2">
-                        Rysunek do zadania
-                      </p>
+              {/* Image on the right side with click to enlarge */}
+              {problem.image && (
+                <div className="flex-shrink-0">
+                  <div
+                    className="relative group cursor-pointer"
+                    onClick={() => setEnlargedImage(true)}
+                    title="Kliknij aby powiększyć"
+                  >
+                    <img
+                      src={problem.image}
+                      alt={`Rysunek do zadania ${problem.id || 'maturalnego'}`}
+                      className="rounded-lg border border-stone-200 shadow-sm bg-white p-1 transition-transform group-hover:scale-105"
+                      style={{
+                        width: isScrolled ? '150px' : '200px',
+                        height: 'auto',
+                        maxHeight: isScrolled ? '120px' : '200px',
+                        objectFit: 'contain'
+                      }}
+                    />
+                    {/* Magnifying glass overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg">
+                      <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                      </svg>
                     </div>
+                    <p className="text-center text-xs text-stone-500 mt-1 group-hover:text-stone-700">
+                      Kliknij aby powiększyć
+                    </p>
                   </div>
-                )}
-              </>
-            )}
+                </div>
+              )}
+            </div>
 
             {/* Statement explanation button and content - hide when scrolled */}
             {problem.statement_explanation && !isScrolled && (
@@ -625,6 +612,35 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
 
         </div>
       </div>
+
+      {/* Image Enlargement Modal */}
+      {enlargedImage && problem.image && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
+          onClick={() => setEnlargedImage(false)}
+        >
+          <div
+            className="relative max-w-5xl max-h-[90vh] flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={problem.image}
+              alt={`Powiększony rysunek do zadania ${problem.id || 'maturalnego'}`}
+              className="w-auto h-auto max-w-full max-h-[90vh] rounded-lg shadow-2xl"
+              style={{ objectFit: 'contain' }}
+            />
+            <button
+              onClick={() => setEnlargedImage(false)}
+              className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-lg hover:bg-stone-100 transition-colors"
+              aria-label="Zamknij powiększony obraz"
+            >
+              <svg className="w-6 h-6 text-stone-700" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

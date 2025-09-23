@@ -2686,7 +2686,7 @@
       {
         "step": 1,
         "hint": "Jakie informacje możemy wyciągnąć z danych zadania?",
-        "expression": "|AE| = 5$, $|EB| = 4$, $|CB| = 15$, $CA \\parallel DE$",
+        "expression": "|AE| = 5$, $|EB| = 4$, $|CB| = 15$, $CA $\\parallel$DE$",
         "explanation": "Zbieramy dane: długości odcinków i informację o równoległości"
       },
       {
