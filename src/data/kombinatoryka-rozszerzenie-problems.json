@@ -127,54 +127,56 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Kiedy iloczyn cyfr będzie podzielny przez 8?",
-        "expression": "Iloczyn cyfr musi być podzielny przez $8 = 2^3$",
-        "explanation": "Potrzebujemy co najmniej trzech czynników 2 w rozkładzie iloczynu na czynniki pierwsze",
-        "why": "Liczba jest podzielna przez 8, gdy zawiera czynnik $2^3$. Musimy przeanalizować, które cyfry wnoszą czynniki 2."
+        "hint": "Przeanalizuj rozkład cyfr na czynniki pierwsze",
+        "expression": "$A$: $8 = 2^3$, $9 = 3^2$\n$B$: $0$, $1 = 1$, $2 = 2^1$\n$C$: $3 = 3$, $4 = 2^2$, $5 = 5$, $6 = 2 \\cdot 3$, $7 = 7$",
+        "explanation": "Identyfikujemy potęgi dwójki w każdej cyfrze",
+        "why": "Iloczyn jest podzielny przez $8 = 2^3$ gdy suma wykładników przy 2 wynosi co najmniej 3"
       },
       {
         "step": 2,
-        "hint": "Czy cyfra 0 wpływa na iloczyn cyfr?",
-        "expression": "Jeśli cyfra dziesiątek = 0, to iloczyn cyfr = 0, który jest podzielny przez 8",
-        "explanation": "Zero w iloczynie zawsze daje zero, które jest podzielne przez każdą liczbę",
-        "why": "0 jest podzielne przez 8, bo $0 = 8 \\cdot 0$"
+        "hint": "Rozważ przypadek specjalny: cyfra 0",
+        "expression": "Jeśli którakolwiek cyfra = 0, to iloczyn = 0",
+        "explanation": "Zero jest podzielne przez każdą liczbę niezerową, w tym przez 8",
+        "why": "W zbiorze B jest 0, więc musimy osobno rozpatrzyć ten przypadek"
       },
       {
         "step": 3,
-        "hint": "Ile sposobów daje cyfra dziesiątek równa 0?",
-        "expression": "Cyfra dziesiątek = 0: cyfra setek może być 8 lub 9, cyfra jedności dowolna z C\nLiczba sposobów: $2 \\times 1 \\times 5 = 10$",
-        "explanation": "Gdy cyfra dziesiątek to 0, iloczyn jest zawsze podzielny przez 8"
+        "hint": "Przypadek I: cyfra dziesiątek = 0",
+        "expression": "Setek: $\\{8, 9\\}$ (2 możliwości)\nDziesiątek: $\\{0\\}$ (1 możliwość)\nJedności: $\\{3, 4, 5, 6, 7\\}$ (5 możliwości)",
+        "explanation": "Liczba sposobów: $2 \\times 1 \\times 5 = 10$"
       },
       {
         "step": 4,
-        "hint": "Gdy cyfra dziesiątek ≠ 0, ile czynników 2 wnosi każda cyfra?",
-        "expression": "$A: 8 = 2^3$ (3 czynniki), $9 = 3^2$ (0 czynników)\n$B$ (bez 0): $1$ (0 czynników), $2 = 2^1$ (1 czynnik)\n$C: 3, 5, 7$ (0 czynników), $4 = 2^2$ (2 czynniki), $6 = 2 \\cdot 3$ (1 czynnik)",
-        "explanation": "Rozkładamy cyfry na czynniki pierwsze i liczymy potęgi liczby 2"
+        "hint": "Przypadek II: cyfra dziesiątek ≠ 0, rozważ podprzypadki według cyfry setek",
+        "expression": "Dziesiątki bez zera: $\\{1, 2\\}$\nMusimy znaleźć kombinacje dające co najmniej $2^3$",
+        "explanation": "Analizujemy osobno dla cyfry setek 8 i 9"
       },
       {
         "step": 5,
-        "hint": "Przypadek: cyfra setek = 8, cyfra dziesiątek ≠ 0",
-        "expression": "Cyfra setek = 8 (3 czynniki 2): iloczyn jest podzielny przez 8 niezależnie od pozostałych cyfr\nCyfra dziesiątek: 1 lub 2\nLiczba sposobów: $1 \\times 2 \\times 5 = 10$",
-        "explanation": "Gdy cyfra setek to 8, mamy już 3 czynniki 2"
+        "hint": "Podprzypadek IIa: cyfra setek = 8",
+        "expression": "$8 \\cdot d \\cdot j = 2^3 \\cdot d \\cdot j$",
+        "explanation": "Cyfra 8 już zapewnia czynnik $2^3$, więc iloczyn jest podzielny przez 8 dla dowolnych $d \\in \\{1,2\\}$, $j \\in C$",
+        "why": "Liczba sposobów: $1 \\times 2 \\times 5 = 10$"
       },
       {
         "step": 6,
-        "hint": "Przypadek: cyfra setek = 9, cyfra dziesiątek ≠ 0",
-        "expression": "Cyfra setek = 9 (0 czynników 2): potrzebujemy 3 czynników z cyfr dziesiątek i jedności",
-        "explanation": "Musimy uzyskać wszystkie 3 czynniki 2 z pozostałych pozycji",
-        "why": "Jedyna możliwość: cyfra dziesiątek = 2 (1 czynnik) i cyfra jedności = 4 (2 czynniki)"
+        "hint": "Podprzypadek IIb: cyfra setek = 9",
+        "expression": "$9 \\cdot d \\cdot j = 3^2 \\cdot d \\cdot j$",
+        "explanation": "Potrzebujemy $2^3$ z cyfr $d$ i $j$",
+        "why": "Sprawdzamy wszystkie kombinacje $(d,j)$ gdzie $d \\in \\{1,2\\}$ i $j \\in \\{3,4,5,6,7\\}$"
       },
       {
         "step": 7,
-        "hint": "Ile sposobów daje przypadek z cyfrą setek = 9 i cyfrą dziesiątek ≠ 0?",
-        "expression": "Cyfra dziesiątek = 2, cyfra jedności = 4\nLiczba sposobów: $1 \\times 1 \\times 1 = 1$",
-        "explanation": "Tylko jedna kombinacja: 924"
+        "hint": "Które kombinacje w podprzypadku IIb dają co najmniej $2^3$?",
+        "expression": "$(1,3): 0+0=0$ ❌\n$(1,4): 0+2=2$ ❌\n$(1,5): 0+0=0$ ❌\n$(1,6): 0+1=1$ ❌\n$(1,7): 0+0=0$ ❌\n$(2,3): 1+0=1$ ❌\n$(2,4): 1+2=3$ ✓\n$(2,5): 1+0=1$ ❌\n$(2,6): 1+1=2$ ❌\n$(2,7): 1+0=1$ ❌",
+        "explanation": "Tylko kombinacja $(2,4)$ daje dokładnie 3 czynniki dwójki",
+        "why": "Liczba sposobów: 1 (tylko liczba 924)"
       },
       {
         "step": 8,
-        "hint": "Jak połączyć wyniki ze wszystkich przypadków?",
-        "expression": "Łączna liczba sposobów: $10 + 10 + 1 = 21$",
-        "explanation": "Dodajemy: cyfra dziesiątek = 0 (10) + cyfra setek = 8 i dziesiątek ≠ 0 (10) + cyfra setek = 9 i dziesiątek ≠ 0 (1)"
+        "hint": "Zsumuj wszystkie przypadki",
+        "expression": "Przypadek I: 10\nPodprzypadek IIa: 10\nPodprzypadek IIb: 1\nRazem: $10 + 10 + 1 = 21$",
+        "explanation": "Wszystkie przypadki są rozłączne, więc dodajemy wyniki"
       }
     ],
     "solutions": [
@@ -190,7 +192,7 @@
       "warnings": [],
       "stats": {
         "totalSteps": 8,
-        "stepsWithWhy": 3
+        "stepsWithWhy": 5
       }
     },
     "timestamp": "2025-09-22T12:25:07.149Z"

@@ -110,7 +110,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const scrolled = scrollPosition > 20; // Header starts shrinking after 20px
+      const scrolled = scrollPosition > 80; // Header starts shrinking after 80px
       const progress = Math.min(scrollPosition / 200, 1); // Full animation at 200px
 
       setIsScrolled(scrolled);

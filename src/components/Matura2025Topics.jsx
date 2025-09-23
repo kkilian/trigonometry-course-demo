@@ -3,31 +3,54 @@ import React from 'react';
 const Matura2025Topics = ({ onSelectTopic, onBack }) => {
   const topics = [
     {
-      id: 'matura-marzec-2025',
+      id: 'matura-marzec-2025-podstawa',
       title: 'Marzec 2025',
-      description: 'Egzamin próbny - poziom rozszerzony',
+      description: 'Egzamin próbny - poziom podstawowy',
       status: 'available',
       borderColor: 'hover:border-blue-500',
       iconBg: 'group-hover:bg-blue-100',
-      iconColor: 'group-hover:text-blue-700'
+      iconColor: 'group-hover:text-blue-700',
+      problemCount: 32
     },
     {
-      id: 'matura-maj-2025',
-      title: 'Maj 2025',
-      description: 'Egzamin główny - podstawa i rozszerzenie',
+      id: 'matura-kwiecien-2025-podstawa',
+      title: 'Kwiecień 2025',
+      description: 'Egzamin dodatkowy - poziom podstawowy',
       status: 'available',
+      borderColor: 'hover:border-purple-500',
+      iconBg: 'group-hover:bg-purple-100',
+      iconColor: 'group-hover:text-purple-700',
+      problemCount: 30
+    },
+    {
+      id: 'matura-maj-2025-podstawa',
+      title: 'Maj 2025',
+      description: 'Egzamin główny - poziom podstawowy',
+      status: 'soon',
       borderColor: 'hover:border-green-500',
       iconBg: 'group-hover:bg-green-100',
-      iconColor: 'group-hover:text-green-700'
+      iconColor: 'group-hover:text-green-700',
+      problemCount: 0
     },
     {
-      id: 'matura-kwiecien-2025',
-      title: 'Kwiecień 2025',
-      description: 'Egzamin dodatkowy - poziom rozszerzony',
-      status: 'available',
+      id: 'matura-czerwiec-2025-podstawa',
+      title: 'Czerwiec 2025',
+      description: 'Egzamin poprawkowy - poziom podstawowy',
+      status: 'soon',
       borderColor: 'hover:border-orange-500',
       iconBg: 'group-hover:bg-orange-100',
-      iconColor: 'group-hover:text-orange-700'
+      iconColor: 'group-hover:text-orange-700',
+      problemCount: 0
+    },
+    {
+      id: 'matura-sierpien-2025-podstawa',
+      title: 'Sierpień 2025',
+      description: 'Egzamin poprawkowy II - poziom podstawowy',
+      status: 'soon',
+      borderColor: 'hover:border-red-500',
+      iconBg: 'group-hover:bg-red-100',
+      iconColor: 'group-hover:text-red-700',
+      problemCount: 0
     }
   ];
 
@@ -47,10 +70,10 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
           </button>
 
           <h1 className="text-3xl md:text-5xl font-bold text-stone-900 tracking-tight mb-2 md:mb-4">
-            Matura 2025
+            Matura 2025 - Poziom podstawowy
           </h1>
           <p className="text-stone-400 text-base md:text-lg">
-            Wybierz sesję egzaminacyjną
+            Zadania z poziomu podstawowego
           </p>
         </div>
 
@@ -105,36 +128,25 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
                 </div>
 
                 {/* Additional info */}
-                {topic.id === 'matura-marzec-2025' && (
-                  <div className="pt-2 border-t border-stone-100">
-                    <div className="flex items-center gap-2 text-sm text-stone-500">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>14 zadań dostępnych</span>
-                    </div>
+                <div className="pt-2 border-t border-stone-100">
+                  <div className="flex items-center gap-2 text-sm text-stone-500">
+                    {topic.status === 'available' ? (
+                      <>
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>{topic.problemCount} zadań dostępnych</span>
+                      </>
+                    ) : (
+                      <>
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Wkrótce dostępne</span>
+                      </>
+                    )}
                   </div>
-                )}
-                {topic.id === 'matura-kwiecien-2025' && (
-                  <div className="pt-2 border-t border-stone-100">
-                    <div className="flex items-center gap-2 text-sm text-stone-500">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Zadania z wysokim poziomem trudności</span>
-                    </div>
-                  </div>
-                )}
-                {topic.id === 'matura-maj-2025' && (
-                  <div className="pt-2 border-t border-stone-100">
-                    <div className="flex items-center gap-2 text-sm text-stone-500">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Egzamin główny - wszystkie poziomy</span>
-                    </div>
-                  </div>
-                )}
+                </div>
               </div>
             </button>
           ))}
@@ -151,8 +163,8 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
             <div>
               <h4 className="text-sm font-semibold text-blue-900 mb-1">Informacja o dostępności</h4>
               <p className="text-sm text-blue-700">
-                Dostępne są zadania ze wszystkich sesji 2025: marzec (próbna), kwiecień (dodatkowa) i maj (główna).
-                Pełny zakres poziomów podstawowego i rozszerzonego.
+                Obecnie dostępne są zadania z dwóch sesji egzaminacyjnych: marzec 2025 (32 zadania) i kwiecień 2025 (30 zadań).
+                Kolejne sesje egzaminacyjne będą dodawane systematycznie.
               </p>
             </div>
           </div>

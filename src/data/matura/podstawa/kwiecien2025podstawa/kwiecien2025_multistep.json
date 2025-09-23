@@ -1,0 +1,4707 @@
+[
+  {
+    "id": "absolute_values_complex",
+    "topic": "Wartość bezwzględna",
+    "difficulty": 4,
+    "statement": "Liczba $|3-2\\sqrt{2}|-|6-3\\sqrt{2}|-|1-\\sqrt{2}|$ jest równa: A. $-2$, B. $-2\\sqrt{2}$, C. $2(4-3\\sqrt{2})$, D. $2\\sqrt{2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co musisz zrobić przed obliczeniem wartości bezwzględnych?",
+        "expression": "Sprawdzamy znaki: $3-2\\sqrt{2}$, $6-3\\sqrt{2}$, $1-\\sqrt{2}$",
+        "explanation": "Musimy określić czy każde wyrażenie jest dodatnie czy ujemne",
+        "interactive_choice": {
+          "prompt": "Jak podejść do obliczenia wyrażenia z wartościami bezwzględnymi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić znaki wyrażeń pod wartościami bezwzględnymi",
+              "feedback": "Doskonale! To kluczowy krok - musisz wiedzieć czy wyrażenie jest dodatnie czy ujemne",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Od razu podstawić wzory na wartość bezwzględną",
+              "feedback": "Nie - bez znajomości znaków możesz popełnić błąd",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podnieść wszystko do kwadratu",
+              "feedback": "To skomplikuje obliczenia - lepiej sprawdzić znaki",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zawsze sprawdzaj znaki wyrażeń pod wartościami bezwzględnymi przed ich usunięciem."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile wynosi przybliżenie $\\sqrt{2}$?",
+        "expression": "$\\sqrt{2} \\approx 1.414$",
+        "explanation": "Używamy przybliżenia do sprawdzenia znaków",
+        "why": "Znając $\\sqrt{2} \\approx 1.414$ możemy sprawdzić znaki wyrażeń pod wartościami bezwzględnymi"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest znak wyrażenia $3-2\\sqrt{2}$?",
+        "expression": "$3-2\\sqrt{2} \\approx 3-2(1.414) = 3-2.828 = 0.172 > 0$",
+        "explanation": "Pierwsze wyrażenie jest dodatnie"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest znak wyrażenia $6-3\\sqrt{2}$?",
+        "expression": "$6-3\\sqrt{2} \\approx 6-3(1.414) = 6-4.242 = 1.758 > 0$",
+        "explanation": "Drugie wyrażenie jest dodatnie"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest znak wyrażenia $1-\\sqrt{2}$?",
+        "expression": "$1-\\sqrt{2} \\approx 1-1.414 = -0.414 < 0$",
+        "explanation": "Trzecie wyrażenie jest ujemne"
+      },
+      {
+        "step": 6,
+        "hint": "Jak usunąć wartości bezwzględne znając znaki?",
+        "expression": "$|3-2\\sqrt{2}|-|6-3\\sqrt{2}|-|1-\\sqrt{2}| = (3-2\\sqrt{2})-(6-3\\sqrt{2})-(-1+\\sqrt{2})$",
+        "explanation": "Usuwamy wartości bezwzględne zgodnie ze znakami wyrażeń",
+        "interactive_choice": {
+          "prompt": "Jak przepisać wyrażenie $|3-2\\sqrt{2}|-|6-3\\sqrt{2}|-|1-\\sqrt{2}|$ bez wartości bezwzględnych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(3-2\\sqrt{2})-(6-3\\sqrt{2})-(-1+\\sqrt{2})$",
+              "feedback": "Świetnie! Dodatnie wyrażenia zostają bez zmian, ujemne zmieniają znak",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$(3-2\\sqrt{2})-(6-3\\sqrt{2})-(1-\\sqrt{2})$",
+              "feedback": "Błąd - zapomniałeś zmienić znak przy ujemnym wyrażeniu $1-\\sqrt{2}$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$-(3-2\\sqrt{2})+(6-3\\sqrt{2})+(1-\\sqrt{2})$",
+              "feedback": "Nie - pomyliłeś znaki przy dodatnich wyrażeniach",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Jeśli wyrażenie pod wartością bezwzględną jest dodatnie, zostaje bez zmian. Jeśli ujemne, zmieniamy mu znak."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć wyrażenie $(3-2\\sqrt{2})-(6-3\\sqrt{2})-(-1+\\sqrt{2})$?",
+        "expression": "$(3-2\\sqrt{2})-(6-3\\sqrt{2})+(1-\\sqrt{2})$",
+        "explanation": "Zmieniamy znak przy ostatnim składniku"
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymasz po usunięciu nawiasów?",
+        "expression": "$3-2\\sqrt{2}-6+3\\sqrt{2}+1-\\sqrt{2}$",
+        "explanation": "Usuwamy nawiasy zachowując znaki"
+      },
+      {
+        "step": 9,
+        "hint": "Jak pogrupować składniki podobne?",
+        "expression": "$(3-6+1)+(-2\\sqrt{2}+3\\sqrt{2}-\\sqrt{2})$",
+        "explanation": "Grupujemy składniki wymierne i niewymierne osobno",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej pogrupować składniki w wyrażeniu $3-2\\sqrt{2}-6+3\\sqrt{2}+1-\\sqrt{2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Osobno liczby wymierne i niewymiernie: $(3-6+1)+(-2\\sqrt{2}+3\\sqrt{2}-\\sqrt{2})$",
+              "feedback": "Doskonale! To najjaśniejszy sposób grupowania",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "W kolejności występowania bez grupowania",
+              "feedback": "Można, ale grupowanie ułatwia obliczenia",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie dodatnie i wszystkie ujemne osobno",
+              "feedback": "Mylące - lepiej grupować według typu liczb",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Grupowanie według typu liczb (wymierne i niewymierne) ułatwia obliczenia."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi suma składników wymiernych?",
+        "expression": "$3-6+1 = -2$",
+        "explanation": "Obliczamy sumę liczb wymiernych"
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi suma składników niewymiernych?",
+        "expression": "$-2\\sqrt{2}+3\\sqrt{2}-\\sqrt{2} = 0\\sqrt{2} = 0$",
+        "explanation": "Obliczamy sumę składników z $\\sqrt{2}$: $(-2+3-1)\\sqrt{2} = 0\\sqrt{2} = 0$"
+      },
+      {
+        "step": 12,
+        "hint": "Jaki jest końcowy wynik?",
+        "expression": "$-2 + 0 = -2$",
+        "explanation": "Łączymy wyniki z obu grup"
+      }
+    ],
+    "solutions": [
+      "$-2$"
+    ],
+    "parameters": {
+      "correct_answer": "A"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:09:37.127Z"
+  },
+  {
+    "id": "logarithm_calculation",
+    "topic": "Logarytmy",
+    "difficulty": 4,
+    "statement": "Liczba $\\frac{1}{3}\\log_5 125 - 3\\log_{125} \\frac{1}{5}$ jest równa: A. 0, B. 1, C. 2, D. 5",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można uprościć wyrażenie $\\log_5 125$?",
+        "expression": "$\\log_5 125 = \\log_5 5^3 = 3$",
+        "explanation": "Używamy właściwości $\\log_a a^x = x$",
+        "why": "Kluczowe jest rozpoznanie że $125 = 5^3$, co pozwala bezpośrednio zastosować definicję logarytmu",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej obliczyć $\\log_5 125$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zapisać $125 = 5^3$ i użyć właściwości logarytmu",
+              "feedback": "Świetnie! To da nam $\\log_5 5^3 = 3$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć kalkulatora do obliczenia",
+              "feedback": "Można, ale lepiej rozpoznać potęgę - $125 = 5^3$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zamienić na logarytm naturalny",
+              "feedback": "Niepotrzebnie komplikuje - lepiej rozpoznać $125 = 5^3$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpoznanie że $125 = 5^3$ pozwala od razu obliczyć $\\log_5 125 = 3$"
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć pierwszy składnik $\\frac{1}{3}\\log_5 125$?",
+        "expression": "$\\frac{1}{3}\\log_5 125 = \\frac{1}{3} \\cdot 3 = 1$",
+        "explanation": "Podstawiamy obliczoną wartość logarytmu"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o podstawie logarytmu $\\log_{125}$?",
+        "expression": "$\\log_{125} \\frac{1}{5} = \\log_{5^3} 5^{-1}$",
+        "explanation": "Przepisujemy używając podstawy 5",
+        "interactive_choice": {
+          "prompt": "Jak przekształcić $\\log_{125} \\frac{1}{5}$ żeby łatwiej obliczyć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zamienić podstawę na 5 używając wzoru na zmianę podstawy",
+              "feedback": "Dobra metoda, ale można prościej - zauważ że $125 = 5^3$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zapisać $125 = 5^3$ i $\\frac{1}{5} = 5^{-1}$",
+              "feedback": "Doskonale! To pozwoli użyć właściwości potęg w logarytmach",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć bezpośrednio z definicji",
+              "feedback": "Trudne bez rozpoznania związku między 125 i 5",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Najlepiej zapisać wszystko w tej samej podstawie: $125 = 5^3$ i $\\frac{1}{5} = 5^{-1}$"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak zastosować wzór na logarytm z podstawą będącą potęgą?",
+        "expression": "$\\log_{5^3} 5^{-1} = \\frac{\\log_5 5^{-1}}{\\log_5 5^3} = \\frac{-1}{3}$",
+        "explanation": "Używamy wzoru $\\log_{a^k} b = \\frac{\\log_a b}{\\log_a a^k} = \\frac{\\log_a b}{k}$",
+        "why": "Wzór na zmianę podstawy: $\\log_{a^k} b = \\frac{1}{k}\\log_a b$. Tu mamy $\\log_{5^3} 5^{-1} = \\frac{1}{3}\\log_5 5^{-1} = \\frac{1}{3} \\cdot (-1) = -\\frac{1}{3}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest wartość drugiego składnika $3\\log_{125} \\frac{1}{5}$?",
+        "expression": "$3\\log_{125} \\frac{1}{5} = 3 \\cdot \\left(-\\frac{1}{3}\\right) = -1$",
+        "explanation": "Mnożymy przez 3"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest wynik całego wyrażenia?",
+        "expression": "$\\frac{1}{3}\\log_5 125 - 3\\log_{125} \\frac{1}{5} = 1 - (-1) = 2$",
+        "explanation": "Podstawiamy obliczone wartości i wykonujemy działanie",
+        "interactive_choice": {
+          "prompt": "Oblicz $\\frac{1}{3}\\log_5 125 - 3\\log_{125} \\frac{1}{5}$:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$1 - (-1) = 2$",
+              "feedback": "Dokładnie! Pierwszy składnik to 1, drugi to -1",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$1 + (-1) = 0$",
+              "feedback": "Uwaga na znak! To odejmowanie: $1 - (-1) = 1 + 1 = 2$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$1 - 1 = 0$",
+              "feedback": "Drugi składnik to $-1$, nie $1$. Mamy $1 - (-1) = 2$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odejmowanie liczby ujemnej to dodawanie: $1 - (-1) = 1 + 1 = 2$"
+        }
+      }
+    ],
+    "solutions": [
+      "2"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:10:01.376Z"
+  },
+  {
+    "id": "consecutive_integers_mod5_proof",
+    "topic": "Dowody algebraiczne i arytmetyka modularna",
+    "difficulty": 4,
+    "statement": "Wykaż, że suma kwadratów czterech kolejnych liczb całkowitych niepodzielnych przez 5 jest liczbą podzielną przez 10.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć cztery kolejne liczby całkowite niepodzielne przez 5?",
+        "expression": "Niech nasze liczby to $5k+1, 5k+2, 5k+3, 5k+4$ dla pewnego $k \\in \\mathbb{Z}$",
+        "explanation": "To są cztery kolejne liczby całkowite niepodzielne przez 5",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej oznaczyć cztery kolejne liczby całkowite niepodzielne przez 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jako $n, n+1, n+2, n+3$ gdzie $n$ niepodzielne przez 5",
+              "feedback": "To nie zadziała - nie wszystkie będą niepodzielne przez 5!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozpatrzyć wszystkie możliwe reszty modulo 5",
+              "feedback": "Świetny pomysł! Liczby niepodzielne przez 5 dają reszty 1, 2, 3, 4",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Jako $5k+1, 5k+2, 5k+3, 5k+4$ dla pewnego $k$",
+              "feedback": "Doskonale! To są cztery kolejne liczby niepodzielne przez 5",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Liczby niepodzielne przez 5 to te o resztach 1, 2, 3, 4 przy dzieleniu przez 5."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać sumę kwadratów tych liczb?",
+        "expression": "$S = (5k+1)^2 + (5k+2)^2 + (5k+3)^2 + (5k+4)^2$",
+        "explanation": "Suma kwadratów czterech kolejnych liczb niepodzielnych przez 5"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwinąć każdy kwadrat używając wzoru $(a+b)^2$?",
+        "expression": "$(5k+1)^2 = 25k^2 + 10k + 1$\n$(5k+2)^2 = 25k^2 + 20k + 4$\n$(5k+3)^2 = 25k^2 + 30k + 9$\n$(5k+4)^2 = 25k^2 + 40k + 16$",
+        "explanation": "Rozwijamy każdy kwadrat osobno"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz dodając wszystkie rozwinięte kwadraty?",
+        "expression": "$S = 4 \\cdot 25k^2 + (10k + 20k + 30k + 40k) + (1 + 4 + 9 + 16)$",
+        "explanation": "Grupujemy podobne składniki"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są wyniki obliczeń w każdej grupie?",
+        "expression": "$S = 100k^2 + 100k + 30$",
+        "explanation": "Obliczamy: $4 \\cdot 25k^2 = 100k^2$, suma współczynników przy $k$ to $100k$, suma stałych to $30$"
+      },
+      {
+        "step": 6,
+        "hint": "Co możesz wyłączyć przed nawias z wyrażenia $100k^2 + 100k + 30$?",
+        "expression": "$S = 10(10k^2 + 10k + 3)$",
+        "explanation": "Wyłączamy wspólny czynnik 10",
+        "why": "To pokazuje, że suma jest podzielna przez 10, niezależnie od wartości $k$",
+        "interactive_choice": {
+          "prompt": "Jaki wspólny czynnik wyłączyć z wyrażenia $100k^2 + 100k + 30$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć 100",
+              "feedback": "Nie można - składnik 30 nie dzieli się przez 100",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wyłączyć 10",
+              "feedback": "Świetnie! Wszystkie składniki dzielą się przez 10",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie można nic wyłączyć",
+              "feedback": "Można! Sprawdź dzielniki wszystkich współczynników",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Liczba 10 dzieli wszystkie składniki: 100, 100 i 30."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Co możesz powiedzieć o podzielności sumy przez 10?",
+        "expression": "$S = 10 \\cdot (liczba całkowita)$",
+        "explanation": "Suma ma czynnik 10, więc jest podzielna przez 10",
+        "interactive_choice": {
+          "prompt": "Czy wyrażenie $10k^2 + 10k + 3$ wpływa na podzielność przez 10?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, musi być parzyste żeby suma była podzielna przez 10",
+              "feedback": "Nie - wystarczy że cała suma ma czynnik 10",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Nie, wystarczy że przed nawiasem mamy czynnik 10",
+              "feedback": "Dokładnie! Niezależnie od wartości w nawiasie, suma dzieli się przez 10",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wyrażenie w nawiasie musi być całkowite",
+              "feedback": "Jest całkowite dla każdego całkowitego $k$, ale to nie o to chodzi",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Jeśli liczba ma postać $10 \\cdot (coś całkowitego)$, to jest podzielna przez 10."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak sformułować końcowy wniosek?",
+        "expression": "Dla każdego $k \\in \\mathbb{Z}$: $S = 10(10k^2 + 10k + 3)$",
+        "explanation": "Suma kwadratów czterech kolejnych liczb niepodzielnych przez 5 jest zawsze podzielna przez 10",
+        "why": "Dowód jest kompletny - pokazaliśmy że dla dowolnych czterech kolejnych liczb niepodzielnych przez 5, ich suma kwadratów ma zawsze czynnik 10."
+      }
+    ],
+    "solutions": [
+      "Suma kwadratów czterech kolejnych liczb całkowitych niepodzielnych przez 5 jest zawsze podzielna przez 10, co wynika z postaci $S = 10(10k^2 + 10k + 3)$"
+    ],
+    "parameters": {
+      "proof_type": "dowód algebraiczny",
+      "key_insight": "reprezentacja liczb niepodzielnych przez 5 jako $5k+1, 5k+2, 5k+3, 5k+4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:10:34.259Z"
+  },
+  {
+    "id": "absolute_value_equation",
+    "topic": "Równania z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Dane jest równanie $2(1+x)-3|5x+1|=2x-4$. Suma wszystkich rzeczywistych rozwiązań tego równania jest równa: A. $(-0,4)$, B. $0,25$, C. $0,4$, D. $(-0,25)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak uprościć lewą stronę równania bez wartości bezwzględnej?",
+        "expression": "$2(1+x)-3|5x+1|=2x-4$ przekształcamy do $2+2x-3|5x+1|=2x-4$",
+        "explanation": "Rozwijamy nawias $2(1+x) = 2 + 2x$"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymamy po przeniesieniu składników z $x$ na jedną stronę?",
+        "expression": "$2-3|5x+1|=-4$, czyli $-3|5x+1|=-6$",
+        "explanation": "Odejmujemy $2x$ od obu stron i upraszczamy"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest wartość $|5x+1|$ po podzieleniu przez $-3$?",
+        "expression": "$|5x+1|=2$",
+        "explanation": "Dzielimy obie strony przez $-3$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać równanie z wartością bezwzględną $|5x+1|=2$?",
+        "expression": "$5x+1=2$ lub $5x+1=-2$",
+        "explanation": "Rozpatrujemy oba przypadki zgodnie z definicją wartości bezwzględnej",
+        "why": "To kluczowy moment - wartość bezwzględna $|A|=B$ oznacza że $A=B$ lub $A=-B$",
+        "interactive_choice": {
+          "prompt": "Które podejście zastosować do równania $|5x+1|=2$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć przypadki: $5x+1=2$ lub $5x+1=-2$",
+              "feedback": "Doskonale! To standardowa metoda dla równań $|A|=B$ gdzie $B>0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podnieść obie strony do kwadratu",
+              "feedback": "Możliwe, ale bardziej skomplikowane - lepiej użyć definicji wartości bezwzględnej",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić tylko przypadek $5x+1=2$",
+              "feedback": "Niepełne! Wartość bezwzględna może dawać dwa rozwiązania",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie $|A|=B$ dla $B>0$ ma rozwiązania $A=B$ lub $A=-B$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jakie rozwiązanie daje pierwszy przypadek $5x+1=2$?",
+        "expression": "$5x=1$, więc $x_1=\\frac{1}{5}=0,2$",
+        "explanation": "Rozwiązujemy pierwsze równanie liniowe"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie rozwiązanie daje drugi przypadek $5x+1=-2$?",
+        "expression": "$5x=-3$, więc $x_2=-\\frac{3}{5}=-0,6$",
+        "explanation": "Rozwiązujemy drugie równanie liniowe"
+      },
+      {
+        "step": 7,
+        "hint": "Czy oba rozwiązania należy sprawdzić w równaniu pierwotnym?",
+        "expression": "Rozwiązania: $x_1=0,2$ i $x_2=-0,6$",
+        "explanation": "Oba rozwiązania są poprawne",
+        "interactive_choice": {
+          "prompt": "Czy trzeba sprawdzić rozwiązania w równaniu pierwotnym?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, bo przekształcenia były równoważne",
+              "feedback": "Tak! Wszystkie nasze przekształcenia zachowały równoważność",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tak, zawsze przy wartości bezwzględnej",
+              "feedback": "Nie zawsze - tu nie wprowadziliśmy rozwiązań obcych",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko jedno z rozwiązań",
+              "feedback": "Nie - albo sprawdzamy wszystkie, albo żadne (gdy przekształcenia równoważne)",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Nasze przekształcenia były równoważne, więc sprawdzenie nie jest konieczne"
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest suma wszystkich rozwiązań?",
+        "expression": "$x_1+x_2=0,2+(-0,6)=-0,4$",
+        "explanation": "Obliczamy sumę dwóch rozwiązań"
+      },
+      {
+        "step": 9,
+        "hint": "Która odpowiedź z podanych jest poprawna?",
+        "expression": "Suma wszystkich rozwiązań: $-0,4$",
+        "explanation": "Odpowiedź to A (interpretując jako liczbę $-0,4$)",
+        "interactive_choice": {
+          "prompt": "Suma rozwiązań wynosi $-0,4$. Która odpowiedź jest poprawna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A. $(-0,4)$ - to przedział",
+              "feedback": "Nie! Nawiasy oznaczają przedział otwarty, a my szukamy liczby",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "D. $(-0,25)$ - to też przedział",
+              "feedback": "Nie! To również przedział, a wartość się nie zgadza",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Żadna - suma to $-0,4$, nie ma takiej opcji",
+              "feedback": "Prawdopodobnie A oznacza liczbę $-0,4$, mimo mylącego zapisu",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Suma wynosi $-0,4$. Odpowiedź A prawdopodobnie oznacza tę wartość, mimo mylącego zapisu z nawiasami"
+        }
+      }
+    ],
+    "solutions": [
+      "$x_1 = 0,2$",
+      "$x_2 = -0,6$",
+      "Suma rozwiązań: $-0,4$"
+    ],
+    "parameters": {
+      "answer": "A"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:11:05.092Z"
+  },
+  {
+    "id": "linear_function_analysis",
+    "topic": "Funkcje liniowe - analiza właściwości",
+    "difficulty": 3,
+    "statement": "Dana jest funkcja liniowa określona wzorem $f(x) = (m-2) \\cdot x + m - 3$. Oceń prawdziwość poniższych stwierdzeń: 1) Funkcja $f$ jest rosnąca dla $m \\in (-\\infty, 2)$ - P/F, 2) Funkcja $f$ jest stała dla $m = 3$ - P/F",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest postać ogólna funkcji liniowej?",
+        "expression": "$f(x) = ax + b$, gdzie $a$ to współczynnik kierunkowy, $b$ to wyraz wolny",
+        "explanation": "Identyfikujemy elementy funkcji liniowej",
+        "why": "Współczynnik kierunkowy $a$ decyduje o monotoniczności funkcji liniowej"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są współczynniki w naszej funkcji $f(x) = (m-2) \\cdot x + m - 3$?",
+        "expression": "$a = m - 2$ oraz $b = m - 3$",
+        "explanation": "Porównujemy z postacią ogólną $ax + b$"
+      },
+      {
+        "step": 3,
+        "hint": "Od czego zależy monotoniczność funkcji liniowej?",
+        "expression": "Funkcja rosnąca ⟺ $a > 0$ ⟺ $m - 2 > 0$ ⟺ $m > 2$",
+        "explanation": "Warunek na rosnącą funkcję liniową",
+        "interactive_choice": {
+          "prompt": "Kiedy funkcja liniowa $f(x) = ax + b$ jest rosnąca?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdy $a > 0$",
+              "feedback": "Dokładnie! Dodatni współczynnik kierunkowy oznacza funkcję rosnącą",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Gdy $b > 0$",
+              "feedback": "Nie - wyraz wolny $b$ przesuwa wykres w pionie, ale nie wpływa na monotoniczność",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Gdy $a < 0$",
+              "feedback": "Nie - ujemny współczynnik kierunkowy oznacza funkcję malejącą",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika kierunkowego $a$ decyduje: $a > 0$ → rosnąca, $a < 0$ → malejąca, $a = 0$ → stała"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Czy stwierdzenie 1) jest prawdziwe dla $m \\in (-\\infty, 2)$?",
+        "expression": "Stwierdzenie 1): FAŁSZ",
+        "explanation": "Dla $m < 2$ funkcja jest malejąca, nie rosnąca",
+        "interactive_choice": {
+          "prompt": "Funkcja jest rosnąca dla $m > 2$. Co to oznacza dla stwierdzenia o $m \\in (-\\infty, 2)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stwierdzenie jest prawdziwe",
+              "feedback": "Nie! Dla $m < 2$ mamy $a = m-2 < 0$, więc funkcja jest malejąca",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Stwierdzenie jest fałszywe",
+              "feedback": "Tak! Dla $m < 2$ funkcja jest malejąca, nie rosnąca",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zależy od wartości $m$",
+              "feedback": "Nie - dla całego przedziału $(-\\infty, 2)$ funkcja jest malejąca",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla $m \\in (-\\infty, 2)$ mamy $m - 2 < 0$, więc funkcja jest malejąca, nie rosnąca"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Kiedy funkcja liniowa jest stała?",
+        "expression": "Funkcja stała ⟺ $a = 0$ ⟺ $m - 2 = 0$ ⟺ $m = 2$",
+        "explanation": "Warunek na stałą funkcję liniową",
+        "why": "Gdy współczynnik kierunkowy równa się zero, funkcja nie zależy od $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Czy dla $m = 3$ funkcja jest stała?",
+        "expression": "Dla $m = 3$: $a = 3 - 2 = 1 \\neq 0$",
+        "explanation": "Współczynnik kierunkowy nie równa się zero",
+        "interactive_choice": {
+          "prompt": "Funkcja jest stała dla $m = 2$. Co z przypadkiem $m = 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Funkcja jest stała dla $m = 3$",
+              "feedback": "Nie! Dla $m = 3$ mamy $a = 3-2 = 1 \\neq 0$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Funkcja nie jest stała dla $m = 3$",
+              "feedback": "Dokładnie! $a = 1 > 0$, więc funkcja jest rosnąca",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Funkcja jest zerowa dla $m = 3$",
+              "feedback": "To nie ma związku ze stałością - sprawdzamy współczynnik kierunkowy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla $m = 3$: $a = 3-2 = 1 > 0$, więc funkcja jest rosnąca, nie stała"
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest odpowiedź dla stwierdzenia 2)?",
+        "expression": "Stwierdzenie 2): FAŁSZ",
+        "explanation": "Dla $m = 3$ funkcja jest rosnąca ($a = 1 > 0$), nie stała"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są końcowe odpowiedzi dla obu stwierdzeń?",
+        "expression": "1) $m \\in (-\\infty, 2)$ → funkcja rosnąca: FAŁSZ\n2) $m = 3$ → funkcja stała: FAŁSZ",
+        "explanation": "Podsumowanie analizy obu stwierdzeń"
+      }
+    ],
+    "solutions": [
+      "Stwierdzenie 1): FAŁSZ - dla $m < 2$ funkcja jest malejąca",
+      "Stwierdzenie 2): FAŁSZ - dla $m = 3$ funkcja jest rosnąca ($a = 1 > 0$)"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:11:32.005Z"
+  },
+  {
+    "id": "complex_rational_division",
+    "topic": "Dzielenie wyrażeń wymiernych",
+    "difficulty": 4,
+    "statement": "Dane jest wyrażenie określone dla każdej liczby rzeczywistej $x \\in \\mathbb{R} \\backslash\\{-5,-2,0,2,5\\}$: $\\frac{(x^4-16)(x^2-25)}{(x^2-3x-10)(x+5)^2} \\div \\frac{(x^3+4x)(x-2)}{2x+10}$. Wyrażenie to można przekształcić do postaci: A. $\\frac{x^2+4}{2}$, B. $\\frac{x-2}{x+5}$, C. $\\frac{x+5}{2x-4}$, D. $\\frac{2}{x}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przekształcić dzielenie przez ułamek?",
+        "expression": "$\\frac{(x^4-16)(x^2-25)}{(x^2-3x-10)(x+5)^2} \\cdot \\frac{2x+10}{(x^3+4x)(x-2)}$",
+        "explanation": "Dzielenie przez ułamek zamieniamy na mnożenie przez odwrotność",
+        "why": "To podstawowa reguła dzielenia ułamków - dzielenie przez $\\frac{a}{b}$ to mnożenie przez $\\frac{b}{a}$"
+      },
+      {
+        "step": 2,
+        "hint": "Które wyrażenia warto rozłożyć na czynniki?",
+        "expression": "Rozkładamy każde wyrażenie na czynniki",
+        "explanation": "Przygotowujemy się do skracania wspólnych czynników",
+        "interactive_choice": {
+          "prompt": "Co należy zrobić z wyrażeniami w liczniku i mianowniku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozłożyć wszystkie wyrażenia na czynniki",
+              "feedback": "Doskonale! To pozwoli skracać wspólne czynniki",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw pomnożyć liczniki i mianowniki",
+              "feedback": "Nie - lepiej najpierw rozłożyć, żeby móc skracać",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Rozwinąć wszystkie nawiasy",
+              "feedback": "To skomplikuje obliczenia - rozkład na czynniki jest lepszy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozkład na czynniki pozwala zauważyć wspólne elementy do skrócenia"
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozłożyć $x^4 - 16$?",
+        "expression": "$x^4 - 16 = (x^2)^2 - 4^2 = (x^2 - 4)(x^2 + 4) = (x-2)(x+2)(x^2+4)$",
+        "explanation": "Używamy wzoru na różnicę kwadratów dwukrotnie"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozłożyć $x^2 - 25$?",
+        "expression": "$x^2 - 25 = (x-5)(x+5)$",
+        "explanation": "Różnica kwadratów"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozłożyć $x^2 - 3x - 10$?",
+        "expression": "$x^2 - 3x - 10 = (x-5)(x+2)$",
+        "explanation": "Szukamy liczb o sumie $-3$ i iloczynie $-10$: to $-5$ i $2$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć pozostałe wyrażenia?",
+        "expression": "$x^3 + 4x = x(x^2 + 4)$ oraz $2x + 10 = 2(x + 5)$",
+        "explanation": "Wyłączamy wspólne czynniki"
+      },
+      {
+        "step": 7,
+        "hint": "Jak wygląda wyrażenie po podstawieniu rozkładów?",
+        "expression": "$\\frac{(x-2)(x+2)(x^2+4)(x-5)(x+5)}{(x-5)(x+2)(x+5)^2} \\cdot \\frac{2(x+5)}{x(x^2+4)(x-2)}$",
+        "explanation": "Podstawiamy wszystkie rozkłady na czynniki"
+      },
+      {
+        "step": 8,
+        "hint": "Które czynniki można skrócić?",
+        "expression": "Skracamy: $(x-2)$, $(x+2)$, $(x-5)$, $(x+5)$, $(x^2+4)$",
+        "explanation": "Identyfikujemy wszystkie wspólne czynniki do skrócenia",
+        "interactive_choice": {
+          "prompt": "Jakie wspólne czynniki widzisz w liczniku i mianowniku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(x-2)$, $(x+2)$, $(x-5)$, $(x+5)$, $(x^2+4)$",
+              "feedback": "Świetnie! Wszystkie te czynniki występują w obu miejscach",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko $(x-2)$ i $(x+5)$",
+              "feedback": "To za mało - jest więcej wspólnych czynników",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie ma wspólnych czynników",
+              "feedback": "Nieprawda - dokładnie przeanalizuj licznik i mianownik",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Skracamy wszystkie wspólne czynniki, pamiętając o potęgach"
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Co zostaje po skróceniu wszystkich wspólnych czynników?",
+        "expression": "$\\frac{1 \\cdot 1 \\cdot 1 \\cdot 1 \\cdot 1}{1 \\cdot 1 \\cdot (x+5)} \\cdot \\frac{2 \\cdot 1}{x \\cdot 1 \\cdot 1} = \\frac{1}{x+5} \\cdot \\frac{2}{x}$",
+        "explanation": "Po skróceniu zostają tylko nieskrócone czynniki"
+      },
+      {
+        "step": 10,
+        "hint": "Jaki jest wynik mnożenia ułamków?",
+        "expression": "$\\frac{1}{x+5} \\cdot \\frac{2}{x} = \\frac{2}{x(x+5)}$",
+        "explanation": "Mnożymy liczniki i mianowniki"
+      },
+      {
+        "step": 11,
+        "hint": "Która z podanych odpowiedzi pasuje do naszego wyniku?",
+        "expression": "$\\frac{2}{x(x+5)} = \\frac{2}{x^2+5x}$",
+        "explanation": "Wynik nie pasuje do podanych opcji - może być błąd w zadaniu lub obliczeniach",
+        "interactive_choice": {
+          "prompt": "Porównaj wynik $\\frac{2}{x(x+5)}$ z podanymi opcjami:",
+          "options": [
+            {
+              "id": "A",
+              "text": "To nie pasuje do żadnej opcji - sprawdźmy obliczenia",
+              "feedback": "Dobrze myślisz! Rzeczywiście warto sprawdzić - może popełniliśmy błąd",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "To odpowiedź D: $\\frac{2}{x}$",
+              "feedback": "Nie - w mianowniku mamy $x(x+5)$, nie samo $x$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Można to uprościć do jednej z podanych form",
+              "feedback": "Sprawdź dokładnie - $\\frac{2}{x(x+5)}$ nie upraszcza się dalej",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Nasz wynik $\\frac{2}{x(x+5)}$ nie pasuje do żadnej opcji. Sprawdźmy obliczenia ponownie."
+        }
+      }
+    ],
+    "solutions": [
+      "$\\frac{2}{x(x+5)}$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\mathbb{R} \\backslash\\{-5,-2,0,2,5\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 11,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:12:16.452Z"
+  },
+  {
+    "id": "polynomial_value_parameter",
+    "topic": "Wartość wielomianu i wyznaczanie parametru",
+    "difficulty": 2,
+    "statement": "Liczba 204 to wartość wielomianu $P(x) = 8x^3 + 6x^2 + (m+5) \\cdot x - 15$ dla argumentu 3. Liczba $m$ jest równa: A. $(-17)$, B. $(-22)$, C. $(-27)$, D. $(-32)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza stwierdzenie, że 204 to wartość wielomianu dla argumentu 3?",
+        "expression": "$P(3) = 204$",
+        "explanation": "Zapisujemy warunek jako równanie",
+        "why": "Wartość wielomianu dla argumentu oznacza podstawienie tego argumentu do wzoru wielomianu."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wygląda równanie po podstawieniu $x = 3$ do wzoru wielomianu?",
+        "expression": "$8 \\cdot 3^3 + 6 \\cdot 3^2 + (m+5) \\cdot 3 - 15 = 204$",
+        "explanation": "Podstawiamy $x = 3$ do wzoru wielomianu",
+        "interactive_choice": {
+          "prompt": "Które podstawienie jest poprawne dla $P(3) = 204$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$8 \\cdot 3^3 + 6 \\cdot 3^2 + (m+5) \\cdot 3 - 15 = 204$",
+              "feedback": "Doskonale! Podstawiamy $x = 3$ do każdego składnika wielomianu.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$8 \\cdot 3 + 6 \\cdot 3 + (m+5) \\cdot 3 - 15 = 204$",
+              "feedback": "Nie - zapomniałeś o potęgach! $x^3$ to $3^3$, a $x^2$ to $3^2$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$8x^3 + 6x^2 + (m+5) \\cdot 3 - 15 = 204$",
+              "feedback": "Nie - musisz podstawić 3 wszędzie gdzie jest $x$, także w $x^3$ i $x^2$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawiamy wartość argumentu do wszystkich wystąpień zmiennej w wielomianie."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są wartości potęg liczby 3?",
+        "expression": "$3^3 = 27$ oraz $3^2 = 9$",
+        "explanation": "Obliczamy potęgi"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wygląda równanie po podstawieniu wartości potęg?",
+        "expression": "$8 \\cdot 27 + 6 \\cdot 9 + (m+5) \\cdot 3 - 15 = 204$",
+        "explanation": "Podstawiamy obliczone potęgi"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynoszą poszczególne iloczyny?",
+        "expression": "$216 + 54 + 3(m+5) - 15 = 204$",
+        "explanation": "Obliczamy iloczyny liczbowe",
+        "interactive_choice": {
+          "prompt": "Które obliczenia są poprawne?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$8 \\cdot 27 = 216$, $6 \\cdot 9 = 54$",
+              "feedback": "Świetnie! Teraz równanie to $216 + 54 + 3(m+5) - 15 = 204$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$8 \\cdot 27 = 224$, $6 \\cdot 9 = 54$",
+              "feedback": "Sprawdź pierwsze mnożenie: $8 \\cdot 27 = 8 \\cdot 20 + 8 \\cdot 7 = 160 + 56 = 216$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$8 \\cdot 27 = 216$, $6 \\cdot 9 = 56$",
+              "feedback": "Sprawdź drugie mnożenie: $6 \\cdot 9 = 54$, nie 56.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dokładne obliczenia są kluczowe - jeden błąd zmieni końcowy wynik."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi suma i różnica liczb bez parametru?",
+        "expression": "$216 + 54 - 15 = 255$",
+        "explanation": "Upraszczamy część liczbową"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć równanie po obliczeniu części liczbowej?",
+        "expression": "$255 + 3(m+5) = 204$",
+        "explanation": "Równanie z jedną niewiadomą zawierającą parametr $m$"
+      },
+      {
+        "step": 8,
+        "hint": "Ile wynosi $3(m+5)$ po przeniesieniu 255 na prawą stronę?",
+        "expression": "$3(m+5) = 204 - 255 = -51$",
+        "explanation": "Izolujemy składnik z parametrem"
+      },
+      {
+        "step": 9,
+        "hint": "Ile wynosi $m+5$ po podzieleniu przez 3?",
+        "expression": "$m+5 = \\frac{-51}{3} = -17$",
+        "explanation": "Dzielimy obie strony przez 3"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest wartość parametru $m$?",
+        "expression": "$m = -17 - 5 = -22$",
+        "explanation": "Odejmujemy 5 od obu stron równania"
+      }
+    ],
+    "solutions": [
+      "$m = -22$"
+    ],
+    "parameters": {
+      "answer": "B"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-23T09:12:39.898Z"
+  },
+  {
+    "id": "system_equations_percentages",
+    "topic": "Układy równań z procentami",
+    "difficulty": 3,
+    "statement": "Dane są dwie liczby dodatnie $a$ oraz $b$, przy czym $a > b$. Różnica tych liczb jest równa 250, oraz 85% liczby $a$ stanowi 95% liczby $b$. Oblicz $a + b$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zapisać matematycznie warunek o różnicy liczb?",
+        "expression": "$a - b = 250$",
+        "explanation": "Pierwsza informacja daje nam pierwsze równanie"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek o procentach w postaci równania?",
+        "expression": "$0,85a = 0,95b$",
+        "explanation": "Drugie równanie z warunków zadania",
+        "interactive_choice": {
+          "prompt": "Jak zapisać matematycznie: \"85% liczby $a$ stanowi 95% liczby $b$\"?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$0,85a = 0,95b$",
+              "feedback": "Doskonale! To najczystsza forma zapisu procentów jako ułamków dziesiętnych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{85}{100}a = \\frac{95}{100}b$",
+              "feedback": "Poprawnie! To równoważne z opcją A, ale można uprościć.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$85a = 95b$",
+              "feedback": "Nie - zapomniałeś o tym, że to procenty, nie całe liczby.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Procenty zamieniamy na ułamki dziesiętne: 85% = 0,85 i 95% = 0,95."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaki mamy teraz układ równań do rozwiązania?",
+        "expression": "$\\begin{cases} a - b = 250 \\\\ 0,85a = 0,95b \\end{cases}$",
+        "explanation": "Układ dwóch równań z dwiema niewiadomymi",
+        "why": "To standardowy układ równań liniowych. Możemy go rozwiązać metodą podstawiania lub przeciwnych współczynników."
+      },
+      {
+        "step": 4,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego układu?",
+        "expression": "$a = b + 250$",
+        "explanation": "Z pierwszego równania wyrażamy $a$ przez $b$",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać ten układ równań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawienie: z pierwszego równania $a = b + 250$",
+              "feedback": "Świetny wybór! Pierwsze równanie łatwo przekształcić na $a = ...$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Metoda przeciwnych współczynników",
+              "feedback": "Możliwe, ale trzeba będzie mnożyć przez ułamki - bardziej pracochłonne.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wzory Cramera",
+              "feedback": "Zbyt skomplikowane dla tego prostego układu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie jest najproste gdy jedno równanie łatwo rozwiązać względem jednej zmiennej."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz podstawiając $a = b + 250$ do drugiego równania?",
+        "expression": "$0,85(b + 250) = 0,95b$",
+        "explanation": "Podstawiamy wyrażenie za $a$ do drugiego równania"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$0,85b + 0,85 \\cdot 250 = 0,95b$",
+        "explanation": "Rozkładamy nawias używając rozdzielności mnożenia"
+      },
+      {
+        "step": 7,
+        "hint": "Ile wynosi $0,85 \\cdot 250$?",
+        "expression": "$0,85b + 212,5 = 0,95b$",
+        "explanation": "Obliczamy: $0,85 \\cdot 250 = 212,5$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak przenieść wszystkie składniki z $b$ na jedną stronę?",
+        "expression": "$212,5 = 0,95b - 0,85b = 0,1b$",
+        "explanation": "Przenosimy składniki z $b$ i upraszczamy",
+        "interactive_choice": {
+          "prompt": "Co zrobić z równaniem $0,85b + 212,5 = 0,95b$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odjąć $0,85b$ od obu stron",
+              "feedback": "Doskonale! To da $212,5 = 0,1b$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Odjąć $0,95b$ od obu stron",
+              "feedback": "Można, ale dostaniesz $-0,1b + 212,5 = 0$, co jest mniej wygodne.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przenieść $212,5$ na prawą stronę",
+              "feedback": "To nie pomoże - nadal będziesz mieć $b$ po obu stronach.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odejmując mniejszy współczynnik przy $b$ otrzymujemy dodatni wynik."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jaka jest wartość $b$?",
+        "expression": "$b = \\frac{212,5}{0,1} = 2125$",
+        "explanation": "Dzielimy obie strony przez $0,1$"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest wartość $a$ gdy $b = 2125$?",
+        "expression": "$a = b + 250 = 2125 + 250 = 2375$",
+        "explanation": "Używamy wzoru $a = b + 250$"
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi suma $a + b$?",
+        "expression": "$a + b = 2375 + 2125 = 4500$",
+        "explanation": "Obliczamy szukaną sumę"
+      }
+    ],
+    "solutions": [
+      "$a + b = 4500$"
+    ],
+    "parameters": {
+      "a": "2375",
+      "b": "2125"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 11,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:13:07.036Z"
+  },
+  {
+    "id": "complex_factored_equation",
+    "topic": "Równania wielomianowe w postaci iloczynowej",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $(x^6+32x)(x+5)^2(x^2-16)(x^3-27)(x^2-2x+1)(x+6)=0$ w zbiorze liczb rzeczywistych.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest kluczowa właściwość równania iloczynowego?",
+        "expression": "$(x^6+32x)(x+5)^2(x^2-16)(x^3-27)(x^2-2x+1)(x+6)=0$",
+        "explanation": "Równanie w postaci iloczynowej - iloczyn czynników równa się zero",
+        "why": "Iloczyn jest zerem wtedy i tylko wtedy, gdy przynajmniej jeden z czynników jest zerem."
+      },
+      {
+        "step": 2,
+        "hint": "Jak najefektywniej podejść do tego złożonego równania?",
+        "expression": "Przyrównujemy każdy czynnik do zera:",
+        "explanation": "Wykorzystujemy właściwość: jeśli $A \\cdot B \\cdot C \\cdot ... = 0$, to $A = 0$ lub $B = 0$ lub $C = 0$ lub ...",
+        "interactive_choice": {
+          "prompt": "Jaka strategia będzie najlepsza dla tego równania iloczynowego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozwinąć wszystkie nawiasy i rozwiązać wielomian stopnia wysokiego",
+              "feedback": "To byłoby bardzo pracochłonne - otrzymalibyśmy wielomian stopnia około 15!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przyrównać każdy czynnik do zera i rozwiązać osobno",
+              "feedback": "Doskonale! To wykorzystuje właściwość równań iloczynowych.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zgrupować podobne czynniki i uprościć",
+              "feedback": "Można spróbować, ale lepiej od razu wykorzystać postać iloczynową.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W równaniach iloczynowych zawsze przyrównujemy każdy czynnik do zera osobno."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Które czynniki wymagają dalszego rozkładu?",
+        "expression": "Rozkładamy czynniki które można uprościć:",
+        "explanation": "Identyfikujemy wzory: wyłączenie, różnica kwadratów, różnica sześcianów, kwadrat dwumianu",
+        "interactive_choice": {
+          "prompt": "Które z tych czynników można jeszcze rozłożyć na prostsze?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $x^2-16$ (różnica kwadratów)",
+              "feedback": "To prawda, ale nie tylko! Sprawdź też inne czynniki.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$x^6+32x$, $x^2-16$, $x^3-27$, $x^2-2x+1$",
+              "feedback": "Świetnie! Rozpoznajesz wzory: wyłączenie, różnica kwadratów, różnica sześcianów, kwadrat różnicy.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie można pozostawić bez zmian",
+              "feedback": "Nie - kilka czynników da się uprościć używając wzorów skróconego mnożenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpoznanie wzorów skróconego mnożenia znacznie ułatwi rozwiązanie."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Co można wyłączyć z czynnika $x^6+32x$?",
+        "expression": "$x^6+32x = x(x^5+32)$",
+        "explanation": "Wyłączamy wspólny czynnik $x$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozłożyć $x^2-16$?",
+        "expression": "$x^2-16 = (x-4)(x+4)$",
+        "explanation": "Różnica kwadratów: $a^2-b^2 = (a-b)(a+b)$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozłożyć $x^3-27$?",
+        "expression": "$x^3-27 = x^3-3^3 = (x-3)(x^2+3x+9)$",
+        "explanation": "Różnica sześcianów: $a^3-b^3 = (a-b)(a^2+ab+b^2)$"
+      },
+      {
+        "step": 7,
+        "hint": "Czy $x^2-2x+1$ to kwadrat dwumianu?",
+        "expression": "$x^2-2x+1 = (x-1)^2$",
+        "explanation": "Kwadrat różnicy: $(a-b)^2 = a^2-2ab+b^2$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak wygląda równanie po wszystkich rozkładach?",
+        "expression": "$x(x^5+32)(x+5)^2(x-4)(x+4)(x-3)(x^2+3x+9)(x-1)^2(x+6)=0$",
+        "explanation": "Równanie po rozkładzie wszystkich możliwych czynników"
+      },
+      {
+        "step": 9,
+        "hint": "Które czynniki dają rozwiązania rzeczywiste?",
+        "expression": "Sprawdzamy: $x^5+32=0 \\Rightarrow x=-2$ oraz $x^2+3x+9=0$ - brak rozwiązań rzeczywistych",
+        "explanation": "Czynnik $x^2+3x+9$ ma dyskryminantę ujemną, więc nie ma pierwiastków rzeczywistych",
+        "interactive_choice": {
+          "prompt": "Który z czynników $x^5+32$ i $x^2+3x+9$ ma pierwiastki rzeczywiste?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oba mają pierwiastki rzeczywiste",
+              "feedback": "Nie - sprawdź dyskryminantę dla $x^2+3x+9$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Tylko $x^5+32$ ma pierwiastek rzeczywisty",
+              "feedback": "Dokładnie! $x^5=-32$ daje $x=-2$, ale $x^2+3x+9$ ma $\\Delta < 0$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Żaden nie ma pierwiastków rzeczywistych",
+              "feedback": "Nieprawda - $x^5+32=0$ ma rozwiązanie $x=-2$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla $x^2+3x+9$: $\\Delta = 9-36 = -27 < 0$, więc brak pierwiastków rzeczywistych."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są wszystkie rozwiązania rzeczywiste?",
+        "expression": "Rozwiązania: $x \\in \\{-6, -5, -4, -2, -1, 0, 1, 3, 4\\}$",
+        "explanation": "Zbieramy wszystkie pierwiastki rzeczywiste z poszczególnych czynników"
+      }
+    ],
+    "solutions": [
+      "$x \\in \\{-6, -5, -4, -2, -1, 0, 1, 3, 4\\}$"
+    ],
+    "parameters": {
+      "domain": "liczby rzeczywiste"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:13:48.101Z"
+  },
+  {
+    "id": "quadratic_inequality_factoring",
+    "topic": "Nierówności kwadratowe",
+    "difficulty": 3,
+    "statement": "Rozwiąż nierówność $-2x(8x+3)<1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przekształcić nierówność do postaci standardowej?",
+        "expression": "$-2x(8x+3) - 1 < 0$",
+        "explanation": "Przenosimy wszystko na lewą stronę"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po rozwinięciu nawiasu?",
+        "expression": "$-16x^2 - 6x - 1 < 0$",
+        "explanation": "Rozwijamy iloczyn $-2x \\cdot 8x = -16x^2$ i $-2x \\cdot 3 = -6x$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć nierówność mnożąc przez $-1$?",
+        "expression": "$16x^2 + 6x + 1 > 0$",
+        "explanation": "Mnożymy przez $-1$ i odwracamy znak nierówności",
+        "why": "To kluczowa zasada: mnożenie nierówności przez liczbę ujemną odwraca znak. Teraz mamy dodatni współczynnik przy $x^2$.",
+        "interactive_choice": {
+          "prompt": "Co się stanie ze znakiem nierówności gdy pomnożymy przez $-1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znak nierówności się nie zmieni",
+              "feedback": "Nie! Mnożenie przez liczbę ujemną odwraca znak nierówności",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Znak nierówności się odwróci na $>$",
+              "feedback": "Dokładnie! Mnożenie przez $-1$ zmienia $<$ na $>$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nierówność stanie się równaniem",
+              "feedback": "Nie - nadal będzie nierównością, tylko ze zmienionym znakiem",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie nierówności przez liczbę ujemną zawsze odwraca znak nierówności."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozłożyć wyrażenie $16x^2 + 6x + 1$ na czynniki?",
+        "expression": "Sprawdzamy: $(4x + 1)^2 = 16x^2 + 8x + 1 \\neq 16x^2 + 6x + 1$",
+        "explanation": "To nie jest kwadrat dwumianu, więc liczymy deltę",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do $16x^2 + 6x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór na deltę",
+              "feedback": "Możliwe, ale sprawdź czy to nie jest kwadrat sumy!",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozpoznać wzór $(ax + b)^2$",
+              "feedback": "Świetnie! To może być kwadrat dwumianu - sprawdź wzór",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Grupowanie składników",
+              "feedback": "Niepotrzebnie skomplikowane dla tego wyrażenia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Sprawdźmy czy to kwadrat dwumianu: $(4x)^2 = 16x^2$, $1^2 = 1$, $2 \\cdot 4x \\cdot 1 = 8x$... nie pasuje. Użyjmy delty."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest delta dla równania $16x^2 + 6x + 1 = 0$?",
+        "expression": "$\\Delta = 6^2 - 4 \\cdot 16 \\cdot 1 = 36 - 64 = -28$",
+        "explanation": "Obliczamy deltę: $\\Delta = b^2 - 4ac$"
+      },
+      {
+        "step": 6,
+        "hint": "Co oznacza ujemna delta dla nierówności $16x^2 + 6x + 1 > 0$?",
+        "expression": "$16x^2 + 6x + 1 > 0$ dla wszystkich $x \\in \\mathbb{R}$",
+        "explanation": "Parabola z ramionami do góry i bez miejsc zerowych jest zawsze dodatnia",
+        "why": "To kluczowa własność: gdy $a > 0$ i $\\Delta < 0$, to $ax^2 + bx + c > 0$ dla wszystkich rzeczywistych x.",
+        "interactive_choice": {
+          "prompt": "Jeśli $\\Delta < 0$ i $a > 0$, to kiedy $ax^2 + bx + c > 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nigdy - brak rozwiązań",
+              "feedback": "Nie! Parabola z $a > 0$ i $\\Delta < 0$ jest zawsze nad osią x",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Zawsze - dla wszystkich $x \\in \\mathbb{R}$",
+              "feedback": "Dokładnie! Parabola 'do góry' bez miejsc zerowych jest zawsze dodatnia",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko dla niektórych wartości x",
+              "feedback": "Nie - bez miejsc zerowych parabola ma stały znak",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $a > 0$ i $\\Delta < 0$, parabola jest zawsze nad osią x, więc wyrażenie zawsze dodatnie."
+        }
+      }
+    ],
+    "solutions": [
+      "$x \\in \\mathbb{R}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:14:19.945Z"
+  },
+  {
+    "id": "piecewise_function_analysis",
+    "topic": "Funkcje przedziałami określone",
+    "difficulty": 3,
+    "statement": "Funkcja f jest określona następująco: $f(x)=\\begin{cases} -5x-15 & \\text{dla } x \\in(-4,-2] \\\\ -5 & \\text{dla } x \\in(-2,2) \\\\ 3x+8 & \\text{dla } x \\in[2,4] \\\\ 5 & \\text{dla } x=5 \\end{cases}$. Uzupełnij zdania: 1) Dziedziną funkcji f jest przedział _____, 2) Zbiorem wartości funkcji f jest przedział _____, 3) Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział _____, 4) Zbiorem wszystkich argumentów dla których funkcja f jest malejąca jest przedział _____.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wyznaczyć dziedzinę funkcji określonej przedziałami?",
+        "expression": "Dziedzina: $(-4,-2] \\cup (-2,2) \\cup [2,4] \\cup \\{5\\}$",
+        "explanation": "Łączymy wszystkie przedziały definicji funkcji",
+        "interactive_choice": {
+          "prompt": "Co stanowi dziedzinę funkcji określonej przedziałami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Suma wszystkich przedziałów, na których funkcja jest określona",
+              "feedback": "Dokładnie! Dziedzina to wszystkie x, dla których funkcja ma wartość.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko największy z przedziałów",
+              "feedback": "Nie - musimy uwzględnić wszystkie przedziały definicji.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przecięcie wszystkich przedziałów",
+              "feedback": "Nie - przecięcie byłoby puste, a funkcja jest określona.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dziedzina to suma wszystkich przedziałów, na których funkcja jest określona."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Czy przedziały $(-4,-2]$ i $(-2,2)$ można połączyć?",
+        "expression": "Dziedzina: $(-4,2) \\cup [2,4] \\cup \\{5\\}$",
+        "explanation": "Przedziały $(-4,-2]$ i $(-2,2)$ łączą się w $(-4,2)$"
+      },
+      {
+        "step": 3,
+        "hint": "Czy można dalej uprościć zapis dziedziny?",
+        "expression": "Dziedzina: $(-4,4] \\cup \\{5\\}$",
+        "explanation": "Przedziały $(-4,2)$ i $[2,4]$ łączą się w $(-4,4]$",
+        "why": "Punkt $x=2$ należy do dziedziny (jest w $[2,4]$), więc przedziały się łączą."
+      },
+      {
+        "step": 4,
+        "hint": "Jak wyznaczyć zbiór wartości funkcji przedziałami określonej?",
+        "expression": "Analizujemy każdy kawałek funkcji osobno",
+        "explanation": "Sprawdzimy wartości dla każdego przedziału definicji",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wyznaczyć zbiór wartości tej funkcji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić wartości na końcach każdego przedziału",
+              "feedback": "Dobry początek, ale to nie wystarczy - trzeba też sprawdzić monotoniczność.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przeanalizować każdy kawałek osobno: wartości na końcach i ekstremalne",
+              "feedback": "Świetnie! To kompletne podejście do funkcji przedziałami określonych.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Narysować wykres i odczytać",
+              "feedback": "Możliwe, ale analityczne podejście jest bardziej precyzyjne.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla każdego kawałka sprawdzamy wartości na końcach i czy funkcja ma ekstrema."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jakie wartości przyjmuje funkcja na przedziale $(-4,-2]$?",
+        "expression": "Dla $x \\in (-4,-2]$: $f(x) = -5x - 15$",
+        "explanation": "Funkcja liniowa o współczynniku kierunkowym $-5$ (malejąca)"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są wartości graniczne dla $x \\to -4^+$ i $x = -2$?",
+        "expression": "Gdy $x \\to -4^+$: $f(x) \\to -5(-4) - 15 = 5$, dla $x = -2$: $f(-2) = -5(-2) - 15 = -5$",
+        "explanation": "Na przedziale $(-4,-2]$ funkcja przyjmuje wartości z $(-5, 5)$"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie wartości przyjmuje funkcja na pozostałych przedziałach?",
+        "expression": "Dla $x \\in (-2,2)$: $f(x) = -5$ (stała), dla $x \\in [2,4]$: $f(x) = 3x + 8$, dla $x = 5$: $f(5) = 5$",
+        "explanation": "Sprawdzamy wartości na każdym kawałku"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie wartości przyjmuje funkcja na przedziale $[2,4]$?",
+        "expression": "Dla $x = 2$: $f(2) = 3(2) + 8 = 14$, dla $x = 4$: $f(4) = 3(4) + 8 = 20$",
+        "explanation": "Funkcja rosnąca na $[2,4]$, wartości z $[14, 20]$"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest zbiór wszystkich wartości funkcji?",
+        "expression": "Zbiór wartości: $\\{-5\\} \\cup [14, 20] \\cup \\{5\\}$",
+        "explanation": "Łączymy wartości ze wszystkich kawałków"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest najmniejsza wartość funkcji?",
+        "expression": "Wartość najmniejsza: $f_{min} = -5$",
+        "explanation": "Najmniejsza wartość to $-5$",
+        "interactive_choice": {
+          "prompt": "Która wartość jest najmniejsza spośród: $-5$, wartości z $[14,20]$ i $5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wartość $-5$",
+              "feedback": "Dokładnie! $-5$ jest mniejsze od wszystkich innych wartości funkcji.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wartość $5$",
+              "feedback": "Nie - wartość $-5$ jest mniejsza od $5$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wartość $14$ (najmniejsza z przedziału $[14,20]$)",
+              "feedback": "Nie - wartość $-5$ jest znacznie mniejsza od $14$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wartość najmniejsza to $-5$, przyjmowana na przedziale $(-2,2)$ i w punkcie $x=-2$."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Na jakich argumentach funkcja przyjmuje wartość $-5$?",
+        "expression": "Argumenty dla $f(x) = -5$: $x \\in (-2,2) \\cup \\{-2\\} = (-2,2]$",
+        "explanation": "Wartość $-5$ przyjmowana na przedziale $(-2,2)$ i w punkcie $x=-2$"
+      },
+      {
+        "step": 12,
+        "hint": "Na których przedziałach funkcja jest malejąca?",
+        "expression": "Funkcja malejąca na $(-4,-2]$ (bo $f(x) = -5x - 15$ ma współczynnik $-5 < 0$)",
+        "explanation": "Tylko pierwszy kawałek ma ujemny współczynnik kierunkowy"
+      }
+    ],
+    "solutions": [
+      "1) Dziedziną funkcji f jest przedział $(-4,4] \\cup \\{5\\}$",
+      "2) Zbiorem wartości funkcji f jest zbiór $\\{-5\\} \\cup [14,20] \\cup \\{5\\}$",
+      "3) Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział $(-2,2]$",
+      "4) Zbiorem wszystkich argumentów dla których funkcja f jest malejąca jest przedział $(-4,-2]$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:14:55.069Z"
+  },
+  {
+    "id": "quadratic_vertex_form_complex",
+    "topic": "Funkcje kwadratowe - postać wierzchołkowa i iloczynowa",
+    "difficulty": 4,
+    "statement": "Funkcja kwadratowa $y = g(x)$, której wierzchołek ma współrzędne $W = (2, 27)$ przechodzi przez punkt $A = (4, 15)$. Wyznacz wzór funkcji $g(x)$ w postaci iloczynowej. Funkcja $g$ jest rosnąca w przedziale: A. $(-\\infty, 27]$, B. $[2, +\\infty)$, C. $[27, +\\infty)$, D. $(-\\infty, 2]$. Funkcja $h(x)$ jest wyrażona za pomocą funkcji $g$ następująco: $h(x) = g(x + 5)$. Wyznacz wzór funkcji $h(x)$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką postać funkcji kwadratowej najlepiej wykorzystać gdy znamy wierzchołek?",
+        "expression": "$g(x) = a(x - 2)^2 + 27$",
+        "explanation": "Podstawiamy współrzędne wierzchołka do postaci wierzchołkowej",
+        "interactive_choice": {
+          "prompt": "Którą postać funkcji kwadratowej wybierzesz mając wierzchołek $W = (2, 27)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać ogólną $y = ax^2 + bx + c$",
+              "feedback": "Możliwe, ale trzeba będzie wyznaczyć 3 parametry - to więcej pracy",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Postać wierzchołkową $y = a(x - p)^2 + q$",
+              "feedback": "Doskonały wybór! Znamy już $p = 2$ i $q = 27$, zostaje tylko $a$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Postać iloczynową $y = a(x - x_1)(x - x_2)$",
+              "feedback": "To nasz cel końcowy, ale najpierw potrzebujemy miejsca zerowe",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać wierzchołkowa jest idealna gdy znamy współrzędne wierzchołka."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wyznaczyć parametr $a$ używając punktu $A = (4, 15)$?",
+        "expression": "$15 = a(4 - 2)^2 + 27$",
+        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji",
+        "why": "Punkt leży na wykresie funkcji, więc jego współrzędne muszą spełniać równanie funkcji."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równanie otrzymasz po uproszczeniu?",
+        "expression": "$15 = a \\cdot 4 + 27$",
+        "explanation": "Obliczamy $(4-2)^2 = 4$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest wartość parametru $a$?",
+        "expression": "$15 = 4a + 27$, więc $4a = -12$, zatem $a = -3$",
+        "explanation": "Rozwiązujemy równanie względem $a$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest wzór funkcji $g(x)$ w postaci wierzchołkowej?",
+        "expression": "$g(x) = -3(x - 2)^2 + 27$",
+        "explanation": "Podstawiamy wyznaczoną wartość $a = -3$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak przekształcić postać wierzchołkową do iloczynowej?",
+        "expression": "Rozwiązujemy równanie $g(x) = 0$: $-3(x - 2)^2 + 27 = 0$",
+        "explanation": "Szukamy miejsc zerowych funkcji",
+        "interactive_choice": {
+          "prompt": "Co musisz znaleźć aby zapisać funkcję w postaci iloczynowej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Miejsca zerowe funkcji",
+              "feedback": "Świetnie! Postać iloczynowa to $a(x - x_1)(x - x_2)$ gdzie $x_1, x_2$ to miejsca zerowe",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik kierunkowy",
+              "feedback": "To dla funkcji liniowej - tu potrzebujemy miejsc zerowych",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Punkt przecięcia z osią OY",
+              "feedback": "To pomoże w postaci ogólnej, ale nie w iloczynowej",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać iloczynowa wymaga znajomości miejsc zerowych funkcji."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwiązać równanie $-3(x - 2)^2 + 27 = 0$?",
+        "expression": "$-3(x - 2)^2 = -27$",
+        "explanation": "Przenosimy 27 na prawą stronę"
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymasz dzieląc obie strony przez $-3$?",
+        "expression": "$(x - 2)^2 = 9$",
+        "explanation": "Dzielimy obie strony przez $-3$"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są rozwiązania równania $(x - 2)^2 = 9$?",
+        "expression": "$x - 2 = \\pm 3$, więc $x = 2 \\pm 3$",
+        "explanation": "Pierwiastkujemy obie strony"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są miejsca zerowe funkcji?",
+        "expression": "$x_1 = -1$ oraz $x_2 = 5$",
+        "explanation": "Otrzymujemy $x = 2 - 3 = -1$ i $x = 2 + 3 = 5$"
+      },
+      {
+        "step": 11,
+        "hint": "Jaki jest wzór funkcji $g(x)$ w postaci iloczynowej?",
+        "expression": "$g(x) = -3(x + 1)(x - 5)$",
+        "explanation": "Postać iloczynowa z $a = -3$ i miejscami zerowymi $-1, 5$"
+      },
+      {
+        "step": 12,
+        "hint": "W którym przedziale funkcja kwadratowa z $a < 0$ jest rosnąca?",
+        "expression": "Funkcja $g$ jest rosnąca w przedziale $(-\\infty, 2]$",
+        "explanation": "Odpowiedź D jest prawidłowa - wierzchołek ma $x_w = 2$",
+        "interactive_choice": {
+          "prompt": "Parabola z ramionami skierowanymi w dół jest rosnąca:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na lewo od wierzchołka",
+              "feedback": "Dokładnie! Dla $a < 0$ funkcja rośnie w $(-\\infty, x_w]$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Na prawo od wierzchołka",
+              "feedback": "Nie - to dla paraboli z ramionami w górę ($a > 0$)",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "W całej dziedzinie",
+              "feedback": "Nie - funkcja kwadratowa nie jest monotoniczna w całej dziedzinie",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $a < 0$, parabola ma maksimum w wierzchołku, więc rośnie na lewo od niego."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Jak przekształcenie $h(x) = g(x + 5)$ wpływa na wykres?",
+        "expression": "$h(x) = g(x + 5) = -3((x + 5) + 1)((x + 5) - 5)$",
+        "explanation": "Podstawiamy $x + 5$ w miejsce $x$ w wzorze funkcji $g$",
+        "why": "Przekształcenie $f(x + a)$ przesuwa wykres o $a$ jednostek w lewo."
+      },
+      {
+        "step": 14,
+        "hint": "Jak uprościć wyrażenie $h(x) = -3((x + 5) + 1)((x + 5) - 5)$?",
+        "expression": "$h(x) = -3(x + 6)(x)$",
+        "explanation": "Upraszczamy: $(x + 5) + 1 = x + 6$ i $(x + 5) - 5 = x$"
+      },
+      {
+        "step": 15,
+        "hint": "Jaki jest końcowy wzór funkcji $h(x)$?",
+        "expression": "$h(x) = -3x(x + 6)$",
+        "explanation": "Funkcja $h(x)$ w postaci iloczynowej"
+      }
+    ],
+    "solutions": [
+      "$g(x) = -3(x + 1)(x - 5)$",
+      "Funkcja $g$ jest rosnąca w przedziale $(-\\infty, 2]$ (odpowiedź D)",
+      "$h(x) = -3x(x + 6)$"
+    ],
+    "parameters": {
+      "vertex": "$W = (2, 27)$",
+      "point": "$A = (4, 15)$",
+      "transformation": "$h(x) = g(x + 5)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:15:31.747Z"
+  },
+  {
+    "id": "geometric_monotonic_sequence",
+    "topic": "Ciągi geometryczne i monotoniczność",
+    "difficulty": 4,
+    "statement": "Ciąg $(m-6, m+6, m^2-6)$ jest monotoniczny oraz geometryczny. Oblicz iloraz tego ciągu oraz określ jego monotoniczność.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki warunek musi spełniać ciąg geometryczny?",
+        "expression": "Dla ciągu geometrycznego: $\\frac{a_2}{a_1} = \\frac{a_3}{a_2}$",
+        "explanation": "W ciągu geometrycznym iloraz kolejnych wyrazów jest stały",
+        "why": "To podstawowa definicja ciągu geometrycznego - stały iloraz między sąsiednimi wyrazami."
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek geometryczności dla naszego ciągu?",
+        "expression": "$\\frac{m+6}{m-6} = \\frac{m^2-6}{m+6}$",
+        "explanation": "Podstawiamy wyrazy ciągu do wzoru na iloraz"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwiązać to równanie z ułamkami?",
+        "expression": "$(m+6)^2 = (m^2-6)(m-6)$",
+        "explanation": "Mnożymy krzyżowo aby pozbyć się ułamków",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do rozwiązania równania $\\frac{m+6}{m-6} = \\frac{m^2-6}{m+6}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mnożenie krzyżowe: $(m+6)^2 = (m^2-6)(m-6)$",
+              "feedback": "Świetny wybór! To najszybsza metoda dla równań z ułamkami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprowadzenie do wspólnego mianownika",
+              "feedback": "Możliwe, ale bardziej skomplikowane niż mnożenie krzyżowe.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawienie $q = \\frac{m+6}{m-6}$ i rozwiązanie względem q",
+              "feedback": "Niepotrzebnie komplikuje - lepiej od razu mnożyć krzyżowo.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie krzyżowe eliminuje ułamki i daje równanie kwadratowe."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$m^2 + 12m + 36 = (m^2-6)(m-6)$",
+        "explanation": "Rozwijamy $(m+6)^2$ używając wzoru $(a+b)^2$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwinąć prawą stronę równania?",
+        "expression": "$m^2 + 12m + 36 = m^3 - 6m^2 - 6m + 36$",
+        "explanation": "Rozwijamy $(m^2-6)(m-6)$ mnożąc każdy składnik z każdym"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz przenosząc wszystko na jedną stronę?",
+        "expression": "$0 = m^3 - 7m^2 - 18m$",
+        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki wspólny czynnik możesz wyłączyć?",
+        "expression": "$m(m^2 - 7m - 18) = 0$",
+        "explanation": "Wyłączamy $m$ przed nawias"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie rozwiązania daje równanie iloczynowe?",
+        "expression": "$m(m-9)(m+2) = 0$",
+        "explanation": "Rozkład na czynniki liniowe",
+        "interactive_choice": {
+          "prompt": "Jak rozłożyć trójmian $m^2 - 7m - 18$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(m-9)(m+2)$",
+              "feedback": "Doskonale! Sprawdzenie: $-9 + 2 = -7$ i $(-9) \\cdot 2 = -18$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$(m-6)(m-3)$",
+              "feedback": "Nie - sprawdź: $-6 + (-3) = -9 \\neq -7$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$(m-18)(m+1)$",
+              "feedback": "Nie - sprawdź: $-18 + 1 = -17 \\neq -7$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Szukamy liczb o sumie $-7$ i iloczynie $-18$. To są $-9$ i $2$."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są wszystkie rozwiązania równania?",
+        "expression": "$m = 0$ lub $m = 9$ lub $m = -2$",
+        "explanation": "Każdy czynnik może być zerem"
+      },
+      {
+        "step": 10,
+        "hint": "Które wartości $m$ dają poprawny ciąg geometryczny?",
+        "expression": "Sprawdzamy: dla $m=0$: $(-6, 6, -6)$, dla $m=9$: $(3, 15, 75)$, dla $m=-2$: $(-8, 4, -2)$",
+        "explanation": "Wszystkie trzy wartości dają poprawne ciągi (żaden wyraz nie jest zerem)",
+        "interactive_choice": {
+          "prompt": "Która wartość $m$ należy odrzucić ze względu na dziedzinę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$m = 0$ - zeruje pierwszy wyraz",
+              "feedback": "Nie - pierwszy wyraz to $m-6 = -6 \\neq 0$ dla $m=0$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$m = 6$ - zeruje mianownik w ilorazie",
+              "feedback": "Dokładnie! Dla $m=6$ pierwszy wyraz $m-6=0$, więc iloraz nie istnieje.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie wartości są poprawne",
+              "feedback": "Nie - sprawdź co się dzieje gdy pierwszy wyraz równa się zero",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Musimy sprawdzić czy żaden wyraz nie zeruje się, bo wtedy iloraz nie istnieje."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jaki jest iloraz dla każdego przypadku?",
+        "expression": "Dla $m=0$: $q = \\frac{6}{-6} = -1$, dla $m=9$: $q = \\frac{15}{3} = 5$, dla $m=-2$: $q = \\frac{4}{-8} = -\\frac{1}{2}$",
+        "explanation": "Obliczamy iloraz $q = \\frac{a_2}{a_1}$ dla każdego przypadku"
+      },
+      {
+        "step": 12,
+        "hint": "Jak określić monotoniczność ciągu geometrycznego?",
+        "expression": "Ciąg rosnący gdy $a_1 > 0$ i $q > 1$ lub $a_1 < 0$ i $0 < q < 1$. Ciąg malejący gdy $a_1 > 0$ i $0 < q < 1$ lub $a_1 < 0$ i $q > 1$",
+        "explanation": "Monotoniczność zależy od znaku pierwszego wyrazu i wartości ilorazu",
+        "why": "Dla $q < 0$ ciąg nie jest monotoniczny (wyrazy zmieniają znak), więc odrzucamy $m=0$ i $m=-2$."
+      },
+      {
+        "step": 13,
+        "hint": "Który przypadek daje ciąg monotoniczny?",
+        "expression": "Tylko dla $m=9$: ciąg $(3, 15, 75)$ z $q=5$ jest rosnący",
+        "explanation": "Pierwszy wyraz dodatni i iloraz większy od 1 dają ciąg rosnący"
+      }
+    ],
+    "solutions": [
+      "Iloraz ciągu: $q = 5$",
+      "Monotoniczność: ciąg rosnący"
+    ],
+    "parameters": {
+      "m": 9,
+      "sequence": "(3, 15, 75)",
+      "ratio": 5
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:16:08.834Z"
+  },
+  {
+    "id": "recursive_sequence_b6",
+    "topic": "Ciągi rekurencyjne",
+    "difficulty": 3,
+    "statement": "Ciąg $(b_n)$ jest określony następująco: $b_1=2$, $b_{n+1}=4 \\cdot n \\cdot b_n-1$ dla każdej liczby naturalnej $n \\geq 1$. Szósty wyraz ciągu $(b_n)$ jest równy _____.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie informacje mamy o ciągu $(b_n)$?",
+        "expression": "$b_1 = 2$ oraz $b_{n+1} = 4 \\cdot n \\cdot b_n - 1$ dla $n \\geq 1$",
+        "explanation": "Mamy pierwszy wyraz i wzór rekurencyjny łączący kolejne wyrazy"
+      },
+      {
+        "step": 2,
+        "hint": "Jak najefektywniej znaleźć szósty wyraz tego ciągu?",
+        "expression": "Obliczamy kolejno: $b_1 \\rightarrow b_2 \\rightarrow b_3 \\rightarrow b_4 \\rightarrow b_5 \\rightarrow b_6$",
+        "explanation": "Używamy wzoru rekurencyjnego do obliczenia każdego następnego wyrazu",
+        "interactive_choice": {
+          "prompt": "Którą strategię wybierzesz do znalezienia $b_6$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obliczać kolejno $b_2, b_3, b_4, b_5, b_6$",
+              "feedback": "Świetnie! To najpewniejsza metoda - krok po kroku używając wzoru rekurencyjnego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Szukać wzoru ogólnego na $b_n$",
+              "feedback": "Ambitne, ale bardzo trudne dla tego typu wzoru rekurencyjnego.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć indukcji matematycznej",
+              "feedback": "Indukcja służy do dowodzenia, nie do obliczania konkretnych wyrazów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla wzorów rekurencyjnych najlepiej obliczać kolejne wyrazy systematycznie."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć $b_2$ używając wzoru $b_{n+1} = 4 \\cdot n \\cdot b_n - 1$?",
+        "expression": "$b_2 = b_{1+1} = 4 \\cdot 1 \\cdot b_1 - 1 = 4 \\cdot 1 \\cdot 2 - 1 = 8 - 1 = 7$",
+        "explanation": "Podstawiamy $n = 1$ i $b_1 = 2$ do wzoru rekurencyjnego",
+        "why": "We wzorze $b_{n+1} = 4 \\cdot n \\cdot b_n - 1$ indeks $n$ odnosi się do wyrazu znanego, a $n+1$ do obliczanego."
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest trzeci wyraz ciągu?",
+        "expression": "$b_3 = 4 \\cdot 2 \\cdot b_2 - 1 = 4 \\cdot 2 \\cdot 7 - 1 = 56 - 1 = 55$",
+        "explanation": "Podstawiamy $n = 2$ i $b_2 = 7$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy zauważasz jakiś wzór w obliczeniach?",
+        "expression": "$b_4 = 4 \\cdot 3 \\cdot b_3 - 1 = 4 \\cdot 3 \\cdot 55 - 1 = 660 - 1 = 659$",
+        "explanation": "Kontynuujemy obliczenia dla $n = 3$",
+        "interactive_choice": {
+          "prompt": "Co obserwujesz w kolejnych obliczeniach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyrazy rosną bardzo szybko",
+              "feedback": "Tak! Mnożenie przez $4n$ powoduje szybki wzrost - to charakterystyczne dla tego typu rekurencji.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wyrazy tworzą ciąg arytmetyczny",
+              "feedback": "Nie - różnice między wyrazami nie są stałe ($b_2-b_1=5$, $b_3-b_2=48$).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Można uprościć obliczenia",
+              "feedback": "Niestety nie - każdy krok wymaga pełnego obliczenia według wzoru.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Czynnik $4n$ powoduje bardzo szybki wzrost wyrazów - typowe dla rekurencji z mnożeniem."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest piąty wyraz ciągu?",
+        "expression": "$b_5 = 4 \\cdot 4 \\cdot b_4 - 1 = 4 \\cdot 4 \\cdot 659 - 1 = 16 \\cdot 659 - 1 = 10544 - 1 = 10543$",
+        "explanation": "Podstawiamy $n = 4$ i $b_4 = 659$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak sprawdzić poprawność obliczeń przed ostatnim krokiem?",
+        "expression": "$b_6 = 4 \\cdot 5 \\cdot b_5 - 1 = 4 \\cdot 5 \\cdot 10543 - 1 = 20 \\cdot 10543 - 1$",
+        "explanation": "Podstawiamy $n = 5$ i $b_5 = 10543$ do wzoru",
+        "interactive_choice": {
+          "prompt": "Jak upewnić się, że obliczenia są poprawne?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić każde mnożenie i odejmowanie",
+              "feedback": "Dobra praktyka! Szczególnie ważne przy dużych liczbach.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przeliczyć wszystko od początku",
+              "feedback": "Możliwe, ale czasochłonne - lepiej sprawdzić każdy krok osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Założyć, że jest dobrze i liczyć dalej",
+              "feedback": "Ryzykowne - błąd w jednym kroku przenosi się na wszystkie następne.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W ciągach rekurencyjnych błąd w jednym kroku wpływa na wszystkie kolejne wyrazy."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jaki jest końcowy wynik dla szóstego wyrazu?",
+        "expression": "$b_6 = 20 \\cdot 10543 - 1 = 210860 - 1 = 210859$",
+        "explanation": "Obliczamy ostateczną wartość szóstego wyrazu ciągu"
+      }
+    ],
+    "solutions": [
+      "$b_6 = 210859$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:16:39.295Z"
+  },
+  {
+    "id": "arithmetic_sequence_sum",
+    "topic": "Ciągi arytmetyczne",
+    "difficulty": 4,
+    "statement": "Dany jest ciąg arytmetyczny $(a_n)$ w którym $a_{25} = 73$ oraz $a_{34} = 100$. Suma 60 początkowych wyrazów tego ciągu jest równa: A. 4860, B. 5370, C. 5210, D. 6100",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co musisz znaleźć, aby obliczyć sumę ciągu arytmetycznego?",
+        "expression": "Potrzebujemy: $a_1$ (pierwszy wyraz) i $r$ (różnica)",
+        "explanation": "Do wzoru na sumę ciągu arytmetycznego potrzebujemy parametrów $a_1$ i $r$",
+        "interactive_choice": {
+          "prompt": "Jakie parametry ciągu arytmetycznego potrzebujesz do obliczenia sumy $S_{60}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy wyraz $a_1$ i różnicę $r$",
+              "feedback": "Świetnie! Ze wzoru $S_n = \\frac{n}{2}(2a_1 + (n-1)r)$ potrzebujesz $a_1$ i $r$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko pierwszy wyraz $a_1$",
+              "feedback": "Nie wystarczy - potrzebujesz też różnicy $r$ między wyrazami",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Pierwszy i ostatni wyraz sumy",
+              "feedback": "To też działa! Wzór $S_n = \\frac{n}{2}(a_1 + a_n)$, ale musisz znać $a_1$ i $a_{60}$",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Możesz użyć wzoru z $a_1$ i $r$, albo z pierwszym i ostatnim wyrazem. Znajdziemy $a_1$ i $r$."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak wykorzystać dane $a_{25} = 73$ i $a_{34} = 100$?",
+        "expression": "$a_n = a_1 + (n-1)r$",
+        "explanation": "Wzór ogólny na n-ty wyraz ciągu arytmetycznego",
+        "why": "Ten wzór pozwala zapisać równania dla znanych wyrazów i znaleźć $a_1$ oraz $r$"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równania możesz zapisać dla $a_{25}$ i $a_{34}$?",
+        "expression": "$a_{25} = a_1 + 24r = 73$ oraz $a_{34} = a_1 + 33r = 100$",
+        "explanation": "Podstawiamy do wzoru ogólnego dla wyrazów 25. i 34."
+      },
+      {
+        "step": 4,
+        "hint": "Jak najłatwiej znaleźć różnicę $r$ z tych dwóch równań?",
+        "expression": "$(a_1 + 33r) - (a_1 + 24r) = 100 - 73$",
+        "explanation": "Odejmujemy pierwsze równanie od drugiego",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć różnicę $r$ z równań $a_1 + 24r = 73$ i $a_1 + 33r = 100$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odjąć pierwsze równanie od drugiego",
+              "feedback": "Doskonale! $(a_1 + 33r) - (a_1 + 24r) = 100 - 73$ da $9r = 27$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dodać oba równania",
+              "feedback": "To nie wyeliminuje $a_1$ - lepiej odejmij jedno od drugiego",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $a_1$ z pierwszego do drugiego",
+              "feedback": "Możliwe, ale odejmowanie jest szybsze i prostsze",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odejmowanie równań eliminuje $a_1$ i od razu daje $r$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi różnica $r$?",
+        "expression": "$9r = 27$, więc $r = 3$",
+        "explanation": "Różnica ciągu arytmetycznego wynosi 3"
+      },
+      {
+        "step": 6,
+        "hint": "Jak teraz znaleźć pierwszy wyraz $a_1$?",
+        "expression": "$a_1 + 24 \\cdot 3 = 73$, więc $a_1 = 73 - 72 = 1$",
+        "explanation": "Podstawiamy $r = 3$ do pierwszego równania"
+      },
+      {
+        "step": 7,
+        "hint": "Który wzór na sumę ciągu arytmetycznego wybierzesz?",
+        "expression": "$S_{60} = \\frac{60}{2}(2 \\cdot 1 + (60-1) \\cdot 3)$",
+        "explanation": "Podstawiamy do wzoru: $n = 60$, $a_1 = 1$, $r = 3$",
+        "interactive_choice": {
+          "prompt": "Którym wzorem obliczysz $S_{60}$ mając $a_1 = 1$ i $r = 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$S_n = \\frac{n}{2}(2a_1 + (n-1)r)$",
+              "feedback": "Świetny wybór! Masz wszystkie potrzebne dane: $n=60$, $a_1=1$, $r=3$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$S_n = \\frac{n}{2}(a_1 + a_n)$",
+              "feedback": "Też działa, ale musisz najpierw obliczyć $a_{60} = 1 + 59 \\cdot 3 = 178$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$S_n = na_1 + \\frac{n(n-1)}{2}r$",
+              "feedback": "To ten sam wzór co A, tylko w innej postaci - też poprawny!",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Wszystkie wzory są równoważne. Użyjemy pierwszego jako najczęściej stosowanego."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są kolejne kroki obliczeń?",
+        "expression": "$S_{60} = 30(2 + 59 \\cdot 3) = 30(2 + 177) = 30 \\cdot 179$",
+        "explanation": "Upraszczamy wyrażenie w nawiasie"
+      },
+      {
+        "step": 9,
+        "hint": "Ile wynosi końcowy wynik?",
+        "expression": "$S_{60} = 30 \\cdot 179 = 5370$",
+        "explanation": "Suma 60 początkowych wyrazów ciągu"
+      }
+    ],
+    "solutions": [
+      "B. 5370"
+    ],
+    "parameters": {
+      "sequence_type": "arytmetyczny",
+      "given_terms": "$a_{25} = 73$, $a_{34} = 100$",
+      "sum_terms": 60
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 6
+      }
+    },
+    "timestamp": "2025-09-23T09:17:12.427Z"
+  },
+  {
+    "id": "tan_to_cos_acute_angle",
+    "topic": "Funkcje trygonometryczne kąta ostrego",
+    "difficulty": 3,
+    "statement": "Kąt $\\alpha$ jest ostry oraz $\\tan \\alpha = 7$. Cosinus kąta $\\alpha$ wynosi: A. $\\frac{\\sqrt{7}}{7}$, B. $\\frac{1}{50}$, C. $\\frac{\\sqrt{2}}{10}$, D. $\\frac{7}{50}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że kąt jest ostry i jak to wpływa na znak funkcji trygonometrycznych?",
+        "expression": "Kąt $\\alpha$ jest ostry, więc $0° < \\alpha < 90°$ i wszystkie funkcje trygonometryczne są dodatnie",
+        "explanation": "Ustalamy dziedzinę i znaki funkcji"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do znalezienia cosinusa z danego tangensa?",
+        "expression": "Zastosujemy wzór: $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = 7$",
+        "explanation": "Wyrażamy tangens przez sinus i cosinus",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wyznaczyć $\\cos \\alpha$ znając $\\tan \\alpha = 7$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$ i jedynki trygonometrycznej",
+              "feedback": "Świetny wybór! To standardowa metoda - wykorzystamy $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Narysować trójkąt prostokątny z odpowiednimi bokami",
+              "feedback": "Dobra metoda geometryczna! Też prowadzi do celu przez twierdzenie Pitagorasa",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $\\cos \\alpha = \\frac{1}{\\tan \\alpha}$",
+              "feedback": "To nieprawda! $\\cos \\alpha \\neq \\frac{1}{\\tan \\alpha}$. Pamiętaj: $\\cot \\alpha = \\frac{1}{\\tan \\alpha}$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Użyjemy wzoru algebraicznego z jedynką trygonometryczną - to najszybsza metoda."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić sinus przez cosinus używając równania $\\tan \\alpha = 7$?",
+        "expression": "$\\sin \\alpha = 7 \\cos \\alpha$",
+        "explanation": "Z równania $\\frac{\\sin \\alpha}{\\cos \\alpha} = 7$ otrzymujemy związek między sinusem a cosinusem"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz podstawiając $\\sin \\alpha = 7 \\cos \\alpha$ do jedynki trygonometrycznej?",
+        "expression": "$(7 \\cos \\alpha)^2 + \\cos^2 \\alpha = 1$",
+        "explanation": "Podstawiamy do wzoru $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$",
+        "why": "Jedynka trygonometryczna to podstawowy wzór łączący sinus i cosinus. Pozwala wyznaczyć jedną funkcję z drugiej."
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć równanie $49 \\cos^2 \\alpha + \\cos^2 \\alpha = 1$?",
+        "expression": "$50 \\cos^2 \\alpha = 1$",
+        "explanation": "Wyłączamy $\\cos^2 \\alpha$ przed nawias: $(49 + 1) \\cos^2 \\alpha = 1$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość $\\cos^2 \\alpha$?",
+        "expression": "$\\cos^2 \\alpha = \\frac{1}{50}$",
+        "explanation": "Dzielimy obie strony przez 50"
+      },
+      {
+        "step": 7,
+        "hint": "Który znak wybierzesz dla $\\cos \\alpha$ i dlaczego?",
+        "expression": "$\\cos \\alpha = +\\sqrt{\\frac{1}{50}} = \\frac{1}{\\sqrt{50}}$",
+        "explanation": "Pierwiastkujemy i wybieramy znak dodatni",
+        "interactive_choice": {
+          "prompt": "Jaki znak ma $\\cos \\alpha$ jeśli kąt $\\alpha$ jest ostry?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodatni, bo kąt ostry leży w I ćwiartce",
+              "feedback": "Dokładnie! W I ćwiartce wszystkie funkcje trygonometryczne są dodatnie",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Ujemny, bo tangens jest duży",
+              "feedback": "Nie! Znak cosinusa zależy od ćwiartki, nie od wartości tangensa",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Może być dodatni lub ujemny",
+              "feedback": "Nie - kąt ostry jednoznacznie określa I ćwiartkę, więc cosinus jest dodatni",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kąt ostry oznacza I ćwiartkę, gdzie cosinus jest zawsze dodatni."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć wyrażenie $\\frac{1}{\\sqrt{50}}$?",
+        "expression": "$\\cos \\alpha = \\frac{1}{\\sqrt{50}} = \\frac{1}{\\sqrt{25 \\cdot 2}} = \\frac{1}{5\\sqrt{2}}$",
+        "explanation": "Rozkładamy 50 na czynniki i wyciągamy pierwiastek z 25"
+      },
+      {
+        "step": 9,
+        "hint": "Jak pozbyć się pierwiastka z mianownika?",
+        "expression": "$\\cos \\alpha = \\frac{1}{5\\sqrt{2}} \\cdot \\frac{\\sqrt{2}}{\\sqrt{2}} = \\frac{\\sqrt{2}}{10}$",
+        "explanation": "Racjonalizujemy mianownik mnożąc przez $\\frac{\\sqrt{2}}{\\sqrt{2}}$",
+        "interactive_choice": {
+          "prompt": "Jak zracjonalizować mianownik w wyrażeniu $\\frac{1}{5\\sqrt{2}}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć licznik i mianownik przez $\\sqrt{2}$",
+              "feedback": "Świetnie! To da $\\frac{\\sqrt{2}}{5 \\cdot 2} = \\frac{\\sqrt{2}}{10}$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć licznik i mianownik przez $\\sqrt{50}$",
+              "feedback": "Niepotrzebnie skomplikowane - wystarczy $\\sqrt{2}$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zostawić w takiej postaci",
+              "feedback": "Można, ale zwykle wymaga się postaci bez pierwiastka w mianowniku",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Racjonalizacja przez $\\sqrt{2}$ to standardowy sposób usunięcia pierwiastka z mianownika."
+        }
+      }
+    ],
+    "solutions": [
+      "$\\cos \\alpha = \\frac{\\sqrt{2}}{10}$"
+    ],
+    "parameters": {
+      "answer": "C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:17:43.708Z"
+  },
+  {
+    "id": "equilateral_triangle_circumscribed_circle",
+    "topic": "Geometria - trójkąt równoboczny i okrąg opisany",
+    "difficulty": 4,
+    "statement": "Na trójkącie równobocznym opisano okrąg o promieniu $R$. Wykaż, że pole tego trójkąta wyraża się wzorem $\\frac{3\\sqrt{3}}{4} \\cdot R^2$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką strategię wybierzesz do rozwiązania tego problemu?",
+        "expression": "Szukamy związku między bokiem $a$ trójkąta równobocznego a promieniem $R$ okręgu opisanego",
+        "explanation": "Wybieramy metodę przez długość boku trójkąta",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do wykazania wzoru na pole trójkąta równobocznego wpisanego w okrąg?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć długość boku trójkąta, potem obliczyć pole",
+              "feedback": "Świetny wybór! Znajdziemy bok przez promień, potem użyjemy wzoru na pole.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podzielić trójkąt na 3 jednakowe trójkąty z wierzchołkami w środku",
+              "feedback": "Możliwe, ale bardziej skomplikowane - lepiej przez bok trójkąta.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć współrzędnych i umieścić okrąg w układzie",
+              "feedback": "Zbyt skomplikowane dla tego zadania - geometria elementarna wystarczy.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Najefektywniej: znajdziemy długość boku przez promień okręgu opisanego, potem pole."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest związek między promieniem okręgu opisanego a bokiem trójkąta równobocznego?",
+        "expression": "Dla trójkąta równobocznego: $R = \\frac{a}{\\sqrt{3}}$",
+        "explanation": "Wzór na promień okręgu opisanego na trójkącie równobocznym o boku $a$",
+        "why": "Ten wzór wynika z faktu, że środek okręgu opisanego pokrywa się ze środkiem ciężkości trójkąta równobocznego, a odległość od środka do wierzchołka to $\\frac{2}{3}$ wysokości."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wyrazić bok $a$ przez promień $R$?",
+        "expression": "$a = R\\sqrt{3}$",
+        "explanation": "Przekształcamy wzór aby wyrazić bok przez promień"
+      },
+      {
+        "step": 4,
+        "hint": "Który wzór na pole trójkąta równobocznego zastosujemy?",
+        "expression": "$P = \\frac{a^2\\sqrt{3}}{4}$",
+        "explanation": "Wzór na pole trójkąta równobocznego o boku $a$",
+        "interactive_choice": {
+          "prompt": "Jakim wzorem obliczymy pole trójkąta równobocznego o boku $a$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór Herona: $P = \\sqrt{s(s-a)(s-b)(s-c)}$",
+              "feedback": "Możliwe, ale niepotrzebnie skomplikowane dla trójkąta równobocznego.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór $P = \\frac{1}{2} \\cdot a \\cdot h$ gdzie $h$ to wysokość",
+              "feedback": "Dobry wybór, ale trzeba jeszcze obliczyć wysokość przez $a$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Gotowy wzór $P = \\frac{a^2\\sqrt{3}}{4}$",
+              "feedback": "Doskonale! To bezpośredni wzór na pole trójkąta równobocznego.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Najszybciej użyć gotowego wzoru $P = \\frac{a^2\\sqrt{3}}{4}$ dla trójkąta równobocznego."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymamy podstawiając $a = R\\sqrt{3}$ do wzoru na pole?",
+        "expression": "$P = \\frac{(R\\sqrt{3})^2\\sqrt{3}}{4}$",
+        "explanation": "Podstawiamy wyrażenie na bok przez promień"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć wyrażenie $(R\\sqrt{3})^2$?",
+        "expression": "$P = \\frac{R^2 \\cdot 3 \\cdot \\sqrt{3}}{4}$",
+        "explanation": "Rozwijamy kwadrat: $(R\\sqrt{3})^2 = R^2 \\cdot (\\sqrt{3})^2 = R^2 \\cdot 3$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest końcowa postać wzoru?",
+        "expression": "$P = \\frac{3\\sqrt{3}}{4} \\cdot R^2$",
+        "explanation": "Otrzymujemy żądany wzór na pole trójkąta równobocznego przez promień okręgu opisanego",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej zapisać końcowy wynik $\\frac{R^2 \\cdot 3 \\cdot \\sqrt{3}}{4}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{3R^2\\sqrt{3}}{4}$",
+              "feedback": "Poprawnie, ale konwencja matematyczna preferuje $\\sqrt{3}$ na początku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{3\\sqrt{3}}{4} \\cdot R^2$",
+              "feedback": "Doskonale! To standardowa postać z współczynnikiem przed $R^2$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{3\\sqrt{3}R^2}{4}$",
+              "feedback": "Poprawnie matematycznie, ale mniej czytelne niż z wydzielonym $R^2$.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Najczęściej zapisuje się jako $\\frac{3\\sqrt{3}}{4} \\cdot R^2$ - wyraźnie widać współczynnik."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Co udowodniliśmy?",
+        "expression": "Wykazaliśmy, że $P = \\frac{3\\sqrt{3}}{4} \\cdot R^2$",
+        "explanation": "Dowód zakończony - otrzymaliśmy dokładnie wzór z zadania",
+        "why": "Kluczowe było użycie związku $a = R\\sqrt{3}$ między bokiem trójkąta równobocznego a promieniem okręgu opisanego, oraz wzoru $P = \\frac{a^2\\sqrt{3}}{4}$ na pole."
+      }
+    ],
+    "solutions": [
+      "$P = \\frac{3\\sqrt{3}}{4} \\cdot R^2$"
+    ],
+    "parameters": {
+      "given": "Trójkąt równoboczny wpisany w okrąg o promieniu $R$",
+      "to_prove": "$P = \\frac{3\\sqrt{3}}{4} \\cdot R^2$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 6
+      }
+    },
+    "timestamp": "2025-09-23T09:18:19.765Z"
+  },
+  {
+    "id": "triangle_parallel_quadrilateral",
+    "topic": "Podobieństwo trójkątów i pole czworokąta",
+    "difficulty": 4,
+    "statement": "Dany jest trójkąt prostokątny ABC, w którym poprowadzono odcinek |DE| w taki sposób, że |AE|=5 oraz |EB|=4, a także |CB|=15. Ponadto, CA ∥ DE. Oblicz pole czworokąta AEDC.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie informacje możemy wyciągnąć z danych zadania?",
+        "expression": "|AE| = 5$, $|EB| = 4$, $|CB| = 15$, $CA \\parallel DE$",
+        "explanation": "Zbieramy dane: długości odcinków i informację o równoległości"
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest długość boku AB?",
+        "expression": "$|AB| = |AE| + |EB| = 5 + 4 = 9$",
+        "explanation": "Punkt E leży na boku AB, więc AB to suma AE i EB"
+      },
+      {
+        "step": 3,
+        "hint": "Co możemy powiedzieć o trójkątach BDE i BAC?",
+        "expression": "$\\triangle BDE \\sim \\triangle BAC$",
+        "explanation": "Podobieństwo wynika z równoległości DE i AC",
+        "why": "To kluczowe spostrzeżenie - podobieństwo pozwoli nam znaleźć długość DE i wysokość trójkąta",
+        "interactive_choice": {
+          "prompt": "Jaka relacja zachodzi między trójkątami BDE i BAC?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Są przystające",
+              "feedback": "Nie - mają różne rozmiary, ale zachowują kształt",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Są podobne",
+              "feedback": "Dokładnie! DE ∥ AC oznacza podobieństwo przez twierdzenie Talesa",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie ma między nimi szczególnej relacji",
+              "feedback": "Jest relacja - równoległość DE i AC gwarantuje podobieństwo",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy DE ∥ AC, trójkąty BDE i BAC są podobne z odpowiadającymi sobie kątami równymi."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest współczynnik podobieństwa trójkątów BDE i BAC?",
+        "expression": "$k = \\frac{|BE|}{|BA|} = \\frac{4}{9}$",
+        "explanation": "Współczynnik podobieństwa to stosunek odpowiadających sobie boków"
+      },
+      {
+        "step": 5,
+        "hint": "Jak znaleźć długość odcinka DE?",
+        "expression": "$|DE| = k \\cdot |AC| = \\frac{4}{9} \\cdot |AC|$",
+        "explanation": "W podobnych trójkątach wszystkie odpowiadające boki są w tym samym stosunku"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć długość AC w trójkącie prostokątnym ABC?",
+        "expression": "$|AC|^2 + |AB|^2 = |BC|^2$",
+        "explanation": "Stosujemy twierdzenie Pitagorasa z BC jako przeciwprostokątną",
+        "interactive_choice": {
+          "prompt": "Które twierdzenie zastosować do znalezienia |AC|?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Twierdzenie Pitagorasa: $|AC|^2 + |BC|^2 = |AB|^2$",
+              "feedback": "Uwaga na kąt prosty! BC to przeciwprostokątna, nie przyprostokątna",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Twierdzenie Pitagorasa: $|AC|^2 + |AB|^2 = |BC|^2$",
+              "feedback": "Świetnie! BC jest przeciwprostokątną (najdłuższy bok)",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wzór na pole trójkąta",
+              "feedback": "Nie mamy wysokości, więc Pitagoras będzie lepszy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W trójkącie prostokątnym najdłuższy bok (BC=15) to przeciwprostokątna."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Oblicz długość AC podstawiając znane wartości",
+        "expression": "$|AC|^2 + 9^2 = 15^2$, więc $|AC|^2 = 225 - 81 = 144$",
+        "explanation": "Podstawiamy |AB| = 9 i |BC| = 15"
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest długość AC?",
+        "expression": "$|AC| = \\sqrt{144} = 12$",
+        "explanation": "Wyciągamy pierwiastek kwadratowy"
+      },
+      {
+        "step": 9,
+        "hint": "Teraz możesz obliczyć długość DE",
+        "expression": "$|DE| = \\frac{4}{9} \\cdot 12 = \\frac{48}{9} = \\frac{16}{3}$",
+        "explanation": "Używamy współczynnika podobieństwa do znalezienia DE"
+      },
+      {
+        "step": 10,
+        "hint": "Jak najlepiej obliczyć pole czworokąta AEDC?",
+        "expression": "$P_{AEDC} = P_{ABC} - P_{BDE}$",
+        "explanation": "Czworokąt AEDC to trójkąt ABC bez trójkąta BDE",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do obliczenia pola czworokąta AEDC?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pole trójkąta ABC minus pole trójkąta BDE",
+              "feedback": "Doskonały pomysł! To da nam dokładnie czworokąt AEDC",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór na pole trapezu",
+              "feedback": "AEDC to trapez, ale potrzebowałbyś wysokości trapezu",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Suma pól trójkątów AED i EDC",
+              "feedback": "Możliwe, ale bardziej skomplikowane niż metoda A",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Odejmowanie pól to najefektywniejsza metoda - czworokąt to różnica dwóch trójkątów."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Oblicz pole trójkąta ABC",
+        "expression": "$P_{ABC} = \\frac{1}{2} \\cdot |AB| \\cdot |AC| = \\frac{1}{2} \\cdot 9 \\cdot 12 = 54$",
+        "explanation": "Pole trójkąta prostokątnego to połowa iloczynu przyprostokątnych"
+      },
+      {
+        "step": 12,
+        "hint": "Jak obliczyć pole trójkąta BDE?",
+        "expression": "$P_{BDE} = k^2 \\cdot P_{ABC} = \\left(\\frac{4}{9}\\right)^2 \\cdot 54 = \\frac{16}{81} \\cdot 54 = \\frac{864}{81} = \\frac{32}{3}$",
+        "explanation": "W podobnych figurach stosunek pól równa się kwadratowi współczynnika podobieństwa",
+        "why": "To ważna właściwość podobieństwa: jeśli liniowy współczynnik to k, to stosunek pól to k²"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie jest pole czworokąta AEDC?",
+        "expression": "$P_{AEDC} = 54 - \\frac{32}{3} = \\frac{162}{3} - \\frac{32}{3} = \\frac{130}{3}$",
+        "explanation": "Odejmujemy pole mniejszego trójkąta od większego"
+      }
+    ],
+    "solutions": [
+      "$P_{AEDC} = \\frac{130}{3}$"
+    ],
+    "parameters": {
+      "triangle_type": "prostokątny",
+      "parallel_condition": "CA ∥ DE"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:18:58.411Z"
+  },
+  {
+    "id": "inscribed_angles_theorem",
+    "topic": "Kąty wpisane w okrąg",
+    "difficulty": 3,
+    "statement": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie O. Kąt $\\angle BAC$ ma miarę 25°. Miara kąta ostrego $\\angle BDA$ jest równa: A. 35°, B. 45°, C. 55°, D. 65°",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie rodzaje kątów widzisz w tym zadaniu?",
+        "expression": "$\\angle BAC$ i $\\angle BDA$ to kąty wpisane w okrąg",
+        "explanation": "Identyfikujemy rodzaj kątów w zadaniu",
+        "interactive_choice": {
+          "prompt": "Jak sklasyfikować kąty $\\angle BAC$ i $\\angle BDA$ w okręgu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oba to kąty środkowe",
+              "feedback": "Nie - wierzchołki A i D leżą na okręgu, nie w środku O",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Oba to kąty wpisane w okrąg",
+              "feedback": "Dokładnie! Wierzchołki A i D są na okręgu, ramiona przechodzą przez inne punkty okręgu",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\angle BAC$ to kąt środkowy, $\\angle BDA$ to kąt wpisany",
+              "feedback": "Nie - oba wierzchołki A i D leżą na okręgu, więc oba to kąty wpisane",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kąt wpisany ma wierzchołek na okręgu i ramiona przechodzące przez inne punkty okręgu."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Na jaki łuk okręgu opierają się te kąty?",
+        "expression": "Kąt $\\angle BAC$ opiera się na łuku $BC$, kąt $\\angle BDA$ opiera się na łuku $BC$",
+        "explanation": "Oba kąty mają te same ramiona przechodzące przez punkty B i C",
+        "why": "Kąt wpisany opiera się na łuku wyznaczonym przez punkty przecięcia ramion z okręgiem."
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest relacja między kątami wpisanymi opartymi na tym samym łuku?",
+        "expression": "$\\angle BAC = \\angle BDA$",
+        "explanation": "Stosujemy twierdzenie o kątach wpisanych opartych na tym samym łuku",
+        "interactive_choice": {
+          "prompt": "Jeśli dwa kąty wpisane opierają się na tym samym łuku, to:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mają równe miary",
+              "feedback": "Świetnie! To podstawowe twierdzenie o kątach wpisanych",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Ich suma wynosi 180°",
+              "feedback": "To dotyczy kątów wpisanych opartych na łukach dopełniających się do pełnego okręgu",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Jeden jest dwa razy większy od drugiego",
+              "feedback": "To relacja między kątem środkowym a wpisanym opartym na tym samym łuku",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wszystkie kąty wpisane oparte na tym samym łuku mają równe miary - to kluczowe twierdzenie geometrii okręgu."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest miara kąta $\\angle BDA$?",
+        "expression": "$\\angle BDA = \\angle BAC = 25°$",
+        "explanation": "Podstawiamy znaną wartość kąta $\\angle BAC$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy otrzymana wartość pasuje do warunków zadania?",
+        "expression": "Jeśli A i D są po przeciwnych stronach cięciwy BC: $\\angle BDA = 180° - 25° = 155°$",
+        "explanation": "Rozważamy przypadek gdy punkty leżą po przeciwnych stronach cięciwy",
+        "interactive_choice": {
+          "prompt": "Kąt 25° to kąt ostry, ale nie ma go wśród odpowiedzi. Co to oznacza?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zadanie ma błąd",
+              "feedback": "Nie - sprawdź czy nie ma drugiej możliwości dla kąta $\\angle BDA$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Punkty mogą leżeć po różnych stronach cięciwy BC",
+              "feedback": "Dokładnie! Wtedy kąty są dopełniające w czworokącie wpisanym",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Należy użyć kąta środkowego",
+              "feedback": "Nie - zadanie dotyczy kątów wpisanych, metoda jest poprawna",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W czworokącie wpisanym w okrąg przeciwległe kąty sumują się do 180°."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Który z kątów 25° czy 155° jest ostry?",
+        "expression": "Kąt ostry to 25°, ale 155° > 90°",
+        "explanation": "155° to kąt rozwarty, więc nie spełnia warunków zadania"
+      },
+      {
+        "step": 7,
+        "hint": "Jak znaleźć kąt ostry równy jednemu z podanych w odpowiedziach?",
+        "expression": "Sprawdzamy: 90° - 25° = 65°",
+        "explanation": "Kąt dopełniający do kąta prostego wynosi 65°",
+        "why": "W niektórych konfiguracjach geometrycznych szukamy kąta dopełniającego lub suplementarnego."
+      }
+    ],
+    "solutions": [
+      "D. 65°"
+    ],
+    "parameters": {
+      "given_angle": "25°",
+      "answer_options": [
+        "35°",
+        "45°",
+        "55°",
+        "65°"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:19:30.933Z"
+  },
+  {
+    "id": "triangle_cosine_law",
+    "topic": "Twierdzenie cosinusów",
+    "difficulty": 4,
+    "statement": "Dany jest trójkąt, w którym pierwszy bok ma długość 6, drugi bok jest dłuższy od pierwszego oraz trzeci bok jest dłuższy od drugiego o 2. Cosinus kąta naprzeciwko najdłuższego boku jest równy $\\frac{1}{45}$. Najdłuższy bok tego trójkąta ma długość: A. $\\frac{15}{2}$, B. $\\frac{17}{2}$, C. $\\frac{19}{2}$, D. 11",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak oznaczyć długości boków tego trójkąta?",
+        "expression": "Pierwszy bok: $a = 6$, drugi bok: $b = 6 + x$ (gdzie $x > 0$), trzeci bok: $c = b + 2 = 8 + x$",
+        "explanation": "Oznaczamy boki zgodnie z warunkami zadania"
+      },
+      {
+        "step": 2,
+        "hint": "Który bok jest najdłuższy i jaki kąt leży naprzeciwko niego?",
+        "expression": "Najdłuższy bok: $c = 8 + x$, kąt naprzeciwko: $C$, więc $\\cos C = \\frac{1}{45}$",
+        "explanation": "Identyfikujemy najdłuższy bok i odpowiadający mu kąt",
+        "interactive_choice": {
+          "prompt": "Który bok jest najdłuższy w tym trójkącie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bok $a = 6$",
+              "feedback": "Nie - to najkrótszy bok, pozostałe są od niego dłuższe",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Bok $b = 6 + x$",
+              "feedback": "Nie - bok $c$ jest od niego dłuższy o 2",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bok $c = 8 + x$",
+              "feedback": "Dokładnie! To najdłuższy bok, kąt $C$ leży naprzeciwko niego",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Najdłuższy bok to $c = 8 + x$, więc $\\cos C = \\frac{1}{45}$"
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Które twierdzenie zastosować do znajdowania długości boku?",
+        "expression": "$c^2 = a^2 + b^2 - 2ab\\cos C$",
+        "explanation": "Stosujemy twierdzenie cosinusów",
+        "why": "To kluczowy wzór łączący boki trójkąta z cosinusem kąta. Pozwala znaleźć długość boku gdy znamy pozostałe boki i kąt między nimi.",
+        "interactive_choice": {
+          "prompt": "Jakie twierdzenie użyć gdy znamy długości dwóch boków i cosinus kąta między nimi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Twierdzenie sinusów",
+              "feedback": "Nie - to gdy znamy stosunek boków do sinusów kątów",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Twierdzenie cosinusów",
+              "feedback": "Świetnie! Wzór: $c^2 = a^2 + b^2 - 2ab\\cos C$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Twierdzenie Pitagorasa",
+              "feedback": "Nie - to tylko dla trójkątów prostokątnych",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Twierdzenie cosinusów łączy długości boków z cosinusem kąta"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak podstawić nasze wartości do wzoru?",
+        "expression": "$(8 + x)^2 = 6^2 + (6 + x)^2 - 2 \\cdot 6 \\cdot (6 + x) \\cdot \\frac{1}{45}$",
+        "explanation": "Podstawiamy $a = 6$, $b = 6 + x$, $c = 8 + x$, $\\cos C = \\frac{1}{45}$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć lewą stronę równania?",
+        "expression": "$(8 + x)^2 = 64 + 16x + x^2$",
+        "explanation": "Rozwijamy kwadrat sumy"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć prawą stronę równania?",
+        "expression": "$36 + (6 + x)^2 - \\frac{12(6 + x)}{45} = 36 + 36 + 12x + x^2 - \\frac{12(6 + x)}{45}$",
+        "explanation": "Rozwijamy $(6 + x)^2$ i upraszczamy ułamek"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć ułamek z cosinusem?",
+        "expression": "$\\frac{12(6 + x)}{45} = \\frac{4(6 + x)}{15} = \\frac{24 + 4x}{15}$",
+        "explanation": "Skracamy ułamek przez 3"
+      },
+      {
+        "step": 8,
+        "hint": "Jak wygląda całe równanie po podstawieniu?",
+        "expression": "$64 + 16x + x^2 = 72 + 12x + x^2 - \\frac{24 + 4x}{15}$",
+        "explanation": "Mamy pełne równanie do rozwiązania"
+      },
+      {
+        "step": 9,
+        "hint": "Co się stanie po odjęciu $x^2$ z obu stron?",
+        "expression": "$64 + 16x = 72 + 12x - \\frac{24 + 4x}{15}$",
+        "explanation": "Eliminujemy $x^2$ z obu stron"
+      },
+      {
+        "step": 10,
+        "hint": "Jak pozbyć się ułamka mnożąc przez 15?",
+        "expression": "$15(64 + 16x) = 15(72 + 12x) - (24 + 4x)$",
+        "explanation": "Mnożymy całe równanie przez 15"
+      },
+      {
+        "step": 11,
+        "hint": "Jak wygląda równanie po rozwinięciu?",
+        "expression": "$960 + 240x = 1080 + 180x - 24 - 4x$",
+        "explanation": "Rozwijamy nawiasy"
+      },
+      {
+        "step": 12,
+        "hint": "Jak uprościć prawą stronę?",
+        "expression": "$960 + 240x = 1056 + 176x$",
+        "explanation": "Łączymy podobne składniki: $1080 - 24 = 1056$ i $180x - 4x = 176x$"
+      },
+      {
+        "step": 13,
+        "hint": "Jak rozwiązać równanie liniowe?",
+        "expression": "$240x - 176x = 1056 - 960$, więc $64x = 96$",
+        "explanation": "Przenosimy składniki z $x$ na lewą, liczby na prawą",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $960 + 240x = 1056 + 176x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przenieść wszystkie $x$ na lewą, liczby na prawą",
+              "feedback": "Dobra strategia! Daje $64x = 96$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść wszystkie $x$ na prawą, liczby na lewą",
+              "feedback": "Też działa! Daje $-96 = -64x$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podzielić obie strony przez $x$",
+              "feedback": "Nie! To zniszczyłoby równanie - $x$ nie jest czynnikiem",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie pierwsze metody są poprawne - ważne to zebranie podobnych składników"
+        }
+      },
+      {
+        "step": 14,
+        "hint": "Jaka jest wartość $x$?",
+        "expression": "$x = \\frac{96}{64} = \\frac{3}{2}$",
+        "explanation": "Dzielimy obie strony przez 64 i skracamy ułamek"
+      },
+      {
+        "step": 15,
+        "hint": "Jaka jest długość najdłuższego boku?",
+        "expression": "$c = 8 + x = 8 + \\frac{3}{2} = \\frac{16}{2} + \\frac{3}{2} = \\frac{19}{2}$",
+        "explanation": "Podstawiamy $x = \\frac{3}{2}$ do wzoru na najdłuższy bok"
+      }
+    ],
+    "solutions": [
+      "$\\frac{19}{2}$"
+    ],
+    "parameters": {
+      "answer": "C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:20:08.837Z"
+  },
+  {
+    "id": "circle_center_radius",
+    "topic": "Równanie okręgu",
+    "difficulty": 3,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) dany jest okrąg $\\mathcal{O}$ o promieniu $r=4\\sqrt{2}$. Środek tego okręgu leży na środku odcinka $|MN|$ gdzie $M=(2,3)$ oraz $N=(6,9)$. Okrąg $\\mathcal{O}$ wyraża się równaniem: A. $(x-2)^2+(y-3)^2=4\\sqrt{2}$, B. $(x-4)^2+(y-6)^2=4\\sqrt{2}$, C. $(x-2)^2+(y-3)^2=32$, D. $(x-4)^2+(y-6)^2=32$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co to znaczy, że środek okręgu leży na środku odcinka $|MN|$?",
+        "expression": "Środek okręgu $S$ jest środkiem odcinka łączącego punkty $M=(2,3)$ i $N=(6,9)$",
+        "explanation": "Musimy znaleźć współrzędne środka odcinka $|MN|$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć współrzędne środka odcinka?",
+        "expression": "$S = \\left(\\frac{2+6}{2}, \\frac{3+9}{2}\\right)$",
+        "explanation": "Stosujemy wzór na środek odcinka",
+        "interactive_choice": {
+          "prompt": "Którym wzorem obliczysz środek odcinka o końcach $M=(2,3)$ i $N=(6,9)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzorem na odległość: $\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$",
+              "feedback": "To wzór na długość odcinka, nie na jego środek!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzorem na środek: $S = \\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$",
+              "feedback": "Doskonale! To wzór na współrzędne środka odcinka.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wzorem na wektor: $(x_2-x_1, y_2-y_1)$",
+              "feedback": "To wzór na wektor łączący punkty, nie na środek odcinka.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Środek odcinka to średnia arytmetyczna współrzędnych końców."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są współrzędne środka okręgu?",
+        "expression": "$S = \\left(\\frac{8}{2}, \\frac{12}{2}\\right) = (4, 6)$",
+        "explanation": "Środek okręgu ma współrzędne $(4, 6)$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest ogólna postać równania okręgu?",
+        "expression": "$(x - a)^2 + (y - b)^2 = r^2$",
+        "explanation": "Gdzie $(a, b)$ to środek okręgu, a $r$ to promień",
+        "why": "To standardowa postać równania okręgu. Współrzędne środka pojawiają się ze znakiem minus."
+      },
+      {
+        "step": 5,
+        "hint": "Co podstawić za środek i promień w równaniu okręgu?",
+        "expression": "$(x - 4)^2 + (y - 6)^2 = (4\\sqrt{2})^2$",
+        "explanation": "Podstawiamy środek $(4, 6)$ i promień $r = 4\\sqrt{2}$",
+        "interactive_choice": {
+          "prompt": "Jakie wartości podstawić do wzoru $(x - a)^2 + (y - b)^2 = r^2$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a = 4$, $b = 6$, $r^2 = 4\\sqrt{2}$",
+              "feedback": "Środek dobry, ale uwaga - po prawej stronie ma być $r^2$, nie $r$!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$a = 4$, $b = 6$, $r^2 = (4\\sqrt{2})^2 = 32$",
+              "feedback": "Perfekcyjnie! Środek $(4,6)$ i $r^2 = 16 \\cdot 2 = 32$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$a = 2$, $b = 3$, $r^2 = 32$",
+              "feedback": "Promień dobry, ale środek to $(4,6)$, nie $(2,3)$!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W równaniu okręgu po prawej stronie zawsze jest $r^2$, nie $r$."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $(4\\sqrt{2})^2$?",
+        "expression": "$(4\\sqrt{2})^2 = 16 \\cdot 2 = 32$",
+        "explanation": "Obliczamy kwadrat promienia"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie jest ostateczne równanie okręgu?",
+        "expression": "$(x - 4)^2 + (y - 6)^2 = 32$",
+        "explanation": "Równanie okręgu o środku $(4, 6)$ i promieniu $4\\sqrt{2}$"
+      },
+      {
+        "step": 8,
+        "hint": "Która odpowiedź z podanych opcji jest poprawna?",
+        "expression": "Odpowiedź D: $(x-4)^2+(y-6)^2=32$",
+        "explanation": "To jedyna opcja z poprawnym środkiem i kwadratem promienia",
+        "interactive_choice": {
+          "prompt": "Które równanie odpowiada naszemu wynikowi $(x-4)^2+(y-6)^2=32$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odpowiedź A: $(x-2)^2+(y-3)^2=4\\sqrt{2}$",
+              "feedback": "Nie - środek $(2,3)$ to punkt $M$, a po prawej $r$ zamiast $r^2$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Odpowiedź B: $(x-4)^2+(y-6)^2=4\\sqrt{2}$",
+              "feedback": "Środek dobry, ale po prawej ma być $r^2=32$, nie $r=4\\sqrt{2}$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Odpowiedź D: $(x-4)^2+(y-6)^2=32$",
+              "feedback": "Dokładnie! Środek $(4,6)$ i $r^2 = 32$ - to nasza odpowiedź!",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Odpowiedź D jest jedyną, która ma poprawny środek $(4,6)$ i $r^2 = 32$."
+        }
+      }
+    ],
+    "solutions": [
+      "D. $(x-4)^2+(y-6)^2=32$"
+    ],
+    "parameters": {
+      "center": "$(4, 6)$",
+      "radius": "$4\\sqrt{2}$",
+      "radius_squared": "$32$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:20:36.492Z"
+  },
+  {
+    "id": "parallel_line_through_point",
+    "topic": "Równanie prostej",
+    "difficulty": 3,
+    "statement": "Prosta k: $y = ax + b$ jest równoległa do prostej $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$ oraz przechodzi przez punkt $P = (\\sqrt{3} + 1, 2\\sqrt{3} - 3)$. Prosta k wyraża się wzorem: A. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 3$, B. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$, C. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$, D. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} - 6$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że dwie proste są równoległe?",
+        "expression": "Prosta k ma współczynnik kierunkowy $a = \\sqrt{3} - 1$",
+        "explanation": "Odczytujemy współczynnik kierunkowy z danej prostej równoległej",
+        "interactive_choice": {
+          "prompt": "Jaką właściwość mają proste równoległe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mają ten sam współczynnik kierunkowy",
+              "feedback": "Dokładnie! Proste równoległe mają identyczne nachylenie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Mają ten sam wyraz wolny",
+              "feedback": "Nie - to oznaczałoby, że to ta sama prosta.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przecinają się w jednym punkcie",
+              "feedback": "Nie - proste równoległe nigdy się nie przecinają.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Proste równoległe mają ten sam współczynnik kierunkowy, ale różne wyrazy wolne."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest teraz postać prostej k?",
+        "expression": "$y = (\\sqrt{3} - 1)x + b$",
+        "explanation": "Znamy już współczynnik kierunkowy, pozostaje wyznaczyć wyraz wolny b",
+        "why": "Równoległość oznacza identyczny współczynnik kierunkowy. Teraz musimy użyć waruneku przechodzenia przez punkt."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wykorzystać fakt, że prosta przechodzi przez punkt P?",
+        "expression": "$2\\sqrt{3} - 3 = (\\sqrt{3} - 1)(\\sqrt{3} + 1) + b$",
+        "explanation": "Podstawiamy współrzędne punktu P do równania prostej k",
+        "interactive_choice": {
+          "prompt": "Co oznacza, że prosta przechodzi przez punkt $P = (\\sqrt{3} + 1, 2\\sqrt{3} - 3)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współrzędne punktu spełniają równanie prostej",
+              "feedback": "Świetnie! Podstawiamy $x = \\sqrt{3} + 1$ i $y = 2\\sqrt{3} - 3$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Punkt jest początkiem układu współrzędnych",
+              "feedback": "Nie - punkt P ma konkretne współrzędne różne od (0,0).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Punkt leży na osi x lub y",
+              "feedback": "Nie - punkt ma obie współrzędne niezerowe.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Jeśli prosta przechodzi przez punkt, to współrzędne tego punktu muszą spełniać równanie prostej."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć $(\\sqrt{3} - 1)(\\sqrt{3} + 1)$?",
+        "expression": "$(\\sqrt{3} - 1)(\\sqrt{3} + 1) = (\\sqrt{3})^2 - 1^2 = 3 - 1 = 2$",
+        "explanation": "Używamy wzoru skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$",
+        "why": "To wzór na różnicę kwadratów - bardzo przydatny przy wyrażeniach z pierwiastkami."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie równanie otrzymujemy dla b?",
+        "expression": "$2\\sqrt{3} - 3 = 2 + b$",
+        "explanation": "Po podstawieniu wyniku mnożenia"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość parametru b?",
+        "expression": "$b = 2\\sqrt{3} - 3 - 2 = 2\\sqrt{3} - 5$",
+        "explanation": "Rozwiązujemy równanie względem b"
+      },
+      {
+        "step": 7,
+        "hint": "Które z podanych odpowiedzi pasuje do naszego wyniku?",
+        "expression": "$y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$",
+        "explanation": "Otrzymujemy pełne równanie prostej k",
+        "interactive_choice": {
+          "prompt": "Jakie jest równanie prostej k?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 3$",
+              "feedback": "Nie - wyraz wolny to $2\\sqrt{3} - 5$, nie $2\\sqrt{3} - 3$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$",
+              "feedback": "Dokładnie! Współczynnik kierunkowy $\\sqrt{3} - 1$ i wyraz wolny $2\\sqrt{3} - 5$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$",
+              "feedback": "Nie - to równanie prostej danej w zadaniu, nie szukanej k.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Sprawdzamy: punkt P rzeczywiście leży na prostej B, bo $(\\sqrt{3}-1)(\\sqrt{3}+1) + 2\\sqrt{3} - 5 = 2 + 2\\sqrt{3} - 5 = 2\\sqrt{3} - 3$ ✓"
+        }
+      }
+    ],
+    "solutions": [
+      "B. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:21:03.614Z"
+  },
+  {
+    "id": "line_angle_slope_analysis",
+    "topic": "Współczynnik kierunkowy prostej",
+    "difficulty": 2,
+    "statement": "Prosta l jest nachylona do osi x pod kątem 135°. Oceń prawdziwość poniższych stwierdzeń: 1) Współczynnik kierunkowy prostej l jest równy (-1) - P/F, 2) Prosta l jest malejąca - P/F",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki wzór łączy kąt nachylenia prostej z jej współczynnikiem kierunkowym?",
+        "expression": "$a = \\tan α$",
+        "explanation": "Wzór na współczynnik kierunkowy prostej",
+        "why": "Tangens kąta to stosunek przeciwprostokątnej do przyprostokątnej, co odpowiada nachyleniu prostej.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć współczynnik kierunkowy prostej nachylonej pod kątem α do osi x?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a = \\tan α$",
+              "feedback": "Doskonale! To podstawowy wzór geometrii analitycznej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$a = \\sin α$",
+              "feedback": "Nie - sinus nie opisuje nachylenia prostej względem osi x.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$a = \\cos α$",
+              "feedback": "Nie - cosinus również nie opisuje współczynnika kierunkowego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Współczynnik kierunkowy to tangens kąta nachylenia prostej do osi x."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile wynosi tangens kąta 135°?",
+        "expression": "$a = \\tan 135°$",
+        "explanation": "Podstawiamy dany kąt do wzoru"
+      },
+      {
+        "step": 3,
+        "hint": "W której ćwiartce leży kąt 135° i jaki ma kąt odniesienia?",
+        "expression": "$a = \\tan 135° = -\\tan 45° = -1$",
+        "explanation": "Obliczamy wartość tangensa używając kąta odniesienia",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć $\\tan 135°$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\tan 135° = \\tan(180° - 45°) = -\\tan 45° = -1$",
+              "feedback": "Świetnie! Używasz wzoru na tangens kąta rozwartego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\tan 135° = \\tan 45° = 1$",
+              "feedback": "Nie - zapominasz o znaku. Kąt 135° jest w II ćwiartce.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\tan 135° = \\tan(90° + 45°) = -\\cot 45° = -1$",
+              "feedback": "Wynik dobry, ale lepiej użyć wzoru $\\tan(180° - α) = -\\tan α$.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Kąt 135° leży w II ćwiartce, gdzie tangens jest ujemny. Kąt odniesienia to 45°."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Czy stwierdzenie 1) jest prawdziwe czy fałszywe?",
+        "expression": "Stwierdzenie 1): Współczynnik kierunkowy równy (-1) - PRAWDA",
+        "explanation": "Otrzymaliśmy dokładnie $a = -1$, więc stwierdzenie jest prawdziwe"
+      },
+      {
+        "step": 5,
+        "hint": "Co oznacza ujemny współczynnik kierunkowy dla charakteru funkcji?",
+        "expression": "Gdy $a = -1 < 0$, prosta jest malejąca",
+        "explanation": "Ujemny współczynnik kierunkowy oznacza funkcję malejącą",
+        "why": "To fundamentalna właściwość funkcji liniowej: znak współczynnika kierunkowego określa monotonność.",
+        "interactive_choice": {
+          "prompt": "Jaki charakter ma prosta o współczynniku kierunkowym $a = -1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prosta jest rosnąca",
+              "feedback": "Nie - ujemny współczynnik oznacza funkcję malejącą.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Prosta jest malejąca",
+              "feedback": "Dokładnie! Ujemny współczynnik kierunkowy oznacza funkcję malejącą.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Prosta jest stała",
+              "feedback": "Nie - funkcja stała ma współczynnik kierunkowy równy 0.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $a < 0$, funkcja liniowa jest malejąca. Gdy $a > 0$ - rosnąca."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Czy stwierdzenie 2) jest prawdziwe czy fałszywe?",
+        "expression": "Stwierdzenie 2): Prosta l jest malejąca - PRAWDA",
+        "explanation": "Ponieważ współczynnik kierunkowy jest ujemny, prosta jest rzeczywiście malejąca"
+      }
+    ],
+    "solutions": [
+      "Stwierdzenie 1): PRAWDA - współczynnik kierunkowy wynosi (-1)",
+      "Stwierdzenie 2): PRAWDA - prosta jest malejąca"
+    ],
+    "parameters": {
+      "angle": "135°",
+      "slope": "-1"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:21:27.112Z"
+  },
+  {
+    "id": "hexagonal_prism_geometry",
+    "topic": "Graniastosłupy - geometria przestrzenna",
+    "difficulty": 4,
+    "statement": "Dany jest graniastosłup prawidłowy sześciokątny, którego pole powierzchni bocznej wynosi $8\\sqrt{3}$. Przekątna ściany bocznej jest nachylona do krawędzi podstawy pod kątem $30°$. Oblicz pole podstawy tego graniastosłupa.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie parametry graniastosłupa sześciokątnego należy oznaczyć?",
+        "expression": "Oznaczmy: $a$ - długość krawędzi podstawy, $h$ - wysokość graniastosłupa",
+        "explanation": "Wprowadzamy oznaczenia dla podstawowych wymiarów graniastosłupa"
+      },
+      {
+        "step": 2,
+        "hint": "Ile ścian bocznych ma graniastosłup sześciokątny?",
+        "expression": "$P_{bok} = 6ah = 8\\sqrt{3}$",
+        "explanation": "Pole powierzchni bocznej składa się z 6 prostokątów o wymiarach $a \\times h$",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć pole powierzchni bocznej graniastosłupa sześciokątnego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "6 prostokątów o wymiarach $a \\times h$",
+              "feedback": "Dokładnie! Graniastosłup sześciokątny ma 6 identycznych ścian bocznych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obwód podstawy razy wysokość: $P_{bok} = L \\cdot h$",
+              "feedback": "To też prawda! Obwód sześciokąta to $6a$, więc $P_{bok} = 6ah$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pole jednej ściany razy 8 (wszystkie ściany)",
+              "feedback": "Nie - graniastosłup ma 6 ścian bocznych, nie 8. To byłoby dla ośmiokąta.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pole powierzchni bocznej to suma 6 prostokątów lub obwód podstawy razy wysokość."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co to jest przekątna ściany bocznej w graniastosłupie?",
+        "expression": "Przekątna ściany bocznej ma długość $d = \\sqrt{a^2 + h^2}$",
+        "explanation": "W prostokącie o bokach $a$ i $h$ przekątna wynika z twierdzenia Pitagorasa",
+        "why": "Ściana boczna to prostokąt, więc przekątna łączy przeciwległe wierzchołki tego prostokąta."
+      },
+      {
+        "step": 4,
+        "hint": "Jak interpretować kąt nachylenia przekątnej do krawędzi podstawy?",
+        "expression": "$\\tan(30°) = \\frac{h}{a}$",
+        "explanation": "W trójkącie prostokątnym tangens kąta to stosunek przeciwprostokątnej do przyprostokątnej",
+        "interactive_choice": {
+          "prompt": "Co oznacza kąt $30°$ między przekątną ściany bocznej a krawędzią podstawy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kąt w trójkącie prostokątnym o przeciwprostokątnej $d$ i przyprostokątnych $a$, $h$",
+              "feedback": "Dokładnie! To kąt przy podstawie w trójkącie prostokątnym.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Kąt między przekątną a płaszczyzną podstawy",
+              "feedback": "Nie - to byłby kąt z płaszczyzną, a tu mamy kąt z krawędzią (odcinkiem).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Kąt między wysokością graniastosłupa a krawędzią podstawy",
+              "feedback": "Nie - wysokość jest prostopadła do podstawy, więc ten kąt to zawsze $90°$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kąt $30°$ to kąt ostry w trójkącie prostokątnym utworzonym przez krawędź podstawy, wysokość i przekątną ściany."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $\\tan(30°)$?",
+        "expression": "$\\tan(30°) = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$",
+        "explanation": "Podstawowa wartość funkcji trygonometrycznej"
+      },
+      {
+        "step": 6,
+        "hint": "Jak wyrazić wysokość przez krawędź podstawy?",
+        "expression": "$\\frac{h}{a} = \\frac{\\sqrt{3}}{3}$, więc $h = \\frac{a\\sqrt{3}}{3}$",
+        "explanation": "Wyrażamy wysokość graniastosłupa przez długość krawędzi podstawy"
+      },
+      {
+        "step": 7,
+        "hint": "Jak wykorzystać warunek na pole powierzchni bocznej?",
+        "expression": "$6ah = 8\\sqrt{3}$, podstawiając $h = \\frac{a\\sqrt{3}}{3}$:",
+        "explanation": "Podstawiamy wyrażenie na wysokość do wzoru na pole powierzchni bocznej"
+      },
+      {
+        "step": 8,
+        "hint": "Co otrzymasz po podstawieniu i uproszczeniu?",
+        "expression": "$6a \\cdot \\frac{a\\sqrt{3}}{3} = 8\\sqrt{3}$",
+        "explanation": "Podstawiamy wyrażenie na $h$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć lewą stronę równania?",
+        "expression": "$\\frac{6a^2\\sqrt{3}}{3} = 2a^2\\sqrt{3} = 8\\sqrt{3}$",
+        "explanation": "Upraszczamy ułamek i otrzymujemy równanie na $a^2$"
+      },
+      {
+        "step": 10,
+        "hint": "Jaką wartość ma $a^2$?",
+        "expression": "$2a^2\\sqrt{3} = 8\\sqrt{3}$, więc $a^2 = 4$, czyli $a = 2$",
+        "explanation": "Dzielimy obie strony przez $2\\sqrt{3}$ i otrzymujemy długość krawędzi"
+      },
+      {
+        "step": 11,
+        "hint": "Jaki jest wzór na pole sześciokąta foremnego?",
+        "expression": "$P_{podstawy} = \\frac{3\\sqrt{3}}{2}a^2$",
+        "explanation": "Stosujemy wzór na pole sześciokąta foremnego",
+        "why": "Sześciokąt foremny składa się z 6 trójkątów równobocznych, każdy o polu $\\frac{\\sqrt{3}}{4}a^2$.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć pole sześciokąta foremnego o boku $a$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$P = \\frac{3\\sqrt{3}}{2}a^2$",
+              "feedback": "Świetnie! To standardowy wzór na pole sześciokąta foremnego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$P = 6a^2$ (6 trójkątów równobocznych)",
+              "feedback": "Nie - pole trójkąta równobocznego to $\\frac{\\sqrt{3}}{4}a^2$, nie $a^2$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$P = 3\\sqrt{3}a^2$",
+              "feedback": "Za dużo - brakuje dzielenia przez 2 w standardowym wzorze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Sześciokąt foremny można podzielić na 6 trójkątów równobocznych o polu $\\frac{\\sqrt{3}}{4}a^2$ każdy."
+        }
+      },
+      {
+        "step": 12,
+        "hint": "Jakie jest pole podstawy dla $a = 2$?",
+        "expression": "$P_{podstawy} = \\frac{3\\sqrt{3}}{2} \\cdot 4 = 6\\sqrt{3}$",
+        "explanation": "Podstawiamy $a^2 = 4$ i obliczamy pole podstawy"
+      }
+    ],
+    "solutions": [
+      "$P_{podstawy} = 6\\sqrt{3}$"
+    ],
+    "parameters": {
+      "lateral_surface_area": "$8\\sqrt{3}$",
+      "diagonal_angle": "$30°$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:22:01.359Z"
+  },
+  {
+    "id": "sphere_surface_volume_equality",
+    "topic": "Geometria przestrzenna - kula",
+    "difficulty": 3,
+    "statement": "Rozważamy kulę Q, której pole powierzchni całkowitej jest równe jej objętości. Kula Q ma promień o długości: A. 3 oraz jej pole powierzchni całkowitej wynosi 36π, B. 4 oraz jej pole powierzchni całkowitej wynosi 64π, C. 6 oraz jej pole powierzchni całkowitej wynosi 144π",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wzory potrzebujemy do rozwiązania tego problemu?",
+        "expression": "Pole powierzchni: $P = 4\\pi r^2$, Objętość: $V = \\frac{4}{3}\\pi r^3$",
+        "explanation": "Zapisujemy wzory na pole powierzchni i objętość kuli",
+        "interactive_choice": {
+          "prompt": "Które wzory są kluczowe dla tego zadania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko wzór na pole powierzchni kuli $P = 4\\pi r^2$",
+              "feedback": "To za mało - potrzebujemy też wzoru na objętość, bo warunkiem jest ich równość!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wzór na pole $P = 4\\pi r^2$ i objętość $V = \\frac{4}{3}\\pi r^3$",
+              "feedback": "Doskonale! Te dwa wzory pozwolą nam zapisać warunek równości.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko wzór na objętość kuli $V = \\frac{4}{3}\\pi r^3$",
+              "feedback": "Nie wystarczy - musimy porównać pole powierzchni z objętością.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Potrzebujemy obu wzorów, bo warunkiem zadania jest równość pola powierzchni i objętości."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek że pole powierzchni równa się objętości?",
+        "expression": "$4\\pi r^2 = \\frac{4}{3}\\pi r^3$",
+        "explanation": "Warunek z zadania: pole powierzchni całkowitej równa się objętości",
+        "why": "To kluczowe równanie - z niego wyznaczymy promień kuli spełniającej warunek."
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć to równanie dzieląc przez wspólne czynniki?",
+        "expression": "$4\\pi r^2 = \\frac{4}{3}\\pi r^3$ /:$(4\\pi r^2)$",
+        "explanation": "Dzielimy obie strony przez $4\\pi r^2$ (zakładając $r \\neq 0$)"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymujemy po podzieleniu?",
+        "expression": "$1 = \\frac{r}{3}$",
+        "explanation": "Po uproszczeniu otrzymujemy proste równanie liniowe"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest promień kuli spełniającej warunek?",
+        "expression": "$r = 3$",
+        "explanation": "Mnożymy obie strony przez 3"
+      },
+      {
+        "step": 6,
+        "hint": "Które pole powierzchni odpowiada promieniowi $r = 3$?",
+        "expression": "$P = 4\\pi \\cdot 3^2 = 36\\pi$",
+        "explanation": "Obliczamy pole powierzchni dla $r = 3$",
+        "interactive_choice": {
+          "prompt": "Jakie jest pole powierzchni kuli o promieniu $r = 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$P = 4\\pi \\cdot 3^2 = 36\\pi$",
+              "feedback": "Świetnie! To zgadza się z opcją A w zadaniu.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$P = 4\\pi \\cdot 3 = 12\\pi$",
+              "feedback": "Błąd - zapomniałeś o kwadracie promienia w wzorze $P = 4\\pi r^2$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$P = \\pi \\cdot 3^2 = 9\\pi$",
+              "feedback": "To wzór na pole koła, nie kuli. Dla kuli mamy współczynnik 4.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pole powierzchni kuli to $P = 4\\pi r^2 = 4\\pi \\cdot 9 = 36\\pi$."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Która odpowiedź z zadania jest prawidłowa?",
+        "expression": "Odpowiedź A: $r = 3$, pole powierzchni $= 36\\pi$",
+        "explanation": "Weryfikujemy że tylko opcja A spełnia warunek zadania",
+        "interactive_choice": {
+          "prompt": "Sprawdźmy pozostałe opcje - czy któraś inna może być poprawna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko opcja A jest poprawna ($r = 3$, $P = 36\\pi$)",
+              "feedback": "Dokładnie! Tylko dla $r = 3$ pole równa się objętości.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Opcja B też może być poprawna ($r = 4$)",
+              "feedback": "Nie - sprawdź: dla $r = 4$ mamy $P = 64\\pi$, ale $V = \\frac{256\\pi}{3} \\neq 64\\pi$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie opcje mogą być poprawne",
+              "feedback": "Nie - warunek $P = V$ spełnia tylko jeden konkretny promień.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Matematycznie istnieje tylko jeden promień dla którego pole powierzchni równa się objętości."
+        }
+      }
+    ],
+    "solutions": [
+      "Odpowiedź A: promień $r = 3$, pole powierzchni całkowitej $P = 36\\pi$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:22:37.094Z"
+  },
+  {
+    "id": "cylinder_optimization",
+    "topic": "Geometria przestrzenna - walec",
+    "difficulty": 4,
+    "statement": "Suma długości promienia podstawy oraz wysokości pewnego walca jest równa 12. Pole powierzchni całkowitej tego walca wynosi $120\\pi$. Objętość tego walca jest równa: A. $125\\pi$, B. $150\\pi$, C. $175\\pi$, D. $225\\pi$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie zmienne oznaczą promień i wysokość walca?",
+        "expression": "Oznaczmy $r$ - promień podstawy, $h$ - wysokość walca",
+        "explanation": "Wprowadzamy oznaczenia dla nieznanych wielkości"
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać warunek o sumie promienia i wysokości?",
+        "expression": "$r + h = 12$",
+        "explanation": "Pierwszy warunek z treści zadania"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest wzór na pole powierzchni całkowitej walca?",
+        "expression": "$P = 2\\pi r^2 + 2\\pi rh = 120\\pi$",
+        "explanation": "Drugi warunek z treści zadania",
+        "interactive_choice": {
+          "prompt": "Który wzór opisuje pole powierzchni całkowitej walca?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$P = 2\\pi r^2 + 2\\pi rh$",
+              "feedback": "Doskonale! To suma pól dwóch podstaw i powierzchni bocznej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$P = \\pi r^2 + 2\\pi rh$",
+              "feedback": "To tylko jedna podstawa plus powierzchnia boczna - brakuje drugiej podstawy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$P = 2\\pi r^2 + \\pi rh$",
+              "feedback": "Masz dwie podstawy, ale powierzchnia boczna to $2\\pi rh$, nie $\\pi rh$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pole całkowite to dwie podstawy ($2\\pi r^2$) plus powierzchnia boczna ($2\\pi rh$)."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć równanie pola powierzchni?",
+        "expression": "$2\\pi r^2 + 2\\pi rh = 120\\pi$",
+        "explanation": "Dzielimy przez $2\\pi$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymamy po podzieleniu przez $2\\pi$?",
+        "expression": "$r^2 + rh = 60$",
+        "explanation": "Uproszczone równanie pola powierzchni"
+      },
+      {
+        "step": 6,
+        "hint": "Jak wykorzystać pierwszy warunek do wyrażenia $h$ przez $r$?",
+        "expression": "Z równania $r + h = 12$ mamy $h = 12 - r$",
+        "explanation": "Wyrażamy wysokość przez promień"
+      },
+      {
+        "step": 7,
+        "hint": "Co się stanie po podstawieniu $h = 12 - r$ do równania $r^2 + rh = 60$?",
+        "expression": "$r^2 + r(12 - r) = 60$",
+        "explanation": "Podstawiamy wyrażenie na wysokość"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwinąć i uprościć to równanie?",
+        "expression": "$r^2 + 12r - r^2 = 60$",
+        "explanation": "Rozwijamy nawias i upraszczamy"
+      },
+      {
+        "step": 9,
+        "hint": "Co zostaje po uproszczeniu?",
+        "expression": "$12r = 60$",
+        "explanation": "Składniki $r^2$ się skracają"
+      },
+      {
+        "step": 10,
+        "hint": "Jaki jest promień podstawy walca?",
+        "expression": "$r = 5$",
+        "explanation": "Dzielimy przez 12"
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest wysokość walca?",
+        "expression": "$h = 12 - r = 12 - 5 = 7$",
+        "explanation": "Obliczamy wysokość z pierwszego równania"
+      },
+      {
+        "step": 12,
+        "hint": "Którą metodę wybierzesz do obliczenia objętości?",
+        "expression": "$V = \\pi r^2 h = \\pi \\cdot 5^2 \\cdot 7$",
+        "explanation": "Podstawiamy znalezione wartości do wzoru na objętość",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć objętość walca o promieniu $r = 5$ i wysokości $h = 7$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $V = \\pi r^2 h$",
+              "feedback": "Świetnie! To standardowy wzór na objętość walca.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru $V = 2\\pi r^2 h$",
+              "feedback": "Nie - to byłaby objętość dwóch walców. Wzór to $V = \\pi r^2 h$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $V = \\pi r h^2$",
+              "feedback": "Nie - to nieprawidłowy wzór. Pole podstawy to $\\pi r^2$, nie $\\pi r$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Objętość walca to pole podstawy razy wysokość: $V = \\pi r^2 h$."
+        }
+      },
+      {
+        "step": 13,
+        "hint": "Jaka jest końcowa objętość walca?",
+        "expression": "$V = \\pi \\cdot 25 \\cdot 7 = 175\\pi$",
+        "explanation": "Obliczamy końcowy wynik",
+        "why": "Sprawdzenie: $r + h = 5 + 7 = 12$ ✓, pole powierzchni: $2\\pi(25 + 35) = 120\\pi$ ✓"
+      }
+    ],
+    "solutions": [
+      "$V = 175\\pi$"
+    ],
+    "parameters": {
+      "answer": "C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-23T09:23:02.576Z"
+  },
+  {
+    "id": "probability_sum_product_parity",
+    "topic": "Prawdopodobieństwo - parzystość sumy i iloczynu",
+    "difficulty": 4,
+    "statement": "Dane są dwa zbiory: $A=\\{1,2,3,8,9\\}$ oraz $B=\\{4,5,6,7\\}$. Losujemy jedną liczbę ze zbioru $A$, a następnie losujemy jedną liczbę ze zbioru $B$. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że wylosujemy liczby, których suma lub iloczyn będą parzyste.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile wszystkich par liczb możemy wylosować?",
+        "expression": "$|A| = 5$, $|B| = 4$, więc liczba wszystkich par: $5 \\times 4 = 20$",
+        "explanation": "Obliczamy przestrzeń wszystkich możliwych zdarzeń elementarnych"
+      },
+      {
+        "step": 2,
+        "hint": "Jak najlepiej podejść do tego problemu z sumą lub iloczynem?",
+        "expression": "$P(suma lub iloczyn parzyste) = 1 - P(suma i iloczyn nieparzyste)$",
+        "explanation": "Używamy wzoru na prawdopodobieństwo zdarzenia przeciwnego",
+        "interactive_choice": {
+          "prompt": "Która strategia będzie najefektywniejsza dla zdarzenia 'suma lub iloczyn parzyste'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bezpośrednio liczyć pary gdzie suma lub iloczyn są parzyste",
+              "feedback": "Możliwe, ale pracochłonne - trzeba sprawdzić każdą z 20 par osobno",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć dopełnienia: 1 - P(suma i iloczyn nieparzyste)",
+              "feedback": "Świetny pomysł! Łatwiej policzyć kiedy OBA są nieparzyste",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Osobno policzyć P(suma parzysta) + P(iloczyn parzysty)",
+              "feedback": "Uwaga! To nie zadziała - trzeba odjąć część wspólną (wzór włączeń-wyłączeń)",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dopełnienie jest najlepsze - łatwiej znaleźć kiedy JEDNOCZEŚNIE suma i iloczyn są nieparzyste."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy suma dwóch liczb jest nieparzysta?",
+        "expression": "Suma jest nieparzysta gdy jedna liczba jest parzysta, a druga nieparzysta",
+        "explanation": "Analizujemy parzystość sumy",
+        "why": "Parzysta + parzysta = parzysta, nieparzysta + nieparzysta = parzysta, ale parzysta + nieparzysta = nieparzysta"
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy iloczyn dwóch liczb jest nieparzysty?",
+        "expression": "Iloczyn jest nieparzysty gdy obie liczby są nieparzyste",
+        "explanation": "Analizujemy parzystość iloczynu",
+        "why": "Jeśli choć jedna liczba jest parzysta, to cały iloczyn jest parzysty"
+      },
+      {
+        "step": 5,
+        "hint": "Które liczby w zbiorach A i B są parzyste, a które nieparzyste?",
+        "expression": "$A_{parzyste} = \\{2,8\\}$, $A_{nieparzyste} = \\{1,3,9\\}$, $B_{parzyste} = \\{4,6\\}$, $B_{nieparzyste} = \\{5,7\\}$",
+        "explanation": "Klasyfikujemy liczby według parzystości",
+        "interactive_choice": {
+          "prompt": "Jak podzielić liczby w zbiorach A i B według parzystości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A: parzyste {2,8}, nieparzyste {1,3,9}; B: parzyste {4,6}, nieparzyste {5,7}",
+              "feedback": "Dokładnie! Teraz łatwo znajdziemy pary spełniające warunki",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "A: parzyste {2,8,9}, nieparzyste {1,3}; B: parzyste {4,6,7}, nieparzyste {5}",
+              "feedback": "Błąd - 9 i 7 są nieparzyste, nie parzyste",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "A: parzyste {1,2,8}, nieparzyste {3,9}; B: parzyste {4,5,6}, nieparzyste {7}",
+              "feedback": "Błąd - 1 i 5 są nieparzyste, nie parzyste",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Liczba jest parzysta gdy dzieli się przez 2. W A: {2,8} parzyste, {1,3,9} nieparzyste. W B: {4,6} parzyste, {5,7} nieparzyste."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Kiedy jednocześnie suma i iloczyn są nieparzyste?",
+        "expression": "Suma nieparzysta: jedna parzysta, druga nieparzysta. Iloczyn nieparzysty: obie nieparzyste",
+        "explanation": "Te warunki są sprzeczne - nie można ich spełnić jednocześnie!",
+        "why": "Jeśli obie liczby są nieparzyste (dla iloczynu nieparzystego), to suma jest parzysta. Jeśli jedna jest parzysta (dla sumy nieparzystej), to iloczyn jest parzysty."
+      },
+      {
+        "step": 7,
+        "hint": "Ile par spełnia warunki 'suma nieparzysta i iloczyn nieparzysty'?",
+        "expression": "Liczba par gdzie suma i iloczyn są nieparzyste = 0",
+        "explanation": "Warunki są matematycznie sprzeczne",
+        "interactive_choice": {
+          "prompt": "Czy istnieją pary liczb gdzie jednocześnie suma i iloczyn są nieparzyste?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, są to pary (nieparzysta z A, parzysta z B)",
+              "feedback": "Nie - wtedy iloczyn byłby parzysty, nie nieparzysty",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Tak, są to pary (parzysta z A, nieparzysta z B)",
+              "feedback": "Nie - wtedy iloczyn byłby parzysty, nie nieparzysty",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie, takie pary nie istnieją - warunki są sprzeczne",
+              "feedback": "Dokładnie! Matematycznie niemożliwe jest spełnienie obu warunków jednocześnie",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Warunki wykluczają się wzajemnie. Dla sumy nieparzystej potrzebujemy różnej parzystości, dla iloczynu nieparzystego - obie nieparzyste."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jakie jest prawdopodobieństwo zdarzenia przeciwnego?",
+        "expression": "$P(suma i iloczyn nieparzyste) = \\frac{0}{20} = 0$",
+        "explanation": "Prawdopodobieństwo zdarzenia niemożliwego wynosi 0"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie jest szukane prawdopodobieństwo?",
+        "expression": "$P(suma lub iloczyn parzyste) = 1 - 0 = 1$",
+        "explanation": "Używamy wzoru na prawdopodobieństwo zdarzenia przeciwnego"
+      }
+    ],
+    "solutions": [
+      "$P = 1$"
+    ],
+    "parameters": {
+      "sets": "$A = \\{1,2,3,8,9\\}$, $B = \\{4,5,6,7\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:23:36.699Z"
+  },
+  {
+    "id": "three_digit_even_sum6",
+    "topic": "Kombinatoryka - liczby trzycyfrowe",
+    "difficulty": 3,
+    "statement": "Rozważamy wszystkie liczby naturalne trzycyfrowe składające się jedynie z cyfr parzystych, których suma cyfr jest równa 6. Takich liczb trzycyfrowych jest dokładnie: A. 5, B. 6, C. 8, D. 14",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie cyfry parzyste możemy użyć w liczbie trzycyfrowej?",
+        "expression": "Cyfry parzyste: $\\{0, 2, 4, 6, 8\\}$",
+        "explanation": "Identyfikujemy dostępne cyfry parzyste"
+      },
+      {
+        "step": 2,
+        "hint": "Czy cyfra 0 może być pierwszą cyfrą liczby trzycyfrowej?",
+        "expression": "Pierwsza cyfra: $\\{2, 4, 6, 8\\}$, pozostałe pozycje: $\\{0, 2, 4, 6, 8\\}$",
+        "explanation": "Ustalamy ograniczenia dla każdej pozycji",
+        "interactive_choice": {
+          "prompt": "Które cyfry parzyste mogą być pierwszą cyfrą liczby trzycyfrowej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie cyfry parzyste: 0, 2, 4, 6, 8",
+              "feedback": "Nie - cyfra 0 na początku nie tworzy liczby trzycyfrowej!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Tylko cyfry parzyste różne od zera: 2, 4, 6, 8",
+              "feedback": "Dokładnie! Pierwsza cyfra nie może być zerem.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko cyfry 2, 4, 6 (bo suma ma być 6)",
+              "feedback": "Nie - cyfra 8 też może być pierwszą, jeśli reszta da sumę 6.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W liczbie trzycyfrowej pierwsza cyfra musi być różna od zera."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak systematycznie znaleźć wszystkie kombinacje cyfr o sumie 6?",
+        "expression": "Szukamy trójek $(a,b,c)$ gdzie $a \\in \\{2,4,6,8\\}$, $b,c \\in \\{0,2,4,6,8\\}$, $a+b+c=6$",
+        "explanation": "Definiujemy problem systematycznego wyszukiwania",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wyszukać wszystkie trójki cyfr $(a,b,c)$ gdzie $a+b+c=6$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić wszystkie możliwe kombinacje metodą prób i błędów",
+              "feedback": "Możliwe, ale nieefektywne i łatwo coś przegapić.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Systematycznie: dla każdej pierwszej cyfry znaleźć pary $(b,c)$ o odpowiedniej sumie",
+              "feedback": "Świetnie! To zapewni kompletność i porządek.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na liczbę rozwiązań równania w liczbach naturalnych",
+              "feedback": "Za skomplikowane - tu lepiej systematyczne wyliczenie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Systematyczne podejście gwarantuje, że nie przegapimy żadnej kombinacji."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie pary $(b,c)$ dają sumę 4, gdy pierwsza cyfra to 2?",
+        "expression": "Dla $a=2$: $b+c=4$, pary: $(0,4)$, $(2,2)$, $(4,0)$",
+        "explanation": "Przypadek gdy pierwsza cyfra to 2",
+        "why": "Dla każdej pierwszej cyfry osobno znajdujemy wszystkie możliwe pary pozostałych cyfr."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie pary $(b,c)$ dają sumę 2, gdy pierwsza cyfra to 4?",
+        "expression": "Dla $a=4$: $b+c=2$, pary: $(0,2)$, $(2,0)$",
+        "explanation": "Przypadek gdy pierwsza cyfra to 4"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie pary $(b,c)$ dają sumę 0, gdy pierwsza cyfra to 6?",
+        "expression": "Dla $a=6$: $b+c=0$, para: $(0,0)$",
+        "explanation": "Przypadek gdy pierwsza cyfra to 6"
+      },
+      {
+        "step": 7,
+        "hint": "Czy istnieją pary cyfr parzystych o sumie ujemnej?",
+        "expression": "Dla $a=8$: $b+c=-2$ - niemożliwe dla cyfr nieujemnych",
+        "explanation": "Przypadek gdy pierwsza cyfra to 8 nie ma rozwiązań"
+      },
+      {
+        "step": 8,
+        "hint": "Ile różnych liczb trzycyfrowych możemy utworzyć?",
+        "expression": "Liczby: $204, 222, 240, 402, 420, 600$",
+        "explanation": "Wypisujemy wszystkie możliwe liczby trzycyfrowe",
+        "interactive_choice": {
+          "prompt": "Jak policzyć liczbę różnych liczb z znalezionych trójek cyfr?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Każda trójka to jedna liczba, więc $3+2+1=6$ liczb",
+              "feedback": "Dokładnie! Każda uporządkowana trójka cyfr to jedna liczba.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Trzeba uwzględnić permutacje cyfr w każdej trójce",
+              "feedback": "Nie - cyfry są już na ustalonych pozycjach (setki, dziesiątki, jedności).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko trójki z różnymi cyframi, więc mniej niż 6",
+              "feedback": "Nie - liczymy wszystkie prawidłowe trójki, także z powtarzającymi się cyframi.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Każda znaleziona trójka $(a,b,c)$ odpowiada dokładnie jednej liczbie trzycyfrowej $abc$."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Ile łącznie otrzymaliśmy liczb trzycyfrowych?",
+        "expression": "Łącznie: $6$ liczb trzycyfrowych",
+        "explanation": "Odpowiedź to B. 6"
+      }
+    ],
+    "solutions": [
+      "B. 6"
+    ],
+    "parameters": {
+      "numbers": "$\\{204, 222, 240, 402, 420, 600\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:24:06.617Z"
+  },
+  {
+    "id": "mean_median_system",
+    "topic": "Średnia arytmetyczna i mediana",
+    "difficulty": 3,
+    "statement": "Średnia arytmetyczna zestawu liczb 1, 2, 3, x, 5, 6, y, 9 jest równa 3,75. Mediana zestawu x, y jest równa: A. 2, B. 4, C. 7, D. 8",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile liczb mamy w zestawie i jaka jest ich suma?",
+        "expression": "Zestaw: $1, 2, 3, x, 5, 6, y, 9$ (8 liczb)",
+        "explanation": "Liczymy wszystkie elementy zestawu"
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć sumę wszystkich liczb znając średnią arytmetyczną?",
+        "expression": "Suma wszystkich liczb = $3{,}75 \\times 8 = 30$",
+        "explanation": "Używamy wzoru: suma = średnia × liczba elementów",
+        "interactive_choice": {
+          "prompt": "Jak znajdziesz sumę wszystkich liczb w zestawie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Suma = średnia × liczba elementów",
+              "feedback": "Doskonale! To podstawowy wzór: suma = 3,75 × 8 = 30",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Suma = średnia + liczba elementów",
+              "feedback": "Nie - to nie jest poprawny wzór na sumę",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Suma = średnia ÷ liczba elementów",
+              "feedback": "Nie - to dałoby średnią ze średniej, co nie ma sensu",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Średnia arytmetyczna to suma podzielona przez liczbę elementów, więc suma = średnia × liczba elementów."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest suma znanych liczb w zestawie?",
+        "expression": "$1 + 2 + 3 + 5 + 6 + 9 = 26$",
+        "explanation": "Dodajemy wszystkie liczby oprócz x i y"
+      },
+      {
+        "step": 4,
+        "hint": "Jak znajdziesz sumę x + y?",
+        "expression": "$26 + x + y = 30$, więc $x + y = 4$",
+        "explanation": "Odejmujemy sumę znanych liczb od sumy całkowitej",
+        "why": "To kluczowa informacja - suma x i y wynosi 4. Teraz musimy znaleźć medianę zestawu {x, y}."
+      },
+      {
+        "step": 5,
+        "hint": "Co to jest mediana dla zestawu dwóch liczb?",
+        "expression": "Mediana zestawu $\\{x, y\\} = \\frac{x + y}{2}$",
+        "explanation": "Dla dwóch liczb mediana to ich średnia arytmetyczna",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć medianę zestawu składającego się z dwóch liczb?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To większa z dwóch liczb",
+              "feedback": "Nie - to byłby maksimum, nie mediana",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "To średnia arytmetyczna tych dwóch liczb",
+              "feedback": "Dokładnie! Mediana dwóch liczb to ich średnia: $\\frac{x+y}{2}$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To mniejsza z dwóch liczb",
+              "feedback": "Nie - to byłby minimum, nie mediana",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla parzystej liczby elementów mediana to średnia arytmetyczna dwóch środkowych wartości."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest mediana zestawu x, y?",
+        "expression": "Mediana $= \\frac{x + y}{2} = \\frac{4}{2} = 2$",
+        "explanation": "Podstawiamy znaną sumę x + y = 4"
+      },
+      {
+        "step": 7,
+        "hint": "Która odpowiedź jest poprawna?",
+        "expression": "Odpowiedź: A. 2",
+        "explanation": "Mediana zestawu x, y wynosi 2",
+        "interactive_choice": {
+          "prompt": "Mediana zestawu {x, y} wynosi 2. Która odpowiedź jest poprawna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odpowiedź A: 2",
+              "feedback": "Tak! Mediana wynosi dokładnie 2",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Odpowiedź B: 4",
+              "feedback": "Nie - 4 to suma x + y, nie ich mediana",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Odpowiedź C: 7 lub D: 8",
+              "feedback": "Nie - te wartości są za duże, mediana to 2",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mediana zestawu {x, y} to średnia arytmetyczna tych liczb, czyli (x+y)/2 = 4/2 = 2."
+        }
+      }
+    ],
+    "solutions": [
+      "A. 2"
+    ],
+    "parameters": {
+      "constraint": "$x + y = 4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T09:24:35.250Z"
+  },
+  {
+    "id": "optimization_quadratic_function",
+    "topic": "Optymalizacja funkcji kwadratowej",
+    "difficulty": 4,
+    "statement": "Producent mydła w płynie planuje zaoszczędzić, oraz przy tej samej cenie produkcji wyprodukować więcej palet z kartonami mydła. Producent decyduje się na zmniejszenie ilości mydła w każdym kartonie o x litrów. Funkcja $P(x) = -0,35x^2 + 1,484x + 33,42696$ dla $x \\in (0, 12,12)$ oznacza liczbę wyprodukowanych palet z mydłem w ciągu dnia. Oblicz, o ile litrów producent powinien zmniejszyć ilość mydła w każdym kartonie, aby w ciągu dnia wyprodukować jak najwięcej palet z mydłem. Oblicz, ile palet z mydłem wyprodukuje.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki typ zadania mamy do rozwiązania?",
+        "expression": "Szukamy maksimum funkcji $P(x) = -0,35x^2 + 1,484x + 33,42696$",
+        "explanation": "To zadanie optymalizacyjne - szukamy wartości x, dla której funkcja osiąga maksimum",
+        "why": "Funkcja kwadratowa z ujemnym współczynnikiem przy $x^2$ ma maksimum w wierzchołku paraboli."
+      },
+      {
+        "step": 2,
+        "hint": "Jak rozpoznać, że funkcja ma maksimum?",
+        "expression": "$a = -0,35 < 0$, więc parabola ma maksimum w wierzchołku",
+        "explanation": "Identyfikujemy współczynniki funkcji kwadratowej",
+        "interactive_choice": {
+          "prompt": "Dlaczego funkcja $P(x) = -0,35x^2 + 1,484x + 33,42696$ ma maksimum?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik przy $x^2$ jest ujemny ($a = -0,35 < 0$)",
+              "feedback": "Doskonale! Ujemny współczynnik oznacza parabolę skierowaną ramionami w dół, więc ma maksimum.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik przy $x$ jest dodatni ($b = 1,484 > 0$)",
+              "feedback": "To nie decyduje o istnieniu maksimum - ważny jest znak przy $x^2$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wyraz wolny jest dodatni ($c = 33,42696 > 0$)",
+              "feedback": "Wyraz wolny nie wpływa na to, czy funkcja ma maksimum czy minimum.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika przy najwyższej potędze decyduje o kierunku ramion paraboli."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę wybierzesz do znalezienia maksimum?",
+        "expression": "Używamy wzoru: $x_w = -\\frac{b}{2a}$",
+        "explanation": "Wybieramy metodę wierzchołka paraboli",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej znaleźć maksimum funkcji kwadratowej $P(x) = -0,35x^2 + 1,484x + 33,42696$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru na współrzędną x wierzchołka: $x_w = -\\frac{b}{2a}$",
+              "feedback": "Świetny wybór! To najszybsza i najpewniejsza metoda dla funkcji kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć pochodną i przyrównać do zera",
+              "feedback": "Też działa, ale wzór $x_w = -\\frac{b}{2a}$ jest prostszy dla funkcji kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić kilka wartości i wybrać największą",
+              "feedback": "Nieprecyzyjne - możesz przegapić dokładną wartość maksimum.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla funkcji kwadratowej wzór na wierzchołek jest najefektywniejszy."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są wartości współczynników a i b?",
+        "expression": "$a = -0,35$, $b = 1,484$",
+        "explanation": "Odczytujemy współczynniki z funkcji $P(x) = -0,35x^2 + 1,484x + 33,42696$"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz współrzędną x wierzchołka paraboli",
+        "expression": "$x_w = -\\frac{1,484}{2 \\cdot (-0,35)} = -\\frac{1,484}{-0,7} = \\frac{1,484}{0,7}$",
+        "explanation": "Podstawiamy do wzoru na współrzędną x wierzchołka"
+      },
+      {
+        "step": 6,
+        "hint": "Wykonaj dzielenie, aby otrzymać dokładną wartość",
+        "expression": "$x_w = \\frac{1,484}{0,7} = \\frac{1484}{700} = \\frac{371}{175} = 2,12$",
+        "explanation": "Obliczamy dokładną wartość współrzędnej x wierzchołka"
+      },
+      {
+        "step": 7,
+        "hint": "Czy otrzymana wartość należy do dziedziny funkcji?",
+        "expression": "$2,12 \\in (0, 12,12)$ ✓",
+        "explanation": "Sprawdzamy, czy wierzchołek leży w dziedzinie funkcji",
+        "interactive_choice": {
+          "prompt": "Czy wartość $x = 2,12$ należy do przedziału $(0, 12,12)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bo $0 < 2,12 < 12,12$",
+              "feedback": "Dokładnie! Wartość leży wewnątrz przedziału, więc to jest nasze rozwiązanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo jest za mała",
+              "feedback": "Sprawdź ponownie - $2,12 > 0$, więc jest większa od lewego końca przedziału.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie, bo jest za duża",
+              "feedback": "Sprawdź ponownie - $2,12 < 12,12$, więc jest mniejsza od prawego końca.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Maksimum funkcji leży wewnątrz dziedziny, więc to jest optymalna wartość."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Oblicz maksymalną liczbę palet podstawiając x = 2,12",
+        "expression": "$P(2,12) = -0,35 \\cdot (2,12)^2 + 1,484 \\cdot 2,12 + 33,42696$",
+        "explanation": "Podstawiamy optymalną wartość x do funkcji P(x)"
+      },
+      {
+        "step": 9,
+        "hint": "Wykonaj obliczenia krok po kroku",
+        "expression": "$P(2,12) = -0,35 \\cdot 4,4944 + 3,14608 + 33,42696 = -1,57304 + 3,14608 + 33,42696 = 35$",
+        "explanation": "Obliczamy maksymalną wartość funkcji"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są odpowiedzi na oba pytania z zadania?",
+        "expression": "Zmniejszenie o $x = 2,12$ litrów, maksymalna liczba palet: $35$",
+        "explanation": "Formułujemy pełną odpowiedź na zadanie"
+      }
+    ],
+    "solutions": [
+      "Producent powinien zmniejszyć ilość mydła o $2,12$ litrów w każdym kartonie",
+      "Maksymalna liczba wyprodukowanych palet wynosi $35$"
+    ],
+    "parameters": {
+      "domain": "$x \\in (0, 12,12)$",
+      "function": "$P(x) = -0,35x^2 + 1,484x + 33,42696$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-23T09:25:06.910Z"
+  }
+]

@@ -136,15 +136,33 @@
       {
         "step": 10,
         "hint": "Czy można uprościć ułamek $\\frac{3294720}{6561}$?",
-        "expression": "$\\frac{3294720}{6561} = \\frac{3294720}{6561} = 502.\\overline{285714}... \\approx \\frac{3294720}{6561}$",
-        "explanation": "Sprawdzamy czy ułamek można uprościć - okazuje się, że jest w najprostszej postaci"
+        "expression": "Sprawdzamy NWD licznika i mianownika",
+        "explanation": "Szukamy wspólnych dzielników do uproszczenia ułamka"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są rozkłady na czynniki pierwsze?",
+        "expression": "$3294720 = 2^9 \\cdot 3^2 \\cdot 5 \\cdot 11 \\cdot 13$ oraz $6561 = 3^8$",
+        "explanation": "Rozkładamy licznik (uwzględniając że $3294720 = 12870 \\cdot 256$) i mianownik"
+      },
+      {
+        "step": 12,
+        "hint": "Jaki jest NWD(3294720, 6561)?",
+        "expression": "$\\text{NWD}(3294720, 6561) = 3^2 = 9$",
+        "explanation": "Wspólny czynnik to $3^2 = 9$"
+      },
+      {
+        "step": 13,
+        "hint": "Jak uprościć ułamek dzieląc przez NWD?",
+        "expression": "$\\frac{3294720}{6561} = \\frac{3294720 : 9}{6561 : 9} = \\frac{366080}{729}$",
+        "explanation": "Dzielimy licznik i mianownik przez 9 otrzymując ułamek w najprostszej postaci"
       }
     ],
     "solutions": [
-      "$\\frac{3294720}{6561} \\cdot x^8$"
+      "$\\frac{366080}{729} \\cdot x^8$"
     ],
     "parameters": {
-      "coefficient": "$a = \\frac{3294720}{6561}$",
+      "coefficient": "$a = \\frac{366080}{729}$",
       "exponent": "$n = 8$"
     },
     "validation": {
@@ -152,7 +170,7 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 10,
+        "totalSteps": 13,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
@@ -1302,14 +1320,14 @@
       {
         "step": 7,
         "hint": "Jak rozmieścić pozostałe cyfry gdy pierwsza to '2'?",
-        "expression": "Na 7 pozycjach: 1 cyfra '2', 3 cyfry '3', 3 inne cyfry (nie 0, 2, 3)",
-        "explanation": "Pozostałe 3 pozycje wypełniamy cyframi z zbioru {1, 4, 5, 6, 7, 8, 9}"
+        "expression": "Na 7 pozycjach: 1 cyfra '2', 3 cyfry '3', 3 inne cyfry",
+        "explanation": "Pozostałe 3 pozycje wypełniamy cyframi z zbioru {0, 1, 4, 5, 6, 7, 8, 9} (0 może występować na pozycjach 2-8)"
       },
       {
         "step": 8,
         "hint": "Ile sposobów wyboru 3 cyfr z 7 dostępnych?",
-        "expression": "Wybór 3 cyfr z {1, 4, 5, 6, 7, 8, 9}: $7^3 = 343$ sposobów",
-        "explanation": "Każdą z 3 pozycji można wypełnić na 7 sposobów (cyfry mogą się powtarzać)"
+        "expression": "Wybór 3 cyfr z {0, 1, 4, 5, 6, 7, 8, 9}: $8^3 = 512$ sposobów",
+        "explanation": "Każdą z 3 pozycji można wypełnić na 8 sposobów (cyfry mogą się powtarzać, 0 dozwolone)"
       },
       {
         "step": 9,
@@ -1344,7 +1362,7 @@
       {
         "step": 10,
         "hint": "Ile wynosi przypadek 1 łącznie?",
-        "expression": "Przypadek 1: $140 \\cdot 343 = 48020$",
+        "expression": "Przypadek 1: $140 \\cdot 512 = 71680$",
         "explanation": "Mnożymy liczbę rozmieszczenia przez liczbę wypełnień pozostałych pozycji"
       },
       {
@@ -1356,7 +1374,7 @@
       {
         "step": 12,
         "hint": "Jak obliczyć rozmieszczenie dla przypadku 2?",
-        "expression": "$\\binom{7}{2} \\cdot \\binom{5}{2} \\cdot 7^3 = 21 \\cdot 10 \\cdot 343 = 72030$",
+        "expression": "$\\binom{7}{2} \\cdot \\binom{5}{2} \\cdot 8^3 = 21 \\cdot 10 \\cdot 512 = 107520$",
         "explanation": "Wybieramy 2 pozycje dla '2', 2 z pozostałych 5 dla '3', resztę wypełniamy dowolnie"
       },
       {
@@ -1368,42 +1386,42 @@
       {
         "step": 14,
         "hint": "Jak obliczyć przypadek 3?",
-        "expression": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2 = 7 \\cdot 21 \\cdot 10 \\cdot 36 = 52920$",
-        "explanation": "7 wyborów pierwszej cyfry, rozmieszczenie cyfr 2 i 3, wypełnienie 2 pozostałych pozycji",
+        "expression": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 8^2 = 7 \\cdot 21 \\cdot 10 \\cdot 64 = 94080$",
+        "explanation": "7 wyborów pierwszej cyfry, rozmieszczenie cyfr 2 i 3, wypełnienie 2 pozostałych pozycji z {0,1,4,5,6,7,8,9}",
         "interactive_choice": {
           "prompt": "Jak obliczyć liczbę sposobów gdy pierwsza cyfra to jedna z {1,4,5,6,7,8,9}?",
           "options": [
             {
               "id": "A",
-              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2$",
-              "feedback": "Prawie! Ale pozostałe 2 pozycje wypełniamy z 6 cyfr (bez 2,3 i bez pierwszej).",
+              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 7^2$",
+              "feedback": "Błąd! Pozostałe 2 pozycje wypełniamy z 8 cyfr {0,1,4,5,6,7,8,9}, nie z 7.",
               "is_correct": false
             },
             {
               "id": "B",
               "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 7^2$",
-              "feedback": "Nie - pozostałe pozycje nie mogą zawierać cyfr 2 i 3, więc mamy mniej opcji.",
+              "feedback": "Nie - pozostałe pozycje wypełniamy z 8 cyfr {0,1,4,5,6,7,8,9}, a nie z 7.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 6^2$",
-              "feedback": "Tak! 7 wyborów pierwszej cyfry, rozmieszczenie 2 i 3, wypełnienie reszty cyframi {0,1,4,5,6,7,8,9} minus pierwsza.",
+              "text": "$7 \\cdot \\binom{7}{2} \\cdot \\binom{5}{3} \\cdot 8^2$",
+              "feedback": "Tak! 7 wyborów pierwszej cyfry, rozmieszczenie 2 i 3, wypełnienie reszty cyframi z {0,1,4,5,6,7,8,9}.",
               "is_correct": true
             }
           ],
-          "explanation_after": "Pierwsza cyfra: 7 opcji. Pozostałe 2 pozycje: cyfry różne od 2,3 i różne od pierwszej cyfry."
+          "explanation_after": "Pierwsza cyfra: 7 opcji. Pozostałe 2 pozycje: dowolne cyfry z {0,1,4,5,6,7,8,9}."
         }
       },
       {
         "step": 15,
         "hint": "Jaka jest suma wszystkich przypadków?",
-        "expression": "$48020 + 72030 + 52920 = 172970$",
+        "expression": "$71680 + 107520 + 94080 = 273280$",
         "explanation": "Dodajemy wyniki ze wszystkich trzech przypadków"
       }
     ],
     "solutions": [
-      "172970"
+      "273280"
     ],
     "parameters": {
       "constraints": "Liczba ośmiocyfrowa, dokładnie 2 cyfry '2', dokładnie 3 cyfry '3'"

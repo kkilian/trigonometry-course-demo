@@ -5,7 +5,7 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
-import maturaProblems from '../data/matura/marzec2025r/maturamarzec2025_multistep.json';
+import maturaMarzec2025PodstawaProblems from '../data/matura/podstawa/marzec2025podstawa/maturamarzec2025podstawa_multistep.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -80,11 +80,11 @@ const WelcomeScreen = ({ onSelectMode }) => {
     },
     {
       id: 'matura-2025-topics',
-      title: 'Matura 2025',
-      description: 'Wszystkie sesje egzaminacyjne 2025 - marzec, maj, czerwiec',
-      problemCount: maturaProblems.length,
+      title: 'Matura 2025 - Poziom podstawowy',
+      description: 'Wszystkie sesje egzaminacyjne 2025 - poziom podstawowy',
+      problemCount: maturaMarzec2025PodstawaProblems.length,
       hasSubmenu: true,
-      topicsCount: 3,
+      topicsCount: 5,
       isNew: true
     },
     {
