@@ -45,6 +45,7 @@ import rationalEquationsWordProblems from '../data/rational-equations-word-probl
 import statystykaProblems from '../data/statystyka-problems.json';
 import maturaMarzec2025PodstawaProblems from '../data/matura/podstawa/marzec2025podstawa/maturamarzec2025podstawa_multistep.json';
 import maturaKwiecien2025PodstawaProblems from '../data/matura/podstawa/kwiecien2025podstawa/maturakwiecien2025podstawa_multistep.json';
+import maturaMaj2025PodstawaProblems from '../data/matura/podstawa/maj2025podstawa/maturamaj2025podstawa_multistep.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -85,6 +86,7 @@ const TrigonometryCourse = () => {
   const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
   const [completedMaturaMarzec2025PodstawaProblems, setCompletedMaturaMarzec2025PodstawaProblems] = useState(new Set());
   const [completedMaturaKwiecien2025PodstawaProblems, setCompletedMaturaKwiecien2025PodstawaProblems] = useState(new Set());
+  const [completedMaturaMaj2025PodstawaProblems, setCompletedMaturaMaj2025PodstawaProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -135,6 +137,7 @@ const TrigonometryCourse = () => {
     if (mode === 'statystyka') return statystykaProblems;
     if (mode === 'matura-marzec-2025-podstawa') return maturaMarzec2025PodstawaProblems;
     if (mode === 'matura-kwiecien-2025-podstawa') return maturaKwiecien2025PodstawaProblems;
+    if (mode === 'matura-maj-2025-podstawa') return maturaMaj2025PodstawaProblems;
     return [];
   };
   
@@ -166,6 +169,7 @@ const TrigonometryCourse = () => {
     if (mode === 'kombinatoryka-rozszerzenie') return completedKombinatorykRozszerzenieProblems;
     if (mode === 'matura-marzec-2025-podstawa') return completedMaturaMarzec2025PodstawaProblems;
     if (mode === 'matura-kwiecien-2025-podstawa') return completedMaturaKwiecien2025PodstawaProblems;
+    if (mode === 'matura-maj-2025-podstawa') return completedMaturaMaj2025PodstawaProblems;
     return completedPowersProblems;
   };
   
@@ -222,6 +226,8 @@ const TrigonometryCourse = () => {
       setCompletedMaturaMarzec2025PodstawaProblems(newSet);
     } else if (mode === 'matura-kwiecien-2025-podstawa') {
       setCompletedMaturaKwiecien2025PodstawaProblems(newSet);
+    } else if (mode === 'matura-maj-2025-podstawa') {
+      setCompletedMaturaMaj2025PodstawaProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -400,6 +406,12 @@ const TrigonometryCourse = () => {
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
+    if (mode === 'matura-maj-2025-podstawa') {
+      return {
+        title: 'Matura - Maj 2025 Podstawa',
+        subtitle: `${problems.length} zadań krok po kroku`
+      };
+    }
     return {
       title: '',
       subtitle: ''
@@ -500,6 +512,16 @@ const TrigonometryCourse = () => {
       }
     }
 
+    // Load matura maj 2025 podstawa progress
+    const savedMaturaMaj2025Podstawa = localStorage.getItem('completedMaturaMaj2025PodstawaProblems');
+    if (savedMaturaMaj2025Podstawa) {
+      try {
+        setCompletedMaturaMaj2025PodstawaProblems(new Set(JSON.parse(savedMaturaMaj2025Podstawa)));
+      } catch (e) {
+        console.error('Error loading matura maj 2025 podstawa progress:', e);
+      }
+    }
+
   }, []);
 
   // Save powers progress
@@ -546,6 +568,11 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedMaturaKwiecien2025PodstawaProblems', JSON.stringify([...completedMaturaKwiecien2025PodstawaProblems]));
   }, [completedMaturaKwiecien2025PodstawaProblems]);
+
+  // Save matura maj 2025 podstawa progress
+  useEffect(() => {
+    localStorage.setItem('completedMaturaMaj2025PodstawaProblems', JSON.stringify([...completedMaturaMaj2025PodstawaProblems]));
+  }, [completedMaturaMaj2025PodstawaProblems]);
 
 
   const handleSelectProblem = (problem) => {
@@ -842,6 +869,15 @@ const TrigonometryCourse = () => {
         />
       ) : mode === 'matura-kwiecien-2025-podstawa' ? (
         // Special handling for matura kwiecien - show start here screen instead of problem list
+        <MaturaStartHere
+          problems={problems}
+          onSelectProblem={handleSelectProblem}
+          completedProblems={getCurrentCompleted()}
+          onBack={() => setMode('matura-2025-topics')}
+          examTitle={getSectionInfo().title}
+        />
+      ) : mode === 'matura-maj-2025-podstawa' ? (
+        // Special handling for matura maj - show start here screen instead of problem list
         <MaturaStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}

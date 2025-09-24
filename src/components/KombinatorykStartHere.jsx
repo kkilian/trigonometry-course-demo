@@ -8,7 +8,15 @@ const KombinatorykStartHere = ({
   onBack
 }) => {
   const [suggestedProblems, setSuggestedProblems] = useState([]);
-  const [showAllProblems, setShowAllProblems] = useState(false);
+  const [showAllProblems, setShowAllProblems] = useState(() => {
+    try {
+      const saved = localStorage.getItem('kombinatoryka-show-all-problems');
+      return saved ? JSON.parse(saved) : false;
+    } catch (e) {
+      console.error('Error loading view preference:', e);
+      return false;
+    }
+  });
 
   // Load suggested problems from localStorage
   useEffect(() => {
@@ -27,6 +35,15 @@ const KombinatorykStartHere = ({
       }
     }
   }, [problems, completedProblems]);
+
+  // Save view preference to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('kombinatoryka-show-all-problems', JSON.stringify(showAllProblems));
+    } catch (e) {
+      console.error('Error saving view preference:', e);
+    }
+  }, [showAllProblems]);
 
   // Determine which problems to show based on progress
   const problemsToShow = useMemo(() => {

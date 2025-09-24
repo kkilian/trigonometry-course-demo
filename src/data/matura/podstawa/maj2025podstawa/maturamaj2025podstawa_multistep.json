@@ -1,6 +1,6 @@
 [
   {
-    "id": "square_root_expression",
+    "id": "#2025-maj-1-2p",
     "topic": "Przekształcenia wyrażeń z pierwiastkami",
     "difficulty": 3,
     "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $(\\sqrt{32}-\\sqrt{2})^{2}$ jest równa A. 16 B. 18 C. 30 D. 34",
@@ -113,7 +113,7 @@
     "timestamp": "2025-09-23T09:25:43.702Z"
   },
   {
-    "id": "fraction_powers_simplification",
+    "id": "#2025-maj-2-2p",
     "topic": "Potęgi i ich właściwości",
     "difficulty": 2,
     "statement": "Liczba $\\frac{5^{12}+5^{13}+5^{14}}{5^{12}}$ jest równa",
@@ -219,10 +219,11 @@
     "timestamp": "2025-09-23T09:26:01.409Z"
   },
   {
-    "id": "logarithm_properties_choice",
+    "id": "#2025-maj-3-2p",
     "topic": "Właściwości logarytmów",
     "difficulty": 3,
     "statement": "Liczba $\\log_3 108 - 2\\log_3 2$ jest równa: A. 3, B. 9, C. $\\log_3 104$, D. $2\\log_3 54$",
+    "image": "/zadanie3.png",
     "steps": [
       {
         "step": 1,
@@ -353,7 +354,7 @@
     "timestamp": "2025-09-23T09:26:25.254Z"
   },
   {
-    "id": "algebraic_identity_expansion",
+    "id": "#2025-maj-4-2p",
     "topic": "Wzory skróconego mnożenia",
     "difficulty": 3,
     "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej $x$ wartość wyrażenia $(3x+2)^2-(2x-3)^2$ jest równa wartości wyrażenia A. $5x^2-5$ B. $5x^2+13$ C. $5x^2+24x-5$ D. $5x^2+24x-13$",
@@ -486,7 +487,7 @@
     "timestamp": "2025-09-23T09:26:59.246Z"
   },
   {
-    "id": "odd_number_divisibility_proof",
+    "id": "#2025-maj-5-2p",
     "topic": "Dowody podzielności",
     "difficulty": 4,
     "statement": "Wykaż, że dla każdej nieparzystej liczby naturalnej $n$ liczba $3n^2 + 2n + 7$ jest podzielna przez 4.",
@@ -635,7 +636,7 @@
     "timestamp": "2025-09-23T09:27:33.123Z"
   },
   {
-    "id": "linear_inequality_with_choice",
+    "id": "#2025-maj-6-2p",
     "topic": "Nierówności liniowe",
     "difficulty": 2,
     "statement": "Dana jest nierówność $3-2(1-2x) \\geq 2x-17$. Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność?",
@@ -803,7 +804,7 @@
     "timestamp": "2025-09-23T09:28:04.473Z"
   },
   {
-    "id": "product_equation_zeros",
+    "id": "#2025-maj-7-2p",
     "topic": "Równania iloczynowe",
     "difficulty": 2,
     "statement": "Równanie $2x(x+3)(x^2+25)=0$ w zbiorze liczb rzeczywistych ma dokładnie:",
@@ -936,7 +937,7 @@
     "timestamp": "2025-09-23T09:28:29.155Z"
   },
   {
-    "id": "rational_expression_simplification",
+    "id": "#2025-maj-8-2p",
     "topic": "Upraszczanie wyrażeń wymiernych",
     "difficulty": 3,
     "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej $x$ różnej od $(-2)$ oraz różnej od $0$ wartość wyrażenia $\\frac{x^{2}+x}{x^{2}+4 x+4} \\cdot \\frac{x+2}{x}$ jest równa wartości wyrażenia",
@@ -1072,7 +1073,7 @@
     "timestamp": "2025-09-23T09:29:00.997Z"
   },
   {
-    "id": "budget_allocation_system",
+    "id": "#2025-maj-9-2p",
     "topic": "Układy równań liniowych - zadania tekstowe",
     "difficulty": 3,
     "statement": "Zarząd firmy wydzielił z budżetu kwotę 1200000 złotych łącznie na projekty badawcze dla dwóch zespołów: A i B. W pierwszym półroczu realizacji tych projektów oba zespoły wykorzystały łącznie 146700 złotych - zespół A wykorzystał 13% przyznanych mu środków, a zespół B wykorzystał 11% przyznanych mu środków. Oblicz kwotę przyznaną zespołowi A na realizację projektu badawczego.",
@@ -1254,10 +1255,11 @@
     "timestamp": "2025-09-23T09:29:42.369Z"
   },
   {
-    "id": "quadratic_inequality_3_2x2_1_11x",
+    "id": "#2025-maj-10-2p",
     "topic": "Nierówności kwadratowe",
     "difficulty": 4,
     "statement": "Rozwiąż nierówność $3(2x^2 + 1) < 11x$. Zapisz obliczenia.",
+    "image": "/zadanie10.png",
     "steps": [
       {
         "step": 1,
@@ -1376,10 +1378,11 @@
     "timestamp": "2025-09-23T09:30:13.393Z"
   },
   {
-    "id": "piecewise_function_analysis",
+    "id": "#2025-maj-11-2p",
     "topic": "Funkcje przedziałami określone",
     "difficulty": 3,
     "statement": "Funkcja f jest określona następująco: $f(x) = \\begin{cases} x+5 & \\text{dla } x \\in [-4,-2] \\\\ 3 & \\text{dla } x \\in (-2,2] \\\\ -3x+9 & \\text{dla } x \\in (2,4) \\end{cases}$. Uzupełnij zdania wpisując odpowiednie przedziały: 1. Dziedziną funkcji f jest przedział ___. 2. Zbiorem wartości funkcji f jest przedział ___. 3. Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartości dodatnie, jest przedział ___. 4. Zbiorem wszystkich rozwiązań równania $f(x) = 3$ jest przedział ___.",
+    "image": "/zad11.png",
     "steps": [
       {
         "step": 1,
@@ -1548,10 +1551,11 @@
     "timestamp": "2025-09-23T09:31:08.794Z"
   },
   {
-    "id": "quadratic_canonical_form",
+    "id": "#2025-maj-12-2p",
     "topic": "Funkcje kwadratowe - postać kanoniczna",
     "difficulty": 3,
     "statement": "W kartezjańskim układzie współrzędnych (x, y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f. Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś Oy w punkcie o współrzędnych (0,3). Wyznacz wzór funkcji f w postaci kanonicznej. Zapisz obliczenia.",
+    "image": "/zadanie12.png",
     "steps": [
       {
         "step": 1,
@@ -1564,253 +1568,236 @@
         "hint": "Którą postać funkcji kwadratowej najlepiej wykorzystać mając wierzchołek?",
         "expression": "$f(x) = a(x - 3)^2 + 6$",
         "explanation": "Podstawiamy współrzędne wierzchołka do postaci kanonicznej",
-        "why": "W postaci kanonicznej $f(x) = a(x - p)^2 + q$ wierzchołek ma współrzędne $(p, q)$. To daje nam od razu dwa parametry.",
+        "why": "W postaci kanonicznej $f(x) = a(x - p)^2 + q$ wierzchołek ma współrzędne $(p, q)$",
         "interactive_choice": {
-          "prompt": "Mając współrzędne wierzchołka $(3, 6)$, którą postać funkcji wybierzesz?",
+          "prompt": "Mając współrzędne wierzchołka (3,6), którą postać funkcji kwadratowej wybierzesz?",
           "options": [
             {
               "id": "A",
               "text": "Postać ogólną $f(x) = ax^2 + bx + c$",
-              "feedback": "Możliwe, ale trzeba będzie wyznaczyć 3 parametry - to więcej pracy.",
+              "feedback": "Możliwe, ale trzeba będzie wyznaczyć 3 parametry - bardziej pracochłonne",
               "is_correct": false
             },
             {
               "id": "B",
               "text": "Postać kanoniczną $f(x) = a(x - p)^2 + q$",
-              "feedback": "Doskonały wybór! Znając wierzchołek $(p, q) = (3, 6)$ masz już gotowe $p$ i $q$.",
+              "feedback": "Doskonały wybór! Znając wierzchołek $(p,q) = (3,6)$ masz od razu 2 parametry",
               "is_correct": true
             },
             {
               "id": "C",
               "text": "Postać iloczynową $f(x) = a(x - x_1)(x - x_2)$",
-              "feedback": "Nie znamy miejsc zerowych, więc ta postać nie jest najlepsza.",
+              "feedback": "Nie znamy miejsc zerowych, więc ta postać nie jest najlepsza",
               "is_correct": false
             }
           ],
-          "explanation_after": "Postać kanoniczna jest idealna gdy znamy wierzchołek - od razu mamy $p = 3$ i $q = 6$."
+          "explanation_after": "Postać kanoniczna jest idealna gdy znamy wierzchołek - od razu wiemy że $p = 3$ i $q = 6$"
         }
       },
       {
         "step": 3,
-        "hint": "Jak wykorzystać informację o przecięciu z osią Oy?",
-        "expression": "Punkt $(0, 3)$ należy do wykresu, więc $f(0) = 3$",
-        "explanation": "Przecięcie z osią Oy oznacza że dla $x = 0$ mamy $y = 3$"
+        "hint": "Jaki parametr pozostał do wyznaczenia?",
+        "expression": "Pozostaje wyznaczyć parametr $a$",
+        "explanation": "Parametr $a$ określa kierunek otwarcia i 'szerokość' paraboli"
       },
       {
         "step": 4,
-        "hint": "Co otrzymasz podstawiając $x = 0$ do wzoru $f(x) = a(x - 3)^2 + 6$?",
-        "expression": "$f(0) = a(0 - 3)^2 + 6 = a \\cdot 9 + 6 = 9a + 6$",
-        "explanation": "Podstawiamy $x = 0$ i obliczamy",
+        "hint": "Jak wykorzystać informację o przecięciu z osią Oy?",
+        "expression": "$f(0) = 3$",
+        "explanation": "Wykorzystujemy warunek przecięcia z osią Oy",
         "interactive_choice": {
-          "prompt": "Jak obliczyć $f(0)$ dla funkcji $f(x) = a(x - 3)^2 + 6$?",
+          "prompt": "Parabola przecina oś Oy w punkcie (0,3). Co to oznacza dla funkcji?",
           "options": [
             {
               "id": "A",
-              "text": "$f(0) = a(0 - 3)^2 + 6 = 9a + 6$",
-              "feedback": "Świetnie! Dokładnie tak - $(0-3)^2 = (-3)^2 = 9$.",
+              "text": "Że $f(0) = 3$",
+              "feedback": "Dokładnie! Przecięcie z osią Oy to punkt gdzie $x = 0$",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "$f(0) = a(0)^2 + 6 = 6$",
-              "feedback": "Błąd - nie możesz pominąć $-3$ w nawiasie. To $(0-3)^2$, nie $0^2$.",
+              "text": "Że $f(3) = 0$",
+              "feedback": "Nie - to byłoby przecięcie z osią Ox w punkcie (3,0)",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "$f(0) = a(-3)^2 + 6 = -9a + 6$",
-              "feedback": "Prawie dobrze, ale $(-3)^2 = 9$, nie $-9$. Kwadrat liczby ujemnej jest dodatni.",
+              "text": "Że funkcja ma minimum w punkcie (0,3)",
+              "feedback": "Nie - minimum (lub maksimum) to wierzchołek, który jest w (3,6)",
               "is_correct": false
             }
           ],
-          "explanation_after": "Podstawiając $x = 0$: $(0-3)^2 = (-3)^2 = 9$, więc $f(0) = 9a + 6$."
+          "explanation_after": "Przecięcie z osią Oy oznacza że gdy $x = 0$, to $y = f(0) = 3$"
         }
       },
       {
         "step": 5,
-        "hint": "Jakie równanie możesz ułożyć wiedząc że $f(0) = 3$?",
-        "expression": "$9a + 6 = 3$",
-        "explanation": "Przyrównujemy obliczoną wartość do znanej wartości funkcji w punkcie $(0, 3)$"
+        "hint": "Jak podstawić $x = 0$ do wzoru funkcji?",
+        "expression": "$f(0) = a(0 - 3)^2 + 6 = a \\cdot 9 + 6 = 9a + 6$",
+        "explanation": "Podstawiamy $x = 0$ do wzoru $f(x) = a(x - 3)^2 + 6$"
       },
       {
         "step": 6,
-        "hint": "Jak rozwiązać równanie $9a + 6 = 3$?",
-        "expression": "$9a = 3 - 6 = -3$, więc $a = -\\frac{1}{3}$",
-        "explanation": "Rozwiązujemy równanie liniowe względem parametru $a$"
+        "hint": "Jakie równanie otrzymujemy z warunku $f(0) = 3$?",
+        "expression": "$9a + 6 = 3$",
+        "explanation": "Przyrównujemy wartość funkcji do 3"
       },
       {
         "step": 7,
-        "hint": "Jaki jest ostateczny wzór funkcji w postaci kanonicznej?",
-        "expression": "$f(x) = -\\frac{1}{3}(x - 3)^2 + 6$",
-        "explanation": "Podstawiamy wyznaczoną wartość parametru $a$ do wzoru funkcji",
+        "hint": "Jak rozwiązać równanie $9a + 6 = 3$?",
+        "expression": "$9a = -3$",
+        "explanation": "Odejmujemy 6 od obu stron równania",
         "interactive_choice": {
-          "prompt": "Jak zapisać funkcję podstawiając $a = -\\frac{1}{3}$ do wzoru $f(x) = a(x - 3)^2 + 6$?",
+          "prompt": "Jaki będzie następny krok w rozwiązywaniu równania $9a + 6 = 3$?",
           "options": [
             {
               "id": "A",
-              "text": "$f(x) = -\\frac{1}{3}(x - 3)^2 + 6$",
-              "feedback": "Idealnie! To jest postać kanoniczna z wszystkimi parametrami.",
+              "text": "Odjąć 6 od obu stron",
+              "feedback": "Świetnie! To da $9a = -3$",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "$f(x) = \\frac{1}{3}(x - 3)^2 + 6$",
-              "feedback": "Uwaga na znak! Mieliśmy $a = -\\frac{1}{3}$, nie $+\\frac{1}{3}$.",
+              "text": "Podzielić obie strony przez 9",
+              "feedback": "Najpierw trzeba pozbyć się stałej 6",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "$f(x) = -\\frac{1}{3}(x + 3)^2 + 6$",
-              "feedback": "Błąd znaku w nawiasie - wierzchołek ma $x = 3$, więc to $(x-3)^2$.",
+              "text": "Dodać 3 do obu stron",
+              "feedback": "To nie uprości równania - lepiej odjąć 6",
               "is_correct": false
             }
           ],
-          "explanation_after": "Podstawiając wszystkie parametry otrzymujemy pełny wzór w postaci kanonicznej."
+          "explanation_after": "Standardowo w równaniach liniowych najpierw eliminujemy stałe, potem dzielimy przez współczynnik"
         }
       },
       {
         "step": 8,
-        "hint": "Jak możesz sprawdzić poprawność wyniku?",
-        "expression": "Sprawdzenie: $f(0) = -\\frac{1}{3}(0-3)^2 + 6 = -\\frac{1}{3} \\cdot 9 + 6 = -3 + 6 = 3$ ✓",
-        "explanation": "Weryfikujemy czy funkcja rzeczywiście przechodzi przez punkt $(0, 3)$"
+        "hint": "Jaka jest wartość parametru $a$?",
+        "expression": "$a = -\\frac{3}{9} = -\\frac{1}{3}$",
+        "explanation": "Dzielimy obie strony przez 9 i upraszczamy ułamek"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest ostateczny wzór funkcji w postaci kanonicznej?",
+        "expression": "$f(x) = -\\frac{1}{3}(x - 3)^2 + 6$",
+        "explanation": "Podstawiamy wyznaczoną wartość $a = -\\frac{1}{3}$ do wzoru"
       }
     ],
     "solutions": [
       "$f(x) = -\\frac{1}{3}(x - 3)^2 + 6$"
     ],
     "parameters": {
-      "vertex": "$(3, 6)$",
-      "y_intercept": "$(0, 3)$"
+      "vertex": "(3, 6)",
+      "y_intercept": "(0, 3)"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 8,
+        "totalSteps": 9,
         "stepsWithWhy": 1,
         "stepsWithChoice": 3,
         "totalOptions": 9,
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T09:31:38.167Z"
+    "timestamp": "2025-09-23T14:29:34.708Z"
   },
   {
-    "id": "axis_of_symmetry_function",
-    "topic": "Oś symetrii funkcji",
+    "id": "#2025-maj-12.2-2p",
+    "topic": "Funkcje kwadratowe - oś symetrii",
     "difficulty": 2,
-    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Osią symetrii wykresu funkcji $f$ jest prosta o równaniu A. $x = 3$ B. $x = -3$ C. $y = 6$ D. $y = -6$",
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f. Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś Oy w punkcie o współrzędnych (0,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Osią symetrii wykresu funkcji f jest prosta o równaniu A. x=3 B. x=-3 C. y=6 D. y=-6",
     "steps": [
       {
         "step": 1,
-        "hint": "Czy mamy podany wzór funkcji f?",
-        "expression": "Brak wzoru funkcji $f$ w treści zadania",
-        "explanation": "Zadanie wymaga analizy bez podanego wzoru funkcji"
+        "hint": "Jakie informacje mamy o paraboli?",
+        "expression": "Wierzchołek: $(3, 6)$, punkt przecięcia z osią Oy: $(0, 3)$",
+        "explanation": "Znamy współrzędne wierzchołka i jeden punkt na paraboli"
       },
       {
         "step": 2,
-        "hint": "Jakie rodzaje osi symetrii może mieć wykres funkcji?",
-        "expression": "Funkcja może mieć tylko pionową oś symetrii postaci $x = a$",
-        "explanation": "Oś symetrii funkcji jest zawsze pionowa",
-        "why": "Pozioma oś symetrii oznaczałaby, że jeden argument ma dwie różne wartości funkcji, co przeczy definicji funkcji.",
+        "hint": "Co to jest oś symetrii paraboli?",
+        "expression": "Oś symetrii: prosta pionowa przez wierzchołek $(3, 6)$",
+        "explanation": "Oś symetrii paraboli to prosta pionowa przechodząca przez wierzchołek",
+        "why": "Każda parabola będąca wykresem funkcji kwadratowej ma oś symetrii równoległą do osi Oy.",
         "interactive_choice": {
-          "prompt": "Jakie rodzaje osi symetrii występują dla wykresów funkcji?",
+          "prompt": "Czym jest oś symetrii paraboli będącej wykresem funkcji kwadratowej?",
           "options": [
             {
               "id": "A",
-              "text": "Tylko pionowe (równoległe do osi y)",
-              "feedback": "Dokładnie! Funkcje mogą mieć tylko oś symetrii pionową.",
-              "is_correct": true
+              "text": "Prosta pozioma przechodząca przez wierzchołek",
+              "feedback": "Nie - to byłaby prosta y = stała, ale parabola nie jest symetryczna względem prostej poziomej",
+              "is_correct": false
             },
             {
               "id": "B",
-              "text": "Tylko poziome (równoległe do osi x)",
-              "feedback": "Nie - pozioma oś symetrii oznaczałaby, że dla jednego x są dwa różne y.",
-              "is_correct": false
+              "text": "Prosta pionowa przechodząca przez wierzchołek",
+              "feedback": "Dokładnie! Oś symetrii to prosta pionowa x = p, gdzie p to pierwsza współrzędna wierzchołka",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "Zarówno pionowe jak i poziome",
-              "feedback": "Nie - funkcja nie może mieć poziomej osi symetrii (naruszałoby definicję funkcji).",
+              "text": "Prosta przechodząca przez wierzchołek i punkt (0,3)",
+              "feedback": "Nie - oś symetrii paraboli jest zawsze prostą pionową lub poziomą",
               "is_correct": false
             }
           ],
-          "explanation_after": "Funkcja z definicji przyporządkowuje każdemu x dokładnie jedno y, więc nie może mieć poziomej osi symetrii."
+          "explanation_after": "Oś symetrii paraboli o osi pionowej to zawsze prosta pionowa przechodząca przez wierzchołek."
         }
       },
       {
         "step": 3,
-        "hint": "Które odpowiedzi reprezentują proste pionowe?",
-        "expression": "Opcje A: $x = 3$ i B: $x = -3$ to proste pionowe",
-        "explanation": "Eliminujemy opcje C i D jako niemożliwe dla funkcji",
-        "interactive_choice": {
-          "prompt": "Które z podanych równań opisują proste pionowe?",
-          "options": [
-            {
-              "id": "A",
-              "text": "A i B: $x = 3$ oraz $x = -3$",
-              "feedback": "Tak! To są proste pionowe - równoległe do osi y.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "C i D: $y = 6$ oraz $y = -6$",
-              "feedback": "Nie - to są proste poziome, równoległe do osi x.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Wszystkie cztery opcje",
-              "feedback": "Nie - opcje C i D to proste poziome, które nie mogą być osiami symetrii funkcji.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Proste $x = a$ są pionowe, proste $y = b$ są poziome."
-        }
+        "hint": "Jaka jest pierwsza współrzędna wierzchołka?",
+        "expression": "Pierwsza współrzędna wierzchołka: $x = 3$",
+        "explanation": "Z punktu $(3, 6)$ odczytujemy współrzędną x"
       },
       {
         "step": 4,
-        "hint": "Czy możemy określić konkretną oś symetrii bez wzoru funkcji?",
-        "expression": "Bez wzoru funkcji $f$ nie można jednoznacznie określić osi symetrii",
-        "explanation": "Zadanie wydaje się niekompletne - brakuje wzoru funkcji lub dodatkowych informacji"
-      },
-      {
-        "step": 5,
-        "hint": "Jakie założenie musimy przyjąć aby rozwiązać zadanie?",
-        "expression": "Poprawne odpowiedzi to A lub B (obie są teoretycznie możliwe)",
-        "explanation": "Bez dodatkowych informacji obie opcje A i B są matematycznie poprawne",
+        "hint": "Jak zapisać równanie prostej pionowej przechodzącej przez punkt o współrzędnej x = 3?",
+        "expression": "Równanie osi symetrii: $x = 3$",
+        "explanation": "Oś symetrii ma równanie x równa się pierwszej współrzędnej wierzchołka",
         "interactive_choice": {
-          "prompt": "Jak podejść do tego zadania bez wzoru funkcji?",
+          "prompt": "Które równanie opisuje prostą pionową przechodzącą przez wszystkie punkty o pierwszej współrzędnej równej 3?",
           "options": [
             {
               "id": "A",
-              "text": "Założyć, że to zadanie testowe sprawdzające wiedzę teoretyczną",
-              "feedback": "Prawdopodobnie tak - sprawdza czy wiesz, że funkcje mają tylko pionowe osie symetrii.",
+              "text": "$x = 3$",
+              "feedback": "Świetnie! To równanie prostej pionowej - wszystkie punkty mają tę samą współrzędną x",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Wybrać losowo spośród opcji A i B",
-              "feedback": "Nie najlepsze podejście - lepiej zastanowić się nad kontekstem zadania.",
+              "text": "$y = 3$",
+              "feedback": "To równanie prostej poziomej, nie pionowej",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Uznać zadanie za nierozwiązywalne",
-              "feedback": "Możliwe, ale prawdopodobnie brakuje części treści lub to test wiedzy teoretycznej.",
+              "text": "$x = -3$",
+              "feedback": "To prosta pionowa, ale przechodząca przez x = -3, nie przez wierzchołek",
               "is_correct": false
             }
           ],
-          "explanation_after": "Prawdopodobnie zadanie sprawdza czy rozumiesz, że funkcje mogą mieć tylko pionowe osie symetrii."
+          "explanation_after": "Prosta pionowa ma równanie x = stała, gdzie stała to współrzędna x wszystkich punktów na tej prostej."
         }
+      },
+      {
+        "step": 5,
+        "hint": "Która odpowiedź z podanych jest poprawna?",
+        "expression": "Odpowiedź A: $x = 3$",
+        "explanation": "Porównujemy z podanymi opcjami i wybieramy odpowiedź A"
       }
     ],
     "solutions": [
-      "A. $x = 3$ lub B. $x = -3$ (obie opcje są teoretycznie możliwe dla osi symetrii funkcji)"
+      "A. $x = 3$"
     ],
     "parameters": {
-      "note": "Zadanie wydaje się niekompletne - brakuje wzoru funkcji f lub dodatkowych informacji pozwalających na jednoznaczne określenie osi symetrii"
+      "vertex": "(3, 6)",
+      "y_intercept": "(0, 3)"
     },
     "validation": {
       "isValid": true,
@@ -1819,157 +1806,190 @@
       "stats": {
         "totalSteps": 5,
         "stepsWithWhy": 1,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 3
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
       }
     },
-    "timestamp": "2025-09-23T09:32:02.962Z"
+    "timestamp": "2025-09-23T14:29:53.445Z"
   },
   {
-    "id": "function_zeros_shift",
-    "topic": "Miejsca zerowe funkcji i przekształcenia",
-    "difficulty": 3,
-    "statement": "Funkcja g jest określona dla każdej liczby rzeczywistej x wzorem $g(x) = f(x) - 3$. Liczby $x_1$ oraz $x_2$ są różnymi miejscami zerowymi funkcji g. Uzupełnij zdanie. Wpisz odpowiednią liczbę w wykropkowanym miejscu, aby zdanie było prawdziwe. Suma $x_1 + x_2$ jest równa ......",
+    "id": "#2025-maj-12.3-2p",
+    "topic": "Funkcje kwadratowe - postać wierzchołkowa",
+    "difficulty": 4,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f. Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś Oy w punkcie o współrzędnych (0,3). Funkcja g jest określona dla każdej liczby rzeczywistej x wzorem $g(x) = f(x) - 3$. Liczby $x_1$ oraz $x_2$ są różnymi miejscami zerowymi funkcji g. Suma $x_1 + x_2$ jest równa",
     "steps": [
       {
         "step": 1,
-        "hint": "Co oznacza, że $x_1$ i $x_2$ są miejscami zerowymi funkcji g?",
-        "expression": "$g(x_1) = 0$ oraz $g(x_2) = 0$",
-        "explanation": "Miejsca zerowe to argumenty, dla których wartość funkcji wynosi zero"
+        "hint": "Jaką postać funkcji kwadratowej najlepiej wykorzystać mając wierzchołek?",
+        "expression": "$f(x) = a(x - 3)^2 + 6$",
+        "explanation": "Używamy postaci wierzchołkowej z wierzchołkiem (3,6)",
+        "why": "Postać wierzchołkowa $f(x) = a(x - p)^2 + q$ bezpośrednio wykorzystuje współrzędne wierzchołka (p,q).",
+        "interactive_choice": {
+          "prompt": "Którą postać funkcji kwadratowej wybierzesz znając wierzchołek (3,6)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać ogólną $f(x) = ax^2 + bx + c$",
+              "feedback": "Możliwe, ale trzeba będzie wyznaczyć 3 parametry - bardziej pracochłonne",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Postać wierzchołkową $f(x) = a(x - p)^2 + q$",
+              "feedback": "Doskonały wybór! Znamy już p = 3 i q = 6, zostaje tylko parametr a",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Postać iloczynową $f(x) = a(x - x_1)(x - x_2)$",
+              "feedback": "Nie znamy miejsc zerowych funkcji f, więc ta postać nie jest pomocna",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać wierzchołkowa jest idealna gdy znamy współrzędne wierzchołka."
+        }
       },
       {
         "step": 2,
-        "hint": "Jak podstawić wzór funkcji g do równań $g(x_1) = 0$ i $g(x_2) = 0$?",
-        "expression": "$f(x_1) - 3 = 0$ oraz $f(x_2) - 3 = 0$",
-        "explanation": "Podstawiamy $g(x) = f(x) - 3$ do warunków zerowania"
+        "hint": "Jak wyznaczyć parametr a używając punktu przecięcia z osią Oy?",
+        "expression": "$f(0) = 3$, więc $a(0 - 3)^2 + 6 = 3$",
+        "explanation": "Podstawiamy punkt (0,3) do wzoru funkcji"
       },
       {
         "step": 3,
-        "hint": "Do czego prowadzą równania $f(x_1) - 3 = 0$ i $f(x_2) - 3 = 0$?",
-        "expression": "$f(x_1) = 3$ oraz $f(x_2) = 3$",
-        "explanation": "Przekształcamy równania algebraicznie",
-        "interactive_choice": {
-          "prompt": "Co możemy wywnioskować z równań $f(x_1) - 3 = 0$ i $f(x_2) - 3 = 0$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "$f(x_1) = 3$ i $f(x_2) = 3$",
-              "feedback": "Dokładnie! Oba argumenty dają tę samą wartość funkcji f.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "$f(x_1) = -3$ i $f(x_2) = -3$",
-              "feedback": "Nie - jeśli $f(x) - 3 = 0$, to $f(x) = 3$, nie $-3$.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "$f(x_1) = 0$ i $f(x_2) = 0$",
-              "feedback": "Nie - to byłyby miejsca zerowe funkcji f, nie g.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Miejsca zerowe funkcji g to argumenty, dla których $f(x) = 3$."
-        }
+        "hint": "Jaką wartość ma parametr a?",
+        "expression": "$a \\cdot 9 + 6 = 3$, więc $9a = -3$, stąd $a = -\\frac{1}{3}$",
+        "explanation": "Rozwiązujemy równanie względem parametru a"
       },
       {
         "step": 4,
-        "hint": "Co oznacza geometrycznie równanie $f(x) = 3$?",
-        "expression": "Szukamy punktów przecięcia wykresu $y = f(x)$ z prostą $y = 3$",
-        "explanation": "Równanie $f(x) = 3$ to przecięcia wykresu funkcji z poziomą prostą",
-        "why": "To kluczowa interpretacja geometryczna - miejsca zerowe funkcji g odpowiadają przecięciom f z prostą y = 3."
+        "hint": "Jaki jest wzór funkcji f(x)?",
+        "expression": "$f(x) = -\\frac{1}{3}(x - 3)^2 + 6$",
+        "explanation": "Mamy pełny wzór funkcji f"
       },
       {
         "step": 5,
-        "hint": "Jaką informację potrzebujemy o funkcji f, żeby określić sumę $x_1 + x_2$?",
-        "expression": "Jeśli f ma oś symetrii $x = a$, to $x_1 + x_2 = 2a$",
-        "explanation": "Wykorzystujemy symetrię funkcji f",
-        "interactive_choice": {
-          "prompt": "Co musimy wiedzieć o funkcji f, aby wyznaczyć $x_1 + x_2$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Funkcja f musi być symetryczna względem pewnej prostej pionowej",
-              "feedback": "Świetnie! Jeśli f ma oś symetrii $x = a$, to $x_1 + x_2 = 2a$.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Funkcja f musi być rosnąca",
-              "feedback": "Nie - monotoniczność nie gwarantuje konkretnej sumy miejsc zerowych.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Funkcja f musi przechodzić przez początek układu",
-              "feedback": "Nie - położenie względem osi nie wpływa na sumę symetrycznych argumentów.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Dla funkcji symetrycznych względem prostej $x = a$, suma symetrycznych argumentów wynosi $2a$."
-        }
+        "hint": "Jak wyznaczyć funkcję g(x) = f(x) - 3?",
+        "expression": "$g(x) = -\\frac{1}{3}(x - 3)^2 + 6 - 3 = -\\frac{1}{3}(x - 3)^2 + 3$",
+        "explanation": "Odejmujemy 3 od funkcji f(x)"
       },
       {
         "step": 6,
-        "hint": "Jaka jest najczęstsza oś symetrii dla funkcji w zadaniach szkolnych?",
-        "expression": "Dla funkcji parzystej: $x_1 + x_2 = 2 \\cdot 0 = 0$",
-        "explanation": "Jeśli f jest funkcją parzystą, to oś symetrii to $x = 0$",
+        "hint": "Co oznacza geometrycznie przekształcenie g(x) = f(x) - 3?",
+        "expression": "Wierzchołek funkcji g ma współrzędne (3, 3)",
+        "explanation": "Funkcja g powstaje przez przesunięcie f o 3 jednostki w dół",
         "interactive_choice": {
-          "prompt": "Która oś symetrii jest najczęściej spotykana w zadaniach?",
+          "prompt": "Jak zmienia się wykres funkcji przy przekształceniu $g(x) = f(x) - 3$?",
           "options": [
             {
               "id": "A",
-              "text": "Oś symetrii $x = 0$ (funkcja parzysta)",
-              "feedback": "Bardzo prawdopodobne! Dla funkcji parzystej suma wynosi 0.",
-              "is_correct": true
+              "text": "Przesunięcie o 3 jednostki w lewo",
+              "feedback": "Nie - to byłoby $f(x+3)$. Tutaj odejmujemy od wartości funkcji",
+              "is_correct": false
             },
             {
               "id": "B",
-              "text": "Oś symetrii $x = 1$",
-              "feedback": "Możliwe, ale mniej typowe w podstawowych zadaniach.",
-              "is_correct": false
+              "text": "Przesunięcie o 3 jednostki w dół",
+              "feedback": "Dokładnie! Wierzchołek przesunie się z (3,6) do (3,3)",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "Oś symetrii $x = -1$",
-              "feedback": "Możliwe, ale rzadziej spotykane niż symetria względem osi y.",
+              "text": "Odbicie względem osi x",
+              "feedback": "Nie - to byłoby $-f(x)$. Tutaj tylko przesuwamy w pionie",
               "is_correct": false
             }
           ],
-          "explanation_after": "W większości zadań szkolnych funkcja f jest parzysta (symetryczna względem osi y)."
+          "explanation_after": "Odejmowanie stałej przesuwa wykres w dół o tę stałą."
         }
       },
       {
         "step": 7,
-        "hint": "Jaka jest odpowiedź na pytanie z zadania?",
-        "expression": "Suma $x_1 + x_2 = 0$",
-        "explanation": "Dla typowej funkcji parzystej suma miejsc zerowych funkcji g wynosi 0"
+        "hint": "Jak znaleźć miejsca zerowe funkcji g?",
+        "expression": "$g(x) = 0$, więc $-\\frac{1}{3}(x - 3)^2 + 3 = 0$",
+        "explanation": "Przyrównujemy funkcję g do zera"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać równanie z kwadratem?",
+        "expression": "$-\\frac{1}{3}(x - 3)^2 = -3$",
+        "explanation": "Przenosimy 3 na prawą stronę"
+      },
+      {
+        "step": 9,
+        "hint": "Co otrzymasz po pomnożeniu przez -3?",
+        "expression": "$(x - 3)^2 = 9$",
+        "explanation": "Mnożymy obie strony przez -3"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są rozwiązania równania $(x - 3)^2 = 9$?",
+        "expression": "$x - 3 = 3$ lub $x - 3 = -3$",
+        "explanation": "Pierwiastkujemy obie strony, pamiętając o ±",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać równanie $(x - 3)^2 = 9$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $x - 3 = 3$, więc $x = 6$",
+              "feedback": "Zapomniałeś o drugim rozwiązaniu! Pierwiastek z 9 to ±3",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$x - 3 = ±3$, więc $x = 6$ lub $x = 0$",
+              "feedback": "Świetnie! Pamiętasz o obu pierwiastkach: dodatnim i ujemnym",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Rozwinąć $(x-3)^2$ i użyć delty",
+              "feedback": "Można, ale po co komplikować? Pierwiastkowanie jest prostsze",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie $u^2 = 9$ ma zawsze dwa rozwiązania: $u = 3$ i $u = -3$."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są miejsca zerowe $x_1$ i $x_2$?",
+        "expression": "$x_1 = 0$ oraz $x_2 = 6$",
+        "explanation": "Otrzymujemy dwa miejsca zerowe funkcji g"
+      },
+      {
+        "step": 12,
+        "hint": "Jaka jest suma $x_1 + x_2$?",
+        "expression": "$x_1 + x_2 = 0 + 6 = 6$",
+        "explanation": "Suma miejsc zerowych wynosi 6",
+        "why": "Zauważ, że suma miejsc zerowych równa się podwójnej współrzędnej x wierzchołka paraboli g, co wynika z symetrii paraboli."
       }
     ],
     "solutions": [
-      "0"
+      "6"
     ],
     "parameters": {
-      "assumption": "Zakładamy, że funkcja f jest parzysta (symetryczna względem osi y)"
+      "vertex_f": "(3, 6)",
+      "y_intercept": "(0, 3)",
+      "vertex_g": "(3, 3)"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 7,
-        "stepsWithWhy": 1,
+        "totalSteps": 12,
+        "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T09:32:28.848Z"
+    "timestamp": "2025-09-23T14:30:31.027Z"
   },
   {
-    "id": "linear_function_no_zero",
+    "id": "#2025-maj-13-2p",
     "topic": "Funkcje liniowe - miejsca zerowe",
     "difficulty": 2,
     "statement": "Funkcja liniowa f jest określona wzorem $f(x) = (3-m)x - 4$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja f nie ma miejsca zerowego dla m równego A. (-3) B. 0 C. 3 D. 4",
@@ -2102,249 +2122,260 @@
     "timestamp": "2025-09-23T09:32:55.012Z"
   },
   {
-    "id": "recursive_sequence_third_term",
+    "id": "#2025-maj-14-2p",
     "topic": "Ciągi rekurencyjne",
     "difficulty": 2,
-    "statement": "Ciąg $(a_n)$ jest określony następująco: $\\begin{cases} a_1 = 2 \\\\ a_{n+1} = 2a_n + 1 \\end{cases}$ dla każdej liczby naturalnej $n \\geq 1$. Znajdź trzeci wyraz ciągu $(a_n)$.",
+    "statement": "Ciąg $(a_n)$ jest określony następująco: $\\begin{cases} a_1 = 2 \\\\ a_{n+1} = 2a_n + 1 \\end{cases}$ dla każdej liczby naturalnej $n \\geq 1$. Trzeci wyraz ciągu $(a_n)$ jest równy: A. 4, B. 5, C. 7, D. 11",
     "steps": [
       {
         "step": 1,
-        "hint": "Co oznacza definicja rekurencyjna ciągu?",
-        "expression": "$a_1 = 2$ oraz $a_{n+1} = 2a_n + 1$",
-        "explanation": "Mamy pierwszy wyraz i wzór pozwalający obliczyć każdy następny wyraz",
-        "why": "W ciągu rekurencyjnym każdy wyraz obliczamy na podstawie poprzedniego według podanego wzoru."
+        "hint": "Co oznacza zapis $a_{n+1} = 2a_n + 1$?",
+        "expression": "$a_{n+1} = 2a_n + 1$ oznacza, że każdy następny wyraz to podwojony poprzedni plus 1",
+        "explanation": "To wzór rekurencyjny - każdy wyraz zależy od poprzedniego",
+        "why": "W ciągach rekurencyjnych każdy wyraz obliczamy na podstawie poprzednich. Tutaj potrzebujemy tylko jednego poprzedniego wyrazu."
       },
       {
         "step": 2,
-        "hint": "Jak najlepiej znaleźć trzeci wyraz ciągu?",
+        "hint": "Jak najlepiej obliczyć trzeci wyraz ciągu?",
         "expression": "Obliczamy kolejno: $a_1 \\rightarrow a_2 \\rightarrow a_3$",
-        "explanation": "Będziemy obliczać wyrazy krok po kroku",
+        "explanation": "Używamy wzoru rekurencyjnego krok po kroku",
         "interactive_choice": {
           "prompt": "Jaką strategię wybierzesz do znalezienia $a_3$?",
           "options": [
             {
               "id": "A",
-              "text": "Obliczę kolejno $a_2$, potem $a_3$",
-              "feedback": "Doskonale! To najbezpieczniejsza metoda - krok po kroku.",
-              "is_correct": true
+              "text": "Szukać wzoru ogólnego na $a_n$",
+              "feedback": "Możliwe, ale niepotrzebnie skomplikowane dla jednego wyrazu",
+              "is_correct": false
             },
             {
               "id": "B",
-              "text": "Spróbuję znaleźć wzór ogólny na $a_n$",
-              "feedback": "Możliwe, ale niepotrzebnie skomplikowane dla tego zadania.",
-              "is_correct": false
+              "text": "Obliczyć kolejno $a_2$, potem $a_3$",
+              "feedback": "Świetnie! To najprostszy sposób - krok po kroku używając wzoru",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "Podstawię od razu $n=3$ do wzoru",
-              "feedback": "Nie można - wzór $a_{n+1} = 2a_n + 1$ wymaga znajomości $a_2$.",
+              "text": "Zgadywać i sprawdzać odpowiedzi A-D",
+              "feedback": "Nieefektywne - lepiej systematycznie obliczyć",
               "is_correct": false
             }
           ],
-          "explanation_after": "W ciągach rekurencyjnych najlepiej obliczać wyrazy kolejno, używając wzoru rekurencyjnego."
+          "explanation_after": "Dla małej liczby wyrazów najlepiej obliczyć je kolejno używając wzoru rekurencyjnego."
         }
       },
       {
         "step": 3,
-        "hint": "Jak obliczyć drugi wyraz ciągu?",
-        "expression": "$a_2 = a_{1+1} = 2a_1 + 1 = 2 \\cdot 2 + 1 = 4 + 1 = 5$",
-        "explanation": "Używamy wzoru rekurencyjnego z $n = 1$"
+        "hint": "Jaki jest drugi wyraz ciągu, jeśli $a_1 = 2$?",
+        "expression": "$a_2 = 2a_1 + 1 = 2 \\cdot 2 + 1 = 4 + 1 = 5$",
+        "explanation": "Podstawiamy $n = 1$ do wzoru: $a_2 = 2a_1 + 1$"
       },
       {
         "step": 4,
-        "hint": "Teraz jak obliczyć trzeci wyraz?",
-        "expression": "$a_3 = a_{2+1} = 2a_2 + 1 = 2 \\cdot 5 + 1 = 10 + 1 = 11$",
-        "explanation": "Używamy wzoru rekurencyjnego z $n = 2$",
+        "hint": "Którą wartość podstawić do wzoru aby otrzymać $a_3$?",
+        "expression": "$a_3 = 2a_2 + 1$",
+        "explanation": "Używamy wzoru z $n = 2$",
         "interactive_choice": {
-          "prompt": "Który wzór użyjesz do obliczenia $a_3$?",
+          "prompt": "Co podstawić do wzoru $a_{n+1} = 2a_n + 1$ aby otrzymać $a_3$?",
           "options": [
             {
               "id": "A",
-              "text": "$a_3 = 2a_1 + 1$",
-              "feedback": "Nie - to dałoby $a_2$. Trzeba użyć $a_2$ do obliczenia $a_3$.",
+              "text": "Podstawić $n = 1$ i użyć $a_1 = 2$",
+              "feedback": "Nie - to da $a_2$, który już obliczyliśmy",
               "is_correct": false
             },
             {
               "id": "B",
-              "text": "$a_3 = 2a_2 + 1$",
-              "feedback": "Tak! Podstawiamy $n = 2$ do wzoru $a_{n+1} = 2a_n + 1$.",
+              "text": "Podstawić $n = 2$ i użyć $a_2 = 5$",
+              "feedback": "Dokładnie! $a_3 = a_{2+1} = 2a_2 + 1$",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "$a_3 = 3a_1 + 1$",
-              "feedback": "Nie - to nie wynika z wzoru rekurencyjnego.",
+              "text": "Podstawić $n = 3$ i użyć $a_3$",
+              "feedback": "Nie - szukamy $a_3$, więc nie możemy go użyć w obliczeniu",
               "is_correct": false
             }
           ],
-          "explanation_after": "W wzorze $a_{n+1} = 2a_n + 1$ dla $n = 2$ otrzymujemy $a_3 = 2a_2 + 1$."
+          "explanation_after": "Aby otrzymać $a_3$, podstawiamy $n = 2$ do wzoru $a_{n+1} = 2a_n + 1$."
         }
       },
       {
         "step": 5,
-        "hint": "Jaka jest odpowiedź na pytanie z zadania?",
-        "expression": "$a_3 = 11$",
+        "hint": "Ile wynosi $a_3$ po podstawieniu $a_2 = 5$?",
+        "expression": "$a_3 = 2 \\cdot 5 + 1 = 10 + 1 = 11$",
+        "explanation": "Podstawiamy obliczoną wcześniej wartość $a_2 = 5$"
+      },
+      {
+        "step": 6,
+        "hint": "Która odpowiedź z podanych jest prawidłowa?",
+        "expression": "$a_3 = 11$, więc odpowiedź to D",
         "explanation": "Trzeci wyraz ciągu wynosi 11"
       }
     ],
     "solutions": [
-      "$a_3 = 11$"
+      "$a_3 = 11$ (odpowiedź D)"
     ],
     "parameters": {
-      "answer": "D. 11"
+      "sequence_definition": "$a_1 = 2$, $a_{n+1} = 2a_n + 1$"
     },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 1,
-        "stepsWithChoice": 2,
-        "totalOptions": 6,
-        "correctOptions": 2
-      }
-    },
-    "timestamp": "2025-09-23T09:33:14.858Z"
-  },
-  {
-    "id": "sequence_properties_evaluation",
-    "topic": "Właściwości ciągów",
-    "difficulty": 2,
-    "statement": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Ciąg $(a_n)$ jest arytmetyczny. Ciąg $(a_n)$ jest geometryczny.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Co oznacza, że ciąg jest jednocześnie arytmetyczny i geometryczny?",
-        "expression": "Badamy warunki: $a_{n+1} - a_n = r$ (arytmetyczny) i $\\frac{a_{n+1}}{a_n} = q$ (geometryczny)",
-        "explanation": "Zapisujemy definicje obu typów ciągów",
-        "interactive_choice": {
-          "prompt": "Jak podejść do oceny prawdziwości tych stwierdzeń?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Sprawdzić czy istnieje ciąg spełniający oba warunki",
-              "feedback": "Świetnie! To kluczowe pytanie - czy może istnieć ciąg o obu właściwościach?",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Założyć że oba stwierdzenia są fałszywe",
-              "feedback": "Nie można założyć bez dowodu - trzeba przeanalizować możliwości",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Sprawdzić definicje osobno",
-              "feedback": "To dobry start, ale trzeba też zbadać czy mogą zachodzić jednocześnie",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Kluczowe jest zbadanie czy ciąg może być jednocześnie arytmetyczny i geometryczny."
-        }
-      },
-      {
-        "step": 2,
-        "hint": "Co można powiedzieć o ciągu stałym?",
-        "expression": "Dla ciągu stałego $a_n = c$: różnica $r = 0$ i iloraz $q = 1$",
-        "explanation": "Ciąg stały spełnia oba warunki",
-        "why": "Ciąg stały to jedyny przypadek gdy ciąg może być jednocześnie arytmetyczny i geometryczny."
-      },
-      {
-        "step": 3,
-        "hint": "Czy istnieją inne ciągi niż stałe spełniające oba warunki?",
-        "expression": "Z $a_{n+1} = a_n + r$ i $a_{n+1} = qa_n$ mamy: $a_n + r = qa_n$",
-        "explanation": "Łączymy oba warunki w jedno równanie",
-        "interactive_choice": {
-          "prompt": "Załóżmy że $a_n \\neq 0$ i ciąg nie jest stały. Co wtedy?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Z $a_{n+1} - a_n = r$ i $\\frac{a_{n+1}}{a_n} = q$ otrzymamy sprzeczność",
-              "feedback": "Dokładnie! Dla $r \\neq 0$ i $q \\neq 1$ warunki są sprzeczne",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Można znaleźć nieskończenie wiele takich ciągów",
-              "feedback": "Nie - warunki są bardzo restrykcyjne i prowadzą do sprzeczności",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Wystarczy dobrać odpowiednie $r$ i $q$",
-              "feedback": "Nie można - z równań $a_n + r = qa_n$ wynika że $r = a_n(q-1)$, co dla różnych $n$ daje sprzeczność",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Jedynym rozwiązaniem jest $r = 0$ i $q = 1$, czyli ciąg stały."
-        }
-      },
-      {
-        "step": 4,
-        "hint": "Co wynika z równania $a_n + r = qa_n$?",
-        "expression": "$r = a_n(q - 1)$",
-        "explanation": "Przekształcamy równanie algebraicznie"
-      },
-      {
-        "step": 5,
-        "hint": "Dlaczego to prowadzi do sprzeczności dla ciągu niestałego?",
-        "expression": "Jeśli $r \\neq 0$, to $a_n = \\frac{r}{q-1}$ dla wszystkich $n$",
-        "explanation": "Wszystkie wyrazy muszą być równe, więc ciąg jest stały",
-        "why": "To pokazuje że jedyną możliwością jest ciąg stały ($r = 0$, $q = 1$)."
-      },
-      {
-        "step": 6,
-        "hint": "Jaka jest odpowiedź na pytanie o prawdziwość stwierdzeń?",
-        "expression": "Oba stwierdzenia mogą być prawdziwe: P, P",
-        "explanation": "Dla ciągu stałego oba warunki są spełnione",
-        "interactive_choice": {
-          "prompt": "Jak ocenić prawdziwość stwierdzeń o ciągu $(a_n)$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Oba stwierdzenia są prawdziwe - dla ciągu stałego",
-              "feedback": "Prawidłowo! Istnieje ciąg (stały) spełniający oba warunki",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Oba stwierdzenia są fałszywe - to niemożliwe",
-              "feedback": "Nie - ciąg stały jest jednocześnie arytmetyczny i geometryczny",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Jedno prawdziwe, drugie fałszywe",
-              "feedback": "Nie - oba mogą być prawdziwe jednocześnie dla ciągu stałego",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Ciąg może być jednocześnie arytmetyczny i geometryczny - gdy jest stały."
-        }
-      }
-    ],
-    "solutions": [
-      "P - ciąg może być arytmetyczny",
-      "P - ciąg może być geometryczny",
-      "Oba stwierdzenia są prawdziwe dla ciągu stałego"
-    ],
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
         "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-23T14:30:52.148Z"
+  },
+  {
+    "id": "#2025-maj-14.2-2p",
+    "topic": "Ciągi liczbowe - własności",
+    "difficulty": 3,
+    "statement": "Ciąg $(a_n)$ jest określony następująco: $\\begin{cases} a_1 = 2 \\\\ a_{n+1} = 2a_n + 1 \\end{cases}$ dla każdej liczby naturalnej $n \\geq 1$. Oceń prawdziwość poniższych stwierdzeń: 1) Ciąg $(a_n)$ jest arytmetyczny. 2) Ciąg $(a_n)$ jest geometryczny.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są pierwsze kilka wyrazów tego ciągu?",
+        "expression": "$a_1 = 2$, $a_2 = 2 \\cdot 2 + 1 = 5$, $a_3 = 2 \\cdot 5 + 1 = 11$, $a_4 = 2 \\cdot 11 + 1 = 23$",
+        "explanation": "Obliczamy kolejne wyrazy używając wzoru rekurencyjnego"
+      },
+      {
+        "step": 2,
+        "hint": "Jak sprawdzić czy ciąg jest arytmetyczny?",
+        "expression": "Sprawdzamy różnice: $a_2 - a_1 = 5 - 2 = 3$, $a_3 - a_2 = 11 - 5 = 6$, $a_4 - a_3 = 23 - 11 = 12$",
+        "explanation": "Obliczamy różnice między kolejnymi wyrazami",
+        "interactive_choice": {
+          "prompt": "Co musi być stałe w ciągu arytmetycznym?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Różnica między kolejnymi wyrazami",
+              "feedback": "Dokładnie! W ciągu arytmetycznym $a_{n+1} - a_n = r$ (stała)",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Iloraz kolejnych wyrazów",
+              "feedback": "To cecha ciągu geometrycznego, nie arytmetycznego",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Suma kolejnych wyrazów",
+              "feedback": "Nie - suma może się zmieniać w ciągu arytmetycznym",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Ciąg arytmetyczny ma stałą różnicę $r = a_{n+1} - a_n$"
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o różnicach 3, 6, 12?",
+        "expression": "Różnice nie są stałe: $3 \\neq 6 \\neq 12$",
+        "explanation": "Różnice tworzą ciąg $3, 6, 12, ...$, który nie jest stały",
+        "why": "Ponieważ różnice nie są stałe, ciąg $(a_n)$ NIE jest arytmetyczny"
+      },
+      {
+        "step": 4,
+        "hint": "Jak sprawdzić czy ciąg jest geometryczny?",
+        "expression": "Sprawdzamy ilorazy: $\\frac{a_2}{a_1} = \\frac{5}{2} = 2.5$, $\\frac{a_3}{a_2} = \\frac{11}{5} = 2.2$, $\\frac{a_4}{a_3} = \\frac{23}{11} \\approx 2.09$",
+        "explanation": "Obliczamy ilorazy kolejnych wyrazów",
+        "interactive_choice": {
+          "prompt": "Co charakteryzuje ciąg geometryczny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stała różnica między wyrazami",
+              "feedback": "To cecha ciągu arytmetycznego, nie geometrycznego",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Stały iloraz kolejnych wyrazów",
+              "feedback": "Tak! W ciągu geometrycznym $\\frac{a_{n+1}}{a_n} = q$ (stała)",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Wyrazy rosną wykładniczo",
+              "feedback": "To może być prawda, ale definicja to stały iloraz",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Ciąg geometryczny ma stały iloraz $q = \\frac{a_{n+1}}{a_n}$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co możesz powiedzieć o ilorazach 2.5, 2.2, 2.09?",
+        "expression": "Ilorazy nie są stałe: $2.5 \\neq 2.2 \\neq 2.09$",
+        "explanation": "Ilorazy maleją i nie są równe",
+        "why": "Ponieważ ilorazy nie są stałe, ciąg $(a_n)$ NIE jest geometryczny"
+      },
+      {
+        "step": 6,
+        "hint": "Czy można to udowodnić algebraicznie?",
+        "expression": "$\\frac{a_{n+1}}{a_n} = \\frac{2a_n + 1}{a_n} = 2 + \\frac{1}{a_n}$",
+        "explanation": "Iloraz zależy od $a_n$, więc nie jest stały",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej udowodnić, że ciąg o wzorze $a_{n+1} = 2a_n + 1$ nie jest geometryczny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić czy $\\frac{a_{n+1}}{a_n}$ jest stałe",
+              "feedback": "Dobry pomysł! $\\frac{2a_n + 1}{a_n} = 2 + \\frac{1}{a_n}$ - zależy od $n$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Znaleźć wzór na $a_n$ i sprawdzić postać",
+              "feedback": "Możliwe, ale bardziej skomplikowane niż sprawdzenie ilorazu",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić tylko pierwsze wyrazy",
+              "feedback": "To już zrobiliśmy - ale dowód algebraiczny jest pełniejszy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Algebraiczne sprawdzenie ilorazu daje pełny dowód dla wszystkich $n$"
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są końcowe odpowiedzi na oba stwierdzenia?",
+        "expression": "1) Ciąg $(a_n)$ jest arytmetyczny: FAŁSZ (F)\n2) Ciąg $(a_n)$ jest geometryczny: FAŁSZ (F)",
+        "explanation": "Oba stwierdzenia są fałszywe - ciąg nie jest ani arytmetyczny, ani geometryczny"
+      }
+    ],
+    "solutions": [
+      "1) F - ciąg nie jest arytmetyczny",
+      "2) F - ciąg nie jest geometryczny"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
         "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T09:33:42.494Z"
+    "timestamp": "2025-09-23T14:31:19.364Z"
   },
   {
-    "id": "arithmetic_sequence_parameter",
+    "id": "#2025-maj-15-2p",
     "topic": "Ciągi arytmetyczne",
     "difficulty": 4,
     "statement": "Wyznacz wartość m, dla której trzywyrazowy ciąg $(2m+11, m^2+3, 5-m)$ jest arytmetyczny i malejący. Zapisz obliczenia.",
@@ -2512,7 +2543,7 @@
     "timestamp": "2025-09-23T09:34:20.237Z"
   },
   {
-    "id": "geometric_sequence_fourth_term",
+    "id": "#2025-maj-16-2p",
     "topic": "Ciągi geometryczne",
     "difficulty": 2,
     "statement": "Dany jest ciąg geometryczny $(a_n)$ określony dla każdej liczby naturalnej $n \\geq 1$, w którym $a_1 = 27$ oraz $a_2 = 9$. Czwarty wyraz ciągu $(a_n)$ jest równy:",
@@ -2645,7 +2676,7 @@
     "timestamp": "2025-09-23T09:34:42.092Z"
   },
   {
-    "id": "trigonometric_equation_alpha",
+    "id": "#2025-maj-17-2p",
     "topic": "Równania trygonometryczne",
     "difficulty": 4,
     "statement": "Kąt $\\alpha$ jest ostry i spełnia warunek $\\sqrt{3} \\tan \\alpha = 2 \\sin \\alpha$. Cosinus kąta $\\alpha$ jest równy:",
@@ -2793,330 +2824,330 @@
     "timestamp": "2025-09-23T09:35:05.289Z"
   },
   {
-    "id": "right_triangle_median_tangent",
+    "id": "#2025-maj-18-2p",
     "topic": "Geometria - trójkąty prostokątne i funkcje trygonometryczne",
     "difficulty": 4,
     "statement": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez $\\alpha$, natomiast kąt ABC - przez $\\beta$. Tangens kąta $\\alpha$ jest równy:",
+    "image": "/zad18.png",
     "steps": [
       {
         "step": 1,
         "hint": "Gdzie znajduje się punkt D w trójkącie prostokątnym ABC?",
-        "expression": "D jest środkiem przeciwprostokątnej BC, więc $BD = DC$",
-        "explanation": "CD to środkowa poprowadzona z wierzchołka kąta prostego do przeciwprostokątnej"
+        "expression": "D jest środkiem przeciwprostokątnej BC, więc $BD = DC = \\frac{BC}{2}$",
+        "explanation": "CD to środkowa z wierzchołka kąta prostego do przeciwprostokątnej",
+        "why": "W trójkącie prostokątnym środkowa do przeciwprostokątnej ma specjalne właściwości - jej długość równa się połowie przeciwprostokątnej."
       },
       {
         "step": 2,
-        "hint": "Jaką własność ma środkowa poprowadzona do przeciwprostokątnej w trójkącie prostokątnym?",
-        "expression": "$CD = \\frac{BC}{2} = 5$, więc $BC = 10$",
-        "explanation": "Wykorzystujemy własność środkowej w trójkącie prostokątnym",
-        "why": "Ta własność pozwala nam znaleźć długość przeciwprostokątnej BC.",
+        "hint": "Jaka jest długość przeciwprostokątnej BC?",
+        "expression": "Skoro $CD = 5$ i $CD = \\frac{BC}{2}$, to $BC = 2 \\cdot 5 = 10$",
+        "explanation": "Wykorzystujemy właściwość środkowej w trójkącie prostokątnym"
+      },
+      {
+        "step": 3,
+        "hint": "Jak znajdziesz długość drugiej przyprostokątnej AC?",
+        "expression": "$6^2 + AC^2 = 10^2$",
+        "explanation": "Stosujemy twierdzenie Pitagorasa",
         "interactive_choice": {
-          "prompt": "Co wiemy o środkowej CD w trójkącie prostokątnym?",
+          "prompt": "Którą metodę użyjesz do znalezienia długości AC?",
           "options": [
             {
               "id": "A",
-              "text": "CD jest równa połowie przeciwprostokątnej BC",
-              "feedback": "Doskonale! To kluczowa własność: środkowa do przeciwprostokątnej równa się jej połowie.",
+              "text": "Twierdzenie Pitagorasa: $AB^2 + AC^2 = BC^2$",
+              "feedback": "Doskonały wybór! To podstawowe narzędzie w trójkątach prostokątnych.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "CD jest prostopadła do BC",
-              "feedback": "Nie - środkowa nie musi być prostopadła do boku.",
+              "text": "Wzory na funkcje trygonometryczne",
+              "feedback": "Możliwe, ale nie znamy jeszcze kątów - Pitagoras jest prostszy.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "CD dzieli trójkąt na dwa równe pola",
-              "feedback": "To prawda, ale nie pomoże nam znaleźć tangensa kąta.",
+              "text": "Wzór na pole trójkąta",
+              "feedback": "Nie mamy informacji o polu - Pitagoras będzie skuteczniejszy.",
               "is_correct": false
             }
           ],
-          "explanation_after": "W trójkącie prostokątnym środkowa do przeciwprostokątnej ma długość równą połowie tej przeciwprostokątnej."
+          "explanation_after": "Twierdzenie Pitagorasa to najdirectniejsza droga gdy znamy dwie strony trójkąta prostokątnego."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi AC po rozwiązaniu równania?",
+        "expression": "$36 + AC^2 = 100$, więc $AC^2 = 64$, zatem $AC = 8$",
+        "explanation": "Otrzymujemy drugą przyprostokątną"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki trójkąt tworzy punkty A, D, C?",
+        "expression": "Trójkąt ADC: $AD = 5$, $DC = 5$, $AC = 8$",
+        "explanation": "Trójkąt równoramienny z podstawą AC",
+        "interactive_choice": {
+          "prompt": "Jakie są długości boków trójkąta ADC?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$AD = 5$, $DC = 5$, $AC = 8$ - trójkąt równoramienny",
+              "feedback": "Świetnie! Skoro D to środek BC, to $AD = CD = 5$ (właściwość środkowej).",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$AD = 6$, $DC = 5$, $AC = 8$ - trójkąt różnoboczny",
+              "feedback": "Nie - zapomniałeś o właściwości środkowej: $AD = CD$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$AD = 4$, $DC = 5$, $AC = 8$ - trójkąt różnoboczny",
+              "feedback": "Błąd - w trójkącie prostokątnym $AD = CD = \\frac{BC}{2}$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kluczowa właściwość: w trójkącie prostokątnym odległość od wierzchołka kąta prostego do środka przeciwprostokątnej równa się połowie przeciwprostokątnej."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć tangens kąta α w trójkącie ADC?",
+        "expression": "Opuszczamy wysokość DE z D na AC, gdzie E to środek AC",
+        "explanation": "Wykorzystujemy właściwość trójkąta równoramiennego",
+        "interactive_choice": {
+          "prompt": "Którą metodę wybierzesz do obliczenia $\\tan \\alpha$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wysokość z D na AC i wzór $\\tan \\alpha = \\frac{h}{\\frac{AC}{2}}$",
+              "feedback": "Doskonale! W trójkącie równoramiennym wysokość dzieli podstawę na pół.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Twierdzenie cosinusów i wzory redukcyjne",
+              "feedback": "Możliwe, ale bardziej skomplikowane - wysokość jest prostsza.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bezpośrednio ze stosunku boków",
+              "feedback": "Nie można - kąt α nie jest przy żadnym z boków trójkąta prostokątnego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W trójkącie równoramiennym wysokość na podstawę tworzy dwa przystające trójkąty prostokątne."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest długość wysokości DE?",
+        "expression": "W trójkącie prostokątnym DEC: $DE^2 + EC^2 = DC^2$, gdzie $EC = 4$",
+        "explanation": "E dzieli AC na pół, więc $EC = \\frac{8}{2} = 4$"
+      },
+      {
+        "step": 8,
+        "hint": "Ile wynosi DE po zastosowaniu twierdzenia Pitagorasa?",
+        "expression": "$DE^2 + 16 = 25$, więc $DE^2 = 9$, zatem $DE = 3$",
+        "explanation": "Obliczamy wysokość w trójkącie równoramiennym"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest tangens kąta α = ∠ADC?",
+        "expression": "$\\tan \\alpha = \\frac{DE}{AE} = \\frac{3}{4}$",
+        "explanation": "W trójkącie prostokątnym ADE: tangens to stosunek przeciwprostokątnej do przyprostokątnej",
+        "why": "Kąt α to kąt ADC, który w trójkącie ADE odpowiada kątowi przy wierzchołku A. Tangens tego kąta to $\\frac{DE}{AE}$."
+      }
+    ],
+    "solutions": [
+      "$\\tan \\alpha = \\frac{3}{4}$"
+    ],
+    "parameters": {
+      "answer": "B"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-23T14:31:52.523Z"
+  },
+  {
+    "id": "#2025-maj-18.2-2p",
+    "topic": "Geometria - trójkąty prostokątne i funkcje trygonometryczne",
+    "difficulty": 4,
+    "statement": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez $\\alpha$, natomiast kąt ABC - przez $\\beta$. Sinus kąta $\\beta$ jest równy:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Gdzie znajduje się punkt D w trójkącie prostokątnym ABC?",
+        "expression": "D jest środkiem przeciwprostokątnej BC, więc CD jest środkową do przeciwprostokątnej",
+        "explanation": "Środkowa CD łączy wierzchołek C ze środkiem przeciwnej strony BC",
+        "why": "W trójkącie prostokątnym środkowa do przeciwprostokątnej ma specjalną właściwość - jej długość równa się połowie przeciwprostokątnej."
+      },
+      {
+        "step": 2,
+        "hint": "Jaka jest właściwość środkowej do przeciwprostokątnej w trójkącie prostokątnym?",
+        "expression": "CD = $\\frac{1}{2}$BC, więc BC = 2 · CD = 2 · 5 = 10",
+        "explanation": "Wykorzystujemy właściwość środkowej w trójkącie prostokątnym",
+        "interactive_choice": {
+          "prompt": "Co możemy powiedzieć o środkowej CD do przeciwprostokątnej BC?",
+          "options": [
+            {
+              "id": "A",
+              "text": "CD = BC (środkowa równa się przeciwprostokątnej)",
+              "feedback": "Nie - to byłoby niemożliwe geometrycznie",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "CD = $\\frac{1}{2}$BC (środkowa to połowa przeciwprostokątnej)",
+              "feedback": "Dokładnie! To kluczowa właściwość trójkąta prostokątnego",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "CD ⊥ BC (środkowa jest prostopadła do przeciwprostokątnej)",
+              "feedback": "Nie - środkowa nie musi być prostopadła do boku",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W trójkącie prostokątnym środkowa do przeciwprostokątnej ma długość równą połowie przeciwprostokątnej."
         }
       },
       {
         "step": 3,
         "hint": "Jak znajdziemy długość drugiej przyprostokątnej AC?",
-        "expression": "Z twierdzenia Pitagorasa: $AB^2 + AC^2 = BC^2$",
+        "expression": "Z twierdzenia Pitagorasa: AB² + AC² = BC²",
         "explanation": "Stosujemy twierdzenie Pitagorasa dla trójkąta prostokątnego ABC"
       },
       {
         "step": 4,
-        "hint": "Jaką długość ma przyprostokątna AC?",
-        "expression": "$6^2 + AC^2 = 10^2$, więc $36 + AC^2 = 100$, skąd $AC^2 = 64$, więc $AC = 8$",
-        "explanation": "Obliczamy długość przyprostokątnej AC"
+        "hint": "Jakie wartości podstawimy do wzoru Pitagorasa?",
+        "expression": "6² + AC² = 10²",
+        "explanation": "Podstawiamy znane długości: AB = 6, BC = 10"
       },
       {
         "step": 5,
-        "hint": "Jak wyznaczyć współrzędne punktów w układzie współrzędnych?",
-        "expression": "$C(0,0)$, $A(8,0)$, $B(0,6)$",
-        "explanation": "Umieszczamy kąt prosty w początku układu współrzędnych",
-        "interactive_choice": {
-          "prompt": "Jak najlepiej umieścić trójkąt w układzie współrzędnych?",
-          "options": [
-            {
-              "id": "A",
-              "text": "C w początku układu, A na osi Ox, B na osi Oy",
-              "feedback": "Świetny wybór! Kąt prosty w początku układu maksymalnie upraszcza obliczenia.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "A w początku układu, C na osi Ox, B na osi Oy",
-              "feedback": "Możliwe, ale kąt prosty nie będzie w początku układu.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Dowolnie, bez wykorzystania osi",
-              "feedback": "To niepotrzebnie skomplikuje obliczenia współrzędnych.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Umieszczenie kąta prostego w początku układu daje najprostsze współrzędne."
-        }
+        "hint": "Ile wynosi AC²?",
+        "expression": "36 + AC² = 100, więc AC² = 64",
+        "explanation": "Rozwiązujemy równanie"
       },
       {
         "step": 6,
-        "hint": "Jakie są współrzędne środka D przeciwprostokątnej AB?",
-        "expression": "$D = \\left(\\frac{8+0}{2}, \\frac{0+6}{2}\\right) = (4, 3)$",
-        "explanation": "Środek odcinka to średnia arytmetyczna współrzędnych końców"
+        "hint": "Jaka jest długość przyprostokątnej AC?",
+        "expression": "AC = 8",
+        "explanation": "Wyciągamy pierwiastek kwadratowy z 64"
       },
       {
         "step": 7,
-        "hint": "Jak obliczyć tangens kąta ADC używając współrzędnych?",
-        "expression": "Szukamy trójkąta prostokątnego zawierającego kąt $\\alpha = \\angle ADC$",
-        "explanation": "Będziemy analizować geometrię kąta ADC",
+        "hint": "Który bok leży naprzeciw kąta β w trójkącie ABC?",
+        "expression": "Naprzeciw kąta β leży bok AC o długości 8",
+        "explanation": "Identyfikujemy bok przeciwległy do kąta β",
         "interactive_choice": {
-          "prompt": "Którą metodę zastosować do obliczenia $\\tan \\alpha$ dla kąta ADC?",
+          "prompt": "Kąt β to kąt ABC. Który bok leży naprzeciw tego kąta?",
           "options": [
             {
               "id": "A",
-              "text": "Użyć wzoru na tangens kąta między wektorami",
-              "feedback": "Dobra metoda, ale wymaga znajomości iloczynu skalarnego.",
-              "is_correct": true
+              "text": "Bok AB (długość 6)",
+              "feedback": "Nie - bok AB przylega do kąta β",
+              "is_correct": false
             },
             {
               "id": "B",
-              "text": "Skorzystać z trójkąta prostokątnego i stosunku przeciwprostokątna/przyległa",
-              "feedback": "Świetnie! Znajdziemy wysokość i podstawę w odpowiednim trójkącie.",
+              "text": "Bok AC (długość 8)",
+              "feedback": "Dokładnie! Bok AC leży naprzeciw kąta β przy wierzchołku B",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "Użyć wzorów na sinus i cosinus",
-              "feedback": "Możliwe, ale tangens bezpośrednio będzie prostszy.",
+              "text": "Bok BC (długość 10)",
+              "feedback": "Nie - bok BC też przylega do kąta β",
               "is_correct": false
             }
           ],
-          "explanation_after": "Najprościej jest znaleźć odpowiedni trójkąt prostokątny zawierający kąt $\\alpha$."
+          "explanation_after": "Kąt β jest przy wierzchołku B, więc naprzeciw niego leży bok AC."
         }
       },
       {
         "step": 8,
-        "hint": "Jak skonstruować trójkąt prostokątny z kątem α?",
-        "expression": "Opuszczamy wysokość z punktu A na prostą CD. Niech E będzie stopą tej wysokości.",
-        "explanation": "Tworzymy trójkąt prostokątny ADE z kątem prostym przy E",
-        "why": "W trójkącie prostokątnym ADE kąt DAE to nasz szukany kąt $\\alpha$, a $\\tan \\alpha = \\frac{DE}{AE}$."
+        "hint": "Jak obliczyć sinus kąta β?",
+        "expression": "$\\sin \\beta = \\frac{przeciwległa}{przeciwprostokątna} = \\frac{AC}{BC}$",
+        "explanation": "Używamy definicji sinusa w trójkącie prostokątnym",
+        "why": "Sinus kąta ostrego w trójkącie prostokątnym to stosunek przyprostokątnej przeciwległej do przeciwprostokątnej."
       },
       {
         "step": 9,
-        "hint": "Jakie są długości odcinków w trójkącie ADE?",
-        "expression": "Prosta CD ma równanie $y = \\frac{3}{4}x$. Wysokość z A(8,0) na tę prostą ma długość $AE = \\frac{|3 \\cdot 8 - 4 \\cdot 0|}{\\sqrt{3^2 + 4^2}} = \\frac{24}{5}$",
-        "explanation": "Używamy wzoru na odległość punktu od prostej"
+        "hint": "Jakie wartości podstawimy do wzoru na sinus?",
+        "expression": "$\\sin \\beta = \\frac{8}{10} = \\frac{4}{5}$",
+        "explanation": "Podstawiamy AC = 8 i BC = 10, następnie upraszczamy ułamek"
       },
       {
         "step": 10,
-        "hint": "Jak obliczyć długość odcinka DE?",
-        "expression": "Z trójkąta prostokątnego ADE: $AD^2 = AE^2 + DE^2$, gdzie $AD = 5$ (odległość A od D)",
-        "explanation": "Obliczamy $AD = \\sqrt{(8-4)^2 + (0-3)^2} = \\sqrt{16 + 9} = 5$"
-      },
-      {
-        "step": 11,
-        "hint": "Jaka jest długość DE?",
-        "expression": "$25 = \\left(\\frac{24}{5}\\right)^2 + DE^2$, więc $25 = \\frac{576}{25} + DE^2$, skąd $DE^2 = 25 - \\frac{576}{25} = \\frac{49}{25}$, więc $DE = \\frac{7}{5}$",
-        "explanation": "Rozwiązujemy równanie z twierdzenia Pitagorasa"
-      },
-      {
-        "step": 12,
-        "hint": "Jaki jest tangens kąta α?",
-        "expression": "$\\tan \\alpha = \\frac{DE}{AE} = \\frac{\\frac{7}{5}}{\\frac{24}{5}} = \\frac{7}{24}$",
-        "explanation": "W trójkącie prostokątnym tangens to stosunek przeciwprostokątnej do przyległej"
-      },
-      {
-        "step": 13,
-        "hint": "Czy otrzymany wynik pasuje do podanych opcji?",
-        "expression": "Sprawdzamy: $\\frac{7}{24}$ nie pasuje do żadnej opcji. Sprawdźmy inną interpretację kąta $\\alpha$.",
-        "explanation": "Musimy ponownie przeanalizować, który kąt to $\\alpha$"
-      },
-      {
-        "step": 14,
-        "hint": "Czy kąt α to kąt CDA zamiast ADC?",
-        "expression": "Jeśli $\\alpha = \\angle CDA$, to $\\tan \\alpha = \\frac{AE}{DE} = \\frac{\\frac{24}{5}}{\\frac{7}{5}} = \\frac{24}{7}$",
-        "explanation": "Sprawdzamy drugą interpretację kąta"
-      },
-      {
-        "step": 15,
-        "hint": "Która interpretacja daje wynik z podanych opcji?",
-        "expression": "Ponownie analizujemy geometrię. W trójkącie ACD: $\\tan \\alpha = \\frac{4}{3}$",
-        "explanation": "Po dokładnej analizie geometrycznej otrzymujemy $\\tan \\alpha = \\frac{4}{3}$"
+        "hint": "Która odpowiedź z podanych jest poprawna?",
+        "expression": "$\\sin \\beta = \\frac{4}{5}$",
+        "explanation": "Odpowiedź to opcja D",
+        "interactive_choice": {
+          "prompt": "Porównaj otrzymany wynik z podanymi opcjami:",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\frac{4}{5}$ to odpowiedź D",
+              "feedback": "Tak! Nasz wynik $\\frac{4}{5}$ odpowiada opcji D",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Muszę przekształcić $\\frac{4}{5}$ do postaci z $\\sqrt{13}$",
+              "feedback": "Nie - sprawdź czy $\\frac{4}{5}$ nie jest już wśród opcji",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wynik nie pasuje do żadnej opcji",
+              "feedback": "Sprawdź ponownie - opcja D to dokładnie $\\frac{4}{5}$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Otrzymaliśmy $\\sin \\beta = \\frac{4}{5}$, co odpowiada opcji D."
+        }
       }
     ],
     "solutions": [
-      "$\\tan \\alpha = \\frac{4}{3}$ (odpowiedź D)"
+      "$\\sin \\beta = \\frac{4}{5}$ (odpowiedź D)"
     ],
     "parameters": {
-      "triangle": "ABC prostokątny przy C",
-      "given": "AB = 6, CD = 5 (środkowa)",
-      "find": "$\\tan \\alpha$ gdzie $\\alpha = \\angle ADC$"
+      "triangle": "ABC prostokątny z kątem prostym przy A",
+      "given": "AB = 6, CD = 5 (środkowa do BC)",
+      "find": "$\\sin \\beta$ gdzie β = ∠ABC"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 15,
+        "totalSteps": 10,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
-        "correctOptions": 4
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T09:35:50.597Z"
+    "timestamp": "2025-09-23T14:32:27.125Z"
   },
   {
-    "id": "sine_value_incomplete",
-    "topic": "Funkcje trygonometryczne",
-    "difficulty": 2,
-    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Sinus kąta $\\beta$ jest równy A. $\\frac{2}{\\sqrt{13}}$ B. $\\frac{3}{\\sqrt{13}}$ C. $\\frac{5}{2\\sqrt{13}}$ D. $\\frac{4}{5}$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Co jest potrzebne do obliczenia sinusa kąta?",
-        "expression": "Zadanie wymaga dodatkowego kontekstu",
-        "explanation": "Nie można określić sinusa kąta bez dodatkowych danych",
-        "interactive_choice": {
-          "prompt": "Aby obliczyć sinus kąta $\\beta$, potrzebujesz:",
-          "options": [
-            {
-              "id": "A",
-              "text": "Tylko miary kąta w stopniach lub radianach",
-              "feedback": "To by wystarczyło gdyby kąt był podany liczbowo, ale tu mamy wybór z gotowych wartości",
-              "is_correct": false
-            },
-            {
-              "id": "B",
-              "text": "Dodatkowych informacji o trójkącie lub kontekście zadania",
-              "feedback": "Dokładnie! Brakuje nam informacji o tym, w jakim kontekście występuje kąt $\\beta$",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Kalkulatora do obliczenia wartości",
-              "feedback": "Nie - mamy podane gotowe odpowiedzi do wyboru, więc to zadanie na rozpoznanie",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Zadanie jest niekompletne - brakuje informacji o kącie $\\beta$ (np. rysunek trójkąta, współrzędne punktu, itp.)"
-        }
-      },
-      {
-        "step": 2,
-        "hint": "Jakie informacje mogłyby być podane w pełnym zadaniu?",
-        "expression": "Możliwe konteksty: trójkąt prostokątny, okrąg jednostkowy, inne funkcje trygonometryczne",
-        "explanation": "Każdy z tych kontekstów dałby sposób na obliczenie sinusa",
-        "interactive_choice": {
-          "prompt": "Które z poniższych informacji pozwoliłyby obliczyć $\\sin \\beta$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Długości boków trójkąta prostokątnego z kątem $\\beta$",
-              "feedback": "Tak! Wtedy $\\sin \\beta = \\frac{przeciwprostokątna}{przeciwprostokątna}$",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Współrzędne punktu na okręgu jednostkowym",
-              "feedback": "Tak! Jeśli punkt ma współrzędne $(x,y)$, to $\\sin \\beta = y$",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Wartość cosinusa tego samego kąta",
-              "feedback": "Tak! Można użyć tożsamości $\\sin^2 \\beta + \\cos^2 \\beta = 1$",
-              "is_correct": true
-            }
-          ],
-          "explanation_after": "Wszystkie te informacje pozwalają obliczyć sinus. Zadanie prawdopodobnie zawierało rysunek lub dodatkowe dane."
-        }
-      },
-      {
-        "step": 3,
-        "hint": "Czy możemy coś wywnioskować z podanych odpowiedzi?",
-        "expression": "Analiza opcji: $\\frac{2}{\\sqrt{13}} \\approx 0{,}55$, $\\frac{3}{\\sqrt{13}} \\approx 0{,}83$, $\\frac{5}{2\\sqrt{13}} \\approx 0{,}69$, $\\frac{4}{5} = 0{,}8$",
-        "explanation": "Wszystkie wartości są w przedziale $(0,1)$, co jest poprawne dla sinusa kąta ostrego",
-        "interactive_choice": {
-          "prompt": "Co możemy zauważyć analizując podane opcje odpowiedzi?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Większość ma $\\sqrt{13}$ w mianowniku",
-              "feedback": "Dokładnie! To sugeruje trójkąt z bokami związanymi z liczbą 13",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Wszystkie są liczbami wymiernymi",
-              "feedback": "Nie - opcje A, B, C zawierają pierwiastki",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Wartości są większe od 1",
-              "feedback": "Nie - sinus zawsze jest z przedziału $[-1,1]$, wszystkie opcje spełniają to",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Obecność $\\sqrt{13}$ sugeruje trójkąt prostokątny z bokami w stosunku związanym z 13."
-        }
-      },
-      {
-        "step": 4,
-        "hint": "Jaki trójkąt mógłby dać takie wartości?",
-        "expression": "Prawdopodobny trójkąt prostokątny z bokami $2, 3, \\sqrt{13}$ lub podobny",
-        "explanation": "Gdyby przeciwprostokątna = $\\sqrt{13}$, to $\\sin \\beta$ mógłby być $\\frac{2}{\\sqrt{13}}$ lub $\\frac{3}{\\sqrt{13}}$",
-        "why": "W trójkącie prostokątnym $\\sin \\beta = \\frac{przyprostokątna przeciwna}{przeciwprostokątna}$"
-      },
-      {
-        "step": 5,
-        "hint": "Jak rozwiązać zadanie bez pełnych danych?",
-        "expression": "Zadanie jest niekompletne - brakuje kluczowych informacji o kącie $\\beta$",
-        "explanation": "Nie można jednoznacznie wybrać odpowiedzi bez dodatkowego kontekstu (rysunek, dane liczbowe, itp.)"
-      }
-    ],
-    "solutions": [
-      "Zadanie niekompletne - brakuje informacji o kącie $\\beta$"
-    ],
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 1,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 5
-      }
-    },
-    "timestamp": "2025-09-23T09:36:21.062Z"
-  },
-  {
-    "id": "inscribed_angle_theorem",
+    "id": "#2025-maj-19-2p",
     "topic": "Kąty w okręgu",
     "difficulty": 3,
     "statement": "Punkty A, B oraz C leżą na okręgu o środku w punkcie O. Miara kąta BCA jest równa $50°$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego ABO jest równa A. $20°$ B. $35°$ C. $40°$ D. $50°$",
+    "image": "/zad19.png",
     "steps": [
       {
         "step": 1,
@@ -3285,7 +3316,7 @@
     "timestamp": "2025-09-23T09:36:56.148Z"
   },
   {
-    "id": "similar_triangles_isosceles",
+    "id": "#2025-maj-20-2p",
     "topic": "Podobieństwo trójkątów",
     "difficulty": 4,
     "statement": "W trójkącie równoramiennym ABC dane są: |AC|=|BC|=4 i |AB|=3. Na boku BC, między punktami B i C, wybrano taki punkt D, że trójkąty ABC i BDA są podobne. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek BD ma długość A. 2 B. 2,25 C. 2,5 D. 3",
@@ -3434,10 +3465,11 @@
     "timestamp": "2025-09-23T09:37:21.223Z"
   },
   {
-    "id": "triangle_properties_verification",
+    "id": "#2025-maj-21-2p",
     "topic": "Twierdzenie cosinusów i właściwości trójkątów",
     "difficulty": 4,
     "statement": "Dany jest trójkąt ABC, w którym $|AB|=11$, $|BC|=12$ oraz $|\\angle ABC|=60°$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Trójkąt ABC jest równoramienny. Pole trójkąta ABC jest równe $33\\sqrt{3}$.",
+    "image": "/zad21.png",
     "steps": [
       {
         "step": 1,
@@ -3603,7 +3635,7 @@
     "timestamp": "2025-09-23T09:37:54.294Z"
   },
   {
-    "id": "square_diagonal_length",
+    "id": "#2025-maj-22-2p",
     "topic": "Geometria analityczna - kwadrat",
     "difficulty": 3,
     "statement": "W kartezjańskim układzie współrzędnych (x, y) dany jest kwadrat ABCD, w którym A=(4,-1). Przekątne tego kwadratu przecinają się w punkcie S=(1,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Przekątna kwadratu ABCD ma długość A. 5 B. 7 C. 10 D. 14",
@@ -3753,7 +3785,7 @@
     "timestamp": "2025-09-23T09:38:22.762Z"
   },
   {
-    "id": "parallel_lines_condition",
+    "id": "#2025-maj-23-2p",
     "topic": "Równania prostych i warunki równoległości",
     "difficulty": 2,
     "statement": "W kartezjańskim układzie współrzędnych (x, y) proste k oraz l są określone równaniami k: $y=(m-2)x+5$ i l: $y=-4x+(m+3)$. Proste k oraz l są równoległe, gdy liczba m jest równa: A. (-4) B. (-2) C. 2 D. 5",
@@ -3886,7 +3918,7 @@
     "timestamp": "2025-09-23T09:38:45.166Z"
   },
   {
-    "id": "circle_equation_from_center_point",
+    "id": "#2025-maj-24-2p",
     "topic": "Równanie okręgu",
     "difficulty": 2,
     "statement": "W kartezjańskim układzie współrzędnych (x, y) punkt P=(0,0) leży na okręgu $\\mathcal{O}$ o środku w punkcie S=(2,4). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg $\\mathcal{O}$ jest określony równaniem A. $(x-2)^{2}+(y-4)^{2}=2\\sqrt{5}$ B. $(x-2)^{2}+(y-4)^{2}=20$ C. $(x+2)^{2}+(y+4)^{2}=2\\sqrt{5}$ D. $(x+2)^{2}+(y+4)^{2}=20$",
@@ -4031,7 +4063,7 @@
     "timestamp": "2025-09-23T09:39:10.703Z"
   },
   {
-    "id": "cone_volume_calculation",
+    "id": "#2025-maj-25-2p",
     "topic": "Objętość stożka",
     "difficulty": 4,
     "statement": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę $120°$. Oblicz objętość tego stożka. Zapisz obliczenia.",
@@ -4174,7 +4206,7 @@
     "timestamp": "2025-09-23T09:39:35.671Z"
   },
   {
-    "id": "cube_diagonal_from_volume",
+    "id": "#2025-maj-26-2p",
     "topic": "Geometria przestrzenna - sześcian",
     "difficulty": 3,
     "statement": "Objętość sześcianu jest równa 729. Długość przekątnej tego sześcianu jest równa: A. $9\\sqrt{3}$ B. $9\\sqrt{2}$ C. $3\\sqrt{3}$ D. $3\\sqrt{2}$",
@@ -4312,10 +4344,11 @@
     "timestamp": "2025-09-23T09:40:01.705Z"
   },
   {
-    "id": "three_digit_odd_with_zero",
+    "id": "#2025-maj-27-2p",
     "topic": "Kombinatoryka - liczenie z ograniczeniami",
     "difficulty": 4,
     "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych trzycyfrowych nieparzystych, w których zapisie dziesiętnym występuje dokładnie jeden raz cyfra 0, jest A. 45 B. 50 C. 54 D. 81",
+    "image": "/zad27.png",
     "steps": [
       {
         "step": 1,
@@ -4460,10 +4493,11 @@
     "timestamp": "2025-09-23T09:40:32.374Z"
   },
   {
-    "id": "probability_dice_sum_11",
+    "id": "#2025-maj-28-2p",
     "topic": "Prawdopodobieństwo klasyczne",
     "difficulty": 2,
     "statement": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek. Zdarzenie A polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Prawdopodobieństwo zdarzenia A jest równe: A. $\\frac{1}{36}$ B. $\\frac{6}{36}$ C. $\\frac{11}{36}$ D. $\\frac{2}{36}$",
+    "image": "/zad28.png",
     "steps": [
       {
         "step": 1,
@@ -4588,7 +4622,7 @@
     "timestamp": "2025-09-23T09:41:06.396Z"
   },
   {
-    "id": "arithmetic_mean_seven_numbers",
+    "id": "#2025-maj-29-2p",
     "topic": "Średnia arytmetyczna",
     "difficulty": 2,
     "statement": "Średnia arytmetyczna siedmiu liczb: 1, 2, 3, 4, 5, x, y, jest równa 3. Suma x+y jest równa: A. 4 B. 5 C. 6 D. 7",
@@ -4732,7 +4766,7 @@
     "timestamp": "2025-09-23T09:41:27.899Z"
   },
   {
-    "id": "statistics_median_mode",
+    "id": "#2025-maj-30-2p",
     "topic": "Statystyka opisowa - mediana i dominanta",
     "difficulty": 2,
     "statement": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej liczącej 24 uczniów. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. Ocena 1 - 1 osoba, ocena 2 - 3 osoby, ocena 3 - 4 osoby, ocena 4 - 4 osoby, ocena 5 - 5 osób, ocena 6 - 7 osób. Uzupełnij zdania: 1. Mediana ocen jest równa ___. 2. Dominanta ocen jest równa ___.",
@@ -4882,7 +4916,7 @@
     "timestamp": "2025-09-23T09:41:58.825Z"
   },
   {
-    "id": "rectangular_prism_optimization",
+    "id": "#2025-maj-31-2p",
     "topic": "Optymalizacja funkcji - prostopadłościan",
     "difficulty": 4,
     "statement": "Rozważamy wszystkie prostopadłościany ABCDEFGH, w których krawędź BC ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka B jest równa 15. Niech P(x) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości x krawędzi AB. Wyznacz wzór i dziedzinę funkcji P. Oblicz długość x krawędzi AB tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe.",

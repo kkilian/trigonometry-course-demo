@@ -26,11 +26,11 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
       id: 'matura-maj-2025-podstawa',
       title: 'Maj 2025',
       description: 'Egzamin główny - poziom podstawowy',
-      status: 'soon',
+      status: 'available',
       borderColor: 'hover:border-green-500',
       iconBg: 'group-hover:bg-green-100',
       iconColor: 'group-hover:text-green-700',
-      problemCount: 0
+      problemCount: 35
     },
     {
       id: 'matura-czerwiec-2025-podstawa',

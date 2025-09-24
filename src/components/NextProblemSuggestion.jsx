@@ -188,7 +188,7 @@ const NextProblemSuggestion = ({
       }
 
       // Save suggested problems to localStorage for matura module
-      if (currentProblem.id && (currentProblem.id.includes('#2025-marzec') || currentProblem.id.includes('#2025-kwiecien'))) {
+      if (currentProblem.id && (currentProblem.id.includes('#2025-marzec') || currentProblem.id.includes('#2025-kwiecien') || currentProblem.id.includes('#2025-maj'))) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('matura-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for matura:', suggestedIds);

@@ -1,47 +1,142 @@
 [
   {
     "id": "complex_exponent_simplification",
-    "topic": "Upraszczanie wyrażeń z potęgami i pierwiastkami",
+    "topic": "Potęgi i pierwiastki",
     "difficulty": 4,
     "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$ jest równa A. $\\frac{1}{2}$ B. $4$ C. $\\frac{1}{4}$ D. $2$",
     "steps": [
       {
         "step": 1,
-        "hint": "Na jakie podstawowe liczby pierwsze można rozłożyć 6, 8 i 216?",
-        "expression": "$6 = 2 \\cdot 3$, $8 = 2^3$, $216 = 6^3 = (2 \\cdot 3)^3 = 2^3 \\cdot 3^3$",
-        "explanation": "Rozkładamy wszystkie liczby na czynniki pierwsze",
-        "why": "Rozkład na czynniki pierwsze pozwoli nam łączyć potęgi o tych samych podstawach. To kluczowy krok w upraszczaniu złożonych wyrażeń."
+        "hint": "Jak najlepiej rozpocząć upraszczanie tego złożonego wyrażenia?",
+        "expression": "Rozkładamy: $6 = 2 \\cdot 3$, $8 = 2^3$, $216 = 6^3 = (2 \\cdot 3)^3 = 2^3 \\cdot 3^3$",
+        "explanation": "Znajdujemy rozkłady na czynniki pierwsze wszystkich podstaw",
+        "interactive_choice": {
+          "prompt": "Którą strategię wybierzesz do uproszczenia wyrażenia $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozkładać wszystko na czynniki pierwsze",
+              "feedback": "Świetny wybór! To pozwoli na systematyczne uproszczenie wszystkich składników.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw obliczyć wartości liczbowe",
+              "feedback": "Nie - liczby są za duże, lepiej pracować z rozkładami.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić pierwiastek na potęgę ułamkową",
+              "feedback": "Dobry pomysł, ale lepiej najpierw rozkład na czynniki pierwsze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozkład na czynniki pierwsze pozwoli nam systematycznie uprościć całe wyrażenie."
+        }
       },
       {
         "step": 2,
-        "hint": "Jak przepisać pierwsze wyrażenie używając tylko potęg liczb 2 i 3?",
-        "expression": "$\\frac{6^{18} \\cdot 8^{-5}}{216} = \\frac{(2 \\cdot 3)^{18} \\cdot (2^3)^{-5}}{2^3 \\cdot 3^3} = \\frac{2^{18} \\cdot 3^{18} \\cdot 2^{-15}}{2^3 \\cdot 3^3}$",
-        "explanation": "Zastępujemy wszystkie liczby ich rozkładami na czynniki pierwsze"
+        "hint": "Jak przepisać wyrażenie używając rozkładów na czynniki pierwsze?",
+        "expression": "$\\frac{(2 \\cdot 3)^{18} \\cdot (2^3)^{-5}}{2^3 \\cdot 3^3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}}$",
+        "explanation": "Podstawiamy rozkłady: $6^{18} = (2 \\cdot 3)^{18}$, $8^{-5} = (2^3)^{-5}$, $216 = 2^3 \\cdot 3^3$"
       },
       {
         "step": 3,
-        "hint": "Jak połączyć potęgi o tej samej podstawie w liczniku?",
-        "expression": "$\\frac{2^{18} \\cdot 2^{-15} \\cdot 3^{18}}{2^3 \\cdot 3^3} = \\frac{2^{18-15} \\cdot 3^{18}}{2^3 \\cdot 3^3} = \\frac{2^3 \\cdot 3^{18}}{2^3 \\cdot 3^3}$",
-        "explanation": "Używamy wzoru $a^m \\cdot a^n = a^{m+n}$"
+        "hint": "Jak uprościć potęgi w liczniku?",
+        "expression": "$\\frac{2^{18} \\cdot 3^{18} \\cdot 2^{-15}}{2^3 \\cdot 3^3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}}$",
+        "explanation": "Używamy wzorów: $(ab)^n = a^n b^n$ i $(a^m)^n = a^{mn}$",
+        "why": "$(2 \\cdot 3)^{18} = 2^{18} \\cdot 3^{18}$ oraz $(2^3)^{-5} = 2^{3 \\cdot (-5)} = 2^{-15}$"
       },
       {
         "step": 4,
-        "hint": "Co się stanie gdy podzielisz potęgi o tej samej podstawie?",
-        "expression": "$\\frac{2^3 \\cdot 3^{18}}{2^3 \\cdot 3^3} = 2^{3-3} \\cdot 3^{18-3} = 2^0 \\cdot 3^{15} = 3^{15}$",
-        "explanation": "Używamy wzoru $\\frac{a^m}{a^n} = a^{m-n}$ i $a^0 = 1$"
+        "hint": "Jak połączyć potęgi o tej samej podstawie w liczniku?",
+        "expression": "$\\frac{2^{18-15} \\cdot 3^{18}}{2^3 \\cdot 3^3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}}$",
+        "explanation": "Łączymy potęgi: $2^{18} \\cdot 2^{-15} = 2^{18-15} = 2^3$"
       },
       {
         "step": 5,
-        "hint": "Jak przepisać pierwiastek sześcienny jako potęgę?",
-        "expression": "$\\sqrt[3]{\\frac{8}{3^{45}}} = \\left(\\frac{8}{3^{45}}\\right)^{\\frac{1}{3}} = \\left(\\frac{2^3}{3^{45}}\\right)^{\\frac{1}{3}} = \\frac{(2^3)^{\\frac{1}{3}}}{(3^{45})^{\\frac{1}{3}}} = \\frac{2}{3^{15}}$",
-        "explanation": "Przekształcamy pierwiastek na potęgę i upraszczamy",
-        "why": "Pierwiastek $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Przy potęgowaniu potęgi: $(a^m)^n = a^{mn}$, więc $(3^{45})^{\\frac{1}{3}} = 3^{45 \\cdot \\frac{1}{3}} = 3^{15}$."
+        "hint": "Jak uprościć ułamek z potęgami?",
+        "expression": "$\\frac{2^3 \\cdot 3^{18}}{2^3 \\cdot 3^3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}} = \\frac{3^{18}}{3^3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}}$",
+        "explanation": "Skracamy $2^3$ w liczniku i mianowniku"
       },
       {
         "step": 6,
-        "hint": "Jaki będzie wynik mnożenia $3^{15} \\cdot \\frac{2}{3^{15}}$?",
+        "hint": "Jaki jest wynik dzielenia potęg o tej samej podstawie?",
+        "expression": "$3^{18-3} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}} = 3^{15} \\cdot \\sqrt[3]{\\frac{2^3}{3^{45}}}$",
+        "explanation": "Używamy wzoru $\\frac{a^m}{a^n} = a^{m-n}$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak przekształcić pierwiastek sześcienny na potęgę?",
+        "expression": "$3^{15} \\cdot \\left(\\frac{2^3}{3^{45}}\\right)^{\\frac{1}{3}}$",
+        "explanation": "Przepisujemy pierwiastek jako potęgę ułamkową",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przepisać $\\sqrt[3]{\\frac{2^3}{3^{45}}}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\left(\\frac{2^3}{3^{45}}\\right)^{\\frac{1}{3}}$",
+              "feedback": "Dokładnie! Pierwiastek sześcienny to potęga $\\frac{1}{3}$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\frac{\\sqrt[3]{2^3}}{\\sqrt[3]{3^{45}}}$",
+              "feedback": "Też poprawne, ale pierwsza forma jest wygodniejsza do dalszych przekształceń.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$\\sqrt[3]{2^3 - 3^{45}}$",
+              "feedback": "Nie! Pierwiastek z ułamka to nie różnica pierwiastków.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pierwiastek sześcienny to potęga $\\frac{1}{3}$, więc możemy użyć wzorów na potęgi."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak zastosować wzór $(\\frac{a}{b})^n = \\frac{a^n}{b^n}$?",
+        "expression": "$3^{15} \\cdot \\frac{(2^3)^{\\frac{1}{3}}}{(3^{45})^{\\frac{1}{3}}}$",
+        "explanation": "Rozkładamy potęgę ułamka na ułamek potęg"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć $(2^3)^{\\frac{1}{3}}$ i $(3^{45})^{\\frac{1}{3}}$?",
+        "expression": "$3^{15} \\cdot \\frac{2^{3 \\cdot \\frac{1}{3}}}{3^{45 \\cdot \\frac{1}{3}}} = 3^{15} \\cdot \\frac{2^1}{3^{15}}$",
+        "explanation": "Używamy wzoru $(a^m)^n = a^{mn}$: $3 \\cdot \\frac{1}{3} = 1$ i $45 \\cdot \\frac{1}{3} = 15$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć wyrażenie $3^{15} \\cdot \\frac{2}{3^{15}}$?",
         "expression": "$3^{15} \\cdot \\frac{2}{3^{15}} = \\frac{3^{15} \\cdot 2}{3^{15}} = 2$",
-        "explanation": "Potęgi $3^{15}$ się skracają, zostaje tylko 2"
+        "explanation": "Potęgi $3^{15}$ się skracają",
+        "interactive_choice": {
+          "prompt": "Co otrzymamy po uproszczeniu $3^{15} \\cdot \\frac{2}{3^{15}}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$2$",
+              "feedback": "Świetnie! $3^{15}$ w liczniku i mianowniku się skracają, zostaje $2$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$2 \\cdot 3^{30}$",
+              "feedback": "Nie - potęgi się skracają, a nie mnożą.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\frac{2}{3^{30}}$",
+              "feedback": "Nie - $3^{15}$ występuje zarówno w liczniku jak i mianowniku.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy ta sama potęga występuje w liczniku i mianowniku, skracają się do 1."
+        }
       }
     ],
     "solutions": [
@@ -55,49 +150,142 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 6,
-        "stepsWithWhy": 2
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-23T07:37:14.137Z"
+    "timestamp": "2025-09-23T10:21:53.145Z"
   },
   {
-    "id": "logarithm_calculation",
-    "topic": "Logarytmy",
+    "id": "logarithm_calculation_with_base_conversion",
+    "topic": "Logarytmy - zmiana podstawy",
     "difficulty": 4,
-    "statement": "Liczba $\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$ jest równa",
+    "statement": "Oblicz wartość wyrażenia $\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$",
     "steps": [
       {
         "step": 1,
-        "hint": "Jak można przepisać podstawy logarytmów używając potęg liczby 2?",
-        "expression": "$2\\sqrt{2} = 2 \\cdot 2^{1/2} = 2^{3/2}$ oraz $\\sqrt{8} = \\sqrt{2^3} = 2^{3/2}$",
-        "explanation": "Przepisujemy podstawy jako potęgi liczby 2",
-        "why": "Gdy podstawy mają wspólną bazę, możemy użyć wzoru na zmianę podstawy logarytmu. Zauważ, że obie podstawy to $2^{3/2}$!"
+        "hint": "Jak najlepiej podejść do tego zadania z różnymi podstawami logarytmów?",
+        "expression": "Przepiszemy podstawy: $2\\sqrt{2} = 2 \\cdot 2^{1/2} = 2^{3/2}$ oraz $\\sqrt{8} = \\sqrt{2^3} = 2^{3/2}$",
+        "explanation": "Wyrażamy podstawy logarytmów jako potęgi liczby 2",
+        "interactive_choice": {
+          "prompt": "Jaka strategia będzie najefektywniejsza dla wyrażenia $\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zamienić wszystko na logarytmy naturalne",
+              "feedback": "Możliwe, ale niepotrzebnie komplikuje obliczenia",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przepisać podstawy jako potęgi liczby 2",
+              "feedback": "Świetny pomysł! To pozwoli użyć wzoru na zmianę podstawy",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć kalkulatora do przybliżonych wartości",
+              "feedback": "Nie - zadanie wymaga dokładnej wartości algebraicznej",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przepisanie podstaw jako potęg liczby 2 pozwoli na eleganckie użycie wzoru na zmianę podstawy."
+        }
       },
       {
         "step": 2,
-        "hint": "Co się stanie z logarytmami o tej samej podstawie?",
+        "hint": "Co zauważasz w podstawach po przepisaniu?",
+        "expression": "$2\\sqrt{2} = 2^{3/2}$ i $\\sqrt{8} = 2^{3/2}$",
+        "explanation": "Obie podstawy są równe $2^{3/2}$!",
+        "why": "To znacznie upraszcza zadanie - drugi logarytm ma tę samą podstawę co pierwszy."
+      },
+      {
+        "step": 3,
+        "hint": "Jak przepisać wyrażenie używając tej samej podstawy?",
         "expression": "$\\log_{2^{3/2}} 96 - \\log_{2^{3/2}} 3$",
         "explanation": "Oba logarytmy mają teraz podstawę $2^{3/2}$"
       },
       {
-        "step": 3,
-        "hint": "Jaką właściwość logarytmów możesz zastosować do różnicy?",
-        "expression": "$\\log_{2^{3/2}} \\frac{96}{3} = \\log_{2^{3/2}} 32$",
-        "explanation": "Używamy wzoru $\\log_a b - \\log_a c = \\log_a \\frac{b}{c}$"
-      },
-      {
         "step": 4,
-        "hint": "Jak można zapisać 32 jako potęgę liczby 2?",
-        "expression": "$32 = 2^5$",
-        "explanation": "Rozkładamy 32 na potęgę dwójki"
+        "hint": "Jaki wzór logarytmiczny możesz zastosować?",
+        "expression": "$\\log_{2^{3/2}} \\frac{96}{3} = \\log_{2^{3/2}} 32$",
+        "explanation": "Stosujemy wzór na różnicę logarytmów",
+        "interactive_choice": {
+          "prompt": "Jak uprościć wyrażenie $\\log_{2^{3/2}} 96 - \\log_{2^{3/2}} 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\log_a x - \\log_a y = \\log_a \\frac{x}{y}$",
+              "feedback": "Doskonale! To da nam $\\log_{2^{3/2}} \\frac{96}{3} = \\log_{2^{3/2}} 32$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zamienić na logarytmy o podstawie 2",
+              "feedback": "Możliwe, ale skoro mamy tę samą podstawę, lepiej użyć wzoru na różnicę",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć każdy logarytm osobno",
+              "feedback": "Niepotrzebnie skomplikowane - wzór na różnicę jest prostszy",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór na różnicę logarytmów o tej samej podstawie znacznie upraszcza obliczenia."
+        }
       },
       {
         "step": 5,
-        "hint": "Jak wykorzystać wzór na logarytm potęgi przy podstawie będącej też potęgą?",
-        "expression": "$\\log_{2^{3/2}} 2^5 = \\frac{5}{3/2} = \\frac{5 \\cdot 2}{3} = \\frac{10}{3}$",
-        "explanation": "Stosujemy wzór $\\log_{a^k} b^m = \\frac{m}{k} \\log_a b$, gdzie $\\log_2 2 = 1$",
-        "why": "Gdy podstawa i argument to potęgi tej samej liczby: $\\log_{a^k} a^m = \\frac{m}{k}$. To kluczowy wzór dla tego typu zadań."
+        "hint": "Jak przepisać liczbę 32 jako potęgę liczby 2?",
+        "expression": "$32 = 2^5$",
+        "explanation": "Rozpoznajemy, że $32 = 2^5$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć $\\log_{2^{3/2}} 2^5$?",
+        "expression": "$\\log_{2^{3/2}} 2^5$",
+        "explanation": "Mamy logarytm potęgi przy podstawie będącej również potęgą",
+        "why": "Użyjemy wzoru na zmianę podstawy: $\\log_{a^k} b^m = \\frac{m}{k} \\log_a b$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki wzór zastosować dla $\\log_{2^{3/2}} 2^5$?",
+        "expression": "$\\log_{2^{3/2}} 2^5 = \\frac{5}{3/2} \\log_2 2 = \\frac{5}{3/2} \\cdot 1$",
+        "explanation": "Stosujemy wzór na logarytm potęgi przy podstawie będącej potęgą",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej obliczyć $\\log_{2^{3/2}} 2^5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $\\log_{a^k} b^m = \\frac{m}{k} \\log_a b$",
+              "feedback": "Świetnie! To da $\\frac{5}{3/2} \\log_2 2 = \\frac{5}{3/2} \\cdot 1 = \\frac{10}{3}$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zamienić na $\\frac{\\log_2 2^5}{\\log_2 2^{3/2}}$",
+              "feedback": "Poprawne, ale dłuższe - wzór z opcji A jest bezpośredniejszy",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $x = \\log_{2^{3/2}} 2^5$ i rozwiązać $(2^{3/2})^x = 2^5$",
+              "feedback": "Możliwe, ale niepotrzebnie skomplikowane",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $\\log_{a^k} b^m = \\frac{m}{k} \\log_a b$ jest najszybszy dla tego typu zadań."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć ułamek $\\frac{5}{3/2}$?",
+        "expression": "$\\frac{5}{3/2} = 5 \\cdot \\frac{2}{3} = \\frac{10}{3}$",
+        "explanation": "Dzielenie przez ułamek to mnożenie przez jego odwrotność"
       }
     ],
     "solutions": [
@@ -111,72 +299,319 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 2
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-23T07:37:26.831Z"
+    "timestamp": "2025-09-23T10:22:28.826Z"
   },
   {
     "id": "divisibility_powers_39",
-    "topic": "Podzielność liczb i potęgi",
+    "topic": "Podzielność i potęgi",
     "difficulty": 4,
     "statement": "Wykaż, że liczba $3^{94} + 9^{46} + 27^{30}$ jest podzielna przez 39.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jak można zapisać 9 i 27 jako potęgi liczby 3?",
-        "expression": "$3^{94} + 9^{46} + 27^{30} = 3^{94} + (3^2)^{46} + (3^3)^{30}$",
-        "explanation": "Przepisujemy wszystkie składniki jako potęgi liczby 3"
+        "hint": "Jak można przepisać wszystkie składniki używając tej samej podstawy?",
+        "expression": "$9 = 3^2$ oraz $27 = 3^3$",
+        "explanation": "Przepisujemy wszystko przez podstawę 3",
+        "interactive_choice": {
+          "prompt": "Którą podstawę wybrać do przepisania wszystkich składników?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawa 3, bo $9 = 3^2$ i $27 = 3^3$",
+              "feedback": "Świetnie! To pozwoli na jednolite potraktowanie wszystkich składników.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawa 9, bo jest w środku",
+              "feedback": "Możliwe, ale trudniej przepisać $3^{94}$ i $27^{30}$ przez podstawę 9.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawa 27, bo ma największy wykładnik",
+              "feedback": "Nie - trudno byłoby przepisać $3^{94}$ przez podstawę 27.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawa 3 jest najlepsza, bo $9 = 3^2$ i $27 = 3^3$."
+        }
       },
       {
         "step": 2,
-        "hint": "Co się stanie z wykładnikami przy potęgowaniu potęgi?",
-        "expression": "$3^{94} + (3^2)^{46} + (3^3)^{30} = 3^{94} + 3^{92} + 3^{90}$",
-        "explanation": "Stosujemy wzór $(a^m)^n = a^{mn}$",
-        "why": "Wzór $(a^m)^n = a^{mn}$ pozwala uprościć złożone potęgi. Tutaj: $2 \\cdot 46 = 92$ i $3 \\cdot 30 = 90$."
+        "hint": "Jak przepisać każdy składnik używając podstawy 3?",
+        "expression": "$9^{46} = (3^2)^{46} = 3^{92}$ oraz $27^{30} = (3^3)^{30} = 3^{90}$",
+        "explanation": "Używamy wzoru $(a^m)^n = a^{mn}$"
       },
       {
         "step": 3,
-        "hint": "Jaki wspólny czynnik można wyłączyć z wszystkich składników?",
-        "expression": "$3^{94} + 3^{92} + 3^{90} = 3^{90}(3^4 + 3^2 + 1)$",
-        "explanation": "Wyłączamy przed nawias najniższą potęgę $3^{90}$"
+        "hint": "Jak wygląda teraz całe wyrażenie?",
+        "expression": "$3^{94} + 3^{92} + 3^{90}$",
+        "explanation": "Wszystkie składniki mają podstawę 3"
       },
       {
         "step": 4,
-        "hint": "Ile wynoszą konkretne wartości $3^4$ i $3^2$?",
-        "expression": "$3^{90}(3^4 + 3^2 + 1) = 3^{90}(81 + 9 + 1) = 3^{90} \\cdot 91$",
-        "explanation": "Obliczamy wartości w nawiasie: $3^4 = 81$, $3^2 = 9$"
+        "hint": "Co możesz wyłączyć przed nawias z wyrażenia $3^{94} + 3^{92} + 3^{90}$?",
+        "expression": "$3^{90}(3^4 + 3^2 + 1)$",
+        "explanation": "Wyłączamy najmniejszą potęgę $3^{90}$ przed nawias",
+        "why": "Wyłączenie wspólnego czynnika $3^{90}$ pozwala skupić się na wyrażeniu w nawiasie."
       },
       {
         "step": 5,
-        "hint": "Na jakie czynniki można rozłożyć liczbę 91?",
-        "expression": "$91 = 7 \\cdot 13$",
-        "explanation": "Rozkładamy 91 na czynniki pierwsze",
-        "why": "Sprawdzamy podzielność przez małe liczby pierwsze: $91 \\div 7 = 13$. To kluczowe, bo $39 = 3 \\cdot 13$."
+        "hint": "Ile wynoszą potęgi w nawiasie?",
+        "expression": "$3^4 = 81$, $3^2 = 9$, więc $3^4 + 3^2 + 1 = 81 + 9 + 1 = 91$",
+        "explanation": "Obliczamy wartość wyrażenia w nawiasie"
       },
       {
         "step": 6,
-        "hint": "Jak można zapisać 39 w postaci iloczynu czynników pierwszych?",
-        "expression": "$39 = 3 \\cdot 13$",
-        "explanation": "Rozkładamy 39 na czynniki pierwsze"
+        "hint": "Jak sprawdzić czy 91 dzieli się przez 39?",
+        "expression": "$91 = 7 \\cdot 13$ oraz $39 = 3 \\cdot 13$",
+        "explanation": "Rozkładamy oba liczby na czynniki pierwsze",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej sprawdzić podzielność 91 przez 39?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podzielić 91 przez 39",
+              "feedback": "Dobra metoda! $91 = 39 \\cdot 2 + 13$, więc nie dzieli się.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki: $91 = 7 \\cdot 13$",
+              "feedback": "Świetnie! Widzimy, że $39 = 3 \\cdot 13$, więc $91 = 7 \\cdot 13$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić resztę z dzielenia",
+              "feedback": "To to samo co dzielenie - dobra metoda weryfikacji.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Rozkład pokazuje strukturę: $91 = 7 \\cdot 13$ i $39 = 3 \\cdot 13$."
+        }
       },
       {
         "step": 7,
-        "hint": "Czy w wyrażeniu $3^{90} \\cdot 7 \\cdot 13$ znajdziesz wszystkie czynniki liczby 39?",
-        "expression": "$3^{94} + 9^{46} + 27^{30} = 3^{90} \\cdot 7 \\cdot 13 = 3^{89} \\cdot 3 \\cdot 7 \\cdot 13 = 3^{89} \\cdot 7 \\cdot 39$",
-        "explanation": "Wydzielamy czynnik 39 z wyrażenia",
-        "why": "Skoro $39 = 3 \\cdot 13$, a mamy $3^{90} \\cdot 7 \\cdot 13$, to możemy wyłączyć $3 \\cdot 13 = 39$ jako osobny czynnik."
+        "hint": "Czy 91 dzieli się przez 39?",
+        "expression": "$\\frac{91}{39} = \\frac{7 \\cdot 13}{3 \\cdot 13} = \\frac{7}{3}$",
+        "explanation": "91 nie dzieli się przez 39, bo $\\frac{7}{3}$ nie jest liczbą całkowitą"
       },
       {
         "step": 8,
-        "hint": "Co oznacza dla podzielności fakt, że liczba ma postać $k \\cdot 39$?",
-        "expression": "$3^{94} + 9^{46} + 27^{30} = 39 \\cdot (3^{89} \\cdot 7)$",
-        "explanation": "Liczba jest iloczynem 39 i pewnej liczby całkowitej, więc jest podzielna przez 39"
+        "hint": "Może warto sprawdzić inne podejście - jaka jest reszta z dzielenia potęg trójki przez 39?",
+        "expression": "$\\phi(39) = \\phi(3 \\cdot 13) = \\phi(3) \\cdot \\phi(13) = 2 \\cdot 12 = 24$",
+        "explanation": "Obliczamy funkcję Eulera dla 39",
+        "why": "Funkcja Eulera $\\phi(n)$ liczy liczby względnie pierwsze z $n$. Dla $n = p \\cdot q$ mamy $\\phi(n) = (p-1)(q-1)$.",
+        "interactive_choice": {
+          "prompt": "Jak wykorzystać właściwości modulo do rozwiązania problemu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić $3^{90} \\bmod 39$ bezpośrednio",
+              "feedback": "Trudne - lepiej użyć wzorów na reszty z potęgowania.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć twierdzenia Eulera: $3^{\\phi(39)} \\equiv 1 \\pmod{39}$",
+              "feedback": "Doskonale! $\\phi(39) = \\phi(3 \\cdot 13) = 2 \\cdot 12 = 24$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić wzór $(a+b+c) \\bmod 39$",
+              "feedback": "To nie pomoże - potrzebujemy właściwości potęg modulo.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Twierdzenie Eulera: jeśli $\\gcd(a,n)=1$, to $a^{\\phi(n)} \\equiv 1 \\pmod{n}$."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Co wynika z twierdzenia Eulera dla $3^{24}$?",
+        "expression": "$3^{24} \\equiv 1 \\pmod{39}$",
+        "explanation": "Ponieważ $\\gcd(3, 39) = 3 \\neq 1$, nie możemy użyć twierdzenia Eulera"
+      },
+      {
+        "step": 10,
+        "hint": "Skoro $\\gcd(3, 39) = 3$, może sprawdźmy podzielność przez 3 i 13 osobno?",
+        "expression": "$39 = 3 \\cdot 13$, więc sprawdzamy podzielność przez 3 i przez 13",
+        "explanation": "Używamy faktu, że jeśli liczba dzieli się przez $a$ i $b$, gdzie $\\gcd(a,b)=1$, to dzieli się przez $ab$"
+      },
+      {
+        "step": 11,
+        "hint": "Czy $3^{94} + 3^{92} + 3^{90}$ dzieli się przez 3?",
+        "expression": "$3^{94} + 3^{92} + 3^{90} = 3^{90}(3^4 + 3^2 + 1)$",
+        "explanation": "Wyrażenie zawiera $3^{90}$ jako czynnik, więc dzieli się przez 3"
+      },
+      {
+        "step": 12,
+        "hint": "Sprawdźmy podzielność przez 13 - ile wynosi $3^{12} \\bmod 13$?",
+        "expression": "Z małego twierdzenia Fermata: $3^{12} \\equiv 1 \\pmod{13}$",
+        "explanation": "Ponieważ 13 jest pierwsze i $\\gcd(3,13)=1$, mamy $3^{12} \\equiv 1 \\pmod{13}$",
+        "why": "Małe twierdzenie Fermata: jeśli $p$ pierwsze i $\\gcd(a,p)=1$, to $a^{p-1} \\equiv 1 \\pmod{p}$."
+      },
+      {
+        "step": 13,
+        "hint": "Jak wykorzystać $3^{12} \\equiv 1 \\pmod{13}$ do obliczenia $3^{90}, 3^{92}, 3^{94} \\bmod 13$?",
+        "expression": "$3^{90} = 3^{12 \\cdot 7 + 6} \\equiv 3^6 \\pmod{13}$\n$3^{92} = 3^{12 \\cdot 7 + 8} \\equiv 3^8 \\pmod{13}$\n$3^{94} = 3^{12 \\cdot 7 + 10} \\equiv 3^{10} \\pmod{13}$",
+        "explanation": "Dzielimy wykładniki przez 12 i bierzemy reszty"
+      },
+      {
+        "step": 14,
+        "hint": "Oblicz $3^6, 3^8, 3^{10} \\bmod 13$",
+        "expression": "$3^6 = 729 \\equiv 1 \\pmod{13}$ (bo $729 = 56 \\cdot 13 + 1$)\n$3^8 = 3^6 \\cdot 3^2 \\equiv 1 \\cdot 9 = 9 \\pmod{13}$\n$3^{10} = 3^6 \\cdot 3^4 \\equiv 1 \\cdot 81 \\equiv 3 \\pmod{13}$ (bo $81 = 6 \\cdot 13 + 3$)",
+        "explanation": "Obliczamy reszty z dzielenia przez 13"
+      },
+      {
+        "step": 15,
+        "hint": "Jaka jest suma $3^{94} + 3^{92} + 3^{90} \\bmod 13$?",
+        "expression": "$3^{94} + 3^{92} + 3^{90} \\equiv 3 + 9 + 1 = 13 \\equiv 0 \\pmod{13}$",
+        "explanation": "Suma reszt daje 13, więc reszta z dzielenia przez 13 to 0"
+      },
+      {
+        "step": 16,
+        "hint": "Co możemy teraz wnioskować o podzielności przez 39?",
+        "expression": "$3^{94} + 3^{92} + 3^{90}$ dzieli się przez 3 i przez 13",
+        "explanation": "Ponieważ wyrażenie dzieli się przez 3 i przez 13, a $\\gcd(3,13)=1$, dzieli się przez $3 \\cdot 13 = 39$"
       }
     ],
     "solutions": [
-      "Liczba $3^{94} + 9^{46} + 27^{30} = 39 \\cdot (3^{89} \\cdot 7)$ jest podzielna przez 39"
+      "Liczba $3^{94} + 9^{46} + 27^{30}$ jest podzielna przez 39"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-23T10:23:18.183Z"
+  },
+  {
+    "id": "sqrt_equation_product",
+    "topic": "Równania z pierwiastkami",
+    "difficulty": 3,
+    "statement": "Dane jest równanie $\\sqrt{4x^2 + 4x + 1} = 11$. Iloczyn wszystkich rzeczywistych rozwiązań tego równania jest równy: A. (-5) B. 30 C. 5 D. (-30)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co zauważasz w wyrażeniu pod pierwiastkiem $4x^2 + 4x + 1$?",
+        "expression": "$4x^2 + 4x + 1 = (2x + 1)^2$",
+        "explanation": "Rozpoznajemy wzór skróconego mnożenia $(a + b)^2 = a^2 + 2ab + b^2$",
+        "why": "Wzór $(2x + 1)^2$ pozwoli nam uprościć pierwiastek do $|2x + 1|$.",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do wyrażenia $4x^2 + 4x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpoznać wzór skróconego mnożenia",
+              "feedback": "Świetnie! To $(2x + 1)^2$, co znacznie uprości równanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć deltę dla tego trójmianu",
+              "feedback": "Możliwe, ale niepotrzebne - lepiej rozpoznać wzór skrócony.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podnieść całe równanie do kwadratu",
+              "feedback": "To będzie następny krok, ale najpierw uprośćmy wyrażenie pod pierwiastkiem.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpoznanie wzoru $(2x + 1)^2$ znacznie uprości nasze równanie."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak uprościć $\\sqrt{(2x + 1)^2}$?",
+        "expression": "$\\sqrt{(2x + 1)^2} = |2x + 1|$",
+        "explanation": "Pierwiastek z kwadratu daje wartość bezwzględną"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równanie otrzymujemy po uproszczeniu?",
+        "expression": "$|2x + 1| = 11$",
+        "explanation": "Równanie z wartością bezwzględną"
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać równanie z wartością bezwzględną?",
+        "expression": "$2x + 1 = 11$ lub $2x + 1 = -11$",
+        "explanation": "Rozpatrujemy oba przypadki dla wartości bezwzględnej",
+        "interactive_choice": {
+          "prompt": "Które przypadki należy rozpatrzyć dla równania $|2x + 1| = 11$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $2x + 1 = 11$",
+              "feedback": "Nie - wartość bezwzględna może pochodzić z liczby dodatniej i ujemnej.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$2x + 1 = 11$ lub $2x + 1 = -11$",
+              "feedback": "Dokładnie! To standardowe rozwiązanie równania $|a| = b$ gdzie $b > 0$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko $2x + 1 = -11$",
+              "feedback": "Nie - pomijasz przypadek gdy wyrażenie pod wartością bezwzględną jest dodatnie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie $|a| = b$ (gdzie $b > 0$) ma rozwiązania $a = b$ lub $a = -b$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jakie rozwiązania otrzymujemy z pierwszego przypadku?",
+        "expression": "$2x + 1 = 11 \\Rightarrow 2x = 10 \\Rightarrow x_1 = 5$",
+        "explanation": "Rozwiązujemy pierwsze równanie liniowe"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie rozwiązania otrzymujemy z drugiego przypadku?",
+        "expression": "$2x + 1 = -11 \\Rightarrow 2x = -12 \\Rightarrow x_2 = -6$",
+        "explanation": "Rozwiązujemy drugie równanie liniowe"
+      },
+      {
+        "step": 7,
+        "hint": "Czy oba rozwiązania spełniają równanie pierwotne?",
+        "expression": "Sprawdzenie: $\\sqrt{4 \\cdot 25 + 4 \\cdot 5 + 1} = \\sqrt{121} = 11$ ✓\nSprawdzenie: $\\sqrt{4 \\cdot 36 + 4 \\cdot (-6) + 1} = \\sqrt{121} = 11$ ✓",
+        "explanation": "Oba rozwiązania są poprawne"
+      },
+      {
+        "step": 8,
+        "hint": "Jaki jest iloczyn wszystkich rozwiązań?",
+        "expression": "$x_1 \\cdot x_2 = 5 \\cdot (-6) = -30$",
+        "explanation": "Obliczamy iloczyn rozwiązań $x_1 = 5$ i $x_2 = -6$"
+      }
+    ],
+    "solutions": [
+      "$x_1 = 5$, $x_2 = -6$",
+      "Iloczyn rozwiązań: $-30$",
+      "Odpowiedź: D. (-30)"
     ],
     "validation": {
       "isValid": true,
@@ -184,185 +619,316 @@
       "warnings": [],
       "stats": {
         "totalSteps": 8,
-        "stepsWithWhy": 3
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
       }
     },
-    "timestamp": "2025-09-23T07:37:45.606Z"
+    "timestamp": "2025-09-23T10:23:41.420Z"
   },
   {
-    "id": "sqrt_equation_product",
-    "topic": "Równania z pierwiastkami",
-    "difficulty": 3,
-    "statement": "Dane jest równanie $\\sqrt{4x^2 + 4x + 1} = 11$. Iloczyn wszystkich rzeczywistych rozwiązań tego równania jest równy:",
+    "id": "symmetric_expressions_a4_b4",
+    "topic": "Wyrażenia symetryczne",
+    "difficulty": 4,
+    "statement": "Dane są liczby $a$ i $b$ dla których spełnione są warunki: $a+b=6$ oraz $a \\cdot b=4$. Wartość wyrażenia $a^4+b^4$ jest równa: A. 1296 B. 1264 C. 864 D. 752",
     "steps": [
       {
         "step": 1,
-        "hint": "Co można zrobić z pierwiastkiem, żeby go pozbyć się z równania?",
-        "expression": "$(\\sqrt{4x^2 + 4x + 1})^2 = 11^2$",
-        "explanation": "Podnosimy obie strony do kwadratu",
-        "why": "Podnoszenie do kwadratu eliminuje pierwiastek, ale może wprowadzić rozwiązania obce - trzeba będzie sprawdzić!"
+        "hint": "Jakie mamy dane i co chcemy obliczyć?",
+        "expression": "Dane: $a + b = 6$, $a \\cdot b = 4$. Szukane: $a^4 + b^4$",
+        "explanation": "Identyfikujemy znane wartości i cel"
       },
       {
         "step": 2,
-        "hint": "Czy wyrażenie pod pierwiastkiem ma jakąś szczególną postać?",
-        "expression": "$4x^2 + 4x + 1 = 121$",
-        "explanation": "Otrzymujemy równanie kwadratowe bez pierwiastka"
+        "hint": "Jak najlepiej podejść do obliczenia $a^4 + b^4$ mając dane $a+b$ i $ab$?",
+        "expression": "Strategia: wykorzystamy wzory na sumy potęg",
+        "explanation": "Będziemy budować wyrażenie stopniowo używając wzorów algebraicznych",
+        "interactive_choice": {
+          "prompt": "Którą strategię wybierzesz do obliczenia $a^4 + b^4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozwiązać równanie kwadratowe i znaleźć konkretne wartości $a$ i $b$",
+              "feedback": "Możliwe, ale pracochłonne - będziesz musiał liczyć czwarte potęgi niewymiernych liczb",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzorów na wyrażenia symetryczne: najpierw $a^2+b^2$, potem $a^4+b^4$",
+              "feedback": "Świetny wybór! To elegancka metoda wykorzystująca wzory algebraiczne",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Rozwinąć $(a+b)^4$ i wyciągnąć $a^4+b^4$",
+              "feedback": "Skomplikowane - będziesz musiał radzić sobie z wieloma składnikami mieszanymi",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyrażenia symetryczne najlepiej obliczać krok po kroku: $a+b$, $ab$ → $a^2+b^2$ → $a^4+b^4$"
+        }
       },
       {
         "step": 3,
-        "hint": "Co zauważasz w wyrażeniu $4x^2 + 4x + 1$? Czy to może być kwadrat dwumianu?",
-        "expression": "$4x^2 + 4x + 1 = (2x + 1)^2$",
-        "explanation": "Rozpoznajemy wzór skróconego mnożenia $(a + b)^2 = a^2 + 2ab + b^2$",
-        "why": "$(2x)^2 + 2 \\cdot 2x \\cdot 1 + 1^2 = 4x^2 + 4x + 1$. To znacznie uprości rozwiązanie!"
+        "hint": "Jaki wzór łączy $(a+b)^2$ z $a^2+b^2$ i $ab$?",
+        "expression": "$(a+b)^2 = a^2 + 2ab + b^2$",
+        "explanation": "Wzór na kwadrat sumy",
+        "why": "Ten wzór pozwoli nam wyrazić $a^2+b^2$ przez znane wielkości $a+b$ i $ab$"
       },
       {
         "step": 4,
-        "hint": "Jak teraz wygląda nasze równanie po podstawieniu?",
-        "expression": "$(2x + 1)^2 = 121$",
-        "explanation": "Podstawiamy rozłożenie na czynniki"
+        "hint": "Jak przekształcić wzór żeby otrzymać $a^2+b^2$?",
+        "expression": "$a^2 + b^2 = (a+b)^2 - 2ab$",
+        "explanation": "Wydzielamy $a^2+b^2$ z wzoru na kwadrat sumy"
       },
       {
         "step": 5,
-        "hint": "Co otrzymasz, biorąc pierwiastek z obu stron?",
-        "expression": "$2x + 1 = \\pm 11$",
-        "explanation": "Pierwiastek z kwadratu daje dwie możliwości: dodatnią i ujemną"
+        "hint": "Jaką wartość ma $a^2+b^2$ po podstawieniu danych?",
+        "expression": "$a^2 + b^2 = 6^2 - 2 \\cdot 4 = 36 - 8 = 28$",
+        "explanation": "Podstawiamy $a+b=6$ i $ab=4$"
       },
       {
         "step": 6,
-        "hint": "Jakie konkretne wartości x otrzymasz z każdego przypadku?",
-        "expression": "$2x + 1 = 11$ lub $2x + 1 = -11$",
-        "explanation": "Rozwiązujemy dwa proste równania liniowe"
+        "hint": "Który wzór pomoże nam przejść od $a^2+b^2$ do $a^4+b^4$?",
+        "expression": "$(a^2 + b^2)^2 = a^4 + 2a^2b^2 + b^4$",
+        "explanation": "Wzór na kwadrat sumy dla $a^2$ i $b^2$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej obliczyć $a^4+b^4$ znając $a^2+b^2=28$ i $ab=4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $(a^2+b^2)^2 = a^4 + 2a^2b^2 + b^4$",
+              "feedback": "Doskonale! To da nam $a^4+b^4 = (a^2+b^2)^2 - 2(ab)^2$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć $(a^2)^2 + (b^2)^2$ bezpośrednio",
+              "feedback": "Nie znamy osobno $a^2$ i $b^2$, tylko ich sumę",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $(a+b)^4$",
+              "feedback": "Zbyt skomplikowane - lepiej wykorzystać już obliczone $a^2+b^2$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $(a^2+b^2)^2 = a^4 + 2a^2b^2 + b^4$ pozwala wyrazić $a^4+b^4$ przez znane wielkości"
+        }
       },
       {
         "step": 7,
-        "hint": "Ile wynoszą te rozwiązania po przekształceniu?",
-        "expression": "$x_1 = \\frac{11-1}{2} = 5$ oraz $x_2 = \\frac{-11-1}{2} = -6$",
-        "explanation": "Otrzymujemy dwa rozwiązania"
+        "hint": "Jak wyrazić $a^4+b^4$ z tego wzoru?",
+        "expression": "$a^4 + b^4 = (a^2 + b^2)^2 - 2a^2b^2$",
+        "explanation": "Wydzielamy szukane wyrażenie"
       },
       {
         "step": 8,
-        "hint": "Czy oba rozwiązania spełniają pierwotne równanie z pierwiastkiem?",
-        "expression": "Sprawdzenie: $\\sqrt{4 \\cdot 25 + 4 \\cdot 5 + 1} = \\sqrt{121} = 11$ ✓ oraz $\\sqrt{4 \\cdot 36 - 4 \\cdot 6 + 1} = \\sqrt{121} = 11$ ✓",
-        "explanation": "Oba rozwiązania są poprawne"
+        "hint": "Czemu równa się $a^2b^2$?",
+        "expression": "$a^2b^2 = (ab)^2 = 4^2 = 16$",
+        "explanation": "Wykorzystujemy dane $ab = 4$",
+        "why": "Potrzebujemy $a^2b^2$ do podstawienia w wzorze. To po prostu kwadrat iloczynu $ab$."
       },
       {
         "step": 9,
-        "hint": "Jaki jest iloczyn tych dwóch rozwiązań?",
-        "expression": "$x_1 \\cdot x_2 = 5 \\cdot (-6) = -30$",
-        "explanation": "Obliczamy iloczyn wszystkich rozwiązań"
+        "hint": "Jaka jest końcowa wartość $a^4+b^4$?",
+        "expression": "$a^4 + b^4 = 28^2 - 2 \\cdot 16 = 784 - 32 = 752$",
+        "explanation": "Podstawiamy $a^2+b^2=28$ i $a^2b^2=16$"
+      },
+      {
+        "step": 10,
+        "hint": "Która odpowiedź jest prawidłowa?",
+        "expression": "Odpowiedź: D. 752",
+        "explanation": "Wartość wyrażenia $a^4+b^4 = 752$",
+        "interactive_choice": {
+          "prompt": "Porównaj otrzymany wynik z podanymi opcjami:",
+          "options": [
+            {
+              "id": "A",
+              "text": "A. 1296",
+              "feedback": "To byłoby $(a+b)^4 = 6^4$, ale to nie uwzględnia struktury wyrażenia",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "B. 1264",
+              "feedback": "Zbyt duża wartość - prawdopodobnie błąd w obliczeniach",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "C. 864",
+              "feedback": "Za mała wartość - możliwy błąd w wzorze lub podstawieniu",
+              "is_correct": false
+            },
+            {
+              "id": "D",
+              "text": "D. 752",
+              "feedback": "Prawidłowa odpowiedź! Zgadza się z naszymi obliczeniami",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Nasza metoda dała wynik 752, co odpowiada opcji D."
+        }
       }
     ],
     "solutions": [
-      "$x_1 \\cdot x_2 = -30$"
+      "D. 752"
     ],
     "parameters": {
-      "answer": "D. (-30)"
+      "given_conditions": "$a + b = 6$, $ab = 4$",
+      "target_expression": "$a^4 + b^4$"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
-      "warnings": [],
+      "warnings": [
+        "Krok 10: interactive_choice powinien mieć dokładnie 3 opcje (ma 4)"
+      ],
       "stats": {
-        "totalSteps": 9,
-        "stepsWithWhy": 2
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 10,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:38:07.636Z"
+    "timestamp": "2025-09-23T10:24:12.762Z"
   },
   {
-    "id": "symmetric_polynomials_example",
-    "topic": "Wielomiany symetryczne",
-    "difficulty": 4,
-    "statement": "Dane są liczby $a$ i $b$ dla których spełnione są warunki: $a+b=6$ oraz $a \\cdot b=4$. Wartość wyrażenia $a^4+b^4$ jest równa:",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jak można wyrazić $a^2+b^2$ używając znanych sum i iloczynów?",
-        "expression": "$a^2 + b^2 = (a+b)^2 - 2ab = 6^2 - 2 \\cdot 4 = 36 - 8 = 28$",
-        "explanation": "Wykorzystujemy wzór $(a+b)^2 = a^2 + 2ab + b^2$",
-        "why": "To kluczowy krok - nie możemy bezpośrednio obliczyć $a^4+b^4$, więc budujemy je stopniowo przez $a^2+b^2$. Wzór pochodzi z rozwinięcia kwadratu sumy."
-      },
-      {
-        "step": 2,
-        "hint": "Czy widzisz podobieństwo między wzorem na $a^2+b^2$ a tym czego szukamy?",
-        "expression": "$a^4 + b^4 = (a^2)^2 + (b^2)^2$",
-        "explanation": "Przepisujemy $a^4+b^4$ jako kwadrat wyrażenia $a^2+b^2$",
-        "why": "Zastosujemy ten sam trik co wcześniej - potraktujemy $a^2$ i $b^2$ jak nowe zmienne i użyjemy wzoru $(x+y)^2 = x^2 + 2xy + y^2$."
-      },
-      {
-        "step": 3,
-        "hint": "Czym jest iloczyn $a^2 \\cdot b^2$ w kontekście naszych danych?",
-        "expression": "$a^2 \\cdot b^2 = (ab)^2 = 4^2 = 16$",
-        "explanation": "Obliczamy iloczyn kwadratów jako kwadrat iloczynu"
-      },
-      {
-        "step": 4,
-        "hint": "Jak teraz zastosować wzór $(x+y)^2$ dla $x = a^2$ i $y = b^2$?",
-        "expression": "$a^4 + b^4 = (a^2 + b^2)^2 - 2a^2b^2 = 28^2 - 2 \\cdot 16$",
-        "explanation": "Używamy wzoru $(a^2+b^2)^2 = a^4 + 2a^2b^2 + b^4$"
-      },
-      {
-        "step": 5,
-        "hint": "Jaki będzie końcowy wynik obliczeń?",
-        "expression": "$a^4 + b^4 = 784 - 32 = 752$",
-        "explanation": "Wykonujemy ostatnie działania arytmetyczne"
-      }
-    ],
-    "solutions": [
-      "$a^4 + b^4 = 752$"
-    ],
-    "parameters": {
-      "given": "$a + b = 6$, $a \\cdot b = 4$",
-      "answer": "D. 752"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 2
-      }
-    },
-    "timestamp": "2025-09-23T07:38:21.118Z"
-  },
-  {
-    "id": "rational_division_complex",
+    "id": "rational_expression_division",
     "topic": "Dzielenie wyrażeń wymiernych",
     "difficulty": 4,
     "statement": "Dane jest wyrażenie określone dla każdej liczby rzeczywistej $x \\in \\mathbb{R} \\backslash\\{-3,-2,0,4\\}$: $\\frac{(x^2-5x)(x+2)}{(2x-8)(x+3)^2} \\div \\frac{x^2+2x}{2x^2-2x-24}$. Uprość to wyrażenie.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jak zmienić dzielenie ułamków na mnożenie?",
+        "hint": "Jak przekształcić dzielenie ułamków na mnożenie?",
         "expression": "$\\frac{(x^2-5x)(x+2)}{(2x-8)(x+3)^2} \\cdot \\frac{2x^2-2x-24}{x^2+2x}$",
         "explanation": "Dzielenie przez ułamek to mnożenie przez jego odwrotność"
       },
       {
         "step": 2,
-        "hint": "Jakie wspólne czynniki można wyłączyć z każdego wielomianu?",
-        "expression": "$\\frac{x(x-5)(x+2)}{2(x-4)(x+3)^2} \\cdot \\frac{2(x^2-x-12)}{x(x+2)}$",
-        "explanation": "Wyłączamy wspólne czynniki: $x$ z licznika pierwszego ułamka, $2$ z mianownika pierwszego i licznika drugiego, $x$ z mianownika drugiego",
-        "why": "Zawsze szukamy wspólnych czynników przed dalszymi przekształceniami. $2x-8 = 2(x-4)$, $x^2+2x = x(x+2)$, $2x^2-2x-24 = 2(x^2-x-12)$"
+        "hint": "Które wyrażenia warto rozłożyć na czynniki przed dalszymi przekształceniami?",
+        "expression": "Rozkładamy każde wyrażenie na czynniki",
+        "explanation": "Przygotowujemy się do skracania wspólnych czynników",
+        "interactive_choice": {
+          "prompt": "Co należy zrobić w pierwszej kolejności z wyrażeniami w liczniku i mianowniku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozłożyć wszystkie wyrażenia na czynniki",
+              "feedback": "Doskonale! To pozwoli na skracanie wspólnych czynników.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć liczniki i mianowniki osobno",
+              "feedback": "To skomplikuje obliczenia - lepiej najpierw rozłożyć na czynniki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości x",
+              "feedback": "Nie - chcemy uprościć wyrażenie algebraicznie dla wszystkich x.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozkład na czynniki pozwala zobaczyć wspólne elementy do skrócenia."
+        }
       },
       {
         "step": 3,
-        "hint": "Czy wielomian $x^2-x-12$ da się rozłożyć na czynniki?",
-        "expression": "$\\frac{x(x-5)(x+2)}{2(x-4)(x+3)^2} \\cdot \\frac{2(x-4)(x+3)}{x(x+2)}$",
-        "explanation": "Rozkładamy $x^2-x-12 = (x-4)(x+3)$ szukając liczb o iloczynie $-12$ i sumie $-1$",
-        "why": "Dla $ax^2+bx+c$ szukamy liczb $p,q$ takich że $p \\cdot q = c$ i $p + q = b$. Tu: $4 \\cdot (-3) = -12$ i $4 + (-3) = 1$, więc $-4 \\cdot 3 = -12$ i $-4 + 3 = -1$"
+        "hint": "Jak rozłożyć $x^2 - 5x$?",
+        "expression": "$x^2 - 5x = x(x - 5)$",
+        "explanation": "Wyłączamy wspólny czynnik $x$"
       },
       {
         "step": 4,
-        "hint": "Które czynniki w liczniku i mianowniku można skrócić?",
-        "expression": "$\\frac{\\cancel{x}(x-5)\\cancel{(x+2)}}{\\cancel{2}\\cancel{(x-4)}(x+3)^{\\cancel{2}}} \\cdot \\frac{\\cancel{2}\\cancel{(x-4)}(x+3)}{\\cancel{x}\\cancel{(x+2)}}$",
-        "explanation": "Skracamy wspólne czynniki: $x$, $(x+2)$, $2$, $(x-4)$ oraz jeden czynnik $(x+3)$"
+        "hint": "Jak rozłożyć $2x - 8$?",
+        "expression": "$2x - 8 = 2(x - 4)$",
+        "explanation": "Wyłączamy wspólny czynnik 2"
       },
       {
         "step": 5,
-        "hint": "Co pozostaje po wszystkich skróceniach?",
+        "hint": "Jak rozłożyć $x^2 + 2x$?",
+        "expression": "$x^2 + 2x = x(x + 2)$",
+        "explanation": "Wyłączamy wspólny czynnik $x$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozłożyć trójmian $2x^2 - 2x - 24$?",
+        "expression": "$2x^2 - 2x - 24 = 2(x^2 - x - 12) = 2(x - 4)(x + 3)$",
+        "explanation": "Wyłączamy 2, potem rozkładamy $x^2 - x - 12 = (x-4)(x+3)$",
+        "why": "Dla $x^2 - x - 12$ szukamy liczb o sumie $-1$ i iloczynie $-12$: to $-4$ i $3$.",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do rozkładu $2x^2 - 2x - 24$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć 2 przed nawias, potem rozłożyć trójmian",
+              "feedback": "Świetnie! Daje to $2(x^2 - x - 12) = 2(x-4)(x+3)$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru z deltą bezpośrednio",
+              "feedback": "Możliwe, ale wyłączenie 2 najpierw uprości obliczenia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Grupować składniki",
+              "feedback": "Trudne dla tego trójmianu - lepiej wyłączyć wspólny czynnik.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyłączenie wspólnego czynnika 2 upraszcza rozkład trójmianu."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak wygląda wyrażenie po podstawieniu wszystkich rozkładów?",
+        "expression": "$\\frac{x(x-5)(x+2)}{2(x-4)(x+3)^2} \\cdot \\frac{2(x-4)(x+3)}{x(x+2)}$",
+        "explanation": "Podstawiamy wszystkie rozkłady na czynniki"
+      },
+      {
+        "step": 8,
+        "hint": "Które czynniki można skrócić w tym wyrażeniu?",
+        "expression": "$\\frac{\\cancel{x}(x-5)\\cancel{(x+2)}}{\\cancel{2}\\cancel{(x-4)}(x+3)^{\\cancel{2}}} \\cdot \\frac{\\cancel{2}\\cancel{(x-4)}\\cancel{(x+3)}}{\\cancel{x}\\cancel{(x+2)}}$",
+        "explanation": "Skracamy wszystkie wspólne czynniki",
+        "interactive_choice": {
+          "prompt": "Jakie wspólne czynniki widzisz w liczniku i mianowniku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Można skrócić: $x$, $(x+2)$, $(x-4)$, $2$, $(x+3)$",
+              "feedback": "Doskonale! Wszystkie te czynniki występują w liczniku i mianowniku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Można skrócić tylko $x$ i $(x+2)$",
+              "feedback": "To za mało - zobacz uważniej, jest więcej wspólnych czynników!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie można nic skrócić",
+              "feedback": "Nieprawda - jest dużo wspólnych czynników do skrócenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Po skróceniu zostanie tylko $(x-5)$ w liczniku i $(x+3)$ w mianowniku."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Co pozostaje po skróceniu wszystkich wspólnych czynników?",
         "expression": "$\\frac{x-5}{x+3}$",
-        "explanation": "Po skróceniu wszystkich wspólnych czynników otrzymujemy uproszczoną postać"
+        "explanation": "Po skróceniu otrzymujemy najprostszą postać wyrażenia"
       }
     ],
     "solutions": [
@@ -370,57 +936,148 @@
     ],
     "parameters": {
       "domain": "$x \\in \\mathbb{R} \\backslash\\{-3,-2,0,4\\}$",
-      "correct_answer": "A"
+      "answer": "A"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 2
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:38:46.559Z"
+    "timestamp": "2025-09-23T10:24:59.800Z"
   },
   {
     "id": "compound_interest_semiannual",
-    "topic": "Procent składany z kapitalizacją półroczną",
+    "topic": "Procent składany z kapitalizacją",
     "difficulty": 3,
     "statement": "Pan Cezary wpłacił do banku 5000 zł na lokatę na procent składany, z kapitalizacją odsetek co pół roku. Po każdym rocznym okresie oszczędzania bank nalicza odsetki w wysokości 4% od kwoty bieżącego kapitału znajdującego się na lokacie. Po roku oszczędzania na koncie Pana Cezarego, bez uwzględnienia podatków, będzie kwota: A. 5174 zł B. 5202 zł C. 5316 zł D. 5408 zł",
     "steps": [
       {
         "step": 1,
-        "hint": "Ile razy w ciągu roku będą naliczane odsetki?",
-        "expression": "Kapitalizacja co pół roku oznacza 2 okresy kapitalizacji w roku",
-        "explanation": "Odsetki będą naliczane dwukrotnie w ciągu roku",
-        "why": "Kapitalizacja półroczna to kluczowa informacja - odsetki nie są naliczane raz na koniec roku, ale dwa razy. To znacznie wpływa na końcowy wynik."
+        "hint": "Jakie są dane w zadaniu dotyczące lokaty?",
+        "expression": "Kapitał początkowy: $K_0 = 5000$ zł, stopa roczna: $r = 4\\% = 0{,}04$, kapitalizacja: co pół roku",
+        "explanation": "Identyfikujemy wszystkie parametry lokaty"
       },
       {
         "step": 2,
-        "hint": "Jaka będzie stopa procentowa dla każdego półrocza?",
-        "expression": "Stopa półroczna = $\\frac{4\\%}{2} = 2\\% = 0{,}02$",
-        "explanation": "Roczną stopę dzielimy przez liczbę okresów kapitalizacji",
-        "why": "Przy kapitalizacji częstszej niż roczna dzielimy roczną stopę przez liczbę okresów. Uwaga: to nie jest dokładnie to samo co 4% rocznie!"
+        "hint": "Co oznacza kapitalizacja co pół roku dla stopy procentowej?",
+        "expression": "Stopa półroczna: $r_{półr} = \\frac{4\\%}{2} = 2\\% = 0{,}02$",
+        "explanation": "Dzielimy roczną stopę przez liczbę kapitalizacji w roku",
+        "why": "To kluczowe - przy kapitalizacji częstszej niż roczna dzielimy stopę przez liczbę okresów kapitalizacji.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć stopę procentową przy kapitalizacji co pół roku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć pełnej stopy 4% dwa razy w roku",
+              "feedback": "Nie - to dałoby 8% rocznie, co jest nieprawdą",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Podzielić roczną stopę przez liczbę kapitalizacji: $\\frac{4\\%}{2} = 2\\%$",
+              "feedback": "Dokładnie! Przy kapitalizacji co pół roku używamy połowy stopy rocznej",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zastosować wzór $(1 + 0{,}04)^2 - 1$",
+              "feedback": "To wzór na efektywną stopę roczną, ale tu potrzebujemy stopy półrocznej",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy kapitalizacji $n$ razy w roku dzielimy stopę roczną przez $n$."
+        }
       },
       {
         "step": 3,
-        "hint": "Ile będzie na koncie po pierwszym półroczu?",
-        "expression": "Po I półroczu: $5000 \\cdot (1 + 0{,}02) = 5000 \\cdot 1{,}02 = 5100$ zł",
-        "explanation": "Kapitał początkowy powiększony o odsetki z pierwszego półrocza"
+        "hint": "Ile okresów kapitalizacji będzie w ciągu roku?",
+        "expression": "Liczba okresów w roku: $n = 2$ (co pół roku)",
+        "explanation": "W ciągu roku będą dwie kapitalizacje odsetek"
       },
       {
         "step": 4,
-        "hint": "Od jakiej kwoty będą naliczane odsetki w drugim półroczu?",
-        "expression": "Po II półroczu: $5100 \\cdot 1{,}02 = 5202$ zł",
-        "explanation": "Odsetki z drugiego półrocza naliczamy od kwoty po pierwszym półroczu",
-        "why": "To jest istota procentu składanego - odsetki z poprzedniego okresu też przynoszą odsetki. Gdyby to był procent prosty, mielibyśmy tylko 5000 + 2 × 100 = 5200 zł."
+        "hint": "Jaki wzór zastosować do obliczenia kapitału po roku?",
+        "expression": "$K = K_0\\left(1 + \\frac{r}{n}\\right)^{nt}$",
+        "explanation": "Stosujemy wzór na procent składany z kapitalizacją",
+        "interactive_choice": {
+          "prompt": "Który wzór użyć dla procentu składanego z kapitalizacją?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$K = K_0(1 + r)^t$ gdzie $r = 0{,}04$, $t = 1$",
+              "feedback": "To wzór dla kapitalizacji rocznej, a tu mamy półroczną",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$K = K_0(1 + \\frac{r}{n})^{nt}$ gdzie $n = 2$, $t = 1$",
+              "feedback": "Świetnie! To ogólny wzór na procent składany z kapitalizacją",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$K = K_0 + K_0 \\cdot r \\cdot t$ (procent prosty)",
+              "feedback": "Nie - to wzór na procent prosty, a zadanie dotyczy składanego",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $K = K_0(1 + \\frac{r}{n})^{nt}$ uwzględnia kapitalizację $n$ razy w roku."
+        }
       },
       {
         "step": 5,
-        "hint": "Czy możesz to zapisać jednym wzorem?",
-        "expression": "Wzór ogólny: $K = 5000 \\cdot (1{,}02)^2 = 5000 \\cdot 1{,}0404 = 5202$ zł",
-        "explanation": "Używamy wzoru na procent składany z kapitalizacją półroczną"
+        "hint": "Jakie wartości podstawić do wzoru?",
+        "expression": "$K = 5000\\left(1 + \\frac{0{,}04}{2}\\right)^{2 \\cdot 1} = 5000(1 + 0{,}02)^2$",
+        "explanation": "Podstawiamy: $K_0 = 5000$, $r = 0{,}04$, $n = 2$, $t = 1$"
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $(1{,}02)^2$?",
+        "expression": "$(1{,}02)^2 = 1{,}0404$",
+        "explanation": "Obliczamy potęgę: $1{,}02 \\times 1{,}02 = 1{,}0404$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka będzie końcowa kwota na koncie?",
+        "expression": "$K = 5000 \\times 1{,}0404 = 5202$ zł",
+        "explanation": "Mnożymy kapitał początkowy przez współczynnik wzrostu"
+      },
+      {
+        "step": 8,
+        "hint": "Która odpowiedź jest prawidłowa?",
+        "expression": "Odpowiedź: B. 5202 zł",
+        "explanation": "Po roku z kapitalizacją półroczną Pan Cezary będzie miał 5202 zł",
+        "interactive_choice": {
+          "prompt": "Sprawdź obliczenia - która odpowiedź to 5202 zł?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odpowiedź A: 5174 zł",
+              "feedback": "Za mało - prawdopodobnie użyto procentu prostego",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Odpowiedź B: 5202 zł",
+              "feedback": "Dokładnie! To prawidłowy wynik dla kapitalizacji półrocznej",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Odpowiedź C: 5316 zł",
+              "feedback": "Za dużo - może pomylono z kapitalizacją kwartalną",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kapitalizacja półroczna daje efektywną stopę roczną 4,04%, więc 5000 × 1,0404 = 5202 zł."
+        }
       }
     ],
     "solutions": [
@@ -429,7 +1086,7 @@
     "parameters": {
       "initial_capital": "5000 zł",
       "annual_rate": "4%",
-      "capitalization": "półroczna",
+      "capitalization": "co pół roku",
       "time_period": "1 rok"
     },
     "validation": {
@@ -437,61 +1094,153 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 5,
-        "stepsWithWhy": 3
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:39:03.414Z"
+    "timestamp": "2025-09-23T10:25:32.205Z"
   },
   {
-    "id": "rational_equation_example",
+    "id": "rational_equation_cross_multiply",
     "topic": "Równania wymierne",
     "difficulty": 3,
-    "statement": "Rozwiąż równanie $\\frac{4x+1}{2x+1} = \\frac{6x-3}{4x+2}$",
+    "statement": "Rozwiąż równanie $\\frac{4x+1}{2x+1} = \\frac{6x-3}{4x+2}$. Zapisz obliczenia.",
     "steps": [
       {
         "step": 1,
-        "hint": "Co zauważasz w mianowniku po prawej stronie?",
-        "expression": "$\\frac{4x+1}{2x+1} = \\frac{6x-3}{2(2x+1)}$",
-        "explanation": "Rozkładamy mianownik $4x+2 = 2(2x+1)$"
+        "hint": "Co zauważasz w mianownikach obu ułamków?",
+        "expression": "$\\frac{4x+1}{2x+1} = \\frac{6x-3}{4x+2}$, gdzie $4x+2 = 2(2x+1)$",
+        "explanation": "Zauważamy, że $4x+2 = 2(2x+1)$, więc mianowniki są powiązane"
       },
       {
         "step": 2,
-        "hint": "Jakie warunki musi spełniać x, żeby równanie miało sens?",
-        "expression": "$2x+1 \\neq 0$, więc $x \\neq -\\frac{1}{2}$",
-        "explanation": "Określamy dziedzinę - mianownik nie może być zerem",
-        "why": "To kluczowy krok! Jeśli rozwiązanie będzie równe $-\\frac{1}{2}$, to nie będzie należeć do dziedziny i trzeba je odrzucić."
+        "hint": "Jak uprościć prawą stronę równania?",
+        "expression": "$\\frac{4x+1}{2x+1} = \\frac{6x-3}{2(2x+1)}$",
+        "explanation": "Wyłączamy 2 z mianownika prawej strony",
+        "interactive_choice": {
+          "prompt": "Co zrobić z ułamkiem $\\frac{6x-3}{4x+2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć 3 z licznika: $\\frac{3(2x-1)}{4x+2}$",
+              "feedback": "Dobry kierunek! Teraz zauważ, że mianownik to $2(2x+1)$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wyłączyć 2 z mianownika: $\\frac{6x-3}{2(2x+1)}$",
+              "feedback": "Świetnie! To pozwoli uprościć równanie",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zostawić bez zmian i mnożyć na krzyż",
+              "feedback": "Można, ale uproszczenie najpierw ułatwi obliczenia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyłączenie wspólnych czynników uprości równanie przed mnożeniem na krzyż."
+        }
       },
       {
         "step": 3,
-        "hint": "Czym można pomnożyć obie strony, żeby pozbyć się ułamków?",
-        "expression": "$(4x+1) \\cdot 2(2x+1) = (6x-3) \\cdot (2x+1)$",
-        "explanation": "Mnożymy obie strony przez $2(2x+1)$"
+        "hint": "Co możesz zrobić z równaniem gdy mianowniki mają wspólny czynnik?",
+        "expression": "$\\frac{4x+1}{2x+1} = \\frac{6x-3}{2(2x+1)}$",
+        "explanation": "Mnożymy obie strony przez $(2x+1)$, zakładając że $2x+1 \\neq 0$",
+        "why": "Mnożenie przez mianownik eliminuje ułamki, ale musimy pamiętać o dziedzinie: $x \\neq -\\frac{1}{2}$"
       },
       {
         "step": 4,
-        "hint": "Co można skrócić po lewej stronie?",
-        "expression": "$2(4x+1) = 6x-3$",
-        "explanation": "Skracamy $(2x+1)$ po obu stronach",
-        "why": "Możemy skrócić, bo wiemy że $2x+1 \\neq 0$. Gdybyśmy tego nie sprawdzili wcześniej, moglibyśmy stracić rozwiązania!"
+        "hint": "Jak wygląda równanie po pomnożeniu przez $(2x+1)$?",
+        "expression": "$4x+1 = \\frac{6x-3}{2}$",
+        "explanation": "Lewa strona: $(4x+1) \\cdot \\frac{2x+1}{2x+1} = 4x+1$, prawa: $\\frac{6x-3}{2(2x+1)} \\cdot (2x+1) = \\frac{6x-3}{2}$"
       },
       {
         "step": 5,
-        "hint": "Jak rozłożyć nawias po lewej stronie?",
-        "expression": "$8x + 2 = 6x - 3$",
-        "explanation": "Mnożymy $2(4x+1) = 8x + 2$"
+        "hint": "Jak pozbyć się ułamka z prawej strony?",
+        "expression": "$2(4x+1) = 6x-3$",
+        "explanation": "Mnożymy obie strony przez 2",
+        "interactive_choice": {
+          "prompt": "Co zrobić z równaniem $4x+1 = \\frac{6x-3}{2}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć obie strony przez 2",
+              "feedback": "Doskonale! To usunie ułamek z prawej strony",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przenieść wszystko na lewą stronę",
+              "feedback": "Można, ale lepiej najpierw pozbyć się ułamka",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podzielić lewą stronę przez 2",
+              "feedback": "Nie - to by wprowadzało kolejny ułamek",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożenie przez 2 eliminuje ułamek i daje równanie liniowe."
+        }
       },
       {
         "step": 6,
-        "hint": "Jak przenieść wszystkie wyrazy z x na jedną stronę?",
-        "expression": "$8x - 6x = -3 - 2$",
-        "explanation": "Przenosimy wyrazy z x na lewą, stałe na prawą stronę"
+        "hint": "Jak rozwinąć lewą stronę równania?",
+        "expression": "$8x + 2 = 6x - 3$",
+        "explanation": "Rozwijamy nawias: $2(4x+1) = 8x + 2$"
       },
       {
         "step": 7,
-        "hint": "Czy otrzymane rozwiązanie należy do dziedziny?",
-        "expression": "$2x = -5$, więc $x = -\\frac{5}{2}$",
-        "explanation": "Rozwiązujemy równanie liniowe i sprawdzamy warunek dziedziny"
+        "hint": "Jak zebrać wszystkie wyrazy z $x$ na jednej stronie?",
+        "expression": "$8x - 6x = -3 - 2$",
+        "explanation": "Przenosimy $6x$ na lewą stronę i $2$ na prawą"
+      },
+      {
+        "step": 8,
+        "hint": "Jaki jest wynik uproszczenia?",
+        "expression": "$2x = -5$",
+        "explanation": "Upraszczamy: $8x - 6x = 2x$ oraz $-3 - 2 = -5$"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie jest rozwiązanie równania?",
+        "expression": "$x = -\\frac{5}{2}$",
+        "explanation": "Dzielimy obie strony przez 2"
+      },
+      {
+        "step": 10,
+        "hint": "Czy rozwiązanie należy do dziedziny równania?",
+        "expression": "Dziedzina: $x \\neq -\\frac{1}{2}$, rozwiązanie: $x = -\\frac{5}{2}$ ✓",
+        "explanation": "Sprawdzamy czy rozwiązanie należy do dziedziny równania",
+        "interactive_choice": {
+          "prompt": "Czy $x = -\\frac{5}{2}$ spełnia warunki dziedziny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bo $-\\frac{5}{2} \\neq -\\frac{1}{2}$",
+              "feedback": "Dokładnie! Rozwiązanie nie zeruje mianowników",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo jest ujemne",
+              "feedback": "Znak nie ma znaczenia - ważne żeby nie zerowało mianowników",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie, bo $-\\frac{5}{2} = -\\frac{1}{2}$",
+              "feedback": "Nie - to różne liczby: $-\\frac{5}{2} = -2.5$ a $-\\frac{1}{2} = -0.5$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dziedzina wymaga $2x+1 \\neq 0$, czyli $x \\neq -\\frac{1}{2}$. Nasze rozwiązanie to spełnia."
+        }
       }
     ],
     "solutions": [
@@ -505,159 +1254,340 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 7,
-        "stepsWithWhy": 2
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-23T07:39:20.397Z"
+    "timestamp": "2025-09-23T10:26:03.642Z"
   },
   {
-    "id": "quadratic_inequality_example",
+    "id": "quadratic_inequality_expansion",
     "topic": "Nierówności kwadratowe",
     "difficulty": 3,
     "statement": "Rozwiąż nierówność $3(x+1)^2 \\geq 4(x^2+3)$",
     "steps": [
       {
         "step": 1,
-        "hint": "Co się stanie gdy rozwiniesz lewą stronę nierówności?",
-        "expression": "$3(x^2 + 2x + 1) \\geq 4(x^2 + 3)$",
-        "explanation": "Rozwijamy kwadrat sumy $(x+1)^2 = x^2 + 2x + 1$"
+        "hint": "Jak najlepiej rozpocząć rozwiązywanie tej nierówności?",
+        "expression": "Rozwijamy: $3(x^2 + 2x + 1) \\geq 4x^2 + 12$",
+        "explanation": "Rozwijamy lewą stronę używając wzoru $(a+b)^2 = a^2 + 2ab + b^2$",
+        "interactive_choice": {
+          "prompt": "Jaki pierwszy krok wykonać z nierównością $3(x+1)^2 \\geq 4(x^2+3)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozwinąć nawiasy po obu stronach",
+              "feedback": "Świetny wybór! To pozwoli uprościć nierówność do postaci standardowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podzielić obie strony przez 3",
+              "feedback": "Nie - po prawej stronie nie ma wspólnego czynnika 3.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przenieść wszystko na lewą stronę bez rozwijania",
+              "feedback": "Możliwe, ale rozwinięcie nawiasów ułatwi dalsze obliczenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozwinięcie nawiasów pozwoli nam otrzymać nierówność kwadratową w postaci standardowej."
+        }
       },
       {
         "step": 2,
-        "hint": "Jak uprościć obie strony po rozwinięciu nawiasów?",
+        "hint": "Jak uprościć lewą stronę po rozwinięciu nawiasu?",
         "expression": "$3x^2 + 6x + 3 \\geq 4x^2 + 12$",
-        "explanation": "Mnożymy przez współczynniki przed nawiasami"
+        "explanation": "Mnożymy każdy składnik w nawiasie przez 3"
       },
       {
         "step": 3,
-        "hint": "Co otrzymasz przenosząc wszystko na jedną stronę?",
+        "hint": "Co zrobić aby otrzymać nierówność w postaci standardowej?",
         "expression": "$3x^2 + 6x + 3 - 4x^2 - 12 \\geq 0$",
         "explanation": "Przenosimy wszystkie składniki na lewą stronę"
       },
       {
         "step": 4,
-        "hint": "Jakie będzie uproszczone wyrażenie kwadratowe?",
+        "hint": "Jak uprościć wyrażenie po lewej stronie?",
         "expression": "$-x^2 + 6x - 9 \\geq 0$",
-        "explanation": "Redukujemy podobne składniki",
-        "why": "Otrzymaliśmy nierówność kwadratową z ujemnym współczynnikiem przy $x^2$, co oznacza parabolę skierowaną w dół."
+        "explanation": "Redukujemy podobne składniki: $3x^2 - 4x^2 = -x^2$ oraz $3 - 12 = -9$"
       },
       {
         "step": 5,
-        "hint": "Co się stanie gdy wyłączysz minus przed nawias?",
+        "hint": "Czy rozpoznajesz wzór w wyrażeniu $-x^2 + 6x - 9$?",
         "expression": "$-(x^2 - 6x + 9) \\geq 0$",
-        "explanation": "Wyciągamy minus, zmieniając znaki wewnątrz nawiasu"
+        "explanation": "Wyłączamy minus przed nawias",
+        "interactive_choice": {
+          "prompt": "Co można zrobić z wyrażeniem $-x^2 + 6x - 9$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć minus przed nawias: $-(x^2 - 6x + 9)$",
+              "feedback": "Doskonale! To pozwoli rozpoznać wzór na kwadrat różnicy.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru na deltę bezpośrednio",
+              "feedback": "Można, ale wyłączenie minusa ułatwi rozpoznanie wzoru skróconego mnożenia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podzielić przez -1 i zmienić znak nierówności",
+              "feedback": "To też zadziała, ale lepiej najpierw wyłączyć minus przed nawias.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyłączenie minusa przed nawias pomoże rozpoznać wzór $(x-3)^2$."
+        }
       },
       {
         "step": 6,
-        "hint": "Czy rozpoznajesz wzór na kwadrat różnicy?",
+        "hint": "Czy wyrażenie $x^2 - 6x + 9$ to wzór skróconego mnożenia?",
         "expression": "$-(x - 3)^2 \\geq 0$",
-        "explanation": "Rozpoznajemy kwadrat różnicy: $x^2 - 6x + 9 = (x-3)^2$",
-        "why": "Wzór $(a-b)^2 = a^2 - 2ab + b^2$. Tu $a = x$, $b = 3$, więc $2ab = 6x$."
+        "explanation": "Rozpoznajemy wzór $(a-b)^2 = a^2 - 2ab + b^2$ gdzie $a = x$, $b = 3$",
+        "why": "Wzór $x^2 - 6x + 9 = (x-3)^2$ to kwadrat różnicy. Środkowy składnik $-6x = -2 \\cdot 3 \\cdot x$ potwierdza wzór."
       },
       {
         "step": 7,
-        "hint": "Kiedy ujemna liczba może być większa lub równa zero?",
-        "expression": "$-(x - 3)^2 \\geq 0$",
-        "explanation": "Lewa strona to minus kwadrat, więc zawsze $\\leq 0$",
-        "why": "Kwadrat dowolnej liczby jest nieujemny, więc $-(x-3)^2 \\leq 0$ zawsze. Równość zachodzi tylko gdy $(x-3)^2 = 0$."
+        "hint": "Kiedy wyrażenie $-(x-3)^2$ jest nieujemne?",
+        "expression": "$(x - 3)^2 = 0$ tylko gdy $x = 3$",
+        "explanation": "Kwadrat wyrażenia jest zerem tylko gdy wyrażenie jest zerem",
+        "interactive_choice": {
+          "prompt": "Kiedy nierówność $-(x-3)^2 \\geq 0$ jest spełniona?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dla wszystkich liczb rzeczywistych",
+              "feedback": "Nie - $(x-3)^2$ jest zawsze nieujemne, więc $-(x-3)^2$ jest zawsze niedodatnie.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Tylko gdy $x = 3$",
+              "feedback": "Tak! Tylko wtedy $(x-3)^2 = 0$, więc $-(x-3)^2 = 0 \\geq 0$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nigdy - wyrażenie jest zawsze ujemne",
+              "feedback": "Prawie - jest ujemne lub zero. Zero osiąga dla $x = 3$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kwadrat jest zawsze nieujemny, więc jego przeciwność jest zawsze niedodatnia. Zero osiąga tylko gdy kwadrat równa się zero."
+        }
       },
       {
         "step": 8,
-        "hint": "Dla jakiej wartości x wyrażenie $(x-3)^2$ równa się zero?",
-        "expression": "$(x - 3)^2 = 0$ tylko gdy $x = 3$",
-        "explanation": "Jedyne rozwiązanie to $x = 3$"
+        "hint": "Jaka jest odpowiedź do nierówności?",
+        "expression": "$x = 3$",
+        "explanation": "Nierówność ma jedyne rozwiązanie $x = 3$"
       }
     ],
     "solutions": [
       "$x = 3$"
     ],
-    "parameters": {},
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
         "totalSteps": 8,
-        "stepsWithWhy": 3
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:39:36.480Z"
+    "timestamp": "2025-09-23T10:26:30.881Z"
   },
   {
     "id": "piecewise_function_analysis",
     "topic": "Funkcje przedziałami określone",
     "difficulty": 3,
-    "image": "/zad10.png",
-    "statement": "Funkcja f jest określona następująco: $f(x)=\\left\\{\\begin{array}{ccl} x+6 & \\text{dla} & x \\in[-4,-2] \\\\ 4 & \\text{dla} & x \\in(-2,-1) \\\\ -3x & \\text{dla} & x \\in(-1,1] \\\\ -3 & \\text{dla} & x \\in(1,3) \\\\ 3x-14 & \\text{dla} & x \\in(4,5] \\end{array}\\right.$ Uzupełnij zdania wpisując odpowiednie przedziały.",
+    "statement": "Funkcja f jest określona następująco: $f(x)=\\left\\{\\begin{array}{ccl} x+6 & \\text{dla} & x \\in[-4,-2] \\\\ 4 & \\text{dla} & x \\in(-2,-1) \\\\ -3x & \\text{dla} & x \\in(-1,1] \\\\ -3 & \\text{dla} & x \\in(1,3) \\\\ 3x-14 & \\text{dla} & x \\in(4,5] \\end{array}\\right.$. Uzupełnij zdania wpisując odpowiednie przedziały: 1. Dziedziną funkcji f jest przedział ___. 2. Zbiorem wartości funkcji f jest przedział ___. 3. Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział ___. 4. Zbiorem wszystkich rozwiązań nierówności $f(x) \\geq 3$ jest przedział ___.",
     "steps": [
       {
         "step": 1,
-        "hint": "Które punkty należą do dziedziny, a które są \"dziurami\"?",
+        "hint": "Co to jest dziedzina funkcji przedziałami określonej?",
         "expression": "Dziedzina: $[-4,-2] \\cup (-2,-1) \\cup (-1,1] \\cup (1,3) \\cup (4,5]$",
         "explanation": "Łączymy wszystkie przedziały, na których funkcja jest określona",
-        "why": "Zwróć uwagę na nawiasy: kwadratowe oznaczają włączenie punktu, okrągłe - wyłączenie. Punkt x = 3 nie należy do dziedziny!"
+        "interactive_choice": {
+          "prompt": "Jak wyznaczyć dziedzinę funkcji przedziałami określonej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Suma wszystkich przedziałów, na których funkcja jest określona",
+              "feedback": "Dokładnie! Dziedzina to wszystkie x, dla których funkcja ma wartość.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Największy z podanych przedziałów",
+              "feedback": "Nie - dziedzina to wszystkie przedziały razem wzięte.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przecięcie wszystkich przedziałów",
+              "feedback": "Nie - przecięcie dałoby zbiór pusty, a funkcja jest określona.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dziedzina to suma wszystkich przedziałów: $[-4,-2] \\cup (-2,-1) \\cup (-1,1] \\cup (1,3) \\cup (4,5]$"
+        }
       },
       {
         "step": 2,
-        "hint": "Jakie wartości przyjmuje funkcja na każdym z przedziałów?",
-        "expression": "Na $[-4,-2]$: $f(x) = x+6$, więc $f(-4) = 2$, $f(-2) = 4$",
-        "explanation": "Dla funkcji liniowej na przedziale domkniętym sprawdzamy wartości na końcach"
+        "hint": "Czy można uprościć zapis dziedziny?",
+        "expression": "Dziedzina: $[-4,3) \\cup (4,5]$",
+        "explanation": "Przedziały $[-4,-2]$, $(-2,-1)$, $(-1,1]$, $(1,3)$ łączą się w $[-4,3)$",
+        "why": "Zauważ, że między przedziałami $[-4,-2]$, $(-2,-1)$, $(-1,1]$, $(1,3)$ są tylko pojedyncze punkty -2, -1, 1, które nie należą do dziedziny, ale przedziały się stykają."
       },
       {
         "step": 3,
-        "hint": "Czy funkcja stała może mieć różne wartości?",
-        "expression": "Na $(-2,-1)$: $f(x) = 4$ (wartość stała)",
-        "explanation": "Funkcja przyjmuje stałą wartość 4 na całym przedziale"
+        "hint": "Jakie wartości przyjmuje funkcja na każdym przedziале?",
+        "expression": "Analizujemy każdy kawałek funkcji:",
+        "explanation": "Sprawdzimy wartości dla każdego wzoru na odpowiednim przedziale",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej wyznaczyć zbiór wartości funkcji przedziałami określonej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić wartości na końcach każdego przedziału",
+              "feedback": "Częściowo dobrze, ale trzeba też sprawdzić ekstrema wewnątrz przedziałów.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Przeanalizować każdy kawałek funkcji osobno i znaleźć jego zbiór wartości",
+              "feedback": "Świetnie! To systematyczne podejście da pełny obraz.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Narysować wykres i odczytać z osi y",
+              "feedback": "Możliwe, ale analityczne podejście jest pewniejsze.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Analizujemy każdy kawałek: jego typ (stała, liniowa) i przedział, na którym działa."
+        }
       },
       {
         "step": 4,
-        "hint": "Jak zachowuje się funkcja $-3x$ na przedziale $(-1,1]$?",
-        "expression": "Na $(-1,1]$: $f(x) = -3x$, więc $f(1) = -3$, gdy $x \\to -1^+$ to $f(x) \\to 3$",
-        "explanation": "Funkcja malejąca, wartości od 3 (nie włącznie) do -3 (włącznie)"
+        "hint": "Jakie wartości przyjmuje $f(x) = x + 6$ dla $x \\in [-4,-2]$?",
+        "expression": "Na $[-4,-2]$: $f(-4) = 2$, $f(-2) = 4$, więc wartości w $[2,4]$",
+        "explanation": "Funkcja liniowa rosnąca na przedziale domkniętym"
       },
       {
         "step": 5,
-        "hint": "Jaka jest wartość funkcji stałej na przedziale $(1,3)$?",
-        "expression": "Na $(1,3)$: $f(x) = -3$ (wartość stała)",
-        "explanation": "Kolejna funkcja stała o wartości -3"
+        "hint": "Jakie wartości przyjmuje $f(x) = 4$ dla $x \\in (-2,-1)$?",
+        "expression": "Na $(-2,-1)$: $f(x) = 4$ (stała), więc wartość $\\{4\\}$",
+        "explanation": "Funkcja stała przyjmuje jedną wartość"
       },
       {
         "step": 6,
-        "hint": "Jakie wartości przyjmuje $3x-14$ na końcach przedziału $(4,5]$?",
-        "expression": "Na $(4,5]$: $f(x) = 3x-14$, więc $f(5) = 1$, gdy $x \\to 4^+$ to $f(x) \\to -2$",
-        "explanation": "Funkcja rosnąca, wartości od -2 (nie włącznie) do 1 (włącznie)"
+        "hint": "Jakie wartości przyjmuje $f(x) = -3x$ dla $x \\in (-1,1]$?",
+        "expression": "Na $(-1,1]$: $f(1) = -3$, gdy $x \\to -1^+$ to $f(x) \\to 3$, więc wartości w $[-3,3)$",
+        "explanation": "Funkcja liniowa malejąca, lewa granica nie należy do zbioru wartości"
       },
       {
         "step": 7,
-        "hint": "Które wartości pojawiają się we wszystkich częściach funkcji?",
-        "expression": "Zbiór wartości: $(-2,4] \\cup \\{-3\\} \\cup (-2,1]$",
-        "explanation": "Łączymy wszystkie możliwe wartości z każdego przedziału",
-        "why": "Uważaj na powtórzenia! Wartość -3 występuje tylko raz, mimo że pojawia się w dwóch miejscach."
+        "hint": "Jakie wartości przyjmuje $f(x) = -3$ dla $x \\in (1,3)$?",
+        "expression": "Na $(1,3)$: $f(x) = -3$ (stała), więc wartość $\\{-3\\}$",
+        "explanation": "Kolejna funkcja stała"
       },
       {
         "step": 8,
-        "hint": "Jaka jest najmniejsza wartość funkcji i gdzie występuje?",
-        "expression": "Wartość najmniejsza: $-3$ dla $x \\in (-1,1] \\cup (1,3)$",
-        "explanation": "Minimum globalne wynosi -3 i występuje na dwóch przedziałach"
+        "hint": "Jakie wartości przyjmuje $f(x) = 3x - 14$ dla $x \\in (4,5]$?",
+        "expression": "Na $(4,5]$: $f(5) = 1$, gdy $x \\to 4^+$ to $f(x) \\to -2$, więc wartości w $(-2,1]$",
+        "explanation": "Funkcja liniowa rosnąca na przedziale półotwartym"
       },
       {
         "step": 9,
-        "hint": "Gdzie funkcja jest większa lub równa 3?",
-        "expression": "Nierówność $f(x) \\geq 3$: sprawdzamy każdy przedział osobno",
-        "explanation": "Na $[-4,-2]$: $x+6 \\geq 3$, więc $x \\geq -3$, czyli $x \\in [-3,-2]$"
+        "hint": "Jaki jest zbiór wartości całej funkcji?",
+        "expression": "Zbiór wartości: $[2,4] \\cup \\{4\\} \\cup [-3,3) \\cup \\{-3\\} \\cup (-2,1] = [-3,4]$",
+        "explanation": "Łączymy wszystkie zbiory wartości z poszczególnych kawałków"
       },
       {
         "step": 10,
-        "hint": "Na których jeszcze przedziałach funkcja osiąga wartości ≥ 3?",
-        "expression": "Na $(-2,-1)$: $f(x) = 4 \\geq 3$ ✓; Na $(-1,1]$: $-3x \\geq 3$, więc $x \\leq -1$, ale $x \\in (-1,1]$ - sprzeczność",
-        "explanation": "Rozwiązanie: $x \\in [-3,-2] \\cup (-2,-1) = [-3,-1)$"
+        "hint": "Jaka jest najmniejsza wartość funkcji?",
+        "expression": "Wartość najmniejsza: $f_{min} = -3$",
+        "explanation": "Najmniejsza wartość ze zbioru wartości $[-3,4]$"
+      },
+      {
+        "step": 11,
+        "hint": "Dla jakich argumentów funkcja przyjmuje wartość $-3$?",
+        "expression": "Sprawdzamy równania: $-3x = -3$ daje $x = 1$, oraz $f(x) = -3$ na $(1,3)$",
+        "explanation": "Wartość $-3$ osiągana w punkcie $x = 1$ i na całym przedziale $(1,3)$",
+        "interactive_choice": {
+          "prompt": "Na których przedziałach funkcja może przyjmować wartość $-3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko tam gdzie $f(x) = -3$ (funkcja stała)",
+              "feedback": "Częściowo - ale sprawdź też inne kawałki!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wszędzie gdzie wzór funkcji może dać $-3$",
+              "feedback": "Tak! Sprawdzamy równanie dla każdego kawałka osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko na końcach przedziałów",
+              "feedback": "Nie - wartość $-3$ może wystąpić w środku przedziału.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Sprawdzamy każdy kawałek: gdzie $x+6=-3$, gdzie $4=-3$, gdzie $-3x=-3$, gdzie $-3=-3$, gdzie $3x-14=-3$."
+        }
+      },
+      {
+        "step": 12,
+        "hint": "Jaki jest zbiór argumentów dla wartości najmniejszej?",
+        "expression": "Zbiór argumentów dla $f(x) = -3$: $\\{1\\} \\cup (1,3) = [1,3)$",
+        "explanation": "Łączymy punkt $x = 1$ z przedziałem $(1,3)$"
+      },
+      {
+        "step": 13,
+        "hint": "Dla jakich $x$ mamy $f(x) \\geq 3$?",
+        "expression": "Sprawdzamy nierówności na każdym kawałku:",
+        "explanation": "Analizujemy każdy wzór osobno"
+      },
+      {
+        "step": 14,
+        "hint": "Na których kawałkach funkcja może być $\\geq 3$?",
+        "expression": "$x + 6 \\geq 3$ dla $x \\in [-4,-2]$ daje $x \\geq -3$, więc $x \\in [-3,-2]$",
+        "explanation": "Pierwszy kawałek: przecięcie $x \\geq -3$ z $[-4,-2]$"
+      },
+      {
+        "step": 15,
+        "hint": "Czy pozostałe kawałki dają $f(x) \\geq 3$?",
+        "expression": "$f(x) = 4 \\geq 3$ na $(-2,-1)$; $-3x \\geq 3$ dla $x \\leq -1$ ale $x \\in (-1,1]$, więc brak rozwiązań",
+        "explanation": "Drugi kawałek spełnia warunek, trzeci nie ma rozwiązań w swoim przedziale"
+      },
+      {
+        "step": 16,
+        "hint": "Jaki jest końcowy zbiór rozwiązań nierówności?",
+        "expression": "Rozwiązania $f(x) \\geq 3$: $[-3,-2] \\cup (-2,-1) = [-3,-1)$",
+        "explanation": "Łączymy przedziały gdzie nierówność jest spełniona"
       }
     ],
     "solutions": [
-      "1. Dziedziną funkcji f jest przedział $[-4,-2] \\cup (-2,-1) \\cup (-1,1] \\cup (1,3) \\cup (4,5]$",
-      "2. Zbiorem wartości funkcji f jest przedział $(-2,4] \\cup \\{-3\\}$",
-      "3. Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział $(-1,1] \\cup (1,3)$",
+      "1. Dziedziną funkcji f jest przedział $[-4,3) \\cup (4,5]$",
+      "2. Zbiorem wartości funkcji f jest przedział $[-3,4]$",
+      "3. Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział $[1,3)$",
       "4. Zbiorem wszystkich rozwiązań nierówności $f(x) \\geq 3$ jest przedział $[-3,-1)$"
     ],
     "validation": {
@@ -665,306 +1595,188 @@
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 10,
-        "stepsWithWhy": 2
+        "totalSteps": 16,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:40:01.059Z"
+    "timestamp": "2025-09-23T10:27:15.387Z"
   },
   {
-    "id": "quadratic_from_conditions",
-    "topic": "Funkcje kwadratowe - wyznaczanie wzoru",
-    "difficulty": 3,
+    "id": "quadratic_function_analysis",
+    "topic": "Funkcje kwadratowe - analiza właściwości",
+    "difficulty": 4,
+    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0,6)$. Osią symetrii tej funkcji jest $x=\\frac{1}{2}$. Znajdź wzór funkcji $g$, jej zbiór wartości i rozwiąż zadania 11.1-11.4.",
     "image": "/zad11.png",
-    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0,6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Wyznacz wzór funkcji $g(x)$.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jaką informację daje nam punkt przecięcia z osią y?",
-        "expression": "$g(0) = 6$",
-        "explanation": "Funkcja przecina oś y w punkcie $(0,6)$, więc wartość funkcji dla $x = 0$ wynosi $6$"
+        "hint": "Jakie informacje mamy o funkcji kwadratowej $g$?",
+        "expression": "Miejsce zerowe: $x = -2$, punkt przecięcia z osią $y$: $(0, 6)$, oś symetrii: $x = \\frac{1}{2}$",
+        "explanation": "Zbieramy wszystkie dane o funkcji kwadratowej"
       },
       {
         "step": 2,
         "hint": "Jak wykorzystać oś symetrii do znalezienia drugiego miejsca zerowego?",
-        "expression": "Jeśli $x = -2$ to miejsce zerowe, a oś symetrii to $x = \\frac{1}{2}$, to drugie miejsce zerowe: $x = 2 \\cdot \\frac{1}{2} - (-2) = 1 + 2 = 3$",
-        "explanation": "Miejsca zerowe są symetryczne względem osi symetrii",
-        "why": "Oś symetrii funkcji kwadratowej przechodzi przez środek odcinka łączącego miejsca zerowe. Jeśli jedno to $-2$, a oś to $x = \\frac{1}{2}$, to drugie: $\\frac{-2 + x_2}{2} = \\frac{1}{2}$."
+        "expression": "Drugie miejsce zerowe: $x = 3$, bo $\\frac{-2 + 3}{2} = \\frac{1}{2}$",
+        "explanation": "Wykorzystujemy symetrię paraboli względem osi $x = \\frac{1}{2}$",
+        "interactive_choice": {
+          "prompt": "Skoro oś symetrii to $x = \\frac{1}{2}$, a jedno miejsce zerowe to $x = -2$, jak znajdziesz drugie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Drugie miejsce zerowe to $x = 3$, bo $\\frac{-2 + 3}{2} = \\frac{1}{2}$",
+              "feedback": "Doskonale! Miejsca zerowe są symetryczne względem osi symetrii.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Drugie miejsce zerowe to $x = 2$, bo jest po drugiej stronie zera",
+              "feedback": "Nie - musisz użyć osi symetrii $x = \\frac{1}{2}$, nie $x = 0$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Drugie miejsce zerowe to $x = \\frac{5}{2}$, bo $-2 + \\frac{5}{2} = \\frac{1}{2}$",
+              "feedback": "Błąd w obliczeniach - sprawdź wzór na oś symetrii.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oś symetrii paraboli przechodzi przez środek odcinka łączącego miejsca zerowe."
+        }
       },
       {
         "step": 3,
         "hint": "Jak zapisać funkcję kwadratową znając jej miejsca zerowe?",
-        "expression": "$g(x) = a(x - (-2))(x - 3) = a(x + 2)(x - 3)$",
-        "explanation": "Używamy postaci iloczynowej funkcji kwadratowej",
-        "why": "Postać iloczynowa $f(x) = a(x - x_1)(x - x_2)$ jest najwygodniejsza gdy znamy miejsca zerowe $x_1$ i $x_2$."
+        "expression": "$g(x) = a(x + 2)(x - 3)$ dla pewnego $a \\neq 0$",
+        "explanation": "Postać iloczynowa funkcji kwadratowej z miejscami zerowymi $-2$ i $3$",
+        "why": "To standardowa postać gdy znamy miejsca zerowe. Współczynnik $a$ określa orientację i 'szerokość' paraboli."
       },
       {
         "step": 4,
-        "hint": "Jak wyznaczyć współczynnik a używając waruneku g(0) = 6?",
+        "hint": "Jak wyznaczyć współczynnik $a$ używając punktu $(0, 6)$?",
         "expression": "$g(0) = a(0 + 2)(0 - 3) = a \\cdot 2 \\cdot (-3) = -6a = 6$",
-        "explanation": "Podstawiamy $x = 0$ i wykorzystujemy warunek $g(0) = 6$"
+        "explanation": "Podstawiamy punkt $(0, 6)$ do wzoru funkcji"
       },
       {
         "step": 5,
-        "hint": "Jaka jest wartość współczynnika a?",
+        "hint": "Jaka jest wartość współczynnika $a$?",
         "expression": "$a = -1$",
         "explanation": "Z równania $-6a = 6$ otrzymujemy $a = -1$"
       },
       {
         "step": 6,
-        "hint": "Jak będzie wyglądać końcowy wzór funkcji?",
-        "expression": "$g(x) = -1(x + 2)(x - 3) = -(x + 2)(x - 3)$",
-        "explanation": "Podstawiamy wyznaczoną wartość $a = -1$"
+        "hint": "Jaki jest wzór funkcji $g$ w postaci iloczynowej?",
+        "expression": "$g(x) = -(x + 2)(x - 3)$",
+        "explanation": "Podstawiamy $a = -1$ do postaci iloczynowej"
       },
       {
         "step": 7,
-        "hint": "Czy warto rozwinąć nawiasy dla postaci kanonicznej?",
-        "expression": "$g(x) = -(x^2 - 3x + 2x - 6) = -(x^2 - x - 6) = -x^2 + x + 6$",
-        "explanation": "Rozwijamy nawiasy i otrzymujemy postać kanoniczną"
+        "hint": "Jak rozwinąć postać iloczynową do postaci kanonicznej?",
+        "expression": "$g(x) = -(x^2 - x - 6) = -x^2 + x + 6$",
+        "explanation": "Rozwijamy iloczyn i stosujemy minus",
+        "interactive_choice": {
+          "prompt": "Którą metodą najlepiej rozwinąć $-(x + 2)(x - 3)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw pomnożyć nawiasy, potem zmienić znaki",
+              "feedback": "Dobra strategia! $(x+2)(x-3) = x^2 - x - 6$, więc $g(x) = -x^2 + x + 6$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozłożyć minus na każdy składnik osobno",
+              "feedback": "Skomplikowane i podatne na błędy - lepiej najpierw pomnożyć nawiasy.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $(a+b)(c+d) = ac + ad + bc + bd$",
+              "feedback": "Możliwe, ale dla dwóch nawiasów prostsze jest bezpośrednie mnożenie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Najprościej: pomnóż nawiasy, potem zastosuj minus do całego wyniku."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jak wyznaczyć wartość maksymalną funkcji kwadratowej?",
+        "expression": "Maksimum w wierzchołku: $x_w = \\frac{1}{2}$, $g\\left(\\frac{1}{2}\\right) = -\\frac{1}{4} + \\frac{1}{2} + 6 = 6\\frac{1}{4}$",
+        "explanation": "Dla paraboli skierowanej ramionami w dół maksimum jest w wierzchołku"
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest zbiór wartości funkcji $g$?",
+        "expression": "Zbiór wartości: $\\left(-\\infty, 6\\frac{1}{4}\\right]$",
+        "explanation": "Parabola skierowana ramionami w dół ma maksimum $6\\frac{1}{4}$"
+      },
+      {
+        "step": 10,
+        "hint": "Dla jakich argumentów $g(x) > 4$?",
+        "expression": "$-x^2 + x + 2 > 0 \\Rightarrow -(x-2)(x+1) > 0 \\Rightarrow (x-2)(x+1) < 0$",
+        "explanation": "Przekształcamy nierówność i rozkładamy na czynniki",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać nierówność $-x^2 + x + 6 > 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przekształcić do $-x^2 + x + 2 > 0$ i rozłożyć na czynniki",
+              "feedback": "Świetnie! To da $-(x^2 - x - 2) > 0$, czyli $-(x-2)(x+1) > 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić różne wartości i sprawdzić",
+              "feedback": "Nieefektywne - lepiej rozwiązać algebraicznie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru na deltę dla równania $-x^2 + x + 6 = 4$",
+              "feedback": "Możliwe, ale rozkład na czynniki będzie prostszy tutaj.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Nierówność kwadratową najlepiej rozwiązać przez rozkład na czynniki."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Kiedy iloczyn $(x-2)(x+1)$ jest ujemny?",
+        "expression": "$(x-2)(x+1) < 0$ dla $x \\in (-1, 2)$",
+        "explanation": "Iloczyn ujemny gdy czynniki mają różne znaki, czyli między miejscami zerowymi"
+      },
+      {
+        "step": 12,
+        "hint": "Jak przekształcenie $h(x) = g(x+3) - 2$ wpływa na położenie wierzchołka?",
+        "expression": "Wierzchołek $g$: $\\left(\\frac{1}{2}, 6\\frac{1}{4}\\right)$, wierzchołek $h$: $\\left(\\frac{1}{2} - 3, 6\\frac{1}{4} - 2\\right) = \\left(-2\\frac{1}{2}, 4\\frac{1}{4}\\right)$",
+        "explanation": "Przesunięcie o 3 w lewo i o 2 w dół",
+        "why": "Przekształcenie $f(x+a)$ przesuwa wykres o $a$ w lewo, a $f(x)-b$ o $b$ w dół."
       }
     ],
     "solutions": [
-      "$g(x) = -x^2 + x + 6$"
+      "11.1: A i F - wzory $g(x) = -x^2 + x + 6$ oraz $g(x) = -(x+2)(x-3)$",
+      "11.2: C - zbiór wartości $\\left(-\\infty, 6\\frac{1}{4}\\right]$",
+      "11.3: $(-1, 2)$ - przedział gdzie $g(x) > 4$",
+      "11.4: A - funkcja $h$ osiąga maksimum dla $x = -2\\frac{1}{2}$"
     ],
-    "parameters": {
-      "zero1": "$x = -2$",
-      "zero2": "$x = 3$",
-      "y_intercept": "$(0, 6)$",
-      "axis_of_symmetry": "$x = \\frac{1}{2}$"
-    },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 7,
-        "stepsWithWhy": 2
+        "totalSteps": 12,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
       }
     },
-    "timestamp": "2025-09-23T07:40:19.629Z"
-  },
-  {
-    "id": "quadratic_forms_matching",
-    "topic": "Postacie funkcji kwadratowej",
-    "difficulty": 3,
-    "statement": "Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych oznaczonych literami A-F i wpisz te litery w wykropkowanych miejscach. Wzór funkcji g można przedstawić w postaci _____ oraz _____.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jakie informacje o funkcji g możesz odczytać z wykresu?",
-        "expression": "Z wykresu odczytujemy: miejsca zerowe $x = -2$ i $x = 3$, ramiona paraboli skierowane w dół",
-        "explanation": "Analizujemy kluczowe cechy funkcji kwadratowej"
-      },
-      {
-        "step": 2,
-        "hint": "Jak zapisać funkcję kwadratową znając jej miejsca zerowe?",
-        "expression": "$g(x) = a(x - x_1)(x - x_2) = a(x - (-2))(x - 3) = a(x + 2)(x - 3)$",
-        "explanation": "Używamy postaci iloczynowej z miejscami zerowymi",
-        "why": "Postać iloczynowa $a(x - x_1)(x - x_2)$ bezpośrednio pokazuje miejsca zerowe. Gdy ramiona w dół, to $a < 0$."
-      },
-      {
-        "step": 3,
-        "hint": "Jak określić wartość współczynnika a z dodatkowego punktu?",
-        "expression": "Jeśli $g(0) = 6$, to $6 = a(0 + 2)(0 - 3) = a \\cdot 2 \\cdot (-3) = -6a$",
-        "explanation": "Podstawiamy punkt $(0, 6)$ do wzoru",
-        "why": "Punkt przecięcia z osią OY daje nam wartość $g(0)$, co pozwala wyznaczyć współczynnik $a$."
-      },
-      {
-        "step": 4,
-        "hint": "Jaka jest wartość współczynnika a?",
-        "expression": "$a = -1$, więc $g(x) = -(x + 2)(x - 3)$",
-        "explanation": "Rozwiązujemy równanie $-6a = 6$"
-      },
-      {
-        "step": 5,
-        "hint": "Jak przekształcić postać iloczynową na postać kanoniczną?",
-        "expression": "$g(x) = -(x + 2)(x - 3) = -(x^2 - 3x + 2x - 6) = -(x^2 - x - 6) = -x^2 + x + 6$",
-        "explanation": "Mnożymy nawiasy i porządkujemy wyrażenie"
-      },
-      {
-        "step": 6,
-        "hint": "Które odpowiedzi pasują do naszych wyników?",
-        "expression": "Odpowiedź A: $g(x) = -x^2 + x + 6$ ✓\nOdpowiedź F: $g(x) = -(x + 2)(x - 3)$ ✓",
-        "explanation": "Porównujemy nasze wyniki z podanymi opcjami"
-      }
-    ],
-    "solutions": [
-      "A",
-      "F"
-    ],
-    "parameters": {
-      "correct_answers": [
-        "A",
-        "F"
-      ],
-      "function_zeros": [
-        -2,
-        3
-      ],
-      "y_intercept": 6,
-      "parabola_direction": "down"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 6,
-        "stepsWithWhy": 2
-      }
-    },
-    "timestamp": "2025-09-23T07:40:36.295Z"
-  },
-  {
-    "id": "function_range_incomplete",
-    "topic": "Zbiór wartości funkcji",
-    "difficulty": 1,
-    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji g jest przedział A. $\\left(-\\infty, 6 \\frac{1}{2}\\right]$ B. $[7,+\\infty)$ C. $\\left(-\\infty, 6 \\frac{1}{4}\\right]$ D. $(-\\infty, 7]$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Czy w zadaniu podano wzór funkcji g?",
-        "expression": "Brak wzoru funkcji $g(x)$ w treści zadania",
-        "explanation": "Zadanie jest niekompletne - nie ma definicji funkcji g",
-        "why": "Bez wzoru funkcji niemożliwe jest określenie jej zbioru wartości. To może być błąd w sformułowaniu zadania lub brakująca część treści."
-      },
-      {
-        "step": 2,
-        "hint": "Co potrzebujemy znać, aby wyznaczyć zbiór wartości?",
-        "expression": "Potrzebny: wzór $g(x) = ...$, wykres lub opis funkcji",
-        "explanation": "Zbiór wartości to wszystkie możliwe wartości y = g(x)"
-      }
-    ],
-    "solutions": [
-      "Zadanie niekompletne - brak definicji funkcji g"
-    ],
-    "parameters": {
-      "note": "Zadanie wymaga uzupełnienia o wzór lub opis funkcji g"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 2,
-        "stepsWithWhy": 1
-      }
-    },
-    "timestamp": "2025-09-23T07:40:45.702Z"
-  },
-  {
-    "id": "function_inequality_domain",
-    "topic": "Nierówności funkcyjne",
-    "difficulty": 3,
-    "statement": "Zapisz w postaci przedziału zbiór wszystkich argumentów, dla których funkcja g przyjmuje wartości większe od 4.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jak matematycznie zapisać warunek 'funkcja g przyjmuje wartości większe od 4'?",
-        "expression": "$g(x) > 4$",
-        "explanation": "Przekształcamy słowny opis na nierówność matematyczną"
-      },
-      {
-        "step": 2,
-        "hint": "Czy masz podaną konkretną postać funkcji g(x), czy może jej wykres?",
-        "expression": "Potrzebujemy znać postać funkcji $g(x)$ lub jej wykres",
-        "explanation": "Bez znajomości funkcji nie możemy rozwiązać nierówności",
-        "why": "To kluczowy moment - metoda rozwiązania zależy od typu funkcji. Może to być analiza algebraiczna (dla wzoru) lub graficzna (dla wykresu)."
-      },
-      {
-        "step": 3,
-        "hint": "Jakie metody znasz do rozwiązywania nierówności funkcyjnych?",
-        "expression": "Metoda algebraiczna: $g(x) - 4 > 0$ lub metoda graficzna: wykres powyżej prostej $y = 4$",
-        "explanation": "Wybieramy odpowiednią metodę w zależności od postaci funkcji"
-      },
-      {
-        "step": 4,
-        "hint": "W jakiej postaci należy zapisać końcowy wynik?",
-        "expression": "Wynik w postaci przedziału: $(a,b)$, $[a,b)$, $(a,b]$, $[a,b]$ lub sumy przedziałów",
-        "explanation": "Zbiór rozwiązań zapisujemy jako przedział lub sumę przedziałów",
-        "why": "Nawiasy okrągłe () oznaczają, że końce nie należą do zbioru, kwadratowe [] - że należą. Dla nierówności ostrych (>) używamy nawiasów okrągłych."
-      }
-    ],
-    "solutions": [
-      "Bez podania konkretnej funkcji g(x) nie można wyznaczyć przedziału. Potrzebny jest wzór funkcji lub jej wykres."
-    ],
-    "parameters": {
-      "condition": "$g(x) > 4$",
-      "result_format": "przedział"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 4,
-        "stepsWithWhy": 2
-      }
-    },
-    "timestamp": "2025-09-23T07:41:00.651Z"
-  },
-  {
-    "id": "quadratic_transformation_maximum",
-    "topic": "Przekształcenia funkcji kwadratowych",
-    "difficulty": 4,
-    "statement": "Funkcja kwadratowa h jest określona za pomocą funkcji g następująco: $h(x) = g(x+3) - 2$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największą wartość funkcja h przyjmuje dla argumentu A. $x = -2\\frac{1}{2}$ B. $x = -\\frac{1}{4}$ C. $x = -\\frac{1}{2}$ D. $x = -1\\frac{1}{4}$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Co możemy wywnioskować o funkcji g z faktu, że h ma największą wartość?",
-        "expression": "Funkcja h ma maksimum, więc g również ma maksimum (ramiona paraboli skierowane w dół)",
-        "explanation": "Przekształcenia nie zmieniają kierunku ramion paraboli",
-        "why": "Jeśli h ma maksimum, to g też musi mieć maksimum. Przesunięcia nie wpływają na to, czy parabola ma ramiona w górę czy w dół."
-      },
-      {
-        "step": 2,
-        "hint": "Jak przekształcenie $x+3$ wpływa na położenie wykresu funkcji?",
-        "expression": "$g(x+3)$ oznacza przesunięcie wykresu g o 3 jednostki w lewo",
-        "explanation": "Argument $(x+3)$ powoduje przesunięcie poziome",
-        "why": "To częsty błąd! $(x+3)$ to przesunięcie w LEWO o 3, nie w prawo. Ogólnie: $f(x+a)$ przesuwa o $a$ w lewo."
-      },
-      {
-        "step": 3,
-        "hint": "Jak odejmowanie 2 zmienia położenie wykresu funkcji?",
-        "expression": "$g(x+3) - 2$ oznacza dodatkowo przesunięcie o 2 jednostki w dół",
-        "explanation": "Odejmowanie stałej przesuwa wykres pionowo w dół"
-      },
-      {
-        "step": 4,
-        "hint": "Jeśli g ma maksimum w punkcie $x = p$, to gdzie h będzie miało maksimum?",
-        "expression": "Jeśli g ma maksimum dla $x = p$, to h ma maksimum dla $x = p - 3$",
-        "explanation": "Przesunięcie w lewo o 3 oznacza, że maksimum przesuwa się o 3 w lewo",
-        "why": "Kluczowe: jeśli $g(p)$ to maksimum, to szukamy $x$ takiego, że $x + 3 = p$, czyli $x = p - 3$."
-      },
-      {
-        "step": 5,
-        "hint": "Która z podanych odpowiedzi ma postać $p - 3$ dla rozsądnej wartości p?",
-        "expression": "Sprawdzamy: A. $-2\\frac{1}{2} = \\frac{1}{2} - 3$, więc $p = \\frac{1}{2}$",
-        "explanation": "Odpowiedź A oznacza, że g ma maksimum dla $x = \\frac{1}{2}$"
-      },
-      {
-        "step": 6,
-        "hint": "Czy pozostałe odpowiedzi dają sensowne wartości dla p?",
-        "expression": "B. $p = -\\frac{1}{4} + 3 = 2\\frac{3}{4}$, C. $p = -\\frac{1}{2} + 3 = 2\\frac{1}{2}$, D. $p = -1\\frac{1}{4} + 3 = 1\\frac{3}{4}$",
-        "explanation": "Wszystkie dają rozsądne wartości, ale A jest najprostszą ($p = \\frac{1}{2}$)"
-      }
-    ],
-    "solutions": [
-      "A. $x = -2\\frac{1}{2}$"
-    ],
-    "parameters": {
-      "transformation": "$h(x) = g(x+3) - 2$"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 6,
-        "stepsWithWhy": 3
-      }
-    },
-    "timestamp": "2025-09-23T07:41:18.704Z"
+    "timestamp": "2025-09-23T10:28:32.439Z"
   },
   {
     "id": "sequence_analysis",
@@ -2046,6 +2858,7 @@
     "topic": "Średnia arytmetyczna i mediana",
     "difficulty": 3,
     "statement": "Na wykresie przedstawiono wyniki ankiety dotyczącej liczby zdawanych egzaminów dodatkowych: 1 egzamin - 10%, 2 egzaminy - 40%, 3 egzaminy - 35%, 4 egzaminy - 10%, 5 egzaminów - 5%. Oblicz średnią arytmetyczną i medianę.",
+    "image": "/zad27.png",
     "steps": [
       {
         "step": 1,
@@ -2109,6 +2922,7 @@
     "topic": "Optymalizacja - ekstremum funkcji",
     "difficulty": 4,
     "statement": "Deweloper projektuje tablicę do pisania do sali lekcyjnej. Jej kształt można opisać za pomocą dwóch figur: prostokąta oraz dwóch trójkątów równobocznych o boku równym długości krótszego boku prostokąta, przylegających do tych boków. Na obwód całej figury deweloper przeznacza 120 dm metalowej obwódki. Oblicz największe możliwe pole tej tablicy.",
+    "image": "/zad28.png",
     "steps": [
       {
         "step": 1,
