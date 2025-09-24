@@ -32,14 +32,14 @@ const parseLatexText = (text) => {
   if (!text || typeof text !== 'string') {
     return [{ type: 'text', content: String(text || '') }];
   }
-  
+
   const segments = [];
   let currentIndex = 0;
-  
+
   // Handle $...$ delimited math (converted format)
   const mathDelimiterRegex = /\$([^$]+)\$/g;
   let match;
-  
+
   // Track positions of $...$ blocks
   const mathBlocks = [];
   while ((match = mathDelimiterRegex.exec(text)) !== null) {
@@ -50,9 +50,29 @@ const parseLatexText = (text) => {
       type: 'math'
     });
   }
+
+  // Also detect undelimited LaTeX structures like \begin{array}
+  const latexStructureRegex = /(\\begin\{[^}]+\}.*?\\end\{[^}]+\})/gs;
+  while ((match = latexStructureRegex.exec(text)) !== null) {
+    // Check if this structure is not already inside $...$ delimiters
+    const isInsideDelimiters = mathBlocks.some(block =>
+      match.index >= block.start && match.index + match[0].length <= block.end
+    );
+
+    if (!isInsideDelimiters) {
+      mathBlocks.push({
+        start: match.index,
+        end: match.index + match[0].length,
+        content: match[1],
+        type: 'block_math' // Use block math for LaTeX structures
+      });
+    }
+  }
   
-  // If we found $...$ delimiters, process them
+  // If we found math blocks, process them (sort by position first)
   if (mathBlocks.length > 0) {
+    mathBlocks.sort((a, b) => a.start - b.start);
+
     for (const block of mathBlocks) {
       // Add text content before this math block
       if (currentIndex < block.start) {
@@ -61,9 +81,9 @@ const parseLatexText = (text) => {
           segments.push({ type: 'text', content: textContent });
         }
       }
-      
+
       // Add the math content
-      segments.push({ type: 'math', content: block.content });
+      segments.push({ type: block.type, content: block.content });
       currentIndex = block.end;
     }
     
@@ -104,12 +124,32 @@ const MathRenderer = ({ content, className = '' }) => {
         if (segment.type === 'text') {
           // Regular text - apply very light gray color
           return <span key={index} className="text-stone-400">{segment.content}</span>;
+        } else if (segment.type === 'block_math') {
+          // Block math content - use BlockMath for structures like tables
+          try {
+            return (
+              <div key={index} className="text-black font-bold my-4" style={{ color: 'black' }}>
+                <BlockMath
+                  math={segment.content}
+                  renderError={(error) => {
+                    // Fallback to plain text if LaTeX fails
+                    console.warn('KaTeX block render error:', error.message, 'for content:', segment.content);
+                    return <div className="font-mono text-sm bg-red-50 p-2 border border-red-200 rounded">{segment.content}</div>;
+                  }}
+                />
+              </div>
+            );
+          } catch (error) {
+            // Fallback to plain text if component fails
+            console.warn('React-KaTeX block component error:', error.message, 'for content:', segment.content);
+            return <div key={index} className="font-mono text-sm bg-red-50 p-2 border border-red-200 rounded">{segment.content}</div>;
+          }
         } else {
-          // Math content - use react-katex with black color and semibold
+          // Inline math content - use react-katex with black color and semibold
           try {
             return (
               <span key={index} className="text-black font-bold" style={{ color: 'black' }}>
-                <InlineMath 
+                <InlineMath
                   math={segment.content}
                   renderError={(error) => {
                     // Fallback to plain text if LaTeX fails

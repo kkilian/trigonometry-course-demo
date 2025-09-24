@@ -150,6 +150,46 @@ export default HomographicFunctionsStartHere;
 
 **Uwaga:** Wszystkie pozostałe elementy (logika, stylowanie, animacje) pozostają identyczne jak w RationalEquationsWordProblemsStartHere.jsx.
 
+### 3.3. **WAŻNE: Persystencja stanu widoku (localStorage)**
+
+#### **Inicjalizacja stanu showAllProblems z localStorage**
+```jsx
+const [showAllProblems, setShowAllProblems] = useState(() => {
+  try {
+    const saved = localStorage.getItem('homographic-functions-show-all-problems');
+    return saved ? JSON.parse(saved) : false;
+  } catch (e) {
+    console.error('Error loading view preference:', e);
+    return false;
+  }
+});
+```
+
+#### **Zapisywanie preferencji widoku**
+```jsx
+// Save view preference to localStorage
+useEffect(() => {
+  try {
+    localStorage.setItem('homographic-functions-show-all-problems', JSON.stringify(showAllProblems));
+  } catch (e) {
+    console.error('Error saving view preference:', e);
+  }
+}, [showAllProblems]);
+```
+
+#### **Klucz localStorage**
+- **Format:** `{nazwa-modułu}-show-all-problems`
+- **Przykład:** `homographic-functions-show-all-problems`
+- **Typ:** boolean (true = wszystkie zadania, false = sugerowane)
+
+#### **Korzyści implementacji**
+✅ **Zachowanie kontekstu nawigacji** - użytkownik wraca do tego samego widoku (sugerowane/wszystkie)
+✅ **Lepszy UX** - brak frustracji z resetowaniem widoku
+✅ **Persystencja między sesjami** - preferencje zachowane nawet po zamknięciu przeglądarki
+✅ **Spójność z systemem** - identyczna implementacja we wszystkich modułach
+
+**Uwaga:** Ta funkcjonalność jest kluczowa dla dobrego doświadczenia użytkownika i powinna być implementowana we wszystkich nowych modułach.
+
 ---
 
 ## **Krok 4: Rozszerzenie TrigonometryCourse.jsx**
@@ -284,6 +324,7 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 - **Komponent StartHere:** `{Nazwa}StartHere.jsx`
 - **localStorage klucz (progress):** `completed{Nazwa}Problems`
 - **localStorage klucz (suggestions):** `{nazwa}-suggested-problems`
+- **localStorage klucz (view state):** `{nazwa}-show-all-problems`
 
 ### Zmienne stanu:
 - **completed{Nazwa}Problems** - Set ukończonych problemów
@@ -325,9 +366,10 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 
 ### Checklist przed uruchomieniem:
 - [ ] Plik JSON utworzony i dostępny
-- [ ] Import JSON dodany do WelcomeScreen.jsx i TrigonometryCourse.jsx  
+- [ ] Import JSON dodany do WelcomeScreen.jsx i TrigonometryCourse.jsx
 - [ ] Moduł dodany do tablicy w WelcomeScreen.jsx (bez `disabled: true`)
 - [ ] Komponent StartHere utworzony z właściwymi nazwami
+- [ ] **Persystencja widoku zaimplementowana** (localStorage dla showAllProblems)
 - [ ] Wszystkie funkcje w TrigonometryCourse.jsx obsługują nowy mode
 - [ ] localStorage loading/saving dodane
 - [ ] Renderowanie komponentu dodane do return statement
@@ -340,6 +382,8 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 4. **AI sugestie:** zapisywanie do localStorage (sprawdź w DevTools)
 5. **Powrót:** dwa kafelki z sugestiami
 6. **Postęp:** pasek postępu aktualizuje się poprawnie
+7. **Przełączanie widoku:** toggle między "Sugerowane" i "Wszystkie zadania"
+8. **Persystencja widoku:** po przejściu do zadania i powrocie widok się zachowuje
 
 ---
 
@@ -362,8 +406,16 @@ if (currentProblem.id && currentProblem.id.includes('homographic')) {
 **Rozwiązanie:** Dodaj import i sprawdź czy ścieżka jest poprawna
 
 ### Błąd: localStorage nie zapisuje postępu
-**Przyczyna:** Brak useEffect do zapisywania lub błędna nazwa klucza  
+**Przyczyna:** Brak useEffect do zapisywania lub błędna nazwa klucza
 **Rozwiązanie:** Dodaj useEffect z poprawną nazwą zmiennej stanu
+
+### Błąd: Widok resetuje się po powrocie z zadania
+**Przyczyna:** Brak persystencji stanu showAllProblems lub błędna inicjalizacja
+**Rozwiązanie:** Sprawdź inicjalizację stanu z localStorage i useEffect do zapisywania
+
+### Błąd: "Cannot read property of undefined" w localStorage
+**Przyczyna:** Błędne parsowanie JSON lub uszkodzone dane w localStorage
+**Rozwiązanie:** Dodaj try/catch w inicjalizacji i użyj poprawnego fallback
 
 ---
 

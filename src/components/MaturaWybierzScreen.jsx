@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Matura2025Topics = ({ onSelectTopic, onBack }) => {
+const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
   const topics = [
     {
       id: 'matura-marzec-2025-podstawa',
@@ -36,11 +36,11 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
       id: 'matura-czerwiec-2025-podstawa',
       title: 'Czerwiec 2025',
       description: 'Egzamin poprawkowy - poziom podstawowy',
-      status: 'soon',
+      status: 'available',
       borderColor: 'hover:border-orange-500',
       iconBg: 'group-hover:bg-orange-100',
       iconColor: 'group-hover:text-orange-700',
-      problemCount: 0
+      problemCount: 34
     },
     {
       id: 'matura-sierpien-2025-podstawa',
@@ -82,7 +82,7 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
           {topics.map((topic) => (
             <button
               key={topic.id}
-              onClick={() => topic.status === 'available' ? onSelectTopic(topic.id) : null}
+              onClick={() => topic.status === 'available' ? onSelectSession(topic.id) : null}
               disabled={topic.status !== 'available'}
               className={`text-left p-6 md:p-8 bg-white border-2 border-stone-200 ${
                 topic.status === 'available'
@@ -174,4 +174,4 @@ const Matura2025Topics = ({ onSelectTopic, onBack }) => {
   );
 };
 
-export default Matura2025Topics;
+export default MaturaWybierzScreen;

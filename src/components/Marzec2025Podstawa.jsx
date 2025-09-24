@@ -1,16 +1,16 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import MathRenderer from './MathRenderer';
 
-const HomographicFunctionsStartHere = ({ 
-  problems, 
-  onSelectProblem, 
-  completedProblems = new Set(), 
-  onBack 
+const Marzec2025Podstawa = ({
+  problems,
+  onSelectProblem,
+  completedProblems = new Set(),
+  onBack
 }) => {
   const [suggestedProblems, setSuggestedProblems] = useState([]);
   const [showAllProblems, setShowAllProblems] = useState(() => {
     try {
-      const saved = localStorage.getItem('homographic-functions-show-all-problems');
+      const saved = localStorage.getItem('marzec2025podstawa-show-all-problems');
       return saved ? JSON.parse(saved) : false;
     } catch (e) {
       console.error('Error loading view preference:', e);
@@ -20,7 +20,7 @@ const HomographicFunctionsStartHere = ({
 
   // Load suggested problems from localStorage
   useEffect(() => {
-    const savedSuggestions = localStorage.getItem('homographic-functions-suggested-problems');
+    const savedSuggestions = localStorage.getItem('marzec2025podstawa-suggested-problems');
     if (savedSuggestions) {
       try {
         const suggestions = JSON.parse(savedSuggestions);
@@ -39,7 +39,7 @@ const HomographicFunctionsStartHere = ({
   // Save view preference to localStorage
   useEffect(() => {
     try {
-      localStorage.setItem('homographic-functions-show-all-problems', JSON.stringify(showAllProblems));
+      localStorage.setItem('marzec2025podstawa-show-all-problems', JSON.stringify(showAllProblems));
     } catch (e) {
       console.error('Error saving view preference:', e);
     }
@@ -63,7 +63,7 @@ const HomographicFunctionsStartHere = ({
     const uncompleted = problems
       .filter(p => !completedProblems.has(p.id))
       .slice(0, 2);
-    
+
     return uncompleted.length > 0 ? uncompleted : [problems[0]];
   }, [problems, completedProblems, suggestedProblems]);
 
@@ -116,11 +116,11 @@ const HomographicFunctionsStartHere = ({
               </button>
             </div>
           )}
-          
+
           {/* Header */}
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-              Funkcje Homograficzne
+              Matura - Marzec 2025 Podstawa
             </h1>
             {/* Progress Bar */}
             {problems && problems.length > 0 && (
@@ -181,55 +181,74 @@ const HomographicFunctionsStartHere = ({
                 </p>
               </div>
               <div className="space-y-3 px-4 md:px-8">
-                {problems.map((problem, index) => (
-                  <button
-                    key={problem.id}
-                    onClick={() => handleStartProblem(problem)}
-                    className={`w-full text-left p-4 md:p-6 rounded-lg transition-all group relative ${
-                      completedProblems.has(problem.id)
-                        ? 'bg-green-50 border border-green-200 hover:border-green-300'
-                        : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50'
-                    }`}
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-3 mb-2">
-                          <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-1 rounded">
-                            #{index + 1}
-                          </span>
-                          {problem.topic && (
-                            <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
-                              {problem.topic}
+                {problems.map((problem, index) => {
+                  // Extract display number from problem ID
+                  const displayNumber = problem.id.match(/#\d+-\w+-([\d.]+)-/)?.[1] || (index + 1);
+                  const points = problem.id.match(/(\d+p)$/)?.[1] || '0-2p';
+
+                  return (
+                    <button
+                      key={problem.id}
+                      onClick={() => handleStartProblem(problem)}
+                      className={`w-full text-left p-4 md:p-6 rounded-lg transition-all group relative ${
+                        completedProblems.has(problem.id)
+                          ? 'bg-green-50 border border-green-200 hover:border-green-300'
+                          : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50'
+                      }`}
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-1 rounded">
+                              #{displayNumber}
                             </span>
-                          )}
-                          {completedProblems.has(problem.id) && (
-                            <div className="flex items-center gap-1 text-green-700">
-                              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                              </svg>
-                              <span className="text-xs font-medium">Ukończone</span>
-                            </div>
-                          )}
+                            {problem.topic && (
+                              <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
+                                {problem.topic}
+                              </span>
+                            )}
+                            {completedProblems.has(problem.id) && (
+                              <div className="flex items-center gap-1 text-green-700">
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                </svg>
+                                <span className="text-xs font-medium">Ukończone</span>
+                              </div>
+                            )}
+                            {problem.image && (
+                              <span className="inline-flex items-center text-xs text-stone-500">
+                                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                                Z rysunkiem
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-stone-900 text-sm md:text-base leading-relaxed">
+                            <MathRenderer content={problem.statement || ''} />
+                          </div>
                         </div>
-                        <div className="text-stone-900 text-sm md:text-base leading-relaxed">
-                          <MathRenderer content={problem.statement || ''} />
+                        <div className="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                          <div className="bg-stone-100 px-2 py-1 rounded-full">
+                            <span className="text-xs text-stone-600">
+                              {problem.steps?.length || 0} kroków
+                            </span>
+                          </div>
+                          <div className="bg-yellow-100 px-2 py-1 rounded-full">
+                            <span className="text-xs text-yellow-700 font-medium">
+                              0-{points}
+                            </span>
+                          </div>
+                          <div className="w-6 h-6 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
+                            <svg className="w-3 h-3 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
+                              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                      <div className="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-                        <div className="bg-stone-100 px-2 py-1 rounded-full">
-                          <span className="text-xs text-stone-600">
-                            {problem.steps?.length || 0} kroków
-                          </span>
-                        </div>
-                        <div className="w-6 h-6 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
-                          <svg className="w-3 h-3 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </button>
-                ))}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           ) : (
@@ -271,6 +290,19 @@ const HomographicFunctionsStartHere = ({
                         <div className="bg-stone-100 px-4 py-2 rounded-full">
                           <span className="text-sm md:text-base text-stone-600">
                             {problemsToShow[0].steps?.length || 0} kroków
+                          </span>
+                        </div>
+                        {problemsToShow[0].image && (
+                          <span className="inline-flex items-center text-sm text-stone-500">
+                            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                            </svg>
+                            Z rysunkiem
+                          </span>
+                        )}
+                        <div className="bg-yellow-100 px-3 py-2 rounded-full">
+                          <span className="text-sm text-yellow-700 font-medium">
+                            0-{problemsToShow[0].id.match(/(\d+p)$/)?.[1] || '2p'}
                           </span>
                         </div>
                         <div className="hidden md:block text-sm text-stone-500 font-mono">
@@ -330,6 +362,19 @@ const HomographicFunctionsStartHere = ({
                                 {problem.steps?.length || 0} kroków
                               </span>
                             </div>
+                            {problem.image && (
+                              <span className="inline-flex items-center text-xs text-stone-500">
+                                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                                </svg>
+                                Z rysunkiem
+                              </span>
+                            )}
+                            <div className="bg-yellow-100 px-2 py-1 rounded-full">
+                              <span className="text-xs text-yellow-700 font-medium">
+                                0-{problem.id.match(/(\d+p)$/)?.[1] || '2p'}
+                              </span>
+                            </div>
                             <div className="w-8 h-8 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
                               <svg className="w-4 h-4 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
@@ -350,4 +395,4 @@ const HomographicFunctionsStartHere = ({
   );
 };
 
-export default HomographicFunctionsStartHere;
+export default Marzec2025Podstawa;
