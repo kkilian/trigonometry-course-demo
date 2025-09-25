@@ -1,9 +1,10 @@
 [
   {
-    "id": "#2025-kwiecien-1-2p",
+    "id": "#2025-kwiecien-1",
     "topic": "Wartość bezwzględna",
     "difficulty": 4,
-    "statement": "Liczba $|3-2\\sqrt{2}|-|6-3\\sqrt{2}|-|1-\\sqrt{2}|$ jest równa: A. $-2$, B. $-2\\sqrt{2}$, C. $2(4-3\\sqrt{2})$, D. $2\\sqrt{2}$",
+    "statement": "Liczba $|3-2\\sqrt{2}|-|6-3\\sqrt{2}|-|1-\\sqrt{2}|$ jest równa:",
+    "quiz": "A. $-2$\nB. $-2\\sqrt{2}$\nC. $2(4-3\\sqrt{2})$\nD. $2\\sqrt{2}$",
     "steps": [
       {
         "step": 1,
@@ -172,10 +173,11 @@
     "timestamp": "2025-09-23T09:09:37.127Z"
   },
   {
-    "id": "#2025-kwiecien-2-2p",
+    "id": "#2025-kwiecien-2",
     "topic": "Logarytmy",
     "difficulty": 4,
-    "statement": "Liczba $\\frac{1}{3}\\log_5 125 - 3\\log_{125} \\frac{1}{5}$ jest równa: A. 0, B. 1, C. 2, D. 5",
+    "statement": "Liczba $\\frac{1}{3}\\log_5 125 - 3\\log_{125} \\frac{1}{5}$ jest równa:",
+    "quiz": "A. $0$\nB. $1$\nC. $2$\nD. $5$",
     "steps": [
       {
         "step": 1,
@@ -306,10 +308,10 @@
     "timestamp": "2025-09-23T09:10:01.376Z"
   },
   {
-    "id": "#2025-kwiecien-3-2p",
+    "id": "#2025-kwiecien-3",
     "topic": "Dowody algebraiczne i arytmetyka modularna",
     "difficulty": 4,
-    "statement": "Wykaż, że suma kwadratów czterech kolejnych liczb całkowitych niepodzielnych przez 5 jest liczbą podzielną przez 10.",
+    "statement": "Wykaż, że suma kwadratów czterech kolejnych liczb całkowitych niepodzielnych przez $5$ jest liczbą podzielną przez $10$.",
     "steps": [
       {
         "step": 1,
@@ -459,7 +461,8 @@
     "id": "#2025-kwiecien-4-2p",
     "topic": "Równania z wartością bezwzględną",
     "difficulty": 4,
-    "statement": "Dane jest równanie $2(1+x)-3|5x+1|=2x-4$. Suma wszystkich rzeczywistych rozwiązań tego równania jest równa: A. $(-0,4)$, B. $0,25$, C. $0,4$, D. $(-0,25)$",
+    "statement": "Dane jest równanie $2(1+x)-3|5x+1|=2x-4$. Suma wszystkich rzeczywistych rozwiązań tego równania jest równa:",
+    "quiz": "A. $-0{,}4$\nB. $0{,}25$\nC. $0{,}4$\nD. $-0{,}25$",
     "steps": [
       {
         "step": 1,
@@ -555,37 +558,43 @@
       {
         "step": 8,
         "hint": "Jaka jest suma wszystkich rozwiązań?",
-        "expression": "$x_1+x_2=0,2+(-0,6)=-0,4$",
+        "expression": "$x_1+x_2=0{,}2+(-0{,}6)=-0{,}4$",
         "explanation": "Obliczamy sumę dwóch rozwiązań"
       },
       {
         "step": 9,
         "hint": "Która odpowiedź z podanych jest poprawna?",
-        "expression": "Suma wszystkich rozwiązań: $-0,4$",
-        "explanation": "Odpowiedź to A (interpretując jako liczbę $-0,4$)",
+        "expression": "Suma wszystkich rozwiązań: $-0{,}4$",
+        "explanation": "Odpowiedź to A: $-0{,}4$",
         "interactive_choice": {
-          "prompt": "Suma rozwiązań wynosi $-0,4$. Która odpowiedź jest poprawna?",
+          "prompt": "Suma rozwiązań wynosi $-0{,}4$. Która odpowiedź jest poprawna?",
           "options": [
             {
               "id": "A",
-              "text": "A. $(-0,4)$ - to przedział",
-              "feedback": "Nie! Nawiasy oznaczają przedział otwarty, a my szukamy liczby",
-              "is_correct": false
+              "text": "A. $-0{,}4$",
+              "feedback": "Poprawnie! To nasza obliczona suma rozwiązań",
+              "is_correct": true
             },
             {
               "id": "B",
-              "text": "D. $(-0,25)$ - to też przedział",
-              "feedback": "Nie! To również przedział, a wartość się nie zgadza",
+              "text": "B. $0{,}25$",
+              "feedback": "Nie, to dodatnia liczba, a nasza suma to $-0{,}4$",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Żadna - suma to $-0,4$, nie ma takiej opcji",
-              "feedback": "Prawdopodobnie A oznacza liczbę $-0,4$, mimo mylącego zapisu",
-              "is_correct": true
+              "text": "C. $0{,}4$",
+              "feedback": "Nie, to wartość bezwzględna naszej sumy, ale bez znaku minus",
+              "is_correct": false
+            },
+            {
+              "id": "D",
+              "text": "D. $-0{,}25$",
+              "feedback": "Nie, wartość się nie zgadza - nasza suma to $-0{,}4$",
+              "is_correct": false
             }
           ],
-          "explanation_after": "Suma wynosi $-0,4$. Odpowiedź A prawdopodobnie oznacza tę wartość, mimo mylącego zapisu z nawiasami"
+          "explanation_after": "Suma rozwiązań wynosi $-0{,}4$, więc poprawną odpowiedzią jest A"
         }
       }
     ],
@@ -615,7 +624,8 @@
     "id": "#2025-kwiecien-5-2p",
     "topic": "Funkcje liniowe - analiza właściwości",
     "difficulty": 3,
-    "statement": "Dana jest funkcja liniowa określona wzorem $f(x) = (m-2) \\cdot x + m - 3$. Oceń prawdziwość poniższych stwierdzeń: 1) Funkcja $f$ jest rosnąca dla $m \\in (-\\infty, 2)$ - P/F, 2) Funkcja $f$ jest stała dla $m = 3$ - P/F",
+    "statement": "Dana jest funkcja liniowa określona wzorem $f(x) = (m-2) \\cdot x + m - 3$. Oceń prawdziwość poniższych stwierdzeń:",
+    "quiz": "1) Funkcja $f$ jest rosnąca dla $m \\in (-\\infty{,} 2)$ - P/F\n2) Funkcja $f$ jest stała dla $m = 3$ - P/F",
     "steps": [
       {
         "step": 1,
@@ -762,7 +772,8 @@
     "id": "#2025-kwiecien-6-2p",
     "topic": "Dzielenie wyrażeń wymiernych",
     "difficulty": 4,
-    "statement": "Dane jest wyrażenie określone dla każdej liczby rzeczywistej $x \\in \\mathbb{R} \\backslash\\{-5,-2,0,2,5\\}$: $\\frac{(x^4-16)(x^2-25)}{(x^2-3x-10)(x+5)^2} \\div \\frac{(x^3+4x)(x-2)}{2x+10}$. Wyrażenie to można przekształcić do postaci: A. $\\frac{x^2+4}{2}$, B. $\\frac{x-2}{x+5}$, C. $\\frac{x+5}{2x-4}$, D. $\\frac{2}{x}$",
+    "statement": "Dane jest wyrażenie określone dla każdej liczby rzeczywistej $x \\in \\mathbb{R} \\backslash\\{-5,-2,0,2,5\\}$: $\\frac{(x^4-16)(x^2-25)}{(x^2-3x-10)(x+5)^2} \\div \\frac{(x^3+4x)(x-2)}{2x+10}$. Wyrażenie to można przekształcić do postaci:",
+    "quiz": "A. $\\frac{x^2+4}{2}$\nB. $\\frac{x-2}{x+5}$\nC. $\\frac{x+5}{2x-4}$\nD. $\\frac{2}{x}$",
     "steps": [
       {
         "step": 1,
@@ -928,7 +939,8 @@
     "id": "#2025-kwiecien-7-2p",
     "topic": "Wartość wielomianu i wyznaczanie parametru",
     "difficulty": 2,
-    "statement": "Liczba 204 to wartość wielomianu $P(x) = 8x^3 + 6x^2 + (m+5) \\cdot x - 15$ dla argumentu 3. Liczba $m$ jest równa: A. $(-17)$, B. $(-22)$, C. $(-27)$, D. $(-32)$",
+    "statement": "Liczba 204 to wartość wielomianu $P(x) = 8x^3 + 6x^2 + (m+5) \\cdot x - 15$ dla argumentu 3. Liczba $m$ jest równa:",
+    "quiz": "A. $(-17)$\nB. $(-22)$\nC. $(-27)$\nD. $(-32)$",
     "steps": [
       {
         "step": 1,
@@ -1064,7 +1076,7 @@
     "id": "#2025-kwiecien-8-2p",
     "topic": "Układy równań z procentami",
     "difficulty": 3,
-    "statement": "Dane są dwie liczby dodatnie $a$ oraz $b$, przy czym $a > b$. Różnica tych liczb jest równa 250, oraz 85% liczby $a$ stanowi 95% liczby $b$. Oblicz $a + b$.",
+    "statement": "Dane są dwie liczby dodatnie $a$ oraz $b$, przy czym $a > b$. Różnica tych liczb jest równa $250$, oraz $85%$ liczby $a$ stanowi $95%$ liczby $b$. Oblicz $a + b$.",
     "steps": [
       {
         "step": 1,
@@ -1526,7 +1538,8 @@
     "topic": "Funkcje przedziałami określone",
     "difficulty": 3,
     "image": "/zad11.png",
-    "statement": "Funkcja f jest określona następująco: $f(x)=\\begin{cases} -5x-15 & \\text{dla } x \\in(-4,-2] \\\\ -5 & \\text{dla } x \\in(-2,2) \\\\ 3x+8 & \\text{dla } x \\in[2,4] \\\\ 5 & \\text{dla } x=5 \\end{cases}$. Uzupełnij zdania: 1) Dziedziną funkcji f jest przedział _____, 2) Zbiorem wartości funkcji f jest przedział _____, 3) Zbiorem wszystkich argumentów, dla których funkcja f przyjmuje wartość najmniejszą jest przedział _____, 4) Zbiorem wszystkich argumentów dla których funkcja f jest malejąca jest przedział _____.",
+    "statement": "Funkcja f jest określona następująco: $f(x)=\\begin{cases} -5x-15 & \\text{dla } x \\in(-4,-2] \\\\ -5 & \\text{dla } x \\in(-2,2) \\\\ 3x+8 & \\text{dla } x \\in[2,4] \\\\ 5 & \\text{dla } x=5 \\end{cases}$. Uzupełnij zdania:",
+    "quiz": "1) Dziedziną funkcji f jest przedział _____\n2) Zbiorem wartości funkcji f jest przedział _____\n3) Zbiorem wszystkich argumentów{,} dla których funkcja f przyjmuje wartość najmniejszą jest przedział _____\n4) Zbiorem wszystkich argumentów dla których funkcja f jest malejąca jest przedział _____",
     "steps": [
       {
         "step": 1,
@@ -1695,199 +1708,221 @@
     "timestamp": "2025-09-23T09:14:55.069Z"
   },
   {
-    "id": "#2025-kwiecien-12-2p",
-    "topic": "Funkcje kwadratowe - postać wierzchołkowa i iloczynowa",
-    "difficulty": 4,
-    "statement": "Funkcja kwadratowa $y = g(x)$, której wierzchołek ma współrzędne $W = (2, 27)$ przechodzi przez punkt $A = (4, 15)$. Wyznacz wzór funkcji $g(x)$ w postaci iloczynowej. Funkcja $g$ jest rosnąca w przedziale: A. $(-\\infty, 27]$, B. $[2, +\\infty)$, C. $[27, +\\infty)$, D. $(-\\infty, 2]$. Funkcja $h(x)$ jest wyrażona za pomocą funkcji $g$ następująco: $h(x) = g(x + 5)$. Wyznacz wzór funkcji $h(x)$.",
+    "id": "#2025-kwiecien-12.1",
+    "topic": "Funkcje kwadratowe - postać iloczynowa",
+    "difficulty": 3,
+    "statement": "Funkcja kwadratowa $y = g(x)$, której wierzchołek ma współrzędne $W = (2, 27)$ przechodzi przez punkt $A = (4, 15)$. Wyznacz wzór funkcji $g(x)$ w postaci iloczynowej.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jaką postać funkcji kwadratowej najlepiej wykorzystać gdy znamy wierzchołek?",
+        "hint": "Jaką postać funkcji kwadratowej najłatwiej zapisać znając wierzchołek?",
         "expression": "$g(x) = a(x - 2)^2 + 27$",
-        "explanation": "Podstawiamy współrzędne wierzchołka do postaci wierzchołkowej",
-        "interactive_choice": {
-          "prompt": "Którą postać funkcji kwadratowej wybierzesz mając wierzchołek $W = (2, 27)$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Postać ogólną $y = ax^2 + bx + c$",
-              "feedback": "Możliwe, ale trzeba będzie wyznaczyć 3 parametry - to więcej pracy",
-              "is_correct": false
-            },
-            {
-              "id": "B",
-              "text": "Postać wierzchołkową $y = a(x - p)^2 + q$",
-              "feedback": "Doskonały wybór! Znamy już $p = 2$ i $q = 27$, zostaje tylko $a$",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Postać iloczynową $y = a(x - x_1)(x - x_2)$",
-              "feedback": "To nasz cel końcowy, ale najpierw potrzebujemy miejsca zerowe",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Postać wierzchołkowa jest idealna gdy znamy współrzędne wierzchołka."
-        }
+        "explanation": "Używamy postaci kanonicznej z wierzchołkiem W=(2,27)",
+        "why": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ bezpośrednio wykorzystuje współrzędne wierzchołka W=(p,q). To najszybsza droga do rozwiązania."
       },
       {
         "step": 2,
-        "hint": "Jak wyznaczyć parametr $a$ używając punktu $A = (4, 15)$?",
+        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
         "expression": "$15 = a(4 - 2)^2 + 27$",
-        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji",
-        "why": "Punkt leży na wykresie funkcji, więc jego współrzędne muszą spełniać równanie funkcji."
+        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji"
       },
       {
         "step": 3,
-        "hint": "Jakie równanie otrzymasz po uproszczeniu?",
-        "expression": "$15 = a \\cdot 4 + 27$",
-        "explanation": "Obliczamy $(4-2)^2 = 4$"
+        "hint": "Co otrzymasz po uproszczeniu tego równania?",
+        "expression": "$15 = a \\cdot 4 + 27$, więc $15 = 4a + 27$",
+        "explanation": "Obliczamy $(4-2)^2 = 4$ i porządkujemy równanie"
       },
       {
         "step": 4,
-        "hint": "Jaka jest wartość parametru $a$?",
-        "expression": "$15 = 4a + 27$, więc $4a = -12$, zatem $a = -3$",
-        "explanation": "Rozwiązujemy równanie względem $a$"
+        "hint": "Jaka jest wartość współczynnika a?",
+        "expression": "$4a = 15 - 27 = -12$, więc $a = -3$",
+        "explanation": "Rozwiązujemy równanie względem a"
       },
       {
         "step": 5,
-        "hint": "Jaki jest wzór funkcji $g(x)$ w postaci wierzchołkowej?",
+        "hint": "Jak wygląda funkcja w postaci kanonicznej po podstawieniu a?",
         "expression": "$g(x) = -3(x - 2)^2 + 27$",
-        "explanation": "Podstawiamy wyznaczoną wartość $a = -3$"
+        "explanation": "Mamy pełny wzór w postaci kanonicznej"
       },
       {
         "step": 6,
-        "hint": "Jak przekształcić postać wierzchołkową do iloczynowej?",
-        "expression": "Rozwiązujemy równanie $g(x) = 0$: $-3(x - 2)^2 + 27 = 0$",
-        "explanation": "Szukamy miejsc zerowych funkcji",
-        "interactive_choice": {
-          "prompt": "Co musisz znaleźć aby zapisać funkcję w postaci iloczynowej?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Miejsca zerowe funkcji",
-              "feedback": "Świetnie! Postać iloczynowa to $a(x - x_1)(x - x_2)$ gdzie $x_1, x_2$ to miejsca zerowe",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Współczynnik kierunkowy",
-              "feedback": "To dla funkcji liniowej - tu potrzebujemy miejsc zerowych",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Punkt przecięcia z osią OY",
-              "feedback": "To pomoże w postaci ogólnej, ale nie w iloczynowej",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Postać iloczynowa wymaga znajomości miejsc zerowych funkcji."
-        }
+        "hint": "Co musisz zrobić z wyrażeniem $(x-2)^2$, żeby otrzymać postać iloczynową?",
+        "expression": "$g(x) = -3(x - 2)^2 + 27 = -3(x^2 - 4x + 4) + 27$",
+        "explanation": "Rozwijamy kwadrat dwumianu",
+        "why": "Postać iloczynowa to $f(x) = a(x - x_1)(x - x_2)$, więc musimy znaleźć miejsca zerowe funkcji. Najpierw przekształcamy do postaci ogólnej."
       },
       {
         "step": 7,
-        "hint": "Jak rozwiązać równanie $-3(x - 2)^2 + 27 = 0$?",
-        "expression": "$-3(x - 2)^2 = -27$",
-        "explanation": "Przenosimy 27 na prawą stronę"
+        "hint": "Jak uprościć to wyrażenie do postaci ogólnej?",
+        "expression": "$g(x) = -3x^2 + 12x - 12 + 27 = -3x^2 + 12x + 15$",
+        "explanation": "Mnożymy przez -3 i dodajemy wyrazy podobne"
       },
       {
         "step": 8,
-        "hint": "Co otrzymasz dzieląc obie strony przez $-3$?",
-        "expression": "$(x - 2)^2 = 9$",
-        "explanation": "Dzielimy obie strony przez $-3$"
+        "hint": "Co można wyłączyć przed nawias z wyrażenia $-3x^2 + 12x + 15$?",
+        "expression": "$g(x) = -3(x^2 - 4x - 5)$",
+        "explanation": "Wyłączamy wspólny czynnik -3"
       },
       {
         "step": 9,
-        "hint": "Jakie są rozwiązania równania $(x - 2)^2 = 9$?",
-        "expression": "$x - 2 = \\pm 3$, więc $x = 2 \\pm 3$",
-        "explanation": "Pierwiastkujemy obie strony"
+        "hint": "Jak rozłożyć trójmian $x^2 - 4x - 5$ na czynniki?",
+        "expression": "$x^2 - 4x - 5 = (x - 5)(x + 1)$",
+        "explanation": "Szukamy dwóch liczb, których iloczyn to -5, a suma to -4: to są -5 i 1",
+        "why": "Sprawdzenie: $(x-5)(x+1) = x^2 + x - 5x - 5 = x^2 - 4x - 5$ ✓"
       },
       {
         "step": 10,
-        "hint": "Jakie są miejsca zerowe funkcji?",
-        "expression": "$x_1 = -1$ oraz $x_2 = 5$",
-        "explanation": "Otrzymujemy $x = 2 - 3 = -1$ i $x = 2 + 3 = 5$"
-      },
-      {
-        "step": 11,
-        "hint": "Jaki jest wzór funkcji $g(x)$ w postaci iloczynowej?",
-        "expression": "$g(x) = -3(x + 1)(x - 5)$",
-        "explanation": "Postać iloczynowa z $a = -3$ i miejscami zerowymi $-1, 5$"
-      },
-      {
-        "step": 12,
-        "hint": "W którym przedziale funkcja kwadratowa z $a < 0$ jest rosnąca?",
-        "expression": "Funkcja $g$ jest rosnąca w przedziale $(-\\infty, 2]$",
-        "explanation": "Odpowiedź D jest prawidłowa - wierzchołek ma $x_w = 2$",
-        "interactive_choice": {
-          "prompt": "Parabola z ramionami skierowanymi w dół jest rosnąca:",
-          "options": [
-            {
-              "id": "A",
-              "text": "Na lewo od wierzchołka",
-              "feedback": "Dokładnie! Dla $a < 0$ funkcja rośnie w $(-\\infty, x_w]$",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Na prawo od wierzchołka",
-              "feedback": "Nie - to dla paraboli z ramionami w górę ($a > 0$)",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "W całej dziedzinie",
-              "feedback": "Nie - funkcja kwadratowa nie jest monotoniczna w całej dziedzinie",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Gdy $a < 0$, parabola ma maksimum w wierzchołku, więc rośnie na lewo od niego."
-        }
-      },
-      {
-        "step": 13,
-        "hint": "Jak przekształcenie $h(x) = g(x + 5)$ wpływa na wykres?",
-        "expression": "$h(x) = g(x + 5) = -3((x + 5) + 1)((x + 5) - 5)$",
-        "explanation": "Podstawiamy $x + 5$ w miejsce $x$ w wzorze funkcji $g$",
-        "why": "Przekształcenie $f(x + a)$ przesuwa wykres o $a$ jednostek w lewo."
-      },
-      {
-        "step": 14,
-        "hint": "Jak uprościć wyrażenie $h(x) = -3((x + 5) + 1)((x + 5) - 5)$?",
-        "expression": "$h(x) = -3(x + 6)(x)$",
-        "explanation": "Upraszczamy: $(x + 5) + 1 = x + 6$ i $(x + 5) - 5 = x$"
-      },
-      {
-        "step": 15,
-        "hint": "Jaki jest końcowy wzór funkcji $h(x)$?",
-        "expression": "$h(x) = -3x(x + 6)$",
-        "explanation": "Funkcja $h(x)$ w postaci iloczynowej"
+        "hint": "Jaki jest ostateczny wzór funkcji w postaci iloczynowej?",
+        "expression": "$g(x) = -3(x - 5)(x + 1)$",
+        "explanation": "Otrzymujemy postać iloczynową funkcji kwadratowej"
       }
     ],
     "solutions": [
-      "$g(x) = -3(x + 1)(x - 5)$",
-      "Funkcja $g$ jest rosnąca w przedziale $(-\\infty, 2]$ (odpowiedź D)",
-      "$h(x) = -3x(x + 6)$"
+      "$g(x) = -3(x - 5)(x + 1)$"
     ],
     "parameters": {
-      "vertex": "$W = (2, 27)$",
-      "point": "$A = (4, 15)$",
-      "transformation": "$h(x) = g(x + 5)$"
+      "vertex": "W = (2, 27)",
+      "point": "A = (4, 15)"
     },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 15,
-        "stepsWithWhy": 2,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 3
+        "totalSteps": 10,
+        "stepsWithWhy": 3
       }
     },
-    "timestamp": "2025-09-23T09:15:31.747Z"
+    "timestamp": "2025-09-25T07:49:07.321Z"
+  },
+  {
+    "id": "#2025-kwiecien-12.2",
+    "topic": "Funkcje kwadratowe - monotoniczność",
+    "difficulty": 3,
+    "statement": "Funkcja kwadratowa $y = g(x)$, której wierzchołek ma współrzędne $W = (2, 27)$ przechodzi przez punkt $A = (4, 15)$. Funkcja $g$ jest rosnąca w przedziale:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak zapisać funkcję kwadratową znając współrzędne wierzchołka?",
+        "expression": "$g(x) = a(x - 2)^2 + 27$",
+        "explanation": "Używamy postaci kanonicznej z wierzchołkiem $(2, 27)$",
+        "why": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ od razu pokazuje wierzchołek $(p, q)$. To prostsze niż rozwijanie do postaci ogólnej."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
+        "expression": "$15 = a(4 - 2)^2 + 27$",
+        "explanation": "Podstawiamy współrzędne punktu A do równania funkcji"
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz powiedzieć o znaku parametru a?",
+        "expression": "$15 = 4a + 27$, więc $4a = -12$, czyli $a = -3$",
+        "explanation": "Parametr $a$ jest ujemny",
+        "why": "Znak parametru $a$ decyduje o kierunku ramion paraboli: $a > 0$ - ramiona w górę, $a < 0$ - ramiona w dół."
+      },
+      {
+        "step": 4,
+        "hint": "Gdzie parabola z ramionami skierowanymi w dół jest rosnąca?",
+        "expression": "$g(x) = -3(x - 2)^2 + 27$",
+        "explanation": "Mamy pełny wzór funkcji z $a = -3 < 0$",
+        "why": "Dla $a < 0$ parabola jest rosnąca na lewo od wierzchołka i malejąca na prawo. Wierzchołek to punkt maksimum."
+      },
+      {
+        "step": 5,
+        "hint": "W którym przedziale względem x = 2 funkcja będzie rosnąca?",
+        "expression": "Funkcja rosnąca w przedziale $(-\\infty, 2]$",
+        "explanation": "Parabola o ramionach w dół rośnie do wierzchołka, potem maleje"
+      }
+    ],
+    "solutions": [
+      "D. $(-\\infty, 2]$"
+    ],
+    "parameters": {
+      "vertex": "$(2, 27)$",
+      "point": "$(4, 15)$",
+      "coefficient": "$a = -3$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-25T07:49:21.880Z"
+  },
+  {
+    "id": "#2025-kwiecien-12.3",
+    "topic": "Funkcje kwadratowe - postać kanoniczna i przekształcenia",
+    "difficulty": 4,
+    "statement": "Funkcja kwadratowa $y = g(x)$, której wierzchołek ma współrzędne $W = (2, 27)$ przechodzi przez punkt $A = (4, 15)$.. Funkcja $h(x)$ jest wyrażona za pomocą funkcji g następująco: $h(x)=g(x+5)$. Wyznacz wzór funkcji $h(x)$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką postać funkcji kwadratowej najłatwiej zapisać znając współrzędne wierzchołka?",
+        "expression": "$g(x) = a(x - 2)^2 + 27$",
+        "explanation": "Używamy postaci kanonicznej z wierzchołkiem W=(2,27)",
+        "why": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ bezpośrednio pokazuje wierzchołek W=(p,q). To najwygodniejsza forma gdy znamy wierzchołek."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
+        "expression": "$15 = a(4 - 2)^2 + 27$",
+        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji g(x)"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz po uproszczeniu tego równania?",
+        "expression": "$15 = a \\cdot 4 + 27$, więc $15 = 4a + 27$",
+        "explanation": "Obliczamy $(4-2)^2 = 4$ i porządkujemy równanie"
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest wartość współczynnika a?",
+        "expression": "$4a = 15 - 27 = -12$, więc $a = -3$",
+        "explanation": "Rozwiązujemy równanie względem a"
+      },
+      {
+        "step": 5,
+        "hint": "Jak teraz wygląda kompletny wzór funkcji g(x)?",
+        "expression": "$g(x) = -3(x - 2)^2 + 27$",
+        "explanation": "Podstawiamy znalezioną wartość a do postaci kanonicznej"
+      },
+      {
+        "step": 6,
+        "hint": "Co oznacza zapis h(x) = g(x+5) w kontekście przekształceń funkcji?",
+        "expression": "$h(x) = g(x + 5) = -3((x + 5) - 2)^2 + 27$",
+        "explanation": "Podstawiamy (x+5) w miejsce x w funkcji g",
+        "why": "Przekształcenie f(x+a) przesuwa wykres o 'a' jednostek w lewo. Tu x+5 oznacza przesunięcie o 5 w lewo."
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć wyrażenie w nawiasie kwadratowym?",
+        "expression": "$h(x) = -3(x + 5 - 2)^2 + 27 = -3(x + 3)^2 + 27$",
+        "explanation": "Upraszczamy wyrażenie w nawiasie: (x+5)-2 = x+3"
+      }
+    ],
+    "solutions": [
+      "$h(x) = -3(x + 3)^2 + 27$"
+    ],
+    "parameters": {
+      "vertex_g": "W=(2,27)",
+      "point_A": "A=(4,15)",
+      "transformation": "h(x) = g(x+5)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-25T07:49:39.475Z"
   },
   {
     "id": "#2025-kwiecien-13-2p",
@@ -2220,7 +2255,8 @@
     "id": "#2025-kwiecien-15-2p",
     "topic": "Ciągi arytmetyczne",
     "difficulty": 4,
-    "statement": "Dany jest ciąg arytmetyczny $(a_n)$ w którym $a_{25} = 73$ oraz $a_{34} = 100$. Suma 60 początkowych wyrazów tego ciągu jest równa: A. 4860, B. 5370, C. 5210, D. 6100",
+    "statement": "Dany jest ciąg arytmetyczny $(a_n)$ w którym $a_{25} = 73$ oraz $a_{34} = 100$. Suma $60$ początkowych wyrazów tego ciągu jest równa:",
+    "quiz": "A. $4860$\nB. $5370$\nC. $5210$\nD. $6100$",
     "steps": [
       {
         "step": 1,
@@ -2376,7 +2412,8 @@
     "id": "#2025-kwiecien-16-2p",
     "topic": "Funkcje trygonometryczne kąta ostrego",
     "difficulty": 3,
-    "statement": "Kąt $\\alpha$ jest ostry oraz $\\tan \\alpha = 7$. Cosinus kąta $\\alpha$ wynosi: A. $\\frac{\\sqrt{7}}{7}$, B. $\\frac{1}{50}$, C. $\\frac{\\sqrt{2}}{10}$, D. $\\frac{7}{50}$",
+    "statement": "Kąt $\\alpha$ jest ostry oraz $\\tan \\alpha = 7$. Cosinus kąta $\\alpha$ wynosi:",
+    "quiz": "A. $\\frac{\\sqrt{7}}{7}$\nB. $\\frac{1}{50}$\nC. $\\frac{\\sqrt{2}}{10}$\nD. $\\frac{7}{50}$",
     "steps": [
       {
         "step": 1,
@@ -2680,8 +2717,7 @@
     "id": "#2025-kwiecien-18-2p",
     "topic": "Podobieństwo trójkątów i pole czworokąta",
     "difficulty": 4,
-    "image": "/zad18.png",
-    "statement": "Dany jest trójkąt prostokątny ABC, w którym poprowadzono odcinek |DE| w taki sposób, że |AE|=5 oraz |EB|=4, a także |CB|=15. Ponadto, CA ∥ DE. Oblicz pole czworokąta AEDC.",
+    "statement": "Dany jest trójkąt prostokątny $ABC$, w którym poprowadzono odcinek $|DE|$w taki sposób, że $|AE|=5$ oraz $|EB|=4$, a także $|CB|=15$. Ponadto, $CA$ ∥ $DE$. Oblicz pole czworokąta $AEDC$.",
     "steps": [
       {
         "step": 1,
@@ -2861,8 +2897,8 @@
     "id": "#2025-kwiecien-19-2p",
     "topic": "Kąty wpisane w okrąg",
     "difficulty": 3,
-    "image": "/zad19.png",
-    "statement": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie O. Kąt $\\angle BAC$ ma miarę 25°. Miara kąta ostrego $\\angle BDA$ jest równa: A. 35°, B. 45°, C. 55°, D. 65°",
+    "statement": "Punkty $A$, $B$, $C$ oraz $D$ leżą na okręgu o środku w punkcie $O$. Kąt $\\angle BAC$ ma miarę $25°$. Miara kąta ostrego $\\angle BDA$ jest równa:",
+    "quiz": "A. $35°$\nB. $45°$\nC. $55°$\nD. $65°$",
     "steps": [
       {
         "step": 1,
@@ -3011,7 +3047,8 @@
     "id": "#2025-kwiecien-20-2p",
     "topic": "Twierdzenie cosinusów",
     "difficulty": 4,
-    "statement": "Dany jest trójkąt, w którym pierwszy bok ma długość 6, drugi bok jest dłuższy od pierwszego oraz trzeci bok jest dłuższy od drugiego o 2. Cosinus kąta naprzeciwko najdłuższego boku jest równy $\\frac{1}{45}$. Najdłuższy bok tego trójkąta ma długość: A. $\\frac{15}{2}$, B. $\\frac{17}{2}$, C. $\\frac{19}{2}$, D. 11",
+    "statement": "Dany jest trójkąt, w którym pierwszy bok ma długość $6$, drugi bok jest dłuższy od pierwszego oraz trzeci bok jest dłuższy od drugiego o $2$. Cosinus kąta naprzeciwko najdłuższego boku jest równy $\\frac{1}{45}$. Najdłuższy bok tego trójkąta ma długość:",
+    "quiz": "A. $\\frac{15}{2}$\nB. $\\frac{17}{2}$\nC. $\\frac{19}{2}$\nD. $11$",
     "steps": [
       {
         "step": 1,
@@ -3201,7 +3238,8 @@
     "id": "#2025-kwiecien-21-2p",
     "topic": "Równanie okręgu",
     "difficulty": 3,
-    "statement": "W kartezjańskim układzie współrzędnych (x, y) dany jest okrąg $\\mathcal{O}$ o promieniu $r=4\\sqrt{2}$. Środek tego okręgu leży na środku odcinka $|MN|$ gdzie $M=(2,3)$ oraz $N=(6,9)$. Okrąg $\\mathcal{O}$ wyraża się równaniem: A. $(x-2)^2+(y-3)^2=4\\sqrt{2}$, B. $(x-4)^2+(y-6)^2=4\\sqrt{2}$, C. $(x-2)^2+(y-3)^2=32$, D. $(x-4)^2+(y-6)^2=32$",
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) dany jest okrąg $\\mathcal{O}$ o promieniu $r=4\\sqrt{2}$. Środek tego okręgu leży na środku odcinka $|MN|$ gdzie $M=(2,3)$ oraz $N=(6,9)$. Okrąg $\\mathcal{O}$ wyraża się równaniem:",
+    "quiz": "A. $(x-2)^2+(y-3)^2=4\\sqrt{2}$\nB. $(x-4)^2+(y-6)^2=4\\sqrt{2}$\nC. $(x-2)^2+(y-3)^2=32$\nD. $(x-4)^2+(y-6)^2=32$",
     "steps": [
       {
         "step": 1,
@@ -3351,7 +3389,8 @@
     "id": "#2025-kwiecien-22-2p",
     "topic": "Równanie prostej",
     "difficulty": 3,
-    "statement": "Prosta k: $y = ax + b$ jest równoległa do prostej $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$ oraz przechodzi przez punkt $P = (\\sqrt{3} + 1, 2\\sqrt{3} - 3)$. Prosta k wyraża się wzorem: A. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 3$, B. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$, C. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$, D. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} - 6$",
+    "statement": "Prosta k: $y = ax + b$ jest równoległa do prostej $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$ oraz przechodzi przez punkt $P = (\\sqrt{3} + 1, 2\\sqrt{3} - 3)$. Prosta k wyraża się wzorem:",
+    "quiz": "A. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 3$\nB. $y = (\\sqrt{3} - 1)x + 2\\sqrt{3} - 5$\nC. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} + 3$\nD. $y = (\\sqrt{3} - 1)x + 3\\sqrt{3} - 6$",
     "steps": [
       {
         "step": 1,
@@ -3491,7 +3530,8 @@
     "id": "#2025-kwiecien-23-2p",
     "topic": "Współczynnik kierunkowy prostej",
     "difficulty": 2,
-    "statement": "Prosta l jest nachylona do osi x pod kątem 135°. Oceń prawdziwość poniższych stwierdzeń: 1) Współczynnik kierunkowy prostej l jest równy (-1) - P/F, 2) Prosta l jest malejąca - P/F",
+    "statement": "Prosta l jest nachylona do osi $x$ pod kątem $135°$. Oceń prawdziwość poniższych stwierdzeń:",
+    "quiz": "1) Współczynnik kierunkowy prostej $l$ jest równy $(-1)$ - P/F\n2) Prosta $l$ jest malejąca - P/F",
     "steps": [
       {
         "step": 1,
@@ -3804,7 +3844,10 @@
     "id": "#2025-kwiecien-25-2p",
     "topic": "Geometria przestrzenna - kula",
     "difficulty": 3,
-    "statement": "Rozważamy kulę Q, której pole powierzchni całkowitej jest równe jej objętości. Kula Q ma promień o długości: A. 3 oraz jej pole powierzchni całkowitej wynosi 36π, B. 4 oraz jej pole powierzchni całkowitej wynosi 64π, C. 6 oraz jej pole powierzchni całkowitej wynosi 144π",
+    "statement": "Rozważamy kulę $Q$, której pole powierzchni całkowitej jest równe jej objętości.",
+    "quiz": "Kula Q ma promien o dlugości ___ oraz jej pole powierzchni całkowitej wynosi ___",
+    "image": "/kula.png",
+  
     "steps": [
       {
         "step": 1,
@@ -3943,7 +3986,8 @@
     "id": "#2025-kwiecien-26-2p",
     "topic": "Geometria przestrzenna - walec",
     "difficulty": 4,
-    "statement": "Suma długości promienia podstawy oraz wysokości pewnego walca jest równa 12. Pole powierzchni całkowitej tego walca wynosi $120\\pi$. Objętość tego walca jest równa: A. $125\\pi$, B. $150\\pi$, C. $175\\pi$, D. $225\\pi$",
+    "statement": "Suma długości promienia podstawy oraz wysokości pewnego walca jest równa $12$ Pole powierzchni całkowitej tego walca wynosi $120\\pi$. Objętość tego walca jest równa:",
+    "quiz": "A. $125\\pi$\nB. $150\\pi$\nC. $175\\pi$\nD. $225\\pi$",
     "steps": [
       {
         "step": 1,
@@ -4253,7 +4297,8 @@
     "id": "#2025-kwiecien-28-2p",
     "topic": "Kombinatoryka - liczby trzycyfrowe",
     "difficulty": 3,
-    "statement": "Rozważamy wszystkie liczby naturalne trzycyfrowe składające się jedynie z cyfr parzystych, których suma cyfr jest równa 6. Takich liczb trzycyfrowych jest dokładnie: A. 5, B. 6, C. 8, D. 14",
+    "statement": "Rozważamy wszystkie liczby naturalne trzycyfrowe składające się jedynie z cyfr parzystych, których suma cyfr jest równa $6$. Takich liczb trzycyfrowych jest dokładnie:",
+    "quiz": "A. $5$\nB. $6$\nC. $8$\nD. $14$",
     "steps": [
       {
         "step": 1,
@@ -4407,7 +4452,8 @@
     "id": "#2025-kwiecien-29-2p",
     "topic": "Średnia arytmetyczna i mediana",
     "difficulty": 3,
-    "statement": "Średnia arytmetyczna zestawu liczb 1, 2, 3, x, 5, 6, y, 9 jest równa 3,75. Mediana zestawu x, y jest równa: A. 2, B. 4, C. 7, D. 8",
+    "statement": "Średnia arytmetyczna zestawu liczb $1, 2, 3, x, 5, 6, y, 9$ jest równa $3,75$. Mediana zestawu $x, y jest równa:",
+    "quiz": "A. 2\nB. 4\nC. 7\nD. 8",
     "steps": [
       {
         "step": 1,

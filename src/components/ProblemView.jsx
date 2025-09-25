@@ -261,6 +261,20 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
                   }`}>
                     <MathRenderer content={problem.statement} />
                   </h1>
+                  {problem.quiz && (
+                    <div className="mt-3">
+                      <div className="border-t border-stone-300 mb-3"></div>
+                      <div className={`text-stone-700 ${
+                        isScrolled ? 'text-sm md:text-base' : 'text-base md:text-xl'
+                      }`}>
+                        {problem.quiz.split('\n').map((option, idx) => (
+                          <div key={idx} className="mb-1">
+                            <MathRenderer content={option} />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   {isScrolled && (
                     <button
                       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

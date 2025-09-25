@@ -3,7 +3,7 @@
     "id": "complex_exponent_simplification",
     "topic": "Potęgi i pierwiastki",
     "difficulty": 4,
-    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$ jest równa A. $\\frac{1}{2}$ B. $4$ C. $\\frac{1}{4}$ D. $2$",
+    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$ jest równa\\n\\nA. $\\frac{1}{2}$\\nB. $4$\\nC. $\\frac{1}{4}$\\nD. $2$",
     "steps": [
       {
         "step": 1,

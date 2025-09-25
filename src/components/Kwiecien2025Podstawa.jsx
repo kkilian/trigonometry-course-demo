@@ -226,6 +226,14 @@ const Kwiecien2025Podstawa = ({
                           </div>
                           <div className="text-stone-900 text-sm md:text-base leading-relaxed">
                             <MathRenderer content={problem.statement || ''} />
+                            {problem.quiz && (
+                              <>
+                                <div className="border-t border-stone-300/70 my-2"></div>
+                                <div className="text-stone-700">
+                                  <MathRenderer content={problem.quiz || ''} />
+                                </div>
+                              </>
+                            )}
                           </div>
                         </div>
                         <div className="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
@@ -346,6 +354,14 @@ const Kwiecien2025Podstawa = ({
                             </div>
                             <div className="text-stone-900 text-base md:text-lg leading-relaxed font-medium">
                               <MathRenderer content={problem.statement || ''} />
+                              {problem.quiz && (
+                                <>
+                                  <div className="border-t border-stone-300/70 my-3"></div>
+                                  <div className="text-stone-700">
+                                    <MathRenderer content={problem.quiz || ''} />
+                                  </div>
+                                </>
+                              )}
                             </div>
                           </div>
                           <div className="flex items-center justify-between md:justify-end gap-3 md:gap-6 flex-shrink-0">
