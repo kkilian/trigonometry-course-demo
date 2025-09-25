@@ -5,7 +5,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
     {
       id: 'matura-marzec-2025-podstawa',
       title: 'Marzec 2025',
-      description: 'Egzamin próbny - poziom podstawowy',
       status: 'available',
       borderColor: 'hover:border-blue-500',
       iconBg: 'group-hover:bg-blue-100',
@@ -15,7 +14,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
     {
       id: 'matura-kwiecien-2025-podstawa',
       title: 'Kwiecień 2025',
-      description: 'Egzamin dodatkowy - poziom podstawowy',
       status: 'available',
       borderColor: 'hover:border-purple-500',
       iconBg: 'group-hover:bg-purple-100',
@@ -25,7 +23,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
     {
       id: 'matura-maj-2025-podstawa',
       title: 'Maj 2025',
-      description: 'Egzamin główny - poziom podstawowy',
       status: 'available',
       borderColor: 'hover:border-green-500',
       iconBg: 'group-hover:bg-green-100',
@@ -35,7 +32,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
     {
       id: 'matura-czerwiec-2025-podstawa',
       title: 'Czerwiec 2025',
-      description: 'Egzamin poprawkowy - poziom podstawowy',
       status: 'available',
       borderColor: 'hover:border-orange-500',
       iconBg: 'group-hover:bg-orange-100',
@@ -45,12 +41,11 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
     {
       id: 'matura-sierpien-2025-podstawa',
       title: 'Sierpień 2025',
-      description: 'Egzamin poprawkowy II - poziom podstawowy',
-      status: 'soon',
+      status: 'available',
       borderColor: 'hover:border-red-500',
       iconBg: 'group-hover:bg-red-100',
       iconColor: 'group-hover:text-red-700',
-      problemCount: 0
+      problemCount: 35
     }
   ];
 
@@ -72,9 +67,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
           <h1 className="text-3xl md:text-5xl font-bold text-stone-900 tracking-tight mb-2 md:mb-4">
             Matura 2025 - Poziom podstawowy
           </h1>
-          <p className="text-stone-400 text-base md:text-lg">
-            Zadania z poziomu podstawowego
-          </p>
         </div>
 
         {/* Topics Grid - Minimalistic */}
@@ -108,9 +100,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
                         </span>
                       )}
                     </div>
-                    <p className="text-stone-600 text-sm md:text-base">
-                      {topic.description}
-                    </p>
                   </div>
 
                   {/* Arrow icon */}
@@ -152,23 +141,6 @@ const MaturaWybierzScreen = ({ onSelectSession, onBack }) => {
           ))}
         </div>
 
-        {/* Info section */}
-        <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-xl">
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-blue-900 mb-1">Informacja o dostępności</h4>
-              <p className="text-sm text-blue-700">
-                Obecnie dostępne są zadania z dwóch sesji egzaminacyjnych: marzec 2025 (32 zadania) i kwiecień 2025 (30 zadań).
-                Kolejne sesje egzaminacyjne będą dodawane systematycznie.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

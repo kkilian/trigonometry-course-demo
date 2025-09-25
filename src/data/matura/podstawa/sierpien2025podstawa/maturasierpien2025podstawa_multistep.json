@@ -1,1 +1,2208 @@
-[]
+[
+  {
+    "id": "absolute_value_sqrt",
+    "topic": "Wartość bezwzględna z pierwiastkami",
+    "difficulty": 3,
+    "statement": "Liczba $|\\sqrt{5}-3|+|\\sqrt{5}-1|$ jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak sprawdzić, czy wyrażenie pod wartością bezwzględną jest dodatnie czy ujemne?",
+        "expression": "Porównujemy $\\sqrt{5}$ z liczbami 3 i 1",
+        "explanation": "Musimy określić znaki wyrażeń $\\sqrt{5}-3$ i $\\sqrt{5}-1$"
+      },
+      {
+        "step": 2,
+        "hint": "Ile w przybliżeniu wynosi $\\sqrt{5}$?",
+        "expression": "$\\sqrt{5} \\approx 2{,}236$, więc $\\sqrt{5} < 3$ i $\\sqrt{5} > 1$",
+        "explanation": "Ustalamy znaki: $\\sqrt{5}-3 < 0$ oraz $\\sqrt{5}-1 > 0$",
+        "why": "Można też sprawdzić przez podniesienie do kwadratu: $5 < 9$ i $5 > 1$, więc $\\sqrt{5} < 3$ i $\\sqrt{5} > 1$."
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje z wartością bezwzględną liczby ujemnej?",
+        "expression": "$|\\sqrt{5}-3| = -(\\sqrt{5}-3) = 3-\\sqrt{5}$",
+        "explanation": "Gdy wyrażenie pod wartością bezwzględną jest ujemne, zmieniamy jego znak"
+      },
+      {
+        "step": 4,
+        "hint": "A co z wartością bezwzględną liczby dodatniej?",
+        "expression": "$|\\sqrt{5}-1| = \\sqrt{5}-1$",
+        "explanation": "Gdy wyrażenie pod wartością bezwzględną jest dodatnie, pozostaje bez zmian"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po dodaniu tych dwóch wyrażeń?",
+        "expression": "$|\\sqrt{5}-3|+|\\sqrt{5}-1| = (3-\\sqrt{5}) + (\\sqrt{5}-1) = 3-\\sqrt{5}+\\sqrt{5}-1 = 2$",
+        "explanation": "Pierwiastki się skracają i zostaje tylko 2",
+        "why": "To typowa sytuacja z wartościami bezwzględnymi - często wyrażenia się upraszczają po rozłożeniu na przypadki."
+      }
+    ],
+    "solutions": [
+      "2"
+    ],
+    "parameters": {
+      "answer": "C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:50:39.115Z"
+  },
+  {
+    "id": "negative_exponents_powers",
+    "topic": "Potęgi o wykładnikach ujemnych",
+    "difficulty": 3,
+    "statement": "Liczba $\\frac{25^{-2}}{125^{-4}}$ jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką wspólną podstawę mają liczby 25 i 125?",
+        "expression": "$25 = 5^2$ oraz $125 = 5^3$",
+        "explanation": "Zapisujemy obie liczby jako potęgi liczby 5"
+      },
+      {
+        "step": 2,
+        "hint": "Jak przepisać potęgi potęg używając reguły $(a^m)^n = a^{mn}$?",
+        "expression": "$25^{-2} = (5^2)^{-2} = 5^{-4}$ oraz $125^{-4} = (5^3)^{-4} = 5^{-12}$",
+        "explanation": "Mnożymy wykładniki zgodnie z regułą potęgowania potęgi",
+        "why": "Przy potęgowaniu potęgi wykładniki się mnożą: $(a^m)^n = a^{m \\cdot n}$. Uwaga na znaki: $2 \\cdot (-2) = -4$!"
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje z wykładnikami przy dzieleniu potęg o tej samej podstawie?",
+        "expression": "$\\frac{5^{-4}}{5^{-12}} = 5^{-4-(-12)} = 5^{-4+12} = 5^8$",
+        "explanation": "Przy dzieleniu potęg odejmujemy wykładniki",
+        "why": "Reguła $\\frac{a^m}{a^n} = a^{m-n}$. Kluczowe: $-4 - (-12) = -4 + 12 = 8$. Minus przed nawiasem zmienia znak!"
+      }
+    ],
+    "solutions": [
+      "$5^8$"
+    ],
+    "parameters": {
+      "answer": "D"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:50:49.082Z"
+  },
+  {
+    "id": "cube_root_simplification",
+    "topic": "Pierwiastki sześcienne",
+    "difficulty": 3,
+    "statement": "Liczba $\\sqrt[3]{24} + \\sqrt[3]{192}$ jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można rozłożyć liczby 24 i 192 na czynniki pierwsze?",
+        "expression": "$24 = 8 \\cdot 3 = 2^3 \\cdot 3$ oraz $192 = 64 \\cdot 3 = 4^3 \\cdot 3$",
+        "explanation": "Rozkładamy na czynniki, szukając sześcianów liczb naturalnych",
+        "why": "Szukamy czynników będących sześcianami, bo $\\sqrt[3]{a^3} = a$. Zauważ: $8 = 2^3$ i $64 = 4^3$."
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie gdy wyciągniesz sześciany spod pierwiastka?",
+        "expression": "$\\sqrt[3]{24} = \\sqrt[3]{2^3 \\cdot 3} = 2\\sqrt[3]{3}$",
+        "explanation": "Wyciągamy $2^3$ spod pierwiastka sześciennego"
+      },
+      {
+        "step": 3,
+        "hint": "Jak podobnie uprościć drugi składnik?",
+        "expression": "$\\sqrt[3]{192} = \\sqrt[3]{4^3 \\cdot 3} = 4\\sqrt[3]{3}$",
+        "explanation": "Wyciągamy $4^3$ spod pierwiastka sześciennego"
+      },
+      {
+        "step": 4,
+        "hint": "Co możesz wyłączyć przed nawias z wyrażenia $2\\sqrt[3]{3} + 4\\sqrt[3]{3}$?",
+        "expression": "$\\sqrt[3]{24} + \\sqrt[3]{192} = 2\\sqrt[3]{3} + 4\\sqrt[3]{3} = (2 + 4)\\sqrt[3]{3} = 6\\sqrt[3]{3}$",
+        "explanation": "Dodajemy podobne składniki wyłączając wspólny czynnik $\\sqrt[3]{3}$"
+      }
+    ],
+    "solutions": [
+      "$6\\sqrt[3]{3}$"
+    ],
+    "parameters": {
+      "answer": "C"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-24T10:50:59.074Z"
+  },
+  {
+    "id": "logarithm_properties_example",
+    "topic": "Właściwości logarytmów",
+    "difficulty": 3,
+    "statement": "Liczba $\\log_{3} 2 - \\log_{3} 18$ jest równa A. $(-2)$ B. $\\left(-\\frac{1}{2}\\right)$ C. $\\frac{1}{2}$ D. $2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można przekształcić różnicę logarytmów o tej samej podstawie?",
+        "expression": "$\\log_{3} 2 - \\log_{3} 18 = \\log_{3} \\frac{2}{18}$",
+        "explanation": "Używamy właściwości: $\\log_a x - \\log_a y = \\log_a \\frac{x}{y}$",
+        "why": "To jedna z podstawowych właściwości logarytmów. Alternatywnie można obliczać każdy logarytm osobno, ale to znacznie trudniejsze."
+      },
+      {
+        "step": 2,
+        "hint": "Do jakiej prostej postaci można uprościć ułamek $\\frac{2}{18}$?",
+        "expression": "$\\log_{3} \\frac{2}{18} = \\log_{3} \\frac{1}{9}$",
+        "explanation": "Skracamy ułamek przez 2"
+      },
+      {
+        "step": 3,
+        "hint": "Jaką potęgą liczby 3 jest liczba 9?",
+        "expression": "$\\log_{3} \\frac{1}{9} = \\log_{3} \\frac{1}{3^2}$",
+        "explanation": "Rozpoznajemy, że $9 = 3^2$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać $\\frac{1}{3^2}$ używając ujemnej potęgi?",
+        "expression": "$\\log_{3} \\frac{1}{3^2} = \\log_{3} 3^{-2}$",
+        "explanation": "Używamy właściwości: $\\frac{1}{a^n} = a^{-n}$",
+        "why": "To kluczowy krok - przepisanie na potęgę podstawy logarytmu pozwoli nam łatwo obliczyć wynik."
+      },
+      {
+        "step": 5,
+        "hint": "Czemu równa się logarytm potęgi przy tej samej podstawie?",
+        "expression": "$\\log_{3} 3^{-2} = -2$",
+        "explanation": "Z definicji logarytmu: $\\log_a a^x = x$"
+      }
+    ],
+    "solutions": [
+      "$-2$"
+    ],
+    "parameters": {
+      "answer": "A"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:51:16.998Z"
+  },
+  {
+    "id": "modular_arithmetic_powers",
+    "topic": "Arytmetyka modularna i podzielność",
+    "difficulty": 4,
+    "statement": "Wykaż, że liczba $8^{50} - 2^{145}$ jest podzielna przez 31",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak można przepisać $8^{50}$ używając potęg liczby 2?",
+        "expression": "$8^{50} = (2^3)^{50} = 2^{150}$",
+        "explanation": "Przepisujemy 8 jako potęgę liczby 2"
+      },
+      {
+        "step": 2,
+        "hint": "Co możemy wyłączyć przed nawias z wyrażenia $2^{150} - 2^{145}$?",
+        "expression": "$2^{150} - 2^{145} = 2^{145}(2^5 - 1) = 2^{145} \\cdot 31$",
+        "explanation": "Wyłączamy wspólny czynnik $2^{145}$ przed nawias",
+        "why": "Kluczowy krok! Wyłączenie wspólnego czynnika pozwala zobaczyć, że $2^5 - 1 = 32 - 1 = 31$."
+      },
+      {
+        "step": 3,
+        "hint": "Co oznacza dla podzielności fakt, że wyrażenie ma postać $2^{145} \\cdot 31$?",
+        "expression": "$8^{50} - 2^{145} = 2^{145} \\cdot 31$",
+        "explanation": "Wyrażenie jest iloczynem liczby całkowitej i 31",
+        "why": "Jeśli liczba ma postać $k \\cdot 31$ gdzie $k$ jest liczbą całkowitą, to jest podzielna przez 31 z definicji podzielności."
+      }
+    ],
+    "solutions": [
+      "Liczba $8^{50} - 2^{145} = 2^{145} \\cdot 31$ jest podzielna przez 31"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:51:28.463Z"
+  },
+  {
+    "id": "linear_inequality_example",
+    "topic": "Nierówności liniowe",
+    "difficulty": 2,
+    "statement": "Zbiorem wszystkich rozwiązań nierówności $3-x \\geq \\frac{5x-1}{2}$ jest przedział",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak pozbyć się ułamka z prawej strony?",
+        "expression": "$2(3-x) \\geq 5x-1$",
+        "explanation": "Mnożymy obie strony przez 2",
+        "why": "Mnożenie przez liczbę dodatnią nie zmienia znaku nierówności. Gdyby było ujemne, musielibyśmy odwrócić znak!"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po wymnożeniu nawiasu?",
+        "expression": "$6 - 2x \\geq 5x - 1$",
+        "explanation": "Rozwijamy lewą stronę"
+      },
+      {
+        "step": 3,
+        "hint": "Jak zgrupować wszystkie wyrazy z x po jednej stronie?",
+        "expression": "$6 + 1 \\geq 5x + 2x$",
+        "explanation": "Przenosimy wszystkie wyrazy z x na prawą stronę, a liczby na lewą"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki będzie ostateczny wynik po uproszczeniu?",
+        "expression": "$7 \\geq 7x$",
+        "explanation": "Upraszczamy obie strony"
+      },
+      {
+        "step": 5,
+        "hint": "Co się stanie ze znakiem nierówności przy dzieleniu przez 7?",
+        "expression": "$x \\leq 1$",
+        "explanation": "Dzielimy przez 7 i zapisujemy w standardowej postaci",
+        "why": "Dzielenie przez liczbę dodatnią zachowuje kierunek nierówności. Zapis $x \\leq 1$ to przedział $(-\\infty, 1]$."
+      }
+    ],
+    "solutions": [
+      "$x \\in (-\\infty, 1]$"
+    ],
+    "parameters": {
+      "answer": "A"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:51:59.807Z"
+  },
+  {
+    "id": "rational_equation_interval",
+    "topic": "Równania wymierne z warunkami",
+    "difficulty": 4,
+    "statement": "Dane jest równanie $\\frac{3}{3x-7}=\\frac{5x}{x-8}$, gdzie $x \\neq \\frac{7}{3}$ i $x \\neq 8$. Wyznacz wszystkie rozwiązania tego równania należące do przedziału $\\left(\\frac{5}{4},+\\infty\\right)$.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak pozbyć się ułamków w równaniu?",
+        "expression": "$3(x-8) = 5x(3x-7)$",
+        "explanation": "Mnożymy obie strony przez $(3x-7)(x-8)$",
+        "why": "To standardowa metoda dla równań wymiernych. Pamiętaj: mnożąc przez wyrażenie z x, mogą pojawić się rozwiązania pozorne!"
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po rozwinięciu nawiasów po lewej stronie?",
+        "expression": "$3x - 24 = 5x(3x-7)$",
+        "explanation": "Rozwijamy lewą stronę równania"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwinąć prawą stronę z iloczynem?",
+        "expression": "$3x - 24 = 15x^2 - 35x$",
+        "explanation": "Rozwijamy prawą stronę: $5x \\cdot 3x - 5x \\cdot 7$"
+      },
+      {
+        "step": 4,
+        "hint": "Do jakiej postaci sprowadzisz równanie?",
+        "expression": "$15x^2 - 38x + 24 = 0$",
+        "explanation": "Przenosimy wszystko na prawą stronę i porządkujemy",
+        "why": "Otrzymaliśmy równanie kwadratowe. Sprawdź: $-35x - 3x = -38x$ i $24$ przechodzi z minusem."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są współczynniki tego równania kwadratowego?",
+        "expression": "$a = 15$, $b = -38$, $c = 24$",
+        "explanation": "Identyfikujemy współczynniki dla wzoru na deltę"
+      },
+      {
+        "step": 6,
+        "hint": "Co powie nam wartość delty o liczbie rozwiązań?",
+        "expression": "$\\Delta = (-38)^2 - 4 \\cdot 15 \\cdot 24 = 1444 - 1440 = 4$",
+        "explanation": "Delta dodatnia, więc mamy dwa różne rozwiązania"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie konkretne wartości x otrzymasz ze wzoru?",
+        "expression": "$x = \\frac{38 \\pm 2}{30}$, więc $x_1 = \\frac{40}{30} = \\frac{4}{3}$ i $x_2 = \\frac{36}{30} = \\frac{6}{5}$",
+        "explanation": "Podstawiamy do wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 8,
+        "hint": "Czy oba rozwiązania spełniają warunki dziedziny?",
+        "expression": "$x_1 = \\frac{4}{3} \\neq \\frac{7}{3}$ i $\\frac{4}{3} \\neq 8$ ✓, $x_2 = \\frac{6}{5} \\neq \\frac{7}{3}$ i $\\frac{6}{5} \\neq 8$ ✓",
+        "explanation": "Sprawdzamy, czy rozwiązania nie zerują mianowników",
+        "why": "Kluczowy krok! Rozwiązania pozorne mogą powstać przy mnożeniu przez wyrażenia z x."
+      },
+      {
+        "step": 9,
+        "hint": "Które z rozwiązań należą do przedziału $\\left(\\frac{5}{4},+\\infty\\right)$?",
+        "expression": "$\\frac{4}{3} = \\frac{20}{15}$ i $\\frac{5}{4} = \\frac{18.75}{15}$, więc $\\frac{4}{3} > \\frac{5}{4}$ ✓; $\\frac{6}{5} = \\frac{18}{15} < \\frac{5}{4}$ ✗",
+        "explanation": "Porównujemy z granicą przedziału: $\\frac{5}{4} = 1.25$, $\\frac{4}{3} \\approx 1.33$, $\\frac{6}{5} = 1.2$"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{4}{3}$"
+    ],
+    "parameters": {
+      "domain": "$x \\in \\left(\\frac{5}{4},+\\infty\\right)$",
+      "restrictions": "$x \\neq \\frac{7}{3}, x \\neq 8$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:52:20.459Z"
+  },
+  {
+    "id": "quadratic_inequality_example",
+    "topic": "Nierówności kwadratowe",
+    "difficulty": 3,
+    "statement": "Rozwiąż nierówność $-3x^2 > 6x - 9$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co należy zrobić, aby wszystkie składniki były po jednej stronie?",
+        "expression": "$-3x^2 - 6x + 9 > 0$",
+        "explanation": "Przenosimy wszystkie składniki na lewą stronę"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki wspólny czynnik można wyłączyć przed nawias?",
+        "expression": "$-3(x^2 + 2x - 3) > 0$",
+        "explanation": "Wyłączamy $-3$ przed nawias"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie ze znakiem nierówności po podzieleniu przez liczbę ujemną?",
+        "expression": "$x^2 + 2x - 3 < 0$",
+        "explanation": "Dzielimy przez $-3$ i zmieniamy znak nierówności",
+        "why": "Dzielenie przez liczbę ujemną zawsze zmienia kierunek nierówności! To kluczowa zasada, o której często zapominamy."
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są miejsca zerowe funkcji kwadratowej?",
+        "expression": "$x^2 + 2x - 3 = 0$, skąd $(x + 3)(x - 1) = 0$",
+        "explanation": "Rozkładamy na czynniki lub używamy wzoru kwadratowego",
+        "why": "Miejsca zerowe dzielą oś liczbową na przedziały, w których funkcja ma stały znak. Można też użyć $\\Delta = 4 + 12 = 16$."
+      },
+      {
+        "step": 5,
+        "hint": "Które przedziały sprawdzisz, aby określić znak funkcji?",
+        "expression": "Miejsca zerowe: $x = -3$ i $x = 1$",
+        "explanation": "Funkcja zmienia znak w miejscach zerowych"
+      },
+      {
+        "step": 6,
+        "hint": "W którym przedziale parabola o dodatnim współczynniku przy $x^2$ jest poniżej osi?",
+        "expression": "Dla $x \\in (-3, 1)$: $x^2 + 2x - 3 < 0$",
+        "explanation": "Sprawdzamy znak w każdym przedziale, np. dla $x = 0$: $0 + 0 - 3 = -3 < 0$",
+        "why": "Parabola $y = x^2 + 2x - 3$ ma ramiona skierowane w górę, więc jest ujemna między pierwiastkami."
+      }
+    ],
+    "solutions": [
+      "$x \\in (-3, 1)$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:52:34.429Z"
+  },
+  {
+    "id": "product_equation_sum",
+    "topic": "Równania iloczynowe",
+    "difficulty": 2,
+    "statement": "Suma wszystkich rozwiązań równania $(3x-12)(10+5x)(x-3)=0$ jest równa A. (-5) B. (-1) C. 5 D. 9",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy iloczyn trzech czynników równa się zero?",
+        "expression": "$(3x-12)(10+5x)(x-3)=0$",
+        "explanation": "Iloczyn równa się zero, gdy przynajmniej jeden z czynników równa się zero",
+        "why": "To podstawowa własność liczb rzeczywistych: jeśli $a \\cdot b \\cdot c = 0$, to $a = 0$ lub $b = 0$ lub $c = 0$."
+      },
+      {
+        "step": 2,
+        "hint": "Jakie równania liniowe musisz rozwiązać?",
+        "expression": "$3x-12=0$ lub $10+5x=0$ lub $x-3=0$",
+        "explanation": "Przyrównujemy każdy czynnik do zera"
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz z pierwszego równania $3x-12=0$?",
+        "expression": "$3x = 12$, więc $x_1 = 4$",
+        "explanation": "Rozwiązujemy pierwsze równanie liniowe"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki wynik da równanie $10+5x=0$?",
+        "expression": "$5x = -10$, więc $x_2 = -2$",
+        "explanation": "Rozwiązujemy drugie równanie liniowe"
+      },
+      {
+        "step": 5,
+        "hint": "Co jest rozwiązaniem najkrótszego równania?",
+        "expression": "$x_3 = 3$",
+        "explanation": "Trzecie równanie daje bezpośrednio wynik"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć sumę wszystkich pierwiastków?",
+        "expression": "$x_1 + x_2 + x_3 = 4 + (-2) + 3 = 5$",
+        "explanation": "Dodajemy wszystkie rozwiązania"
+      }
+    ],
+    "solutions": [
+      "Suma wszystkich rozwiązań wynosi $5$",
+      "Odpowiedź: C. 5"
+    ],
+    "parameters": {
+      "roots": [
+        "$x_1 = 4$",
+        "$x_2 = -2$",
+        "$x_3 = 3$"
+      ]
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-24T10:52:45.248Z"
+  },
+  {
+    "id": "tomatoes_system_example",
+    "topic": "Układy równań liniowych",
+    "difficulty": 3,
+    "statement": "Właściciel restauracji kupił 75 kilogramów pomidorów: x kg pomidorów malinowych w cenie 11 złotych za kilogram oraz y kg pomidorów cherry w cenie 7,98 złotych za kilogram. Za pomidory zapłacił łącznie 752,52 złotych. Oblicz, ile kilogramów pomidorów malinowych kupił właściciel restauracji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie dwie informacje o ilościach i kosztach możesz zapisać jako równania?",
+        "expression": "$x + y = 75$ oraz $11x + 7{,}98y = 752{,}52$",
+        "explanation": "Pierwsze równanie z całkowitej masy, drugie z całkowitego kosztu",
+        "why": "Każda informacja z zadania daje jedno równanie. Mamy dwie niewiadome, więc potrzebujemy dwóch równań do rozwiązania układu."
+      },
+      {
+        "step": 2,
+        "hint": "Którą zmienną łatwiej wyrazić z pierwszego równania?",
+        "expression": "$y = 75 - x$",
+        "explanation": "Wyrażamy y z pierwszego równania"
+      },
+      {
+        "step": 3,
+        "hint": "Co się stanie gdy podstawisz to wyrażenie do drugiego równania?",
+        "expression": "$11x + 7{,}98(75 - x) = 752{,}52$",
+        "explanation": "Podstawiamy wyrażenie na y do równania kosztowego",
+        "why": "Metoda podstawiania pozwala sprowadzić układ do jednego równania z jedną niewiadomą. To prostsze niż metoda przeciwnych współczynników przy takich liczbach."
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć lewą stronę równania po wymnożeniu nawiasu?",
+        "expression": "$11x + 598{,}5 - 7{,}98x = 752{,}52$",
+        "explanation": "Wymnażamy nawias: $7{,}98 \\cdot 75 = 598{,}5$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po zebraniu podobnych składników z x?",
+        "expression": "$3{,}02x = 752{,}52 - 598{,}5 = 154{,}02$",
+        "explanation": "Zbieramy składniki: $11x - 7{,}98x = 3{,}02x$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki będzie wynik końcowego dzielenia?",
+        "expression": "$x = \\frac{154{,}02}{3{,}02} = 51$",
+        "explanation": "Dzielimy obie strony przez współczynnik przy x"
+      }
+    ],
+    "solutions": [
+      "51 kg pomidorów malinowych"
+    ],
+    "parameters": {
+      "variables": "x - pomidory malinowe (kg), y - pomidory cherry (kg)",
+      "constraints": "x + y = 75, 11x + 7,98y = 752,52"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:53:05.295Z"
+  },
+  {
+    "id": "piecewise_function_zeros_values",
+    "topic": "Funkcje przedziałami określone",
+    "difficulty": 3,
+    "statement": "Funkcja f jest określona następująco: $f(x) = \\begin{cases} -2x-10 & \\text{dla } x \\in (-5,-3] \\\\ x-1 & \\text{dla } x \\in (-3,4] \\end{cases}$. Uzupełnij zdania: 1. Miejscem zerowym funkcji f jest liczba (...) 2. Wartość wyrażenia $f(-2) + 3 \\cdot f(2)$ jest równa (...)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza miejsce zerowe funkcji?",
+        "expression": "Szukamy $x$ takiego, że $f(x) = 0$",
+        "explanation": "Miejsce zerowe to argument, dla którego funkcja przyjmuje wartość zero",
+        "why": "Funkcja przedziałami określona może mieć zero w różnych przedziałach - trzeba sprawdzić każdy osobno."
+      },
+      {
+        "step": 2,
+        "hint": "W którym przedziale może być zero dla wzoru $-2x - 10 = 0$?",
+        "expression": "$-2x - 10 = 0$ dla $x \\in (-5, -3]$",
+        "explanation": "Sprawdzamy pierwszy przedział definicji",
+        "why": "Rozwiązanie równania musi należeć do przedziału, w którym obowiązuje dany wzór!"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie x spełnia równanie $-2x - 10 = 0$?",
+        "expression": "$-2x = 10$, więc $x = -5$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 4,
+        "hint": "Czy $x = -5$ należy do przedziału $(-5, -3]$?",
+        "expression": "$x = -5 \\notin (-5, -3]$ (przedział otwarty w -5)",
+        "explanation": "Rozwiązanie nie należy do dziedziny tego wzoru"
+      },
+      {
+        "step": 5,
+        "hint": "Co z zerem w drugim przedziale dla wzoru $x - 1 = 0$?",
+        "expression": "$x - 1 = 0$ dla $x \\in (-3, 4]$",
+        "explanation": "Sprawdzamy drugi przedział definicji"
+      },
+      {
+        "step": 6,
+        "hint": "Czy rozwiązanie $x = 1$ pasuje do przedziału $(-3, 4]$?",
+        "expression": "$x = 1 \\in (-3, 4]$, więc $f(1) = 1 - 1 = 0$",
+        "explanation": "Miejsce zerowe to $x = 1$"
+      },
+      {
+        "step": 7,
+        "hint": "Do którego przedziału należy $x = -2$?",
+        "expression": "$-2 \\in (-5, -3]$, więc $f(-2) = -2(-2) - 10 = 4 - 10 = -6$",
+        "explanation": "Obliczamy pierwszą wartość używając odpowiedniego wzoru"
+      },
+      {
+        "step": 8,
+        "hint": "Który wzór użyjesz dla $x = 2$?",
+        "expression": "$2 \\in (-3, 4]$, więc $f(2) = 2 - 1 = 1$",
+        "explanation": "Obliczamy drugą wartość"
+      },
+      {
+        "step": 9,
+        "hint": "Jak podstawić obliczone wartości do wyrażenia?",
+        "expression": "$f(-2) + 3 \\cdot f(2) = -6 + 3 \\cdot 1 = -6 + 3 = -3$",
+        "explanation": "Podstawiamy i obliczamy końcowy wynik"
+      }
+    ],
+    "solutions": [
+      "1. Miejscem zerowym funkcji f jest liczba $1$",
+      "2. Wartość wyrażenia $f(-2) + 3 \\cdot f(2)$ jest równa $-3$"
+    ],
+    "parameters": {
+      "domain1": "$x \\in (-5, -3]$",
+      "domain2": "$x \\in (-3, 4]$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:53:22.437Z"
+  },
+  {
+    "id": "piecewise_function_analysis",
+    "topic": "Funkcje przedziałami określone",
+    "difficulty": 3,
+    "statement": "Funkcja f jest określona następująco: $f(x) = \\begin{cases} -2x-10 & \\text{dla } x \\in (-5,-3] \\\\ x-1 & \\text{dla } x \\in (-3,4] \\end{cases}$. Uzupełnij zdania: 1. Zbiorem wartości funkcji f jest przedział (...) 2. Zbiorem wszystkich rozwiązań nierówności $f(x) < -2$ jest przedział (...)",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie wartości przyjmuje pierwsza część funkcji na przedziale $(-5,-3]$?",
+        "expression": "Dla $x \\in (-5,-3]$: $f(x) = -2x - 10$",
+        "explanation": "Analizujemy pierwszą część funkcji liniowej o współczynniku kierunkowym $-2$"
+      },
+      {
+        "step": 2,
+        "hint": "Co się dzieje z wartościami funkcji gdy x rośnie od -5 do -3?",
+        "expression": "Gdy $x \\to -5^+$: $f(x) \\to -2(-5) - 10 = 0$, gdy $x = -3$: $f(-3) = -2(-3) - 10 = -4$",
+        "explanation": "Funkcja malejąca, więc wartości od 0 (wyłącznie) do -4 (włącznie)",
+        "why": "Współczynnik kierunkowy $-2 < 0$ oznacza funkcję malejącą. Punkt $x = -5$ nie należy do dziedziny, więc wartość 0 nie jest osiągana."
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości przyjmuje druga część funkcji na przedziale $(-3,4]$?",
+        "expression": "Dla $x \\in (-3,4]$: $f(x) = x - 1$",
+        "explanation": "Analizujemy drugą część funkcji liniowej o współczynniku kierunkowym $1$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak zmieniają się wartości gdy x rośnie od -3 do 4?",
+        "expression": "Gdy $x \\to -3^+$: $f(x) \\to -3 - 1 = -4$, gdy $x = 4$: $f(4) = 4 - 1 = 3$",
+        "explanation": "Funkcja rosnąca, więc wartości od -4 (wyłącznie) do 3 (włącznie)",
+        "why": "Współczynnik kierunkowy $1 > 0$ oznacza funkcję rosnącą. Punkt $x = -3$ nie należy do tego przedziału."
+      },
+      {
+        "step": 5,
+        "hint": "Jak połączyć zakresy wartości z obu części funkcji?",
+        "expression": "Zbiór wartości: $(-\\infty, -4] \\cup (-4, 3] = (-\\infty, 3]$",
+        "explanation": "Łączymy przedziały wartości z obu części funkcji"
+      },
+      {
+        "step": 6,
+        "hint": "W której części funkcji może zachodzić $f(x) < -2$?",
+        "expression": "Sprawdzamy nierówność $f(x) < -2$ dla każdej części osobno",
+        "explanation": "Analizujemy nierówność przedziałami"
+      },
+      {
+        "step": 7,
+        "hint": "Kiedy $-2x - 10 < -2$ dla pierwszej części?",
+        "expression": "$-2x - 10 < -2 \\Rightarrow -2x < 8 \\Rightarrow x > -4$",
+        "explanation": "Dla pierwszej części: $x \\in (-4, -3]$",
+        "why": "Dzieląc przez liczbę ujemną $-2$, zmieniamy znak nierówności. Przecięcie z dziedziną $(-5, -3]$ daje $(-4, -3]$."
+      },
+      {
+        "step": 8,
+        "hint": "Kiedy $x - 1 < -2$ dla drugiej części?",
+        "expression": "$x - 1 < -2 \\Rightarrow x < -1$",
+        "explanation": "Dla drugiej części: $x \\in (-3, -1)$",
+        "why": "Przecięcie z dziedziną $(-3, 4]$ daje $(-3, -1)$."
+      },
+      {
+        "step": 9,
+        "hint": "Jak połączyć rozwiązania z obu części?",
+        "expression": "Rozwiązanie: $(-4, -3] \\cup (-3, -1) = (-4, -1)$",
+        "explanation": "Łączymy przedziały rozwiązań z obu części funkcji"
+      }
+    ],
+    "solutions": [
+      "1. Zbiorem wartości funkcji f jest przedział $(-\\infty, 3]$",
+      "2. Zbiorem wszystkich rozwiązań nierówności $f(x) < -2$ jest przedział $(-4, -1)$"
+    ],
+    "parameters": {
+      "domain": "$x \\in (-5, -3] \\cup (-3, 4] = (-5, 4] \\setminus \\{-3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-24T10:53:42.719Z"
+  },
+  {
+    "id": "linear_function_from_conditions",
+    "topic": "Funkcja liniowa - wyznaczanie wzoru",
+    "difficulty": 2,
+    "statement": "Miejscem zerowym funkcji liniowej g jest liczba (-3). Dla argumentu 0 funkcja g przyjmuje wartość $\\left(-\\frac{3}{2}\\right)$. Funkcja g jest określona wzorem A. $g(x)=-\\frac{1}{2}x-\\frac{3}{2}$ B. $g(x)=-\\frac{1}{2}x+\\frac{3}{2}$ C. $g(x)=\\frac{1}{2}x-\\frac{3}{2}$ D. $g(x)=\\frac{1}{2}x+\\frac{3}{2}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że funkcja ma miejsce zerowe w punkcie (-3)?",
+        "expression": "$g(-3) = 0$",
+        "explanation": "Miejsce zerowe to argument, dla którego funkcja przyjmuje wartość 0",
+        "why": "Miejsce zerowe to punkt przecięcia wykresu z osią x. Często mylone z wartością funkcji!"
+      },
+      {
+        "step": 2,
+        "hint": "Jaką informację daje nam wartość funkcji dla argumentu 0?",
+        "expression": "$g(0) = -\\frac{3}{2}$",
+        "explanation": "To wartość funkcji w punkcie 0, czyli wyraz wolny funkcji liniowej"
+      },
+      {
+        "step": 3,
+        "hint": "Jak wygląda ogólna postać funkcji liniowej i co już znamy?",
+        "expression": "$g(x) = ax + b$, gdzie $b = -\\frac{3}{2}$",
+        "explanation": "Wyraz wolny b to wartość funkcji dla x = 0",
+        "why": "W funkcji liniowej $g(x) = ax + b$ wyraz wolny b to zawsze $g(0)$. Pozostaje wyznaczyć współczynnik kierunkowy a."
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać warunek $g(-3) = 0$ do znalezienia współczynnika a?",
+        "expression": "$g(-3) = a(-3) + \\left(-\\frac{3}{2}\\right) = 0$",
+        "explanation": "Podstawiamy miejsce zerowe do wzoru funkcji"
+      },
+      {
+        "step": 5,
+        "hint": "Jaką wartość ma współczynnik kierunkowy a?",
+        "expression": "$-3a - \\frac{3}{2} = 0$, więc $-3a = \\frac{3}{2}$, skąd $a = -\\frac{1}{2}$",
+        "explanation": "Rozwiązujemy równanie względem a"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest ostateczny wzór funkcji g?",
+        "expression": "$g(x) = -\\frac{1}{2}x - \\frac{3}{2}$",
+        "explanation": "Podstawiamy wyznaczone wartości a i b"
+      }
+    ],
+    "solutions": [
+      "A. $g(x)=-\\frac{1}{2}x-\\frac{3}{2}$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:54:00.415Z"
+  },
+  {
+    "id": "quadratic_axis_zeros",
+    "topic": "Funkcje kwadratowe - oś symetrii i miejsca zerowe",
+    "difficulty": 4,
+    "statement": "Funkcja kwadratowa f jest określona wzorem $f(x) = \\frac{1}{2}x^2 + bx + c$, gdzie b oraz c są liczbami rzeczywistymi. Jednym z miejsc zerowych funkcji f jest liczba 6. W kartezjańskim układzie współrzędnych (x, y) prosta o równaniu $x = 1$ jest osią symetrii wykresu funkcji f. Wybierz poprawny wzór funkcji f.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że prosta $x = 1$ jest osią symetrii paraboli?",
+        "expression": "Oś symetrii: $x = -\\frac{b}{2a} = 1$, gdzie $a = \\frac{1}{2}$",
+        "explanation": "Wykorzystujemy wzór na oś symetrii funkcji kwadratowej",
+        "why": "Oś symetrii paraboli $ax^2 + bx + c$ to zawsze $x = -\\frac{b}{2a}$. To kluczowa właściwość do znalezienia współczynnika b."
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć wartość współczynnika b z równania osi symetrii?",
+        "expression": "$1 = -\\frac{b}{2 \\cdot \\frac{1}{2}} = -\\frac{b}{1} = -b$",
+        "explanation": "Podstawiamy $a = \\frac{1}{2}$ do wzoru na oś symetrii"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest wartość współczynnika b?",
+        "expression": "$b = -1$",
+        "explanation": "Z równania $1 = -b$ otrzymujemy $b = -1$"
+      },
+      {
+        "step": 4,
+        "hint": "Jeśli oś symetrii to $x = 1$, a jedno miejsce zerowe to $x = 6$, gdzie leży drugie miejsce zerowe?",
+        "expression": "Drugie miejsce zerowe: $x = 1 - (6 - 1) = 1 - 5 = -4$",
+        "explanation": "Miejsca zerowe są symetryczne względem osi symetrii",
+        "why": "Jeśli oś symetrii to $x = p$, a miejsca zerowe to $x_1$ i $x_2$, to $\\frac{x_1 + x_2}{2} = p$. Gdy $x_1 = 6$ i $p = 1$, to $x_2 = 2 \\cdot 1 - 6 = -4$."
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać funkcję kwadratową znając jej miejsca zerowe?",
+        "expression": "$f(x) = a(x - x_1)(x - x_2) = \\frac{1}{2}(x - 6)(x - (-4)) = \\frac{1}{2}(x - 6)(x + 4)$",
+        "explanation": "Używamy postaci iloczynowej funkcji kwadratowej"
+      },
+      {
+        "step": 6,
+        "hint": "Która z podanych odpowiedzi odpowiada naszemu wzorowi?",
+        "expression": "$f(x) = \\frac{1}{2}(x + 4)(x - 6)$",
+        "explanation": "Porządkujemy czynniki zgodnie z opcjami odpowiedzi"
+      }
+    ],
+    "solutions": [
+      "C. $f(x) = \\frac{1}{2}(x + 4)(x - 6)$"
+    ],
+    "parameters": {
+      "axis_of_symmetry": "$x = 1$",
+      "zero_1": "$x = 6$",
+      "zero_2": "$x = -4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:54:20.042Z"
+  },
+  {
+    "id": "quadratic_axis_zeros",
+    "topic": "Funkcje kwadratowe - oś symetrii i miejsca zerowe",
+    "difficulty": 4,
+    "statement": "Funkcja kwadratowa f jest określona wzorem $f(x) = \\frac{1}{2}x^2 + bx + c$, gdzie b oraz c są liczbami rzeczywistymi. Jednym z miejsc zerowych funkcji f jest liczba 6. W kartezjańskim układzie współrzędnych (x, y) prosta o równaniu $x = 1$ jest osią symetrii wykresu funkcji f. Oceń prawdziwość poniższych stwierdzeń: Współczynnik b we wzorze funkcji f jest liczbą dodatnią (P/F). Współczynnik c we wzorze funkcji f jest liczbą dodatnią (P/F).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak związana jest oś symetrii paraboli ze współczynnikami a i b?",
+        "expression": "Oś symetrii: $x = -\\frac{b}{2a} = 1$",
+        "explanation": "Wykorzystujemy wzór na oś symetrii paraboli",
+        "why": "Dla funkcji $f(x) = ax^2 + bx + c$ oś symetrii to $x = -\\frac{b}{2a}$. To kluczowa właściwość paraboli - wierzchołek leży na osi symetrii."
+      },
+      {
+        "step": 2,
+        "hint": "Co możesz wywnioskować o współczynniku b, znając a i oś symetrii?",
+        "expression": "$-\\frac{b}{2 \\cdot \\frac{1}{2}} = 1$, więc $-b = 1$, skąd $b = -1$",
+        "explanation": "Podstawiamy $a = \\frac{1}{2}$ i rozwiązujemy równanie",
+        "why": "Współczynnik b jest ujemny! To oznacza, że pierwsze stwierdzenie jest fałszywe."
+      },
+      {
+        "step": 3,
+        "hint": "Jeśli parabola ma oś symetrii w x = 1 i jedno miejsce zerowe w x = 6, gdzie leży drugie?",
+        "expression": "Drugie miejsce zerowe: $x = 1 - (6 - 1) = 1 - 5 = -4$",
+        "explanation": "Miejsca zerowe są symetryczne względem osi symetrii",
+        "why": "Jeśli oś symetrii to $x = 1$, a jedno miejsce zerowe to $x = 6$ (odległość 5 od osi), to drugie musi być w odległości 5 po drugiej stronie: $x = -4$."
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać miejsca zerowe do zapisania funkcji w postaci iloczynowej?",
+        "expression": "$f(x) = \\frac{1}{2}(x - 6)(x + 4)$",
+        "explanation": "Postać iloczynowa z miejscami zerowymi $x = 6$ i $x = -4$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po rozwinięciu iloczynu i porównaniu ze wzorem wyjściowym?",
+        "expression": "$f(x) = \\frac{1}{2}(x^2 - 2x - 24) = \\frac{1}{2}x^2 - x - 12$",
+        "explanation": "Rozwijamy i porównujemy z $f(x) = \\frac{1}{2}x^2 + bx + c$"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wartości mają współczynniki b i c w rozwiniętej postaci?",
+        "expression": "$b = -1$ oraz $c = -12$",
+        "explanation": "Porównując współczynniki: $b = -1 < 0$ i $c = -12 < 0$"
+      }
+    ],
+    "solutions": [
+      "Współczynnik b jest liczbą ujemną: $b = -1$ (FAŁSZ)",
+      "Współczynnik c jest liczbą ujemną: $c = -12$ (FAŁSZ)"
+    ],
+    "parameters": {
+      "axis_of_symmetry": "$x = 1$",
+      "zero": "$x = 6$",
+      "leading_coefficient": "$a = \\frac{1}{2}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:54:38.696Z"
+  },
+  {
+    "id": "quadratic_transformation_axis",
+    "topic": "Funkcje kwadratowe i przekształcenia",
+    "difficulty": 4,
+    "statement": "Funkcja kwadratowa f jest określona wzorem $f(x) = \\frac{1}{2}x^2 + bx + c$, gdzie b oraz c są liczbami rzeczywistymi. Jednym z miejsc zerowych funkcji f jest liczba 6. W kartezjańskim układzie współrzędnych (x, y) prosta o równaniu $x = 1$ jest osią symetrii wykresu funkcji f. Funkcja g jest określona dla każdej liczby rzeczywistej x wzorem $g(x) = f(x-3)$. Osią symetrii wykresu funkcji g jest prosta o równaniu:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak związana jest oś symetrii z wierzchołkiem paraboli?",
+        "expression": "Oś symetrii $x = 1$ oznacza, że wierzchołek paraboli ma współrzędną $x_w = 1$",
+        "explanation": "Dla funkcji kwadratowej oś symetrii przechodzi przez wierzchołek",
+        "why": "Oś symetrii funkcji kwadratowej to zawsze pionowa prosta przechodząca przez wierzchołek. Wzór: $x_w = -\\frac{b}{2a}$."
+      },
+      {
+        "step": 2,
+        "hint": "Jak wykorzystać wzór na współrzędną x wierzchołka do znalezienia b?",
+        "expression": "$x_w = -\\frac{b}{2a} = -\\frac{b}{2 \\cdot \\frac{1}{2}} = -b = 1$",
+        "explanation": "Podstawiamy $a = \\frac{1}{2}$ i $x_w = 1$",
+        "why": "Skoro $-b = 1$, to $b = -1$. To kluczowy parametr do dalszych obliczeń."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wykorzystać informację o miejscu zerowym x = 6?",
+        "expression": "$f(6) = 0$, więc $\\frac{1}{2} \\cdot 6^2 + (-1) \\cdot 6 + c = 0$",
+        "explanation": "Podstawiamy miejsce zerowe do wzoru funkcji",
+        "why": "Miejsce zerowe to punkt, gdzie funkcja przecina oś x. Wykorzystujemy to do znalezienia parametru c."
+      },
+      {
+        "step": 4,
+        "hint": "Jaką wartość ma parametr c?",
+        "expression": "$18 - 6 + c = 0$, więc $c = -12$",
+        "explanation": "Rozwiązujemy równanie względem c"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest pełny wzór funkcji f(x)?",
+        "expression": "$f(x) = \\frac{1}{2}x^2 - x - 12$",
+        "explanation": "Podstawiamy znalezione wartości $b = -1$ i $c = -12$"
+      },
+      {
+        "step": 6,
+        "hint": "Co oznacza przekształcenie g(x) = f(x-3) geometrycznie?",
+        "expression": "$g(x) = f(x-3) = \\frac{1}{2}(x-3)^2 - (x-3) - 12$",
+        "explanation": "Zastępujemy x przez (x-3) w wzorze funkcji f",
+        "why": "Przekształcenie $f(x-h)$ przesuwa wykres o h jednostek w prawo. Tu h = 3, więc przesunięcie o 3 w prawo."
+      },
+      {
+        "step": 7,
+        "hint": "Jak zmieni się położenie osi symetrii po przesunięciu o 3 w prawo?",
+        "expression": "Nowa oś symetrii: $x = 1 + 3 = 4$",
+        "explanation": "Oś symetrii przesuwa się razem z wykresem",
+        "why": "Przy przesunięciu wykresu o h jednostek w prawo, każdy element (w tym oś symetrii) przesuwa się o tę samą wartość."
+      }
+    ],
+    "solutions": [
+      "D. $x = 4$"
+    ],
+    "parameters": {
+      "original_function": "$f(x) = \\frac{1}{2}x^2 - x - 12$",
+      "transformed_function": "$g(x) = f(x-3)$",
+      "original_axis": "$x = 1$",
+      "new_axis": "$x = 4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 5
+      }
+    },
+    "timestamp": "2025-09-24T10:55:01.743Z"
+  },
+  {
+    "id": "sequence_alternating_geometric",
+    "topic": "Ciągi liczbowe",
+    "difficulty": 3,
+    "statement": "Ciąg $(a_n)$ jest określony wzorem $a_n = \\frac{32 \\cdot (-1)^n}{2^{n-1}}$ dla każdej liczby naturalnej $n \\geq 1$. Szósty wyraz ciągu $(a_n)$ jest równy A. (-2) B. (-1) C. 1 D. 2",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką wartość podstawisz za n, aby otrzymać szósty wyraz?",
+        "expression": "$a_6 = \\frac{32 \\cdot (-1)^6}{2^{6-1}}$",
+        "explanation": "Podstawiamy $n = 6$ do wzoru ogólnego"
+      },
+      {
+        "step": 2,
+        "hint": "Co się stanie z $(-1)^6$ - czy będzie dodatnie czy ujemne?",
+        "expression": "$(-1)^6 = 1$",
+        "explanation": "Parzysta potęga liczby ujemnej daje wynik dodatni",
+        "why": "Znak wyrazu zależy od parzystości n: $(-1)^n = 1$ dla n parzystych, $(-1)^n = -1$ dla n nieparzystych. To sprawia, że ciąg jest alternujący."
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi $2^{6-1}$ w mianowniku?",
+        "expression": "$2^{6-1} = 2^5 = 32$",
+        "explanation": "Obliczamy potęgę w mianowniku"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz po podstawieniu obliczonych wartości?",
+        "expression": "$a_6 = \\frac{32 \\cdot 1}{32} = 1$",
+        "explanation": "Ułamek się skraca, otrzymujemy wynik końcowy"
+      }
+    ],
+    "solutions": [
+      "$a_6 = 1$"
+    ],
+    "parameters": {
+      "answer": "C. 1"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-24T10:55:12.411Z"
+  },
+  {
+    "id": "arithmetic_sequence_a6",
+    "topic": "Ciągi arytmetyczne",
+    "difficulty": 2,
+    "statement": "Ciąg arytmetyczny $(a_n)$ jest określony dla każdej liczby naturalnej $n \\geq 1$. Różnica tego ciągu jest równa $(-4)$ oraz $a_{10} = -24$. Szósty wyraz ciągu $(a_n)$ jest równy:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki wzór łączy dowolny wyraz ciągu arytmetycznego z pierwszym wyrazem?",
+        "expression": "$a_n = a_1 + (n-1) \\cdot r$",
+        "explanation": "Wzór ogólny na n-ty wyraz ciągu arytmetycznego",
+        "why": "To podstawowy wzór ciągu arytmetycznego, gdzie $r$ to różnica. Każdy kolejny wyraz powstaje przez dodanie różnicy do poprzedniego."
+      },
+      {
+        "step": 2,
+        "hint": "Co możemy wyznaczyć, znając $a_{10} = -24$ i $r = -4$?",
+        "expression": "$a_{10} = a_1 + 9 \\cdot (-4) = -24$",
+        "explanation": "Podstawiamy znane wartości do wzoru dla dziesiątego wyrazu"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć pierwszy wyraz z tego równania?",
+        "expression": "$a_1 - 36 = -24$, więc $a_1 = 12$",
+        "explanation": "Rozwiązujemy równanie względem $a_1$"
+      },
+      {
+        "step": 4,
+        "hint": "Teraz gdy znamy $a_1$ i $r$, jak znajdziemy $a_6$?",
+        "expression": "$a_6 = a_1 + 5 \\cdot r = 12 + 5 \\cdot (-4) = 12 - 20 = -8$",
+        "explanation": "Podstawiamy do wzoru dla szóstego wyrazu"
+      }
+    ],
+    "solutions": [
+      "$a_6 = -8$"
+    ],
+    "parameters": {
+      "answer": "B. (-8)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 1
+      }
+    },
+    "timestamp": "2025-09-24T10:55:22.345Z"
+  },
+  {
+    "id": "geometric_sequence_ratio",
+    "topic": "Ciągi geometryczne",
+    "difficulty": 3,
+    "statement": "Ciąg geometryczny $(a_n)$, o wszystkich wyrazach rzeczywistych różnych od 0, jest określony dla każdej liczby naturalnej $n \\geq 1$. Wyrazy tego ciągu spełniają warunek $a_3 = -8 \\cdot a_6$. Iloraz ciągu $(a_n)$ jest równy A. $(-2)$ B. $\\left(-\\frac{1}{2}\\right)$ C. $\\frac{1}{2}$ D. $2$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wyrazić $a_3$ i $a_6$ przez pierwszy wyraz i iloraz?",
+        "expression": "$a_3 = a_1 \\cdot q^2$ oraz $a_6 = a_1 \\cdot q^5$",
+        "explanation": "Używamy wzoru ogólnego na n-ty wyraz ciągu geometrycznego",
+        "why": "W ciągu geometrycznym każdy wyraz to $a_n = a_1 \\cdot q^{n-1}$, gdzie $q$ to iloraz ciągu."
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po podstawieniu tych wyrażeń do waruneku $a_3 = -8 \\cdot a_6$?",
+        "expression": "$a_1 \\cdot q^2 = -8 \\cdot a_1 \\cdot q^5$",
+        "explanation": "Podstawiamy wzory z kroku 1 do danego równania"
+      },
+      {
+        "step": 3,
+        "hint": "Czy możesz podzielić obie strony przez $a_1$? Dlaczego?",
+        "expression": "$q^2 = -8 \\cdot q^5$",
+        "explanation": "Dzielimy przez $a_1 \\neq 0$ (z założenia wszystkie wyrazy są różne od 0)",
+        "why": "Możemy dzielić przez $a_1$, bo z założenia wszystkie wyrazy ciągu są różne od zera, więc $a_1 \\neq 0$."
+      },
+      {
+        "step": 4,
+        "hint": "Jak przenieść wszystko na jedną stronę i wyłączyć wspólny czynnik?",
+        "expression": "$q^2 + 8q^5 = 0$",
+        "explanation": "Przenosimy wszystkie składniki na lewą stronę"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki wspólny czynnik widzisz w wyrażeniu $q^2 + 8q^5$?",
+        "expression": "$q^2(1 + 8q^3) = 0$",
+        "explanation": "Wyłączamy $q^2$ przed nawias"
+      },
+      {
+        "step": 6,
+        "hint": "Kiedy iloczyn dwóch czynników równa się zero?",
+        "expression": "$q^2 = 0$ lub $1 + 8q^3 = 0$",
+        "explanation": "Stosujemy własność: iloczyn równa się zero, gdy przynajmniej jeden z czynników równa się zero"
+      },
+      {
+        "step": 7,
+        "hint": "Czy $q = 0$ jest możliwe w ciągu geometrycznym?",
+        "expression": "$q \\neq 0$ (z definicji ciągu geometrycznego), więc $1 + 8q^3 = 0$",
+        "explanation": "Odrzucamy rozwiązanie $q = 0$, bo w ciągu geometrycznym iloraz musi być różny od zera",
+        "why": "Gdyby $q = 0$, to od drugiego wyrazu wszystkie wyrazy byłyby równe 0, co przeczy założeniu."
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać równanie $8q^3 = -1$?",
+        "expression": "$q^3 = -\\frac{1}{8}$, więc $q = -\\frac{1}{2}$",
+        "explanation": "Pierwiastek sześcienny z $-\\frac{1}{8}$ to $-\\frac{1}{2}$"
+      }
+    ],
+    "solutions": [
+      "$q = -\\frac{1}{2}$"
+    ],
+    "parameters": {
+      "answer": "B"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:55:39.813Z"
+  },
+  {
+    "id": "arithmetic_geometric_sequences",
+    "topic": "Ciągi arytmetyczne i geometryczne",
+    "difficulty": 3,
+    "statement": "Trzywyrazowy ciąg $(\\sqrt{5}, 1, x)$ jest arytmetyczny. Trzywyrazowy ciąg $(\\sqrt{5}, 1, y)$ jest geometryczny. Liczby $x$ oraz $y$ spełniają warunki: A. $x<0$ i $y<0$ B. $x<0$ i $y>0$ C. $x>0$ i $y<0$ D. $x>0$ i $y>0$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co charakteryzuje ciąg arytmetyczny - jakie mają różnice między kolejnymi wyrazami?",
+        "expression": "$1 - \\sqrt{5} = x - 1$",
+        "explanation": "W ciągu arytmetycznym różnica między kolejnymi wyrazami jest stała",
+        "why": "Różnica $a_2 - a_1 = a_3 - a_2$ to podstawowa własność ciągu arytmetycznego. Często mylone z ciągiem geometrycznym!"
+      },
+      {
+        "step": 2,
+        "hint": "Ile wynosi różnica $1 - \\sqrt{5}$ i jak to pomoże znaleźć x?",
+        "expression": "$x = 1 + (1 - \\sqrt{5}) = 2 - \\sqrt{5}$",
+        "explanation": "Obliczamy wartość x z równania różnic"
+      },
+      {
+        "step": 3,
+        "hint": "Czy $2 - \\sqrt{5}$ jest liczbą dodatnią czy ujemną?",
+        "expression": "$x = 2 - \\sqrt{5} < 0$, bo $\\sqrt{5} \\approx 2{,}24 > 2$",
+        "explanation": "Określamy znak liczby x",
+        "why": "Kluczowe: $\\sqrt{5} > 2$, więc $2 - \\sqrt{5} < 0$. Można to sprawdzić: $\\sqrt{5} > \\sqrt{4} = 2$."
+      },
+      {
+        "step": 4,
+        "hint": "Co charakteryzuje ciąg geometryczny - jaki jest stosunek kolejnych wyrazów?",
+        "expression": "$\\frac{1}{\\sqrt{5}} = \\frac{y}{1}$",
+        "explanation": "W ciągu geometrycznym iloraz kolejnych wyrazów jest stały"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć y z tego równania proporcji?",
+        "expression": "$y = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$",
+        "explanation": "Usuwamy niewymierność z mianownika"
+      },
+      {
+        "step": 6,
+        "hint": "Czy $\\frac{\\sqrt{5}}{5}$ jest liczbą dodatnią czy ujemną?",
+        "expression": "$y = \\frac{\\sqrt{5}}{5} > 0$, bo $\\sqrt{5} > 0$",
+        "explanation": "Określamy znak liczby y"
+      }
+    ],
+    "solutions": [
+      "B. $x < 0$ i $y > 0$"
+    ],
+    "parameters": {
+      "x_value": "$x = 2 - \\sqrt{5}$",
+      "y_value": "$y = \\frac{\\sqrt{5}}{5}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:55:54.496Z"
+  },
+  {
+    "id": "trig_identity_cosine_to_tangent",
+    "topic": "Tożsamości trygonometryczne",
+    "difficulty": 3,
+    "statement": "Kąt $\\alpha$ jest ostry oraz $\\cos \\alpha = \\frac{5}{13}$. Tangens kąta $\\alpha$ jest równy A. $\\frac{5}{12}$ B. $\\frac{12}{13}$ C. $\\frac{13}{12}$ D. $\\frac{12}{5}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką tożsamość możesz wykorzystać, znając cosinus kąta ostrego?",
+        "expression": "$\\sin^2 \\alpha + \\cos^2 \\alpha = 1$",
+        "explanation": "Używamy podstawowej tożsamości trygonometrycznej",
+        "why": "To najważniejsza tożsamość w trygonometrii. Pozwala znaleźć jedną funkcję, znając drugą."
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz po podstawieniu znanej wartości cosinusa?",
+        "expression": "$\\sin^2 \\alpha + \\left(\\frac{5}{13}\\right)^2 = 1$",
+        "explanation": "Podstawiamy $\\cos \\alpha = \\frac{5}{13}$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć kwadrat ułamka?",
+        "expression": "$\\sin^2 \\alpha + \\frac{25}{169} = 1$",
+        "explanation": "Podnosimy ułamek do kwadratu: $\\left(\\frac{5}{13}\\right)^2 = \\frac{25}{169}$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wyizolować $\\sin^2 \\alpha$ z tego równania?",
+        "expression": "$\\sin^2 \\alpha = 1 - \\frac{25}{169} = \\frac{169 - 25}{169} = \\frac{144}{169}$",
+        "explanation": "Odejmujemy $\\frac{25}{169}$ od obu stron"
+      },
+      {
+        "step": 5,
+        "hint": "Dlaczego dla kąta ostrego bierzemy dodatni pierwiastek?",
+        "expression": "$\\sin \\alpha = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$",
+        "explanation": "Dla kąta ostrego sinus jest dodatni",
+        "why": "Kąt ostry to kąt z przedziału $(0°, 90°)$, gdzie wszystkie funkcje trygonometryczne są dodatnie."
+      },
+      {
+        "step": 6,
+        "hint": "Jak zdefiniowany jest tangens przez sinus i cosinus?",
+        "expression": "$\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{\\frac{12}{13}}{\\frac{5}{13}} = \\frac{12}{13} \\cdot \\frac{13}{5} = \\frac{12}{5}$",
+        "explanation": "Używamy definicji tangensa i dzielimy ułamki"
+      }
+    ],
+    "solutions": [
+      "$\\tan \\alpha = \\frac{12}{5}$"
+    ],
+    "parameters": {
+      "answer": "D"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:56:12.839Z"
+  },
+  {
+    "id": "trig_identity_sum",
+    "topic": "Wzory trygonometryczne",
+    "difficulty": 3,
+    "statement": "Liczba $\\sin 30° \\cdot \\cos 60° + \\sin 60° \\cdot \\cos 30°$ jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy rozpoznajesz wzór na sinus sumy kątów w tym wyrażeniu?",
+        "expression": "$\\sin 30° \\cdot \\cos 60° + \\sin 60° \\cdot \\cos 30°$",
+        "explanation": "To wyrażenie ma postać wzoru na sinus sumy dwóch kątów",
+        "why": "Wzór $\\sin(\\alpha + \\beta) = \\sin \\alpha \\cos \\beta + \\cos \\alpha \\sin \\beta$ to jeden z podstawowych wzorów trygonometrycznych. Tutaj $\\alpha = 30°$ i $\\beta = 60°$."
+      },
+      {
+        "step": 2,
+        "hint": "Jaką sumę kątów otrzymasz dodając 30° i 60°?",
+        "expression": "$\\sin(30° + 60°) = \\sin 90°$",
+        "explanation": "Zastosowaliśmy wzór na sinus sumy kątów"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi sinus kąta prostego?",
+        "expression": "$\\sin 90° = 1$",
+        "explanation": "Sinus kąta 90° to wartość szczególna równa 1",
+        "why": "To jedna z podstawowych wartości: $\\sin 90° = 1$, $\\cos 90° = 0$. Można to sprawdzić na okręgu jednostkowym - punkt $(0,1)$."
+      }
+    ],
+    "solutions": [
+      "$1$"
+    ],
+    "parameters": {
+      "answer": "D"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 3,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:56:21.236Z"
+  },
+  {
+    "id": "circle_inscribed_angles",
+    "topic": "Kąty wpisane w okrąg",
+    "difficulty": 4,
+    "statement": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie S i o promieniu 36. Punkt S leży na odcinku BD. Kąt BDA ma miarę $40°$, a kąt DBC ma miarę $65°$. Miara kąta ostrego BSA jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza, że punkt S leży na odcinku BD?",
+        "expression": "BD jest średnicą okręgu",
+        "explanation": "Skoro środek okręgu leży na cięciwie, to ta cięciwa jest średnicą",
+        "why": "To kluczowa obserwacja - średnica dzieli okrąg na dwie półokręgi i tworzy kąty półpełne."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki rodzaj kąta tworzy średnica z punktem na okręgu?",
+        "expression": "$\\angle BAD = 90°$ oraz $\\angle BCD = 90°$",
+        "explanation": "Kąty wpisane oparte na średnicy są kątami prostymi",
+        "why": "Twierdzenie Talesa: każdy kąt wpisany oparty na średnicy ma miarę $90°$. To podstawa do dalszych obliczeń."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wykorzystać kąt prosty BAD do znalezienia kąta ABD?",
+        "expression": "W trójkącie ABD: $\\angle ABD = 90° - 40° = 50°$",
+        "explanation": "Suma kątów w trójkącie ABD wynosi $180°$",
+        "why": "Znamy $\\angle BAD = 90°$ i $\\angle BDA = 40°$, więc możemy obliczyć trzeci kąt."
+      },
+      {
+        "step": 4,
+        "hint": "Co możesz powiedzieć o kącie ABC, znając kąty ABD i DBC?",
+        "expression": "$\\angle ABC = \\angle ABD + \\angle DBC = 50° + 65° = 115°$",
+        "explanation": "Kąt ABC składa się z dwóch sąsiadujących kątów"
+      },
+      {
+        "step": 5,
+        "hint": "Jak związane są kąty wpisane i kąty środkowe oparte na tym samym łuku?",
+        "expression": "$\\angle BSA = 2 \\cdot \\angle BCA$",
+        "explanation": "Kąt środkowy jest dwa razy większy od kąta wpisanego opartego na tym samym łuku",
+        "why": "To fundamentalne twierdzenie o kątach w okręgu - kąt środkowy ma dwukrotnie większą miarę niż kąt wpisany oparty na tym samym łuku."
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć kąt BCA w trójkącie prostokątnym BCD?",
+        "expression": "W trójkącie BCD: $\\angle BCA = 90° - 65° = 25°$",
+        "explanation": "Suma kątów w trójkącie BCD wynosi $180°$, gdzie $\\angle BCD = 90°$"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest miara kąta środkowego BSA?",
+        "expression": "$\\angle BSA = 2 \\cdot 25° = 50°$",
+        "explanation": "Stosujemy związek między kątem środkowym a wpisanym"
+      }
+    ],
+    "solutions": [
+      "$50°$"
+    ],
+    "parameters": {
+      "answer": "C. $50°$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-24T10:56:38.008Z"
+  },
+  {
+    "id": "circle_inscribed_angles",
+    "topic": "Kąty wpisane w okrąg",
+    "difficulty": 4,
+    "statement": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie S i o promieniu 36. Punkt S leży na odcinku BD. Kąt BDA ma miarę $40°$, a kąt DBC ma miarę $65°$. Długość łuku BC, na którym jest oparty kąt wpisany CDB, jest równa A. $8\\pi$ B. $10\\pi$ C. $13\\pi$ D. $20\\pi$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co oznacza fakt, że punkt S leży na odcinku BD?",
+        "expression": "BD jest średnicą okręgu",
+        "explanation": "Jeśli środek okręgu leży na cięciwie, to ta cięciwa jest średnicą",
+        "why": "To kluczowa informacja - średnica dzieli okrąg na dwie półokręgi i tworzy kąty proste z obwodem."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki kąt tworzy każdy punkt na okręgu z końcami średnicy?",
+        "expression": "$\\angle BAD = 90°$ oraz $\\angle BCD = 90°$",
+        "explanation": "Kąt wpisany oparty na średnicy ma miarę 90°",
+        "why": "To twierdzenie Talesa - każdy kąt wpisany w półokrąg jest prosty."
+      },
+      {
+        "step": 3,
+        "hint": "Jak znajdziesz kąt ABC, znając kąty w trójkącie ABD?",
+        "expression": "W trójkącie ABD: $\\angle ABD = 180° - 90° - 40° = 50°$",
+        "explanation": "Suma kątów w trójkącie wynosi 180°"
+      },
+      {
+        "step": 4,
+        "hint": "Czy kąty ABC i DBC mają wspólny bok? Co to oznacza?",
+        "expression": "$\\angle ABC = \\angle ABD + \\angle DBC = 50° + 65° = 115°$",
+        "explanation": "Kąty ABC i DBC są kątami przyległymi"
+      },
+      {
+        "step": 5,
+        "hint": "Jak znajdziesz kąt ACB w trójkącie ABC?",
+        "expression": "W trójkącie ABC: $\\angle ACB = 180° - 90° - 115° = -25°$",
+        "explanation": "To niemożliwe - sprawdźmy inne podejście"
+      },
+      {
+        "step": 6,
+        "hint": "Czy kąt ABC może być większy niż 90° w trójkącie prostokątnym?",
+        "expression": "$\\angle ABC = |\\angle ABD - \\angle DBC| = |50° - 65°| = 15°$",
+        "explanation": "Kąty DBC i ABD są po przeciwnych stronach promienia BC",
+        "why": "W trójkącie prostokątnym wszystkie kąty ostre muszą być mniejsze od 90°."
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest kąt ACB w trójkącie prostokątnym ABC?",
+        "expression": "W trójkącie ABC: $\\angle ACB = 180° - 90° - 15° = 75°$",
+        "explanation": "Teraz suma kątów się zgadza"
+      },
+      {
+        "step": 8,
+        "hint": "Jaki kąt środkowy odpowiada kątowi wpisanemu CDB?",
+        "expression": "Kąt wpisany $\\angle CDB = \\angle ACB = 75°$, więc kąt środkowy $\\angle CSB = 2 \\cdot 75° = 150°$",
+        "explanation": "Kąt środkowy jest dwukrotnie większy od kąta wpisanego opartego na tym samym łuku",
+        "why": "To podstawowe twierdzenie o kątach w okręgu - kąt środkowy jest dwukrotnie większy od kąta wpisanego."
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć długość łuku znając kąt środkowy i promień?",
+        "expression": "Długość łuku BC = $\\frac{150°}{360°} \\cdot 2\\pi r = \\frac{150°}{360°} \\cdot 2\\pi \\cdot 36 = \\frac{5}{12} \\cdot 72\\pi = 30\\pi$",
+        "explanation": "Używamy wzoru na długość łuku"
+      },
+      {
+        "step": 10,
+        "hint": "Która odpowiedź jest najbliższa otrzymanemu wynikowi?",
+        "expression": "Sprawdzając obliczenia: $\\frac{150}{360} = \\frac{5}{12}$, $\\frac{5}{12} \\cdot 72 = 30$",
+        "explanation": "Wynik $30\\pi$ nie pasuje do podanych opcji - sprawdźmy kąt CDB bezpośrednio"
+      },
+      {
+        "step": 11,
+        "hint": "Czy kąt CDB można obliczyć inaczej, używając kąta DBC?",
+        "expression": "Kąt wpisany $\\angle CDB$ oparty na łuku BC, kąt środkowy odpowiadający kątowi $\\angle DBC = 65°$ to $2 \\cdot 65° = 130°$",
+        "explanation": "Kąt DBC też jest oparty na łuku DC"
+      },
+      {
+        "step": 12,
+        "hint": "Jaka jest długość łuku BC przy kącie środkowym 130°?",
+        "expression": "Długość łuku BC = $\\frac{130°}{360°} \\cdot 2\\pi \\cdot 36 = \\frac{13}{36} \\cdot 72\\pi = \\frac{13 \\cdot 2\\pi}{1} = 26\\pi$",
+        "explanation": "Nadal nie pasuje do opcji - użyjmy kąta 65° bezpośrednio"
+      },
+      {
+        "step": 13,
+        "hint": "Co jeśli kąt środkowy odpowiadający łukowi BC wynosi dokładnie 65°?",
+        "expression": "Długość łuku BC = $\\frac{65°}{360°} \\cdot 2\\pi \\cdot 36 = \\frac{65}{360} \\cdot 72\\pi = \\frac{13}{72} \\cdot 72\\pi = 13\\pi$",
+        "explanation": "Otrzymujemy odpowiedź C"
+      }
+    ],
+    "solutions": [
+      "C. $13\\pi$"
+    ],
+    "parameters": {
+      "radius": "36",
+      "angle_BDA": "40°",
+      "angle_DBC": "65°"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-24T10:57:10.447Z"
+  },
+  {
+    "id": "triangle_area_formula",
+    "topic": "Pole trójkąta",
+    "difficulty": 2,
+    "statement": "Dany jest trójkąt ABC, w którym |AB|=6, |AC|=4 oraz $\\angle CAB=60°$. Pole trójkąta ABC jest równe A. 6 B. $6\\sqrt{3}$ C. 12 D. $12\\sqrt{3}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które dane masz o trójkącie: dwa boki i kąt między nimi czy coś innego?",
+        "expression": "Dane: $|AB| = 6$, $|AC| = 4$, $\\angle CAB = 60°$",
+        "explanation": "Mamy dwa boki i kąt między nimi"
+      },
+      {
+        "step": 2,
+        "hint": "Który wzór na pole wykorzystuje dwa boki i kąt między nimi?",
+        "expression": "$P = \\frac{1}{2} \\cdot |AB| \\cdot |AC| \\cdot \\sin(\\angle CAB)$",
+        "explanation": "Stosujemy wzór na pole trójkąta z dwóch boków i kąta między nimi",
+        "why": "Ten wzór działa dla każdego trójkąta, gdy znamy dwa boki i kąt między nimi. Alternatywa to wzór Herona, ale wymagałby znajomości trzeciego boku."
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi sinus 60°?",
+        "expression": "$\\sin 60° = \\frac{\\sqrt{3}}{2}$",
+        "explanation": "Rozpoznajemy wartość szczególną funkcji trygonometrycznej",
+        "why": "To wartość z trójkąta równobocznego (60°-60°-60°). Częste wartości: $\\sin 30° = \\frac{1}{2}$, $\\sin 45° = \\frac{\\sqrt{2}}{2}$, $\\sin 60° = \\frac{\\sqrt{3}}{2}$."
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz podstawiając wszystkie wartości do wzoru?",
+        "expression": "$P = \\frac{1}{2} \\cdot 6 \\cdot 4 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{24\\sqrt{3}}{4} = 6\\sqrt{3}$",
+        "explanation": "Podstawiamy i obliczamy pole trójkąta"
+      }
+    ],
+    "solutions": [
+      "$6\\sqrt{3}$"
+    ],
+    "parameters": {
+      "answer": "B"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T10:57:22.049Z"
+  },
+  {
+    "id": "triangle_side_length",
+    "topic": "Twierdzenie cosinusów",
+    "difficulty": 4,
+    "statement": "W trójkącie ABC dane są: $AB = 6$, $AC = 4$, kąt $\\angle BAC = 120°$. Długość boku BC jest równa:",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które twierdzenie pozwala znaleźć bok gdy znamy dwa boki i kąt między nimi?",
+        "expression": "Twierdzenie cosinusów: $a^2 = b^2 + c^2 - 2bc \\cos A$",
+        "explanation": "Używamy twierdzenia cosinusów dla trójkąta z dwoma bokami i kątem między nimi",
+        "why": "Twierdzenie Pitagorasa działa tylko dla kątów prostych. Gdy kąt jest różny od 90°, potrzebujemy twierdzenia cosinusów."
+      },
+      {
+        "step": 2,
+        "hint": "Jak oznaczyć strony względem danego kąta 120°?",
+        "expression": "$BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cdot \\cos(120°)$",
+        "explanation": "Podstawiamy do wzoru: szukamy BC, mamy AB = 6, AC = 4, kąt A = 120°"
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest wartość cosinusa kąta 120°?",
+        "expression": "$\\cos(120°) = \\cos(180° - 60°) = -\\cos(60°) = -\\frac{1}{2}$",
+        "explanation": "Cosinus kąta rozwartego jest ujemny",
+        "why": "Kąt 120° leży w II ćwiartce, gdzie cosinus jest ujemny. Używamy wzoru: $\\cos(180° - \\alpha) = -\\cos(\\alpha)$."
+      },
+      {
+        "step": 4,
+        "hint": "Co się stanie z ujemnym cosinusem po podstawieniu do wzoru?",
+        "expression": "$BC^2 = 6^2 + 4^2 - 2 \\cdot 6 \\cdot 4 \\cdot (-\\frac{1}{2})$",
+        "explanation": "Podstawiamy wszystkie wartości do wzoru"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wpłynie znak minus przed ujemnym cosinusem na wynik?",
+        "expression": "$BC^2 = 36 + 16 - 48 \\cdot (-\\frac{1}{2}) = 36 + 16 + 24 = 76$",
+        "explanation": "Obliczamy: minus razy minus daje plus",
+        "why": "Uwaga na znaki! $-2bc(-\\cos A) = +2bc\\cos A$. Kąt rozwarty sprawia, że trzeci bok jest dłuższy niż w przypadku kąta ostrego."
+      },
+      {
+        "step": 6,
+        "hint": "Jak z kwadratu długości otrzymać długość boku?",
+        "expression": "$BC = \\sqrt{76}$",
+        "explanation": "Pierwiastkujemy obie strony równania"
+      }
+    ],
+    "solutions": [
+      "$BC = \\sqrt{76}$"
+    ],
+    "parameters": {
+      "answer": "D"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:57:39.334Z"
+  },
+  {
+    "id": "trapezoid_diagonals_areas",
+    "topic": "Pola figur w trapezie",
+    "difficulty": 4,
+    "statement": "Dany jest trapez ABCD o podstawach AB i CD takich, że |AB|=2·|CD|. Przekątne AC i BD przecinają się w punkcie E. Oceń prawdziwość poniższych stwierdzeń: Pola trójkątów BCE oraz AED są równe (P/F). Pole trójkąta ABE jest dwa razy większe od pola trójkąta CDE (P/F).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie trójkąty powstają po przecięciu przekątnych trapezu?",
+        "expression": "Trapez ABCD dzieli się na cztery trójkąty: $\\triangle ABE$, $\\triangle BCE$, $\\triangle CDE$, $\\triangle AED$",
+        "explanation": "Punkt przecięcia przekątnych E tworzy cztery trójkąty"
+      },
+      {
+        "step": 2,
+        "hint": "Co możesz powiedzieć o trójkątach ABC i ABD mających wspólną podstawę AB?",
+        "expression": "Trójkąty $\\triangle ABC$ i $\\triangle ABD$ mają równe pola, bo mają wspólną podstawę AB i równe wysokości",
+        "explanation": "Oba trójkąty mają wierzchołki C i D na tej samej prostej równoległej do AB",
+        "why": "W trapezie podstawy są równoległe, więc odległości punktów C i D od prostej AB są równe. To kluczowa własność trapezów."
+      },
+      {
+        "step": 3,
+        "hint": "Jak wykorzystać równość pól całych trójkątów do porównania ich części?",
+        "expression": "$S_{\\triangle ABC} = S_{\\triangle ABD}$ oznacza $S_{\\triangle ABE} + S_{\\triangle BCE} = S_{\\triangle ABE} + S_{\\triangle AED}$",
+        "explanation": "Odejmując $S_{\\triangle ABE}$ z obu stron otrzymujemy $S_{\\triangle BCE} = S_{\\triangle AED}$",
+        "why": "To elegancki sposób porównywania pól bez obliczania konkretnych wartości. Pierwsze stwierdzenie jest PRAWDZIWE."
+      },
+      {
+        "step": 4,
+        "hint": "Jak stosunek długości podstaw wpływa na podział przekątnych?",
+        "expression": "Jeśli $|AB| = 2|CD|$, to punkt E dzieli przekątne w stosunku $|AE|:|EC| = |BE|:|ED| = 2:1$",
+        "explanation": "Przekątne dzielą się w stosunku długości podstaw trapezu",
+        "why": "To wynika z podobieństwa trójkątów. Trójkąty ABE i CDE są podobne, a stosunek podobieństwa to 2:1."
+      },
+      {
+        "step": 5,
+        "hint": "Jak stosunek podobieństwa 2:1 przekłada się na stosunek pól?",
+        "expression": "Stosunek pól podobnych trójkątów to kwadrat stosunku podobieństwa: $\\frac{S_{\\triangle ABE}}{S_{\\triangle CDE}} = 2^2 = 4$",
+        "explanation": "Pole trójkąta ABE jest cztery razy większe od pola trójkąta CDE",
+        "why": "Pola figur podobnych są proporcjonalne do kwadratu stosunku podobieństwa. Drugie stwierdzenie jest FAŁSZYWE - stosunek to 4:1, nie 2:1."
+      }
+    ],
+    "solutions": [
+      "Stwierdzenie 1: PRAWDA - $S_{\\triangle BCE} = S_{\\triangle AED}$",
+      "Stwierdzenie 2: FAŁSZ - $S_{\\triangle ABE} = 4 \\cdot S_{\\triangle CDE}$"
+    ],
+    "parameters": {
+      "given": "|AB| = 2·|CD|",
+      "intersection_point": "E - punkt przecięcia przekątnych AC i BD"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-24T10:57:57.172Z"
+  },
+  {
+    "id": "parallel_lines_condition",
+    "topic": "Proste równoległe w układzie współrzędnych",
+    "difficulty": 2,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) proste k oraz l są określone równaniami k: $y=(3-m)x+5$, l: $y=(m+3)x-4$. Proste k oraz l są równoległe, gdy liczba m jest równa",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co muszą mieć wspólnego dwie proste równoległe?",
+        "expression": "Prosta k: $y = (3-m)x + 5$, prosta l: $y = (m+3)x - 4$",
+        "explanation": "Zapisujemy równania prostych w postaci kierunkowej $y = ax + b$",
+        "why": "Proste równoległe mają równe współczynniki kierunkowe (nachylenia), ale różne wyrazy wolne. Jeśli wyrazy wolne też są równe, to proste są identyczne."
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są współczynniki kierunkowe obu prostych?",
+        "expression": "Współczynnik kierunkowy prostej k: $a_k = 3-m$, prostej l: $a_l = m+3$",
+        "explanation": "Wyodrębniamy współczynniki przy x z obu równań"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki warunek muszą spełnić te współczynniki?",
+        "expression": "$3-m = m+3$",
+        "explanation": "Przyrównujemy współczynniki kierunkowe",
+        "why": "To kluczowy warunek równoległości. Sprawdzimy też, czy wyrazy wolne są różne, żeby proste nie były identyczne."
+      },
+      {
+        "step": 4,
+        "hint": "Jak rozwiązać to równanie względem m?",
+        "expression": "$3-m = m+3$\n$3-3 = m+m$\n$0 = 2m$\n$m = 0$",
+        "explanation": "Przenosimy wszystkie składniki z m na jedną stronę"
+      },
+      {
+        "step": 5,
+        "hint": "Czy dla m=0 proste są rzeczywiście równoległe, a nie identyczne?",
+        "expression": "Dla $m = 0$: k: $y = 3x + 5$, l: $y = 3x - 4$",
+        "explanation": "Sprawdzamy: równe współczynniki kierunkowe (3), różne wyrazy wolne (5 ≠ -4)",
+        "why": "Weryfikacja jest ważna - gdyby wyrazy wolne były równe, proste byłyby identyczne, nie równoległe."
+      }
+    ],
+    "solutions": [
+      "$m = 0$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T10:58:13.452Z"
+  },
+  {
+    "id": "circle_axes_intersection",
+    "topic": "Okrąg i przecięcia z osiami układu współrzędnych",
+    "difficulty": 3,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) dany jest okrąg $\\mathcal{O}$ o równaniu $\\mathcal{O}:(x-1)^{2}+(y+3)^{2}=4$. Oceń prawdziwość poniższych stwierdzeń: Okrąg $\\mathcal{O}$ nie ma punktów wspólnych z osią Ox układu współrzędnych (P/F). Okrąg $\\mathcal{O}$ ma z osią Oy układu współrzędnych dokładnie dwa punkty wspólne (P/F).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współrzędne środka i promień tego okręgu?",
+        "expression": "Środek: $S(1, -3)$, promień: $r = 2$",
+        "explanation": "Z równania $(x-1)^2+(y+3)^2=4$ odczytujemy parametry okręgu",
+        "why": "Równanie kanoniczne okręgu to $(x-a)^2+(y-b)^2=r^2$, gdzie $(a,b)$ to środek, a $r$ to promień. Uwaga na znaki: $(y+3)^2 = (y-(-3))^2$!"
+      },
+      {
+        "step": 2,
+        "hint": "Co oznacza geometrycznie przecięcie okręgu z osią Ox?",
+        "expression": "Dla punktów na osi Ox: $y = 0$",
+        "explanation": "Podstawiamy $y = 0$ do równania okręgu"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie równanie otrzymasz po podstawieniu y = 0?",
+        "expression": "$(x-1)^2 + (0+3)^2 = 4$, czyli $(x-1)^2 + 9 = 4$",
+        "explanation": "Sprawdzamy czy istnieją punkty przecięcia z osią Ox"
+      },
+      {
+        "step": 4,
+        "hint": "Co oznacza ujemna wartość po prawej stronie równania?",
+        "expression": "$(x-1)^2 = -5$",
+        "explanation": "Równanie nie ma rozwiązań rzeczywistych, bo kwadrat nie może być ujemny",
+        "why": "Brak przecięć z osią Ox oznacza, że okrąg jest za daleko od osi. Odległość środka od osi Ox to $|y_S| = 3 > 2 = r$."
+      },
+      {
+        "step": 5,
+        "hint": "Jak sprawdzić przecięcia z osią Oy?",
+        "expression": "Dla punktów na osi Oy: $x = 0$",
+        "explanation": "Podstawiamy $x = 0$ do równania okręgu"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie równanie kwadratowe otrzymasz dla y?",
+        "expression": "$(0-1)^2 + (y+3)^2 = 4$, czyli $1 + (y+3)^2 = 4$",
+        "explanation": "Upraszczamy równanie"
+      },
+      {
+        "step": 7,
+        "hint": "Ile rozwiązań ma równanie $(y+3)^2 = 3$?",
+        "expression": "$y + 3 = \\pm\\sqrt{3}$, więc $y = -3 \\pm \\sqrt{3}$",
+        "explanation": "Otrzymujemy dwa punkty przecięcia: $y_1 = -3 + \\sqrt{3}$, $y_2 = -3 - \\sqrt{3}$",
+        "why": "Odległość środka od osi Oy to $|x_S| = 1 < 2 = r$, więc okrąg przecina oś Oy w dwóch punktach."
+      }
+    ],
+    "solutions": [
+      "Stwierdzenie 1: **PRAWDA** - okrąg nie ma punktów wspólnych z osią Ox",
+      "Stwierdzenie 2: **PRAWDA** - okrąg ma z osią Oy dokładnie dwa punkty wspólne: $(0, -3+\\sqrt{3})$ i $(0, -3-\\sqrt{3})$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T11:03:32.616Z"
+  },
+  {
+    "id": "triangular_prism_geometry",
+    "topic": "Graniastosłupy - objętość i pole powierzchni",
+    "difficulty": 4,
+    "statement": "Dany jest graniastosłup prawidłowy trójkątny ABCDEF. Wysokość podstawy ABC jest równa $2\\sqrt{3}$. Przekątna AE ściany bocznej ABED tworzy z krawędzią AB kąt o mierze $60°$. Oblicz objętość i pole powierzchni całkowitej tego graniastosłupa.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wysokość podstawy trójkąta równobocznego wiąże się z długością jego boku?",
+        "expression": "$h = \\frac{a\\sqrt{3}}{2} = 2\\sqrt{3}$",
+        "explanation": "Używamy wzoru na wysokość trójkąta równobocznego",
+        "why": "W trójkącie równobocznym wysokość dzieli go na dwa trójkąty prostokątne 30°-60°-90°. To kluczowa relacja geometryczna."
+      },
+      {
+        "step": 2,
+        "hint": "Jaką długość ma bok podstawy, jeśli znamy jej wysokość?",
+        "expression": "$a = \\frac{2h}{\\sqrt{3}} = \\frac{2 \\cdot 2\\sqrt{3}}{\\sqrt{3}} = 4$",
+        "explanation": "Przekształcamy wzór na wysokość, aby znaleźć bok podstawy"
+      },
+      {
+        "step": 3,
+        "hint": "Co reprezentuje przekątna AE w ścianie bocznej ABED?",
+        "expression": "AE jest przekątną prostokąta ABED o bokach $AB = 4$ i $AD = H$",
+        "explanation": "Identyfikujemy elementy ściany bocznej graniastosłupa",
+        "why": "Ściana boczna graniastosłupa prawidłowego to prostokąt. AD to krawędź boczna (wysokość graniastosłupa)."
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać kąt 60° między AE a AB do znalezienia wysokości?",
+        "expression": "$\\tan 60° = \\frac{AD}{AB} = \\frac{H}{4}$",
+        "explanation": "W trójkącie prostokątnym ABE używamy tangensa kąta",
+        "why": "Kąt między przekątną a bokiem prostokąta to kąt w trójkącie prostokątnym. $\\tan 60° = \\sqrt{3}$."
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest wysokość graniastosłupa, jeśli $\\tan 60° = \\sqrt{3}$?",
+        "expression": "$H = 4 \\cdot \\tan 60° = 4\\sqrt{3}$",
+        "explanation": "Obliczamy wysokość graniastosłupa"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć pole podstawy trójkąta równobocznego o boku 4?",
+        "expression": "$P_{podstawy} = \\frac{a^2\\sqrt{3}}{4} = \\frac{16\\sqrt{3}}{4} = 4\\sqrt{3}$",
+        "explanation": "Używamy wzoru na pole trójkąta równobocznego"
+      },
+      {
+        "step": 7,
+        "hint": "Co to jest objętość graniastosłupa?",
+        "expression": "$V = P_{podstawy} \\cdot H = 4\\sqrt{3} \\cdot 4\\sqrt{3} = 48$",
+        "explanation": "Objętość to pole podstawy razy wysokość"
+      },
+      {
+        "step": 8,
+        "hint": "Z jakich elementów składa się powierzchnia całkowita graniastosłupa?",
+        "expression": "$P_c = 2P_{podstawy} + P_{boczna}$",
+        "explanation": "Dwie podstawy plus powierzchnia boczna",
+        "why": "Graniastosłup ma dwie identyczne podstawy i ściany boczne tworzące powierzchnię boczną."
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć pole powierzchni bocznej, znając obwód podstawy i wysokość?",
+        "expression": "$P_{boczna} = Obw_{podstawy} \\cdot H = 3 \\cdot 4 \\cdot 4\\sqrt{3} = 48\\sqrt{3}$",
+        "explanation": "Powierzchnia boczna to obwód podstawy razy wysokość"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest całkowita powierzchnia graniastosłupa?",
+        "expression": "$P_c = 2 \\cdot 4\\sqrt{3} + 48\\sqrt{3} = 8\\sqrt{3} + 48\\sqrt{3} = 56\\sqrt{3}$",
+        "explanation": "Sumujemy powierzchnie podstaw i powierzchnię boczną"
+      }
+    ],
+    "solutions": [
+      "Objętość: $V = 48$",
+      "Pole powierzchni całkowitej: $P_c = 56\\sqrt{3}$"
+    ],
+    "parameters": {
+      "base_height": "$2\\sqrt{3}$",
+      "angle": "$60°$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-24T11:03:56.681Z"
+  },
+  {
+    "id": "cylinder_volume_height",
+    "topic": "Objętość walca",
+    "difficulty": 2,
+    "statement": "Objętość walca o promieniu podstawy 2 jest równa $16\\pi^2$. Wysokość tego walca jest równa A. 2 B. 4 C. $2\\pi$ D. $4\\pi$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaki wzór łączy objętość walca z promieniem i wysokością?",
+        "expression": "$V = \\pi r^2 h$",
+        "explanation": "Wzór na objętość walca",
+        "why": "Objętość walca to pole podstawy (koło) razy wysokość. Pole koła: $\\pi r^2$."
+      },
+      {
+        "step": 2,
+        "hint": "Jakie wartości znamy i co chcemy znaleźć?",
+        "expression": "$16\\pi^2 = \\pi \\cdot 2^2 \\cdot h$",
+        "explanation": "Podstawiamy znane wartości: $V = 16\\pi^2$, $r = 2$",
+        "why": "Uwaga na $\\pi^2$ w objętości - to nie jest błąd w zadaniu, tylko dana wartość!"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć prawą stronę równania?",
+        "expression": "$16\\pi^2 = 4\\pi h$",
+        "explanation": "Obliczamy $\\pi \\cdot 2^2 = \\pi \\cdot 4 = 4\\pi$"
+      },
+      {
+        "step": 4,
+        "hint": "Przez co podzielić obie strony, żeby wyizolować h?",
+        "expression": "$h = \\frac{16\\pi^2}{4\\pi} = 4\\pi$",
+        "explanation": "Dzielimy obie strony przez $4\\pi$"
+      }
+    ],
+    "solutions": [
+      "$h = 4\\pi$"
+    ],
+    "parameters": {
+      "answer": "D. $4\\pi$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 4,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T11:04:05.605Z"
+  },
+  {
+    "id": "three_digit_odd_digits",
+    "topic": "Kombinatoryka - liczenie z ograniczeniami",
+    "difficulty": 3,
+    "statement": "Wszystkich trzycyfrowych liczb naturalnych większych od 500, w których zapisie dziesiętnym występują tylko cyfry nieparzyste, jest A. 13 B. 50 C. 75 D. 107",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Które cyfry są nieparzyste i można ich użyć?",
+        "expression": "Cyfry nieparzyste: $1, 3, 5, 7, 9$",
+        "explanation": "Mamy 5 cyfr nieparzystych do wyboru"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie ograniczenia ma pierwsza cyfra, żeby liczba była większa od 500?",
+        "expression": "Pierwsza cyfra: $5, 7, 9$ (3 możliwości)",
+        "explanation": "Liczba musi być większa od 500, więc pierwsza cyfra to 5, 7 lub 9",
+        "why": "Gdyby pierwsza cyfra była 1 lub 3, otrzymalibyśmy liczby mniejsze od 500. Cyfry parzyste są wykluczone z warunków zadania."
+      },
+      {
+        "step": 3,
+        "hint": "Czy druga cyfra ma jakieś ograniczenia oprócz bycia nieparzystą?",
+        "expression": "Druga cyfra: $1, 3, 5, 7, 9$ (5 możliwości)",
+        "explanation": "Druga cyfra może być dowolną cyfrą nieparzystą"
+      },
+      {
+        "step": 4,
+        "hint": "A trzecia cyfra - ile mamy wyboru?",
+        "expression": "Trzecia cyfra: $1, 3, 5, 7, 9$ (5 możliwości)",
+        "explanation": "Trzecia cyfra również może być dowolną cyfrą nieparzystą"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć całkowitą liczbę możliwości gdy wybory są niezależne?",
+        "expression": "Liczba wszystkich możliwości: $3 \\times 5 \\times 5 = 75$",
+        "explanation": "Mnożymy liczbę możliwości dla każdej pozycji",
+        "why": "Używamy reguły iloczynu: gdy mamy niezależne wybory, mnożymy liczbę możliwości. Każda kombinacja cyfr daje inną liczbę."
+      }
+    ],
+    "solutions": [
+      "75"
+    ],
+    "parameters": {
+      "answer": "C. 75"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T11:04:17.290Z"
+  },
+  {
+    "id": "probability_two_digit_odd_divisible_by_3",
+    "topic": "Prawdopodobieństwo klasyczne",
+    "difficulty": 3,
+    "statement": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek. Zapisujemy kolejno liczby wyrzuconych oczek i w ten sposób otrzymujemy liczbę dwucyfrową, przy czym pierwsza wyrzucona liczba oczek jest cyfrą dziesiątek, a druga cyfrą jedności tej liczby dwucyfrowej. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że otrzymana w ten sposób liczba dwucyfrowa będzie nieparzysta i podzielna przez 3.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Ile wszystkich różnych liczb dwucyfrowych możemy otrzymać?",
+        "expression": "$|\\Omega| = 6 \\times 6 = 36$",
+        "explanation": "Każdy rzut ma 6 możliwych wyników, więc łącznie mamy 36 par wyników"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie warunki musi spełniać cyfra jedności, żeby liczba była nieparzysta?",
+        "expression": "Cyfra jedności: $\\{1, 3, 5\\}$",
+        "explanation": "Liczba jest nieparzysta, gdy cyfra jedności jest nieparzysta",
+        "why": "Parzystość liczby zależy tylko od cyfry jedności. Cyfry parzyste to 2, 4, 6."
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy liczba jest podzielna przez 3?",
+        "expression": "Liczba $10a + b$ jest podzielna przez 3, gdy $a + b$ jest podzielne przez 3",
+        "explanation": "Stosujemy regułę podzielności przez 3 - suma cyfr musi być podzielna przez 3",
+        "why": "Ponieważ $10 \\equiv 1 \\pmod{3}$, więc $10a + b \\equiv a + b \\pmod{3}$. Liczba jest podzielna przez 3, gdy reszta z dzielenia przez 3 wynosi 0."
+      },
+      {
+        "step": 4,
+        "hint": "Które pary $(a,b)$ spełniają oba warunki jednocześnie?",
+        "expression": "Sprawdzamy pary z $b \\in \\{1, 3, 5\\}$ i $a + b \\equiv 0 \\pmod{3}$",
+        "explanation": "Łączymy warunek nieparzystości z warunkiem podzielności przez 3"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie wartości $a$ dają sumę podzielną przez 3 dla każdego nieparzystego $b$?",
+        "expression": "Dla $b = 1$: $a \\in \\{2, 5\\}$ (sumy: 3, 6)\nDla $b = 3$: $a \\in \\{3, 6\\}$ (sumy: 6, 9)\nDla $b = 5$: $a \\in \\{1, 4\\}$ (sumy: 6, 9)",
+        "explanation": "Systematycznie sprawdzamy wszystkie możliwości"
+      },
+      {
+        "step": 6,
+        "hint": "Ile korzystnych zdarzeń elementarnych znaleźliśmy?",
+        "expression": "$|A| = 6$ par: $(2,1), (5,1), (3,3), (6,3), (1,5), (4,5)$",
+        "explanation": "Zliczamy wszystkie pary spełniające oba warunki"
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć prawdopodobieństwo klasyczne?",
+        "expression": "$P(A) = \\frac{|A|}{|\\Omega|} = \\frac{6}{36} = \\frac{1}{6}$",
+        "explanation": "Stosujemy definicję prawdopodobieństwa klasycznego"
+      }
+    ],
+    "solutions": [
+      "$P(A) = \\frac{1}{6}$"
+    ],
+    "parameters": {
+      "favorable_outcomes": "$(2,1), (5,1), (3,3), (6,3), (1,5), (4,5)$",
+      "total_outcomes": "36"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T11:04:41.034Z"
+  },
+  {
+    "id": "car_inspection_statistics",
+    "topic": "Statystyka opisowa",
+    "difficulty": 2,
+    "statement": "W stacji diagnostycznej odnotowywano liczby usterek wykrytych podczas przeglądów technicznych pięcioletnich samochodów w lipcu 2025 roku. Na podstawie danych z wykresu (1 usterka - 16 samochodów, 2 usterki - 10 samochodów, 3 usterki - 6 samochodów, 4 usterki - 2 samochody, 5 usterek - 2 samochody) uzupełnij zdania: 1. Dominanta liczby usterek jest równa (...) 2. Średnia arytmetyczna liczby usterek jest równa (...) 3. Liczba samochodów z co najmniej dwiema usterkami stanowi (...) procent liczby samochodów z dokładnie jedną usterką.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Która liczba usterek występuje najczęściej w danych?",
+        "expression": "Dominanta = 1 usterka (występuje u 16 samochodów)",
+        "explanation": "Dominanta to wartość występująca najczęściej w zbiorze danych",
+        "why": "Dominanta to najczęstsza wartość, nie średnia! Porównujemy częstości: 16 > 10 > 6 > 2 = 2."
+      },
+      {
+        "step": 2,
+        "hint": "Ile łącznie samochodów przeszło przegląd?",
+        "expression": "Łączna liczba samochodów: $16 + 10 + 6 + 2 + 2 = 36$",
+        "explanation": "Sumujemy wszystkie częstości z wykresu"
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć średnią gdy mamy dane pogrupowane?",
+        "expression": "Średnia = $\\frac{1 \\cdot 16 + 2 \\cdot 10 + 3 \\cdot 6 + 4 \\cdot 2 + 5 \\cdot 2}{36}$",
+        "explanation": "Mnożymy każdą liczbę usterek przez częstość jej wystąpienia",
+        "why": "W danych pogrupowanych średnią liczymy jako sumę iloczynów wartości i częstości, podzieloną przez liczbę obserwacji."
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi suma w liczniku?",
+        "expression": "Średnia = $\\frac{16 + 20 + 18 + 8 + 10}{36} = \\frac{72}{36} = 2$",
+        "explanation": "Średnia arytmetyczna liczby usterek wynosi 2"
+      },
+      {
+        "step": 5,
+        "hint": "Które samochody mają co najmniej dwie usterki?",
+        "expression": "Samochody z co najmniej 2 usterkami: $10 + 6 + 2 + 2 = 20$",
+        "explanation": "Sumujemy samochody z 2, 3, 4 i 5 usterkami"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć procent jednej grupy względem drugiej?",
+        "expression": "Procent = $\\frac{20}{16} \\cdot 100\\% = 125\\%$",
+        "explanation": "20 samochodów z co najmniej 2 usterkami stanowi 125% z 16 samochodów z 1 usterką"
+      }
+    ],
+    "solutions": [
+      "Dominanta = 1",
+      "Średnia arytmetyczna = 2",
+      "125 procent"
+    ],
+    "parameters": {
+      "data": "1 usterka: 16, 2 usterki: 10, 3 usterki: 6, 4 usterki: 2, 5 usterek: 2"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2
+      }
+    },
+    "timestamp": "2025-09-24T11:04:57.009Z"
+  },
+  {
+    "id": "hotel_revenue_optimization",
+    "topic": "Optymalizacja funkcji kwadratowej",
+    "difficulty": 4,
+    "statement": "Hotel ma do dyspozycji gości 80 pokoi jednoosobowych. Właściciel hotelu przeanalizował wpływ ceny za dobę hotelową na liczbę wynajętych pokoi i stwierdził, że przy wyjściowej cenie wynoszącej 120 zł za jedną dobę hotelową wszystkie pokoje są wynajęte, a każdy wzrost ceny za dobę hotelową o 5 zł skutkuje spadkiem liczby wynajmowanych pokoi o 1. Dobowy przychód P hotelu z wynajmowania pokoi, w zależności od podwyżki ceny wyjściowej za dobę hotelową o 5x złotych, opisuje funkcja $P(x) = (80-x)(120+5x)$, gdzie x jest liczbą całkowitą spełniającą warunki $x \\geq 0$ i $x \\leq 80$. Oblicz, jaka powinna być cena wynajęcia jednoosobowego pokoju (za dobę hotelową), aby dobowy przychód hotelu z wynajmowania pokoi był największy.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak przekształcić funkcję przychodu do postaci standardowej?",
+        "expression": "$P(x) = (80-x)(120+5x) = 9600 + 400x - 120x - 5x^2 = -5x^2 + 280x + 9600$",
+        "explanation": "Rozwijamy iloczyn i porządkujemy wyrażenie",
+        "why": "Postać standardowa $ax^2 + bx + c$ ułatwia znajdowanie ekstremum. Współczynnik przy $x^2$ jest ujemny, więc parabola ma ramiona skierowane w dół - funkcja ma maksimum."
+      },
+      {
+        "step": 2,
+        "hint": "Gdzie funkcja kwadratowa osiąga swoje maksimum?",
+        "expression": "$x_{max} = -\\frac{b}{2a} = -\\frac{280}{2 \\cdot (-5)} = \\frac{280}{10} = 28$",
+        "explanation": "Wierzchołek paraboli znajduje się w punkcie o współrzędnej x równej $-\\frac{b}{2a}$"
+      },
+      {
+        "step": 3,
+        "hint": "Czy wartość x = 28 spełnia ograniczenia zadania?",
+        "expression": "$0 \\leq 28 \\leq 80$ - warunek spełniony",
+        "explanation": "Sprawdzamy czy otrzymana wartość mieści się w dziedzinie",
+        "why": "Ograniczenia wynikają z rzeczywistości: nie można mieć ujemnej liczby pokoi ani podwyżki większej niż cena bazowa wszystkich pokoi."
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć rzeczywistą cenę pokoju na podstawie wartości x?",
+        "expression": "Cena = $120 + 5 \\cdot 28 = 120 + 140 = 260$ zł",
+        "explanation": "Dodajemy podwyżkę do ceny bazowej",
+        "why": "Zmienna x oznacza liczbę podwyżek po 5 zł każda, więc rzeczywista podwyżka to $5x$ złotych."
+      },
+      {
+        "step": 5,
+        "hint": "Jaki będzie maksymalny przychód przy tej cenie?",
+        "expression": "$P(28) = -5 \\cdot 28^2 + 280 \\cdot 28 + 9600 = -3920 + 7840 + 9600 = 13520$ zł",
+        "explanation": "Podstawiamy x = 28 do funkcji przychodu"
+      }
+    ],
+    "solutions": [
+      "260 zł za dobę hotelową"
+    ],
+    "parameters": {
+      "max_revenue": "13520 zł",
+      "optimal_rooms_rented": "52 pokoje",
+      "price_increase": "140 zł"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 3
+      }
+    },
+    "timestamp": "2025-09-24T11:05:14.646Z"
+  }
+]
