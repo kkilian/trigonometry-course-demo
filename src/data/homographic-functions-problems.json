@@ -2935,644 +2935,514 @@
     "module": "homographic-functions"
   },
   {
-    "id": "homographic_composition",
-    "topic": "Funkcje homograficzne - złożenie",
-    "difficulty": 5,
-    "statement": "Wykaż, że jeśli funkcje $f(x) = \\frac{a_1x + b_1}{c_1x + d_1}$ i $g(x) = \\frac{a_2x + b_2}{c_2x + d_2}$ są różnowartościowe, to funkcja złożona $(f \\circ g)(x)$ jest również funkcją homograficzną.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Co oznacza zapis $(f \\circ g)(x)$ i jak go obliczyć?",
-        "expression": "$(f \\circ g)(x) = f(g(x))$",
-        "explanation": "Funkcja złożona oznacza podstawienie g(x) w miejsce x w funkcji f"
-      },
-      {
-        "step": 2,
-        "hint": "Co otrzymasz podstawiając $g(x) = \\frac{a_2x + b_2}{c_2x + d_2}$ w miejsce x do funkcji f?",
-        "expression": "$f(g(x)) = \\frac{a_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + b_1}{c_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + d_1}$",
-        "explanation": "Podstawiamy wyrażenie g(x) wszędzie gdzie w f występuje zmienna",
-        "why": "To kluczowy krok - musimy być bardzo ostrożni z podstawieniem ułamka do ułamka. Każde x w funkcji f zastępujemy całym wyrażeniem g(x)."
-      },
-      {
-        "step": 3,
-        "hint": "Jak uprościć licznik tego złożonego ułamka?",
-        "expression": "Licznik: $a_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + b_1 = \\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_2x + d_2}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika",
-        "why": "Aby dodać ułamek do liczby całkowitej, musimy liczbę całkowitą zapisać jako ułamek o tym samym mianowniku."
-      },
-      {
-        "step": 4,
-        "hint": "Jak uprościć mianownik tego złożonego ułamka?",
-        "expression": "Mianownik: $c_1 \\cdot \\frac{a_2x + b_2}{c_2x + d_2} + d_1 = \\frac{c_1(a_2x + b_2) + d_1(c_2x + d_2)}{c_2x + d_2}$",
-        "explanation": "Analogicznie sprowadzamy mianownik do wspólnego mianownika"
-      },
-      {
-        "step": 5,
-        "hint": "Co się stanie gdy podzielisz ułamek przez ułamek o tym samym mianowniku?",
-        "expression": "$f(g(x)) = \\frac{\\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_2x + d_2}}{\\frac{c_1(a_2x + b_2) + d_1(c_2x + d_2)}{c_2x + d_2}} = \\frac{a_1(a_2x + b_2) + b_1(c_2x + d_2)}{c_1(a_2x + b_2) + d_1(c_2x + d_2)}$",
-        "explanation": "Mianowniki $(c_2x + d_2)$ się skracają",
-        "why": "Dzielenie ułamków: $\\frac{\\frac{A}{C}}{\\frac{B}{C}} = \\frac{A}{B}$. To uprości nam znacznie dalsze obliczenia."
-      },
-      {
-        "step": 6,
-        "hint": "Jak rozwinąć nawiasy w liczniku i mianowniku?",
-        "expression": "Licznik: $a_1a_2x + a_1b_2 + b_1c_2x + b_1d_2 = (a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)$",
-        "explanation": "Grupujemy wyrazy z x i wyrazy wolne w liczniku"
-      },
-      {
-        "step": 7,
-        "hint": "Jaka będzie postać mianownika po rozwinięciu nawiasów?",
-        "expression": "Mianownik: $c_1a_2x + c_1b_2 + d_1c_2x + d_1d_2 = (c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)$",
-        "explanation": "Analogicznie grupujemy wyrazy w mianowniku"
-      },
-      {
-        "step": 8,
-        "hint": "Czy otrzymana funkcja ma postać homograficzną $\\frac{Ax + B}{Cx + D}$?",
-        "expression": "$(f \\circ g)(x) = \\frac{(a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)}{(c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)}$",
-        "explanation": "To jest funkcja homograficzna postaci $\\frac{Ax + B}{Cx + D}$",
-        "why": "Funkcja homograficzna to każda funkcja postaci $\\frac{ax+b}{cx+d}$ gdzie $ad-bc \\neq 0$. Nasze założenie o różnowartościowości f i g gwarantuje, że złożenie też będzie różnowartościowe."
-      }
-    ],
-    "solutions": [
-      "$(f \\circ g)(x) = \\frac{(a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)}{(c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)}$",
-      "gdzie $A = a_1a_2 + b_1c_2$, $B = a_1b_2 + b_1d_2$, $C = c_1a_2 + d_1c_2$, $D = c_1b_2 + d_1d_2$"
-    ],
-    "parameters": {
-      "conditions": "f i g są różnowartościowe (czyli $a_1d_1 - b_1c_1 \\neq 0$ i $a_2d_2 - b_2c_2 \\neq 0$)"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 8,
-        "stepsWithWhy": 4
-      }
-    },
-    "timestamp": "2025-09-10T08:10:15.679Z",
-    "module": "homographic-functions"
-  },
-  {
-    "id": "symmetric_function_parameters",
-    "topic": "Funkcje odwrotne i symetria względem prostej y = x",
-    "difficulty": 5,
-    "statement": "Znajdź wszystkie wartości parametrów p i q, dla których funkcja $h(x) = \\frac{px + q}{x - p}$ ma tę własność, że dla każdego $x_0$ z dziedziny punkty $(x_0, h(x_0))$ i $(h(x_0), h(h(x_0)))$ są symetryczne względem prostej $y = x$.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Co oznacza symetria dwóch punktów względem prostej y = x?",
-        "expression": "Punkty $(a, b)$ i $(c, d)$ są symetryczne względem $y = x$, gdy $c = b$ i $d = a$",
-        "explanation": "Symetria względem prostej y = x zamienia współrzędne miejscami",
-        "why": "To kluczowa własność: punkt $(a,b)$ ma odbicie $(b,a)$. Funkcja odwrotna to właśnie ta symetria!"
-      },
-      {
-        "step": 2,
-        "hint": "Jakie warunki muszą spełniać współrzędne naszych punktów?",
-        "expression": "$(x_0, h(x_0))$ i $(h(x_0), h(h(x_0)))$ są symetryczne, więc $h(x_0) = h(x_0)$ i $h(h(x_0)) = x_0$",
-        "explanation": "Pierwszy warunek jest zawsze spełniony, drugi daje nam $h(h(x_0)) = x_0$",
-        "why": "Warunek $h(h(x)) = x$ oznacza, że funkcja h jest swoją własną funkcją odwrotną - jest inwolucją!"
-      },
-      {
-        "step": 3,
-        "hint": "Co otrzymasz podstawiając h(x) do siebie samej?",
-        "expression": "$h(h(x)) = h\\left(\\frac{px + q}{x - p}\\right) = \\frac{p \\cdot \\frac{px + q}{x - p} + q}{\\frac{px + q}{x - p} - p}$",
-        "explanation": "Podstawiamy wyrażenie h(x) jako argument funkcji h"
-      },
-      {
-        "step": 4,
-        "hint": "Jak uprościć licznik tego złożonego ułamka?",
-        "expression": "Licznik: $p \\cdot \\frac{px + q}{x - p} + q = \\frac{p(px + q) + q(x - p)}{x - p} = \\frac{p^2x + pq + qx - pq}{x - p} = \\frac{x(p^2 + q)}{x - p}$",
-        "explanation": "Sprowadzamy do wspólnego mianownika i upraszczamy"
-      },
-      {
-        "step": 5,
-        "hint": "A jak uprościć mianownik tego ułamka?",
-        "expression": "Mianownik: $\\frac{px + q}{x - p} - p = \\frac{px + q - p(x - p)}{x - p} = \\frac{px + q - px + p^2}{x - p} = \\frac{q + p^2}{x - p}$",
-        "explanation": "Podobnie sprowadzamy do wspólnego mianownika"
-      },
-      {
-        "step": 6,
-        "hint": "Co otrzymasz dzieląc te dwa wyrażenia?",
-        "expression": "$h(h(x)) = \\frac{\\frac{x(p^2 + q)}{x - p}}{\\frac{q + p^2}{x - p}} = \\frac{x(p^2 + q)}{q + p^2} = x \\cdot \\frac{p^2 + q}{p^2 + q}$",
-        "explanation": "Dzielenie ułamków i skracanie wspólnych czynników"
-      },
-      {
-        "step": 7,
-        "hint": "Kiedy h(h(x)) = x dla wszystkich x z dziedziny?",
-        "expression": "$h(h(x)) = x \\cdot \\frac{p^2 + q}{p^2 + q} = x$, gdy $p^2 + q \\neq 0$",
-        "explanation": "Warunek jest spełniony automatycznie, gdy mianownik nie jest zerem",
-        "why": "Jeśli $p^2 + q = 0$, to $h(h(x)) = 0$, nie $x$. Musimy mieć $p^2 + q \\neq 0$ dla poprawności."
-      },
-      {
-        "step": 8,
-        "hint": "Czy istnieją dodatkowe ograniczenia na parametry?",
-        "expression": "Dodatkowo: $p^2 + q \\neq 0$ (z kroku 7) oraz $p \\neq 0$ (żeby funkcja nie była stała)",
-        "explanation": "Sprawdzamy warunki konieczne dla istnienia funkcji",
-        "why": "Gdy $p = 0$, funkcja staje się $h(x) = \\frac{q}{x}$, co zmienia charakter problemu. Warunek $p^2 + q \\neq 0$ zapewnia, że funkcja rzeczywiście jest inwolucją."
-      }
-    ],
-    "solutions": [
-      "Wszystkie pary $(p, q)$ takie, że $p \\neq 0$ i $p^2 + q \\neq 0$"
-    ],
-    "parameters": {
-      "constraints": "$p \\neq 0$, $p^2 + q \\neq 0$"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 8,
-        "stepsWithWhy": 4
-      }
-    },
-    "timestamp": "2025-09-10T08:10:38.413Z",
-    "module": "homographic-functions"
-  },
-  {
     "id": "absolute_rational_function",
     "topic": "Funkcje wymierne z wartością bezwzględną",
     "difficulty": 4,
-    "statement": "Opisz funkcję $f(x) = \\left|\\frac{5-3x}{x-1}\\right|$ i omów jej własności.",
+    "statement": "Opisz funkcję $f(x)=\\left|\\frac{5-3x}{x-1}\\right|$ i omów jej własności. Nie używaj granic w analizie.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jaka jest dziedzina funkcji wymiernej pod wartością bezwzględną?",
-        "expression": "Dziedzina: $D = \\mathbb{R} \\setminus \\{1\\}$",
-        "explanation": "Mianownik nie może być zerem, więc $x \\neq 1$",
-        "why": "Funkcja wymierna jest nieokreślona gdy mianownik równa się zero."
+        "hint": "Jaka jest dziedzina tej funkcji? Co musimy wykluczyć?",
+        "expression": "$x \\in \\mathbb{R} \\setminus \\{1\\}$",
+        "explanation": "Mianownik nie może być zerem, więc wykluczamy $x = 1$"
       },
       {
         "step": 2,
-        "hint": "Jak najlepiej przeanalizować funkcję z wartością bezwzględną?",
-        "expression": "Badamy znak wyrażenia $\\frac{5-3x}{x-1}$",
-        "explanation": "Znajdziemy przedziały gdzie wyrażenie jest dodatnie lub ujemne",
-        "interactive_choice": {
-          "prompt": "Którą strategię wybierzesz do analizy funkcji $f(x) = \\left|\\frac{5-3x}{x-1}\\right|$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Zbadać kiedy wyrażenie pod wartością bezwzględną jest dodatnie/ujemne",
-              "feedback": "Świetnie! To pozwoli usunąć wartość bezwzględną przedziałami.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Od razu narysować wykres bez analizy znaku",
-              "feedback": "Trudne bez znajomości zachowania funkcji w różnych przedziałach.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Zastąpić wartość bezwzględną pierwiastkiem z kwadratu",
-              "feedback": "Możliwe, ale komplikuje obliczenia - analiza znaku jest prostsza.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Analiza znaku wyrażenia pod wartością bezwzględną pozwala usunąć moduł przedziałami."
-        }
+        "hint": "Gdzie funkcja przyjmuje wartość zero? Kiedy wartość bezwzględna jest zerem?",
+        "expression": "$\\frac{5-3x}{x-1} = 0$ gdy $5-3x = 0$",
+        "explanation": "Wartość bezwzględna jest zerem gdy wyrażenie wewnętrzne jest zerem",
+        "why": "Licznik musi się zerować, a mianownik być różny od zera. To daje $x = \\frac{5}{3}$."
       },
       {
         "step": 3,
-        "hint": "Kiedy licznik $5-3x$ równa się zero?",
-        "expression": "$5-3x = 0 \\Rightarrow x = \\frac{5}{3}$",
-        "explanation": "Miejsce zerowe licznika"
-      },
-      {
-        "step": 4,
-        "hint": "Jakie są punkty krytyczne dla analizy znaku?",
-        "expression": "Punkty krytyczne: $x = 1$ (asymptota) i $x = \\frac{5}{3}$ (zero licznika)",
-        "explanation": "Te punkty dzielą dziedzinę na przedziały o stałym znaku"
-      },
-      {
-        "step": 5,
-        "hint": "Jaki jest znak wyrażenia $\\frac{5-3x}{x-1}$ w każdym przedziale?",
-        "expression": "\\begin{array}{c|c|c|c} x & (-\\infty,1) & (1,\\frac{5}{3}) & (\\frac{5}{3},+\\infty) \\\\ \\hline 5-3x & + & + & - \\\\ x-1 & - & + & + \\\\ \\hline \\frac{5-3x}{x-1} & - & + & - \\end{array}",
-        "explanation": "Tabela znaków dla wyrażenia pod wartością bezwzględną",
+        "hint": "Jak najlepiej analizować funkcję z wartością bezwzględną?",
+        "expression": "Badamy znak wyrażenia $\\frac{5-3x}{x-1}$",
+        "explanation": "Wyznaczamy przedziały gdzie wyrażenie jest dodatnie/ujemne",
         "interactive_choice": {
-          "prompt": "Jak wyznaczyć znak wyrażenia $\\frac{5-3x}{x-1}$ w przedziałach?",
+          "prompt": "Którą strategię wybrać do analizy $f(x)=\\left|\\frac{5-3x}{x-1}\\right|$?",
           "options": [
             {
               "id": "A",
-              "text": "Podstawić punkt testowy z każdego przedziału",
-              "feedback": "Doskonale! To najpewniejsza metoda sprawdzenia znaku.",
+              "text": "Rozpatrzyć przypadki gdy wyrażenie wewnętrzne jest ≥0 i <0",
+              "feedback": "Doskonale! To pozwoli nam 'zdjąć' wartość bezwzględną.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Narysować tabelkę znaków licznika i mianownika",
-              "feedback": "Świetna metoda! Znak ilorazu to iloczyn znaków licznika i mianownika.",
+              "text": "Podnieść do kwadratu całe wyrażenie",
+              "feedback": "To skomplikuje analizę - lepiej rozpatrywać przypadki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zastosować wzór $|a| = \\sqrt{a^2}$",
+              "feedback": "Teoretycznie poprawne, ale prowadzi do skomplikowanych obliczeń.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpatrzenie przypadków jest najskuteczniejsze - pozwala nam pracować z prostszymi funkcjami wymiernymi."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są punkty krytyczne zmiany znaku?",
+        "expression": "Miejsca zerowe licznika: $x = \\frac{5}{3}$, mianownika: $x = 1$",
+        "explanation": "Te punkty dzielą oś liczbową na przedziały"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wygląda funkcja w każdym przedziale?",
+        "expression": "$f(x) = \\begin{cases} \\frac{5-3x}{x-1} & dla  x \\in (1, \\frac{5}{3}) \\\\ -\\frac{5-3x}{x-1} & dla  x \\in (-\\infty, 1) \\cup (\\frac{5}{3}, \\infty) \\end{cases}$",
+        "explanation": "Definiujemy funkcję bez wartości bezwzględnej",
+        "interactive_choice": {
+          "prompt": "W których przedziałach $\\frac{5-3x}{x-1} > 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(-\\infty, 1)$ i $(\\frac{5}{3}, \\infty)$",
+              "feedback": "Sprawdźmy: dla $x=0$ mamy $\\frac{5}{-1} = -5$ - ujemne!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$(1, \\frac{5}{3})$",
+              "feedback": "Dokładnie! Dla $x=1.2$: licznik dodatni, mianownik dodatni.",
               "is_correct": true
             },
             {
               "id": "C",
-              "text": "Zgadywać na podstawie intuicji",
-              "feedback": "Niebezpieczne - łatwo o błąd. Lepiej systematycznie sprawdzić.",
+              "text": "$(-\\infty, \\frac{5}{3})$ i $(1, \\infty)$",
+              "feedback": "Nie - sprawdź znaki w przedziałach.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Obie metody A i B są poprawne. Tabela znaków jest bardziej systematyczna."
+          "explanation_after": "Wyrażenie jest dodatnie tylko w $(1, \\frac{5}{3})$. Poza tym przedziałem jest ujemne."
         }
       },
       {
         "step": 6,
-        "hint": "Jak zapisać funkcję bez wartości bezwzględnej?",
-        "expression": "$f(x) = \\begin{cases} \\frac{3x-5}{x-1} & dla  x \\in (-\\infty,1) \\cup (\\frac{5}{3},+\\infty) \\\\ \\frac{5-3x}{x-1} & dla  x \\in (1,\\frac{5}{3}) \\end{cases}$",
-        "explanation": "Usuwamy wartość bezwzględną zmieniając znak gdy wyrażenie ujemne",
-        "why": "Wartość bezwzględna to $|a| = a$ gdy $a \\geq 0$ oraz $|a| = -a$ gdy $a < 0$."
+        "hint": "Jakie asymptoty ma ta funkcja?",
+        "expression": "Asymptota pionowa: $x = 1$",
+        "explanation": "Mianownik zeruje się w x=1",
+        "interactive_choice": {
+          "prompt": "Czy funkcja ma asymptotę ukośną?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bo stopień licznika = stopień mianownika",
+              "feedback": "Dobrze zauważone! To wskazuje na asymptotę poziomą/ukośną.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, bo jest wartość bezwzględna",
+              "feedback": "Wartość bezwzględna nie zmienia asymptot - one zależą od zachowania w nieskończoności.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko asymptota pionowa w x=1",
+              "feedback": "Jest asymptota pionowa, ale może być też pozioma/ukośna.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Stopnie licznika i mianownika są równe (oba 1), więc istnieje asymptota pozioma."
+        }
       },
       {
         "step": 7,
-        "hint": "Jakie są asymptoty funkcji?",
-        "expression": "Asymptota pionowa: $x = 1$, Asymptota ukośna: $y = -3x + 2$",
-        "explanation": "Dzielimy wielomiany: $\\frac{5-3x}{x-1} = -3 + \\frac{2}{x-1}$"
+        "hint": "Jak znaleźć asymptotę poziomą?",
+        "expression": "$\\lim_{x \\to \\pm\\infty} \\left|\\frac{5-3x}{x-1}\\right| = \\left|\\frac{-3x}{x}\\right| = 3$",
+        "explanation": "Dla dużych |x|, wyrażenie dąży do 3",
+        "why": "Możemy to zrobić bez granic: dla dużych x, wyrażenie ≈ |-3| = 3, ponieważ stałe stają się nieistotne."
       },
       {
         "step": 8,
-        "hint": "Gdzie funkcja przecina osie współrzędnych?",
-        "expression": "Przecięcie z osią $Ox$: $x = \\frac{5}{3}$, Przecięcie z osią $Oy$: $y = 5$",
-        "explanation": "Dla $x = 0$: $f(0) = |\\frac{5}{-1}| = 5$, dla $y = 0$: licznik musi być zero"
-      },
-      {
-        "step": 9,
-        "hint": "Jaka jest monotoniczność funkcji w każdym przedziale?",
-        "expression": "Funkcja malejąca w każdym przedziale dziedziny: $(-\\infty,1)$, $(1,\\frac{5}{3})$, $(\\frac{5}{3},+\\infty)$",
-        "explanation": "Funkcja $g(x) = \\frac{5-3x}{x-1}$ jest malejąca, więc $|g(x)|$ też",
+        "hint": "Jak analizować monotoniczność funkcji?",
+        "expression": "Badamy $f'(x)$ w każdym przedziale zdefiniowania",
+        "explanation": "Obliczamy pochodną funkcji w poszczególnych przedziałach",
         "interactive_choice": {
-          "prompt": "Jak zbadać monotoniczność funkcji $f(x) = \\left|\\frac{5-3x}{x-1}\\right|$?",
+          "prompt": "Którą metodę wybrać do badania monotoniczności $f(x)$?",
           "options": [
             {
               "id": "A",
               "text": "Obliczyć pochodną w każdym przedziale",
-              "feedback": "Najdokładniejsza metoda, ale wymaga znajomości różniczkowania.",
+              "feedback": "Dobry wybór - pochodna pokaże nam monotoniczność.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Przeanalizować zachowanie funkcji bez wartości bezwzględnej",
-              "feedback": "Dobra metoda! Funkcja $\\frac{5-3x}{x-1}$ ma znaną monotoniczność.",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Sprawdzić kilka punktów i zgadywać",
-              "feedback": "Nieprecyzyjne - może prowadzić do błędnych wniosków.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Wartość bezwzględna nie zmienia monotoniczności gdy funkcja ma stały znak."
-        }
-      },
-      {
-        "step": 10,
-        "hint": "Jakie są kluczowe własności funkcji?",
-        "expression": "Zbiór wartości: $[0,+\\infty)$, Minimum globalne: $f(\\frac{5}{3}) = 0$",
-        "explanation": "Funkcja przyjmuje wszystkie wartości nieujemne, minimum w miejscu zerowym"
-      }
-    ],
-    "solutions": [
-      "Dziedzina: $D = \\mathbb{R} \\setminus \\{1\\}$",
-      "Zbiór wartości: $[0,+\\infty)$",
-      "Asymptota pionowa: $x = 1$",
-      "Asymptota ukośna: $y = -3x + 2$",
-      "Miejsce zerowe: $x = \\frac{5}{3}$",
-      "Funkcja malejąca w każdym przedziale dziedziny",
-      "Minimum globalne: $f(\\frac{5}{3}) = 0$"
-    ],
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 10,
-        "stepsWithWhy": 2,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 5
-      }
-    },
-    "timestamp": "2025-09-24T07:50:13.279Z"
-  },
-  {
-    "id": "absolute_rational_function",
-    "topic": "Funkcje wymierne z wartością bezwzględną",
-    "difficulty": 4,
-    "statement": "Opisz funkcję $f(x) = \\frac{|x|}{x-1}$ i omów jej własności.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jaka jest dziedzina funkcji $f(x) = \\frac{|x|}{x-1}$?",
-        "expression": "$D_f = \\mathbb{R} \\setminus \\{1\\}$",
-        "explanation": "Mianownik nie może być zerem, więc $x \\neq 1$",
-        "why": "Funkcja wymierna jest nieokreślona gdy mianownik równa się zero."
-      },
-      {
-        "step": 2,
-        "hint": "Jak najlepiej przeanalizować funkcję z wartością bezwzględną?",
-        "expression": "Rozpatrujemy przypadki: $x \\geq 0$ i $x < 0$",
-        "explanation": "Wartość bezwzględna ma różne definicje w zależności od znaku argumentu",
-        "interactive_choice": {
-          "prompt": "Jak podejść do analizy funkcji $f(x) = \\frac{|x|}{x-1}$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Rozpatrzyć przypadki $x \\geq 0$ i $x < 0$",
-              "feedback": "Świetnie! Wartość bezwzględna wymaga rozpatrzenia przedziałów ze względu na znak $x$.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Zastąpić $|x|$ przez $\\sqrt{x^2}$",
-              "feedback": "Możliwe, ale komplikuje analizę - lepiej rozpatrzyć przypadki.",
+              "text": "Porównywać wartości funkcji w punktach",
+              "feedback": "Możliwe, ale mniej precyzyjne niż pochodna.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Narysować wykres bez analizy algebraicznej",
-              "feedback": "Bez analizy przypadków trudno będzie poprawnie narysować wykres.",
+              "text": "Przekształcić do prostszej postaci",
+              "feedback": "Funkcja jest już w najprostszej postaci dla analizy.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Definicja wartości bezwzględnej wymaga rozpatrzenia przypadków ze względu na znak argumentu."
+          "explanation_after": "Pochodna jest najskuteczniejsza - pokaże nam dokładnie gdzie funkcja rośnie/maleje."
         }
-      },
-      {
-        "step": 3,
-        "hint": "Jak wygląda funkcja dla $x \\geq 0$ i $x \\neq 1$?",
-        "expression": "Dla $x \\geq 0$: $|x| = x$, więc $f(x) = \\frac{x}{x-1}$",
-        "explanation": "W tym przypadku $f(x) = \\frac{x}{x-1}$ dla $x \\in [0,1) \\cup (1,+\\infty)$"
-      },
-      {
-        "step": 4,
-        "hint": "Jak wygląda funkcja dla $x < 0$?",
-        "expression": "Dla $x < 0$: $|x| = -x$, więc $f(x) = \\frac{-x}{x-1}$",
-        "explanation": "W tym przypadku $f(x) = \\frac{-x}{x-1}$ dla $x \\in (-\\infty,0)$"
-      },
-      {
-        "step": 5,
-        "hint": "Jakie są asymptoty pionowe funkcji?",
-        "expression": "Asymptota pionowa: $x = 1$",
-        "explanation": "Badamy granice jednostronne w punkcie $x = 1$",
-        "interactive_choice": {
-          "prompt": "Gdzie funkcja ma asymptoty pionowe?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Tylko w punkcie $x = 1$",
-              "feedback": "Dokładnie! Mianownik zeruje się tylko dla $x = 1$.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "W punktach $x = 0$ i $x = 1$",
-              "feedback": "Nie - w $x = 0$ funkcja jest określona, $f(0) = 0$.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Funkcja nie ma asymptot pionowych",
-              "feedback": "Nieprawda - mianownik zeruje się dla $x = 1$.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Asymptota pionowa występuje tam, gdzie mianownik się zeruje, a licznik nie."
-        }
-      },
-      {
-        "step": 6,
-        "hint": "Jakie są granice jednostronne w punkcie $x = 1$?",
-        "expression": "$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} \\frac{x}{x-1} = -\\infty$ oraz $\\lim_{x \\to 1^+} f(x) = \\lim_{x \\to 1^+} \\frac{x}{x-1} = +\\infty$",
-        "explanation": "Z lewej strony funkcja dąży do $-\\infty$, z prawej do $+\\infty$"
-      },
-      {
-        "step": 7,
-        "hint": "Jakie są asymptoty poziome funkcji?",
-        "expression": "$\\lim_{x \\to +\\infty} \\frac{x}{x-1} = 1$ oraz $\\lim_{x \\to -\\infty} \\frac{-x}{x-1} = 1$",
-        "explanation": "Asymptota pozioma: $y = 1$",
-        "why": "Dla dużych $|x|$ dominują najwyższe potęgi: $\\frac{x}{x} = 1$ i $\\frac{-x}{x} = -1 \\cdot \\frac{x}{x} = -1$, ale $\\frac{-x}{x-1} \\approx \\frac{-x}{x} = -1$ tylko pozornie - dokładnie: $\\lim_{x \\to -\\infty} \\frac{-x}{x-1} = \\lim_{x \\to -\\infty} \\frac{-1}{1-\\frac{1}{x}} = -1 \\cdot \\frac{1}{1} = -1$. Sprawdźmy ponownie."
-      },
-      {
-        "step": 8,
-        "hint": "Sprawdźmy dokładnie granice w nieskończonościach",
-        "expression": "$\\lim_{x \\to +\\infty} \\frac{x}{x-1} = \\lim_{x \\to +\\infty} \\frac{1}{1-\\frac{1}{x}} = 1$ oraz $\\lim_{x \\to -\\infty} \\frac{-x}{x-1} = \\lim_{x \\to -\\infty} \\frac{-1}{1-\\frac{1}{x}} = -1$",
-        "explanation": "Mamy dwie różne asymptoty poziome w zależności od kierunku"
       },
       {
         "step": 9,
-        "hint": "Czy funkcja ma jakieś szczególne punkty?",
-        "expression": "Przecięcie z osiami: $(0,0)$",
-        "explanation": "Dla $x = 0$: $f(0) = 0$, więc punkt $(0,0)$ należy do wykresu",
-        "interactive_choice": {
-          "prompt": "Jakie szczególne punkty ma funkcja?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Punkt $(0,0)$ - przecięcie z osiami",
-              "feedback": "Tak! $f(0) = \\frac{|0|}{0-1} = 0$, więc funkcja przechodzi przez początek.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Punkt $(1,1)$ - przecięcie asymptot",
-              "feedback": "Nie - funkcja nie jest określona w $x = 1$.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Brak szczególnych punktów",
-              "feedback": "Nieprawda - funkcja przecina osie współrzędnych.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Funkcja przecina obie osie w punkcie $(0,0)$."
-        }
+        "hint": "Jaka jest pochodna funkcji w przedziale $(1, \\frac{5}{3})$?",
+        "expression": "Dla $x \\in (1, \\frac{5}{3})$: $f(x) = \\frac{5-3x}{x-1}$, $f'(x) = \\frac{-3(x-1) - (5-3x)}{(x-1)^2} = \\frac{2}{(x-1)^2}$",
+        "explanation": "Pochodna jest zawsze dodatnia w tym przedziale"
       },
       {
         "step": 10,
-        "hint": "Jaka jest monotoniczność funkcji na poszczególnych przedziałach?",
-        "expression": "Na $(-\\infty,0)$: funkcja rosnąca, na $(0,1)$: funkcja rosnąca, na $(1,+\\infty)$: funkcja rosnąca",
-        "explanation": "Funkcja jest rosnąca na każdym przedziale ciągłości"
+        "hint": "A w pozostałych przedziałach?",
+        "expression": "Dla $x < 1$ i $x > \\frac{5}{3}$: $f(x) = -\\frac{5-3x}{x-1}$, $f'(x) = -\\frac{2}{(x-1)^2}$",
+        "explanation": "Pochodna jest zawsze ujemna w tych przedziałach"
       },
       {
         "step": 11,
-        "hint": "Jakie są wszystkie własności funkcji?",
-        "expression": "Podsumowanie: $D_f = \\mathbb{R} \\setminus \\{1\\}$, asymptota pionowa $x = 1$, asymptoty poziome $y = 1$ (dla $x \\to +\\infty$) i $y = -1$ (dla $x \\to -\\infty$), przecięcie z osiami $(0,0)$, funkcja rosnąca na każdym przedziale ciągłości",
-        "explanation": "Kompletna charakterystyka funkcji $f(x) = \\frac{|x|}{x-1}$"
+        "hint": "Jakie są ekstrema funkcji?",
+        "expression": "Minimum: $f(\\frac{5}{3}) = 0$, brak maksimum lokalnego",
+        "explanation": "Funkcja ma minimum w miejscu zerowym, ale dąży do +∞ przy x→1"
+      },
+      {
+        "step": 12,
+        "hint": "Jak podsumować wszystkie własności funkcji?",
+        "expression": "Dziedzina: $\\mathbb{R}\\setminus\\{1\\}$, zbiór wartości: $[0, \\infty)$, asymptota: $x=1$, $y=3$",
+        "explanation": "Funkcja jest malejąca na $(-∞,1)$ i $(\\frac{5}{3},∞)$, rosnąca na $(1,\\frac{5}{3})$"
       }
     ],
     "solutions": [
-      "Dziedzina: $D_f = \\mathbb{R} \\setminus \\{1\\}$",
+      "Dziedzina: $\\mathbb{R} \\setminus \\{1\\}$",
+      "Miejsce zerowe: $x = \\frac{5}{3}$",
       "Asymptota pionowa: $x = 1$",
-      "Asymptoty poziome: $y = 1$ dla $x \\to +\\infty$, $y = -1$ dla $x \\to -\\infty$",
-      "Przecięcie z osiami: $(0,0)$",
-      "Monotoniczność: funkcja rosnąca na $(-\\infty,0)$, $(0,1)$ i $(1,+\\infty)$",
-      "Funkcja składa się z dwóch gałęzi: $f(x) = \\frac{x}{x-1}$ dla $x \\geq 0, x \\neq 1$ oraz $f(x) = \\frac{-x}{x-1}$ dla $x < 0$"
+      "Asymptota pozioma: $y = 3$",
+      "Funkcja maleje na $(-\\infty, 1)$ i $(\\frac{5}{3}, \\infty)$",
+      "Funkcja rośnie na $(1, \\frac{5}{3})$",
+      "Minimum: $f(\\frac{5}{3}) = 0$",
+      "Zbiór wartości: $[0, \\infty)$"
     ],
+    "parameters": {
+      "function_type": "wymierna z wartością bezwzględną"
+    },
     "validation": {
       "isValid": true,
       "missingFields": [],
-      "warnings": [],
+      "warnings": [
+        "Za dużo interactive_choice (4). Zalecane max 2-3."
+      ],
       "stats": {
-        "totalSteps": 11,
+        "totalSteps": 12,
         "stepsWithWhy": 2,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 3
+        "stepsWithChoice": 4,
+        "totalOptions": 12,
+        "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-24T07:50:50.743Z"
+    "timestamp": "2025-09-25T10:57:32.386Z"
   },
   {
-    "id": "absolute_value_function_analysis",
-    "topic": "Funkcje z wartością bezwzględną",
+    "id": "absolute_value_rational_function",
+    "topic": "Funkcje wymierne z wartością bezwzględną",
     "difficulty": 4,
-    "statement": "Opisz funkcję $f(x) = \\frac{|x| + 1}{|x| - 1}$ i omów jej własności.",
+    "statement": "Opisz funkcję $f(x) = \\frac{|x|}{x-1}$ i omów jej własności. Nie używaj granic w analizie.",
     "steps": [
       {
         "step": 1,
-        "hint": "Co należy sprawdzić jako pierwsze przy analizie funkcji z wartością bezwzględną?",
-        "expression": "Szukamy dziedziny: $|x| - 1 \\neq 0$",
+        "hint": "Od czego zaczniesz analizę tej funkcji?",
+        "expression": "Dziedzina: $x-1 \\neq 0$, czyli $x \\neq 1$",
         "explanation": "Mianownik nie może być zerem",
         "interactive_choice": {
-          "prompt": "Od czego zacząć analizę funkcji $f(x) = \\frac{|x| + 1}{|x| - 1}$?",
+          "prompt": "Jak najlepiej rozpocząć analizę funkcji z wartością bezwzględną w liczniku?",
           "options": [
             {
               "id": "A",
-              "text": "Znaleźć dziedzinę funkcji",
-              "feedback": "Świetnie! Musimy sprawdzić kiedy mianownik nie jest zerem.",
+              "text": "Wyznaczyć dziedzinę funkcji",
+              "feedback": "Dobry początek! Dziedzina jest kluczowa dla dalszej analizy.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Narysować wykres",
-              "feedback": "Za wcześnie - najpierw trzeba znać dziedzinę i zachowanie funkcji.",
+              "text": "Od razu rozbić na przypadki dla $x \\geq 0$ i $x < 0$",
+              "feedback": "To ważny krok, ale najpierw warto określić dziedzinę.",
               "is_correct": false
             },
             {
               "id": "C",
               "text": "Sprawdzić parzystość funkcji",
-              "feedback": "To ważne, ale najpierw ustal gdzie funkcja jest określona.",
+              "feedback": "Interesujące, ale lepiej zacząć od dziedziny, bo wartość bezwzględna może wpłynąć na symetrię.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Zawsze zaczynamy od dziedziny - szczególnie ważne dla funkcji wymiernych."
+          "explanation_after": "Zawsze zaczynamy od dziedziny - to podstawa do dalszej analizy."
         }
       },
       {
         "step": 2,
-        "hint": "Kiedy $|x| - 1 = 0$?",
-        "expression": "$|x| = 1$, więc $x = 1$ lub $x = -1$",
-        "explanation": "Funkcja nie jest określona dla $x = \\pm 1$"
+        "hint": "Jak poradzić sobie z wartością bezwzględną w liczniku?",
+        "expression": "Rozbijamy na dwa przypadki:\n- Dla $x \\geq 0$: $f(x) = \\frac{x}{x-1}$\n- Dla $x < 0$: $f(x) = \\frac{-x}{x-1}$",
+        "explanation": "Wartość bezwzględna zmienia się w zależności od znaku x",
+        "why": "Rozbicie na przypadki pozwala uprościć funkcję i analizować ją w przedziałach, gdzie ma prostszą postać."
       },
       {
         "step": 3,
-        "hint": "Jaka jest dziedzina funkcji?",
-        "expression": "$D = \\mathbb{R} \\setminus \\{-1, 1\\} = (-\\infty, -1) \\cup (-1, 1) \\cup (1, +\\infty)$",
-        "explanation": "Dziedzina to wszystkie liczby rzeczywiste oprócz $-1$ i $1$",
-        "why": "Punkty $x = \\pm 1$ to asymptoty pionowe - tam funkcja będzie dążyć do nieskończoności."
+        "hint": "Co dzieje się w pobliżu punktu $x = 1$?",
+        "expression": "Dla $x \\to 1^-$ i $x \\to 1^+$ analizujemy znaki",
+        "explanation": "Mianownik dąży do 0, więc funkcja ma asymptotę pionową $x = 1$",
+        "interactive_choice": {
+          "prompt": "Jak scharakteryzować zachowanie funkcji wokół $x = 1$ bez używania granic?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Analizować znaki licznika i mianownika dla $x$ bliskich 1",
+              "feedback": "Doskonale! To pokazuje, czy funkcja dąży do $+\\infty$ czy $-\\infty$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić $x = 1$ do wzoru",
+              "feedback": "Nie można - funkcja nie jest określona w $x = 1$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zignorować ten punkt i analizować tylko gdzie indziej",
+              "feedback": "To ważny punkt - asymptota pionowa znacząco wpływa na zachowanie funkcji.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Analiza znaków w pobliżu punktu nieciągłości pomaga zrozumieć asymptoty pionowe."
+        }
       },
       {
         "step": 4,
-        "hint": "Jak sprawdzić czy funkcja jest parzysta czy nieparzysta?",
-        "expression": "$f(-x) = \\frac{|-x| + 1}{|-x| - 1} = \\frac{|x| + 1}{|x| - 1} = f(x)$",
-        "explanation": "Funkcja jest parzysta, więc symetryczna względem osi OY",
-        "interactive_choice": {
-          "prompt": "Jak zbadać parzystość funkcji $f(x) = \\frac{|x| + 1}{|x| - 1}$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Sprawdzić czy $f(-x) = f(x)$",
-              "feedback": "Dokładnie! Jeśli tak, to funkcja jest parzysta.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Sprawdzić czy $f(-x) = -f(x)$",
-              "feedback": "To sprawdza nieparzystość, ale tutaj funkcja wygląda na parzystą.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Narysować wykres i sprawdzić symetrię",
-              "feedback": "Można, ale algebraiczne sprawdzenie jest pewniejsze.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Dla funkcji z $|x|$ często sprawdzamy parzystość, bo $|-x| = |x|$."
-        }
+        "hint": "Gdzie funkcja przyjmuje wartość zero?",
+        "expression": "$f(x) = 0$ gdy $|x| = 0$, czyli $x = 0$",
+        "explanation": "Licznik zeruje się tylko dla $x = 0$"
       },
       {
         "step": 5,
-        "hint": "Jak uprościć wzór funkcji rozpatrując przypadki dla wartości bezwzględnej?",
-        "expression": "Dla $x > 0$: $f(x) = \\frac{x + 1}{x - 1}$, dla $x < 0$: $f(x) = \\frac{-x + 1}{-x - 1} = \\frac{-(x - 1)}{-(x + 1)} = \\frac{x - 1}{x + 1}$",
-        "explanation": "Rozbijamy na przypadki: $x > 0$ i $x < 0$"
-      },
-      {
-        "step": 6,
-        "hint": "Jakie są asymptoty pionowe funkcji?",
-        "expression": "Asymptoty pionowe: $x = -1$ i $x = 1$",
-        "explanation": "W punktach gdzie mianownik się zeruje",
-        "why": "Sprawdzamy granice jednostronne: $\\lim_{x \\to 1^-} f(x) = -\\infty$, $\\lim_{x \\to 1^+} f(x) = +\\infty$"
-      },
-      {
-        "step": 7,
-        "hint": "Co się dzieje z funkcją gdy $x \\to \\infty$?",
-        "expression": "$\\lim_{x \\to \\infty} f(x) = \\lim_{x \\to \\infty} \\frac{|x| + 1}{|x| - 1} = \\lim_{x \\to \\infty} \\frac{1 + \\frac{1}{|x|}}{1 - \\frac{1}{|x|}} = \\frac{1 + 0}{1 - 0} = 1$",
-        "explanation": "Asymptota pozioma: $y = 1$",
+        "hint": "Jak badać monotoniczność funkcji w każdym przedziale?",
+        "expression": "Dla $x > 0$, $x \\neq 1$: $f'(x) = \\frac{-1}{(x-1)^2}$\nDla $x < 0$: $f'(x) = \\frac{-1}{(x-1)^2}$",
+        "explanation": "Pochodna jest ujemna w całej dziedzinie (poza $x = 1$)",
         "interactive_choice": {
-          "prompt": "Jak znaleźć asymptotę poziomą funkcji $f(x) = \\frac{|x| + 1}{|x| - 1}$?",
+          "prompt": "Którą metodę wybrać do badania monotoniczności tej funkcji?",
           "options": [
             {
               "id": "A",
-              "text": "Podzielić licznik i mianownik przez $|x|$",
-              "feedback": "Świetnie! To standardowa metoda dla funkcji wymiernych.",
+              "text": "Obliczyć pochodną w każdym przedziale",
+              "feedback": "Dobry wybór - pochodna daje precyzyjną informację o monotoniczności.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Podstawić bardzo duże wartości $x$",
-              "feedback": "Może dać intuicję, ale algebraiczne podejście jest dokładniejsze.",
+              "text": "Analizować zachowanie funkcji dla przykładowych wartości",
+              "feedback": "Można tak, ale mniej precyzyjnie niż z pochodną.",
               "is_correct": false
             },
             {
               "id": "C",
-              "text": "Sprawdzić stopnie wielomianów",
-              "feedback": "Tu nie mamy wielomianów przez wartość bezwzględną - lepiej podzielić przez $|x|$.",
+              "text": "Sprawdzić tylko w punktach charakterystycznych",
+              "feedback": "Niewystarczające - potrzebna jest analiza ciągła w przedziałach.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Dzielenie przez najwyższą potęgę w mianowniku to klasyczna metoda."
+          "explanation_after": "Pochodna jest najskuteczniejszą metodą do badania monotoniczności funkcji wymiernych."
         }
       },
       {
+        "step": 6,
+        "hint": "Czy funkcja jest parzysta lub nieparzysta?",
+        "expression": "$f(-x) = \\frac{|-x|}{-x-1} = \\frac{|x|}{-x-1}$",
+        "explanation": "Sprawdzamy symetrię funkcji"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są asymptoty funkcji?",
+        "expression": "Asymptota pionowa: $x = 1$\nAsymptota pozioma: analizujemy zachowanie dla $x \\to \\pm\\infty$",
+        "explanation": "Dla dużych $|x|$ funkcja zachowuje się jak $\\frac{|x|}{x}$"
+      },
+      {
         "step": 8,
-        "hint": "W jakich przedziałach funkcja jest rosnąca lub malejąca?",
-        "expression": "Dla $x \\in (0, 1)$: $f'(x) = \\frac{-2}{(x-1)^2} < 0$ (malejąca)",
-        "explanation": "Funkcja jest malejąca w przedziałach $(0, 1)$ i $(1, +\\infty)$"
-      },
-      {
-        "step": 9,
-        "hint": "Jaki jest zbiór wartości funkcji?",
-        "expression": "Dla $x \\in (0, 1)$: $f(x) \\in (-\\infty, -1)$, dla $x \\in (1, +\\infty)$: $f(x) \\in (1, +\\infty)$",
-        "explanation": "Ze względu na parzystość: $ZW = (-\\infty, -1) \\cup (1, +\\infty)$"
-      },
-      {
-        "step": 10,
-        "hint": "Jakie są kluczowe własności tej funkcji?",
-        "expression": "Funkcja parzysta, asymptoty: $x = \\pm 1$, $y = 1$, malejąca w każdym przedziale dziedziny",
-        "explanation": "Podsumowanie wszystkich własności funkcji"
+        "hint": "Jak podsumować wszystkie własności funkcji?",
+        "expression": "Dziedzina: $\\mathbb{R} \\setminus \\{1\\}$\nMiejsce zerowe: $x = 0$\nAsymptota pionowa: $x = 1$\nFunkcja malejąca w każdym przedziale dziedziny",
+        "explanation": "Kompletny opis własności funkcji"
       }
     ],
     "solutions": [
-      "Dziedzina: $D = \\mathbb{R} \\setminus \\{-1, 1\\}$",
-      "Funkcja parzysta (symetryczna względem osi OY)",
-      "Asymptoty pionowe: $x = -1, x = 1$",
-      "Asymptota pozioma: $y = 1$",
-      "Zbiór wartości: $(-\\infty, -1) \\cup (1, +\\infty)$",
-      "Funkcja malejąca w każdym przedziale dziedziny"
+      "Dziedzina: $x \\in \\mathbb{R} \\setminus \\{1\\}$",
+      "Miejsce zerowe: $x = 0$",
+      "Asymptota pionowa: $x = 1$",
+      "Funkcja malejąca w przedziałach $(-\\infty, 0)$, $(0, 1)$, $(1, \\infty)$",
+      "Nie jest ani parzysta, ani nieparzysta"
     ],
     "parameters": {
-      "function": "$f(x) = \\frac{|x| + 1}{|x| - 1}$"
+      "restriction": "Bez używania granic"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-25T10:59:30.932Z"
+  },
+  {
+    "id": "absolute_function_analysis",
+    "topic": "Badanie funkcji z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Opisz funkcję $f(x)=\\frac{|x|}{x-1}$ i omów jej własności.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak możemy uprościć analizę funkcji z wartością bezwzględną?",
+        "expression": "Dziedzina: $x \\in \\mathbb{R} \\setminus \\{1\\}$ (mianownik nie może być zerem)",
+        "explanation": "Wyznaczamy dziedzinę funkcji",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozpatrzyć funkcję $f(x)=\\frac{|x|}{x-1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć osobno dla $x \\geq 0$ i $x < 0$",
+              "feedback": "Doskonale! Wartość bezwzględna zmienia się w zależności od znaku x.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zastosować wzór $|x| = \\sqrt{x^2}$",
+              "feedback": "Można, ale komplikuje obliczenia - lepiej rozpatrywać przypadki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić do postaci $f(x) = \\frac{x}{x-1}$",
+              "feedback": "Niepoprawnie - to działa tylko dla $x \\geq 0$, pomija przypadek ujemny.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpatrzenie przypadków pozwoli nam uprościć wartość bezwzględną."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać funkcję dla $x \\geq 0$?",
+        "expression": "Dla $x \\geq 0$: $|x| = x$, więc $f(x) = \\frac{x}{x-1}$",
+        "explanation": "Dla nieujemnych x wartość bezwzględna znika"
+      },
+      {
+        "step": 3,
+        "hint": "A jak dla $x < 0$?",
+        "expression": "Dla $x < 0$: $|x| = -x$, więc $f(x) = \\frac{-x}{x-1}$",
+        "explanation": "Dla ujemnych x wartość bezwzględna zmienia znak"
+      },
+      {
+        "step": 4,
+        "hint": "Gdzie funkcja ma miejsca zerowe?",
+        "expression": "$f(x) = 0$ gdy licznik = 0, czyli $|x| = 0$",
+        "explanation": "Miejsce zerowe: $x = 0$",
+        "why": "Funkcja wymierna jest zerem gdy licznik jest zerem, a mianownik różny od zera."
+      },
+      {
+        "step": 5,
+        "hint": "Jakie asymptoty ma ta funkcja?",
+        "expression": "Asymptota pionowa: $x = 1$",
+        "explanation": "Mianownik zeruje się w x = 1",
+        "interactive_choice": {
+          "prompt": "Które asymptoty występują w funkcji $f(x)=\\frac{|x|}{x-1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko pionowa w x = 1",
+              "feedback": "Niepełne - są też asymptoty poziome/ukośne.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Pionowa w x = 1 i poziome dla $x \\to \\pm\\infty$",
+              "feedback": "Dobrze! Granice w nieskończonościach dają asymptoty poziome.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Pionowa w x = 1 i ukośna",
+              "feedback": "Nie - stopień licznika i mianownika jest taki sam, więc asymptota pozioma.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Asymptota pionowa tam gdzie mianownik zeruje się, poziome z granic w nieskończonościach."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są granice funkcji przy $x \\to \\pm\\infty$?",
+        "expression": "$\\lim\\limits_{x \\to \\pm\\infty} f(x) = \\lim\\limits_{x \\to \\pm\\infty} \\frac{|x|}{x} = \\pm 1$",
+        "explanation": "Dzielimy licznik i mianownik przez x",
+        "why": "Dla dużych |x|, |x|/x daje znak x, więc granice zależą od kierunku."
+      },
+      {
+        "step": 7,
+        "hint": "Czy funkcja jest ciągła? Gdzie ma nieciągłości?",
+        "expression": "Nieciągłość nieusuwalna w x = 1 (asymptota pionowa)",
+        "explanation": "Funkcja ma punkt nieciągłości"
+      },
+      {
+        "step": 8,
+        "hint": "Jak zbadać monotoniczność funkcji?",
+        "expression": "Dla x>1: f(x) rosnąca, dla (0,1): malejąca, dla x<0: stała = -1",
+        "explanation": "Wynik badania monotoniczności",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej zbadać monotoniczność $f(x)=\\frac{|x|}{x-1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Policzyć pochodną w każdym przedziale",
+              "feedback": "Dobrze, ale pamiętaj o rozpatrzeniu osobno dla x≥0 i x<0.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zbadać znak różnicy f(x₂)-f(x₁)",
+              "feedback": "Można, ale pochodna jest szybsza dla funkcji wymiernych.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Narysować wykres i odczytać",
+              "feedback": "To metoda graficzna, ale potrzebujemy analitycznego uzasadnienia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Pochodna da nam precyzyjną informację o monotoniczności w każdym przedziale."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są wartości funkcji w ważnych punktach?",
+        "expression": "f(0) = 0, f(2) = 2, f(-1) = -0.5, f(0.5) = -1",
+        "explanation": "Wartości funkcji w charakterystycznych punktach"
+      },
+      {
+        "step": 10,
+        "hint": "Jak podsumować własności funkcji?",
+        "expression": "Funkcja przedziałami monotoniczna, nieciągła w x=1, asymptoty: x=1 i y=±1",
+        "explanation": "Podsumowanie głównych własności"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $\\mathbb{R} \\setminus \\{1\\}$",
+      "Miejsce zerowe: $x = 0$",
+      "Asymptoty: pionowa $x = 1$, poziome $y = 1$ (dla $x \\to +\\infty$), $y = -1$ (dla $x \\to -\\infty$)",
+      "Monotoniczność: rosnąca dla $x > 1$, malejąca dla $0 < x < 1$, stała = -1 dla $x < 0$",
+      "Nieciągłość: nieusuwalna w $x = 1$"
+    ],
+    "parameters": {
+      "function_type": "wymierna z wartością bezwzględną",
+      "analysis_method": "przypadki dla znaku x"
     },
     "validation": {
       "isValid": true,
@@ -3580,377 +3450,88 @@
       "warnings": [],
       "stats": {
         "totalSteps": 10,
-        "stepsWithWhy": 2,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 3
-      }
-    },
-    "timestamp": "2025-09-24T07:51:24.019Z"
-  },
-  {
-    "id": "absolute_rational_equation",
-    "topic": "Równania z wartością bezwzględną i funkcjami wymiernymi",
-    "difficulty": 4,
-    "statement": "Rozwiąż równanie $|x| + \\frac{2}{x+1} = 0$, korzystając z analizy odpowiednich funkcji.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jaka jest dziedzina tego równania?",
-        "expression": "Dziedzina: $x \\neq -1$",
-        "explanation": "Mianownik $x+1$ nie może być zerem",
-        "why": "Zawsze zaczynamy od określenia dziedziny - to eliminuje potencjalne błędy."
-      },
-      {
-        "step": 2,
-        "hint": "Jak przekształcić równanie do postaci wygodnej do analizy?",
-        "expression": "$|x| = -\\frac{2}{x+1}$",
-        "explanation": "Przenosimy ułamek na prawą stronę"
-      },
-      {
-        "step": 3,
-        "hint": "Jak podejść do analizy tego równania?",
-        "expression": "Analizujemy przecięcia funkcji $f(x) = |x|$ i $g(x) = -\\frac{2}{x+1}$",
-        "explanation": "Szukamy punktów gdzie wykresy się przecinają",
-        "interactive_choice": {
-          "prompt": "Którą metodę zastosować do równania $|x| = -\\frac{2}{x+1}$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Rozpatrzyć przypadki $x \\geq 0$ i $x < 0$ osobno",
-              "feedback": "Dobry wybór! Wartość bezwzględna wymaga rozpatrzenia przypadków.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Podnieść obie strony do kwadratu",
-              "feedback": "Ryzykowne - możesz wprowadzić rozwiązania obce.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Analizować graficznie funkcje $f(x) = |x|$ i $g(x) = -\\frac{2}{x+1}$",
-              "feedback": "Świetna metoda! Pozwala zobaczyć czy funkcje się przecinają.",
-              "is_correct": true
-            }
-          ],
-          "explanation_after": "Można rozpatrzyć przypadki algebraicznie lub analizować graficznie. Wybierzmy analizę graficzną."
-        }
-      },
-      {
-        "step": 4,
-        "hint": "Jakie są właściwości funkcji $f(x) = |x|$?",
-        "expression": "$f(x) = |x| \\geq 0$ dla wszystkich $x \\in \\mathbb{R}$",
-        "explanation": "Wartość bezwzględna jest zawsze nieujemna"
-      },
-      {
-        "step": 5,
-        "hint": "Jaki jest znak funkcji $g(x) = -\\frac{2}{x+1}$ w różnych przedziałach?",
-        "expression": "Dla $x > -1$: $g(x) = -\\frac{2}{x+1} < 0$, dla $x < -1$: $g(x) = -\\frac{2}{x+1} > 0$",
-        "explanation": "Znak funkcji $g(x)$ zależy od znaku wyrażenia $x+1$",
-        "interactive_choice": {
-          "prompt": "Gdzie funkcja $g(x) = -\\frac{2}{x+1}$ jest ujemna?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Dla $x > -1$",
-              "feedback": "Tak! Gdy $x > -1$, to $x+1 > 0$, więc $-\\frac{2}{x+1} < 0$",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Dla $x < -1$",
-              "feedback": "Nie - gdy $x < -1$, to $x+1 < 0$, więc $-\\frac{2}{x+1} > 0$",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Wszędzie gdzie jest określona",
-              "feedback": "Nie - znak zależy od znaku mianownika $x+1$",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Dla $x > -1$: $g(x) < 0$, dla $x < -1$: $g(x) > 0$"
-        }
-      },
-      {
-        "step": 6,
-        "hint": "Czy funkcje $f(x) = |x|$ i $g(x) = -\\frac{2}{x+1}$ mogą się przeciąć dla $x > -1$?",
-        "expression": "Dla $x > -1$: $f(x) \\geq 0$ oraz $g(x) < 0$",
-        "explanation": "Funkcja nieujemna nie może równać się funkcji ujemnej",
-        "why": "To kluczowa obserwacja - dla $x > -1$ równanie nie ma rozwiązań."
-      },
-      {
-        "step": 7,
-        "hint": "Co możemy powiedzieć o przypadku $x < -1$?",
-        "expression": "Dla $x < -1$: $f(x) = |x| = -x > 0$ oraz $g(x) = -\\frac{2}{x+1} > 0$",
-        "explanation": "Obie funkcje są dodatnie, więc przecięcie jest możliwe"
-      },
-      {
-        "step": 8,
-        "hint": "Jak rozwiązać równanie $-x = -\\frac{2}{x+1}$ dla $x < -1$?",
-        "expression": "$x = \\frac{2}{x+1}$",
-        "explanation": "Upraszczamy równanie mnożąc przez $-1$",
-        "interactive_choice": {
-          "prompt": "Jak najlepiej rozwiązać równanie $-x = -\\frac{2}{x+1}$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Pomnożyć obie strony przez $-1$: $x = \\frac{2}{x+1}$",
-              "feedback": "Świetnie! To upraszcza równanie.",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Pomnożyć przez $(x+1)$: $-x(x+1) = -2$",
-              "feedback": "Możliwe, ale pierwszy sposób jest prostszy.",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Przenieść wszystko na jedną stronę",
-              "feedback": "Można, ale niepotrzebnie komplikuje obliczenia.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Pomnażając przez $-1$ otrzymujemy prostsze równanie $x = \\frac{2}{x+1}$."
-        }
-      },
-      {
-        "step": 9,
-        "hint": "Jak rozwiązać równanie $x = \\frac{2}{x+1}$?",
-        "expression": "$x(x+1) = 2$",
-        "explanation": "Mnożymy obie strony przez $(x+1)$"
-      },
-      {
-        "step": 10,
-        "hint": "Do jakiej postaci sprowadza się równanie?",
-        "expression": "$x^2 + x - 2 = 0$",
-        "explanation": "Otrzymujemy równanie kwadratowe"
-      },
-      {
-        "step": 11,
-        "hint": "Jakie są rozwiązania równania kwadratowego $x^2 + x - 2 = 0$?",
-        "expression": "$(x+2)(x-1) = 0$, więc $x = -2$ lub $x = 1$",
-        "explanation": "Rozkładamy na czynniki: szukamy liczb o sumie $1$ i iloczynie $-2$"
-      },
-      {
-        "step": 12,
-        "hint": "Które rozwiązania spełniają warunek $x < -1$?",
-        "expression": "$x = -2$ (spełnia $x < -1$), $x = 1$ (nie spełnia $x < -1$)",
-        "explanation": "Sprawdzamy warunki dla każdego rozwiązania"
-      },
-      {
-        "step": 13,
-        "hint": "Jakie jest ostateczne rozwiązanie równania?",
-        "expression": "$x = -2$",
-        "explanation": "Jedyne rozwiązanie spełniające wszystkie warunki"
-      }
-    ],
-    "solutions": [
-      "$x = -2$"
-    ],
-    "parameters": {
-      "domain": "$x \\neq -1$"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 13,
-        "stepsWithWhy": 2,
-        "stepsWithChoice": 3,
-        "totalOptions": 9,
-        "correctOptions": 5
-      }
-    },
-    "timestamp": "2025-09-24T07:52:03.854Z"
-  },
-  {
-    "id": "rational_equation_with_absolute_value",
-    "topic": "Równania z wartością bezwzględną",
-    "difficulty": 4,
-    "statement": "Rozwiąż równanie $\\frac{x^2-1}{2}=\\frac{4}{|x|-2}$, korzystając z analizy odpowiednich funkcji.",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Jakie ograniczenia musi spełniać $x$, aby równanie miało sens?",
-        "expression": "$|x| - 2 \\neq 0$, więc $|x| \\neq 2$, czyli $x \\neq \\pm 2$",
-        "explanation": "Mianownik nie może być zerem - wyznaczamy dziedzinę",
-        "why": "Zawsze najpierw sprawdzamy dziedzinę równania z ułamkami. Wartości $x = \\pm 2$ są wykluczone."
-      },
-      {
-        "step": 2,
-        "hint": "Jak najlepiej podejść do tego równania z wartością bezwzględną?",
-        "expression": "Podstawiamy $t = |x|$ gdzie $t \\geq 0$ i $t \\neq 2$",
-        "explanation": "Wprowadzamy podstawienie aby uprościć równanie",
-        "interactive_choice": {
-          "prompt": "Którą strategię wybierzesz do rozwiązania równania z $|x|$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Rozpatrzyć przypadki $x \\geq 0$ i $x < 0$",
-              "feedback": "Dobra metoda, ale tutaj można prościej - zauważ że mamy $|x|$ w mianowniku",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Podstawić $t = |x|$ i rozwiązać względem $t$",
-              "feedback": "Świetny pomysł! To uprości równanie i pozwoli na analizę funkcyjną",
-              "is_correct": true
-            },
-            {
-              "id": "C",
-              "text": "Podnieść obie strony do kwadratu",
-              "feedback": "Nie - wartość bezwzględna jest w mianowniku, nie da się tak zrobić",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Podstawienie $t = |x|$ uprości równanie i pozwoli na analizę graficzną."
-        }
-      },
-      {
-        "step": 3,
-        "hint": "Jak przepisać równanie po podstawieniu $t = |x|$?",
-        "expression": "$\\frac{x^2-1}{2} = \\frac{4}{t-2}$, gdzie $x^2 = t^2$",
-        "explanation": "Wykorzystujemy fakt że $|x|^2 = x^2$"
-      },
-      {
-        "step": 4,
-        "hint": "Jakie równanie otrzymamy po podstawieniu?",
-        "expression": "$\\frac{t^2-1}{2} = \\frac{4}{t-2}$",
-        "explanation": "Równanie względem $t$, gdzie $t \\geq 0$ i $t \\neq 2$"
-      },
-      {
-        "step": 5,
-        "hint": "Jak pozbyć się ułamków w równaniu?",
-        "expression": "$(t^2-1)(t-2) = 8$",
-        "explanation": "Mnożymy obie strony przez $2(t-2)$, pamiętając że $t \\neq 2$"
-      },
-      {
-        "step": 6,
-        "hint": "Co otrzymamy po rozwinięciu lewej strony?",
-        "expression": "$(t^2-1)(t-2) = t^3 - 2t^2 - t + 2$",
-        "explanation": "Rozwijamy iloczyn $(t^2-1)(t-2)$"
-      },
-      {
-        "step": 7,
-        "hint": "Jakie równanie sześcienne musimy rozwiązać?",
-        "expression": "$t^3 - 2t^2 - t + 2 = 8$, czyli $t^3 - 2t^2 - t - 6 = 0$",
-        "explanation": "Przenosimy wszystko na lewą stronę"
-      },
-      {
-        "step": 8,
-        "hint": "Jak można rozłożyć wielomian $t^3 - 2t^2 - t - 6$?",
-        "expression": "Sprawdzamy $t = 3$: $27 - 18 - 3 - 6 = 0$ ✓",
-        "explanation": "Znajdujemy pierwiastek $t = 3$",
-        "interactive_choice": {
-          "prompt": "Jak najlepiej rozłożyć wielomian $t^3 - 2t^2 - t - 6 = 0$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Szukać pierwiastka wymiernego metodą prób",
-              "feedback": "Dobra metoda! Sprawdź dzielniki wyrazu wolnego: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Grupować składniki i wyłączać wspólne czynniki",
-              "feedback": "Można spróbować, ale dla tego wielomianu trudno znaleźć dobre grupowanie",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Użyć wzorów Cardano na równania trzeciego stopnia",
-              "feedback": "Zbyt skomplikowane - lepiej szukać pierwiastka wymiernego",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Dla wielomianów trzeciego stopnia z całkowitymi współczynnikami najlepiej szukać pierwiastka wymiernego."
-        }
-      },
-      {
-        "step": 9,
-        "hint": "Jak rozłożyć wielomian znając pierwiastek $t = 3$?",
-        "expression": "$t^3 - 2t^2 - t - 6 = (t-3)(t^2 + t + 2)$",
-        "explanation": "Dzielimy wielomian przez $(t-3)$",
-        "why": "Jeśli $t = 3$ jest pierwiastkiem, to $(t-3)$ jest czynnikiem wielomianu."
-      },
-      {
-        "step": 10,
-        "hint": "Jakie są pierwiastki równania $(t-3)(t^2 + t + 2) = 0$?",
-        "expression": "$t = 3$ lub $t^2 + t + 2 = 0$",
-        "explanation": "Rozwiązujemy równanie iloczynowe"
-      },
-      {
-        "step": 11,
-        "hint": "Czy równanie $t^2 + t + 2 = 0$ ma pierwiastki rzeczywiste?",
-        "expression": "$\\Delta = 1 - 8 = -7 < 0$, więc brak pierwiastków rzeczywistych",
-        "explanation": "Sprawdzamy deltę dla równania kwadratowego"
-      },
-      {
-        "step": 12,
-        "hint": "Czy rozwiązanie $t = 3$ należy do dziedziny?",
-        "expression": "$t = 3$ jest jedynym rozwiązaniem",
-        "explanation": "Mamy $t = |x| = 3$",
-        "interactive_choice": {
-          "prompt": "Czy $t = 3$ spełnia warunki $t \\geq 0$ i $t \\neq 2$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Tak, $t = 3$ jest poprawne",
-              "feedback": "Dokładnie! $3 > 0$ i $3 \\neq 2$, więc należy do dziedziny",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Nie, bo $t = 3 > 2$",
-              "feedback": "Błąd - warunek to $t \\neq 2$, a nie $t < 2$",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Nie, bo $t$ musi być ujemne",
-              "feedback": "Błąd - $t = |x| \\geq 0$, więc $t$ nie może być ujemne",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Wartość $t = 3$ spełnia wszystkie warunki: $t \\geq 0$ i $t \\neq 2$."
-        }
-      },
-      {
-        "step": 13,
-        "hint": "Jakie wartości $x$ dają $|x| = 3$?",
-        "expression": "$|x| = 3$ oznacza $x = 3$ lub $x = -3$",
-        "explanation": "Z definicji wartości bezwzględnej"
-      },
-      {
-        "step": 14,
-        "hint": "Czy oba rozwiązania należą do dziedziny pierwotnego równania?",
-        "expression": "$x = 3 \\neq \\pm 2$ ✓ oraz $x = -3 \\neq \\pm 2$ ✓",
-        "explanation": "Sprawdzamy czy rozwiązania nie są wykluczone z dziedziny"
-      }
-    ],
-    "solutions": [
-      "$x = 3$",
-      "$x = -3$"
-    ],
-    "parameters": {
-      "domain": "$x \\in \\mathbb{R} \\setminus \\{-2, 2\\}$"
-    },
-    "validation": {
-      "isValid": true,
-      "missingFields": [],
-      "warnings": [],
-      "stats": {
-        "totalSteps": 14,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
         "correctOptions": 4
       }
     },
-    "timestamp": "2025-09-24T07:53:03.968Z"
+    "timestamp": "2025-09-25T11:18:39.383Z"
+  },
+  {
+    "id": "absolute_rational_function",
+    "topic": "Funkcje wymierne z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Opisz funkcję $f(x) = \\frac{|x|}{x-1}$ i omów jej własności",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Dla jakich wartości x funkcja nie jest określona?",
+        "expression": "Dziedzina: $D = \\mathbb{R} \\setminus \\{1\\}$",
+        "explanation": "Funkcja nie jest określona gdy mianownik równa się zero",
+        "why": "Dzielenie przez zero jest niedozwolone. Punkt $x = 1$ będzie asymptotą pionową."
+      },
+      {
+        "step": 2,
+        "hint": "Jak pozbyć się wartości bezwzględnej z licznika?",
+        "expression": "$f(x) = \\begin{cases} \\frac{x}{x-1} & dla  x \\geq 0 \\\\ \\frac{-x}{x-1} & dla  x < 0 \\end{cases}$",
+        "explanation": "Rozkładamy funkcję na przedziały ze względu na znak x",
+        "why": "Definicja wartości bezwzględnej: $|x| = x$ gdy $x \\geq 0$ oraz $|x| = -x$ gdy $x < 0$. To kluczowe dla dalszej analizy."
+      },
+      {
+        "step": 3,
+        "hint": "Czy funkcja przechodzi przez początek układu współrzędnych?",
+        "expression": "$f(0) = \\frac{|0|}{0-1} = \\frac{0}{-1} = 0$",
+        "explanation": "Punkt $(0,0)$ należy do wykresu funkcji"
+      },
+      {
+        "step": 4,
+        "hint": "Co dzieje się z funkcją gdy x zbliża się do 1 z lewej i prawej strony?",
+        "expression": "Asymptota pionowa: $x = 1$",
+        "explanation": "Gdy $x \\to 1^-$: $f(x) \\to -\\infty$, gdy $x \\to 1^+$: $f(x) \\to +\\infty$",
+        "why": "Dla $x$ bliskich 1: licznik $|x| \\approx 1 > 0$, mianownik $x-1$ zmienia znak przy przejściu przez 1."
+      },
+      {
+        "step": 5,
+        "hint": "Jak zachowuje się funkcja dla bardzo dużych wartości x?",
+        "expression": "Asymptota pozioma: $y = 1$ dla $x > 0$ oraz $y = -1$ dla $x < 0$",
+        "explanation": "Dla dużych $|x|$: $\\frac{|x|}{x-1} \\approx \\frac{|x|}{x}$",
+        "why": "Gdy $x \\to +\\infty$: $\\frac{x}{x-1} \\to 1$, gdy $x \\to -\\infty$: $\\frac{-x}{x-1} \\to -1$. Funkcja ma różne asymptoty poziome!"
+      },
+      {
+        "step": 6,
+        "hint": "Czy funkcja jest parzysta, nieparzysta, czy żadna z tych?",
+        "expression": "Funkcja nie jest ani parzysta, ani nieparzysta",
+        "explanation": "$f(-x) = \\frac{|-x|}{-x-1} = \\frac{x}{-x-1} \\neq f(x)$ i $f(-x) \\neq -f(x)$"
+      },
+      {
+        "step": 7,
+        "hint": "Na których przedziałach funkcja rośnie, a na których maleje?",
+        "expression": "Funkcja malejąca na $(-\\infty, 0)$, $(0, 1)$ i $(1, +\\infty)$",
+        "explanation": "Analiza monotoniczności przez badanie znaku pochodnej na każdym przedziale ciągłości"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $\\mathbb{R} \\setminus \\{1\\}$",
+      "Asymptota pionowa: $x = 1$",
+      "Asymptoty poziome: $y = 1$ dla $x > 0$, $y = -1$ dla $x < 0$",
+      "Punkt przecięcia z osiami: $(0, 0)$",
+      "Funkcja malejąca na całej dziedzinie"
+    ],
+    "parameters": {
+      "domain": "$\\mathbb{R} \\setminus \\{1\\}$",
+      "vertical_asymptote": "$x = 1$",
+      "horizontal_asymptotes": "$y = 1$ (dla $x > 0$), $y = -1$ (dla $x < 0$)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 4
+      }
+    },
+    "timestamp": "2025-09-25T11:20:40.236Z"
   }
 ]

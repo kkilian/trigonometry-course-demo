@@ -12,13 +12,7 @@ import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
 import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
 import RationalEquationsWordProblemsStartHere from './RationalEquationsWordProblemsStartHere';
-import WelcomeScreenMatura from './WelcomeScreenMatura';
-import MaturaWybierzScreen from './MaturaWybierzScreen';
-import Marzec2025Podstawa from './Marzec2025Podstawa';
-import Kwiecien2025Podstawa from './Kwiecien2025Podstawa';
-import Maj2025Podstawa from './Maj2025Podstawa';
-import Czerwiec2025Podstawa from './Czerwiec2025Podstawa';
-import Sierpien2025Podstawa from './Sierpien2025Podstawa';
+import MaturaIntegration from '../features/matura/MaturaIntegration';
 import powersProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -48,11 +42,6 @@ import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
 import kombinatorykaRozszerzenieProblems from '../data/kombinatoryka-rozszerzenie-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
-import maturaMarzec2025PodstawaProblems from '../data/matura/podstawa/marzec2025podstawa/maturamarzec2025podstawa_multistep.json';
-import maturaKwiecien2025PodstawaProblems from '../data/matura/podstawa/kwiecien2025podstawa/maturakwiecien2025podstawa_multistep.json';
-import maturaMaj2025PodstawaProblems from '../data/matura/podstawa/maj2025podstawa/maturamaj2025podstawa_multistep.json';
-import maturaCzerwiec2025PodstawaProblems from '../data/matura/podstawa/czerwiec2025podstawa/maturaczerwiec2025podstawa_multistep.json';
-import maturaSierpien2025PodstawaProblems from '../data/matura/podstawa/sierpien2025podstawa/maturasierpien2025podstawa_multistep.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -91,11 +80,6 @@ const TrigonometryCourse = () => {
   const [completedElementaryFractionsProblems, setCompletedElementaryFractionsProblems] = useState(new Set());
   const [completedRationalEquationsWordProblems, setCompletedRationalEquationsWordProblems] = useState(new Set());
   const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
-  const [completedMaturaMarzec2025PodstawaProblems, setCompletedMaturaMarzec2025PodstawaProblems] = useState(new Set());
-  const [completedMaturaKwiecien2025PodstawaProblems, setCompletedMaturaKwiecien2025PodstawaProblems] = useState(new Set());
-  const [completedMaturaMaj2025PodstawaProblems, setCompletedMaturaMaj2025PodstawaProblems] = useState(new Set());
-  const [completedMaturaCzerwiec2025PodstawaProblems, setCompletedMaturaCzerwiec2025PodstawaProblems] = useState(new Set());
-  const [completedMaturaSierpien2025PodstawaProblems, setCompletedMaturaSierpien2025PodstawaProblems] = useState(new Set());
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -144,11 +128,6 @@ const TrigonometryCourse = () => {
     if (mode === 'kombinatoryka-rozszerzenie') return kombinatorykaRozszerzenieProblems;
     if (mode === 'rational-equations-word-problems') return rationalEquationsWordProblems;
     if (mode === 'statystyka') return statystykaProblems;
-    if (mode === 'matura-marzec-2025-podstawa') return maturaMarzec2025PodstawaProblems;
-    if (mode === 'matura-kwiecien-2025-podstawa') return maturaKwiecien2025PodstawaProblems;
-    if (mode === 'matura-maj-2025-podstawa') return maturaMaj2025PodstawaProblems;
-    if (mode === 'matura-czerwiec-2025-podstawa') return maturaCzerwiec2025PodstawaProblems;
-    if (mode === 'matura-sierpien-2025-podstawa') return maturaSierpien2025PodstawaProblems;
     return [];
   };
   
@@ -178,11 +157,6 @@ const TrigonometryCourse = () => {
     if (mode === 'rational-equations-word-problems') return completedRationalEquationsWordProblems;
     if (mode === 'kombinatoryka') return completedPowersProblems; // kombinatoryka uses the same as powers
     if (mode === 'kombinatoryka-rozszerzenie') return completedKombinatorykRozszerzenieProblems;
-    if (mode === 'matura-marzec-2025-podstawa') return completedMaturaMarzec2025PodstawaProblems;
-    if (mode === 'matura-kwiecien-2025-podstawa') return completedMaturaKwiecien2025PodstawaProblems;
-    if (mode === 'matura-maj-2025-podstawa') return completedMaturaMaj2025PodstawaProblems;
-    if (mode === 'matura-czerwiec-2025-podstawa') return completedMaturaCzerwiec2025PodstawaProblems;
-    if (mode === 'matura-sierpien-2025-podstawa') return completedMaturaSierpien2025PodstawaProblems;
     return completedPowersProblems;
   };
   
@@ -235,16 +209,6 @@ const TrigonometryCourse = () => {
       setCompletedPowersProblems(newSet); // kombinatoryka uses the same as powers
     } else if (mode === 'kombinatoryka-rozszerzenie') {
       setCompletedKombinatorykRozszerzenieProblems(newSet);
-    } else if (mode === 'matura-marzec-2025-podstawa') {
-      setCompletedMaturaMarzec2025PodstawaProblems(newSet);
-    } else if (mode === 'matura-kwiecien-2025-podstawa') {
-      setCompletedMaturaKwiecien2025PodstawaProblems(newSet);
-    } else if (mode === 'matura-maj-2025-podstawa') {
-      setCompletedMaturaMaj2025PodstawaProblems(newSet);
-    } else if (mode === 'matura-czerwiec-2025-podstawa') {
-      setCompletedMaturaCzerwiec2025PodstawaProblems(newSet);
-    } else if (mode === 'matura-sierpien-2025-podstawa') {
-      setCompletedMaturaSierpien2025PodstawaProblems(newSet);
     } else {
       setCompletedPowersProblems(newSet);
     }
@@ -521,45 +485,6 @@ const TrigonometryCourse = () => {
       }
     }
 
-    // Load matura marzec 2025 podstawa progress
-    const savedMaturaMarzec2025Podstawa = localStorage.getItem('completedMaturaMarzec2025PodstawaProblems');
-    if (savedMaturaMarzec2025Podstawa) {
-      try {
-        setCompletedMaturaMarzec2025PodstawaProblems(new Set(JSON.parse(savedMaturaMarzec2025Podstawa)));
-      } catch (e) {
-        console.error('Error loading matura marzec 2025 podstawa progress:', e);
-      }
-    }
-
-    // Load matura kwiecien 2025 podstawa progress
-    const savedMaturaKwiecien2025Podstawa = localStorage.getItem('completedMaturaKwiecien2025PodstawaProblems');
-    if (savedMaturaKwiecien2025Podstawa) {
-      try {
-        setCompletedMaturaKwiecien2025PodstawaProblems(new Set(JSON.parse(savedMaturaKwiecien2025Podstawa)));
-      } catch (e) {
-        console.error('Error loading matura kwiecien 2025 podstawa progress:', e);
-      }
-    }
-
-    // Load matura maj 2025 podstawa progress
-    const savedMaturaMaj2025Podstawa = localStorage.getItem('completedMaturaMaj2025PodstawaProblems');
-    if (savedMaturaMaj2025Podstawa) {
-      try {
-        setCompletedMaturaMaj2025PodstawaProblems(new Set(JSON.parse(savedMaturaMaj2025Podstawa)));
-      } catch (e) {
-        console.error('Error loading matura maj 2025 podstawa progress:', e);
-      }
-    }
-
-    // Load matura czerwiec 2025 podstawa progress
-    const savedMaturaCzerwiec2025Podstawa = localStorage.getItem('completedMaturaCzerwiec2025PodstawaProblems');
-    if (savedMaturaCzerwiec2025Podstawa) {
-      try {
-        setCompletedMaturaCzerwiec2025PodstawaProblems(new Set(JSON.parse(savedMaturaCzerwiec2025Podstawa)));
-      } catch (e) {
-        console.error('Error loading matura czerwiec 2025 podstawa progress:', e);
-      }
-    }
 
   }, []);
 
@@ -598,25 +523,6 @@ const TrigonometryCourse = () => {
     localStorage.setItem('completedKombinatorykRozszerzenieProblems', JSON.stringify([...completedKombinatorykRozszerzenieProblems]));
   }, [completedKombinatorykRozszerzenieProblems]);
 
-  // Save matura marzec 2025 podstawa progress
-  useEffect(() => {
-    localStorage.setItem('completedMaturaMarzec2025PodstawaProblems', JSON.stringify([...completedMaturaMarzec2025PodstawaProblems]));
-  }, [completedMaturaMarzec2025PodstawaProblems]);
-
-  // Save matura kwiecien 2025 podstawa progress
-  useEffect(() => {
-    localStorage.setItem('completedMaturaKwiecien2025PodstawaProblems', JSON.stringify([...completedMaturaKwiecien2025PodstawaProblems]));
-  }, [completedMaturaKwiecien2025PodstawaProblems]);
-
-  // Save matura maj 2025 podstawa progress
-  useEffect(() => {
-    localStorage.setItem('completedMaturaMaj2025PodstawaProblems', JSON.stringify([...completedMaturaMaj2025PodstawaProblems]));
-  }, [completedMaturaMaj2025PodstawaProblems]);
-
-  // Save matura czerwiec 2025 podstawa progress
-  useEffect(() => {
-    localStorage.setItem('completedMaturaCzerwiec2025PodstawaProblems', JSON.stringify([...completedMaturaCzerwiec2025PodstawaProblems]));
-  }, [completedMaturaCzerwiec2025PodstawaProblems]);
 
 
   const handleSelectProblem = (problem) => {
@@ -823,10 +729,9 @@ const TrigonometryCourse = () => {
   }
 
   // Render matura 2025 topics menu
-  if (mode === 'matura-2025-topics') {
+  if (mode === 'matura-2025-topics' || mode === 'matura-integration') {
     return (
-      <WelcomeScreenMatura
-        onSelectSession={(session) => setMode(session)}
+      <MaturaIntegration
         onBack={handleBackToWelcome}
       />
     );
@@ -901,46 +806,6 @@ const TrigonometryCourse = () => {
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
           onBack={handleBackToWelcome}
-        />
-      ) : mode === 'matura-marzec-2025-podstawa' ? (
-        // Matura Marzec 2025 Podstawa
-        <Marzec2025Podstawa
-          problems={problems}
-          onSelectProblem={handleSelectProblem}
-          completedProblems={getCurrentCompleted()}
-          onBack={() => setMode('matura-2025-topics')}
-        />
-      ) : mode === 'matura-kwiecien-2025-podstawa' ? (
-        // Matura Kwiecień 2025 Podstawa
-        <Kwiecien2025Podstawa
-          problems={problems}
-          onSelectProblem={handleSelectProblem}
-          completedProblems={getCurrentCompleted()}
-          onBack={() => setMode('matura-2025-topics')}
-        />
-      ) : mode === 'matura-maj-2025-podstawa' ? (
-        // Matura Maj 2025 Podstawa
-        <Maj2025Podstawa
-          problems={problems}
-          onSelectProblem={handleSelectProblem}
-          completedProblems={getCurrentCompleted()}
-          onBack={() => setMode('matura-2025-topics')}
-        />
-      ) : mode === 'matura-czerwiec-2025-podstawa' ? (
-        // Matura Czerwiec 2025 Podstawa
-        <Czerwiec2025Podstawa
-          problems={problems}
-          onSelectProblem={handleSelectProblem}
-          completedProblems={getCurrentCompleted()}
-          onBack={() => setMode('matura-2025-topics')}
-        />
-      ) : mode === 'matura-sierpien-2025-podstawa' ? (
-        // Matura Sierpień 2025 Podstawa
-        <Sierpien2025Podstawa
-          problems={problems}
-          onSelectProblem={handleSelectProblem}
-          completedProblems={getCurrentCompleted()}
-          onBack={() => setMode('matura-2025-topics')}
         />
       ) : (
         <ProblemList

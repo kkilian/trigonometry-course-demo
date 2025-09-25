@@ -39,26 +39,26 @@
       {
         "step": 2,
         "hint": "Ile wynosi przybliżenie $\\sqrt{2}$?",
-        "expression": "$\\sqrt{2} \\approx 1.414$",
+        "expression": "$\\sqrt{2} \\approx 1{,}414$",
         "explanation": "Używamy przybliżenia do sprawdzenia znaków",
-        "why": "Znając $\\sqrt{2} \\approx 1.414$ możemy sprawdzić znaki wyrażeń pod wartościami bezwzględnymi"
+        "why": "Znając $\\sqrt{2} \\approx 1{,}414$ możemy sprawdzić znaki wyrażeń pod wartościami bezwzględnymi"
       },
       {
         "step": 3,
         "hint": "Jaki jest znak wyrażenia $3-2\\sqrt{2}$?",
-        "expression": "$3-2\\sqrt{2} \\approx 3-2(1.414) = 3-2.828 = 0.172 > 0$",
+        "expression": "$3-2\\sqrt{2} \\approx 3-2(1{,}414) = 3-2{,}828 = 0{,}172 > 0$",
         "explanation": "Pierwsze wyrażenie jest dodatnie"
       },
       {
         "step": 4,
         "hint": "Jaki jest znak wyrażenia $6-3\\sqrt{2}$?",
-        "expression": "$6-3\\sqrt{2} \\approx 6-3(1.414) = 6-4.242 = 1.758 > 0$",
+        "expression": "$6-3\\sqrt{2} \\approx 6-3(1{,}414) = 6-4{,}242 = 1{,}758 > 0$",
         "explanation": "Drugie wyrażenie jest dodatnie"
       },
       {
         "step": 5,
         "hint": "Jaki jest znak wyrażenia $1-\\sqrt{2}$?",
-        "expression": "$1-\\sqrt{2} \\approx 1-1.414 = -0.414 < 0$",
+        "expression": "$1-\\sqrt{2} \\approx 1-1{,}414 = -0{,}414 < 0$",
         "explanation": "Trzecie wyrażenie jest ujemne"
       },
       {
@@ -1507,7 +1507,7 @@
             },
             {
               "id": "C",
-              "text": "Tylko dla niektórych wartości x",
+              "text": "Tylko dla niektórych wartości $x$",
               "feedback": "Nie - bez miejsc zerowych parabola ma stały znak",
               "is_correct": false
             }
@@ -1722,7 +1722,7 @@
       },
       {
         "step": 2,
-        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
+        "hint": "Jak wykorzystać punkt $A=(4,15)$ do znalezienia parametru $a$?",
         "expression": "$15 = a(4 - 2)^2 + 27$",
         "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji"
       },
@@ -1734,13 +1734,13 @@
       },
       {
         "step": 4,
-        "hint": "Jaka jest wartość współczynnika a?",
+        "hint": "Jaka jest wartość współczynnika $a$?",
         "expression": "$4a = 15 - 27 = -12$, więc $a = -3$",
-        "explanation": "Rozwiązujemy równanie względem a"
+        "explanation": "Rozwiązujemy równanie względem $a$"
       },
       {
         "step": 5,
-        "hint": "Jak wygląda funkcja w postaci kanonicznej po podstawieniu a?",
+        "hint": "Jak wygląda funkcja w postaci kanonicznej po podstawieniu $a$?",
         "expression": "$g(x) = -3(x - 2)^2 + 27$",
         "explanation": "Mamy pełny wzór w postaci kanonicznej"
       },
@@ -1767,7 +1767,7 @@
         "step": 9,
         "hint": "Jak rozłożyć trójmian $x^2 - 4x - 5$ na czynniki?",
         "expression": "$x^2 - 4x - 5 = (x - 5)(x + 1)$",
-        "explanation": "Szukamy dwóch liczb, których iloczyn to -5, a suma to -4: to są -5 i 1",
+        "explanation": "Szukamy dwóch liczb, których iloczyn to $-5$, a suma to $-4$: to są $-5$ i $1$",
         "why": "Sprawdzenie: $(x-5)(x+1) = x^2 + x - 5x - 5 = x^2 - 4x - 5$ ✓"
       },
       {
@@ -1810,13 +1810,13 @@
       },
       {
         "step": 2,
-        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
+        "hint": "Jak wykorzystać punkt $A=(4,15)$ do znalezienia parametru $a$?",
         "expression": "$15 = a(4 - 2)^2 + 27$",
         "explanation": "Podstawiamy współrzędne punktu A do równania funkcji"
       },
       {
         "step": 3,
-        "hint": "Co możesz powiedzieć o znaku parametru a?",
+        "hint": "Co możesz powiedzieć o znaku parametru $a$?",
         "expression": "$15 = 4a + 27$, więc $4a = -12$, czyli $a = -3$",
         "explanation": "Parametr $a$ jest ujemny",
         "why": "Znak parametru $a$ decyduje o kierunku ramion paraboli: $a > 0$ - ramiona w górę, $a < 0$ - ramiona w dół."
@@ -1830,7 +1830,7 @@
       },
       {
         "step": 5,
-        "hint": "W którym przedziale względem x = 2 funkcja będzie rosnąca?",
+        "hint": "W którym przedziale względem $x = 2$ funkcja będzie rosnąca?",
         "expression": "Funkcja rosnąca w przedziale $(-\\infty, 2]$",
         "explanation": "Parabola o ramionach w dół rośnie do wierzchołka, potem maleje"
       }
@@ -1869,9 +1869,9 @@
       },
       {
         "step": 2,
-        "hint": "Jak wykorzystać punkt A=(4,15) do znalezienia parametru a?",
+        "hint": "Jak wykorzystać punkt $A=(4,15)$ do znalezienia parametru $a$?",
         "expression": "$15 = a(4 - 2)^2 + 27$",
-        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji g(x)"
+        "explanation": "Podstawiamy współrzędne punktu A do wzoru funkcji $g(x)$"
       },
       {
         "step": 3,
@@ -1881,28 +1881,28 @@
       },
       {
         "step": 4,
-        "hint": "Jaka jest wartość współczynnika a?",
+        "hint": "Jaka jest wartość współczynnika $a$?",
         "expression": "$4a = 15 - 27 = -12$, więc $a = -3$",
-        "explanation": "Rozwiązujemy równanie względem a"
+        "explanation": "Rozwiązujemy równanie względem $a$"
       },
       {
         "step": 5,
-        "hint": "Jak teraz wygląda kompletny wzór funkcji g(x)?",
+        "hint": "Jak teraz wygląda kompletny wzór funkcji $g(x)$?",
         "expression": "$g(x) = -3(x - 2)^2 + 27$",
-        "explanation": "Podstawiamy znalezioną wartość a do postaci kanonicznej"
+        "explanation": "Podstawiamy znalezioną wartość $a$ do postaci kanonicznej"
       },
       {
         "step": 6,
-        "hint": "Co oznacza zapis h(x) = g(x+5) w kontekście przekształceń funkcji?",
+        "hint": "Co oznacza zapis $h(x) = g(x+5)$ w kontekście przekształceń funkcji?",
         "expression": "$h(x) = g(x + 5) = -3((x + 5) - 2)^2 + 27$",
-        "explanation": "Podstawiamy (x+5) w miejsce x w funkcji g",
+        "explanation": "Podstawiamy $(x+5)$ w miejsce $x$ w funkcji $g$",
         "why": "Przekształcenie f(x+a) przesuwa wykres o 'a' jednostek w lewo. Tu x+5 oznacza przesunięcie o 5 w lewo."
       },
       {
         "step": 7,
         "hint": "Jak uprościć wyrażenie w nawiasie kwadratowym?",
         "expression": "$h(x) = -3(x + 5 - 2)^2 + 27 = -3(x + 3)^2 + 27$",
-        "explanation": "Upraszczamy wyrażenie w nawiasie: (x+5)-2 = x+3"
+        "explanation": "Upraszczamy wyrażenie w nawiasie: $(x+5)-2 = x+3$"
       }
     ],
     "solutions": [
@@ -2292,7 +2292,7 @@
         "step": 2,
         "hint": "Jak wykorzystać dane $a_{25} = 73$ i $a_{34} = 100$?",
         "expression": "$a_n = a_1 + (n-1)r$",
-        "explanation": "Wzór ogólny na n-ty wyraz ciągu arytmetycznego",
+        "explanation": "Wzór ogólny na $n$-ty wyraz ciągu arytmetycznego",
         "why": "Ten wzór pozwala zapisać równania dla znanych wyrazów i znaleźć $a_1$ oraz $r$"
       },
       {
@@ -2601,7 +2601,7 @@
       },
       {
         "step": 2,
-        "hint": "Jaki jest związek między promieniem okręgu opisanego a bokiem trójkąta równobocznego?",
+        "hint": "Jaki jest związek między promieniem okręgu opisanego $a$ bokiem trójkąta równobocznego?",
         "expression": "Dla trójkąta równobocznego: $R = \\frac{a}{\\sqrt{3}}$",
         "explanation": "Wzór na promień okręgu opisanego na trójkącie równobocznym o boku $a$",
         "why": "Ten wzór wynika z faktu, że środek okręgu opisanego pokrywa się ze środkiem ciężkości trójkąta równobocznego, a odległość od środka do wierzchołka to $\\frac{2}{3}$ wysokości."
@@ -3424,9 +3424,9 @@
       },
       {
         "step": 2,
-        "hint": "Jaka jest teraz postać prostej k?",
+        "hint": "Jaka jest teraz postać prostej $k$?",
         "expression": "$y = (\\sqrt{3} - 1)x + b$",
-        "explanation": "Znamy już współczynnik kierunkowy, pozostaje wyznaczyć wyraz wolny b",
+        "explanation": "Znamy już współczynnik kierunkowy, pozostaje wyznaczyć wyraz wolny $b$",
         "why": "Równoległość oznacza identyczny współczynnik kierunkowy. Teraz musimy użyć waruneku przechodzenia przez punkt."
       },
       {
@@ -3451,7 +3451,7 @@
             },
             {
               "id": "C",
-              "text": "Punkt leży na osi x lub y",
+              "text": "Punkt leży na osi $x$ lub $y$",
               "feedback": "Nie - punkt ma obie współrzędne niezerowe.",
               "is_correct": false
             }
@@ -3540,7 +3540,7 @@
         "explanation": "Wzór na współczynnik kierunkowy prostej",
         "why": "Tangens kąta to stosunek przeciwprostokątnej do przyprostokątnej, co odpowiada nachyleniu prostej.",
         "interactive_choice": {
-          "prompt": "Jak obliczyć współczynnik kierunkowy prostej nachylonej pod kątem α do osi x?",
+          "prompt": "Jak obliczyć współczynnik kierunkowy prostej nachylonej pod kątem $α$ do osi $x$?",
           "options": [
             {
               "id": "A",
@@ -4233,7 +4233,7 @@
       {
         "step": 7,
         "hint": "Ile par spełnia warunki 'suma nieparzysta i iloczyn nieparzysty'?",
-        "expression": "Liczba par gdzie suma i iloczyn są nieparzyste = 0",
+        "expression": "Liczba par gdzie suma i iloczyn są nieparzyste $= 0$",
         "explanation": "Warunki są matematycznie sprzeczne",
         "interactive_choice": {
           "prompt": "Czy istnieją pary liczb gdzie jednocześnie suma i iloczyn są nieparzyste?",
@@ -4472,7 +4472,7 @@
             {
               "id": "A",
               "text": "Suma = średnia × liczba elementów",
-              "feedback": "Doskonale! To podstawowy wzór: suma = 3,75 × 8 = 30",
+              "feedback": "Doskonale! To podstawowy wzór: suma $= 3{,}75 \times 8 = 30$",
               "is_correct": true
             },
             {
@@ -4495,11 +4495,11 @@
         "step": 3,
         "hint": "Jaka jest suma znanych liczb w zestawie?",
         "expression": "$1 + 2 + 3 + 5 + 6 + 9 = 26$",
-        "explanation": "Dodajemy wszystkie liczby oprócz x i y"
+        "explanation": "Dodajemy wszystkie liczby oprócz $x$ i $y$"
       },
       {
         "step": 4,
-        "hint": "Jak znajdziesz sumę x + y?",
+        "hint": "Jak znajdziesz sumę $x + y$?",
         "expression": "$26 + x + y = 30$, więc $x + y = 4$",
         "explanation": "Odejmujemy sumę znanych liczb od sumy całkowitej",
         "why": "To kluczowa informacja - suma x i y wynosi 4. Teraz musimy znaleźć medianę zestawu {x, y}."
@@ -4536,15 +4536,15 @@
       },
       {
         "step": 6,
-        "hint": "Jaka jest mediana zestawu x, y?",
+        "hint": "Jaka jest mediana zestawu $x, y$?",
         "expression": "Mediana $= \\frac{x + y}{2} = \\frac{4}{2} = 2$",
-        "explanation": "Podstawiamy znaną sumę x + y = 4"
+        "explanation": "Podstawiamy znaną sumę $x + y = 4$"
       },
       {
         "step": 7,
         "hint": "Która odpowiedź jest poprawna?",
         "expression": "Odpowiedź: A. 2",
-        "explanation": "Mediana zestawu x, y wynosi 2",
+        "explanation": "Mediana zestawu $x, y$ wynosi $2$",
         "interactive_choice": {
           "prompt": "Mediana zestawu {x, y} wynosi 2. Która odpowiedź jest poprawna?",
           "options": [
@@ -4567,7 +4567,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Mediana zestawu {x, y} to średnia arytmetyczna tych liczb, czyli (x+y)/2 = 4/2 = 2."
+          "explanation_after": "Mediana zestawu $\\{x, y\\}$ to średnia arytmetyczna tych liczb, czyli $\\frac{x+y}{2} = \\frac{4}{2} = 2$."
         }
       }
     ],
@@ -4601,7 +4601,7 @@
         "step": 1,
         "hint": "Jaki typ zadania mamy do rozwiązania?",
         "expression": "Szukamy maksimum funkcji $P(x) = -0,35x^2 + 1,484x + 33,42696$",
-        "explanation": "To zadanie optymalizacyjne - szukamy wartości x, dla której funkcja osiąga maksimum",
+        "explanation": "To zadanie optymalizacyjne - szukamy wartości $x$, dla której funkcja osiąga maksimum",
         "why": "Funkcja kwadratowa z ujemnym współczynnikiem przy $x^2$ ma maksimum w wierzchołku paraboli."
       },
       {
@@ -4672,15 +4672,15 @@
       },
       {
         "step": 5,
-        "hint": "Oblicz współrzędną x wierzchołka paraboli",
+        "hint": "Oblicz współrzędną $x$ wierzchołka paraboli",
         "expression": "$x_w = -\\frac{1,484}{2 \\cdot (-0,35)} = -\\frac{1,484}{-0,7} = \\frac{1,484}{0,7}$",
-        "explanation": "Podstawiamy do wzoru na współrzędną x wierzchołka"
+        "explanation": "Podstawiamy do wzoru na współrzędną $x$ wierzchołka"
       },
       {
         "step": 6,
         "hint": "Wykonaj dzielenie, aby otrzymać dokładną wartość",
         "expression": "$x_w = \\frac{1,484}{0,7} = \\frac{1484}{700} = \\frac{371}{175} = 2,12$",
-        "explanation": "Obliczamy dokładną wartość współrzędnej x wierzchołka"
+        "explanation": "Obliczamy dokładną wartość współrzędnej $x$ wierzchołka"
       },
       {
         "step": 7,
@@ -4714,9 +4714,9 @@
       },
       {
         "step": 8,
-        "hint": "Oblicz maksymalną liczbę palet podstawiając x = 2,12",
+        "hint": "Oblicz maksymalną liczbę palet podstawiając $x = 2{,}12$",
         "expression": "$P(2,12) = -0,35 \\cdot (2,12)^2 + 1,484 \\cdot 2,12 + 33,42696$",
-        "explanation": "Podstawiamy optymalną wartość x do funkcji P(x)"
+        "explanation": "Podstawiamy optymalną wartość $x$ do funkcji $P(x)$"
       },
       {
         "step": 9,

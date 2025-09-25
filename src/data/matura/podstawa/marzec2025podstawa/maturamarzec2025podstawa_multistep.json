@@ -1235,7 +1235,7 @@
             {
               "id": "C",
               "text": "Nie, bo $-\\frac{5}{2} = -\\frac{1}{2}$",
-              "feedback": "Nie - to różne liczby: $-\\frac{5}{2} = -2.5$ a $-\\frac{1}{2} = -0.5$",
+              "feedback": "Nie - to różne liczby: $-\\frac{5}{2} = -2{,}5$ a $-\\frac{1}{2} = -0{,}5$",
               "is_correct": false
             }
           ],
@@ -1604,179 +1604,507 @@
     },
     "timestamp": "2025-09-23T10:27:15.387Z"
   },
-  {
-    "id": "quadratic_function_analysis",
-    "topic": "Funkcje kwadratowe - analiza właściwości",
-    "difficulty": 4,
-    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0,6)$. Osią symetrii tej funkcji jest $x=\\frac{1}{2}$. Znajdź wzór funkcji $g$, jej zbiór wartości i rozwiąż zadania 11.1-11.4.",
-    "image": "/zad11.png",
+ {
+    "id": "quadratic_from_properties",
+    "topic": "Funkcja kwadratowa - wyznaczanie wzoru z własności",
+    "difficulty": 3,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) dana jest funkcja kwadratowa g określona dla każdej liczby rzeczywistej x. Jednym z miejsc zerowych funkcji g jest liczba (-2), a także funkcja g przecina oś y w punkcie (0,6). Osią symetrii tej funkcji jest x = 1/2. Fragment wykresu funkcji y = g(x) przedstawiono na rysunku powyżej.",
     "steps": [
       {
         "step": 1,
-        "hint": "Jakie informacje mamy o funkcji kwadratowej $g$?",
-        "expression": "Miejsce zerowe: $x = -2$, punkt przecięcia z osią $y$: $(0, 6)$, oś symetrii: $x = \\frac{1}{2}$",
-        "explanation": "Zbieramy wszystkie dane o funkcji kwadratowej"
+        "hint": "Co wiemy o miejscach zerowych funkcji kwadratowej względem osi symetrii?",
+        "expression": "Oś symetrii: $x = \\frac{1}{2}$, pierwsze miejsce zerowe: $x_1 = -2$",
+        "explanation": "Zapisujemy dane z treści zadania"
       },
       {
         "step": 2,
-        "hint": "Jak wykorzystać oś symetrii do znalezienia drugiego miejsca zerowego?",
-        "expression": "Drugie miejsce zerowe: $x = 3$, bo $\\frac{-2 + 3}{2} = \\frac{1}{2}$",
-        "explanation": "Wykorzystujemy symetrię paraboli względem osi $x = \\frac{1}{2}$",
+        "hint": "Jak znaleźć drugie miejsce zerowe korzystając z osi symetrii?",
+        "expression": "$\\frac{-2 + x_2}{2} = \\frac{1}{2}$",
+        "explanation": "Korzystamy z faktu, że oś symetrii jest średnią miejsc zerowych",
         "interactive_choice": {
-          "prompt": "Skoro oś symetrii to $x = \\frac{1}{2}$, a jedno miejsce zerowe to $x = -2$, jak znajdziesz drugie?",
+          "prompt": "Jak obliczyć drugie miejsce zerowe, znając oś symetrii i pierwsze miejsce zerowe?",
           "options": [
             {
               "id": "A",
-              "text": "Drugie miejsce zerowe to $x = 3$, bo $\\frac{-2 + 3}{2} = \\frac{1}{2}$",
-              "feedback": "Doskonale! Miejsca zerowe są symetryczne względem osi symetrii.",
+              "text": "Oś symetrii jest średnią arytmetyczną miejsc zerowych: $\\frac{x_1 + x_2}{2} = \\frac{1}{2}$",
+              "feedback": "Doskonale! To kluczowa własność funkcji kwadratowej.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Drugie miejsce zerowe to $x = 2$, bo jest po drugiej stronie zera",
-              "feedback": "Nie - musisz użyć osi symetrii $x = \\frac{1}{2}$, nie $x = 0$.",
-              "is_correct": false
+              "text": "Drugie miejsce zerowe jest symetryczne względem osi: $x_2 = 2 \\cdot \\frac{1}{2} - (-2)$",
+              "feedback": "Dobrze! To inny sposób zapisu tej samej zależności.",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "Drugie miejsce zerowe to $x = \\frac{5}{2}$, bo $-2 + \\frac{5}{2} = \\frac{1}{2}$",
-              "feedback": "Błąd w obliczeniach - sprawdź wzór na oś symetrii.",
+              "text": "Drugie miejsce zerowe: $x_2 = \\frac{1}{2} + 2$",
+              "feedback": "Niezupełnie - trzeba uwzględnić odległość od osi symetrii.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Oś symetrii paraboli przechodzi przez środek odcinka łączącego miejsca zerowe."
+          "explanation_after": "Oś symetrii przechodzi dokładnie w połowie między miejscami zerowymi."
         }
       },
       {
         "step": 3,
-        "hint": "Jak zapisać funkcję kwadratową znając jej miejsca zerowe?",
-        "expression": "$g(x) = a(x + 2)(x - 3)$ dla pewnego $a \\neq 0$",
-        "explanation": "Postać iloczynowa funkcji kwadratowej z miejscami zerowymi $-2$ i $3$",
-        "why": "To standardowa postać gdy znamy miejsca zerowe. Współczynnik $a$ określa orientację i 'szerokość' paraboli."
+        "hint": "Jak rozwiązać to równanie aby znaleźć drugie miejsce zerowe?",
+        "expression": "$-2 + x_2 = 1$ ⇒ $x_2 = 3$",
+        "explanation": "Mnożymy obie strony przez 2 i rozwiązujemy równanie",
+        "why": "Odległość od osi symetrii do pierwszego miejsca zerowego wynosi 2.5, więc drugie będzie w tej samej odległości po drugiej stronie."
       },
       {
         "step": 4,
-        "hint": "Jak wyznaczyć współczynnik $a$ używając punktu $(0, 6)$?",
-        "expression": "$g(0) = a(0 + 2)(0 - 3) = a \\cdot 2 \\cdot (-3) = -6a = 6$",
-        "explanation": "Podstawiamy punkt $(0, 6)$ do wzoru funkcji"
+        "hint": "Jak zapisać postać iloczynową funkcji kwadratowej znając miejsca zerowe?",
+        "expression": "$g(x) = a(x + 2)(x - 3)$",
+        "explanation": "Postać iloczynowa z miejscami zerowymi -2 i 3"
       },
       {
         "step": 5,
-        "hint": "Jaka jest wartość współczynnika $a$?",
-        "expression": "$a = -1$",
-        "explanation": "Z równania $-6a = 6$ otrzymujemy $a = -1$"
+        "hint": "Jak wykorzystać informację o punkcie przecięcia z osią y?",
+        "expression": "$g(0) = a(0 + 2)(0 - 3) = 6$",
+        "explanation": "Podstawiamy x=0 do postaci iloczynowej",
+        "interactive_choice": {
+          "prompt": "Którą wartość funkcji znamy z punktu przecięcia z osią y?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$g(0) = 6$ - punkt (0,6) leży na wykresie",
+              "feedback": "Dokładnie! To pozwoli nam wyznaczyć współczynnik a.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$g(6) = 0$ - to byłoby miejsce zerowe",
+              "feedback": "Nie - punkt przecięcia z OY ma x=0, y=6",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Pochodna w punkcie (0,6) wynosi 0",
+              "feedback": "To nieprawda - tylko w wierzchołku pochodna = 0",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Punkt przecięcia z osią OY zawsze ma współrzędną x=0."
+        }
       },
       {
         "step": 6,
-        "hint": "Jaki jest wzór funkcji $g$ w postaci iloczynowej?",
-        "expression": "$g(x) = -(x + 2)(x - 3)$",
-        "explanation": "Podstawiamy $a = -1$ do postaci iloczynowej"
+        "hint": "Jak obliczyć współczynnik a z tego równania?",
+        "expression": "$a \\cdot 2 \\cdot (-3) = 6$ ⇒ $-6a = 6$ ⇒ $a = -1$",
+        "explanation": "Rozwiązujemy równanie liniowe"
       },
       {
         "step": 7,
-        "hint": "Jak rozwinąć postać iloczynową do postaci kanonicznej?",
-        "expression": "$g(x) = -(x^2 - x - 6) = -x^2 + x + 6$",
-        "explanation": "Rozwijamy iloczyn i stosujemy minus",
-        "interactive_choice": {
-          "prompt": "Którą metodą najlepiej rozwinąć $-(x + 2)(x - 3)$?",
-          "options": [
-            {
-              "id": "A",
-              "text": "Najpierw pomnożyć nawiasy, potem zmienić znaki",
-              "feedback": "Dobra strategia! $(x+2)(x-3) = x^2 - x - 6$, więc $g(x) = -x^2 + x + 6$",
-              "is_correct": true
-            },
-            {
-              "id": "B",
-              "text": "Rozłożyć minus na każdy składnik osobno",
-              "feedback": "Skomplikowane i podatne na błędy - lepiej najpierw pomnożyć nawiasy.",
-              "is_correct": false
-            },
-            {
-              "id": "C",
-              "text": "Użyć wzoru $(a+b)(c+d) = ac + ad + bc + bd$",
-              "feedback": "Możliwe, ale dla dwóch nawiasów prostsze jest bezpośrednie mnożenie.",
-              "is_correct": false
-            }
-          ],
-          "explanation_after": "Najprościej: pomnóż nawiasy, potem zastosuj minus do całego wyniku."
-        }
+        "hint": "Jaki jest ostateczny wzór funkcji w postaci iloczynowej?",
+        "expression": "$g(x) = -(x + 2)(x - 3)$",
+        "explanation": "Podstawiamy a = -1 do postaci iloczynowej"
       },
       {
         "step": 8,
-        "hint": "Jak wyznaczyć wartość maksymalną funkcji kwadratowej?",
-        "expression": "Maksimum w wierzchołku: $x_w = \\frac{1}{2}$, $g\\left(\\frac{1}{2}\\right) = -\\frac{1}{4} + \\frac{1}{2} + 6 = 6\\frac{1}{4}$",
-        "explanation": "Dla paraboli skierowanej ramionami w dół maksimum jest w wierzchołku"
-      },
-      {
-        "step": 9,
-        "hint": "Jaki jest zbiór wartości funkcji $g$?",
-        "expression": "Zbiór wartości: $\\left(-\\infty, 6\\frac{1}{4}\\right]$",
-        "explanation": "Parabola skierowana ramionami w dół ma maksimum $6\\frac{1}{4}$"
-      },
-      {
-        "step": 10,
-        "hint": "Dla jakich argumentów $g(x) > 4$?",
-        "expression": "$-x^2 + x + 2 > 0 \\Rightarrow -(x-2)(x+1) > 0 \\Rightarrow (x-2)(x+1) < 0$",
-        "explanation": "Przekształcamy nierówność i rozkładamy na czynniki",
+        "hint": "Czy możemy przekształcić to do postaci ogólnej?",
+        "expression": "$g(x) = -(x^2 - x - 6) = -x^2 + x + 6$",
+        "explanation": "Wymnażamy i upraszczamy do postaci ogólnej",
         "interactive_choice": {
-          "prompt": "Jak rozwiązać nierówność $-x^2 + x + 6 > 4$?",
+          "prompt": "Jak najlepiej przekształcić $-(x + 2)(x - 3)$ do postaci ogólnej?",
           "options": [
             {
               "id": "A",
-              "text": "Przekształcić do $-x^2 + x + 2 > 0$ i rozłożyć na czynniki",
-              "feedback": "Świetnie! To da $-(x^2 - x - 2) > 0$, czyli $-(x-2)(x+1) > 0$",
+              "text": "Wymnożyć najpierw nawiasy: $(x+2)(x-3) = x^2 - x - 6$, potem pomnożyć przez -1",
+              "feedback": "Dobry wybór - systematyczne i przejrzyste.",
               "is_correct": true
             },
             {
               "id": "B",
-              "text": "Podstawić różne wartości i sprawdzić",
-              "feedback": "Nieefektywne - lepiej rozwiązać algebraicznie.",
-              "is_correct": false
+              "text": "Od razu wymnożyć: $-(x^2 - x - 6) = -x^2 + x + 6$",
+              "feedback": "Również poprawnie - to skrócona wersja metody A.",
+              "is_correct": true
             },
             {
               "id": "C",
-              "text": "Użyć wzoru na deltę dla równania $-x^2 + x + 6 = 4$",
-              "feedback": "Możliwe, ale rozkład na czynniki będzie prostszy tutaj.",
-              "is_correct": false
+              "text": "Zostawić w postaci iloczynowej - ona też jest poprawna",
+              "feedback": "Tak, postać iloczynowa jest pełnoprawnym wzorem funkcji.",
+              "is_correct": true
             }
           ],
-          "explanation_after": "Nierówność kwadratową najlepiej rozwiązać przez rozkład na czynniki."
+          "explanation_after": "Wszystkie trzy podejścia są poprawne. Postać ogólna: $ax^2 + bx + c$."
         }
       },
       {
-        "step": 11,
-        "hint": "Kiedy iloczyn $(x-2)(x+1)$ jest ujemny?",
-        "expression": "$(x-2)(x+1) < 0$ dla $x \\in (-1, 2)$",
-        "explanation": "Iloczyn ujemny gdy czynniki mają różne znaki, czyli między miejscami zerowymi"
-      },
-      {
-        "step": 12,
-        "hint": "Jak przekształcenie $h(x) = g(x+3) - 2$ wpływa na położenie wierzchołka?",
-        "expression": "Wierzchołek $g$: $\\left(\\frac{1}{2}, 6\\frac{1}{4}\\right)$, wierzchołek $h$: $\\left(\\frac{1}{2} - 3, 6\\frac{1}{4} - 2\\right) = \\left(-2\\frac{1}{2}, 4\\frac{1}{4}\\right)$",
-        "explanation": "Przesunięcie o 3 w lewo i o 2 w dół",
-        "why": "Przekształcenie $f(x+a)$ przesuwa wykres o $a$ w lewo, a $f(x)-b$ o $b$ w dół."
+        "step": 9,
+        "hint": "Czy możemy sprawdzić, czy oś symetrii się zgadza?",
+        "expression": "Oś symetrii: $x = -\\frac{b}{2a} = -\\frac{1}{2 \\cdot (-1)} = \\frac{1}{2}$",
+        "explanation": "Sprawdzamy wzór na oś symetrii dla postaci ogólnej",
+        "why": "To potwierdza poprawność naszych obliczeń - otrzymaliśmy dokładnie podaną w zadaniu oś symetrii."
       }
     ],
     "solutions": [
-      "11.1: A i F - wzory $g(x) = -x^2 + x + 6$ oraz $g(x) = -(x+2)(x-3)$",
-      "11.2: C - zbiór wartości $\\left(-\\infty, 6\\frac{1}{4}\\right]$",
-      "11.3: $(-1, 2)$ - przedział gdzie $g(x) > 4$",
-      "11.4: A - funkcja $h$ osiąga maksimum dla $x = -2\\frac{1}{2}$"
+      "Postać iloczynowa: $g(x) = -(x + 2)(x - 3)$",
+      "Postać ogólna: $g(x) = -x^2 + x + 6$"
     ],
+    "parameters": {
+      "zeros": "[-2, 3]",
+      "y_intercept": "(0, 6)",
+      "axis_of_symmetry": "x = 1/2"
+    },
     "validation": {
       "isValid": true,
       "missingFields": [],
       "warnings": [],
       "stats": {
-        "totalSteps": 12,
+        "totalSteps": 9,
         "stepsWithWhy": 2,
         "stepsWithChoice": 3,
         "totalOptions": 9,
-        "correctOptions": 3
+        "correctOptions": 6
       }
     },
-    "timestamp": "2025-09-23T10:28:32.439Z"
+    "timestamp": "2025-09-25T10:32:55.218Z"
+  },
+  {
+    "id": "quadratic_from_properties",
+    "topic": "Funkcja kwadratowa - wyznaczanie wzoru z własności",
+    "difficulty": 3,
+    "statement": "Wyznacz wzór funkcji kwadratowej g, której jednym z miejsc zerowych jest -2, która przecina oś y w punkcie (0,6), a osią symetrii jest x = 1/2.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wykorzystać informację o osi symetrii i jednym miejscu zerowym?",
+        "expression": "Jeśli $x_1 = -2$ i oś symetrii $x = \\frac{1}{2}$, to $\\frac{x_1 + x_2}{2} = \\frac{1}{2}$",
+        "explanation": "Korzystamy z faktu, że oś symetrii jest średnią arytmetyczną miejsc zerowych",
+        "interactive_choice": {
+          "prompt": "Jak znaleźć drugie miejsce zerowe funkcji kwadratowej, znając oś symetrii i jedno miejsce zerowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oś symetrii jest średnią arytmetyczną miejsc zerowych",
+              "feedback": "Doskonale! To kluczowa własność funkcji kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Miejsca zerowe są symetryczne względem osi y",
+              "feedback": "Nie - są symetryczne względem osi symetrii wykresu, nie osi y.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Drugie miejsce zerowe jest odbiciem pierwszego względem punktu (0,0)",
+              "feedback": "To nieprawda - symetria jest względem osi symetrii, nie początku układu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oś symetrii przechodzi dokładnie przez środek odcinka łączącego miejsca zerowe."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak obliczyć drugie miejsce zerowe?",
+        "expression": "$\\frac{-2 + x_2}{2} = \\frac{1}{2}$",
+        "explanation": "Podstawiamy znane wartości"
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwiązać to równanie?",
+        "expression": "$-2 + x_2 = 1$",
+        "explanation": "Mnożymy obie strony przez 2",
+        "why": "Mnożenie przez 2 eliminuje mianownik i upraszcza równanie."
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest wartość drugiego miejsca zerowego?",
+        "expression": "$x_2 = 3$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać postać iloczynową funkcji kwadratowej?",
+        "expression": "$g(x) = a(x + 2)(x - 3)$",
+        "explanation": "Zapisujemy funkcję w postaci iloczynowej",
+        "interactive_choice": {
+          "prompt": "Którą postać funkcji kwadratowej wybrać, znając miejsca zerowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać iloczynową $g(x) = a(x - x_1)(x - x_2)$",
+              "feedback": "Idealnie! To najszybsza droga gdy znamy miejsca zerowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Postać ogólną $g(x) = ax^2 + bx + c$",
+              "feedback": "Możliwe, ale wymagałoby układu równań - bardziej pracochłonne.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Postać kanoniczną $g(x) = a(x - p)^2 + q$",
+              "feedback": "Też działa, ale postać iloczynowa jest tu prostsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać iloczynowa jest optymalna gdy znamy oba miejsca zerowe."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak wykorzystać informację o punkcie przecięcia z osią y?",
+        "expression": "Punkt (0,6) należy do wykresu, więc $g(0) = 6$",
+        "explanation": "Podstawiamy x = 0 do wzoru funkcji"
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć współczynnik a?",
+        "expression": "$g(0) = a(0 + 2)(0 - 3) = a \\cdot 2 \\cdot (-3) = -6a = 6$",
+        "explanation": "Obliczamy wartość funkcji dla x = 0"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie jest równanie dla współczynnika a?",
+        "expression": "$-6a = 6$",
+        "explanation": "Przyrównujemy do znanej wartości"
+      },
+      {
+        "step": 9,
+        "hint": "Jak rozwiązać to równanie?",
+        "expression": "$a = \\frac{6}{-6} = -1$",
+        "explanation": "Rozwiązujemy równanie liniowe",
+        "interactive_choice": {
+          "prompt": "Jak wyznaczyć współczynnik a z równania $-6a = 6$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podzielić obie strony przez -6",
+              "feedback": "Dokładnie! $a = 6 / (-6) = -1$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć obie strony przez -1",
+              "feedback": "To da $6a = -6$, ale nadal trzeba podzielić przez 6.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Przenieść 6 na lewą stronę",
+              "feedback": "To nie jest potrzebne - równanie jest już proste do rozwiązania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie pierwsze metody prowadzą do poprawnego wyniku. Najprościej podzielić przez -6."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jaki jest ostateczny wzór funkcji?",
+        "expression": "$g(x) = -1 \\cdot (x + 2)(x - 3)$",
+        "explanation": "Podstawiamy obliczoną wartość a"
+      },
+      {
+        "step": 11,
+        "hint": "Jak uprościć ten wzór?",
+        "expression": "$g(x) = -(x + 2)(x - 3)$",
+        "explanation": "Pomijamy współczynnik 1"
+      },
+      {
+        "step": 12,
+        "hint": "Czy chcesz przedstawić wzór w postaci ogólnej?",
+        "expression": "$g(x) = -(x^2 - 3x + 2x - 6) = -(x^2 - x - 6)$",
+        "explanation": "Wymnażamy nawiasy"
+      },
+      {
+        "step": 13,
+        "hint": "Jaka jest ostateczna postać funkcji?",
+        "expression": "$g(x) = -x^2 + x + 6$",
+        "explanation": "Ostateczny wzór funkcji w postaci ogólnej"
+      }
+    ],
+    "solutions": [
+      "$g(x) = -(x + 2)(x - 3)$",
+      "$g(x) = -x^2 + x + 6$"
+    ],
+    "parameters": {
+      "zeros": "x₁ = -2, x₂ = 3",
+      "y_intercept": "(0,6)",
+      "axis_of_symmetry": "x = 1/2"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-25T10:34:23.279Z"
+  },
+  {
+    "id": "quadratic_from_properties",
+    "topic": "Funkcja kwadratowa - wyznaczanie wzoru",
+    "difficulty": 3,
+    "statement": "W kartezjańskim układzie współrzędnych (x, y) dana jest funkcja kwadratowa g określona dla każdej liczby rzeczywistej x. Jednym z miejsc zerowych funkcji g jest liczba (-2), a także funkcja g przecina oś y w punkcie (0,6). Osią symetrii tej funkcji jest x = 1/2. Wyznacz wzór funkcji g.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co wiesz o osi symetrii funkcji kwadratowej w odniesieniu do jej miejsc zerowych?",
+        "expression": "Oś symetrii: $x = \\frac{1}{2}$",
+        "explanation": "Oś symetrii przechodzi dokładnie w połowie między miejscami zerowymi funkcji kwadratowej"
+      },
+      {
+        "step": 2,
+        "hint": "Jak znaleźć drugie miejsce zerowe, znając jedno miejsce zerowe i oś symetrii?",
+        "expression": "$\\frac{-2 + x_2}{2} = \\frac{1}{2}$",
+        "explanation": "Podstawiamy znane wartości do wzoru na oś symetrii",
+        "interactive_choice": {
+          "prompt": "Mając miejsce zerowe $x_1 = -2$ i oś symetrii $x = 0.5$, jak obliczyć drugie miejsce zerowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oś symetrii to średnia arytmetyczna miejsc zerowych: $\\frac{x_1 + x_2}{2} = 0.5$",
+              "feedback": "Doskonale! To właściwa zależność dla funkcji kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Drugie miejsce zerowe jest symetryczne względem osi: $x_2 = 2 \\cdot 0.5 - (-2)$",
+              "feedback": "Tak, to też dobra metoda - wykorzystuje symetrię.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Drugie miejsce zerowe: $x_2 = 0.5 + (-2) = -1.5$",
+              "feedback": "Nieprawidłowe - to nie jest właściwa zależność geometryczna.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oś symetrii jest średnią arytmetyczną miejsc zerowych: $\\frac{x_1 + x_2}{2} = p$, gdzie p to współrzędna wierzchołka."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozwiązać to równanie, aby znaleźć drugie miejsce zerowe?",
+        "expression": "$-2 + x_2 = 1$ więc $x_2 = 3$",
+        "explanation": "Mnożymy obie strony przez 2 i rozwiązujemy równanie",
+        "why": "Mnożenie przez 2 eliminuje ułamek, co upraszcza obliczenia."
+      },
+      {
+        "step": 4,
+        "hint": "Jak zapisać postać iloczynową funkcji kwadratowej znając miejsca zerowe?",
+        "expression": "$g(x) = a(x - (-2))(x - 3) = a(x + 2)(x - 3)$",
+        "explanation": "Postać iloczynowa funkcji kwadratowej z nieznanym współczynnikiem a"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wykorzystać informację o punkcie przecięcia z osią y?",
+        "expression": "$g(0) = a(0 + 2)(0 - 3) = 6$",
+        "explanation": "Podstawiamy x = 0 do postaci iloczynowej",
+        "interactive_choice": {
+          "prompt": "Którą wartość podstawić do wzoru, aby wyznaczyć współczynnik a?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić punkt (0,6): $g(0) = 6$",
+              "feedback": "Dokładnie! Punkt przecięcia z OY daje wartość funkcji dla x = 0.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić oś symetrii x = 0.5",
+              "feedback": "Nie mamy wartości funkcji w wierzchołku, więc to nie pomoże.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić miejsce zerowe x = -2",
+              "feedback": "W miejscu zerowym funkcja ma wartość 0, to nie da nam informacji o a.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Punkt przecięcia z osią OY zawsze ma współrzędną x = 0, co pozwala wyznaczyć współczynnik a."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć wartość współczynnika a?",
+        "expression": "$a \\cdot 2 \\cdot (-3) = 6$ więc $-6a = 6$",
+        "explanation": "Wykonujemy mnożenie w nawiasach"
+      },
+      {
+        "step": 7,
+        "hint": "Jak rozwiązać równanie -6a = 6?",
+        "expression": "$a = -1$",
+        "explanation": "Dzielimy obie strony przez -6"
+      },
+      {
+        "step": 8,
+        "hint": "Jak zapisać ostateczny wzór funkcji w postaci iloczynowej?",
+        "expression": "$g(x) = -1(x + 2)(x - 3)$",
+        "explanation": "Podstawiamy obliczoną wartość a"
+      },
+      {
+        "step": 9,
+        "hint": "Czy chcesz przekształcić wzór do postaci ogólnej?",
+        "expression": "$g(x) = -(x + 2)(x - 3)$",
+        "explanation": "Zostawiamy w postaci iloczynowej",
+        "interactive_choice": {
+          "prompt": "Którą postać funkcji kwadratowej wybierasz jako ostateczny wynik?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać iloczynowa: $g(x) = -(x + 2)(x - 3)$",
+              "feedback": "Dobry wybór - bezpośrednio pokazuje miejsca zerowe.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Postać ogólna: wymnożyć nawiasy",
+              "feedback": "Również poprawnie - czasem postać ogólna jest wymagana.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Postać kanoniczna: wykorzystać wierzchołek",
+              "feedback": "Możliwe, ale bardziej skomplikowane - mamy już gotową postać.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie postaci są poprawne. Postać iloczynowa jest bardziej czytelna, postać ogólna może być wymagana w dalszych obliczeniach."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Możesz też przedstawić wzór w postaci ogólnej dla pełności rozwiązania?",
+        "expression": "$g(x) = -(x^2 - 3x + 2x - 6) = -(x^2 - x - 6) = -x^2 + x + 6$",
+        "explanation": "Wymnażamy nawiasy i upraszczamy"
+      }
+    ],
+    "solutions": [
+      "$g(x) = -(x + 2)(x - 3)$",
+      "$g(x) = -x^2 + x + 6$"
+    ],
+    "parameters": {
+      "zeros": "x₁ = -2, x₂ = 3",
+      "vertex_x": "0.5",
+      "y_intercept": "(0,6)"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-25T10:35:51.713Z"
   },
   {
     "id": "sequence_analysis",
@@ -1786,7 +2114,7 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Co otrzymasz podstawiając n = 4 do wzoru na $a_n$?",
+        "hint": "Co otrzymasz podstawiając $n = 4$ do wzoru na $a_n$?",
         "expression": "$a_4 = 3 \\cdot 4 \\cdot (2^4 - 4) = 12 \\cdot (16 - 4) = 12 \\cdot 12 = 144$",
         "explanation": "Obliczamy czwarty wyraz ciągu"
       },
@@ -2391,7 +2719,7 @@
       "B. 21"
     ],
     "parameters": {
-      "sides": "a = 7, b = 8, c = 6",
+      "sides": "$a = 7$, $b = 8$, $c = 6$",
       "cosine": "$\\cos C = \\frac{11}{16}$"
     },
     "validation": {
@@ -2420,7 +2748,7 @@
       },
       {
         "step": 2,
-        "hint": "Jeśli kąt przy K wynosi 60°, to jaki kąt tworzy BK z promieniem?",
+        "hint": "Jeśli kąt przy K wynosi $60°$, to jaki kąt tworzy BK z promieniem?",
         "expression": "W trójkącie $OKB$: $\\angle OKB = 30°$ (bo $90° - 60° = 30°$)",
         "explanation": "Kąt między $BK$ a promieniem $OK$ to dopełnienie do kąta prostego"
       },
@@ -2433,7 +2761,7 @@
       },
       {
         "step": 4,
-        "hint": "Jaki kąt środkowy odpowiada łukowi AB, jeśli kąt wpisany wynosi 30°?",
+        "hint": "Jaki kąt środkowy odpowiada łukowi AB, jeśli kąt wpisany wynosi $30°$?",
         "expression": "Kąt środkowy $\\angle AOB = 2 \\cdot 30° = 60° = \\frac{\\pi}{3}$ radianów",
         "explanation": "Kąt środkowy jest dwukrotnie większy od kąta wpisanego",
         "why": "Własność kąta wpisanego: jest połową kąta środkowego opartego na tym samym łuku."
@@ -2466,7 +2794,7 @@
       {
         "step": 9,
         "hint": "Jaki jest pierwiastek z otrzymanego wyniku?",
-        "expression": "$|BK| = \\sqrt{\\frac{81}{4}} = \\frac{9}{2} = 4.5$",
+        "expression": "$|BK| = \\sqrt{\\frac{81}{4}} = \\frac{9}{2} = 4{,}5$",
         "explanation": "To nie pasuje do żadnej z podanych odpowiedzi, sprawdźmy inne podejście"
       },
       {
@@ -2478,7 +2806,7 @@
       {
         "step": 11,
         "hint": "Jak obliczyć BK gdy sin 60° = r/|BK|?",
-        "expression": "$\\sin 60° = \\frac{\\sqrt{3}}{2} = \\frac{9}{|BK|}$, więc $|BK| = \\frac{9}{\\frac{\\sqrt{3}}{2}} = \\frac{18}{\\sqrt{3}} = 6\\sqrt{3} \\approx 10.39$",
+        "expression": "$\\sin 60° = \\frac{\\sqrt{3}}{2} = \\frac{9}{|BK|}$, więc $|BK| = \\frac{9}{\\frac{\\sqrt{3}}{2}} = \\frac{18}{\\sqrt{3}} = 6\\sqrt{3} \\approx 10{,}39$",
         "explanation": "Otrzymujemy wynik bliski odpowiedzi A"
       }
     ],
@@ -2670,7 +2998,7 @@
       {
         "step": 5,
         "hint": "Czy rozpoznajesz tę liczbę jako sześcian pewnej wartości?",
-        "expression": "$h^3 = 81\\sqrt{3} = 3^4 \\cdot 3^{1/2} = 3^{4.5} = (3\\sqrt{3})^3$",
+        "expression": "$h^3 = 81\\sqrt{3} = 3^4 \\cdot 3^{1/2} = 3^{4{,}5} = (3\\sqrt{3})^3$",
         "explanation": "Więc $h = 3\\sqrt{3}$",
         "why": "Można też sprawdzić: $(3\\sqrt{3})^3 = 27 \\cdot 3\\sqrt{3} = 81\\sqrt{3}$. Alternatywnie: $h = \\sqrt[3]{81\\sqrt{3}}$."
       },
