@@ -87,7 +87,7 @@ const ComparisonProblemView = ({ problem, modelName, className = "" }) => {
 
       <div className="p-4 space-y-4">
         {/* Problem Statement */}
-        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+        <div className="bg-stone-50 p-4 rounded-lg border-l-4 border-stone-400">
           <div className="text-stone-900 text-base leading-relaxed font-medium">
             <MathRenderer content={problem.statement} />
           </div>
@@ -104,7 +104,7 @@ const ComparisonProblemView = ({ problem, modelName, className = "" }) => {
               <div
                 className="h-1.5 rounded-full transition-all duration-300"
                 style={{
-                  background: 'linear-gradient(to right, #3b82f6, #1d4ed8)',
+                  background: 'linear-gradient(to right, #facc15, #f97316)',
                   width: `${progress}%`
                 }}
               />
@@ -146,10 +146,10 @@ const ComparisonProblemView = ({ problem, modelName, className = "" }) => {
 
               {/* Hint */}
               {hintShownSteps.has(index) && step.hint && (
-                <div className="px-4 py-2 bg-amber-50 border-t">
-                  <div className="text-amber-800 text-sm">
+                <div className="px-4 py-2 bg-yellow-50 border-t border-yellow-200">
+                  <div className="text-yellow-800 text-sm">
                     <div className="flex items-start gap-2">
-                      <div className="flex-shrink-0 w-4 h-4 bg-amber-200 rounded-full flex items-center justify-center mt-0.5">
+                      <div className="flex-shrink-0 w-4 h-4 bg-yellow-200 rounded-full flex items-center justify-center mt-0.5">
                         <span className="text-xs">?</span>
                       </div>
                       <MathRenderer content={step.hint} />
@@ -160,7 +160,7 @@ const ComparisonProblemView = ({ problem, modelName, className = "" }) => {
 
               {/* Interactive Choice */}
               {step.interactive_choice && showMultiStepSteps.has(index) && !completedInteractiveChoices.has(index) && (
-                <div className="p-4 border-t bg-blue-50">
+                <div className="p-4 border-t bg-stone-50">
                   <MultiStepChoice
                     choice={step.interactive_choice}
                     onComplete={() => handleInteractiveChoiceComplete(index)}
@@ -170,7 +170,7 @@ const ComparisonProblemView = ({ problem, modelName, className = "" }) => {
 
               {/* Step Content */}
               {revealedSteps.has(index) && (
-                <div className="px-4 py-3 border-t bg-green-50">
+                <div className="px-4 py-3 border-t bg-stone-50">
                   <div className="space-y-2">
                     <div className="text-stone-900 font-medium text-sm">
                       <MathRenderer content={step.expression} />
