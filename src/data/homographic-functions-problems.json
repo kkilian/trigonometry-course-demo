@@ -3533,5 +3533,168 @@
       }
     },
     "timestamp": "2025-09-25T11:20:40.236Z"
+  }, {
+    "id": "absolute_rational_function",
+    "topic": "Funkcje wymierne z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Opisz funkcję $f(x) = \\frac{|x|}{x-1}$ i omów jej własności",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co sprawdzamy jako pierwsze przy każdej funkcji wymiernej?",
+        "expression": "Dziedzina: $x - 1 \\neq 0$, więc $x \\neq 1$",
+        "explanation": "Funkcja nie jest określona dla x = 1 (zero w mianowniku)"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie własności funkcji powinniśmy zbadać systematycznie?",
+        "expression": "Plan: przypadki dla $|x|$, znak funkcji, asymptoty, monotoniczność",
+        "explanation": "Systematyczna analiza wszystkich własności funkcji",
+        "interactive_choice": {
+          "prompt": "W jakiej kolejności najlepiej analizować własności funkcji $f(x) = \\frac{|x|}{x-1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw znak, potem asymptoty, na końcu przypadki dla |x|",
+              "feedback": "Lepiej najpierw rozpatrzyć przypadki dla |x|, bo to kluczowe dla tej funkcji.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozbić |x| na przypadki, potem znak i asymptoty",
+              "feedback": "Doskonały plan! Wartość bezwzględna wymaga rozpatrzenia przypadków.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Asymptoty, potem monotoniczność, na końcu |x|",
+              "feedback": "Bez rozpatrzenia |x| trudno będzie analizować pozostałe własności.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wartość bezwzględna |x| dzieli analizę na przypadki - to fundament dla pozostałych własności."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak rozbić wartość bezwzględną |x|?",
+        "expression": "Dla $x \\geq 0$: $|x| = x$, dla $x < 0$: $|x| = -x$",
+        "explanation": "Rozbijamy funkcję na dwa przypadki względem znaku x",
+        "interactive_choice": {
+          "prompt": "Jak poprawnie rozbić $|x|$ w funkcji $f(x) = \\frac{|x|}{x-1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dla $x > 1$: $|x| = x$, dla $x < 1$: $|x| = -x$",
+              "feedback": "Nie! Wartość bezwzględna zależy od znaku x, nie od relacji z 1.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Dla $x \\geq 0$: $|x| = x$, dla $x < 0$: $|x| = -x$",
+              "feedback": "Tak! Wartość bezwzględna zmienia się w punkcie x = 0.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Dla $x > 0$: $|x| = x$, dla $x \\leq 0$: $|x| = -x$",
+              "feedback": "Prawie! Ale dla x = 0 mamy |0| = 0, więc lepiej x ≥ 0.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Wartość bezwzględna |x| = x dla x ≥ 0 i |x| = -x dla x < 0."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak wygląda funkcja dla x ≥ 0 i x ≠ 1?",
+        "expression": "Dla $x \\geq 0, x \\neq 1$: $f(x) = \\frac{x}{x-1}$",
+        "explanation": "W tym przypadku |x| = x, więc funkcja jest wymierna"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wygląda funkcja dla x < 0?",
+        "expression": "Dla $x < 0$: $f(x) = \\frac{-x}{x-1}$",
+        "explanation": "W tym przypadku |x| = -x, więc mamy minus w liczniku"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest znak funkcji w poszczególnych przedziałach?",
+        "expression": "$f(x) > 0$ dla $x \\in (-\\infty, 0) \\cup (1, +\\infty)$, $f(x) < 0$ dla $x \\in (0, 1)$",
+        "explanation": "Analiza znaku przez rozpatrzenie licznika i mianownika",
+        "why": "Znak funkcji wymiernej to znak iloczynu licznika i mianownika",
+        "interactive_choice": {
+          "prompt": "Jaki znak ma funkcja $f(x) = \\frac{|x|}{x-1}$ w różnych przedziałach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ujemna dla x < 0, dodatnia dla x > 1",
+              "feedback": "Nie! Sprawdź znak dla x ∈ (0,1). Licznik dodatni, mianownik ujemny.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Dodatnia dla x < 0, ujemna dla x ∈ (0,1), dodatnia dla x > 1",
+              "feedback": "Prawidłowo! Analizujesz znak licznika i mianownika osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zawsze dodatnia bo |x| ≥ 0",
+              "feedback": "Błąd! Znak zależy też od mianownika x-1, który może być ujemny.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak funkcji: licznik |x| ≥ 0, mianownik x-1 > 0 dla x > 1, x-1 < 0 dla x < 1."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie asymptoty ma ta funkcja?",
+        "expression": "Asymptota pionowa: $x = 1$ (zero mianownika)",
+        "explanation": "W punkcie x = 1 mianownik się zeruje, a licznik nie"
+      },
+      {
+        "step": 8,
+        "hint": "Czy funkcja ma asymptotę poziomą lub ukośną?",
+        "expression": "Dla $x \\to +\\infty$: $f(x) = \\frac{x}{x-1} = \\frac{1}{1-\\frac{1}{x}} \\to 1$",
+        "explanation": "Asymptota pozioma y = 1 (stopień licznika = stopień mianownika)"
+      },
+      {
+        "step": 9,
+        "hint": "Gdzie funkcja przecina osie układu?",
+        "expression": "$f(0) = \\frac{|0|}{0-1} = \\frac{0}{-1} = 0$, więc punkt $(0, 0)$",
+        "explanation": "Funkcja przecina obie osie w punkcie (0, 0)"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są kluczowe własności tej funkcji?",
+        "expression": "Dziedzina: $\\mathbb{R} \\setminus \\{1\\}$, zbiór wartości: $\\mathbb{R} \\setminus (0, 1)$",
+        "explanation": "Podsumowanie najważniejszych własności funkcji"
+      }
+    ],
+    "solutions": [
+      "Dziedzina: $x \\in \\mathbb{R} \\setminus \\{1\\}$",
+      "Dla $x \\geq 0, x \\neq 1$: $f(x) = \\frac{x}{x-1}$",
+      "Dla $x < 0$: $f(x) = \\frac{-x}{x-1}$",
+      "Znak: dodatnia dla $x \\in (-\\infty, 0) \\cup (1, +\\infty)$, ujemna dla $x \\in (0, 1)$",
+      "Asymptota pionowa: $x = 1$",
+      "Asymptota pozioma: $y = 1$",
+      "Przecięcie z osiami: $(0, 0)$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-25T11:44:24.763Z",
+    "thinking_used": true
   }
 ]

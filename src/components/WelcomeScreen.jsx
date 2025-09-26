@@ -6,6 +6,8 @@ import elementaryFractionsProblems from '../data/elementary-fractions-problems.j
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
 import maturaMarzec2025PodstawaProblems from '../data/matura/podstawa/marzec2025podstawa/maturamarzec2025podstawa_multistep.json';
+import test1Problems from '../data/test1.json';
+import test2Problems from '../data/test2.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
@@ -86,6 +88,14 @@ const WelcomeScreen = ({ onSelectMode }) => {
       hasSubmenu: true,
       topicsCount: 5,
       isNew: true
+    },
+    {
+      id: 'comparison',
+      title: 'PORÓWNANIE ROZWIĄZAŃ',
+      description: 'Porównaj różne podejścia do tych samych zadań side-by-side',
+      problemCount: Math.min(test1Problems.length, test2Problems.length),
+      isNew: true,
+      hasGlow: true
     },
     {
       id: 'statystyka',

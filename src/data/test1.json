@@ -1,0 +1,80 @@
+[
+  {
+    "id": "comparison_test_1",
+    "topic": "Równania kwadratowe",
+    "statement": "Rozwiąż równanie $x^2 - 5x + 6 = 0$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 1: Spróbuj zastosować wzór na deltę",
+        "expression": "Delta: $\\Delta = b^2 - 4ac = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$",
+        "explanation": "Model 1 używa klasycznej metody wzoru kwadratowego"
+      },
+      {
+        "step": 2,
+        "hint": "Model 1: Oblicz pierwiastki używając wzoru",
+        "expression": "$x = \\frac{5 \\pm \\sqrt{1}}{2} = \\frac{5 \\pm 1}{2}$",
+        "explanation": "Standardowe zastosowanie wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 3,
+        "hint": "Model 1: Wypisz oba rozwiązania",
+        "expression": "$x_1 = \\frac{5 + 1}{2} = 3$, $x_2 = \\frac{5 - 1}{2} = 2$",
+        "explanation": "Model 1 podaje rozwiązania w kolejności malejącej"
+      }
+    ],
+    "solution": "Rozwiązania: $x_1 = 3$, $x_2 = 2$"
+  },
+  {
+    "id": "comparison_test_2",
+    "topic": "Funkcje liniowe",
+    "statement": "Znajdź współczynnik kierunkowy prostej przechodzącej przez punkty $A(1,2)$ i $B(3,8)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 1: Użyj wzoru na współczynnik kierunkowy",
+        "expression": "$a = \\frac{y_2 - y_1}{x_2 - x_1}$",
+        "explanation": "Model 1 zaczyna od definicji współczynnika kierunkowego"
+      },
+      {
+        "step": 2,
+        "hint": "Model 1: Podstaw współrzędne punktów",
+        "expression": "$a = \\frac{8 - 2}{3 - 1} = \\frac{6}{2}$",
+        "explanation": "Metodyczne podstawienie wartości z punktów A i B"
+      },
+      {
+        "step": 3,
+        "hint": "Model 1: Uprość ułamek",
+        "expression": "$a = 3$",
+        "explanation": "Model 1 podaje końcowy wynik po uproszczeniu"
+      }
+    ],
+    "solution": "Współczynnik kierunkowy: $a = 3$"
+  },
+  {
+    "id": "comparison_test_3",
+    "topic": "Trygonometria",
+    "statement": "Oblicz $\\sin(30°) + \\cos(60°)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 1: Przypomnij wartości funkcji trygonometrycznych",
+        "expression": "$\\sin(30°) = \\frac{1}{2}$",
+        "explanation": "Model 1 zaczyna od przypomnienia podstawowych wartości"
+      },
+      {
+        "step": 2,
+        "hint": "Model 1: Znajdź wartość cosinusa",
+        "expression": "$\\cos(60°) = \\frac{1}{2}$",
+        "explanation": "Model 1 systematycznie znajduje każdą wartość osobno"
+      },
+      {
+        "step": 3,
+        "hint": "Model 1: Dodaj otrzymane wartości",
+        "expression": "$\\sin(30°) + \\cos(60°) = \\frac{1}{2} + \\frac{1}{2} = 1$",
+        "explanation": "Model 1 wykonuje dodawanie krok po kroku"
+      }
+    ],
+    "solution": "Wynik: $1$"
+  }
+]

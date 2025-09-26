@@ -1,0 +1,80 @@
+[
+  {
+    "id": "comparison_test_1",
+    "topic": "Równania kwadratowe",
+    "statement": "Rozwiąż równanie $x^2 - 5x + 6 = 0$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 2: Spróbuj rozłożyć na czynniki",
+        "expression": "Szukamy liczb $p$ i $q$ takich że $p + q = 5$ i $p \\cdot q = 6$",
+        "explanation": "Model 2 preferuje faktoryzację jako pierwszą metodę"
+      },
+      {
+        "step": 2,
+        "hint": "Model 2: Znajdź odpowiednią parę liczb",
+        "expression": "$p = 2$, $q = 3$ bo $2 + 3 = 5$ i $2 \\cdot 3 = 6$",
+        "explanation": "Model 2 pokazuje proces znajdowania odpowiedniej pary"
+      },
+      {
+        "step": 3,
+        "hint": "Model 2: Zapisz w postaci iloczynowej",
+        "expression": "$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$",
+        "explanation": "Model 2 rozkłada wielomian na czynniki liniowe"
+      },
+      {
+        "step": 4,
+        "hint": "Model 2: Odczytaj pierwiastki",
+        "expression": "$x - 2 = 0$ lub $x - 3 = 0$, więc $x = 2$ lub $x = 3$",
+        "explanation": "Model 2 podaje rozwiązania w kolejności rosnącej"
+      }
+    ],
+    "solution": "Rozwiązania: $x = 2$ lub $x = 3$"
+  },
+  {
+    "id": "comparison_test_2",
+    "topic": "Funkcje liniowe",
+    "statement": "Znajdź współczynnik kierunkowy prostej przechodzącej przez punkty $A(1,2)$ i $B(3,8)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 2: Zastanów się geometrycznie",
+        "expression": "Gdy $x$ wzrasta o $2$ (z $1$ do $3$), $y$ wzrasta o $6$ (z $2$ do $8$)",
+        "explanation": "Model 2 zaczyna od interpretacji geometrycznej"
+      },
+      {
+        "step": 2,
+        "hint": "Model 2: Współczynnik kierunkowy to stosunek przyrostów",
+        "expression": "$a = \\frac{\\text{przyrost } y}{\\text{przyrost } x} = \\frac{6}{2} = 3$",
+        "explanation": "Model 2 tłumaczy intuicję za wzorem matematycznym"
+      }
+    ],
+    "solution": "Współczynnik kierunkowy: $a = 3$ (prosta rośnie 3 jednostki w górę na każdą jednostkę w prawo)"
+  },
+  {
+    "id": "comparison_test_3",
+    "topic": "Trygonometria",
+    "statement": "Oblicz $\\sin(30°) + \\cos(60°)$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 2: Zauważ związek między kątami",
+        "expression": "Kąty $30°$ i $60°$ to kąty komplementarne ($30° + 60° = 90°$)",
+        "explanation": "Model 2 zaczyna od zauważenia relacji geometrycznej"
+      },
+      {
+        "step": 2,
+        "hint": "Model 2: Użyj tożsamości kątów komplementarnych",
+        "expression": "$\\cos(60°) = \\sin(30°) = \\frac{1}{2}$",
+        "explanation": "Model 2 wykorzystuje fakt, że $\\cos(\\alpha) = \\sin(90° - \\alpha)$"
+      },
+      {
+        "step": 3,
+        "hint": "Model 2: Podstaw do wyrażenia",
+        "expression": "$\\sin(30°) + \\cos(60°) = \\frac{1}{2} + \\frac{1}{2} = 1$",
+        "explanation": "Model 2 kończy elegancko wykorzystując symetrię"
+      }
+    ],
+    "solution": "Wynik: $1$ (suma dwóch równych wartości $\\frac{1}{2}$)"
+  }
+]

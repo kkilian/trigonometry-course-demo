@@ -13,6 +13,8 @@ import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
 import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
 import RationalEquationsWordProblemsStartHere from './RationalEquationsWordProblemsStartHere';
 import MaturaIntegration from '../features/matura/MaturaIntegration';
+import ComparisonScreen from './comparison/ComparisonScreen';
+import ComparisonView from './comparison/ComparisonView';
 import powersProblems from '../data/kombinatoryka-problems.json';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import polynomialDefinitionProblems from '../data/polynomial-definition-problems.json';
@@ -42,6 +44,8 @@ import kombinatorykaProblems from '../data/kombinatoryka-problems.json';
 import kombinatorykaRozszerzenieProblems from '../data/kombinatoryka-rozszerzenie-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
+import test1Problems from '../data/test1.json';
+import test2Problems from '../data/test2.json';
 
 const TrigonometryCourse = () => {
   const [mode, setMode] = useState('welcome'); // 'welcome' | 'powers' | 'polynomials' | 'algebraic-fractions-intro' | 'polynomial-definition' | etc
@@ -80,6 +84,10 @@ const TrigonometryCourse = () => {
   const [completedElementaryFractionsProblems, setCompletedElementaryFractionsProblems] = useState(new Set());
   const [completedRationalEquationsWordProblems, setCompletedRationalEquationsWordProblems] = useState(new Set());
   const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
+
+  // Comparison states
+  const [comparisonMode, setComparisonMode] = useState('list'); // 'list' | 'view'
+  const [selectedComparisonIndex, setSelectedComparisonIndex] = useState(null);
   
   // Get current problems set based on mode
   const getCurrentProblems = () => {
@@ -678,6 +686,9 @@ const TrigonometryCourse = () => {
   const handleBackToWelcome = () => {
     setMode('welcome');
     setCurrentProblem(null);
+    // Reset comparison states
+    setComparisonMode('list');
+    setSelectedComparisonIndex(null);
   };
 
 
@@ -799,6 +810,33 @@ const TrigonometryCourse = () => {
           completedProblems={getCurrentCompleted()}
           onBack={handleBackToWelcome}
         />
+      ) : mode === 'comparison' ? (
+        // Comparison mode - show comparison screen or view
+        comparisonMode === 'list' ? (
+          <ComparisonScreen
+            problems1={test1Problems}
+            problems2={test2Problems}
+            onSelectProblem={(index) => {
+              setSelectedComparisonIndex(index);
+              setComparisonMode('view');
+            }}
+            onBack={handleBackToWelcome}
+          />
+        ) : (
+          <ComparisonView
+            problem1={test1Problems[selectedComparisonIndex]}
+            problem2={test2Problems[selectedComparisonIndex]}
+            currentIndex={selectedComparisonIndex}
+            problems={test1Problems.filter(p1 => test2Problems.some(p2 => p2.id === p1.id))}
+            onSelectProblem={(index) => {
+              setSelectedComparisonIndex(index);
+            }}
+            onBack={() => {
+              setComparisonMode('list');
+              setSelectedComparisonIndex(null);
+            }}
+          />
+        )
       ) : mode === 'kombinatoryka-rozszerzenie' ? (
         // Special handling for kombinatoryka-rozszerzenie - show start here screen instead of problem list
         <KombinatorykRozszerzenieStartHere
