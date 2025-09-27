@@ -7,7 +7,7 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Jak najlepiej podejść do tego skomplikowanego wyrażenia?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak najlepiej podejść do tego skomplikowanego wyrażenia?",
         "expression": "Rozkładamy: $6 = 2 \\cdot 3$, $8 = 2^3$, $216 = 6^3 = 2^3 \\cdot 3^3$",
         "explanation": "Znajdujemy rozkład wszystkich podstaw na czynniki pierwsze",
         "interactive_choice": {
@@ -27,7 +27,7 @@
             },
             {
               "id": "C",
-              "text": "Próbować uprościć każdy składnik osobno\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "text": "Próbować uprościć każdy składnik osobno",
               "feedback": "Możliwe, ale rozkład na czynniki pierwsze będzie bardziej systematyczny.",
               "is_correct": false
             }
@@ -49,7 +49,7 @@
       },
       {
         "step": 4,
-        "hint": "Co zrobić z pierwiastkiem sześciennym?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Co zrobić z pierwiastkiem sześciennym?",
         "expression": "$\\sqrt[3]{\\frac{8}{3^{45}}} = \\sqrt[3]{\\frac{2^3}{3^{45}}} = \\frac{2}{3^{15}}$",
         "explanation": "Pierwiastek sześcienny z $\\frac{a}{b}$ równa się $\\frac{\\sqrt[3]{a}}{\\sqrt[3]{b}}$",
         "why": "Użyliśmy wzoru $\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}$ oraz $\\sqrt[3]{a^3} = a$",
@@ -98,7 +98,7 @@
       },
       {
         "step": 8,
-        "hint": "Jaki jest końcowy wynik mnożenia?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaki jest końcowy wynik mnożenia?",
         "expression": "$3^{15} \\cdot \\frac{2}{3^{15}} = \\frac{3^{15} \\cdot 2}{3^{15}} = 2$",
         "explanation": "Potęgi $3^{15}$ się skracają, zostaje $2$",
         "interactive_choice": {
@@ -153,7 +153,7 @@
     "steps": [
       {
         "step": 1,
-        "hint": "Jakie są podstawy logarytmów w tym wyrażeniu?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jakie są podstawy logarytmów w tym wyrażeniu?",
         "expression": "$\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$",
         "explanation": "Mamy dwie różne podstawy: $2\\sqrt{2}$ i $\\sqrt{8}$"
       },
@@ -506,7 +506,7 @@
               "is_correct": false
             }
           ],
-          "explanation_after": "Podniesienie do kwadratu eliminuje pierwiastek, ale pamiętaj o sprawdzeniu rozwiązań!\n\n(No changes needed as there are no mathematical expressions in this text)"
+          "explanation_after": "Podniesienie do kwadratu eliminuje pierwiastek, ale pamiętaj o sprawdzeniu rozwiązań!"
         }
       },
       {
@@ -584,7 +584,7 @@
       },
       {
         "step": 6,
-        "hint": "Jakie są rozwiązania każdego z przypadków?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jakie są rozwiązania każdego z przypadków?",
         "expression": "Przypadek I: $2x = 10 \\Rightarrow x_1 = 5$\nPrzypadek II: $2x = -12 \\Rightarrow x_2 = -6$",
         "explanation": "Rozwiązujemy oba równania liniowe"
       },
@@ -593,11 +593,11 @@
         "hint": "Czy warto sprawdzić rozwiązania w równaniu wyjściowym?",
         "expression": "Sprawdzenie: $\\sqrt{4 \\cdot 25 + 4 \\cdot 5 + 1} = \\sqrt{121} = 11$ ✓\n$\\sqrt{4 \\cdot 36 + 4 \\cdot (-6) + 1} = \\sqrt{121} = 11$ ✓",
         "explanation": "Oba rozwiązania spełniają równanie wyjściowe",
-        "why": "Po podniesieniu do kwadratu mogą pojawić się rozwiązania pozorne - zawsze sprawdzaj!\n\n(No changes needed as there are no mathematical expressions in this text)"
+        "why": "Po podniesieniu do kwadratu mogą pojawić się rozwiązania pozorne - zawsze sprawdzaj!"
       },
       {
         "step": 8,
-        "hint": "Jaki jest iloczyn wszystkich rozwiązań?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaki jest iloczyn wszystkich rozwiązań?",
         "expression": "Iloczyn: $x_1 \\cdot x_2 = 5 \\cdot (-6) = -30$",
         "explanation": "Obliczamy iloczyn obu rozwiązań"
       }
@@ -644,7 +644,7 @@
             {
               "id": "A",
               "text": "Znaleźć konkretne wartości $a$ i $b$, potem podnieść do $4$. potęgi",
-              "feedback": "Możliwe, ale prowadzi do równania kwadratowego. Jest prostszy sposób!\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Możliwe, ale prowadzi do równania kwadratowego. Jest prostszy sposób!",
               "is_correct": false
             },
             {
@@ -760,7 +760,7 @@
             {
               "id": "B",
               "text": "Można skrócić bezpośrednio liczniki i mianowniki",
-              "feedback": "Nie, najpierw musimy zmienić dzielenie na mnożenie.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Nie, najpierw musimy zmienić dzielenie na mnożenie.",
               "is_correct": false
             },
             {
@@ -790,7 +790,7 @@
             {
               "id": "B",
               "text": "Rozkład $2x^2 - 2x - 24 = 2(x - 4)(x + 3)$",
-              "feedback": "Excellent! Ten rozkład da najwięcej możliwości skrócenia.\n\n(No mathematical expressions were found in this text, so no changes were made.)",
+              "feedback": "Excellent! Ten rozkład da najwięcej możliwości skrócenia.",
               "is_correct": true
             },
             {
@@ -827,7 +827,7 @@
             {
               "id": "B",
               "text": "$x$, $(x+2)$, $(x-4)$, $(x+3)$ i $2$",
-              "feedback": "Dokładnie! Wszystkie te czynniki mają swoje pary.\n\n(No mathematical expressions were found in this text, so no changes were made.)",
+              "feedback": "Dokładnie! Wszystkie te czynniki mają swoje pary.",
               "is_correct": true
             },
             {
@@ -875,7 +875,7 @@
         "step": 1,
         "hint": "Jakie dane mamy w zadaniu?",
         "expression": "Kapitał początkowy $K_0 = 5000$ zł, oprocentowanie roczne $4\\%$, kapitalizacja co pół roku",
-        "explanation": "Wypisujemy znane wartości z zadania\n\n(No changes needed as there are no mathematical expressions in this text)"
+        "explanation": "Wypisujemy znane wartości z zadania"
       },
       {
         "step": 2,
@@ -931,7 +931,7 @@
             {
               "id": "B",
               "text": "$K = K_0(1 + \\frac{r}{n})^{n \\cdot t}$ gdzie $n = 2$",
-              "feedback": "Świetnie! To wzór na kapitalizację okresową.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Świetnie! To wzór na kapitalizację okresową.",
               "is_correct": true
             },
             {
@@ -946,19 +946,19 @@
       },
       {
         "step": 5,
-        "hint": "Jakie wartości podstawimy do wzoru?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jakie wartości podstawimy do wzoru?",
         "expression": "$K_0 = 5000$, $r = 0{,}04$, $n = 2$, $t = 1$",
         "explanation": "Podstawiamy nasze dane do wzoru"
       },
       {
         "step": 6,
-        "hint": "Co otrzymamy po podstawieniu do wzoru?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Co otrzymamy po podstawieniu do wzoru?",
         "expression": "$K = 5000 \\cdot \\left(1 + \\frac{0{,}04}{2}\\right)^{2 \\cdot 1}$",
         "explanation": "Podstawiamy wszystkie wartości"
       },
       {
         "step": 7,
-        "hint": "Ile wynosi oprocentowanie w każdym okresie kapitalizacji?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Ile wynosi oprocentowanie w każdym okresie kapitalizacji?",
         "expression": "$K = 5000 \\cdot (1 + 0{,}02)^2 = 5000 \\cdot (1{,}02)^2$",
         "explanation": "Upraszczamy wyrażenie w nawiasie"
       },
@@ -1084,7 +1084,7 @@
             {
               "id": "A",
               "text": "Pomnożyć przez $(2x + 1)$ i pozbyć się głównego mianownika",
-              "feedback": "Doskonale! To uprości równanie do postaci liniowej.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Doskonale! To uprości równanie do postaci liniowej.",
               "is_correct": true
             },
             {
@@ -1123,13 +1123,13 @@
       },
       {
         "step": 8,
-        "hint": "Jakie jest rozwiązanie tego równania liniowego?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jakie jest rozwiązanie tego równania liniowego?",
         "expression": "$2x = -5$, więc $x = -\\frac{5}{2}$",
         "explanation": "Dzielimy przez $2$ i otrzymujemy rozwiązanie"
       },
       {
         "step": 9,
-        "hint": "Czy to rozwiązanie spełnia nasze założenie o wartościach niedozwolonych?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Czy to rozwiązanie spełnia nasze założenie o wartościach niedozwolonych?",
         "expression": "Sprawdzenie: $2 \\cdot (-\\frac{5}{2}) + 1 = -5 + 1 = -4 \\neq 0$ ✓",
         "explanation": "Rozwiązanie jest dopuszczalne",
         "interactive_choice": {
@@ -1202,7 +1202,7 @@
       },
       {
         "step": 4,
-        "hint": "Jak dalej postąpimy z tą nierównością?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak dalej postąpimy z tą nierównością?",
         "expression": "$3x^2 + 6x + 3 - 4x^2 - 12 \\geq 0$",
         "explanation": "Przenosimy wszystkie składniki na lewą stronę",
         "interactive_choice": {
@@ -1247,7 +1247,7 @@
             {
               "id": "A",
               "text": "Obliczyć $\\Delta$ i użyć wzoru na pierwiastki",
-              "feedback": "Możliwe, ale zobacz czy nie ma prostszego wzoru!\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Możliwe, ale zobacz czy nie ma prostszego wzoru!",
               "is_correct": true
             },
             {
@@ -1301,7 +1301,7 @@
         "step": 8,
         "hint": "Jaki jest jedyny pierwiastek równania $(x - 3)^2 = 0$?",
         "expression": "$x - 3 = 0$",
-        "explanation": "Wyciągamy pierwiastek z obu stron\n\n(No changes needed as there are no mathematical expressions in this text)"
+        "explanation": "Wyciągamy pierwiastek z obu stron"
       },
       {
         "step": 9,
@@ -1393,7 +1393,7 @@
             },
             {
               "id": "C",
-              "text": "Sprawdzić wartości tylko funkcji stałych\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "text": "Sprawdzić wartości tylko funkcji stałych",
               "feedback": "To za mało - funkcje liniowe też mogą dawać różne wartości na przedziałach.",
               "is_correct": false
             }
@@ -1415,13 +1415,13 @@
       },
       {
         "step": 6,
-        "hint": "Jaki jest zbiór wszystkich możliwych wartości funkcji?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaki jest zbiór wszystkich możliwych wartości funkcji?",
         "expression": "Zbiór wartości: $[2, 4] \\cup \\{4\\} \\cup [-3, 3) \\cup \\{-3\\} \\cup (-2, 1] = [-3, 4]$",
         "explanation": "Łączymy wszystkie zakresy wartości z poszczególnych kawałków"
       },
       {
         "step": 7,
-        "hint": "Jaka jest najmniejsza wartość funkcji?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaka jest najmniejsza wartość funkcji?",
         "expression": "Najmniejsza wartość: $f_{min} = -3$",
         "explanation": "Porównując wszystkie wartości, minimum wynosi $-3$",
         "why": "Wartość $-3$ jest osiągana zarówno przez kawałek $f(x) = -3x$ w punkcie $x = 1$, jak i przez kawałek stały $f(x) = -3$ na przedziale $(1, 3)$."
@@ -1510,8 +1510,8 @@
       },
       {
         "step": 2,
-        "hint": "Którą metodę wybierzesz do wyznaczenia wzoru funkcji?\n\n(No changes needed as there are no mathematical expressions in this text)",
-        "expression": "Wykorzystamy własność osi symetrii do znalezienia drugiego pierwiastka\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Którą metodę wybierzesz do wyznaczenia wzoru funkcji?",
+        "expression": "Wykorzystamy własność osi symetrii do znalezienia drugiego pierwiastka",
         "explanation": "Oś symetrii leży w połowie odległości między $x_1$ i $x_2$",
         "interactive_choice": {
           "prompt": "Jak najefektywniej wyznaczyć wzór funkcji kwadratowej mając te dane?",
@@ -1531,7 +1531,7 @@
             {
               "id": "C",
               "text": "Użyć postaci kanonicznej $g(x) = a(x-p)^2 + q$",
-              "feedback": "Możliwe, ale trudniej wykorzystać miejsce zerowe w tej postaci.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Możliwe, ale trudniej wykorzystać miejsce zerowe w tej postaci.",
               "is_correct": false
             }
           ],
@@ -1595,7 +1595,7 @@
       },
       {
         "step": 8,
-        "hint": "Jaka jest ostateczna postać iloczynowa funkcji?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaka jest ostateczna postać iloczynowa funkcji?",
         "expression": "$g(x) = -(x + 2)(x - 3)$",
         "explanation": "Postać iloczynowa z wyznaczonym współczynnikiem"
       },
@@ -1691,7 +1691,7 @@
             {
               "id": "C",
               "text": "Skorzystać z postaci kanonicznej z wierzchołkiem",
-              "feedback": "Dobra strategia, choć najpierw musisz znaleźć współrzędne wierzchołka.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Dobra strategia, choć najpierw musisz znaleźć współrzędne wierzchołka.",
               "is_correct": true
             }
           ],
@@ -1764,7 +1764,7 @@
             {
               "id": "A",
               "text": "Pochodna równa $0$ da minimum/maksimum",
-              "feedback": "Matematycznie poprawne, ale można prościej - wykorzystaj własności paraboli.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Matematycznie poprawne, ale można prościej - wykorzystaj własności paraboli.",
               "is_correct": true
             },
             {
@@ -1776,7 +1776,7 @@
             {
               "id": "C",
               "text": "Przeanalizuj granice funkcji gdy $x \\to \\pm\\infty$",
-              "feedback": "To da ci tylko informację o dolnej granicy, ale nie o górnej.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "To da ci tylko informację o dolnej granicy, ale nie o górnej.",
               "is_correct": false
             }
           ],
@@ -1785,7 +1785,7 @@
       },
       {
         "step": 9,
-        "hint": "Jaka jest wartość funkcji w wierzchołku?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaka jest wartość funkcji w wierzchołku?",
         "expression": "$g\\left(\\frac{1}{2}\\right) = -\\left(\\frac{1}{2}\\right)^2 + \\frac{1}{2} + 6 = -\\frac{1}{4} + \\frac{1}{2} + 6 = \\frac{-1 + 2 + 24}{4} = \\frac{25}{4} = 6\\frac{1}{4}$",
         "explanation": "Obliczamy wartość maksymalną funkcji"
       },
@@ -1885,7 +1885,7 @@
       },
       {
         "step": 7,
-        "hint": "Jaką nierówność musimy rozwiązać?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaką nierówność musimy rozwiązać?",
         "expression": "$-x^2 + x + 6 > 4 \\Rightarrow -x^2 + x + 2 > 0 \\Rightarrow x^2 - x - 2 < 0$",
         "explanation": "Przekształcamy nierówność do postaci standardowej",
         "interactive_choice": {
@@ -1951,7 +1951,7 @@
       },
       {
         "step": 10,
-        "hint": "Jaki jest ostateczny zbiór rozwiązań?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaki jest ostateczny zbiór rozwiązań?",
         "expression": "$g(x) > 4$ dla $x \\in (-1, 2)$",
         "explanation": "Zbiór argumentów dla których funkcja $g$ przyjmuje wartości większe od $4$"
       }
@@ -2082,7 +2082,7 @@
             {
               "id": "A",
               "text": "Pochodna: $h'(x) = -2x - 5 = 0$, więc $x = -\\frac{5}{2}$",
-              "feedback": "Świetnie! To najszybsza metoda dla paraboli.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Świetnie! To najszybsza metoda dla paraboli.",
               "is_correct": true
             },
             {
@@ -2277,7 +2277,7 @@
       },
       {
         "step": 2,
-        "hint": "Jak najlepiej podejść do dowodzenia geometryczności tego ciągu?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak najlepiej podejść do dowodzenia geometryczności tego ciągu?",
         "expression": "Sprawdzimy czy $\\frac{b_{n+1}}{b_n} = const$",
         "explanation": "Będziemy obliczać stosunek kolejnych wyrazów ciągu",
         "interactive_choice": {
@@ -2322,7 +2322,7 @@
             {
               "id": "A",
               "text": "Rozdzielę na $\\frac{2^{n+1}}{2^n} \\cdot \\frac{3^n}{3^{n-1}}$ i użyję $\\frac{a^m}{a^k} = a^{m-k}$",
-              "feedback": "Świetnie! To najczytelniejszy sposób - dzielisz potęgi o tych samych podstawach.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Świetnie! To najczytelniejszy sposób - dzielisz potęgi o tych samych podstawach.",
               "is_correct": true
             },
             {
@@ -2444,11 +2444,11 @@
             {
               "id": "C",
               "text": "Użyć wzoru na sumę ciągu arytmetycznego",
-              "feedback": "Nie - to nie jest ciąg arytmetyczny! Różnica nie jest stała.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Nie - to nie jest ciąg arytmetyczny! Różnica nie jest stała.",
               "is_correct": false
             }
           ],
-          "explanation_after": "Dla małej liczby wyrazów najlepiej obliczyć je po kolei używając wzoru rekurencyjnego.\n\n(No changes needed as there are no mathematical expressions in this text)"
+          "explanation_after": "Dla małej liczby wyrazów najlepiej obliczyć je po kolei używając wzoru rekurencyjnego."
         }
       },
       {
@@ -2471,7 +2471,7 @@
       },
       {
         "step": 6,
-        "hint": "Ile wynosi piąty wyraz ciągu?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Ile wynosi piąty wyraz ciągu?",
         "expression": "$c_5 = 2c_4 + 3 \\cdot 4 - 5 = 2(-26) + 12 - 5 = -52 + 12 - 5 = -45$",
         "explanation": "Podstawiamy $n = 4$ i $c_4 = -26$"
       },
@@ -2507,13 +2507,13 @@
       },
       {
         "step": 8,
-        "hint": "Jaka jest suma pierwszych pięciu wyrazów?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaka jest suma pierwszych pięciu wyrazów?",
         "expression": "$S_5 = c_1 + c_2 + c_3 + c_4 + c_5 = (-3) + (-8) + (-15) + (-26) + (-45)$",
         "explanation": "Dodajemy wszystkie wyrazy ciągu"
       },
       {
         "step": 9,
-        "hint": "Ile wynosi ta suma?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Ile wynosi ta suma?",
         "expression": "$S_5 = -3 - 8 - 15 - 26 - 45 = -97$",
         "explanation": "Obliczamy ostateczny wynik"
       }
@@ -2620,7 +2620,7 @@
             {
               "id": "C",
               "text": "$(996 + 100) \\div 7 = 156$",
-              "feedback": "To nie jest wzór na liczbę wyrazów ciągu arytmetycznego.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "To nie jest wzór na liczbę wyrazów ciągu arytmetycznego.",
               "is_correct": false
             }
           ],
@@ -2629,7 +2629,7 @@
       },
       {
         "step": 7,
-        "hint": "Który wzór na sumę ciągu arytmetycznego zastosujesz?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Który wzór na sumę ciągu arytmetycznego zastosujesz?",
         "expression": "$S = \\frac{n(a_1 + a_n)}{2} = \\frac{129(100 + 996)}{2}$",
         "explanation": "Podstawiamy do wzoru na sumę ciągu arytmetycznego",
         "interactive_choice": {
@@ -2659,7 +2659,7 @@
       },
       {
         "step": 8,
-        "hint": "Ile wynosi suma w nawiasie?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Ile wynosi suma w nawiasie?",
         "expression": "$S = \\frac{129 \\times 1096}{2} = \\frac{141384}{2} = 70692$",
         "explanation": "Obliczamy ostateczny wynik"
       },
@@ -2703,7 +2703,7 @@
       },
       {
         "step": 2,
-        "hint": "Którą metodę wybierzesz do znajdowania cosinusa?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Którą metodę wybierzesz do znajdowania cosinusa?",
         "expression": "Użyjemy wzoru: $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$",
         "explanation": "Podstawowy wzór jedynki trygonometrycznej $\\sin^2(x) + \\cos^2(x) = 1$",
         "interactive_choice": {
@@ -2724,7 +2724,7 @@
             {
               "id": "C",
               "text": "Użyć wzorów redukcyjnych",
-              "feedback": "Możliwe, ale jedynka trygonometryczna jest prostsze rozwiązanie.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Możliwe, ale jedynka trygonometryczna jest prostsze rozwiązanie.",
               "is_correct": false
             }
           ],
@@ -2745,7 +2745,7 @@
       },
       {
         "step": 5,
-        "hint": "Jaki ułamek otrzymasz po uproszczeniu?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jaki ułamek otrzymasz po uproszczeniu?",
         "expression": "$\\frac{48}{49} + \\cos^2 \\alpha = 1$",
         "explanation": "Obliczamy: $16 \\cdot 3 = 48$"
       },
@@ -2921,7 +2921,7 @@
       },
       {
         "step": 5,
-        "hint": "Jak uprościć to równanie?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak uprościć to równanie?",
         "expression": "$4\\cos^2 \\beta + \\cos^2 \\beta = 1$, czyli $5\\cos^2 \\beta = 1$",
         "explanation": "Łączymy podobne składniki"
       },
@@ -3036,7 +3036,7 @@
             {
               "id": "A",
               "text": "$a_{sym} = \\frac{3}{2}$ (taki sam)",
-              "feedback": "Nie, proste prostopadłe mają różne współczynniki kierunkowe.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Nie, proste prostopadłe mają różne współczynniki kierunkowe.",
               "is_correct": false
             },
             {
@@ -3114,7 +3114,7 @@
             {
               "id": "A",
               "text": "Podstawić współrzędne i sprawdzić równość",
-              "feedback": "Dokładnie! To standardowa metoda sprawdzenia przynależności punktu do prostej.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Dokładnie! To standardowa metoda sprawdzenia przynależności punktu do prostej.",
               "is_correct": true
             },
             {
@@ -3135,7 +3135,7 @@
       },
       {
         "step": 10,
-        "hint": "Co oznacza otrzymany wynik?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Co oznacza otrzymany wynik?",
         "expression": "Otrzymaliśmy $y = 1$ dla $x = 11$, więc punkt $C(11, 1)$ leży na symetralnej",
         "explanation": "Punkt $C$ rzeczywiście należy do symetralnej odcinka $AB$",
         "why": "To potwierdza poprawność obliczeń - symetralna przechodzi przez zadany punkt $C$"
@@ -3352,7 +3352,7 @@
       },
       {
         "step": 3,
-        "hint": "Co otrzymamy po podstawieniu naszych wartości?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Co otrzymamy po podstawieniu naszych wartości?",
         "expression": "$c^2 = 7^2 + 8^2 - 2 \\cdot 7 \\cdot 8 \\cdot \\frac{11}{16}$",
         "explanation": "Podstawiamy wszystkie znane wartości do wzoru"
       },
@@ -3373,7 +3373,7 @@
             {
               "id": "A",
               "text": "Najpierw $112 \\cdot 11 = 1232$, potem dzielić przez $16$",
-              "feedback": "Możliwe, ale duże liczby. Lepiej uprościć wcześniej.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Możliwe, ale duże liczby. Lepiej uprościć wcześniej.",
               "is_correct": false
             },
             {
@@ -3513,7 +3513,7 @@
             {
               "id": "B",
               "text": "Wzór na pole koła $P = \\pi r^2$",
-              "feedback": "Nie, mamy długość łuku, nie pole koła.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Nie, mamy długość łuku, nie pole koła.",
               "is_correct": false
             },
             {
@@ -3616,7 +3616,7 @@
         "step": 1,
         "hint": "Jakie dane znamy o rombie?",
         "expression": "Pole rombu = $32$, kąt ostry = $30°$",
-        "explanation": "Zbieramy wszystkie dane z treści zadania\n\n(No changes needed as there are no mathematical expressions in this text)"
+        "explanation": "Zbieramy wszystkie dane z treści zadania"
       },
       {
         "step": 2,
@@ -3659,7 +3659,7 @@
             {
               "id": "A",
               "text": "$\\sin(30°) = \\frac{1}{2}$",
-              "feedback": "Doskonale! To jedna z podstawowych wartości trygonometrycznych.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Doskonale! To jedna z podstawowych wartości trygonometrycznych.",
               "is_correct": true
             },
             {
@@ -3809,7 +3809,7 @@
       },
       {
         "step": 4,
-        "hint": "Jak najlepiej rozwiązać to równanie?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak najlepiej rozwiązać to równanie?",
         "expression": "$a^2 = 1$",
         "explanation": "Dzielimy obie strony równania przez $\\sqrt{3}$",
         "interactive_choice": {
@@ -3950,7 +3950,7 @@
       },
       {
         "step": 5,
-        "hint": "Jak uprościć to równanie?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Jak uprościć to równanie?",
         "expression": "$\\frac{1}{3}\\pi \\cdot \\frac{h^2}{3} \\cdot h = 9\\sqrt{3}\\pi$",
         "explanation": "Upraszczamy potęgę"
       },
@@ -4019,7 +4019,7 @@
             {
               "id": "A",
               "text": "$P_c = \\pi r^2 + \\pi rl$",
-              "feedback": "Tak! Pole podstawy + pole powierzchni bocznej.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Tak! Pole podstawy + pole powierzchni bocznej.",
               "is_correct": true
             },
             {
@@ -4031,7 +4031,7 @@
             {
               "id": "C",
               "text": "$P_c = 2\\pi rl$",
-              "feedback": "Nie, to wzór na pole powierzchni bocznej walca.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Nie, to wzór na pole powierzchni bocznej walca.",
               "is_correct": false
             }
           ],
@@ -4144,7 +4144,7 @@
       },
       {
         "step": 5,
-        "hint": "A trzecia cyfra?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "A trzecia cyfra?",
         "expression": "Trzecia cyfra: $C \\in \\{1, 3, 5, 7, 9\\}$ - $5$ możliwości",
         "explanation": "Trzecia cyfra też nie ma dodatkowych ograniczeń"
       },
@@ -4165,7 +4165,7 @@
             {
               "id": "B",
               "text": "Reguła iloczynu - mnożymy liczby możliwości",
-              "feedback": "Tak! Dla każdej pozycji wybieramy niezależnie, więc mnożymy.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Tak! Dla każdej pozycji wybieramy niezależnie, więc mnożymy.",
               "is_correct": true
             },
             {
@@ -4254,7 +4254,7 @@
       },
       {
         "step": 4,
-        "hint": "Które z tych wartości są liczbami pierwszymi?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Które z tych wartości są liczbami pierwszymi?",
         "expression": "Liczby pierwsze w zakresie: $2$, $3$, $5$, $7$, $11$, $13$",
         "explanation": "Identyfikujemy liczby pierwsze potrzebne do sprawdzenia warunków",
         "interactive_choice": {
@@ -4380,13 +4380,13 @@
             {
               "id": "B",
               "text": "Użyć wzoru: średnia = $\\sum (x_i \\cdot p_i)$, gdzie $p_i$ to procent w ułamku",
-              "feedback": "Idealnie! To średnia ważona, gdzie wagami są prawdopodobieństwa.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "Idealnie! To średnia ważona, gdzie wagami są prawdopodobieństwa.",
               "is_correct": true
             },
             {
               "id": "C",
               "text": "Obliczyć średnią z procentów, potem z liczby egzaminów",
-              "feedback": "To nie ma sensu matematycznego. Średnia procentów to nie to samo.\n\n(No changes needed as there are no mathematical expressions in this text)",
+              "feedback": "To nie ma sensu matematycznego. Średnia procentów to nie to samo.",
               "is_correct": false
             }
           ],
@@ -4395,7 +4395,7 @@
       },
       {
         "step": 3,
-        "hint": "Ile wynosi każdy składnik sumy?\n\n(No changes needed as there are no mathematical expressions in this text)",
+        "hint": "Ile wynosi każdy składnik sumy?",
         "expression": "$0{,}10 + 0{,}80 + 1{,}05 + 0{,}40 + 0{,}25 = 2{,}60$",
         "explanation": "Obliczamy wszystkie składniki i sumujemy je"
       },
