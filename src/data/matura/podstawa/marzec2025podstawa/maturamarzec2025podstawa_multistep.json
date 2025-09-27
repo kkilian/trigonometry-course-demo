@@ -994,7 +994,7 @@
       },
       {
         "step": 9,
-        "hint": "Jaki jest końcowy kapitał?\n\n(No mathematical expressions found, so no changes were made)",
+        "hint": "Jaki jest końcowy kapitał?",
         "expression": "$K = 5000 \\cdot 1{,}0404 = 5202$ zł",
         "explanation": "Mnożymy kapitał początkowy przez współczynnik wzrostu"
       },
@@ -1259,7 +1259,7 @@
             {
               "id": "C",
               "text": "Sprawdzać znak dla różnych przedziałów",
-              "feedback": "To można zrobić później, ale najpierw spróbuj rozkładu na czynniki.\n\n(No mathematical expressions found, so no changes were made)",
+              "feedback": "To można zrobić później, ale najpierw spróbuj rozkładu na czynniki.",
               "is_correct": false
             }
           ],
@@ -2143,7 +2143,7 @@
             {
               "id": "B",
               "text": "Przeanalizuję wzór ogólny $a_n$ matematycznie bez liczenia",
-              "feedback": "Ambitne podejście, ale dla tego wzoru obliczenia są prostsze.\n\n(No mathematical expressions found, so no changes were made)",
+              "feedback": "Ambitne podejście, ale dla tego wzoru obliczenia są prostsze.",
               "is_correct": false
             },
             {
@@ -2665,7 +2665,7 @@
       },
       {
         "step": 9,
-        "hint": "Jakie są odpowiedzi na pytania z zadania?\n\n(No mathematical expressions found, so no changes were made)",
+        "hint": "Jakie są odpowiedzi na pytania z zadania?",
         "expression": "Liczba trzycyfrowych: $129$ (odpowiedź B), suma: $70692$ (odpowiedź 2)",
         "explanation": "Końcowa odpowiedź: $B$ oraz $2$"
       }
@@ -3708,7 +3708,7 @@
             {
               "id": "A",
               "text": "Użyć wzoru $P = a \\cdot h$, więc $h = \\frac{P}{a}$",
-              "feedback": "Perfekcyjnie! To najprostszy sposób na wysokość.\n\n(No mathematical expressions found, so no changes were made)",
+              "feedback": "Perfekcyjnie! To najprostszy sposób na wysokość.",
               "is_correct": true
             },
             {
@@ -3839,7 +3839,7 @@
       },
       {
         "step": 5,
-        "hint": "Jaka jest długość krawędzi?\n\n(No mathematical expressions found, so no changes were made)",
+        "hint": "Jaka jest długość krawędzi?",
         "expression": "$a = 1$ (bo $a > 0$)",
         "explanation": "Pierwiastkujemy obie strony, bierzemy wartość dodatnią",
         "why": "Długość krawędzi musi być dodatnia, więc odrzucamy rozwiązanie $a = -1$"
@@ -3968,7 +3968,7 @@
       },
       {
         "step": 8,
-        "hint": "Jaki jest promień podstawy?\n\n(No mathematical expressions found, so no changes were made)",
+        "hint": "Jaki jest promień podstawy?",
         "expression": "$r = \\frac{h}{\\sqrt{3}} = \\frac{3\\sqrt{3}}{\\sqrt{3}} = 3$",
         "explanation": "Obliczamy promień z relacji trygonometrycznej"
       },
@@ -4040,7 +4040,7 @@
       },
       {
         "step": 12,
-        "hint": "Jakie jest pole powierzchni całkowitej?\n\n(No mathematical expressions found, so no changes were made)",
+        "hint": "Jakie jest pole powierzchni całkowitej?",
         "expression": "$P_c = 27\\pi$",
         "explanation": "Otrzymujemy ostateczny wynik"
       }
