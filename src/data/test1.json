@@ -1,80 +1,688 @@
 [
   {
-    "id": "comparison_test_1",
-    "topic": "Równania kwadratowe",
-    "statement": "Rozwiąż równanie $x^2 - 5x + 6 = 0$",
+    "id": "1",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 5,
+    "statement": "Rozwiąż równanie: $||x+2|-4|=|4-|x||$",
     "steps": [
       {
         "step": 1,
-        "hint": "Model 1: Spróbuj zastosować wzór na deltę",
-        "expression": "Delta: $\\Delta = b^2 - 4ac = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$",
-        "explanation": "Model 1 używa klasycznej metody wzoru kwadratowego"
+        "hint": "Ile poziomów wartości bezwzględnych widzisz w tym równaniu?",
+        "expression": "$||x+2|-4|=|4-|x||$",
+        "explanation": "Mamy zagnieżdżone wartości bezwzględne: po lewej stronie $|x+2|$ wewnątrz większej wartości bezwzględnej, po prawej $|x|$ wewnątrz $|4-|x||$"
       },
       {
         "step": 2,
-        "hint": "Model 1: Oblicz pierwiastki używając wzoru",
-        "expression": "$x = \\frac{5 \\pm \\sqrt{1}}{2} = \\frac{5 \\pm 1}{2}$",
-        "explanation": "Standardowe zastosowanie wzoru na pierwiastki równania kwadratowego"
+        "hint": "Jak najlepiej podejść do rozwiązania równania z zagnieżdżonymi wartościami bezwzględnymi?",
+        "expression": "Analizujemy najpierw $|x|$ i $|x+2|$, potem zewnętrzne wartości bezwzględne",
+        "explanation": "Systematyczne podejście: od wewnątrz na zewnątrz",
+        "why": "Zagnieżdżone wartości bezwzględne wymagają systematycznego rozłożenia na przypadki, zaczynając od wewnętrznych.",
+        "interactive_choice": {
+          "prompt": "Jaka strategia będzie najbardziej efektywna dla równania $||x+2|-4|=|4-|x||$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozważyć wszystkie możliwe kombinacje znaków na raz",
+              "feedback": "To prowadzi do chaosu - za dużo przypadków jednocześnie.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Najpierw przeanalizować wewnętrzne wartości bezwzględne $|x|$ i $|x+2|$",
+              "feedback": "Doskonale! Systematyczne podejście od wewnątrz na zewnątrz.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podnosić obydwie strony do kwadratu aby pozbyć się wartości bezwzględnych",
+              "feedback": "Niebezpieczne - możesz wprowadzić dodatkowe rozwiązania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Systematyczna analiza od wewnętrznych wartości bezwzględnych pozwala kontrolować liczbę przypadków."
+        }
       },
       {
         "step": 3,
-        "hint": "Model 1: Wypisz oba rozwiązania",
-        "expression": "$x_1 = \\frac{5 + 1}{2} = 3$, $x_2 = \\frac{5 - 1}{2} = 2$",
-        "explanation": "Model 1 podaje rozwiązania w kolejności malejącej"
+        "hint": "Jakie są punkty przełączania dla wewnętrznych wartości bezwzględnych?",
+        "expression": "$|x|$ zmienia się w $x = 0$, $|x+2|$ zmienia się w $x = -2$",
+        "explanation": "Identyfikujemy punkty krytyczne: $x = -2$ i $x = 0$"
+      },
+      {
+        "step": 4,
+        "hint": "W jakiej kolejności warto rozpatrzyć przedziały?",
+        "expression": "Rozpatrujemy przypadki: I) $x < -2$, II) $-2 ≤ x < 0$, III) $x ≥ 0$",
+        "explanation": "Dzielimy dziedzinę na podstawie punktów przełączania wartości bezwzględnych",
+        "interactive_choice": {
+          "prompt": "Które przedziały utworzone przez punkty $x = -2$ i $x = 0$ rozpatrzysz?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trzy przedziały: $x < -2$, $-2 ≤ x < 0$, $x ≥ 0$",
+              "feedback": "Świetnie! To są wszystkie przypadki dla wewnętrznych wartości bezwzględnych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tylko dwa przedziały: $x < 0$ i $x ≥ 0$",
+              "feedback": "Za mało - pomijasz wpływ punktu $x = -2$ na $|x+2|$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Cztery przedziały włączając osobno punkty $x = -2$ i $x = 0$",
+              "feedback": "Niepotrzebnie skomplikowane - wystarczą trzy przedziały.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Trzy przedziały pokrywają wszystkie kombinacje znaków wewnętrznych wartości bezwzględnych."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co dzieje się z wewnętrznymi wartościami bezwzględnymi gdy $x < -2$?",
+        "expression": "Dla $x < -2$: $|x| = -x$, $|x+2| = -(x+2) = -x-2$",
+        "explanation": "W tym przedziale obie wyrażenia pod wartościami bezwzględnymi są ujemne"
+      },
+      {
+        "step": 6,
+        "hint": "Jak wygląda równanie dla $x < -2$ po podstawieniu?",
+        "expression": "$|(-x-2)-4| = |4-(-x)|$, czyli $|-x-6| = |4+x|$",
+        "explanation": "Podstawiliśmy wyrażenia z poprzedniego kroku"
+      },
+      {
+        "step": 7,
+        "hint": "Jaki jest znak wyrażenia $-x-6$ gdy $x < -2$?",
+        "expression": "Dla $x < -2$: $-x > 2$, więc $-x-6 > -4 < 0$ gdy $x > -6$",
+        "explanation": "Sprawdzamy znak wyrażenia $-x-6$: jest ujemny dla $x > -6$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozłożyć przypadek $x < -2$ na podprzypadki?",
+        "expression": "Podprzypadek 1a) $-6 ≤ x < -2$: $x+6 = 4+x$, sprzeczność\nPodprzypadek 1b) $x < -6$: $-x-6 = 4+x$, czyli $-2x = 10$, $x = -5$",
+        "explanation": "Dla $x = -5 < -6$ sprzeczność. Brak rozwiązań w tym przedziale."
+      },
+      {
+        "step": 9,
+        "hint": "Co dzieje się z wartościami bezwzględnymi gdy $-2 ≤ x < 0$?",
+        "expression": "Dla $-2 ≤ x < 0$: $|x| = -x$, $|x+2| = x+2$",
+        "explanation": "Równanie staje się $|(x+2)-4| = |4-(-x)|$, czyli $|x-2| = |4+x|$"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są znaki wyrażeń $x-2$ i $4+x$ dla $-2 ≤ x < 0$?",
+        "expression": "Dla $-2 ≤ x < 0$: $x-2 < 0$ oraz $4+x > 2 > 0$",
+        "explanation": "Mamy $|x-2| = 2-x$ i $|4+x| = 4+x$"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie równanie otrzymasz po usunięciu wartości bezwzględnych?",
+        "expression": "$2-x = 4+x$, skąd $-2x = 2$, czyli $x = -1$",
+        "explanation": "Sprawdzamy: $x = -1 ∈ [-2,0)$ ✓. To jest rozwiązanie."
+      },
+      {
+        "step": 12,
+        "hint": "Co się dzieje gdy $x ≥ 0$?",
+        "expression": "Dla $x ≥ 0$: $|x| = x$, $|x+2| = x+2$",
+        "explanation": "Równanie staje się $|(x+2)-4| = |4-x|$, czyli $|x-2| = |4-x|$"
+      },
+      {
+        "step": 13,
+        "hint": "Jak rozłożyć przypadek $x ≥ 0$ względem znaku $x-2$?",
+        "expression": "Podprzypadek 3a) $0 ≤ x < 2$: $2-x = 4-x$, sprzeczność $2 = 4$\nPodprzypadek 3b) $x ≥ 2$: $x-2 = 4-x$, skąd $2x = 6$, $x = 3$",
+        "explanation": "Sprawdzamy: $x = 3 ≥ 2$ ✓. To jest rozwiązanie."
+      },
+      {
+        "step": 14,
+        "hint": "Czy należy sprawdzić znalezione rozwiązania?",
+        "expression": "Sprawdzamy $x = -1$: $||(-1)+2|-4| = |4-|-1|| \\Rightarrow |1-4| = |4-1| \\Rightarrow 3 = 3$ ✓",
+        "explanation": "Rozwiązanie $x = -1$ jest poprawne",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej zweryfikować rozwiązania $x = -1$ i $x = 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić do oryginalnego równania i sprawdzić równość",
+              "feedback": "Doskonale! To jedyny pewny sposób weryfikacji.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprawdzić tylko czy należą do odpowiednich przedziałów",
+              "feedback": "Za mało - to nie gwarantuje poprawności rozwiązania.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie trzeba sprawdzać - metoda była systematyczna",
+              "feedback": "Błąd! Zawsze weryfikuj rozwiązania równań z wartościami bezwzględnymi.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Weryfikacja przez podstawienie do równania oryginalnego jest kluczowa."
+        }
+      },
+      {
+        "step": 15,
+        "hint": "Czy drugie rozwiązanie również jest poprawne?",
+        "expression": "Sprawdzamy $x = 3$: $||3+2|-4| = |4-|3|| \\Rightarrow |5-4| = |4-3| \\Rightarrow 1 = 1$ ✓",
+        "explanation": "Rozwiązanie $x = 3$ również jest poprawne"
       }
     ],
-    "solution": "Rozwiązania: $x_1 = 3$, $x_2 = 2$"
+    "solutions": [
+      "$x = -1$",
+      "$x = 3$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 15,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-26T07:14:21.756Z",
+    "thinking_used": true
   },
   {
-    "id": "comparison_test_2",
-    "topic": "Funkcje liniowe",
-    "statement": "Znajdź współczynnik kierunkowy prostej przechodzącej przez punkty $A(1,2)$ i $B(3,8)$",
+    "id": "2",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie: $|x+3| = \\sqrt{x^2-2x+1} + 8$",
     "steps": [
       {
         "step": 1,
-        "hint": "Model 1: Użyj wzoru na współczynnik kierunkowy",
-        "expression": "$a = \\frac{y_2 - y_1}{x_2 - x_1}$",
-        "explanation": "Model 1 zaczyna od definicji współczynnika kierunkowego"
+        "hint": "Co kryje się pod pierwiastkiem $\\sqrt{x^2-2x+1}$?",
+        "expression": "$|x+3| = |x-1| + 8$",
+        "explanation": "Przepisujemy równanie w prostszej postaci",
+        "why": "Rozpoznanie wzoru $(a-b)^2$ pozwala zamienić pierwiastek na wartość bezwzględną",
+        "interactive_choice": {
+          "prompt": "Jak można uprościć wyrażenie $\\sqrt{x^2-2x+1}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To jest $(x-1)^2$, więc $\\sqrt{x^2-2x+1} = x-1$",
+              "feedback": "Uwaga! $\\sqrt{a^2} = |a|$, nie po prostu $a$. Tutaj $\\sqrt{(x-1)^2} = |x-1|$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "To jest $(x-1)^2$, więc $\\sqrt{x^2-2x+1} = |x-1|$",
+              "feedback": "Doskonale! Rozpoznałeś kwadrat sumy i pamiętasz że $\\sqrt{a^2} = |a|$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie da się tego uprościć",
+              "feedback": "Da się! Sprawdź czy $x^2-2x+1$ to może kwadrat jakiegoś wyrażenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyrażenie $x^2-2x+1 = (x-1)^2$, więc $\\sqrt{x^2-2x+1} = |x-1|$"
+        }
       },
       {
         "step": 2,
-        "hint": "Model 1: Podstaw współrzędne punktów",
-        "expression": "$a = \\frac{8 - 2}{3 - 1} = \\frac{6}{2}$",
-        "explanation": "Metodyczne podstawienie wartości z punktów A i B"
+        "hint": "Jaką metodę wybierzesz do rozwiązania równania z dwiema wartościami bezwzględnymi?",
+        "expression": "Punkty przełomu: $x = -3$ (dla $|x+3|$) i $x = 1$ (dla $|x-1|$)",
+        "explanation": "Dzielimy dziedzinę na przedziały według miejsc zerowych wyrażeń pod wartościami bezwzględnymi",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $|x+3| = |x-1| + 8$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podnieść obie strony do kwadratu",
+              "feedback": "Niebezpieczne - można wprowadzić rozwiązania obce. Lepiej rozpatrzyć przypadki.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozpatrzyć przypadki w zależności od znaków wyrażeń pod wartościami bezwzględnymi",
+              "feedback": "Świetnie! To standardowa metoda dla równań z wartościami bezwzględnymi.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zastąpić wartości bezwzględne przez dodatnie wyrażenia",
+              "feedback": "To nie zadziała - wartości bezwzględne mogą być ujemne w zależności od x.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Musimy rozpatrzyć przypadki według punktów przełomu: $x = -3$ i $x = 1$"
+        }
       },
       {
         "step": 3,
-        "hint": "Model 1: Uprość ułamek",
-        "expression": "$a = 3$",
-        "explanation": "Model 1 podaje końcowy wynik po uproszczeniu"
+        "hint": "Na ile przedziałów dzieli się oś liczbowa?",
+        "expression": "Przypadek I: $x < -3$, Przypadek II: $-3 \\leq x < 1$, Przypadek III: $x \\geq 1$",
+        "explanation": "Dla każdego przedziału wyrażenia pod wartościami bezwzględnymi mają stały znak",
+        "interactive_choice": {
+          "prompt": "Które przedziały należy rozpatrzyć dla punktów przełomu $x = -3$ i $x = 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dwa przedziały: $x < -3$ i $x \\geq -3$",
+              "feedback": "Za mało! Mamy dwa punkty przełomu, więc trzeba rozpatrzyć trzy przedziały.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Trzy przedziały: $x < -3$, $-3 \\leq x < 1$, $x \\geq 1$",
+              "feedback": "Dokładnie! Każdy punkt przełomu tworzy nowy przedział do rozpatrzenia.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Cztery przedziały: $x < -3$, $x = -3$, $-3 < x < 1$, $x \\geq 1$",
+              "feedback": "Niepotrzebnie komplikujesz - punkty przełomu można dołączyć do sąsiednich przedziałów.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Rozpatrujemy trzy przypadki według znaków wyrażeń pod wartościami bezwzględnymi"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaki znak ma $x+3$ gdy $x < -3$?",
+        "expression": "Przypadek I ($x < -3$): $x+3 < 0$ i $x-1 < 0$",
+        "explanation": "Oba wyrażenia są ujemne, więc $|x+3| = -(x+3)$ i $|x-1| = -(x-1)$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak wygląda równanie po usunięciu wartości bezwzględnych?",
+        "expression": "$-(x+3) = -(x-1) + 8$",
+        "explanation": "Podstawiamy $|x+3| = -(x+3)$ i $|x-1| = -(x-1)$"
+      },
+      {
+        "step": 6,
+        "hint": "Co otrzymasz po uproszeniu?",
+        "expression": "$-x-3 = -x+1+8$, czyli $-x-3 = -x+9$",
+        "explanation": "Upraszczamy równanie"
+      },
+      {
+        "step": 7,
+        "hint": "Co się stanie gdy dodasz $x$ do obu stron?",
+        "expression": "$-3 = 9$",
+        "explanation": "Otrzymujemy sprzeczność",
+        "why": "Przypadek I nie ma rozwiązań - równanie prowadzi do sprzeczności"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie znaki mają wyrażenia gdy $-3 \\leq x < 1$?",
+        "expression": "Przypadek II ($-3 \\leq x < 1$): $x+3 \\geq 0$ i $x-1 < 0$",
+        "explanation": "Teraz $|x+3| = x+3$ i $|x-1| = -(x-1)$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak teraz brzmi równanie?",
+        "expression": "$x+3 = -(x-1) + 8$",
+        "explanation": "Podstawiamy odpowiednie wyrażenia"
+      },
+      {
+        "step": 10,
+        "hint": "Co otrzymasz po uproszeniu?",
+        "expression": "$x+3 = -x+1+8$, czyli $x+3 = -x+9$",
+        "explanation": "Upraszczamy równanie"
+      },
+      {
+        "step": 11,
+        "hint": "Ile wynosi $x$ po zebraniu na jedną stronę?",
+        "expression": "$2x = 6$, więc $x = 3$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 12,
+        "hint": "Czy $x = 3$ należy do przedziału $[-3, 1)$?",
+        "expression": "$x = 3 \\notin [-3, 1)$",
+        "explanation": "Rozwiązanie nie należy do rozpatrywanego przedziału, więc je odrzucamy"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie znaki mają wyrażenia gdy $x \\geq 1$?",
+        "expression": "Przypadek III ($x \\geq 1$): $x+3 > 0$ i $x-1 \\geq 0$",
+        "explanation": "Oba wyrażenia są nieujemne, więc $|x+3| = x+3$ i $|x-1| = x-1$"
+      },
+      {
+        "step": 14,
+        "hint": "Jak brzmi równanie w tym przypadku?",
+        "expression": "$x+3 = (x-1) + 8$",
+        "explanation": "Podstawiamy $|x+3| = x+3$ i $|x-1| = x-1$"
+      },
+      {
+        "step": 15,
+        "hint": "Co otrzymasz po uproszeniu?",
+        "expression": "$x+3 = x-1+8$, czyli $x+3 = x+7$",
+        "explanation": "Upraszczamy równanie"
+      },
+      {
+        "step": 16,
+        "hint": "Co się stanie gdy odejmiemy $x$ z obu stron?",
+        "expression": "$3 = 7$",
+        "explanation": "Otrzymujemy sprzeczność",
+        "why": "Przypadek III również nie ma rozwiązań"
       }
     ],
-    "solution": "Współczynnik kierunkowy: $a = 3$"
+    "solutions": [
+      "Równanie nie ma rozwiązań"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-26T07:15:09.129Z",
+    "thinking_used": true
   },
   {
-    "id": "comparison_test_3",
-    "topic": "Trygonometria",
-    "statement": "Oblicz $\\sin(30°) + \\cos(60°)$",
+    "id": "3",
+    "topic": "Równania z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $(|x|-1)(|x|+1)=24$",
     "steps": [
       {
         "step": 1,
-        "hint": "Model 1: Przypomnij wartości funkcji trygonometrycznych",
-        "expression": "$\\sin(30°) = \\frac{1}{2}$",
-        "explanation": "Model 1 zaczyna od przypomnienia podstawowych wartości"
+        "hint": "Co przypomina ci wyrażenie $(|x|-1)(|x|+1)$?",
+        "expression": "$(|x|-1)(|x|+1) = |x|^2 - 1^2 = |x|^2 - 1$",
+        "explanation": "Zastosowaliśmy wzór różnicy kwadratów",
+        "why": "Wzór $(a-b)(a+b) = a^2 - b^2$ znacznie upraszcza wyrażenie z wartością bezwzględną.",
+        "interactive_choice": {
+          "prompt": "Jak można przekształcić wyrażenie $(|x|-1)(|x|+1)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To jest wzór $(a-b)(a+b) = a^2 - b^2$",
+              "feedback": "Doskonale! Rozpoznajesz wzór różnicy kwadratów gdzie $a = |x|$ i $b = 1$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwinąć przez mnożenie każdego z każdym",
+              "feedback": "Możliwe, ale dłuższe. Lepiej użyć wzoru skróconego mnożenia.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić różne wartości dla |x|",
+              "feedback": "To nie jest systematyczne podejście. Lepiej przekształcić algebraicznie.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyrażenie $(|x|-1)(|x|+1)$ to klasyczny wzór różnicy kwadratów $(a-b)(a+b) = a^2 - b^2$."
+        }
       },
       {
         "step": 2,
-        "hint": "Model 1: Znajdź wartość cosinusa",
-        "expression": "$\\cos(60°) = \\frac{1}{2}$",
-        "explanation": "Model 1 systematycznie znajduje każdą wartość osobno"
+        "hint": "Do jakiej postaci przekształciło się nasze równanie?",
+        "expression": "$|x|^2 - 1 = 24$",
+        "explanation": "Otrzymaliśmy równanie z $|x|^2$"
       },
       {
         "step": 3,
-        "hint": "Model 1: Dodaj otrzymane wartości",
-        "expression": "$\\sin(30°) + \\cos(60°) = \\frac{1}{2} + \\frac{1}{2} = 1$",
-        "explanation": "Model 1 wykonuje dodawanie krok po kroku"
+        "hint": "Jak rozwiązać to równanie?",
+        "expression": "Podstawiamy $|x| = t$ gdzie $t \\geq 0$",
+        "explanation": "Wprowadzamy nową zmienną dla uproszczenia",
+        "interactive_choice": {
+          "prompt": "Jaka jest najlepsza strategia dla równania $|x|^2 - 1 = 24$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $|x| = t$ gdzie $t \\geq 0$",
+              "feedback": "Świetny wybór! Podstawienie uprości równanie do postaci kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozpatrywać przypadki $x \\geq 0$ i $x < 0$ osobno",
+              "feedback": "Można tak, ale dłużej. Podstawienie jest prostsze.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przenieść wszystko na jedną stronę",
+              "feedback": "To nie pomoże znacząco. Podstawienie $|x| = t$ jest kluczowe.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $|x| = t$ gdzie $t \\geq 0$ przekształca równanie z wartością bezwzględną w proste równanie kwadratowe."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak wygląda równanie po podstawieniu?",
+        "expression": "$t^2 - 1 = 24$",
+        "explanation": "Otrzymaliśmy zwykłe równanie kwadratowe względem $t$"
+      },
+      {
+        "step": 5,
+        "hint": "Jak rozwiązać równanie $t^2 - 1 = 24$?",
+        "expression": "$t^2 = 25$",
+        "explanation": "Przenosimy $1$ na prawą stronę"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są pierwiastki z liczby 25?",
+        "expression": "$t = 5$ lub $t = -5$",
+        "explanation": "Pierwiastkujemy obie strony równania"
+      },
+      {
+        "step": 7,
+        "hint": "Które rozwiązania można odrzucić i dlaczego?",
+        "expression": "$t = 5$ (bo $t = |x| \\geq 0$, więc $t = -5$ odrzucamy)",
+        "explanation": "Wartość bezwzględna nie może być ujemna",
+        "why": "Warunek $|x| \\geq 0$ eliminuje ujemne rozwiązania dla $t$."
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać równanie $|x| = 5$?",
+        "expression": "$x = 5$ lub $x = -5$",
+        "explanation": "Rozwiązujemy równanie z wartością bezwzględną",
+        "interactive_choice": {
+          "prompt": "Równanie $|x| = 5$ ma rozwiązania:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $x = 5$",
+              "feedback": "Nieprawda. Wartość bezwzględna z liczby ujemnej też może równać 5.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$x = 5$ oraz $x = -5$",
+              "feedback": "Dokładnie! Bo $|5| = 5$ i $|-5| = 5$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko $x = -5$",
+              "feedback": "Nieprawda. Zarówno 5 jak i -5 mają wartość bezwzględną równą 5.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie $|x| = a$ gdzie $a > 0$ ma zawsze dwa rozwiązania: $x = a$ i $x = -a$."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Czy warto sprawdzić nasze rozwiązania?",
+        "expression": "Sprawdzenie: $(|5|-1)(|5|+1) = 4 \\cdot 6 = 24$ ✓\n$(|-5|-1)(|-5|+1) = 4 \\cdot 6 = 24$ ✓",
+        "explanation": "Oba rozwiązania spełniają równanie"
       }
     ],
-    "solution": "Wynik: $1$"
+    "solutions": [
+      "$x = 5$",
+      "$x = -5$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-26T07:15:52.380Z",
+    "thinking_used": true
+  },
+  {
+    "id": "4",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 3,
+    "statement": "Rozwiąż równanie: $|2x - 3| = x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy prawa strona równania z wartością bezwzględną ma sens?",
+        "expression": "$x + 1 \\geq 0$, czyli $x \\geq -1$",
+        "explanation": "Wartość bezwzględna jest nieujemna, więc prawa strona też musi być",
+        "why": "Warunek $|a| = b$ wymaga $b \\geq 0$, inaczej równanie nie ma rozwiązań",
+        "interactive_choice": {
+          "prompt": "Dlaczego musimy sprawdzić znak prawej strony równania $|2x - 3| = x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie musimy - można od razu rozwiązywać",
+              "feedback": "Błąd! Wartość bezwzględna jest zawsze ≥ 0, więc prawa strona też musi.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Bo $|2x - 3| \\geq 0$, więc $x + 1 \\geq 0$",
+              "feedback": "Dokładnie! To daje nam dodatkowy warunek $x \\geq -1$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To tylko formalność bez znaczenia",
+              "feedback": "Nieprawda! Ten warunek może eliminować niektóre rozwiązania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Warunek $x \\geq -1$ ogranicza dziedzinę możliwych rozwiązań"
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Gdzie wyrażenie $2x - 3$ zmienia znak?",
+        "expression": "$2x - 3 = 0$ gdy $x = \\frac{3}{2}$",
+        "explanation": "To punkt przełomu dla wartości bezwzględnej"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie przypadki należy rozpatrzyć?",
+        "expression": "Przypadek I: $x < \\frac{3}{2}$ (wtedy $2x - 3 < 0$)\nPrzypadek II: $x \\geq \\frac{3}{2}$ (wtedy $2x - 3 \\geq 0$)",
+        "explanation": "Dzielimy na przypadki według znaku wyrażenia pod wartością bezwzględną",
+        "interactive_choice": {
+          "prompt": "Jak podzielić rozwiązanie równania $|2x - 3| = x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpatrzyć przypadki $x < 0$ i $x \\geq 0$",
+              "feedback": "Nie! Punkt przełomu to $x = 3/2$, nie $x = 0$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozpatrzyć przypadki $x < \\frac{3}{2}$ i $x \\geq \\frac{3}{2}$",
+              "feedback": "Perfekcyjnie! To odpowiada punktowi zerowania się $2x - 3$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podnieść obie strony do kwadratu",
+              "feedback": "Można, ale metoda przypadków jest bezpieczniejsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Punkt $x = 3/2$ dzieli oś na dwa obszary o różnych znakach $2x - 3$"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Co się dzieje w przypadku I?",
+        "expression": "Gdy $x < \\frac{3}{2}$: $|2x - 3| = -(2x - 3) = -2x + 3$",
+        "explanation": "Usuwamy wartość bezwzględną, zmieniając znak"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie równanie otrzymujemy?",
+        "expression": "$-2x + 3 = x + 1$",
+        "explanation": "Podstawiamy wyrażenie bez wartości bezwzględnej"
+      },
+      {
+        "step": 6,
+        "hint": "Rozwiąż równanie liniowe",
+        "expression": "$-2x - x = 1 - 3$\n$-3x = -2$\n$x = \\frac{2}{3}$",
+        "explanation": "Standardowe rozwiązanie równania liniowego"
+      },
+      {
+        "step": 7,
+        "hint": "Czy rozwiązanie spełnia warunki?",
+        "expression": "Sprawdzamy: $\\frac{2}{3} < \\frac{3}{2}$ ✓ oraz $\\frac{2}{3} \\geq -1$ ✓",
+        "explanation": "Rozwiązanie należy do rozpatrywanego przedziału i spełnia warunek początkowy"
+      },
+      {
+        "step": 8,
+        "hint": "Co się dzieje w przypadku II?",
+        "expression": "Gdy $x \\geq \\frac{3}{2}$: $|2x - 3| = 2x - 3$",
+        "explanation": "Wyrażenie jest nieujemne, więc opuszczamy wartość bezwzględną bez zmiany znaku"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie równanie otrzymujemy teraz?",
+        "expression": "$2x - 3 = x + 1$",
+        "explanation": "Podstawiamy wyrażenie bez wartości bezwzględnej"
+      },
+      {
+        "step": 10,
+        "hint": "Rozwiąż to równanie",
+        "expression": "$2x - x = 1 + 3$\n$x = 4$",
+        "explanation": "Rozwiązujemy równanie liniowe"
+      },
+      {
+        "step": 11,
+        "hint": "Czy to rozwiązanie jest poprawne?",
+        "expression": "Sprawdzamy: $4 \\geq \\frac{3}{2}$ ✓ oraz $4 \\geq -1$ ✓",
+        "explanation": "Rozwiązanie spełnia wszystkie warunki"
+      },
+      {
+        "step": 12,
+        "hint": "Zweryfikuj oba rozwiązania",
+        "expression": "Dla $x = \\frac{2}{3}$: $|2 \\cdot \\frac{2}{3} - 3| = |\\frac{4}{3} - 3| = |\\frac{-5}{3}| = \\frac{5}{3}$\n$\\frac{2}{3} + 1 = \\frac{5}{3}$ ✓\n\nDla $x = 4$: $|2 \\cdot 4 - 3| = |5| = 5$\n$4 + 1 = 5$ ✓",
+        "explanation": "Oba rozwiązania są poprawne"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{2}{3}$",
+      "$x = 4$"
+    ],
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-27T10:45:00.000Z",
+    "thinking_used": true
   }
 ]

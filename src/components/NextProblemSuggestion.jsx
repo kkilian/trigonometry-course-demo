@@ -187,6 +187,13 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for rational-equations-word-problems:', suggestedIds);
       }
 
+      // Save suggested problems to localStorage for absolute value equations module
+      if (currentProblem.module === 'absolute-value-equations') {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('absolute-value-equations-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for absolute-value-equations:', suggestedIds);
+      }
+
       // Save suggested problems to localStorage for specific matura sessions
       if (currentProblem.id && currentProblem.id.includes('#2025-marzec')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);

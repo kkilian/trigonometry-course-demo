@@ -483,6 +483,7 @@ const TrigonometryCourse = () => {
       }
     }
 
+
     // Load kombinatoryka-rozszerzenie progress
     const savedKombinatorykRozszerzenie = localStorage.getItem('completedKombinatorykRozszerzenieProblems');
     if (savedKombinatorykRozszerzenie) {
@@ -525,6 +526,7 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedRationalEquationsWordProblems', JSON.stringify([...completedRationalEquationsWordProblems]));
   }, [completedRationalEquationsWordProblems]);
+
 
   // Save kombinatoryka-rozszerzenie progress
   useEffect(() => {

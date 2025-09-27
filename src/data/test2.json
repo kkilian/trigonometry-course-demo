@@ -1,80 +1,199 @@
 [
   {
-    "id": "comparison_test_1",
-    "topic": "Równania kwadratowe",
-    "statement": "Rozwiąż równanie $x^2 - 5x + 6 = 0$",
+    "id": "1",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 5,
+    "statement": "Rozwiąż równanie: $||x+2|-4|=|4-|x||$",
     "steps": [
       {
         "step": 1,
-        "hint": "Model 2: Spróbuj rozłożyć na czynniki",
-        "expression": "Szukamy liczb $p$ i $q$ takich że $p + q = 5$ i $p \\cdot q = 6$",
-        "explanation": "Model 2 preferuje faktoryzację jako pierwszą metodę"
+        "hint": "Model 2: Przeanalizuj strukturę równania graficznie",
+        "expression": "Zauważmy że mamy 4 poziomy złożenia: $x$, $|x|$, $4-|x|$, $|4-|x||$",
+        "explanation": "Model 2 preferuje analizę strukturalną przed przypadkami"
       },
       {
         "step": 2,
-        "hint": "Model 2: Znajdź odpowiednią parę liczb",
-        "expression": "$p = 2$, $q = 3$ bo $2 + 3 = 5$ i $2 \\cdot 3 = 6$",
-        "explanation": "Model 2 pokazuje proces znajdowania odpowiedniej pary"
+        "hint": "Model 2: Wykorzystaj symetrię",
+        "expression": "Sprawdzamy czy $x = -x$ daje to samo równanie",
+        "explanation": "Model 2 szuka symetrii w równaniu"
       },
       {
         "step": 3,
-        "hint": "Model 2: Zapisz w postaci iloczynowej",
-        "expression": "$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$",
-        "explanation": "Model 2 rozkłada wielomian na czynniki liniowe"
+        "hint": "Model 2: Zacznij od analizy dziedziny",
+        "expression": "Wszystkie wyrażenia są określone dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Model 2 zawsze sprawdza dziedzinę na początku"
       },
       {
         "step": 4,
-        "hint": "Model 2: Odczytaj pierwiastki",
-        "expression": "$x - 2 = 0$ lub $x - 3 = 0$, więc $x = 2$ lub $x = 3$",
-        "explanation": "Model 2 podaje rozwiązania w kolejności rosnącej"
+        "hint": "Model 2: Podziel na mniejsze przedziały",
+        "expression": "Kluczowe punkty: $x = -2, 0, 4$",
+        "explanation": "Model 2 identyfikuje wszystkie istotne punkty"
+      },
+      {
+        "step": 5,
+        "hint": "Model 2: Sprawdź punkty charakterystyczne",
+        "expression": "Testujemy $x = -1$: $||1|-4| = |4-1| \\Rightarrow 3 = 3$ ✓",
+        "explanation": "Model 2 używa metody prób dla kluczowych wartości"
+      },
+      {
+        "step": 6,
+        "hint": "Model 2: Sprawdź drugi punkt",
+        "expression": "Testujemy $x = 3$: $||5|-4| = |4-3| \\Rightarrow 1 = 1$ ✓",
+        "explanation": "Model 2 weryfikuje kolejne podejrzane punkty"
       }
     ],
-    "solution": "Rozwiązania: $x = 2$ lub $x = 3$"
+    "solutions": [
+      "$x = -1$",
+      "$x = 3$"
+    ]
   },
   {
-    "id": "comparison_test_2",
-    "topic": "Funkcje liniowe",
-    "statement": "Znajdź współczynnik kierunkowy prostej przechodzącej przez punkty $A(1,2)$ i $B(3,8)$",
+    "id": "2",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie: $|x+3| = \\sqrt{x^2-2x+1} + 8$",
     "steps": [
       {
         "step": 1,
-        "hint": "Model 2: Zastanów się geometrycznie",
-        "expression": "Gdy $x$ wzrasta o $2$ (z $1$ do $3$), $y$ wzrasta o $6$ (z $2$ do $8$)",
-        "explanation": "Model 2 zaczyna od interpretacji geometrycznej"
+        "hint": "Model 2: Najpierw uprość pierwiastek",
+        "expression": "$\\sqrt{x^2-2x+1} = \\sqrt{(x-1)^2} = |x-1|$",
+        "explanation": "Model 2 od razu rozpoznaje kwadrat"
       },
       {
         "step": 2,
-        "hint": "Model 2: Współczynnik kierunkowy to stosunek przyrostów",
-        "expression": "$a = \\frac{\\text{przyrost } y}{\\text{przyrost } x} = \\frac{6}{2} = 3$",
-        "explanation": "Model 2 tłumaczy intuicję za wzorem matematycznym"
-      }
-    ],
-    "solution": "Współczynnik kierunkowy: $a = 3$ (prosta rośnie 3 jednostki w górę na każdą jednostkę w prawo)"
-  },
-  {
-    "id": "comparison_test_3",
-    "topic": "Trygonometria",
-    "statement": "Oblicz $\\sin(30°) + \\cos(60°)$",
-    "steps": [
-      {
-        "step": 1,
-        "hint": "Model 2: Zauważ związek między kątami",
-        "expression": "Kąty $30°$ i $60°$ to kąty komplementarne ($30° + 60° = 90°$)",
-        "explanation": "Model 2 zaczyna od zauważenia relacji geometrycznej"
-      },
-      {
-        "step": 2,
-        "hint": "Model 2: Użyj tożsamości kątów komplementarnych",
-        "expression": "$\\cos(60°) = \\sin(30°) = \\frac{1}{2}$",
-        "explanation": "Model 2 wykorzystuje fakt, że $\\cos(\\alpha) = \\sin(90° - \\alpha)$"
+        "hint": "Model 2: Analiza graficzna",
+        "expression": "$|x+3| = |x-1| + 8$",
+        "explanation": "Model 2 myśli o tym jako o odległościach na osi"
       },
       {
         "step": 3,
-        "hint": "Model 2: Podstaw do wyrażenia",
-        "expression": "$\\sin(30°) + \\cos(60°) = \\frac{1}{2} + \\frac{1}{2} = 1$",
-        "explanation": "Model 2 kończy elegancko wykorzystując symetrię"
+        "hint": "Model 2: Wykorzystaj interpretację geometryczną",
+        "expression": "Lewa strona to odległość od $-3$, prawa to odległość od $1$ plus $8$",
+        "explanation": "Model 2 interpretuje wartości bezwzględne jako odległości"
+      },
+      {
+        "step": 4,
+        "hint": "Model 2: Analiza nierówności",
+        "expression": "Ponieważ $|x+3| \\geq 0$ i $|x-1| \\geq 0$, mamy $|x+3| \\geq 8$",
+        "explanation": "Model 2 zauważa że minimalna wartość prawej strony to 8"
+      },
+      {
+        "step": 5,
+        "hint": "Model 2: Kiedy $|x+3| < 8$?",
+        "expression": "Gdy $-11 < x < 5$. Ale wtedy $|x+3| < 8 \\leq |x-1| + 8$",
+        "explanation": "Model 2 pokazuje sprzeczność"
+      },
+      {
+        "step": 6,
+        "hint": "Model 2: Wniosek",
+        "expression": "Równanie nie ma rozwiązań bo lewa strona zawsze za mała",
+        "explanation": "Model 2 używa analizy zamiast mechanicznego sprawdzania przypadków"
       }
     ],
-    "solution": "Wynik: $1$ (suma dwóch równych wartości $\\frac{1}{2}$)"
+    "solutions": [
+      "Równanie nie ma rozwiązań"
+    ]
+  },
+  {
+    "id": "3",
+    "topic": "Równania z wartością bezwzględną",
+    "difficulty": 4,
+    "statement": "Rozwiąż równanie $(|x|-1)(|x|+1)=24$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 2: Podstawienie upraszczające",
+        "expression": "Niech $t = |x|$ gdzie $t \\geq 0$",
+        "explanation": "Model 2 od razu wprowadza podstawienie"
+      },
+      {
+        "step": 2,
+        "hint": "Model 2: Przekształć równanie",
+        "expression": "$(t-1)(t+1) = 24$",
+        "explanation": "Model 2 pracuje z prostszą zmienną"
+      },
+      {
+        "step": 3,
+        "hint": "Model 2: Użyj wzoru",
+        "expression": "$t^2 - 1 = 24$, więc $t^2 = 25$",
+        "explanation": "Model 2 stosuje wzór różnicy kwadratów"
+      },
+      {
+        "step": 4,
+        "hint": "Model 2: Rozwiąż dla t",
+        "expression": "$t = 5$ (bo $t \\geq 0$)",
+        "explanation": "Model 2 odrzuca $t = -5$ ze względu na warunek"
+      },
+      {
+        "step": 5,
+        "hint": "Model 2: Wróć do x",
+        "expression": "$|x| = 5$ daje $x = \\pm 5$",
+        "explanation": "Model 2 znajduje oba rozwiązania symetrycznie"
+      }
+    ],
+    "solutions": [
+      "$x = 5$",
+      "$x = -5$"
+    ]
+  },
+  {
+    "id": "4",
+    "topic": "Równania z wartościami bezwzględnymi",
+    "difficulty": 3,
+    "statement": "Rozwiąż równanie: $|2x - 3| = x + 1$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Model 2: Analiza dziedziny",
+        "expression": "Ponieważ $|2x - 3| \\geq 0$, musimy mieć $x + 1 \\geq 0$, czyli $x \\geq -1$",
+        "explanation": "Model 2 zaczyna od warunku koniecznego"
+      },
+      {
+        "step": 2,
+        "hint": "Model 2: Metoda algebraiczna",
+        "expression": "$|2x - 3| = x + 1$ można podnieść do kwadratu",
+        "explanation": "Model 2 rozważa alternatywną metodę"
+      },
+      {
+        "step": 3,
+        "hint": "Model 2: Kwadratowanie",
+        "expression": "$(2x - 3)^2 = (x + 1)^2$",
+        "explanation": "Model 2 używa metody kwadratowania gdy obie strony nieujemne"
+      },
+      {
+        "step": 4,
+        "hint": "Model 2: Rozwiń kwadraty",
+        "expression": "$4x^2 - 12x + 9 = x^2 + 2x + 1$",
+        "explanation": "Model 2 rozwija używając wzorów"
+      },
+      {
+        "step": 5,
+        "hint": "Model 2: Upraszczanie",
+        "expression": "$3x^2 - 14x + 8 = 0$",
+        "explanation": "Model 2 porządkuje równanie kwadratowe"
+      },
+      {
+        "step": 6,
+        "hint": "Model 2: Wzór na pierwiastki",
+        "expression": "$x = \\frac{14 \\pm \\sqrt{196 - 96}}{6} = \\frac{14 \\pm 10}{6}$",
+        "explanation": "Model 2 używa wzoru deltowego"
+      },
+      {
+        "step": 7,
+        "hint": "Model 2: Oblicz rozwiązania",
+        "expression": "$x_1 = \\frac{24}{6} = 4$, $x_2 = \\frac{4}{6} = \\frac{2}{3}$",
+        "explanation": "Model 2 znajduje dwa rozwiązania"
+      },
+      {
+        "step": 8,
+        "hint": "Model 2: Weryfikacja",
+        "expression": "Oba spełniają $x \\geq -1$: $4 \\geq -1$ ✓ i $\\frac{2}{3} \\geq -1$ ✓",
+        "explanation": "Model 2 sprawdza warunek początkowy"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{2}{3}$",
+      "$x = 4$"
+    ]
   }
 ]
