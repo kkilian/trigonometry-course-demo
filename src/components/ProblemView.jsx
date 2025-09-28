@@ -194,7 +194,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
               <svg className="w-4 h-4" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16l-6-6 6-6" />
               </svg>
-              Zadania
+              Lista zadań
             </button>
             {onSkip && !showSolution && (
               <div className="relative">
