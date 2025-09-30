@@ -1,0 +1,94 @@
+{
+  "type": "quadratic",
+  "function": "x**2 - 4",
+  "variable": "x",
+  "x_range": [-4, 4],
+  "roots": [-2, 2],
+  "vertex": {
+    "x": 0,
+    "y": -4,
+    "kwargs": {
+      "color": "stone_600",
+      "size": 10
+    }
+  },
+  "annotations": [
+    {
+      "xy": [-2, 0],
+      "text": "$(-2, 0)$",
+      "xytext": [-2, -1.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10
+      }
+    },
+    {
+      "xy": [2, 0],
+      "text": "$(2, 0)$",
+      "xytext": [2, -1.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10
+      }
+    },
+    {
+      "xy": [-2.5, 2.25],
+      "text": "$(-x, y)$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10,
+        "color": "yellow"
+      }
+    },
+    {
+      "xy": [2.5, 2.25],
+      "text": "$(x, y)$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10,
+        "color": "yellow"
+      }
+    },
+    {
+      "xy": [0, 6],
+      "text": "Funkcja parzysta: $f(-x) = f(x)$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [0, 4.5],
+      "text": "Symetria względem osi OY",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10,
+        "color": "stone_600"
+      }
+    }
+  ],
+  "vertices": [
+    {
+      "x": -2.5,
+      "y": 2.25,
+      "kwargs": {
+        "color": "yellow",
+        "size": 10
+      }
+    },
+    {
+      "x": 2.5,
+      "y": 2.25,
+      "kwargs": {
+        "color": "yellow",
+        "size": 10
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-4, 4],
+  "ylim": [-5, 7],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/even_function_p4_step5.png"
+}

@@ -532,7 +532,8 @@
             }
           ],
           "explanation_after": "Gdy funkcja spełnia warunek parzystości, automatycznie nie jest nieparzysta (z wyjątkiem funkcji zerowej)."
-        }
+        },
+        "image": "/images/basics/even_function_p4_step5.png"
       }
     ],
     "solutions": [
