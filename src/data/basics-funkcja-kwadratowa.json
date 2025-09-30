@@ -1,0 +1,4064 @@
+[
+  {
+    "id": "quadratic_function_identification",
+    "topic": "Funkcje kwadratowe - definicja i rozpoznawanie",
+    "difficulty": 2,
+    "statement": "Które z podanych funkcji są funkcjami kwadratowymi? $f(x) = 2x^2 - 3x + 1$, $g(x) = x^3 - 2x^2$, $h(x) = -x^2 + 5$, $p(x) = \\frac{1}{x^2} + x$",
+    "statement_explanation": "Funkcja kwadratowa to wielomian stopnia 2 o postaci $f(x) = ax^2 + bx + c$, gdzie $a \\neq 0$. Kluczowym elementem jest identyfikacja najwyższej potęgi zmiennej.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda ogólna postać funkcji kwadratowej?",
+        "expression": "Funkcja kwadratowa: $f(x) = ax^2 + bx + c$, gdzie $a \\neq 0$",
+        "explanation": "Zapisujemy definicję funkcji kwadratowej",
+        "why": "Warunek $a \\neq 0$ jest kluczowy - gdyby $a = 0$, funkcja stałaby się liniowa lub stała.",
+        "interactive_choice": {
+          "prompt": "Która definicja najlepiej opisuje funkcję kwadratową?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Funkcja postaci $f(x) = ax^2 + bx + c$, gdzie $a \\neq 0$",
+              "feedback": "Doskonale! To klasyczna definicja - najwyższa potęga to 2, współczynnik $a$ nie może być zerem.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Funkcja, która zawiera $x^2$ w dowolnym miejscu",
+              "feedback": "Nie do końca - $x^2$ musi być najwyższą potęgą, a nie tylko występować w funkcji.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Funkcja postaci $f(x) = ax^2$, gdzie $a \\neq 0$",
+              "feedback": "To tylko szczególny przypadek - brakuje składników liniowego i stałego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Funkcja kwadratowa to wielomian stopnia 2: $f(x) = ax^2 + bx + c$, gdzie $a \\neq 0$. Współczynniki $b$ i $c$ mogą być zerami."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Czy funkcja $f(x) = 2x^2 - 3x + 1$ spełnia definicję?",
+        "expression": "$f(x) = 2x^2 - 3x + 1$ jest funkcją kwadratową",
+        "explanation": "Identyfikujemy współczynniki: $a = 2$, $b = -3$, $c = 1$",
+        "interactive_choice": {
+          "prompt": "Co możesz powiedzieć o funkcji $f(x) = 2x^2 - 3x + 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To funkcja kwadratowa: $a = 2$, $b = -3$, $c = 1$",
+              "feedback": "Świetnie! Najwyższa potęga to 2, współczynnik przy $x^2$ wynosi 2 (nie zero).",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "To nie jest funkcja kwadratowa, bo ma trzy składniki",
+              "feedback": "Liczba składników nie ma znaczenia - ważna jest najwyższa potęga zmiennej.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "To funkcja liniowa z dodatkowym $x^2$",
+              "feedback": "Nie - obecność $x^2$ jako najwyższej potęgi czyni ją kwadratową, nie liniową.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Funkcja ma postać $ax^2 + bx + c$ z $a = 2 \\neq 0$, więc jest kwadratowa."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaka jest najwyższa potęga w funkcji $g(x) = x^3 - 2x^2$?",
+        "expression": "Najwyższa potęga: $x^3$ (stopień 3)",
+        "explanation": "Funkcja zawiera $x^3$, więc nie jest kwadratowa",
+        "why": "Funkcja kwadratowa musi mieć stopień dokładnie 2. Funkcja $g(x)$ to wielomian stopnia 3 (funkcja sześcienna)."
+      },
+      {
+        "step": 4,
+        "hint": "Czy $g(x) = x^3 - 2x^2$ jest funkcją kwadratową?",
+        "expression": "$g(x) = x^3 - 2x^2$ NIE jest funkcją kwadratową",
+        "explanation": "To funkcja sześcienna (stopień 3), nie kwadratowa"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać funkcję $h(x) = -x^2 + 5$ w postaci ogólnej?",
+        "expression": "$h(x) = -x^2 + 0 \\cdot x + 5$, gdzie $a = -1$, $b = 0$, $c = 5$",
+        "explanation": "Brakujący składnik liniowy oznacza $b = 0$"
+      },
+      {
+        "step": 6,
+        "hint": "Czy $h(x) = -x^2 + 5$ spełnia warunek $a \\neq 0$?",
+        "expression": "$a = -1 \\neq 0$, więc $h(x)$ jest funkcją kwadratową",
+        "explanation": "Współczynnik przy $x^2$ jest różny od zera"
+      },
+      {
+        "step": 7,
+        "hint": "Co jest nietypowego w zapisie funkcji $p(x) = \\frac{1}{x^2} + x$?",
+        "expression": "$p(x) = x^{-2} + x$ NIE jest funkcją kwadratową",
+        "explanation": "Zawiera ujemną potęgę $x^{-2}$, więc nie jest wielomianem",
+        "interactive_choice": {
+          "prompt": "Dlaczego $p(x) = \\frac{1}{x^2} + x$ nie jest funkcją kwadratową?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bo $\\frac{1}{x^2} = x^{-2}$ to ujemna potęga, nie wielomian",
+              "feedback": "Dokładnie! Funkcja kwadratowa musi być wielomianem - nie może zawierać ujemnych potęg.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Bo nie ma składnika stałego $c$",
+              "feedback": "Brak składnika stałego nie dyskwalifikuje - może być $c = 0$. Problem w $\\frac{1}{x^2}$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bo ma za mało składników",
+              "feedback": "Liczba składników nie ma znaczenia. Problem w tym, że $\\frac{1}{x^2}$ nie jest wielomianem.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Funkcja kwadratowa to wielomian - może zawierać tylko nieujemne całkowite potęgi zmiennej."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Które funkcje przeszły wszystkie testy?",
+        "expression": "Funkcje kwadratowe: $f(x) = 2x^2 - 3x + 1$ oraz $h(x) = -x^2 + 5$",
+        "explanation": "Tylko te dwie funkcje spełniają definicję funkcji kwadratowej"
+      }
+    ],
+    "solutions": [
+      "$f(x) = 2x^2 - 3x + 1$",
+      "$h(x) = -x^2 + 5$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:03:27.036Z"
+  },
+  {
+    "id": "quadratic_coefficients_direction",
+    "topic": "Funkcje kwadratowe - współczynniki i własności",
+    "difficulty": 2,
+    "statement": "Dana jest funkcja kwadratowa $f(x) = 3x^2 - 6x + 2$. Podaj wartości współczynników $a$, $b$ i $c$ oraz określ kierunek ramion paraboli.",
+    "statement_explanation": "Współczynniki $a$, $b$, $c$ w funkcji kwadratowej określają kształt i położenie paraboli. Współczynnik $a$ decyduje o kierunku ramion, $b$ o przesunięciu poziomym, a $c$ o przecięciu z osią OY.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda ogólna postać funkcji kwadratowej?",
+        "expression": "$f(x) = ax^2 + bx + c$",
+        "explanation": "To jest standardowa postać funkcji kwadratowej",
+        "why": "Każda funkcja kwadratowa ma tę postać, gdzie $a \\neq 0$. Współczynniki $a$, $b$, $c$ określają kształt i położenie paraboli."
+      },
+      {
+        "step": 2,
+        "hint": "Jak dopasować naszą funkcję do postaci ogólnej?",
+        "expression": "$f(x) = 3x^2 - 6x + 2$ porównujemy z $f(x) = ax^2 + bx + c$",
+        "explanation": "Przygotowujemy się do odczytania współczynników",
+        "interactive_choice": {
+          "prompt": "Jak odczytać współczynniki z funkcji $f(x) = 3x^2 - 6x + 2$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Porównać wyrazy przy tych samych potęgach $x$",
+              "feedback": "Świetnie! To najprostsza metoda - porównujemy $3x^2$ z $ax^2$, $-6x$ z $bx$, $2$ z $c$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić $x = 0$ i $x = 1$",
+              "feedback": "To by dało równania, ale jest zbyt skomplikowane. Wystarczy porównać współczynniki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć deltę i wierzchołek",
+              "feedback": "Nie - delta i wierzchołek to inne własności. Tu wystarczy odczytać współczynniki.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Porównanie współczynników przy tych samych potęgach to najszybsza metoda identyfikacji $a$, $b$, $c$."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jaki jest współczynnik przy $x^2$?",
+        "expression": "$a = 3$",
+        "explanation": "Współczynnik przy $x^2$ to $a = 3$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest współczynnik przy $x$?",
+        "expression": "$b = -6$",
+        "explanation": "Współczynnik przy $x$ to $b = -6$ (uwaga na znak minus!)"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest wyraz wolny?",
+        "expression": "$c = 2$",
+        "explanation": "Wyraz wolny (bez $x$) to $c = 2$"
+      },
+      {
+        "step": 6,
+        "hint": "Co decyduje o kierunku ramion paraboli?",
+        "expression": "Analizujemy znak współczynnika $a = 3$",
+        "explanation": "Sprawdzamy czy $a$ jest dodatnie czy ujemne",
+        "why": "To fundamentalna własność: znak $a$ określa czy parabola jest wypukła ($a > 0$) czy wklęsła ($a < 0$).",
+        "interactive_choice": {
+          "prompt": "Który współczynnik określa, czy ramiona paraboli są skierowane w górę czy w dół?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik $a$ (przy $x^2$)",
+              "feedback": "Dokładnie! Jeśli $a > 0$ ramiona w górę, jeśli $a < 0$ ramiona w dół.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik $b$ (przy $x$)",
+              "feedback": "Nie - $b$ wpływa na położenie wierzchołka, ale nie na kierunek ramion.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Współczynnik $c$ (wyraz wolny)",
+              "feedback": "Nie - $c$ określa punkt przecięcia z osią OY, nie kierunek ramion.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika $a$ jest kluczowy: $a > 0$ oznacza parabolę 'uśmiechniętą' (ramiona w górę), $a < 0$ oznacza parabolę 'smutną' (ramiona w dół)."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Skoro $a = 3 > 0$, to w którą stronę skierowane są ramiona?",
+        "expression": "$a = 3 > 0$, więc ramiona paraboli skierowane są w górę",
+        "explanation": "Dodatni współczynnik $a$ oznacza ramiona skierowane w górę"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są wszystkie odpowiedzi na pytania z zadania?",
+        "expression": "Współczynniki: $a = 3$, $b = -6$, $c = 2$. Kierunek ramion: w górę",
+        "explanation": "Podsumowanie wszystkich wyników"
+      }
+    ],
+    "solutions": [
+      "$a = 3$, $b = -6$, $c = 2$",
+      "Ramiona paraboli skierowane w górę"
+    ],
+    "parameters": {
+      "function": "$f(x) = 3x^2 - 6x + 2$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:03:51.290Z"
+  },
+  {
+    "id": "quadratic_domain_range",
+    "topic": "Funkcje kwadratowe - dziedzina i zbiór wartości",
+    "difficulty": 3,
+    "statement": "Funkcja kwadratowa dana jest wzorem $f(x) = -2x^2 + 8x - 5$. Określ dziedzinę i zbiór wartości tej funkcji.",
+    "statement_explanation": "Dziedzina funkcji kwadratowej to zawsze wszystkie liczby rzeczywiste. Zbiór wartości zależy od położenia wierzchołka i kierunku ramion paraboli.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest dziedzina każdej funkcji kwadratowej?",
+        "expression": "$D_f = \\mathbb{R}$",
+        "explanation": "Funkcja kwadratowa jest określona dla wszystkich liczb rzeczywistych",
+        "why": "Wielomiany nie mają ograniczeń w dziedzinie - możemy podstawić dowolną liczbę rzeczywistą."
+      },
+      {
+        "step": 2,
+        "hint": "Co mówi współczynnik przy $x^2$ o kształcie paraboli?",
+        "expression": "$a = -2 < 0$, więc ramiona paraboli skierowane w dół",
+        "explanation": "Parabola ma maksimum, nie minimum",
+        "interactive_choice": {
+          "prompt": "Jak wygląda wykres funkcji $f(x) = -2x^2 + 8x - 5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ramiona paraboli skierowane w górę (bo jest $x^2$)",
+              "feedback": "Nie - kierunek zależy od znaku współczynnika przy $x^2$, nie od samego $x^2$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Ramiona paraboli skierowane w dół (bo $a = -2 < 0$)",
+              "feedback": "Dokładnie! Ujemny współczynnik przy $x^2$ oznacza ramiona w dół",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Parabola jest symetryczna względem osi OY",
+              "feedback": "Nie - symetria względem OY byłaby tylko dla $f(x) = ax^2 + c$ (bez wyrazu z $x$)",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika $a$ decyduje o kierunku ramion: $a > 0$ - w górę, $a < 0$ - w dół."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak znaleźć wierzchołek paraboli?",
+        "expression": "$p = -\\frac{b}{2a} = -\\frac{8}{2 \\cdot (-2)} = -\\frac{8}{-4} = 2$",
+        "explanation": "Obliczamy pierwszą współrzędną wierzchołka ze wzoru",
+        "interactive_choice": {
+          "prompt": "Którą metodę użyjesz do znalezienia współrzędnych wierzchołka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór $p = -\\frac{b}{2a}$, potem obliczyć $q = f(p)$",
+              "feedback": "Świetnie! To najszybsza metoda - bezpośrednio ze współczynników",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przekształcić do postaci kanonicznej $f(x) = a(x-p)^2 + q$",
+              "feedback": "Możliwe, ale bardziej czasochłonne - wymaga dopełnienia do kwadratu",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć miejsca zerowe i wziąć ich średnią",
+              "feedback": "To działa, ale wymaga najpierw rozwiązania równania - niepotrzebnie skomplikowane",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $p = -\\frac{b}{2a}$ jest najszybszy. Postać kanoniczna też działa, ale wymaga więcej obliczeń."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć drugą współrzędną wierzchołka?",
+        "expression": "$q = f(2) = -2 \\cdot 2^2 + 8 \\cdot 2 - 5$",
+        "explanation": "Podstawiamy $x = p = 2$ do wzoru funkcji"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $f(2)$?",
+        "expression": "$q = -2 \\cdot 4 + 16 - 5 = -8 + 16 - 5 = 3$",
+        "explanation": "Obliczamy wartość funkcji w wierzchołku"
+      },
+      {
+        "step": 6,
+        "hint": "Jaki jest zbiór wartości funkcji z ramionami w dół i wierzchołkiem w $(2, 3)$?",
+        "expression": "$Z_f = (-\\infty, 3]$",
+        "explanation": "Funkcja osiąga maksimum 3 i przyjmuje wszystkie wartości mniejsze",
+        "why": "Ramiona w dół oznaczają, że największa wartość to $q = 3$ w wierzchołku. Funkcja nie przyjmuje wartości większych niż 3.",
+        "interactive_choice": {
+          "prompt": "Skoro parabola ma ramiona w dół i maksimum w punkcie $(2, 3)$, to jaki jest zbiór wartości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$Z_f = [3, +\\infty)$ - od maksimum w górę",
+              "feedback": "Nie - ramiona idą w dół, więc wartości są poniżej maksimum!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$Z_f = (-\\infty, 3]$ - od minus nieskończoności do maksimum",
+              "feedback": "Dokładnie! Funkcja przyjmuje wszystkie wartości nie większe niż 3",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$Z_f = \\mathbb{R}$ - wszystkie liczby rzeczywiste",
+              "feedback": "Nie - funkcja ma maksimum, więc nie osiąga wartości większych niż 3",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla paraboli z ramionami w dół: $Z_f = (-\\infty, q]$. Dla ramion w górę byłoby: $Z_f = [q, +\\infty)$."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są dziedzina i zbiór wartości funkcji $f$?",
+        "expression": "$D_f = \\mathbb{R}$, $Z_f = (-\\infty, 3]$",
+        "explanation": "Podsumowanie: dziedzina to wszystkie liczby rzeczywiste, zbiór wartości to przedział od minus nieskończoności do 3 włącznie"
+      }
+    ],
+    "solutions": [
+      "$D_f = \\mathbb{R}$",
+      "$Z_f = (-\\infty, 3]$"
+    ],
+    "parameters": {
+      "vertex": "$(2, 3)$",
+      "direction": "ramiona w dół"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:04:20.198Z"
+  },
+  {
+    "id": "even_odd_function_check",
+    "topic": "Parzystość i nieparzystość funkcji",
+    "difficulty": 2,
+    "statement": "Sprawdź, czy funkcja $f(x) = x^2 - 4$ jest funkcją parzystą, nieparzystą czy żadną z nich.",
+    "statement_explanation": "Funkcja parzysta spełnia warunek $f(-x) = f(x)$, co graficznie oznacza symetrię względem osi OY. Funkcja nieparzysta spełnia $f(-x) = -f(x)$ i jest symetryczna względem początku układu.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie warunki musi spełniać funkcja parzysta i nieparzysta?",
+        "expression": "Funkcja parzysta: $f(-x) = f(x)$, Funkcja nieparzysta: $f(-x) = -f(x)$",
+        "explanation": "Przypominamy definicje - będziemy sprawdzać oba warunki",
+        "why": "To kluczowe definicje. Funkcja może być parzysta, nieparzysta lub żadną z nich. Nie może być jednocześnie parzysta i nieparzysta (poza $f(x) = 0$).",
+        "interactive_choice": {
+          "prompt": "Które warunki definiują parzystość i nieparzystość funkcji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Parzysta: $f(-x) = f(x)$, Nieparzysta: $f(-x) = -f(x)$",
+              "feedback": "Doskonale! To są dokładne definicje parzystości i nieparzystości.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Parzysta: $f(x) = f(x)$, Nieparzysta: $f(x) = -f(x)$",
+              "feedback": "Nie - te warunki nie dotyczą wartości w punkcie $-x$. Musimy sprawdzić $f(-x)$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Parzysta: wykres symetryczny względem osi Y, Nieparzysta: względem początku układu",
+              "feedback": "To prawda geometrycznie, ale do sprawdzenia potrzebujemy warunku algebraicznego: $f(-x) = f(x)$ lub $f(-x) = -f(x)$.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Funkcja jest parzysta gdy $f(-x) = f(x)$ dla każdego $x$ z dziedziny. Jest nieparzysta gdy $f(-x) = -f(x)$."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz podstawiając $-x$ zamiast $x$ w funkcji $f(x) = x^2 - 4$?",
+        "expression": "$f(-x) = (-x)^2 - 4$",
+        "explanation": "Podstawiamy $-x$ w miejsce każdego wystąpienia $x$"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi $(-x)^2$?",
+        "expression": "$f(-x) = x^2 - 4$",
+        "explanation": "Upraszczamy: $(-x)^2 = x^2$ bo kwadrat liczby ujemnej jest dodatni"
+      },
+      {
+        "step": 4,
+        "hint": "Porównaj $f(-x)$ z $f(x)$ - czy są równe?",
+        "expression": "$f(-x) = x^2 - 4 = f(x)$",
+        "explanation": "Wartości funkcji w punktach $x$ i $-x$ są identyczne",
+        "interactive_choice": {
+          "prompt": "Co możesz powiedzieć porównując $f(-x) = x^2 - 4$ z $f(x) = x^2 - 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$f(-x) = f(x)$, więc funkcja jest parzysta",
+              "feedback": "Świetnie! Warunek parzystości jest spełniony.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$f(-x) = -f(x)$, więc funkcja jest nieparzysta",
+              "feedback": "Nie - zobacz że $f(-x) = x^2 - 4$ jest dokładnie równe $f(x) = x^2 - 4$, a nie $-f(x) = -x^2 + 4$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Funkcja nie jest ani parzysta ani nieparzysta",
+              "feedback": "Nie - $f(-x)$ i $f(x)$ są identyczne, więc funkcja jest parzysta.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Ponieważ $f(-x) = f(x)$ dla każdego $x$, funkcja spełnia definicję funkcji parzystej."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Czy warto jeszcze sprawdzić warunek nieparzystości?",
+        "expression": "Funkcja $f(x) = x^2 - 4$ jest funkcją parzystą",
+        "explanation": "Spełniony jest warunek $f(-x) = f(x)$, więc funkcja jest parzysta",
+        "interactive_choice": {
+          "prompt": "Skoro $f(-x) = f(x)$, czy trzeba sprawdzać warunek $f(-x) = -f(x)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, bo funkcja już jest parzysta",
+              "feedback": "Dokładnie! Funkcja nie może być jednocześnie parzysta i nieparzysta (chyba że $f(x) = 0$ wszędzie).",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tak, funkcja może być jednocześnie parzysta i nieparzysta",
+              "feedback": "Nie - tylko funkcja zerowa ($f(x) = 0$ dla każdego $x$) może być jednocześnie parzysta i nieparzysta.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tak, dla pewności",
+              "feedback": "Możesz sprawdzić, ale to niepotrzebne - $f(-x) = f(x)$ wyklucza $f(-x) = -f(x)$ (chyba że $f(x) = 0$).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy funkcja spełnia warunek parzystości, automatycznie nie jest nieparzysta (z wyjątkiem funkcji zerowej)."
+        }
+      }
+    ],
+    "solutions": [
+      "Funkcja $f(x) = x^2 - 4$ jest funkcją parzystą"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:04:46.268Z"
+  },
+  {
+    "id": "quadratic_parabola_direction",
+    "topic": "Funkcje kwadratowe - kierunek ramion paraboli",
+    "difficulty": 2,
+    "statement": "Dwie funkcje kwadratowe dane są wzorami: $f(x) = ax^2 + 3x - 2$ oraz $g(x) = 2x^2 + bx + 1$. Dla jakich wartości $a$ i $b$ obie funkcje mają ramiona paraboli skierowane w tę samą stronę?",
+    "statement_explanation": "Znak współczynnika $a$ przy $x^2$ jednoznacznie określa kierunek ramion paraboli: dodatni - ramiona w górę, ujemny - ramiona w dół.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co decyduje o kierunku ramion paraboli funkcji kwadratowej?",
+        "expression": "Kierunek ramion zależy od znaku współczynnika przy $x^2$",
+        "explanation": "Identyfikujemy kluczowy parametr",
+        "why": "To fundamentalna własność funkcji kwadratowej - znak współczynnika $a$ określa wypukłość paraboli.",
+        "interactive_choice": {
+          "prompt": "Który element funkcji kwadratowej $f(x) = ax^2 + bx + c$ określa kierunek ramion paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik $a$ przy $x^2$",
+              "feedback": "Doskonale! Znak współczynnika $a$ decyduje o kierunku: $a > 0$ - ramiona w górę, $a < 0$ - ramiona w dół.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik $b$ przy $x$",
+              "feedback": "Nie - współczynnik $b$ wpływa na położenie wierzchołka, ale nie na kierunek ramion.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wyraz wolny $c$",
+              "feedback": "Nie - wyraz wolny $c$ określa punkt przecięcia z osią OY, nie kierunek ramion.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Współczynnik $a$ przy najwyższej potędze decyduje o kształcie paraboli: gdy $a > 0$ ramiona skierowane w górę, gdy $a < 0$ ramiona skierowane w dół."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są współczynniki przy $x^2$ w obu funkcjach?",
+        "expression": "Dla $f(x) = ax^2 + 3x - 2$ współczynnik to $a$, dla $g(x) = 2x^2 + bx + 1$ współczynnik to $2$",
+        "explanation": "Wypisujemy współczynniki przy najwyższej potędze"
+      },
+      {
+        "step": 3,
+        "hint": "Jaki znak ma współczynnik przy $x^2$ w funkcji $g(x)$?",
+        "expression": "W funkcji $g(x)$ współczynnik wynosi $2 > 0$",
+        "explanation": "Współczynnik $2$ jest liczbą dodatnią"
+      },
+      {
+        "step": 4,
+        "hint": "W którą stronę skierowane są ramiona paraboli funkcji $g(x)$?",
+        "expression": "Ramiona paraboli $g(x)$ są skierowane w górę, bo $2 > 0$",
+        "explanation": "Dodatni współczynnik oznacza ramiona skierowane w górę"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki warunek musi spełniać $a$, aby ramiona obu parabol były skierowane w tę samą stronę?",
+        "expression": "$a > 0$",
+        "explanation": "Warunek dla współczynnika $a$",
+        "interactive_choice": {
+          "prompt": "Skoro ramiona $g(x)$ są skierowane w górę, to jaki warunek musi spełniać $a$ w funkcji $f(x)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a > 0$ (dodatnie)",
+              "feedback": "Świetnie! Wtedy obie parabole mają ramiona w górę.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$a < 0$ (ujemne)",
+              "feedback": "Nie - wtedy $f(x)$ miałaby ramiona w dół, a $g(x)$ w górę - różne kierunki!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$a \\neq 0$ (różne od zera)",
+              "feedback": "To za mało - musimy określić konkretny znak, nie tylko że $a \\neq 0$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Aby ramiona były skierowane w tę samą stronę, oba współczynniki muszą mieć ten sam znak. Skoro dla $g(x)$ jest dodatni, to dla $f(x)$ też musi być dodatni."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Czy współczynnik $b$ ma jakikolwiek wpływ na kierunek ramion paraboli?",
+        "expression": "$b \\in \\mathbb{R}$ (dowolna liczba rzeczywista)",
+        "explanation": "Parametr $b$ nie ma ograniczeń",
+        "interactive_choice": {
+          "prompt": "Czy wartość parametru $b$ w funkcji $g(x) = 2x^2 + bx + 1$ wpływa na kierunek ramion?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, $b$ może być dowolną liczbą rzeczywistą",
+              "feedback": "Dokładnie! Współczynnik $b$ nie wpływa na kierunek ramion, tylko na położenie wierzchołka.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Tak, $b$ musi być dodatnie",
+              "feedback": "Nie - kierunek ramion zależy tylko od współczynnika przy $x^2$, nie od $b$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tak, $b$ musi mieć ten sam znak co $a$",
+              "feedback": "Nie - znaki $a$ i $b$ nie muszą być powiązane dla kierunku ramion.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Parametr $b$ wpływa na współrzędną $x$ wierzchołka paraboli ($x_w = -\\frac{b}{2a}$), ale nie na kierunek ramion."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są ostateczne warunki dla parametrów $a$ i $b$?",
+        "expression": "$a > 0$ oraz $b \\in \\mathbb{R}$",
+        "explanation": "Zbieramy wszystkie warunki razem"
+      }
+    ],
+    "solutions": [
+      "$a > 0$ oraz $b \\in \\mathbb{R}$"
+    ],
+    "parameters": {
+      "note": "Parametr $b$ może przyjmować dowolne wartości rzeczywiste, gdyż nie wpływa na kierunek ramion paraboli"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:05:13.030Z"
+  },
+  {
+    "id": "quadratic_canonical_form",
+    "topic": "Postać kanoniczna funkcji kwadratowej",
+    "difficulty": 3,
+    "statement": "Przekształć funkcję kwadratową $f(x) = x^2 - 4x + 7$ do postaci kanonicznej $f(x) = a(x - p)^2 + q$",
+    "statement_explanation": "Postać kanoniczna $f(x) = a(x-p)^2 + q$ bezpośrednio pokazuje współrzędne wierzchołka paraboli $(p, q)$. Przekształcenie do tej postaci ułatwia analizę funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki w funkcji $f(x) = x^2 - 4x + 7$?",
+        "expression": "$a = 1$, $b = -4$, $c = 7$",
+        "explanation": "Identyfikujemy współczynniki funkcji kwadratowej w postaci ogólnej"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do przekształcenia do postaci kanonicznej?",
+        "expression": "Wybieramy metodę dopełnienia do kwadratu",
+        "explanation": "Będziemy wydzielać pełny kwadrat z wyrażenia $x^2 - 4x$",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić $x^2 - 4x + 7$ do postaci kanonicznej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dopełnienie do kwadratu sumy/różnicy",
+              "feedback": "Świetnie! To klasyczna metoda - wydzielamy pełny kwadrat z pierwszych dwóch wyrazów.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzorów $p = -\\frac{b}{2a}$ i $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Doskonale! To szybka metoda - od razu obliczamy współrzędne wierzchołka.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Rozwiązać równanie $x^2 - 4x + 7 = 0$",
+              "feedback": "To nie pomoże - równanie nie ma rozwiązań rzeczywistych, a my potrzebujemy postaci kanonicznej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie metody A i B są poprawne. Dopełnienie do kwadratu pokazuje proces, wzory dają szybki wynik."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak zapisać $x^2 - 4x$ jako początek kwadratu sumy lub różnicy?",
+        "expression": "$(x - 2)^2 = x^2 - 4x + 4$",
+        "explanation": "Rozwijamy kwadrat różnicy aby zobaczyć czego brakuje",
+        "why": "Dopełnienie do kwadratu polega na tym, że $(x-2)^2$ zawiera $x^2 - 4x$, ale dodaje też $+4$. Musimy to uwzględnić.",
+        "interactive_choice": {
+          "prompt": "Jaki kwadrat zaczyna się od $x^2 - 4x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(x - 2)^2$ bo $(x-2)^2 = x^2 - 4x + 4$",
+              "feedback": "Dokładnie! Rozwinięcie $(x-2)^2$ daje $x^2 - 4x + 4$, więc brakuje nam 4.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$(x - 4)^2$ bo współczynnik przy $x$ to $-4$",
+              "feedback": "Nie - sprawdź: $(x-4)^2 = x^2 - 8x + 16$. Liczba w nawiasie to połowa współczynnika przy $x$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$(x + 2)^2$ bo $-4 : 2 = -2$",
+              "feedback": "Prawie! Dzielenie jest dobre, ale $(x+2)^2 = x^2 + 4x + 4$. Potrzebujemy minus.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór: $(x - h)^2 = x^2 - 2hx + h^2$. Tu $-2h = -4$, więc $h = 2$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak przekształcić $x^2 - 4x + 7$ używając $(x-2)^2$?",
+        "expression": "$x^2 - 4x + 7 = (x^2 - 4x + 4) - 4 + 7$",
+        "explanation": "Dodajemy i odejmujemy 4, aby utworzyć pełny kwadrat"
+      },
+      {
+        "step": 5,
+        "hint": "Co możesz teraz uprościć w wyrażeniu?",
+        "expression": "$x^2 - 4x + 7 = (x - 2)^2 + 3$",
+        "explanation": "Grupujemy: $(x^2 - 4x + 4) = (x-2)^2$ oraz $-4 + 7 = 3$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest postać kanoniczna i współrzędne wierzchołka?",
+        "expression": "$f(x) = (x - 2)^2 + 3$, gdzie $a = 1$, $p = 2$, $q = 3$",
+        "explanation": "Postać kanoniczna z wierzchołkiem w punkcie $(2, 3)$",
+        "interactive_choice": {
+          "prompt": "Jakie są współrzędne wierzchołka paraboli $f(x) = (x-2)^2 + 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$W = (2, 3)$",
+              "feedback": "Perfekcyjnie! Z postaci $a(x-p)^2 + q$ odczytujemy $p=2$, $q=3$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$W = (-2, 3)$",
+              "feedback": "Uważaj na znak! Postać to $(x-2)^2$, więc $p=2$, nie $-2$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$W = (2, -3)$",
+              "feedback": "Nie - $q$ to wyraz wolny, który jest dodawany: $+3$, nie odejmowany.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W postaci $a(x-p)^2 + q$ wierzchołek ma współrzędne $W=(p, q)$. Tu: $p=2$, $q=3$."
+        }
+      }
+    ],
+    "solutions": [
+      "$f(x) = (x - 2)^2 + 3$"
+    ],
+    "parameters": {
+      "canonical_form": "$a=1$, $p=2$, $q=3$",
+      "vertex": "$W=(2, 3)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:05:41.536Z"
+  },
+  {
+    "id": "quadratic_canonical_to_general",
+    "topic": "Funkcje kwadratowe - postać kanoniczna i ogólna",
+    "difficulty": 2,
+    "statement": "Funkcja kwadratowa dana jest w postaci kanonicznej $f(x) = 2(x + 3)^2 - 5$. Zapisz ją w postaci ogólnej.",
+    "statement_explanation": "Postać kanoniczna $f(x) = a(x-p)^2 + q$ bezpośrednio pokazuje współrzędne wierzchołka paraboli $(p, q)$. Przekształcenie do tej postaci ułatwia analizę funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką postać ma funkcja kwadratowa ogólna?",
+        "expression": "Postać ogólna: $f(x) = ax^2 + bx + c$",
+        "explanation": "Musimy przekształcić postać kanoniczną do postaci ogólnej",
+        "why": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ pokazuje wierzchołek, postać ogólna $ax^2 + bx + c$ jest wygodna do obliczeń."
+      },
+      {
+        "step": 2,
+        "hint": "Co należy zrobić z wyrażeniem $(x + 3)^2$?",
+        "expression": "Rozwijamy $(x + 3)^2$ używając wzoru $(a + b)^2 = a^2 + 2ab + b^2$",
+        "explanation": "Przygotowujemy się do rozwinięcia kwadratu sumy",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić wyrażenie $2(x + 3)^2 - 5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw rozwinąć $(x + 3)^2$ używając wzoru skróconego mnożenia",
+              "feedback": "Świetnie! To standardowa metoda - użyj wzoru $(a + b)^2 = a^2 + 2ab + b^2$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw pomnożyć 2 przez nawias: $2x + 6$",
+              "feedback": "Nie - nie możesz tak pomnożyć, bo masz kwadrat nawiasu, nie sam nawias",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Zostawić w takiej postaci - to już jest postać ogólna",
+              "feedback": "Nie - postać ogólna to $ax^2 + bx + c$, bez nawiasów i potęg",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Musimy rozwinąć kwadrat sumy używając wzoru $(a + b)^2 = a^2 + 2ab + b^2$"
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Czemu równa się $(x + 3)^2$ po rozwinięciu?",
+        "expression": "$(x + 3)^2 = x^2 + 2 \\cdot x \\cdot 3 + 3^2 = x^2 + 6x + 9$",
+        "explanation": "Stosujemy wzór skróconego mnożenia"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymamy podstawiając rozwinięcie do funkcji?",
+        "expression": "$f(x) = 2(x^2 + 6x + 9) - 5$",
+        "explanation": "Podstawiamy rozwinięty kwadrat do oryginalnej funkcji"
+      },
+      {
+        "step": 5,
+        "hint": "Jak pomnożyć 2 przez wielomian w nawiasie?",
+        "expression": "$f(x) = 2x^2 + 12x + 18 - 5$",
+        "explanation": "Mnożymy 2 przez każdy wyraz wielomianu",
+        "interactive_choice": {
+          "prompt": "Jak wykonać mnożenie $2(x^2 + 6x + 9)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pomnożyć 2 przez każdy wyraz: $2x^2 + 12x + 18$",
+              "feedback": "Dokładnie! Mnożymy liczbę przez każdy składnik wielomianu",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć tylko pierwszy wyraz: $2x^2 + 6x + 9$",
+              "feedback": "Nie - musisz pomnożyć przez KAŻDY wyraz w nawiasie",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dodać 2 do każdego wyrazu: $x^2 + 8x + 11$",
+              "feedback": "Nie - to jest mnożenie, nie dodawanie",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Przy mnożeniu liczby przez wielomian, mnożymy ją przez każdy składnik osobno"
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wyrazy możesz uprościć?",
+        "expression": "$f(x) = 2x^2 + 12x + 13$",
+        "explanation": "Łączymy wyrazy wolne: $18 - 5 = 13$"
+      },
+      {
+        "step": 7,
+        "hint": "Czy funkcja jest już w postaci ogólnej $ax^2 + bx + c$?",
+        "expression": "$f(x) = 2x^2 + 12x + 13$, gdzie $a = 2$, $b = 12$, $c = 13$",
+        "explanation": "Otrzymaliśmy funkcję w postaci ogólnej"
+      }
+    ],
+    "solutions": [
+      "$f(x) = 2x^2 + 12x + 13$"
+    ],
+    "parameters": {
+      "canonical_form": "$f(x) = 2(x + 3)^2 - 5$",
+      "general_form": "$f(x) = 2x^2 + 12x + 13$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:06:03.690Z"
+  },
+  {
+    "id": "quadratic_zeros_to_forms",
+    "topic": "Funkcje kwadratowe - postacie funkcji",
+    "difficulty": 2,
+    "statement": "Dana jest funkcja kwadratowa o miejscach zerowych $x_1 = -2$ i $x_2 = 5$ oraz współczynniku $a = 1$. Zapisz wzór tej funkcji w postaci iloczynowej i ogólnej.",
+    "statement_explanation": "Funkcja kwadratowa ma wiele własności, które można analizować algebraicznie i geometrycznie. Zrozumienie tych własności pozwala rozwiązywać różnorodne problemy matematyczne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie informacje mamy o funkcji kwadratowej?",
+        "expression": "Miejsca zerowe: $x_1 = -2$, $x_2 = 5$, współczynnik $a = 1$",
+        "explanation": "Znamy miejsca zerowe i współczynnik kierunkowy funkcji"
+      },
+      {
+        "step": 2,
+        "hint": "Którą postać funkcji kwadratowej najłatwiej zapisać mając miejsca zerowe?",
+        "expression": "Postać iloczynowa: $f(x) = a(x - x_1)(x - x_2)$",
+        "explanation": "Wybieramy postać iloczynową jako punkt wyjścia",
+        "why": "Postać iloczynowa $f(x) = a(x - x_1)(x - x_2)$ bezpośrednio wykorzystuje miejsca zerowe. Gdy $x = x_1$ lub $x = x_2$, funkcja przyjmuje wartość 0.",
+        "interactive_choice": {
+          "prompt": "Jak najszybciej zapisać funkcję znając jej miejsca zerowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć postaci ogólnej $f(x) = ax^2 + bx + c$",
+              "feedback": "Możliwe, ale trudne - musielibyśmy obliczyć $b$ i $c$ z miejsc zerowych",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Użyć postaci iloczynowej $f(x) = a(x - x_1)(x - x_2)$",
+              "feedback": "Doskonale! Wystarczy podstawić znane wartości $x_1$, $x_2$ i $a$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć postaci kanonicznej $f(x) = a(x - p)^2 + q$",
+              "feedback": "Możliwe, ale wymaga dodatkowych obliczeń wierzchołka",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać iloczynowa jest naturalna gdy znamy miejsca zerowe - wystarczy je podstawić."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymamy podstawiając nasze wartości do wzoru?",
+        "expression": "$f(x) = 1 \\cdot (x - (-2))(x - 5)$",
+        "explanation": "Podstawiamy $a = 1$, $x_1 = -2$, $x_2 = 5$"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć wyrażenie $x - (-2)$?",
+        "expression": "$f(x) = (x + 2)(x - 5)$",
+        "explanation": "Upraszczamy: $x - (-2) = x + 2$, otrzymujemy postać iloczynową"
+      },
+      {
+        "step": 5,
+        "hint": "Jak przekształcić postać iloczynową do postaci ogólnej?",
+        "expression": "$f(x) = x \\cdot x + x \\cdot (-5) + 2 \\cdot x + 2 \\cdot (-5)$",
+        "explanation": "Mnożymy nawiasy: każdy wyraz z pierwszego przez każdy z drugiego",
+        "interactive_choice": {
+          "prompt": "Co zrobić z wyrażeniem $(x + 2)(x - 5)$ aby otrzymać postać ogólną?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wymnożyć nawiasy",
+              "feedback": "Tak! Mnożymy $(x + 2)(x - 5)$ używając rozdzielności mnożenia",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dodać nawiasy: $(x + 2) + (x - 5)$",
+              "feedback": "Nie - to by dało funkcję liniową, nie kwadratową",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru skróconego mnożenia",
+              "feedback": "Nie pasuje - to nie jest $(a+b)^2$ ani $(a-b)(a+b)$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Mnożymy każdy wyraz z pierwszego nawiasu przez każdy z drugiego."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie wyrażenie otrzymamy po wykonaniu mnożenia?",
+        "expression": "$f(x) = x^2 - 5x + 2x - 10$",
+        "explanation": "Wykonujemy mnożenie poszczególnych wyrazów"
+      },
+      {
+        "step": 7,
+        "hint": "Które wyrazy możemy połączyć?",
+        "expression": "$f(x) = x^2 - 3x - 10$",
+        "explanation": "Redukujemy wyrazy podobne: $-5x + 2x = -3x$"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są ostateczne postacie funkcji?",
+        "expression": "Postać iloczynowa: $f(x) = (x + 2)(x - 5)$\nPostać ogólna: $f(x) = x^2 - 3x - 10$",
+        "explanation": "Otrzymaliśmy obie wymagane postacie funkcji kwadratowej"
+      }
+    ],
+    "solutions": [
+      "Postać iloczynowa: $f(x) = (x + 2)(x - 5)$",
+      "Postać ogólna: $f(x) = x^2 - 3x - 10$"
+    ],
+    "parameters": {
+      "x_1": -2,
+      "x_2": 5,
+      "a": 1
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:06:27.514Z"
+  },
+  {
+    "id": "parabola_vertex_canonical",
+    "topic": "Funkcja kwadratowa - postać kanoniczna",
+    "difficulty": 2,
+    "statement": "Odczytaj współrzędne wierzchołka paraboli dla funkcji $f(x) = -3(x - 1)^2 + 4$",
+    "statement_explanation": "Postać kanoniczna $f(x) = a(x-p)^2 + q$ bezpośrednio pokazuje współrzędne wierzchołka paraboli $(p, q)$. Przekształcenie do tej postaci ułatwia analizę funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "W jakiej postaci zapisana jest ta funkcja kwadratowa?",
+        "expression": "$f(x) = -3(x - 1)^2 + 4$ to postać kanoniczna",
+        "explanation": "Rozpoznajemy postać kanoniczną funkcji kwadratowej",
+        "why": "Postać kanoniczna $a(x - p)^2 + q$ jest specjalnie stworzona do odczytywania wierzchołka. Wierzchołek ma współrzędne $W = (p, q)$.",
+        "interactive_choice": {
+          "prompt": "Jak nazywa się postać funkcji $f(x) = -3(x - 1)^2 + 4$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać ogólna $ax^2 + bx + c$",
+              "feedback": "Nie - w postaci ogólnej nie ma nawiasów i potęgi całego wyrażenia.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Postać kanoniczna (wierzchołkowa) $a(x - p)^2 + q$",
+              "feedback": "Dokładnie! Ta postać pozwala od razu odczytać wierzchołek.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Postać iloczynowa $a(x - x_1)(x - x_2)$",
+              "feedback": "Nie - w postaci iloczynowej są dwa nawiasy bez potęgi.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ natychmiast pokazuje wierzchołek $W = (p, q)$."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest wzór ogólny postaci kanonicznej?",
+        "expression": "$f(x) = a(x - p)^2 + q$, gdzie $W = (p, q)$",
+        "explanation": "Przypominamy wzór ogólny i znaczenie parametrów"
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości mają parametry $a$, $p$ i $q$ w naszej funkcji?",
+        "expression": "$a = -3$, $p = 1$, $q = 4$",
+        "explanation": "Identyfikujemy parametry porównując z wzorem ogólnym",
+        "interactive_choice": {
+          "prompt": "Porównaj $f(x) = -3(x - 1)^2 + 4$ ze wzorem $a(x - p)^2 + q$. Jakie są wartości parametrów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a = -3$, $p = -1$, $q = 4$",
+              "feedback": "Uwaga na znak! W nawiasie mamy $(x - 1)$, więc $p = 1$, nie $-1$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$a = -3$, $p = 1$, $q = 4$",
+              "feedback": "Świetnie! Pamiętaj: wzór to $(x - p)$, więc $(x - 1)$ daje $p = 1$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$a = 3$, $p = 1$, $q = 4$",
+              "feedback": "Prawie! Ale współczynnik $a = -3$ (jest minus przed trójką).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kluczowe: we wzorze jest $(x - p)$, więc $(x - 1)$ oznacza $p = 1$. To częsty błąd!"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są współrzędne wierzchołka paraboli?",
+        "expression": "$W = (p, q) = (1, 4)$",
+        "explanation": "Wierzchołek ma współrzędne $(p, q)$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy parabola ma ramiona skierowane w górę czy w dół?",
+        "expression": "Ramiona paraboli skierowane w dół, wierzchołek $(1, 4)$ to maksimum",
+        "explanation": "Ponieważ $a = -3 < 0$, parabola ma ramiona skierowane w dół",
+        "interactive_choice": {
+          "prompt": "Co możesz powiedzieć o kształcie tej paraboli na podstawie $a = -3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ramiona w górę, bo parabola jest zawsze w górę",
+              "feedback": "Nie - kierunek zależy od znaku współczynnika $a$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Ramiona w dół, bo $a = -3 < 0$",
+              "feedback": "Dokładnie! Ujemne $a$ oznacza ramiona w dół, więc wierzchołek to maksimum.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Ramiona w górę, bo $q = 4 > 0$",
+              "feedback": "Nie - kierunek ramion zależy tylko od znaku $a$, nie od $q$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika $a$ decyduje o kierunku: $a > 0$ → ramiona w górę, $a < 0$ → ramiona w dół."
+        }
+      }
+    ],
+    "solutions": [
+      "$W = (1, 4)$"
+    ],
+    "parameters": {
+      "vertex": "$(1, 4)$",
+      "a": "$-3$",
+      "direction": "ramiona w dół"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:06:52.123Z"
+  },
+  {
+    "id": "quadratic_canonical_form",
+    "topic": "Postać kanoniczna funkcji kwadratowej",
+    "difficulty": 3,
+    "statement": "Przekształć funkcję $f(x) = 2x^2 + 12x + 10$ do postaci kanonicznej i podaj współrzędne wierzchołka.",
+    "statement_explanation": "Postać kanoniczna $f(x) = a(x-p)^2 + q$ bezpośrednio pokazuje współrzędne wierzchołka paraboli $(p, q)$. Przekształcenie do tej postaci ułatwia analizę funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tej funkcji kwadratowej?",
+        "expression": "$f(x) = 2x^2 + 12x + 10$, gdzie $a = 2$, $b = 12$, $c = 10$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do przekształcenia do postaci kanonicznej?",
+        "expression": "Wybieramy metodę dopełniania do kwadratu",
+        "explanation": "Użyjemy dopełniania do kwadratu, aby zobaczyć pełne przekształcenie",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej przekształcić $f(x) = 2x^2 + 12x + 10$ do postaci kanonicznej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzorów na współrzędne wierzchołka $p = -\\frac{b}{2a}$, $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Świetnie! To najszybsza metoda - od razu daje współrzędne wierzchołka.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dopełnić do kwadratu wyłączając najpierw 2 przed nawias",
+              "feedback": "Doskonały wybór! Metoda algebraiczna, która pokazuje przekształcenia krok po kroku.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć miejsca zerowe i użyć postaci iloczynowej",
+              "feedback": "To nie pomoże - postać iloczynowa nie jest postacią kanoniczną.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie metody A i B są poprawne. Wzory są szybsze, dopełnianie do kwadratu bardziej pouczające."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co należy wyłączyć przed nawias z wyrażenia $2x^2 + 12x$?",
+        "expression": "$f(x) = 2(x^2 + 6x) + 10$",
+        "explanation": "Wyłączamy współczynnik 2 przed nawias z pierwszych dwóch składników",
+        "why": "Wyłączenie współczynnika przy $x^2$ jest kluczowe - dopełniamy do kwadratu tylko gdy współczynnik przy $x^2$ wynosi 1."
+      },
+      {
+        "step": 4,
+        "hint": "Jaką liczbę dodać i odjąć, aby otrzymać kwadrat sumy w nawiasie?",
+        "expression": "$f(x) = 2(x^2 + 6x + 9 - 9) + 10$",
+        "explanation": "Dodajemy i odejmujemy 9 wewnątrz nawiasu",
+        "interactive_choice": {
+          "prompt": "Jak dopełnić wyrażenie $x^2 + 6x$ do kwadratu sumy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać i odjąć 9, bo $(\\frac{6}{2})^2 = 9$",
+              "feedback": "Perfekcyjnie! To da nam $(x+3)^2 - 9$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dodać i odjąć 6, bo to współczynnik przy x",
+              "feedback": "Nie - trzeba użyć połowy współczynnika i podnieść do kwadratu: $(\\frac{6}{2})^2 = 9$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dodać i odjąć 36, bo $6^2 = 36$",
+              "feedback": "Nie - najpierw dzielimy współczynnik przez 2, potem podnosimy: $(\\frac{6}{2})^2 = 9$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór: dla $x^2 + bx$ dodajemy $(\\frac{b}{2})^2$. Tu: $(\\frac{6}{2})^2 = 3^2 = 9$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać $x^2 + 6x + 9$ jako kwadrat sumy?",
+        "expression": "$f(x) = 2((x + 3)^2 - 9) + 10$",
+        "explanation": "Rozpoznajemy wzór skróconego mnożenia: $x^2 + 6x + 9 = (x+3)^2$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak uprościć wyrażenie wymnażając 2 przez nawias?",
+        "expression": "$f(x) = 2(x + 3)^2 - 18 + 10$",
+        "explanation": "Mnożymy 2 przez oba składniki w nawiasie: $2 \\cdot (x+3)^2 - 2 \\cdot 9$"
+      },
+      {
+        "step": 7,
+        "hint": "Ile wynosi $-18 + 10$?",
+        "expression": "$f(x) = 2(x + 3)^2 - 8$",
+        "explanation": "Upraszczamy wyrazy wolne"
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są współrzędne wierzchołka paraboli w postaci $f(x) = a(x - p)^2 + q$?",
+        "expression": "Postać kanoniczna: $f(x) = 2(x + 3)^2 - 8$, wierzchołek: $W = (-3, -8)$",
+        "explanation": "Odczytujemy współrzędne wierzchołka z postaci kanonicznej",
+        "interactive_choice": {
+          "prompt": "Jak odczytać współrzędne wierzchołka z postaci $f(x) = 2(x + 3)^2 - 8$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wierzchołek: $W = (-3, -8)$",
+              "feedback": "Doskonale! Z postaci $a(x-p)^2 + q$ mamy $p=-3$ (bo $x-(-3)=x+3$) i $q=-8$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wierzchołek: $W = (3, -8)$",
+              "feedback": "Uwaga na znak! Postać to $a(x-p)^2+q$, więc $(x+3)^2 = (x-(-3))^2$, czyli $p=-3$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wierzchołek: $W = (-3, 8)$",
+              "feedback": "Prawie! Współrzędna x jest dobra, ale q to wyraz wolny: $q = -8$, nie $+8$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W postaci $f(x) = a(x-p)^2 + q$ wierzchołek ma współrzędne $W = (p, q)$. Uwaga na znaki!"
+        }
+      }
+    ],
+    "solutions": [
+      "$f(x) = 2(x + 3)^2 - 8$",
+      "$W = (-3, -8)$"
+    ],
+    "parameters": {
+      "canonical_form": "$f(x) = 2(x + 3)^2 - 8$",
+      "vertex": "$W = (-3, -8)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:07:24.228Z"
+  },
+  {
+    "id": "quadratic_through_points",
+    "topic": "Funkcje kwadratowe - wyznaczanie wzoru",
+    "difficulty": 3,
+    "statement": "Dana jest funkcja kwadratowa przechodząca przez punkty $(0, 3)$, $(1, 4)$ i $(2, 3)$. Wyznacz wzór tej funkcji w postaci ogólnej.",
+    "statement_explanation": "Funkcja kwadratowa ma wiele własności, które można analizować algebraicznie i geometrycznie. Zrozumienie tych własności pozwala rozwiązywać różnorodne problemy matematyczne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaką postać funkcji kwadratowej najlepiej wybrać mając trzy punkty?",
+        "expression": "$f(x) = ax^2 + bx + c$",
+        "explanation": "Wybieramy postać ogólną funkcji kwadratowej",
+        "why": "Dla trzech punktów postać ogólna daje bezpośredni układ równań. Każdy punkt to jedno równanie z trzema niewiadomymi.",
+        "interactive_choice": {
+          "prompt": "Którą postać funkcji kwadratowej $f(x)$ wybrać do wyznaczenia wzoru?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać ogólną $f(x) = ax^2 + bx + c$",
+              "feedback": "Świetnie! Mamy 3 punkty i 3 niewiadome ($a$, $b$, $c$) - otrzymamy układ 3 równań.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Postać kanoniczną $f(x) = a(x - p)^2 + q$",
+              "feedback": "Możliwe, ale trudniej - musisz najpierw znaleźć wierzchołek $(p, q)$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Postać iloczynową $f(x) = a(x - x_1)(x - x_2)$",
+              "feedback": "Nie mamy miejsc zerowych, więc ta postać nie jest najlepsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać ogólna jest najlepsza gdy mamy punkty bez dodatkowych informacji o wierzchołku czy miejscach zerowych."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Co otrzymasz podstawiając punkt $(0, 3)$ do wzoru funkcji?",
+        "expression": "$f(0) = 3$, czyli $a \\cdot 0^2 + b \\cdot 0 + c = 3$",
+        "explanation": "Podstawiamy współrzędne pierwszego punktu"
+      },
+      {
+        "step": 3,
+        "hint": "Do czego upraszcza się równanie z poprzedniego kroku?",
+        "expression": "$c = 3$",
+        "explanation": "Otrzymujemy wartość parametru $c$"
+      },
+      {
+        "step": 4,
+        "hint": "Jakie równanie daje punkt $(1, 4)$?",
+        "expression": "$f(1) = 4$, czyli $a \\cdot 1^2 + b \\cdot 1 + c = 4$",
+        "explanation": "Podstawiamy współrzędne drugiego punktu"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć to równanie wiedząc, że $c = 3$?",
+        "expression": "$a + b + 3 = 4$, czyli $a + b = 1$",
+        "explanation": "Podstawiamy $c = 3$ i upraszczamy"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie równanie otrzymasz z punktu $(2, 3)$?",
+        "expression": "$f(2) = 3$, czyli $a \\cdot 2^2 + b \\cdot 2 + c = 3$",
+        "explanation": "Podstawiamy współrzędne trzeciego punktu"
+      },
+      {
+        "step": 7,
+        "hint": "Jak to równanie wygląda po podstawieniu $c = 3$?",
+        "expression": "$4a + 2b + 3 = 3$, czyli $4a + 2b = 0$",
+        "explanation": "Upraszczamy równanie"
+      },
+      {
+        "step": 8,
+        "hint": "Co możesz zrobić z równaniem $4a + 2b = 0$?",
+        "expression": "$2b = -4a$, czyli $b = -2a$",
+        "explanation": "Wyrażamy $b$ przez $a$"
+      },
+      {
+        "step": 9,
+        "hint": "Jak rozwiązać układ równań mając $a + b = 1$ i $b = -2a$?",
+        "expression": "$a + (-2a) = 1$",
+        "explanation": "Podstawiamy $b = -2a$ do równania $a + b = 1$",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do układu $a + b = 1$ i $b = -2a$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $b = -2a$ do pierwszego równania",
+              "feedback": "Doskonale! To metoda podstawiania - najszybsza tutaj.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Pomnożyć pierwsze równanie przez 2 i dodać",
+              "feedback": "To metoda przeciwnych współczynników - działa, ale jest dłuższa.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzorów Cramera",
+              "feedback": "Możliwe, ale zbyt skomplikowane dla tak prostego układu.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy jedna zmienna jest już wyrażona przez drugą, podstawienie jest najszybsze."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi $a$?",
+        "expression": "$-a = 1$, czyli $a = -1$",
+        "explanation": "Rozwiązujemy równanie z jedną niewiadomą"
+      },
+      {
+        "step": 11,
+        "hint": "Jaka jest wartość $b$ gdy $a = -1$?",
+        "expression": "$b = -2 \\cdot (-1) = 2$",
+        "explanation": "Obliczamy $b$ ze wzoru $b = -2a$"
+      },
+      {
+        "step": 12,
+        "hint": "Jaki jest pełny wzór funkcji?",
+        "expression": "$f(x) = -x^2 + 2x + 3$",
+        "explanation": "Podstawiamy wszystkie parametry: $a = -1$, $b = 2$, $c = 3$"
+      },
+      {
+        "step": 13,
+        "hint": "Czy warto sprawdzić poprawność rozwiązania?",
+        "expression": "$f(0) = 3$ ✓, $f(1) = -1 + 2 + 3 = 4$ ✓, $f(2) = -4 + 4 + 3 = 3$ ✓",
+        "explanation": "Wszystkie punkty spełniają równanie - rozwiązanie jest poprawne",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej zweryfikować poprawność wzoru $f(x) = -x^2 + 2x + 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić wszystkie trzy punkty i sprawdzić",
+              "feedback": "Świetnie! To najpewniejsza metoda - sprawdzisz czy nie ma błędu rachunkowego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprawdzić tylko jeden punkt",
+              "feedback": "Ryzykowne - jeden punkt może się zgadzać przypadkowo przy błędzie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Nie trzeba sprawdzać",
+              "feedback": "Zawsze warto sprawdzić - łatwo o błąd rachunkowy w układach równań.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Weryfikacja przez podstawienie punktów to dobra praktyka - wykryje błędy rachunkowe."
+        }
+      }
+    ],
+    "solutions": [
+      "$f(x) = -x^2 + 2x + 3$"
+    ],
+    "parameters": {
+      "points": "$(0, 3)$, $(1, 4)$, $(2, 3)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:07:56.998Z"
+  },
+  {
+    "id": "delta_quadratic_basic",
+    "topic": "Delta równania kwadratowego",
+    "difficulty": 2,
+    "statement": "Oblicz deltę równania kwadratowego $x^2 - 5x + 6 = 0$ i określ liczbę rozwiązań tego równania.",
+    "statement_explanation": "Wyróżnik (delta) $\\Delta = b^2 - 4ac$ określa liczbę miejsc zerowych funkcji kwadratowej: $\\Delta > 0$ (dwa miejsca zerowe), $\\Delta = 0$ (jedno), $\\Delta < 0$ (brak).",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki $a$, $b$, $c$ w tym równaniu kwadratowym?",
+        "expression": "$x^2 - 5x + 6 = 0$, gdzie $a = 1$, $b = -5$, $c = 6$",
+        "explanation": "Identyfikujemy współczynniki w postaci ogólnej $ax^2 + bx + c = 0$"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki wzór użyjemy do obliczenia delty?",
+        "expression": "$\\Delta = b^2 - 4ac$",
+        "explanation": "Zapisujemy wzór na deltę",
+        "why": "Delta określa liczbę rozwiązań równania kwadratowego. Jej znak jest kluczowy dla dalszej analizy.",
+        "interactive_choice": {
+          "prompt": "Który wzór na deltę jest poprawny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$\\Delta = b^2 - 4ac$",
+              "feedback": "Doskonale! To standardowy wzór na wyróżnik równania kwadratowego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$\\Delta = b^2 + 4ac$",
+              "feedback": "Nie - powinien być minus, nie plus. Sprawdź wzór ponownie.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\Delta = 4ac - b^2$",
+              "feedback": "Nie - kolejność jest odwrotna. Poprawnie: $b^2 - 4ac$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Delta (wyróżnik) obliczamy ze wzoru $\\Delta = b^2 - 4ac$. To kluczowy wzór w równaniach kwadratowych."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości podstawimy do wzoru na deltę?",
+        "expression": "$\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 6$",
+        "explanation": "Podstawiamy $b = -5$, $a = 1$, $c = 6$ do wzoru"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi $(-5)^2$?",
+        "expression": "$\\Delta = 25 - 4 \\cdot 1 \\cdot 6$",
+        "explanation": "Obliczamy kwadrat: $(-5)^2 = 25$"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $4 \\cdot 1 \\cdot 6$?",
+        "expression": "$\\Delta = 25 - 24$",
+        "explanation": "Mnożymy: $4 \\cdot 1 \\cdot 6 = 24$"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest wartość delty?",
+        "expression": "$\\Delta = 1$",
+        "explanation": "Odejmujemy: $25 - 24 = 1$"
+      },
+      {
+        "step": 7,
+        "hint": "Co oznacza dodatnia wartość delty dla liczby rozwiązań?",
+        "expression": "Równanie ma dwa różne rozwiązania rzeczywiste",
+        "explanation": "Ponieważ $\\Delta = 1 > 0$, równanie kwadratowe ma dwa różne pierwiastki rzeczywiste",
+        "why": "To fundamentalna zależność: znak delty bezpośrednio wskazuje liczbę rozwiązań równania kwadratowego w liczbach rzeczywistych.",
+        "interactive_choice": {
+          "prompt": "Skoro $\\Delta = 1 > 0$, ile rozwiązań ma równanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Brak rozwiązań rzeczywistych",
+              "feedback": "Nie - brak rozwiązań jest gdy $\\Delta < 0$",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Jedno rozwiązanie (podwójne)",
+              "feedback": "Nie - jedno rozwiązanie jest gdy $\\Delta = 0$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dwa różne rozwiązania rzeczywiste",
+              "feedback": "Świetnie! Gdy $\\Delta > 0$, równanie ma dwa różne pierwiastki rzeczywiste.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Znak delty określa liczbę rozwiązań: $\\Delta > 0$ → 2 rozwiązania, $\\Delta = 0$ → 1 rozwiązanie, $\\Delta < 0$ → brak rozwiązań rzeczywistych."
+        }
+      }
+    ],
+    "solutions": [
+      "$\\Delta = 1$",
+      "Równanie ma dwa różne rozwiązania rzeczywiste"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:08:16.196Z"
+  },
+  {
+    "id": "quadratic_delta_method",
+    "topic": "Równania kwadratowe",
+    "difficulty": 3,
+    "statement": "Rozwiąż równanie kwadratowe $2x^2 + 7x - 4 = 0$",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tym równaniu?",
+        "expression": "$2x^2 + 7x - 4 = 0$, gdzie $a = 2$, $b = 7$, $c = -4$",
+        "explanation": "Identyfikujemy współczynniki w postaci ogólnej $ax^2 + bx + c = 0$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego równania?",
+        "expression": "Wybieramy metodę delty: $\\Delta = b^2 - 4ac$",
+        "explanation": "Dla równania z $a \\neq 1$ delta jest najefektywniejsza",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej rozwiązać równanie $2x^2 + 7x - 4 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru z deltą",
+              "feedback": "Świetny wybór! Dla współczynnika $a = 2$ i ujemnego $c$ delta jest najefektywniejsza.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki $(2x + p)(x + q)$",
+              "feedback": "Możliwe, ale trudne - musiałbyś zgadywać liczby dla $2x^2$. Delta jest pewniejsza.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Bardzo pracochłonne gdy $a \\neq 1$. Delta jest o wiele szybsza.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $a \\neq 1$ lub współczynniki są większe, wzór z deltą jest najbezpieczniejszy i najszybszy."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć deltę dla tych współczynników?",
+        "expression": "$\\Delta = 7^2 - 4 \\cdot 2 \\cdot (-4)$",
+        "explanation": "Podstawiamy wartości do wzoru na deltę"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi delta?",
+        "expression": "$\\Delta = 49 + 32 = 81$",
+        "explanation": "Obliczamy wartość delty",
+        "why": "Delta dodatnia ($\\Delta > 0$) oznacza dwa różne rozwiązania rzeczywiste. Dodatkowo $\\Delta = 81 = 9^2$ jest kwadratem, więc rozwiązania będą wymierne."
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest pierwiastek z delty?",
+        "expression": "$\\sqrt{\\Delta} = \\sqrt{81} = 9$",
+        "explanation": "Obliczamy pierwiastek potrzebny do wzoru na rozwiązania"
+      },
+      {
+        "step": 6,
+        "hint": "Który wzór zastosować do obliczenia rozwiązań?",
+        "expression": "$x = \\frac{-7 \\pm 9}{2 \\cdot 2}$",
+        "explanation": "Podstawiamy wartości do wzoru",
+        "interactive_choice": {
+          "prompt": "Jak zapisać wzór na rozwiązania równania kwadratowego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$",
+              "feedback": "Dokładnie! To standardowy wzór na pierwiastki równania kwadratowego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x = \\frac{b \\pm \\sqrt{\\Delta}}{2a}$",
+              "feedback": "Uwaga! Brakuje minusa przed $b$. Poprawnie: $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$x = \\frac{-b \\pm \\sqrt{\\Delta}}{a}$",
+              "feedback": "Prawie! W mianowniku powinno być $2a$, nie samo $a$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$ daje oba rozwiązania: znak $+$ dla $x_1$, znak $-$ dla $x_2$."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są oba rozwiązania równania?",
+        "expression": "$x_1 = \\frac{-7 + 9}{4} = \\frac{2}{4} = \\frac{1}{2}$",
+        "explanation": "Obliczamy pierwsze rozwiązanie (ze znakiem plus)"
+      },
+      {
+        "step": 8,
+        "hint": "A drugie rozwiązanie?",
+        "expression": "$x_2 = \\frac{-7 - 9}{4} = \\frac{-16}{4} = -4$",
+        "explanation": "Obliczamy drugie rozwiązanie (ze znakiem minus)"
+      }
+    ],
+    "solutions": [
+      "$x = \\frac{1}{2}$",
+      "$x = -4$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:08:37.604Z"
+  },
+  {
+    "id": "quadratic_perfect_square",
+    "topic": "Równania kwadratowe - wzór skróconego mnożenia",
+    "difficulty": 2,
+    "statement": "Rozwiąż równanie kwadratowe $x^2 - 6x + 9 = 0$ i podaj krotność pierwiastków.",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czy dostrzegasz jakiś wzór w wyrażeniu $x^2 - 6x + 9$?",
+        "expression": "$x^2 - 6x + 9 = (x-3)^2$",
+        "explanation": "Rozpoznajemy wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$",
+        "why": "Wzór $(x-3)^2$ oznacza, że lewa strona to kwadrat wyrażenia. To kluczowa obserwacja - równanie ma pierwiastek podwójny.",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej podejść do równania $x^2 - 6x + 9 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozpoznać wzór skróconego mnożenia $(a-b)^2$",
+              "feedback": "Świetnie! To kwadrat różnicy - najszybsza metoda dla tego równania.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Obliczyć deltę ze wzoru $\\Delta = b^2 - 4ac$",
+              "feedback": "Zadziała, ale jest bardziej pracochłonne. Spróbuj zauważyć wzór!",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Szukać rozkładu $(x-p)(x-q)$ metodą prób i błędów",
+              "feedback": "Możliwe, ale tu jest prostszy sposób - to pełny kwadrat!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyrażenie $x^2 - 6x + 9$ to wzór $(x-3)^2$, bo środkowy wyraz $-6x = -2 \\cdot 3 \\cdot x$ i $9 = 3^2$."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak zapisać równanie używając rozpoznanego wzoru?",
+        "expression": "$(x-3)^2 = 0$",
+        "explanation": "Przepisujemy równanie w postaci iloczynowej"
+      },
+      {
+        "step": 3,
+        "hint": "Kiedy kwadrat liczby równa się zero?",
+        "expression": "$x - 3 = 0$",
+        "explanation": "Pierwiastkujemy obie strony równania",
+        "interactive_choice": {
+          "prompt": "Co możesz powiedzieć o równaniu $(x-3)^2 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ma dwa różne rozwiązania: $x = 3$ i $x = -3$",
+              "feedback": "Nie! $(x-3)^2 = 0$ oznacza $(x-3)(x-3) = 0$, więc tylko $x = 3$.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Ma jedno rozwiązanie podwójne: $x = 3$",
+              "feedback": "Dokładnie! Kwadrat jest zerem tylko gdy podstawa jest zerem.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie ma rozwiązań rzeczywistych",
+              "feedback": "Nie - kwadrat dowolnej liczby rzeczywistej może być zerem!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kwadrat jest zerem tylko gdy podstawa jest zerem: $(x-3)^2 = 0 \\Rightarrow x-3 = 0$."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie jest rozwiązanie równania $x - 3 = 0$?",
+        "expression": "$x = 3$",
+        "explanation": "Otrzymujemy jedno rozwiązanie"
+      },
+      {
+        "step": 5,
+        "hint": "Jaka jest krotność tego pierwiastka?",
+        "expression": "$x = 3$ jest pierwiastkiem podwójnym (krotność 2)",
+        "explanation": "Ponieważ $(x-3)^2 = (x-3)(x-3)$, pierwiastek $x = 3$ występuje dwukrotnie",
+        "why": "Krotność pierwiastka to liczba powtórzeń czynnika w rozkładzie. Tutaj $(x-3)$ występuje dwa razy, więc krotność wynosi 2. Gdybyśmy liczyli deltę: $\\Delta = 36 - 36 = 0$, co również wskazuje na pierwiastek podwójny."
+      }
+    ],
+    "solutions": [
+      "$x = 3$ (pierwiastek podwójny, krotność 2)"
+    ],
+    "parameters": {
+      "discriminant": "$\\Delta = 0$",
+      "multiplicity": "2"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:08:58.761Z"
+  },
+  {
+    "id": "quadratic_no_constant",
+    "topic": "Równania kwadratowe bez wyrazu wolnego",
+    "difficulty": 2,
+    "statement": "Rozwiąż równanie kwadratowe bez wyrazu wolnego: $3x^2 - 12x = 0$",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co zauważasz w tym równaniu kwadratowym?",
+        "expression": "$3x^2 - 12x = 0$",
+        "explanation": "Równanie kwadratowe bez wyrazu wolnego (brak liczby bez $x$)"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego równania?",
+        "expression": "Wyłączamy wspólny czynnik $x$",
+        "explanation": "Oba składniki zawierają $x$, więc możemy go wyłączyć",
+        "why": "Wyłączenie $x$ przed nawias to kluczowa metoda dla równań bez wyrazu wolnego. Daje nam równanie iloczynowe, które łatwo rozwiązać.",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać równanie $3x^2 - 12x = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłączyć $x$ przed nawias",
+              "feedback": "Świetnie! To najprostsza metoda gdy brak wyrazu wolnego.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru z deltą",
+              "feedback": "Zadziała, ale po co komplikować? Wyłączenie $x$ jest dużo szybsze.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podzielić obie strony przez $x$",
+              "feedback": "Uwaga! Dzieląc przez $x$ tracisz rozwiązanie $x = 0$. Nigdy nie dziel przez zmienną!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy brak wyrazu wolnego, zawsze wyłączamy $x$ przed nawias. To najszybsza metoda i nie tracimy rozwiązań."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co możesz jeszcze wyłączyć oprócz $x$?",
+        "expression": "$3x(x - 4) = 0$",
+        "explanation": "Wyłączamy $3x$ przed nawias: $3x^2 - 12x = 3x \\cdot x - 3x \\cdot 4 = 3x(x - 4)$",
+        "interactive_choice": {
+          "prompt": "Czy widzisz jeszcze jakiś wspólny czynnik w $3x^2 - 12x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, można wyłączyć 3",
+              "feedback": "Dokładnie! Wyłączenie 3 uprości liczby: $3x(x - 4) = 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Nie, tylko $x$",
+              "feedback": "Sprawdź jeszcze raz: $3x^2 = 3 \\cdot x \\cdot x$ i $12x = 3 \\cdot 4 \\cdot x$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Można wyłączyć $x^2$",
+              "feedback": "Nie - drugi składnik to $12x$, nie ma $x^2$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyłączenie największego wspólnego dzielnika (tu: $3x$) maksymalnie upraszcza równanie."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Kiedy iloczyn $3x(x - 4)$ równa się zero?",
+        "expression": "$3x = 0$ lub $x - 4 = 0$",
+        "explanation": "Iloczyn jest zerem gdy przynajmniej jeden z czynników jest zerem"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie rozwiązanie daje równanie $3x = 0$?",
+        "expression": "$x = 0$",
+        "explanation": "Dzielimy obie strony przez 3"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie rozwiązanie daje równanie $x - 4 = 0$?",
+        "expression": "$x = 4$",
+        "explanation": "Przenosimy 4 na prawą stronę"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są wszystkie rozwiązania równania?",
+        "expression": "$x_1 = 0$ oraz $x_2 = 4$",
+        "explanation": "Otrzymujemy dwa rozwiązania: jedno z pierwszego czynnika, drugie z drugiego"
+      }
+    ],
+    "solutions": [
+      "$x = 0$",
+      "$x = 4$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:09:18.401Z"
+  },
+  {
+    "id": "quadratic_no_linear_term",
+    "topic": "Równania kwadratowe bez wyrazu wolnego",
+    "difficulty": 2,
+    "statement": "Rozwiąż równanie kwadratowe bez wyrazu liniowego: $x^2 - 16 = 0$",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki w tym równaniu kwadratowym?",
+        "expression": "$x^2 - 16 = 0$, gdzie $a = 1$, $b = 0$, $c = -16$",
+        "explanation": "Równanie kwadratowe w postaci $ax^2 + bx + c = 0$, ale bez wyrazu liniowego"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do rozwiązania tego równania?",
+        "expression": "$x^2 = 16$",
+        "explanation": "Przenosimy $-16$ na prawą stronę równania",
+        "why": "Równania typu $x^2 = c$ rozwiązujemy przez wyciągnięcie pierwiastka z obu stron. To dużo szybsze niż delta!",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać równanie $x^2 - 16 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru z deltą",
+              "feedback": "Zadziała, ale to jak strzelanie z armaty do muchy - jest dużo prostszy sposób!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Rozpoznać wzór skróconego mnożenia $a^2 - b^2$",
+              "feedback": "Świetnie! To wzór $(a-b)(a+b) = a^2 - b^2$, tutaj $x^2 - 4^2$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Przenieść $-16$ na prawą stronę i wyciągnąć pierwiastek",
+              "feedback": "Doskonały wybór! Najprostszy sposób: $x^2 = 16$, więc $x = \\pm 4$",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Gdy brak wyrazu liniowego, najszybciej przenieść wyraz wolny i wyciągnąć pierwiastek. Można też użyć wzoru $a^2 - b^2 = (a-b)(a+b)$."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz wyciągając pierwiastek z obu stron równania?",
+        "expression": "$x = \\pm \\sqrt{16}$",
+        "explanation": "Wyciągamy pierwiastek kwadratowy z obu stron",
+        "interactive_choice": {
+          "prompt": "Jakie rozwiązania daje równanie $x^2 = 16$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko $x = 4$",
+              "feedback": "Nie! Pamiętaj: $(-4)^2 = 16$ też jest prawdą. Pierwiastek kwadratowy daje dwa rozwiązania.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$x = 4$ lub $x = -4$",
+              "feedback": "Dokładnie! Oba rozwiązania: $4^2 = 16$ i $(-4)^2 = 16$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$x = \\pm \\sqrt{16}$, czyli $x = \\pm 4$",
+              "feedback": "Perfekcyjnie! Zapis $\\pm$ elegancko pokazuje obie możliwości.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Wyciągając pierwiastek z $x^2 = 16$ zawsze dostajemy dwa rozwiązania: $x = \\pm \\sqrt{16} = \\pm 4$"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi $\\sqrt{16}$?",
+        "expression": "$\\sqrt{16} = 4$",
+        "explanation": "Obliczamy wartość pierwiastka"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są ostateczne rozwiązania równania?",
+        "expression": "$x_1 = 4$ oraz $x_2 = -4$",
+        "explanation": "Otrzymujemy dwa rozwiązania równania"
+      }
+    ],
+    "solutions": [
+      "$x = 4$",
+      "$x = -4$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:09:37.294Z"
+  },
+  {
+    "id": "viete_formulas_construct",
+    "topic": "Wzory Viète'a",
+    "difficulty": 2,
+    "statement": "Dane są pierwiastki równania kwadratowego: $x_1 = 3$ i $x_2 = -5$. Korzystając ze wzorów Viète'a, wyznacz sumę i iloczyn pierwiastków oraz zapisz możliwe równanie kwadratowe o współczynniku $a = 1$.",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są wzory Viète'a dla równania kwadratowego?",
+        "expression": "$x_1 + x_2 = -\\frac{b}{a}$ oraz $x_1 \\cdot x_2 = \\frac{c}{a}$",
+        "explanation": "Przypominamy wzory Viète'a dla równania kwadratowego",
+        "why": "Wzory Viète'a pozwalają przejść od pierwiastków do współczynników równania. Są szczególnie użyteczne gdy znamy pierwiastki i chcemy odtworzyć równanie.",
+        "interactive_choice": {
+          "prompt": "Które wzory Viète'a są poprawne dla równania $ax^2 + bx + c = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$x_1 + x_2 = -\\frac{b}{a}$ oraz $x_1 \\cdot x_2 = \\frac{c}{a}$",
+              "feedback": "Doskonale! To są klasyczne wzory Viète'a łączące pierwiastki ze współczynnikami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$x_1 + x_2 = \\frac{b}{a}$ oraz $x_1 \\cdot x_2 = \\frac{c}{a}$",
+              "feedback": "Prawie! Suma pierwiastków to $-\\frac{b}{a}$ (ze znakiem minus), nie $\\frac{b}{a}$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$x_1 + x_2 = -\\frac{b}{a}$ oraz $x_1 \\cdot x_2 = -\\frac{c}{a}$",
+              "feedback": "Nie - iloczyn pierwiastków to $\\frac{c}{a}$ (bez minusa).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory Viète'a: suma pierwiastków $x_1 + x_2 = -\\frac{b}{a}$, iloczyn $x_1 \\cdot x_2 = \\frac{c}{a}$"
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Ile wynosi suma pierwiastków $x_1 + x_2$?",
+        "expression": "$x_1 + x_2 = 3 + (-5) = -2$",
+        "explanation": "Obliczamy sumę danych pierwiastków"
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi iloczyn pierwiastków $x_1 \\cdot x_2$?",
+        "expression": "$x_1 \\cdot x_2 = 3 \\cdot (-5) = -15$",
+        "explanation": "Obliczamy iloczyn danych pierwiastków"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wykorzystać wzory Viète'a do znalezienia współczynników $b$ i $c$ gdy $a = 1$?",
+        "expression": "$-\\frac{b}{1} = -2 \\Rightarrow b = 2$ oraz $\\frac{c}{1} = -15 \\Rightarrow c = -15$",
+        "explanation": "Wyznaczamy współczynniki $b$ i $c$ ze wzorów Viète'a",
+        "interactive_choice": {
+          "prompt": "Mamy $x_1 + x_2 = -2$ i $x_1 \\cdot x_2 = -15$. Jak znaleźć $b$ i $c$ dla $a = 1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Z $-\\frac{b}{1} = -2$ mamy $b = 2$, z $\\frac{c}{1} = -15$ mamy $c = -15$",
+              "feedback": "Świetnie! Podstawiasz $a = 1$ do wzorów Viète'a i rozwiązujesz.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Z $-\\frac{b}{1} = -2$ mamy $b = -2$, z $\\frac{c}{1} = -15$ mamy $c = -15$",
+              "feedback": "Uwaga na znaki! Z $-\\frac{b}{1} = -2$ wynika $b = 2$ (nie $-2$).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Bezpośrednio: $b = -2$ i $c = -15$",
+              "feedback": "Nie - musisz uwzględnić minus we wzorze na sumę: $-\\frac{b}{a} = -2$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawiamy $a = 1$ do wzorów: $-\\frac{b}{1} = -2$ daje $b = 2$, a $\\frac{c}{1} = -15$ daje $c = -15$"
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać równanie kwadratowe o współczynnikach $a = 1$, $b = 2$, $c = -15$?",
+        "expression": "$x^2 + 2x - 15 = 0$",
+        "explanation": "Podstawiamy znalezione współczynniki do postaci ogólnej równania kwadratowego"
+      },
+      {
+        "step": 6,
+        "hint": "Czy możemy sprawdzić poprawność równania?",
+        "expression": "Sprawdzenie: $3^2 + 2 \\cdot 3 - 15 = 9 + 6 - 15 = 0$ ✓ oraz $(-5)^2 + 2 \\cdot (-5) - 15 = 25 - 10 - 15 = 0$ ✓",
+        "explanation": "Weryfikujemy że oba pierwiastki spełniają równanie",
+        "interactive_choice": {
+          "prompt": "Jak zweryfikować, że równanie $x^2 + 2x - 15 = 0$ ma pierwiastki $x_1 = 3$ i $x_2 = -5$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $x = 3$ i $x = -5$ do równania",
+              "feedback": "Doskonały sposób! Sprawdzasz czy wartości spełniają równanie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru z deltą",
+              "feedback": "Możliwe, ale bardziej pracochłonne - podstawienie jest szybsze.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie trzeba sprawdzać - wzory Viète'a zawsze działają",
+              "feedback": "Choć wzory są poprawne, weryfikacja to dobra praktyka matematyczna!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Weryfikacja: dla $x = 3$: $9 + 6 - 15 = 0$ ✓, dla $x = -5$: $25 - 10 - 15 = 0$ ✓"
+        }
+      }
+    ],
+    "solutions": [
+      "Suma pierwiastków: $x_1 + x_2 = -2$",
+      "Iloczyn pierwiastków: $x_1 \\cdot x_2 = -15$",
+      "Równanie kwadratowe: $x^2 + 2x - 15 = 0$"
+    ],
+    "parameters": {
+      "roots": "$x_1 = 3, x_2 = -5$",
+      "coefficient": "$a = 1$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:10:05.148Z"
+  },
+  {
+    "id": "quadratic_parameter_discriminant",
+    "topic": "Równania kwadratowe z parametrem",
+    "difficulty": 4,
+    "statement": "Dla jakich wartości parametru $m$ równanie $x^2 - 2mx + m - 6 = 0$ ma dwa różne rozwiązania rzeczywiste?",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki tego równania kwadratowego?",
+        "expression": "$a = 1$, $b = -2m$, $c = m - 6$",
+        "explanation": "Identyfikujemy współczynniki w równaniu $ax^2 + bx + c = 0$"
+      },
+      {
+        "step": 2,
+        "hint": "Jaki warunek musi spełniać równanie kwadratowe, aby miało dwa różne rozwiązania rzeczywiste?",
+        "expression": "$\\Delta > 0$",
+        "explanation": "Zapisujemy warunek na istnienie dwóch różnych rozwiązań",
+        "why": "To fundamentalny warunek: $\\Delta = b^2 - 4ac$ określa liczbę i rodzaj rozwiązań równania kwadratowego.",
+        "interactive_choice": {
+          "prompt": "Co gwarantuje istnienie dwóch różnych rozwiązań rzeczywistych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyróżnik (delta) musi być większy od zera: $\\Delta > 0$",
+              "feedback": "Doskonale! $\\Delta > 0$ oznacza dwa różne pierwiastki rzeczywiste.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wyróżnik musi być nieujemny: $\\Delta \\geq 0$",
+              "feedback": "Prawie! Ale $\\Delta = 0$ daje jedno rozwiązanie (podwójne), a my chcemy dwa różne.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Współczynnik $a$ musi być dodatni",
+              "feedback": "To wpływa na kierunek ramion paraboli, ale nie na liczbę rozwiązań.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Warunek $\\Delta > 0$ gwarantuje dwa różne miejsca zerowe. Dla $\\Delta = 0$ byłoby jedno (podwójne), dla $\\Delta < 0$ - brak rozwiązań rzeczywistych."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć deltę dla tego równania?",
+        "expression": "$\\Delta = b^2 - 4ac = (-2m)^2 - 4 \\cdot 1 \\cdot (m - 6)$",
+        "explanation": "Podstawiamy współczynniki do wzoru na wyróżnik"
+      },
+      {
+        "step": 4,
+        "hint": "Jak uprościć wyrażenie $(-2m)^2$?",
+        "expression": "$\\Delta = 4m^2 - 4(m - 6)$",
+        "explanation": "Podnosimy do kwadratu: $(-2m)^2 = 4m^2$"
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz po wymnożeniu i uporządkowaniu?",
+        "expression": "$\\Delta = 4m^2 - 4m + 24$",
+        "explanation": "Rozwijamy nawias: $-4(m - 6) = -4m + 24$"
+      },
+      {
+        "step": 6,
+        "hint": "Czy możesz wyłączyć wspólny czynnik?",
+        "expression": "$\\Delta = 4(m^2 - m + 6)$",
+        "explanation": "Wyłączamy 4 przed nawias dla uproszczenia"
+      },
+      {
+        "step": 7,
+        "hint": "Jaka nierówność musi być spełniona?",
+        "expression": "$m^2 - m + 6 > 0$",
+        "explanation": "Dzielimy obie strony przez 4 (liczba dodatnia)",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać nierówność $4(m^2 - m + 6) > 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podzielić przez 4 i zbadać znak trójmianu $m^2 - m + 6$",
+              "feedback": "Świetnie! Ponieważ $4 > 0$, możemy podzielić obie strony przez 4.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwiązać równanie $m^2 - m + 6 = 0$ i sprawdzić przedziały",
+              "feedback": "Dobry kierunek, ale najpierw sprawdź czy to równanie ma rozwiązania!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić konkretne wartości $m$ i sprawdzić",
+              "feedback": "To może pomóc w weryfikacji, ale nie da pełnego rozwiązania analitycznego.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dzielimy przez dodatnią stałą 4 (znak nierówności się nie zmienia) i badamy trójmian kwadratowy."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Czy trójmian $m^2 - m + 6$ ma miejsca zerowe?",
+        "expression": "Sprawdzamy deltę: $\\Delta_m = (-1)^2 - 4 \\cdot 1 \\cdot 6 = 1 - 24 = -23 < 0$",
+        "explanation": "Obliczamy wyróżnik dla trójmianu względem $m$",
+        "why": "Ujemna delta oznacza, że trójmian nie ma miejsc zerowych - nie przecina osi OX."
+      },
+      {
+        "step": 9,
+        "hint": "Jaki jest znak trójmianu $m^2 - m + 6$ skoro nie ma on miejsc zerowych?",
+        "expression": "$m^2 - m + 6 > 0$ dla każdego $m \\in \\mathbb{R}$",
+        "explanation": "Trójmian jest zawsze dodatni, więc nierówność spełniona dla wszystkich $m$",
+        "interactive_choice": {
+          "prompt": "Skoro $\\Delta_m < 0$ i współczynnik przy $m^2$ jest dodatni, to trójmian $m^2 - m + 6$ jest:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zawsze dodatni dla wszystkich $m \\in \\mathbb{R}$",
+              "feedback": "Dokładnie! Parabola o ramionach w górę, bez miejsc zerowych - zawsze nad osią OX.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zawsze ujemny dla wszystkich $m \\in \\mathbb{R}$",
+              "feedback": "Nie - współczynnik przy $m^2$ jest dodatni, więc ramiona paraboli skierowane w górę.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Dodatni tylko dla niektórych wartości $m$",
+              "feedback": "Nie - brak miejsc zerowych i ramiona w górę oznaczają, że jest zawsze dodatni.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Trójmian kwadratowy z $a > 0$ i $\\Delta < 0$ jest zawsze dodatni - parabola leży całkowicie nad osią OX."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest odpowiedź na pytanie zadania?",
+        "expression": "$m \\in \\mathbb{R}$",
+        "explanation": "Równanie ma dwa różne rozwiązania rzeczywiste dla każdej wartości parametru $m$"
+      }
+    ],
+    "solutions": [
+      "$m \\in \\mathbb{R}$"
+    ],
+    "parameters": {
+      "parameter": "$m$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 10,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:10:37.300Z"
+  },
+  {
+    "id": "quadratic_from_roots_with_radicals",
+    "topic": "Równania kwadratowe - wyznaczanie z pierwiastków",
+    "difficulty": 3,
+    "statement": "Wyznacz równanie kwadratowe, którego pierwiastkami są liczby $x_1 = 2 - \\sqrt{3}$ i $x_2 = 2 + \\sqrt{3}$",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Którą metodę wybierzesz do skonstruowania równania z danych pierwiastków?",
+        "expression": "Wybieramy postać iloczynową: $(x - x_1)(x - x_2) = 0$",
+        "explanation": "Równanie kwadratowe można zapisać jako iloczyn czynników liniowych",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej wyznaczyć równanie kwadratowe znając jego pierwiastki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzorów Viète'a: $x_1 + x_2 = -\\frac{b}{a}$ i $x_1 \\cdot x_2 = \\frac{c}{a}$",
+              "feedback": "Świetny wybór! To najszybsza metoda - obliczysz sumę i iloczyn pierwiastków.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Zapisać w postaci iloczynowej $(x - x_1)(x - x_2) = 0$",
+              "feedback": "Doskonale! To bezpośrednia metoda, która zawsze działa.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić pierwiastki do wzoru $ax^2 + bx + c = 0$ i rozwiązać układ równań",
+              "feedback": "Możliwe, ale bardzo pracochłonne - są prostsze metody.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie metody A i B są dobre. Postać iloczynowa jest najbardziej bezpośrednia."
+        }
+      },
+      {
+        "step": 2,
+        "hint": "Jak podstawić dane pierwiastki do postaci iloczynowej?",
+        "expression": "$(x - (2 - \\sqrt{3}))(x - (2 + \\sqrt{3})) = 0$",
+        "explanation": "Podstawiamy $x_1 = 2 - \\sqrt{3}$ i $x_2 = 2 + \\sqrt{3}$"
+      },
+      {
+        "step": 3,
+        "hint": "Jak uprościć nawiasy z minusami?",
+        "expression": "$(x - 2 + \\sqrt{3})(x - 2 - \\sqrt{3}) = 0$",
+        "explanation": "Usuwamy nawiasy wewnętrzne, zmieniając znaki"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki wzór skróconego mnożenia rozpoznajesz w tym wyrażeniu?",
+        "expression": "Podstawiamy $a = x - 2$ i $b = \\sqrt{3}$ do wzoru $(a + b)(a - b) = a^2 - b^2$",
+        "explanation": "Rozpoznajemy wzór różnicy kwadratów",
+        "why": "Wzór $(a+b)(a-b) = a^2 - b^2$ eliminuje pierwiastki, bo $(\\sqrt{3})^2 = 3$. To kluczowy moment uproszczenia.",
+        "interactive_choice": {
+          "prompt": "Które przekształcenie najlepiej pasuje do $(x - 2 + \\sqrt{3})(x - 2 - \\sqrt{3})$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór $(a + b)(a - b) = a^2 - b^2$ gdzie $a = x - 2$, $b = \\sqrt{3}$",
+              "feedback": "Perfekcyjnie! To różnica kwadratów - pierwiastki znikną!",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór $(a + b)^2 = a^2 + 2ab + b^2$",
+              "feedback": "Nie - to nie jest kwadrat sumy, tylko iloczyn dwóch różnych wyrażeń.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Mnożyć wyraz po wyrazie bez wzoru",
+              "feedback": "Można, ale wzór różnicy kwadratów znacznie uprości obliczenia.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wyrażenia $(x - 2 + \\sqrt{3})$ i $(x - 2 - \\sqrt{3})$ różnią się tylko znakiem przy $\\sqrt{3}$, więc to wzór $(a+b)(a-b)$."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi $(x - 2)^2$?",
+        "expression": "$(x - 2)^2 - (\\sqrt{3})^2 = 0$",
+        "explanation": "Stosujemy wzór różnicy kwadratów"
+      },
+      {
+        "step": 6,
+        "hint": "Jak obliczyć $(x - 2)^2$ i $(\\sqrt{3})^2$?",
+        "expression": "$x^2 - 4x + 4 - 3 = 0$",
+        "explanation": "Rozwijamy $(x-2)^2 = x^2 - 4x + 4$ i obliczamy $(\\sqrt{3})^2 = 3$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak uprościć wyrażenie $x^2 - 4x + 4 - 3$?",
+        "expression": "$x^2 - 4x + 1 = 0$",
+        "explanation": "Łączymy wyrazy wolne: $4 - 3 = 1$"
+      },
+      {
+        "step": 8,
+        "hint": "Czy możemy sprawdzić poprawność używając wzorów Viète'a?",
+        "expression": "Weryfikacja: $(2-\\sqrt{3}) + (2+\\sqrt{3}) = 4$ oraz $(2-\\sqrt{3})(2+\\sqrt{3}) = 4 - 3 = 1$",
+        "explanation": "Wzory Viète'a potwierdzają poprawność: suma pierwiastków równa $-\\frac{-4}{1} = 4$, iloczyn równy $\\frac{1}{1} = 1$",
+        "interactive_choice": {
+          "prompt": "Jak zweryfikować, że równanie $x^2 - 4x + 1 = 0$ ma pierwiastki $2 \\pm \\sqrt{3}$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić czy $x_1 + x_2 = 4$ i $x_1 \\cdot x_2 = 1$ (wzory Viète'a)",
+              "feedback": "Doskonale! Suma: $(2-\\sqrt{3}) + (2+\\sqrt{3}) = 4 = -\\frac{b}{a}$ ✓, Iloczyn: $(2-\\sqrt{3})(2+\\sqrt{3}) = 4-3 = 1 = \\frac{c}{a}$ ✓",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić pierwiastki do równania i sprawdzić czy dają 0",
+              "feedback": "Dobra metoda weryfikacji, choć bardziej pracochłonna niż wzory Viète'a.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć deltę i sprawdzić czy wyjdą te same pierwiastki",
+              "feedback": "Możliwe, ale to właściwie rozwiązywanie równania od nowa - są prostsze metody.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory Viète'a to najszybszy sposób weryfikacji: suma pierwiastków $= -\\frac{b}{a} = 4$, iloczyn $= \\frac{c}{a} = 1$."
+        }
+      }
+    ],
+    "solutions": [
+      "$x^2 - 4x + 1 = 0$"
+    ],
+    "parameters": {
+      "roots": "$x_1 = 2 - \\sqrt{3}$, $x_2 = 2 + \\sqrt{3}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-30T04:11:10.687Z"
+  },
+  {
+    "id": "parabola_direction",
+    "topic": "Funkcje kwadratowe - kierunek ramion paraboli",
+    "difficulty": 2,
+    "statement": "Dana jest funkcja kwadratowa $f(x) = -x^2 + 4x - 3$. Określ, czy ramiona paraboli są skierowane w górę czy w dół, oraz uzasadnij swoją odpowiedź.",
+    "statement_explanation": "Znak współczynnika $a$ przy $x^2$ jednoznacznie określa kierunek ramion paraboli: dodatni - ramiona w górę, ujemny - ramiona w dół.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jaka jest postać ogólna funkcji kwadratowej?",
+        "expression": "$f(x) = ax^2 + bx + c$",
+        "explanation": "Każda funkcja kwadratowa ma postać ogólną z trzema współczynnikami"
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są współczynniki w naszej funkcji?",
+        "expression": "$f(x) = -x^2 + 4x - 3$, gdzie $a = -1$, $b = 4$, $c = -3$",
+        "explanation": "Identyfikujemy współczynniki porównując z postacią ogólną"
+      },
+      {
+        "step": 3,
+        "hint": "Który współczynnik decyduje o kierunku ramion paraboli?",
+        "expression": "Analizujemy współczynnik $a = -1$",
+        "explanation": "Skupiamy się na współczynniku przy $x^2$",
+        "why": "Współczynnik $a$ jest kluczowy: gdy $a > 0$ ramiona w górę, gdy $a < 0$ ramiona w dół. To podstawowa własność funkcji kwadratowej.",
+        "interactive_choice": {
+          "prompt": "Co determinuje kierunek ramion paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Współczynnik $a$ przy $x^2$",
+              "feedback": "Dokładnie! Znak współczynnika $a$ decyduje o kierunku ramion.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Współczynnik $b$ przy $x$",
+              "feedback": "Nie - współczynnik $b$ wpływa na położenie wierzchołka, nie na kierunek ramion.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wyraz wolny $c$",
+              "feedback": "Nie - wyraz wolny $c$ określa punkt przecięcia z osią OY, nie kierunek ramion.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Współczynnik $a$ przy najwyższej potędze określa kształt paraboli i kierunek jej ramion."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaki jest znak współczynnika $a$?",
+        "expression": "$a = -1 < 0$",
+        "explanation": "Współczynnik $a$ jest ujemny",
+        "interactive_choice": {
+          "prompt": "Jak ocenić znak współczynnika $a = -1$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$a$ jest dodatnie",
+              "feedback": "Nie - liczba $-1$ jest ujemna.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "$a$ jest ujemne",
+              "feedback": "Tak! $a = -1 < 0$, więc współczynnik jest ujemny.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "$a$ równa się zero",
+              "feedback": "Nie - gdyby $a = 0$, nie byłaby to funkcja kwadratowa.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Współczynnik $a = -1$ jest liczbą ujemną, co ma bezpośredni wpływ na kształt paraboli."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co oznacza ujemny współczynnik $a$ dla kierunku ramion?",
+        "expression": "Ponieważ $a < 0$, ramiona paraboli są skierowane w dół",
+        "explanation": "Ujemny współczynnik $a$ powoduje, że parabola jest odwrócona - ramiona w dół",
+        "why": "Gdy $a < 0$, funkcja ma maksimum (wierzchołek jest najwyższym punktem), a wartości funkcji maleją w obie strony od wierzchołka. Graficznie parabola przypomina odwróconą literę U."
+      },
+      {
+        "step": 6,
+        "hint": "Jak brzmi pełna odpowiedź z uzasadnieniem?",
+        "expression": "Ramiona paraboli są skierowane w dół, ponieważ współczynnik $a = -1 < 0$",
+        "explanation": "Formułujemy kompletną odpowiedź z uzasadnieniem"
+      }
+    ],
+    "solutions": [
+      "Ramiona paraboli są skierowane w dół, ponieważ współczynnik $a = -1 < 0$"
+    ],
+    "parameters": {
+      "function": "$f(x) = -x^2 + 4x - 3$",
+      "coefficient_a": "$a = -1$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:11:29.873Z"
+  },
+  {
+    "id": "parabola_vertex_coordinates",
+    "topic": "Funkcje kwadratowe - wierzchołek paraboli",
+    "difficulty": 2,
+    "statement": "Wyznacz współrzędne wierzchołka paraboli będącej wykresem funkcji $f(x) = x^2 - 6x + 5$",
+    "statement_explanation": "Wierzchołek paraboli to punkt, w którym funkcja osiąga wartość maksymalną (gdy $a < 0$) lub minimalną (gdy $a > 0$). To kluczowy element geometrii funkcji kwadratowej.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tej funkcji kwadratowej?",
+        "expression": "$f(x) = x^2 - 6x + 5$, gdzie $a = 1$, $b = -6$, $c = 5$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do wyznaczenia wierzchołka?",
+        "expression": "Wybieramy wzory: $p = -\\frac{b}{2a}$ oraz $q = f(p)$",
+        "explanation": "Używamy standardowych wzorów na współrzędne wierzchołka",
+        "why": "Współrzędna $p$ to miejsce, gdzie funkcja osiąga ekstremum (oś symetrii paraboli). Współrzędną $q$ liczymy podstawiając $p$ do funkcji.",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej wyznaczyć współrzędne wierzchołka paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzorów $p = -\\frac{b}{2a}$ i $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Świetnie! To standardowa i szybka metoda - zawsze działa.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przekształcić do postaci kanonicznej $f(x) = a(x-p)^2 + q$",
+              "feedback": "Dobry wybór! Metoda dopełnienia do kwadratu - dłuższa, ale pokazuje strukturę.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć miejsca zerowe i wziąć ich średnią",
+              "feedback": "To zadziała dla $p$, ale nie da bezpośrednio $q$. Lepiej użyć wzorów na wierzchołek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory na wierzchołek są najszybsze. Postać kanoniczna daje pełny obraz funkcji."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak obliczyć pierwszą współrzędną wierzchołka $p$?",
+        "expression": "$p = -\\frac{b}{2a} = -\\frac{-6}{2 \\cdot 1} = \\frac{6}{2} = 3$",
+        "explanation": "Podstawiamy $b = -6$ i $a = 1$ do wzoru"
+      },
+      {
+        "step": 4,
+        "hint": "Jak wyznaczyć drugą współrzędną wierzchołka $q$?",
+        "expression": "$q = f(3) = 3^2 - 6 \\cdot 3 + 5$",
+        "explanation": "Podstawiamy $x = 3$ do wzoru funkcji",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć współrzędną $q$ wierzchołka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $x = 3$ do funkcji: $q = f(3)$",
+              "feedback": "Doskonale! To najprostszy sposób - podstawiamy $p$ do wzoru funkcji.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru $q = -\\frac{\\Delta}{4a}$ gdzie $\\Delta = b^2 - 4ac$",
+              "feedback": "Poprawnie! To alternatywna metoda przez deltę - dłuższa, ale też działa.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawić $x = 0$ do funkcji",
+              "feedback": "Nie - to da wartość $c = 5$, a nie współrzędną $q$ wierzchołka.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Podstawienie $p$ do funkcji jest najszybsze. Wzór z deltą to alternatywa."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi wartość funkcji w punkcie $x = 3$?",
+        "expression": "$q = 9 - 18 + 5 = -4$",
+        "explanation": "Wykonujemy obliczenia: $9 - 18 + 5 = -4$"
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są współrzędne wierzchołka paraboli?",
+        "expression": "$W = (3, -4)$",
+        "explanation": "Wierzchołek paraboli ma współrzędne $(p, q) = (3, -4)$"
+      }
+    ],
+    "solutions": [
+      "$W = (3, -4)$"
+    ],
+    "parameters": {
+      "vertex_x": "$p = 3$",
+      "vertex_y": "$q = -4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 6,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:11:51.443Z"
+  },
+  {
+    "id": "parabola_axis_symmetry",
+    "topic": "Funkcje kwadratowe - oś symetrii paraboli",
+    "difficulty": 2,
+    "statement": "Podaj równanie osi symetrii paraboli dla funkcji $f(x) = 2x^2 + 8x - 1$",
+    "statement_explanation": "Równanie kwadratowe to podstawowe narzędzie do analizy funkcji kwadratowych. Jego rozwiązania dostarczają informacji o punktach przecięcia wykresu z osią OX.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tej funkcji kwadratowej?",
+        "expression": "$f(x) = 2x^2 + 8x - 1$, gdzie $a = 2$, $b = 8$, $c = -1$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Którą metodę wybierzesz do znalezienia osi symetrii?",
+        "expression": "Stosujemy wzór $x = -\\frac{b}{2a}$",
+        "explanation": "Oś symetrii paraboli przechodzi przez wierzchołek",
+        "why": "Wierzchołek paraboli ma współrzędną x równą $-\\frac{b}{2a}$. To punkt, względem którego parabola jest symetryczna.",
+        "interactive_choice": {
+          "prompt": "Jak najszybciej wyznaczyć oś symetrii paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $x = -\\frac{b}{2a}$",
+              "feedback": "Świetnie! To najszybsza metoda - bezpośrednio daje współrzędną x wierzchołka.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przekształcić do postaci kanonicznej $a(x-p)^2 + q$",
+              "feedback": "Możliwe, ale dużo więcej obliczeń. Wzór $x = -\\frac{b}{2a}$ jest szybszy.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć miejsca zerowe i wziąć ich średnią",
+              "feedback": "To działa, ale wymaga rozwiązania równania kwadratowego - niepotrzebnie skomplikowane.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzór $x = -\\frac{b}{2a}$ bezpośrednio daje współrzędną x wierzchołka, który leży na osi symetrii."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakie wartości podstawisz do wzoru $x = -\\frac{b}{2a}$?",
+        "expression": "$x = -\\frac{8}{2 \\cdot 2}$",
+        "explanation": "Podstawiamy $b = 8$ i $a = 2$ do wzoru"
+      },
+      {
+        "step": 4,
+        "hint": "Ile wynosi $-\\frac{8}{4}$?",
+        "expression": "$x = -\\frac{8}{4} = -2$",
+        "explanation": "Obliczamy wartość wyrażenia"
+      },
+      {
+        "step": 5,
+        "hint": "Jak zapisać równanie prostej pionowej przechodzącej przez punkt o współrzędnej x = -2?",
+        "expression": "$x = -2$",
+        "explanation": "Równanie osi symetrii to prosta pionowa przechodząca przez wierzchołek",
+        "interactive_choice": {
+          "prompt": "Która postać równania opisuje oś symetrii paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$x = -2$",
+              "feedback": "Doskonale! Oś symetrii to prosta pionowa, więc równanie ma postać $x = stała$.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$y = -2$",
+              "feedback": "Nie - to byłaby prosta pozioma. Oś symetrii paraboli jest zawsze pionowa.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$f(-2)$",
+              "feedback": "To nie równanie prostej, tylko wartość funkcji w punkcie $x = -2$.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Oś symetrii paraboli jest zawsze prostą pionową, więc ma postać $x = p$, gdzie p to współrzędna x wierzchołka."
+        }
+      }
+    ],
+    "solutions": [
+      "$x = -2$"
+    ],
+    "parameters": {},
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 5,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:12:10.210Z"
+  },
+  {
+    "id": "parabola_axes_intersection",
+    "topic": "Funkcje kwadratowe - punkty przecięcia z osiami",
+    "difficulty": 3,
+    "statement": "Wyznacz punkty przecięcia wykresu funkcji $f(x) = x^2 - 3x - 4$ z osiami układu współrzędnych.",
+    "statement_explanation": "Wykres funkcji kwadratowej to parabola, której właściwości można odczytać z postaci funkcji. Analiza wykresu ułatwia zrozumienie zachowania funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Z jakimi osiami wykres może się przecinać?",
+        "expression": "Wykres przecina się z osią OX (gdy $y = 0$) i osią OY (gdy $x = 0$)",
+        "explanation": "Identyfikujemy dwa przypadki do rozpatrzenia",
+        "why": "Punkt przecięcia z osią OX to miejsce zerowe funkcji ($f(x) = 0$), a z osią OY to wartość funkcji dla $x = 0$."
+      },
+      {
+        "step": 2,
+        "hint": "Od której osi zacząć wyznaczanie punktów przecięcia?",
+        "expression": "Przecięcie z osią OY: podstawiamy $x = 0$",
+        "explanation": "Dla osi OY wystarczy podstawić $x = 0$ do wzoru funkcji",
+        "interactive_choice": {
+          "prompt": "Którą oś rozpatrzymy najpierw?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oś OY - prostsze podstawienie $x = 0$",
+              "feedback": "Świetny wybór! To tylko jedno proste podstawienie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Oś OX - rozwiązanie równania kwadratowego",
+              "feedback": "Też dobry wybór, choć bardziej pracochłonny. Można zacząć od prostszego.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Nie ma znaczenia, oba są równie trudne",
+              "feedback": "Nie do końca - przecięcie z OY to proste podstawienie, z OX wymaga rozwiązania równania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Zacznijmy od prostszego - przecięcia z osią OY."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Ile wynosi $f(0)$?",
+        "expression": "$f(0) = 0^2 - 3 \\cdot 0 - 4 = -4$",
+        "explanation": "Obliczamy wartość funkcji dla $x = 0$"
+      },
+      {
+        "step": 4,
+        "hint": "Jaki punkt otrzymaliśmy na osi OY?",
+        "expression": "Punkt przecięcia z osią OY: $(0, -4)$",
+        "explanation": "Wykres przecina oś OY w punkcie o współrzędnych $(0, -4)$"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie równanie musimy rozwiązać dla osi OX?",
+        "expression": "$x^2 - 3x - 4 = 0$",
+        "explanation": "Dla osi OX szukamy miejsc zerowych, czyli rozwiązujemy $f(x) = 0$"
+      },
+      {
+        "step": 6,
+        "hint": "Którą metodę wybierzesz do rozwiązania równania $x^2 - 3x - 4 = 0$?",
+        "expression": "Szukamy rozkładu: liczby o sumie $3$ i iloczynie $-4$",
+        "explanation": "Potrzebujemy dwóch liczb $p$ i $q$ takich, że $p + q = 3$ oraz $p \\cdot q = -4$",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej rozwiązać równanie $x^2 - 3x - 4 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozkład na czynniki $(x - p)(x - q)$",
+              "feedback": "Doskonale! Współczynniki są małe, można szybko znaleźć rozkład.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór z deltą $\\Delta = b^2 - 4ac$",
+              "feedback": "Dobry wybór - zawsze działa, choć tu rozkład będzie szybszy.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Dopełnienie do kwadratu",
+              "feedback": "Możliwe, ale najbardziej pracochłonne dla tego równania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla małych współczynników rozkład na czynniki jest najszybszy. Szukamy liczb: suma = 3, iloczyn = -4."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie liczby dają sumę 3 i iloczyn -4?",
+        "expression": "$4 + (-1) = 3$ oraz $4 \\cdot (-1) = -4$",
+        "explanation": "Znajdujemy liczby: $4$ i $-1$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak zapisać równanie w postaci iloczynowej?",
+        "expression": "$(x - 4)(x + 1) = 0$",
+        "explanation": "Równanie w postaci iloczynowej"
+      },
+      {
+        "step": 9,
+        "hint": "Kiedy iloczyn równa się zero?",
+        "expression": "$x - 4 = 0$ lub $x + 1 = 0$",
+        "explanation": "Iloczyn jest zerem gdy jeden z czynników jest zerem"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie są miejsca zerowe funkcji?",
+        "expression": "$x_1 = 4$ oraz $x_2 = -1$",
+        "explanation": "Otrzymujemy dwa miejsca zerowe"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie punkty otrzymaliśmy na osi OX?",
+        "expression": "Punkty przecięcia z osią OX: $(4, 0)$ i $(-1, 0)$",
+        "explanation": "Wykres przecina oś OX w dwóch punktach"
+      },
+      {
+        "step": 12,
+        "hint": "Jakie są wszystkie punkty przecięcia z osiami?",
+        "expression": "Punkty przecięcia: $(0, -4)$, $(4, 0)$, $(-1, 0)$",
+        "explanation": "Wykres przecina oś OY w jednym punkcie i oś OX w dwóch punktach"
+      }
+    ],
+    "solutions": [
+      "$(0, -4)$ - przecięcie z osią OY",
+      "$(4, 0)$ - przecięcie z osią OX",
+      "$(-1, 0)$ - przecięcie z osią OX"
+    ],
+    "parameters": {
+      "function": "$f(x) = x^2 - 3x - 4$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 12,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:12:36.254Z"
+  },
+  {
+    "id": "parabola_vertex_form_sketch",
+    "topic": "Funkcje kwadratowe - postać kanoniczna",
+    "difficulty": 2,
+    "statement": "Naszkicuj wykres funkcji $f(x) = -(x - 2)^2 + 3$, zaznaczając wierzchołek i punkty przecięcia z osiami.",
+    "statement_explanation": "Postać kanoniczna $f(x) = a(x-p)^2 + q$ bezpośrednio pokazuje współrzędne wierzchołka paraboli $(p, q)$. Przekształcenie do tej postaci ułatwia analizę funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "W jakiej postaci jest zapisana ta funkcja kwadratowa?",
+        "expression": "$f(x) = -(x - 2)^2 + 3$ to postać kanoniczna $f(x) = a(x - p)^2 + q$",
+        "explanation": "Rozpoznajemy postać kanoniczną funkcji kwadratowej",
+        "why": "Postać kanoniczna $f(x) = a(x - p)^2 + q$ od razu pokazuje wierzchołek $W = (p, q)$ i kierunek ramion (znak $a$)."
+      },
+      {
+        "step": 2,
+        "hint": "Jakie są współrzędne wierzchołka paraboli?",
+        "expression": "Wierzchołek: $W = (2, 3)$",
+        "explanation": "Odczytujemy współrzędne wierzchołka z postaci kanonicznej",
+        "interactive_choice": {
+          "prompt": "Jak odczytać współrzędne wierzchołka z postaci $f(x) = -(x - 2)^2 + 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wierzchołek to $W = (2, 3)$",
+              "feedback": "Doskonale! W postaci $a(x - p)^2 + q$ wierzchołek to $(p, q)$, więc $(2, 3)$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wierzchołek to $W = (-2, 3)$",
+              "feedback": "Uwaga na znak! Mamy $(x - 2)$, więc $p = 2$, nie $-2$",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Wierzchołek to $W = (2, -3)$",
+              "feedback": "Nie - przed trójką nie ma minusa, więc $q = 3$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "W postaci $a(x - p)^2 + q$ wierzchołek to zawsze $(p, q)$. Tu: $p = 2$, $q = 3$."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "W którą stronę skierowane są ramiona paraboli?",
+        "expression": "$a = -1 < 0$, więc ramiona skierowane w dół, maksimum w $W = (2, 3)$",
+        "explanation": "Ujemny współczynnik przy kwadracie oznacza parabolę z ramionami w dół",
+        "interactive_choice": {
+          "prompt": "Jak współczynnik $a = -1$ wpływa na kształt paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ramiona skierowane w górę (parabola ma minimum)",
+              "feedback": "Nie - ujemne $a$ oznacza ramiona w dół",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Ramiona skierowane w dół (parabola ma maksimum)",
+              "feedback": "Tak! Ujemne $a$ daje parabolę z ramionami w dół i maksimum w wierzchołku",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Parabola jest przesunięta w lewo",
+              "feedback": "Znak $a$ nie wpływa na przesunięcie, tylko na kierunek ramion",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znak współczynnika $a$: dodatni → ramiona w górę, ujemny → ramiona w dół."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jak znaleźć punkt przecięcia z osią OY?",
+        "expression": "Dla $x = 0$: $f(0) = -(0 - 2)^2 + 3 = -4 + 3 = -1$",
+        "explanation": "Podstawiamy $x = 0$ aby znaleźć przecięcie z osią OY"
+      },
+      {
+        "step": 5,
+        "hint": "Jakie są współrzędne punktu przecięcia z osią OY?",
+        "expression": "Przecięcie z osią OY: $(0, -1)$",
+        "explanation": "Punkt na osi OY ma pierwszą współrzędną równą 0"
+      },
+      {
+        "step": 6,
+        "hint": "Jak znaleźć punkty przecięcia z osią OX?",
+        "expression": "Rozwiązujemy równanie $f(x) = 0$: $-(x - 2)^2 + 3 = 0$",
+        "explanation": "Punkty przecięcia z osią OX to miejsca zerowe funkcji"
+      },
+      {
+        "step": 7,
+        "hint": "Jak przekształcić równanie $-(x - 2)^2 + 3 = 0$?",
+        "expression": "$(x - 2)^2 = 3$",
+        "explanation": "Przenosimy 3 na prawą stronę i mnożymy przez $-1$"
+      },
+      {
+        "step": 8,
+        "hint": "Jak rozwiązać równanie $(x - 2)^2 = 3$?",
+        "expression": "$x - 2 = \\pm\\sqrt{3}$",
+        "explanation": "Pierwiastkujemy obie strony, pamiętając o obu znakach"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są dokładne wartości miejsc zerowych?",
+        "expression": "$x_1 = 2 - \\sqrt{3} \\approx 0.27$ oraz $x_2 = 2 + \\sqrt{3} \\approx 3.73$",
+        "explanation": "Rozwiązujemy równanie względem $x$"
+      },
+      {
+        "step": 10,
+        "hint": "Jakie punkty należy zaznaczyć na wykresie?",
+        "expression": "Kluczowe punkty: $W = (2, 3)$, $(2-\\sqrt{3}, 0)$, $(2+\\sqrt{3}, 0)$, $(0, -1)$",
+        "explanation": "Zaznaczamy wszystkie charakterystyczne punkty wykresu",
+        "interactive_choice": {
+          "prompt": "Które punkty są kluczowe do naszkicowania wykresu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko wierzchołek $W = (2, 3)$",
+              "feedback": "To za mało - potrzebujemy też punktów przecięcia z osiami",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Wierzchołek $W = (2, 3)$, przecięcia z OX: $(2-\\sqrt{3}, 0)$, $(2+\\sqrt{3}, 0)$ i z OY: $(0, -1)$",
+              "feedback": "Idealnie! Te punkty wystarczą do dokładnego szkicu paraboli",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Tylko punkty przecięcia z osiami",
+              "feedback": "Wierzchołek jest najważniejszy - to punkt maksimum funkcji!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Do szkicu paraboli potrzebujemy: wierzchołka, przecięć z osiami i informacji o kierunku ramion."
+        }
+      },
+      {
+        "step": 11,
+        "hint": "Jak wygląda szkic wykresu?",
+        "expression": "Parabola z ramionami w dół, wierzchołek w $(2, 3)$, przecina OX w dwóch punktach, OY w $(0, -1)$",
+        "explanation": "Łączymy wszystkie informacje w szkic: parabola przechodzi przez zaznaczone punkty, ma maksimum w wierzchołku"
+      }
+    ],
+    "solutions": [
+      "Wykres: parabola z wierzchołkiem $W = (2, 3)$, ramiona w dół, przecięcia z OX: $(2-\\sqrt{3}, 0)$ i $(2+\\sqrt{3}, 0)$, przecięcie z OY: $(0, -1)$"
+    ],
+    "parameters": {
+      "vertex": "$(2, 3)$",
+      "x_intercepts": "$(2-\\sqrt{3}, 0)$, $(2+\\sqrt{3}, 0)$",
+      "y_intercept": "$(0, -1)$",
+      "direction": "ramiona w dół"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 11,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:13:10.735Z"
+  },
+  {
+    "id": "quadratic_through_points",
+    "topic": "Funkcje kwadratowe - wyznaczanie wzoru",
+    "difficulty": 3,
+    "statement": "Wykres pewnej funkcji kwadratowej przechodzi przez punkty $A = (0, -3)$, $B = (1, 0)$ i $C = (3, 0)$. Wyznacz wzór tej funkcji.",
+    "statement_explanation": "Wykres funkcji kwadratowej to parabola, której właściwości można odczytać z postaci funkcji. Analiza wykresu ułatwia zrozumienie zachowania funkcji.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Co możesz powiedzieć o punktach B i C?",
+        "expression": "Punkty $B = (1, 0)$ i $C = (3, 0)$ leżą na osi $x$",
+        "explanation": "Są to miejsca zerowe funkcji, bo współrzędna $y$ wynosi 0",
+        "why": "Miejsca zerowe to kluczowa informacja - pozwalają od razu zapisać postać iloczynową funkcji kwadratowej."
+      },
+      {
+        "step": 2,
+        "hint": "Którą postać funkcji kwadratowej najlepiej wybrać mając dane miejsca zerowe?",
+        "expression": "$f(x) = a(x - 1)(x - 3)$",
+        "explanation": "Zapisujemy funkcję w postaci iloczynowej z miejscami zerowymi 1 i 3",
+        "interactive_choice": {
+          "prompt": "Jaką postać funkcji kwadratowej wykorzystać znając miejsca zerowe $x_1 = 1$ i $x_2 = 3$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postać ogólną $f(x) = ax^2 + bx + c$",
+              "feedback": "Możliwe, ale będziesz musiał rozwiązać układ 3 równań z 3 niewiadomymi - dużo pracy!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Postać iloczynową $f(x) = a(x - x_1)(x - x_2)$",
+              "feedback": "Doskonały wybór! Znasz już $x_1$ i $x_2$, zostaje tylko znaleźć $a$.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Postać kanoniczną $f(x) = a(x - p)^2 + q$",
+              "feedback": "Można, ale musisz najpierw obliczyć wierzchołek - niepotrzebna praca.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Postać iloczynowa jest najlepsza gdy znamy miejsca zerowe - od razu je podstawiamy."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak wykorzystać punkt A do znalezienia współczynnika $a$?",
+        "expression": "Podstawiamy punkt $A = (0, -3)$: $f(0) = -3$",
+        "explanation": "Punkt A leży na wykresie, więc jego współrzędne spełniają równanie funkcji"
+      },
+      {
+        "step": 4,
+        "hint": "Co otrzymasz podstawiając $x = 0$ do wzoru $f(x) = a(x - 1)(x - 3)$?",
+        "expression": "$-3 = a(0 - 1)(0 - 3)$",
+        "explanation": "Podstawiamy współrzędne punktu A"
+      },
+      {
+        "step": 5,
+        "hint": "Ile wynosi iloczyn $(0 - 1)(0 - 3)$?",
+        "expression": "$-3 = a \\cdot (-1) \\cdot (-3) = 3a$",
+        "explanation": "Obliczamy wartość nawiasów"
+      },
+      {
+        "step": 6,
+        "hint": "Jaką wartość ma współczynnik $a$?",
+        "expression": "$a = -1$",
+        "explanation": "Dzielimy obie strony przez 3"
+      },
+      {
+        "step": 7,
+        "hint": "Jak wygląda ostateczny wzór funkcji w postaci iloczynowej?",
+        "expression": "$f(x) = -(x - 1)(x - 3)$",
+        "explanation": "Podstawiamy znalezioną wartość $a = -1$"
+      },
+      {
+        "step": 8,
+        "hint": "Czy chcesz zostawić wzór w postaci iloczynowej czy rozwinąć do postaci ogólnej?",
+        "expression": "Rozwijamy: $f(x) = -(x^2 - 4x + 3) = -x^2 + 4x - 3$",
+        "explanation": "Mnożymy nawiasy i zmieniamy znaki",
+        "interactive_choice": {
+          "prompt": "W jakiej postaci zapisać ostateczny wzór funkcji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zostawić postać iloczynową $f(x) = -(x-1)(x-3)$",
+              "feedback": "Dobry wybór - widać miejsca zerowe i współczynnik kierunkowy.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozwinąć do postaci ogólnej $f(x) = ax^2 + bx + c$",
+              "feedback": "Też poprawne - czasem postać ogólna jest wygodniejsza do dalszych obliczeń.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić do postaci kanonicznej",
+              "feedback": "Możliwe, ale nie jest to konieczne - obie poprzednie formy są wystarczające.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie postacie - iloczynowa i ogólna - są poprawne. Wybór zależy od kontekstu zadania."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Czy możesz sprawdzić poprawność wyniku?",
+        "expression": "Sprawdzenie: $f(0) = -3$ ✓, $f(1) = -1 + 4 - 3 = 0$ ✓, $f(3) = -9 + 12 - 3 = 0$ ✓",
+        "explanation": "Wszystkie trzy punkty spełniają równanie funkcji"
+      }
+    ],
+    "solutions": [
+      "$f(x) = -(x - 1)(x - 3)$",
+      "$f(x) = -x^2 + 4x - 3$"
+    ],
+    "parameters": {
+      "points": "$A = (0, -3)$, $B = (1, 0)$, $C = (3, 0)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:13:37.471Z"
+  },
+  {
+    "id": "quadratic_minimum_vertex",
+    "topic": "Funkcje kwadratowe - wartość najmniejsza",
+    "difficulty": 3,
+    "statement": "Dana jest funkcja kwadratowa $f(x) = x^2 - 4x + 1$. Wyznacz najmniejszą wartość tej funkcji oraz argument, dla którego jest ona osiągana.",
+    "statement_explanation": "Funkcja kwadratowa ma wiele własności, które można analizować algebraicznie i geometrycznie. Zrozumienie tych własności pozwala rozwiązywać różnorodne problemy matematyczne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tej funkcji kwadratowej?",
+        "expression": "$f(x) = x^2 - 4x + 1$, gdzie $a = 1$, $b = -4$, $c = 1$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Czy ta parabola ma minimum czy maksimum?",
+        "expression": "$a = 1 > 0$, więc parabola ma ramiona skierowane w górę",
+        "explanation": "Funkcja ma wartość najmniejszą w wierzchołku",
+        "why": "Znak współczynnika $a$ decyduje o kierunku ramion: $a > 0$ - minimum, $a < 0$ - maksimum"
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę wybierzesz do znalezienia wierzchołka?",
+        "expression": "Wybieramy wzory: $p = -\\frac{b}{2a}$ oraz $q = -\\frac{\\Delta}{4a}$",
+        "explanation": "Stosujemy standardowe wzory na współrzędne wierzchołka paraboli",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej wyznaczyć współrzędne wierzchołka paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzorów $p = -\\frac{b}{2a}$ i $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Świetnie! To standardowa i szybka metoda dla funkcji kwadratowej.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przekształcić do postaci kanonicznej $f(x) = a(x-p)^2 + q$",
+              "feedback": "Dobry wybór! Dopełnienie do kwadratu też zadziała, choć jest bardziej pracochłonne.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Obliczyć pochodną i przyrównać do zera",
+              "feedback": "To metoda z analizy matematycznej - na tym poziomie używamy wzorów na wierzchołek.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory na współrzędne wierzchołka są najszybsze. Dopełnienie do kwadratu daje dodatkowy wgląd w strukturę funkcji."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest pierwsza współrzędna wierzchołka (argument)?",
+        "expression": "$p = -\\frac{b}{2a} = -\\frac{-4}{2 \\cdot 1} = \\frac{4}{2} = 2$",
+        "explanation": "Obliczamy współrzędną $p$ wierzchołka"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć drugą współrzędną wierzchołka?",
+        "expression": "$q = f(2) = 2^2 - 4 \\cdot 2 + 1$",
+        "explanation": "Podstawiamy $x = 2$ do wzoru funkcji",
+        "interactive_choice": {
+          "prompt": "Którą metodę użyjesz do obliczenia $q$ (wartości funkcji w wierzchołku)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić $x = 2$ do wzoru funkcji: $f(2)$",
+              "feedback": "Doskonale! To najprostszy sposób - bezpośrednie podstawienie.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Użyć wzoru $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Dobry wybór! Wymaga obliczenia delty, ale też jest poprawny.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $q = c - \\frac{b^2}{4a}$",
+              "feedback": "Poprawnie! To przekształcona wersja wzoru z deltą.",
+              "is_correct": true
+            }
+          ],
+          "explanation_after": "Wszystkie trzy metody są poprawne. Podstawienie $f(p)$ jest najszybsze, wzory z deltą są uniwersalne."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $f(2)$?",
+        "expression": "$q = 4 - 8 + 1 = -3$",
+        "explanation": "Obliczamy wartość funkcji w punkcie $x = 2$"
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są współrzędne wierzchołka paraboli?",
+        "expression": "$W = (2, -3)$",
+        "explanation": "Wierzchołek paraboli ma współrzędne $(p, q) = (2, -3)$",
+        "why": "Wierzchołek to punkt, w którym funkcja kwadratowa osiąga wartość ekstremalną (tu minimum, bo $a > 0$)"
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest odpowiedź na pytanie zadania?",
+        "expression": "Najmniejsza wartość funkcji: $f_{min} = -3$, osiągana dla $x = 2$",
+        "explanation": "Funkcja osiąga minimum równe $-3$ w punkcie $x = 2$"
+      }
+    ],
+    "solutions": [
+      "$f_{min} = -3$ dla $x = 2$"
+    ],
+    "parameters": {
+      "vertex": "$(2, -3)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-30T04:14:01.595Z"
+  },
+  {
+    "id": "quadratic_max_value",
+    "topic": "Wartość największa funkcji kwadratowej",
+    "difficulty": 3,
+    "statement": "Funkcja $f(x) = -2x^2 + 8x - 5$ ma wartość największą. Wyznacz tę wartość oraz określ zbiór wartości funkcji.",
+    "statement_explanation": "Funkcja kwadratowa ma wiele własności, które można analizować algebraicznie i geometrycznie. Zrozumienie tych własności pozwala rozwiązywać różnorodne problemy matematyczne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki a, b, c w tej funkcji kwadratowej?",
+        "expression": "$f(x) = -2x^2 + 8x - 5$, gdzie $a = -2$, $b = 8$, $c = -5$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Jak znak współczynnika a wpływa na istnienie wartości największej?",
+        "expression": "$a = -2 < 0$",
+        "explanation": "Współczynnik przy $x^2$ jest ujemny, więc parabola ma ramiona skierowane w dół",
+        "why": "Gdy $a < 0$, parabola ma wierzchołek będący punktem maksymalnym - funkcja osiąga wartość największą. Gdy $a > 0$, byłaby wartość najmniejsza."
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę wybierzesz do znalezienia wierzchołka paraboli?",
+        "expression": "Używamy wzorów: $p = -\\frac{b}{2a}$ oraz $q = -\\frac{\\Delta}{4a}$",
+        "explanation": "Wybieramy metodę ze wzorami na wierzchołek",
+        "interactive_choice": {
+          "prompt": "Jak najlepiej wyznaczyć współrzędne wierzchołka paraboli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzorów $p = -\\frac{b}{2a}$ i $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Doskonały wybór! To standardowa i najszybsza metoda.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Przekształcić do postaci kanonicznej $f(x) = a(x-p)^2 + q$",
+              "feedback": "Możliwe, ale bardziej czasochłonne - wymaga dopełnienia do kwadratu.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć miejsca zerowe i wziąć ich średnią",
+              "feedback": "To da tylko $p$, ale nie $q$. Potrzebujemy obu współrzędnych wierzchołka.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wzory na współrzędne wierzchołka są najszybsze. Postać kanoniczna też działa, ale wymaga więcej obliczeń."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaka jest pierwsza współrzędna wierzchołka paraboli?",
+        "expression": "$p = -\\frac{8}{2 \\cdot (-2)} = -\\frac{8}{-4} = 2$",
+        "explanation": "Obliczamy współrzędną $x$ wierzchołka"
+      },
+      {
+        "step": 5,
+        "hint": "Jak obliczyć deltę dla tej funkcji?",
+        "expression": "$\\Delta = b^2 - 4ac = 8^2 - 4 \\cdot (-2) \\cdot (-5) = 64 - 40 = 24$",
+        "explanation": "Wyznaczamy wyróżnik trójmianu kwadratowego"
+      },
+      {
+        "step": 6,
+        "hint": "Jaka jest druga współrzędna wierzchołka?",
+        "expression": "$q = -\\frac{24}{4 \\cdot (-2)} = -\\frac{24}{-8} = 3$",
+        "explanation": "Obliczamy współrzędną $y$ wierzchołka używając wzoru z deltą",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć $q$ - wartość funkcji w wierzchołku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Użyć wzoru $q = -\\frac{\\Delta}{4a}$",
+              "feedback": "Świetnie! To bezpośredni wzór: $q = -\\frac{24}{4 \\cdot (-2)} = 3$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić $x = 2$ do funkcji $f(2)$",
+              "feedback": "Doskonale! To alternatywna metoda: $f(2) = -2 \\cdot 4 + 16 - 5 = 3$",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Użyć wzoru $q = \\frac{\\Delta}{4a}$ (bez minusa)",
+              "feedback": "Uwaga na znak! Prawidłowy wzór to $q = -\\frac{\\Delta}{4a}$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Obie metody są poprawne: wzór z deltą lub podstawienie $p$ do funkcji."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jaka jest wartość największa funkcji?",
+        "expression": "$f_{max} = q = 3$",
+        "explanation": "Wartość największa funkcji to współrzędna $y$ wierzchołka",
+        "why": "Ponieważ $a < 0$, wierzchołek $W = (2, 3)$ jest punktem maksymalnym. Funkcja osiąga wartość największą równą 3 dla $x = 2$."
+      },
+      {
+        "step": 8,
+        "hint": "Jak wyznaczyć zbiór wartości funkcji kwadratowej z ramionami w dół?",
+        "expression": "$ZW = (-\\infty, 3]$",
+        "explanation": "Funkcja przyjmuje wszystkie wartości od $-\\infty$ do 3 włącznie",
+        "interactive_choice": {
+          "prompt": "Jaki jest zbiór wartości funkcji $f$ z wierzchołkiem w $(2, 3)$ i $a < 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "$(-\\infty, 3]$ - wszystkie wartości nie większe niż 3",
+              "feedback": "Dokładnie! Funkcja osiąga maksimum 3 i maleje w obie strony do $-\\infty$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "$[3, +\\infty)$ - wszystkie wartości nie mniejsze niż 3",
+              "feedback": "To byłby zbiór wartości dla paraboli z ramionami w górę ($a > 0$)",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "$\\mathbb{R}$ - wszystkie liczby rzeczywiste",
+              "feedback": "Nie - funkcja kwadratowa nie przyjmuje wszystkich wartości, ma ograniczenie",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla $a < 0$ parabola ma wartość największą w wierzchołku. Zbiór wartości to $(-\\infty, q]$."
+        }
+      }
+    ],
+    "solutions": [
+      "Wartość największa: $f_{max} = 3$",
+      "Zbiór wartości: $ZW = (-\\infty, 3]$"
+    ],
+    "parameters": {
+      "vertex": "$(2, 3)$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 5
+      }
+    },
+    "timestamp": "2025-09-30T04:14:31.939Z"
+  },
+  {
+    "id": "quadratic_monotonicity",
+    "topic": "Monotoniczność funkcji kwadratowej",
+    "difficulty": 3,
+    "statement": "Określ przedziały monotoniczności funkcji $f(x) = x^2 + 6x - 7$. W jakim przedziale funkcja jest rosnąca, a w jakim malejąca?",
+    "statement_explanation": "Funkcja kwadratowa nie jest monotoniczna w całej dziedzinie - rośnie w jednym przedziale i maleje w drugim. Punkt przegięcia to wierzchołek paraboli.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jakie są współczynniki funkcji kwadratowej $f(x) = x^2 + 6x - 7$?",
+        "expression": "$a = 1$, $b = 6$, $c = -7$",
+        "explanation": "Identyfikujemy współczynniki funkcji w postaci ogólnej $f(x) = ax^2 + bx + c$"
+      },
+      {
+        "step": 2,
+        "hint": "Co mówi nam znak współczynnika $a$ o kształcie paraboli?",
+        "expression": "Parabola z ramionami w górę - funkcja maleje do wierzchołka, potem rośnie",
+        "explanation": "Znak współczynnika $a$ determinuje kierunek ramion paraboli",
+        "interactive_choice": {
+          "prompt": "Jak wygląda wykres funkcji $f(x) = x^2 + 6x - 7$ skoro $a = 1 > 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Parabola z ramionami skierowanymi w górę",
+              "feedback": "Dokładnie! Dodatnie $a$ oznacza parabolę z ramionami w górę - funkcja ma minimum.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Parabola z ramionami skierowanymi w dół",
+              "feedback": "Nie - ramiona w dół są gdy $a < 0$. Tu $a = 1 > 0$.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Funkcja liniowa",
+              "feedback": "Nie - to funkcja kwadratowa ($x^2$ występuje), więc wykres to parabola.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Gdy $a > 0$, parabola ma ramiona w górę i funkcja ma minimum w wierzchołku."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jak znaleźć punkt, w którym funkcja zmienia monotoniczność?",
+        "expression": "Szukamy współrzędnej $x$ wierzchołka paraboli",
+        "explanation": "Wierzchołek to punkt zmiany monotoniczności funkcji kwadratowej",
+        "why": "Dla paraboli z ramionami w górę: funkcja maleje przed wierzchołkiem i rośnie po wierzchołku.",
+        "interactive_choice": {
+          "prompt": "Gdzie funkcja kwadratowa zmienia się z malejącej na rosnącą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W miejscu zerowym funkcji",
+              "feedback": "Nie - miejsca zerowe to punkty przecięcia z osią OX, nie mają związku z monotonicznością.",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "W wierzchołku paraboli",
+              "feedback": "Świetnie! Wierzchołek to punkt ekstremalny - tu funkcja osiąga minimum i zmienia monotoniczność.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "W punkcie przecięcia z osią OY",
+              "feedback": "Nie - to tylko wartość $f(0) = c$, nie ma związku z monotonicznością.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Wierzchołek paraboli to punkt, gdzie funkcja osiąga ekstremum i zmienia kierunek monotoniczności."
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jaki wzór pozwala obliczyć współrzędną $x$ wierzchołka?",
+        "expression": "$x_w = -\\frac{b}{2a}$",
+        "explanation": "Wzór na pierwszą współrzędną wierzchołka paraboli"
+      },
+      {
+        "step": 5,
+        "hint": "Oblicz wartość $x_w$ podstawiając $a = 1$ i $b = 6$",
+        "expression": "$x_w = -\\frac{6}{2 \\cdot 1} = -\\frac{6}{2} = -3$",
+        "explanation": "Wierzchołek paraboli znajduje się w punkcie $x = -3$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak zachowuje się funkcja przed i po wierzchołku?",
+        "expression": "Funkcja maleje w $(-\\infty, -3)$ i rośnie w $(-3, +\\infty)$",
+        "explanation": "Określamy przedziały monotoniczności na podstawie położenia wierzchołka",
+        "interactive_choice": {
+          "prompt": "Skoro parabola ma ramiona w górę i wierzchołek w $x = -3$, to jak zmienia się funkcja?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rośnie dla $x < -3$, maleje dla $x > -3$",
+              "feedback": "Nie - to byłoby dla paraboli z ramionami w dół (maksimum).",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Maleje dla $x < -3$, rośnie dla $x > -3$",
+              "feedback": "Dokładnie! Funkcja spada do minimum w $x = -3$, potem rośnie.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Jest stała w obu przedziałach",
+              "feedback": "Nie - funkcja kwadratowa nie jest stała (chyba że $a = 0$, ale wtedy nie byłaby kwadratowa).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Parabola z ramionami w górę: maleje do wierzchołka (minimum), potem rośnie."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jakie są ostateczne przedziały monotoniczności?",
+        "expression": "Funkcja malejąca: $x \\in (-\\infty, -3)$, Funkcja rosnąca: $x \\in (-3, +\\infty)$",
+        "explanation": "Funkcja $f(x) = x^2 + 6x - 7$ maleje dla $x < -3$ i rośnie dla $x > -3$"
+      }
+    ],
+    "solutions": [
+      "Funkcja malejąca w przedziale $(-\\infty, -3)$",
+      "Funkcja rosnąca w przedziale $(-3, +\\infty)$"
+    ],
+    "parameters": {
+      "vertex_x": "$x_w = -3$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 7,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T04:14:58.710Z"
+  },
+  {
+    "id": "quadratic_function_values",
+    "topic": "Wartości funkcji kwadratowej",
+    "difficulty": 2,
+    "statement": "Dla funkcji $f(x) = 3x^2 - 12x + 10$ oblicz wartość funkcji w punktach $x = 1$, $x = 2$ oraz $x = 3$.",
+    "statement_explanation": "Funkcja kwadratowa ma wiele własności, które można analizować algebraicznie i geometrycznie. Zrozumienie tych własności pozwala rozwiązywać różnorodne problemy matematyczne.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Jak wygląda wzór funkcji, do której będziemy podstawiać wartości?",
+        "expression": "$f(x) = 3x^2 - 12x + 10$",
+        "explanation": "Zapisujemy wzór funkcji kwadratowej"
+      },
+      {
+        "step": 2,
+        "hint": "Którą strategię wybierzesz do obliczenia wartości funkcji?",
+        "expression": "Podstawiamy kolejno $x = 1$, $x = 2$, $x = 3$",
+        "explanation": "Wybieramy metodę bezpośredniego podstawienia",
+        "interactive_choice": {
+          "prompt": "Jak najefektywniej obliczyć wartości $f(1)$, $f(2)$ i $f(3)$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podstawić kolejno każdą wartość do wzoru",
+              "feedback": "Dobry wybór - prosty i pewny sposób, zawsze działa!",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Najpierw przekształcić funkcję do postaci kanonicznej",
+              "feedback": "Możliwe, ale niepotrzebnie komplikuje - dla 3 wartości podstawienie jest szybsze.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Narysować wykres i odczytać wartości",
+              "feedback": "Nieefektywne i niedokładne - obliczenia dadzą dokładny wynik.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla kilku konkretnych wartości najszybsze jest bezpośrednie podstawienie do wzoru."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co otrzymasz podstawiając $x = 1$ do wzoru funkcji?",
+        "expression": "$f(1) = 3 \\cdot 1^2 - 12 \\cdot 1 + 10$",
+        "explanation": "Podstawiamy $x = 1$ do wzoru funkcji"
+      },
+      {
+        "step": 4,
+        "hint": "W jakiej kolejności wykonasz działania dla $f(1)$?",
+        "expression": "$f(1) = 3 \\cdot 1 - 12 + 10 = 3 - 12 + 10 = 1$",
+        "explanation": "Obliczamy zgodnie z kolejnością działań",
+        "why": "Zawsze pamiętaj o kolejności działań: najpierw potęgi, potem mnożenie, na końcu dodawanie i odejmowanie.",
+        "interactive_choice": {
+          "prompt": "Jak obliczyć $3 \\cdot 1^2 - 12 \\cdot 1 + 10$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw potęga, potem mnożenia, na końcu dodawanie i odejmowanie",
+              "feedback": "Perfekcyjnie! To właściwa kolejność działań.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Od lewej do prawej: $3 \\cdot 1 = 3$, potem $3^2 = 9$...",
+              "feedback": "Nie - musisz najpierw obliczyć $1^2$, potem mnożenia!",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Najpierw dodawanie i odejmowanie, potem reszta",
+              "feedback": "Nie - potęgowanie i mnożenie mają wyższy priorytet!",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Kolejność działań: potęgowanie → mnożenie/dzielenie → dodawanie/odejmowanie."
+        }
+      },
+      {
+        "step": 5,
+        "hint": "Co otrzymasz podstawiając $x = 2$ do wzoru funkcji?",
+        "expression": "$f(2) = 3 \\cdot 2^2 - 12 \\cdot 2 + 10$",
+        "explanation": "Podstawiamy $x = 2$ do wzoru funkcji"
+      },
+      {
+        "step": 6,
+        "hint": "Ile wynosi $f(2)$ po wykonaniu obliczeń?",
+        "expression": "$f(2) = 3 \\cdot 4 - 24 + 10 = 12 - 24 + 10 = -2$",
+        "explanation": "Obliczamy: $2^2 = 4$, potem $3 \\cdot 4 = 12$ i $12 \\cdot 2 = 24$, na końcu $12 - 24 + 10 = -2$"
+      },
+      {
+        "step": 7,
+        "hint": "Co otrzymasz podstawiając $x = 3$ do wzoru funkcji?",
+        "expression": "$f(3) = 3 \\cdot 3^2 - 12 \\cdot 3 + 10$",
+        "explanation": "Podstawiamy $x = 3$ do wzoru funkcji"
+      },
+      {
+        "step": 8,
+        "hint": "Ile wynosi $f(3)$ po wykonaniu obliczeń?",
+        "expression": "$f(3) = 3 \\cdot 9 - 36 + 10 = 27 - 36 + 10 = 1$",
+        "explanation": "Obliczamy: $3^2 = 9$, potem $3 \\cdot 9 = 27$ i $12 \\cdot 3 = 36$, na końcu $27 - 36 + 10 = 1$"
+      },
+      {
+        "step": 9,
+        "hint": "Jakie są wszystkie obliczone wartości funkcji?",
+        "expression": "$f(1) = 1$, $f(2) = -2$, $f(3) = 1$",
+        "explanation": "Zestawiamy wszystkie wyniki"
+      }
+    ],
+    "solutions": [
+      "$f(1) = 1$",
+      "$f(2) = -2$",
+      "$f(3) = 1$"
+    ],
+    "parameters": {
+      "function": "$f(x) = 3x^2 - 12x + 10$",
+      "points": "$x \\in \\{1, 2, 3\\}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 9,
+        "stepsWithWhy": 1,
+        "stepsWithChoice": 2,
+        "totalOptions": 6,
+        "correctOptions": 2
+      }
+    },
+    "timestamp": "2025-09-30T04:15:22.614Z"
+  },
+  {
+    "id": "quadratic_inequality_visual",
+    "topic": "Nierówności kwadratowe",
+    "difficulty": 3,
+    "statement": "Rozwiąż nierówność kwadratową $x^2 - 5x + 6 \\leq 0$ i przedstaw rozwiązanie na osi liczbowej oraz w postaci przedziału.",
+    "statement_explanation": "Rozwiązywanie nierówności kwadratowych wymaga analizy znaku funkcji. Położenie miejsc zerowych i kierunek ramion decydują o przedziałach dodatnich i ujemnych wartości.",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Czym różni się rozwiązywanie nierówności od równania?",
+        "expression": "$x^2 - 5x + 6 \\leq 0$",
+        "explanation": "Mamy nierówność kwadratową - szukamy przedziałów, gdzie funkcja jest niedodatnia",
+        "why": "W nierównościach nie szukamy punktów, ale przedziałów. Kluczowe są miejsca zerowe i znak funkcji między nimi."
+      },
+      {
+        "step": 2,
+        "hint": "Od czego należy zacząć rozwiązywanie nierówności kwadratowej?",
+        "expression": "Rozwiązujemy równanie $x^2 - 5x + 6 = 0$",
+        "explanation": "Znajdujemy miejsca zerowe funkcji kwadratowej",
+        "interactive_choice": {
+          "prompt": "Jaki jest pierwszy krok przy rozwiązywaniu nierówności $x^2 - 5x + 6 \\leq 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć miejsca zerowe funkcji $f(x) = x^2 - 5x + 6$",
+              "feedback": "Doskonale! Miejsca zerowe dzielą oś na przedziały o stałym znaku.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Sprawdzić znak dla dowolnego $x$",
+              "feedback": "Nie - najpierw musimy znać miejsca zerowe, które dzielą oś na przedziały.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Narysować parabolę",
+              "feedback": "Rysunek pomoże, ale najpierw potrzebujemy miejsc zerowych do jego wykonania.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Miejsca zerowe to punkty, gdzie funkcja zmienia znak. One wyznaczają granice przedziałów rozwiązań."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Którą metodę wybierzesz do znalezienia miejsc zerowych?",
+        "expression": "$(x - 2)(x - 3) = 0$",
+        "explanation": "Rozkładamy na czynniki",
+        "interactive_choice": {
+          "prompt": "Jak najszybciej rozwiązać równanie $x^2 - 5x + 6 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozkład na czynniki - szukam dwóch liczb o sumie 5 i iloczynie 6",
+              "feedback": "Świetnie! To $2$ i $3$, więc $(x-2)(x-3)=0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Wzór z deltą: $\\Delta = b^2 - 4ac$",
+              "feedback": "Zadziała, ale dla małych współczynników rozkład jest szybszy.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Metoda prób i błędów",
+              "feedback": "Nieefektywne - lepiej użyć systematycznej metody.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla współczynników całkowitych rozkład jest najszybszy. Szukamy: $2 + 3 = 5$ i $2 \\cdot 3 = 6$"
+        }
+      },
+      {
+        "step": 4,
+        "hint": "Jakie są miejsca zerowe funkcji?",
+        "expression": "$x_1 = 2$ oraz $x_2 = 3$",
+        "explanation": "Funkcja zeruje się w punktach $x = 2$ i $x = 3$"
+      },
+      {
+        "step": 5,
+        "hint": "Jaki jest znak współczynnika przy $x^2$ i co to oznacza dla kształtu paraboli?",
+        "expression": "$a = 1 > 0$, więc ramiona paraboli skierowane w górę",
+        "explanation": "Parabola ma minimum między miejscami zerowymi",
+        "why": "Gdy $a > 0$, parabola jest 'uśmiechnięta' - funkcja ujemna MIĘDZY miejscami zerowymi. Gdy $a < 0$, byłaby 'smutna' - ujemna NA ZEWNĄTRZ."
+      },
+      {
+        "step": 6,
+        "hint": "W którym przedziale funkcja przyjmuje wartości niedodatnie?",
+        "expression": "$x \\in [2, 3]$",
+        "explanation": "Funkcja jest niedodatnia w przedziale domkniętym od 2 do 3",
+        "interactive_choice": {
+          "prompt": "Gdzie funkcja $f(x) = x^2 - 5x + 6$ spełnia $f(x) \\leq 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Między miejscami zerowymi: $x \\in [2, 3]$",
+              "feedback": "Dokładnie! Parabola z $a > 0$ jest ujemna między pierwiastkami.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Poza miejscami zerowymi: $x \\in (-\\infty, 2] \\cup [3, +\\infty)$",
+              "feedback": "Nie - tam funkcja jest dodatnia (ramiona paraboli w górę).",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Tylko w punktach $x = 2$ i $x = 3$",
+              "feedback": "To za mało - funkcja jest $\\leq 0$ w całym przedziale między nimi.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla paraboli z ramionami w górę ($a > 0$): funkcja ujemna MIĘDZY pierwiastkami, dodatnia NA ZEWNĄTRZ."
+        }
+      },
+      {
+        "step": 7,
+        "hint": "Jak przedstawić rozwiązanie na osi liczbowej?",
+        "expression": "Oś liczbowa: zaznaczamy odcinek od 2 do 3 z wypełnionymi kółkami (bo $\\leq$)",
+        "explanation": "Wypełnione kółka w punktach 2 i 3, ponieważ nierówność jest nieostra"
+      },
+      {
+        "step": 8,
+        "hint": "Jaka jest końcowa odpowiedź?",
+        "expression": "Rozwiązanie: $x \\in [2, 3]$",
+        "explanation": "Przedział domknięty, bo nierówność zawiera równość ($\\leq$)"
+      }
+    ],
+    "solutions": [
+      "$x \\in [2, 3]$"
+    ],
+    "parameters": {
+      "visualization": "Na osi liczbowej: odcinek od 2 do 3 z wypełnionymi punktami końcowymi"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 8,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T04:15:52.224Z"
+  }
+]

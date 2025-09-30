@@ -1,45 +1,22 @@
 import React, { useMemo } from 'react';
-import basics1 from '../data/basics-1-arytmetyka.json';
-import basics2 from '../data/basics-2-logika-zbiory.json';
-import basics3 from '../data/basics-3-wyrazenia-algebraiczne.json';
-import basics4 from '../data/basics-4-rownania-nierownosci.json';
-import basics5 from '../data/basics-5-funkcje-fundament.json';
-import basics6 from '../data/basics-6-geometria-elementarna.json';
-import basics7 from '../data/basics-7-uklad-wspolrzednych.json';
-import basics8 from '../data/basics-8-potegi-pierwiastki.json';
-import basics9 from '../data/basics-9-logarytmy.json';
-import basics10 from '../data/basics-10-trygonometria-podstawowa.json';
-import basics11 from '../data/basics-11-kombinatoryka-prawdopodobienstwo.json';
-import basics12 from '../data/basics-12-statystyka.json';
-import basics13 from '../data/basics-13-uklady-rownan.json';
+import basicsFunkcjaKwadratowa from '../data/basics-funkcja-kwadratowa.json';
 
 const BasicsTopics = ({ onSelectTopic, onBack }) => {
   // Map topic data for progress calculation
   const topicData = useMemo(() => ({
-    'basics-1-arytmetyka': basics1,
-    'basics-2-logika-zbiory': basics2,
-    'basics-3-wyrazenia-algebraiczne': basics3,
-    'basics-4-rownania-nierownosci': basics4,
-    'basics-5-funkcje-fundament': basics5,
-    'basics-6-geometria-elementarna': basics6,
-    'basics-7-uklad-wspolrzednych': basics7,
-    'basics-8-potegi-pierwiastki': basics8,
-    'basics-9-logarytmy': basics9,
-    'basics-10-trygonometria-podstawowa': basics10,
-    'basics-11-kombinatoryka-prawdopodobienstwo': basics11,
-    'basics-12-statystyka': basics12,
-    'basics-13-uklady-rownan': basics13
+    'basics-funkcja-kwadratowa': basicsFunkcjaKwadratowa
   }), []);
   
   // Calculate progress for each topic
-  const calculateProgress = (topicId, topicNumber) => {
+  const calculateProgress = (topicId) => {
     const problems = topicData[topicId];
     if (!problems) return { completed: 0, total: 0, percentage: 0 };
-    
+
     const total = problems.length;
-    const saved = localStorage.getItem(`completedBasics${topicNumber}Problems`);
+    const storageKey = `completed${topicId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('')}Problems`;
+    const saved = localStorage.getItem(storageKey);
     let completed = 0;
-    
+
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -48,102 +25,18 @@ const BasicsTopics = ({ onSelectTopic, onBack }) => {
         // Ignore parsing errors
       }
     }
-    
+
     const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
-    
+
     return { completed, total, percentage };
   };
   const topics = [
     {
-      id: 'basics-1-arytmetyka',
+      id: 'basics-funkcja-kwadratowa',
       number: '1',
-      title: 'Arytmetyka i liczby',
-      description: 'Rodzaje liczb, działania, ułamki, procenty, przybliżenia',
-      progress: calculateProgress('basics-1-arytmetyka', '1')
-    },
-    {
-      id: 'basics-2-logika-zbiory',
-      number: '2',
-      title: 'Podstawy logiki i zbiorów',
-      description: 'Zdania logiczne, operacje na zbiorach, diagramy Venna, przedziały',
-      progress: calculateProgress('basics-2-logika-zbiory', '2')
-    },
-    {
-      id: 'basics-3-wyrazenia-algebraiczne',
-      number: '3',
-      title: 'Wyrażenia algebraiczne',
-      description: 'Redukowanie wyrazów, wzory skróconego mnożenia, ułamki algebraiczne',
-      progress: calculateProgress('basics-3-wyrazenia-algebraiczne', '3')
-    },
-    {
-      id: 'basics-4-rownania-nierownosci',
-      number: '4',
-      title: 'Równania i nierówności elementarne',
-      description: 'Równania liniowe, nierówności, układy równań, wartość bezwzględna',
-      progress: calculateProgress('basics-4-rownania-nierownosci', '4')
-    },
-    {
-      id: 'basics-5-funkcje-fundament',
-      number: '5',
-      title: 'Funkcje - fundament',
-      description: 'Pojęcie funkcji, funkcja liniowa, wykresy, własności',
-      progress: calculateProgress('basics-5-funkcje-fundament', '5')
-    },
-    {
-      id: 'basics-6-geometria-elementarna',
-      number: '6',
-      title: 'Geometria elementarna',
-      description: 'Figury płaskie, kąty, Pitagoras, pola i obwody, bryły',
-      progress: calculateProgress('basics-6-geometria-elementarna', '6')
-    },
-    {
-      id: 'basics-7-uklad-wspolrzednych',
-      number: '7',
-      title: 'Układ współrzędnych',
-      description: 'Współrzędne punktu, odległość, równanie prostej, nachylenie',
-      progress: calculateProgress('basics-7-uklad-wspolrzednych', '7')
-    },
-    {
-      id: 'basics-8-potegi-pierwiastki',
-      number: '8',
-      title: 'Podstawy rachunku potęgowego i pierwiastków',
-      description: 'Potęgi całkowite i wymierne, pierwiastki, właściwości',
-      progress: calculateProgress('basics-8-potegi-pierwiastki', '8')
-    },
-    {
-      id: 'basics-9-logarytmy',
-      number: '9',
-      title: 'Podstawy rachunku logarytmicznego',
-      description: 'Definicja logarytmu, podstawowe przekształcenia',
-      progress: calculateProgress('basics-9-logarytmy', '9')
-    },
-    {
-      id: 'basics-10-trygonometria-podstawowa',
-      number: '10',
-      title: 'Trygonometria podstawowa',
-      description: 'Funkcje trygonometryczne w trójkącie, wartości dla kątów specjalnych',
-      progress: calculateProgress('basics-10-trygonometria-podstawowa', '10')
-    },
-    {
-      id: 'basics-11-kombinatoryka-prawdopodobienstwo',
-      number: '11',
-      title: 'Elementy kombinatoryki i prawdopodobieństwa',
-      description: 'Permutacje, wariacje, kombinacje, prawdopodobieństwo klasyczne',
-      progress: calculateProgress('basics-11-kombinatoryka-prawdopodobienstwo', '11')
-    },
-    {
-      id: 'basics-12-statystyka',
-      number: '12',
-      title: 'Podstawy statystyki opisowej',
-      description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
-      progress: calculateProgress('basics-12-statystyka', '12')
-    },
-    {
-      id: 'basics-13-uklady-rownan',
-      number: '13',
-      title: 'Test Test Test',
-      description: 'Rozwiązywanie układów równań, metody eliminacji, macierze',
-      progress: calculateProgress('basics-13-uklady-rownan', '13')
+      title: 'Funkcja kwadratowa - przypomnienie',
+      description: 'Postać funkcji, wykres paraboli, miejsca zerowe, wierzchołek, przekształcenia',
+      progress: calculateProgress('basics-funkcja-kwadratowa')
     }
   ];
 

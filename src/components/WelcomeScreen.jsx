@@ -2,23 +2,20 @@ import React from 'react';
 import algebraicFractionsIntroProblems from '../data/algebraic-fractions-intro-problems.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
-import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import rationalEquationsWordProblems from '../data/rational-equations-word-problems-problems.json';
 import statystykaProblems from '../data/statystyka-problems.json';
 import maturaMarzec2025PodstawaProblems from '../data/matura/podstawa/marzec2025podstawa/maturamarzec2025podstawa_multistep.json';
 import test1Problems from '../data/test1.json';
 import test2Problems from '../data/test2.json';
+import basicsFunkcjaKwadratowaProblems from '../data/basics-funkcja-kwadratowa.json';
 
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
     {
-      id: 'basics',
-      title: 'BASICS - Fundamenty matematyki (stara struktura)',
-      description: 'Arytmetyka, algebra, geometria, funkcje - start od zera',
-      problemCount: 0,
-      hasSubmenu: true,
-      topicsCount: 13,
-      disabled: false
+      id: 'basics-funkcja-kwadratowa',
+      title: 'Funkcja kwadratowa - przypomnienie',
+      description: 'Postać funkcji, wykres paraboli, miejsca zerowe, wierzchołek, przekształcenia',
+      problemCount: basicsFunkcjaKwadratowaProblems.length
     },
     {
       id: 'basics-reorganized',
@@ -50,13 +47,6 @@ const WelcomeScreen = ({ onSelectMode }) => {
       title: 'Funkcje Homograficzne',
       description: 'Funkcje postaci f(x) = (ax+b)/(cx+d), ich właściwości i wykresy',
       problemCount: homographicFunctionsProblems.length
-    },
-    {
-      id: 'elementary-fractions',
-      title: 'Ułamki - szkoła podstawowa',
-      description: 'Podstawy ułamków zwykłych - dodawanie, odejmowanie, mnożenie i dzielenie',
-      problemCount: elementaryFractionsProblems.length,
-      isNew: true
     },
     {
       id: 'systems-of-equations',

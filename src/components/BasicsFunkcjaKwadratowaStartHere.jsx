@@ -1,18 +1,37 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import MathRenderer from './MathRenderer';
 
-const ElementaryFractionsStartHere = ({
+const BasicsFunkcjaKwadratowaStartHere = ({
   problems,
   onSelectProblem,
   completedProblems = new Set(),
   onBack
 }) => {
   const [suggestedProblems, setSuggestedProblems] = useState([]);
-  const [showAllProblems, setShowAllProblems] = useState(false);
+
+  // Initialize showAllProblems with localStorage persistence
+  const [showAllProblems, setShowAllProblems] = useState(() => {
+    try {
+      const saved = localStorage.getItem('basics-funkcja-kwadratowa-show-all-problems');
+      return saved ? JSON.parse(saved) : false;
+    } catch (e) {
+      console.error('Error loading view preference:', e);
+      return false;
+    }
+  });
+
+  // Save view preference to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('basics-funkcja-kwadratowa-show-all-problems', JSON.stringify(showAllProblems));
+    } catch (e) {
+      console.error('Error saving view preference:', e);
+    }
+  }, [showAllProblems]);
 
   // Load suggested problems from localStorage
   useEffect(() => {
-    const savedSuggestions = localStorage.getItem('elementary-fractions-suggested-problems');
+    const savedSuggestions = localStorage.getItem('basics-funkcja-kwadratowa-suggested-problems');
     if (savedSuggestions) {
       try {
         const suggestions = JSON.parse(savedSuggestions);
@@ -46,7 +65,7 @@ const ElementaryFractionsStartHere = ({
     const uncompleted = problems
       .filter(p => !completedProblems.has(p.id))
       .slice(0, 2);
-    
+
     return uncompleted.length > 0 ? uncompleted : [problems[0]];
   }, [problems, completedProblems, suggestedProblems]);
 
@@ -99,38 +118,54 @@ const ElementaryFractionsStartHere = ({
               </button>
             </div>
           )}
-          
+
           {/* Header */}
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-              Ułamki - szkoła podstawowa
+              Funkcja kwadratowa - przypomnienie
             </h1>
             {/* Progress Bar */}
             {problems && problems.length > 0 && (
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-sm text-stone-600">
                   <span>Postęp</span>
-                  <div className="flex items-center gap-4">
-                    <span>{completedProblems.size} z {problems.length} zadań</span>
-                    <button
-                      onClick={() => setShowAllProblems(!showAllProblems)}
-                      className="w-2 h-2 rounded-full bg-stone-400 hover:bg-stone-600 transition-colors opacity-40 hover:opacity-100"
-                      title={showAllProblems ? 'Ukryj listę' : 'Pokaż wszystkie zadania'}
-                    >
-                    </button>
-                  </div>
+                  <span>{completedProblems.size} z {problems.length} zadań</span>
                 </div>
                 <div className="w-full bg-stone-200 rounded-full h-1.5">
                   <div
                     className="h-1.5 rounded-full transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(to right, #16a34a, #10b981)',
+                      background: 'linear-gradient(to right, #facc15, #f97316)',
                       width: `${problems.length > 0 ? (completedProblems.size / problems.length) * 100 : 0}%`
                     }}
                   />
                 </div>
               </div>
             )}
+
+            {/* Toggle Buttons */}
+            <div className="flex gap-2 mt-4">
+              <button
+                onClick={() => setShowAllProblems(false)}
+                className={`px-8 py-2.5 rounded-full text-sm font-medium transition-all ${
+                  !showAllProblems
+                    ? 'bg-white text-stone-900 border border-stone-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.05)]'
+                    : 'bg-transparent text-stone-500 border border-transparent hover:text-stone-700'
+                }`}
+              >
+                Sugerowane zadania
+              </button>
+              <button
+                onClick={() => setShowAllProblems(true)}
+                className={`px-8 py-2.5 rounded-full text-sm font-medium transition-all ${
+                  showAllProblems
+                    ? 'bg-white text-stone-900 border border-stone-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.05)]'
+                    : 'bg-transparent text-stone-500 border border-transparent hover:text-stone-700'
+                }`}
+              >
+                Wszystkie zadania ({problems.length})
+              </button>
+            </div>
           </header>
         </div>
       </div>
@@ -165,7 +200,7 @@ const ElementaryFractionsStartHere = ({
                             #{index + 1}
                           </span>
                           {problem.topic && (
-                            <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">
+                            <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
                               {problem.topic}
                             </span>
                           )}
@@ -204,7 +239,7 @@ const ElementaryFractionsStartHere = ({
             <>
               {problemsToShow.length === 1 ? (
                 // First visit - single problem card
-                <div className="space-y-6">
+                <div className="px-4 md:px-8">
                   {/* Informacja dla nowych użytkowników */}
                   <div className="text-center mb-6">
                     <h3 className="text-lg font-semibold text-stone-800 mb-2">Zacznij tutaj</h3>
@@ -212,14 +247,12 @@ const ElementaryFractionsStartHere = ({
                       Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie
                     </p>
                   </div>
-
-                  <div className="px-4 md:px-8">
                   <button
                     onClick={() => handleStartProblem(problemsToShow[0])}
                     className={`w-full text-left p-6 md:p-10 rounded-xl transition-all group relative ${
                       completedProblems.has(problemsToShow[0].id)
-                        ? 'bg-green-50 border-2 border-green-200 hover:border-green-300 shadow-lg shadow-green-200/40'
-                        : 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 animate-pulse-border-green'
+                        ? 'bg-orange-50 border-2 border-orange-200 hover:border-orange-300 shadow-lg shadow-orange-200/40'
+                        : 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 animate-pulse-border'
                     }`}
                   >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -254,7 +287,6 @@ const ElementaryFractionsStartHere = ({
                     </div>
                   </button>
                 </div>
-                </div>
               ) : (
                 // Return visit - two suggested problems
                 <div className="space-y-4">
@@ -269,16 +301,16 @@ const ElementaryFractionsStartHere = ({
                         onClick={() => handleStartProblem(problem)}
                         className={`w-full text-left p-6 md:p-8 rounded-xl transition-all group relative ${
                           completedProblems.has(problem.id)
-                            ? 'bg-green-50 border-2 border-green-200 hover:border-green-300 shadow-lg shadow-green-200/40'
+                            ? 'bg-orange-50 border-2 border-orange-200 hover:border-orange-300 shadow-lg shadow-orange-200/40'
                             : index === 0
-                              ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 animate-pulse-border-green'
+                              ? 'bg-white border-2 border-stone-200 hover:border-stone-300 hover:bg-stone-50 animate-pulse-border'
                               : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50'
                         }`}
                       >
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                           <div className="flex-1 min-w-0">
                             <div className="mb-2">
-                              <span className="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">
+                              <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded">
                                 {problem.topic || 'Zadanie'}
                               </span>
                             </div>
@@ -300,9 +332,6 @@ const ElementaryFractionsStartHere = ({
                                 {problem.steps?.length || 0} kroków
                               </span>
                             </div>
-                            <div className="hidden md:block text-xs text-stone-500 font-mono">
-                              {problem.id}
-                            </div>
                             <div className="w-8 h-8 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
                               <svg className="w-4 h-4 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
@@ -317,10 +346,11 @@ const ElementaryFractionsStartHere = ({
               )}
             </>
           )}
+
         </div>
       </div>
     </div>
   );
 };
 
-export default ElementaryFractionsStartHere;
+export default BasicsFunkcjaKwadratowaStartHere;

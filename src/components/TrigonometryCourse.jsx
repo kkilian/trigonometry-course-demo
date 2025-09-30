@@ -10,8 +10,8 @@ import KombinatorykStartHere from './KombinatorykStartHere';
 import KombinatorykRozszerzenieStartHere from './KombinatorykRozszerzenieStartHere';
 import SystemsOfEquationsStartHere from './SystemsOfEquationsStartHere';
 import HomographicFunctionsStartHere from './HomographicFunctionsStartHere';
-import ElementaryFractionsStartHere from './ElementaryFractionsStartHere';
 import RationalEquationsWordProblemsStartHere from './RationalEquationsWordProblemsStartHere';
+import BasicsFunkcjaKwadratowaStartHere from './BasicsFunkcjaKwadratowaStartHere';
 import MaturaIntegration from '../features/matura/MaturaIntegration';
 import ComparisonScreen from './comparison/ComparisonScreen';
 import ComparisonView from './comparison/ComparisonView';
@@ -21,22 +21,9 @@ import polynomialDefinitionProblems from '../data/polynomial-definition-problems
 import polynomialOperationsProblems from '../data/polynomial-operations-problems.json';
 import polynomialFormulasProblems from '../data/polynomial-formulas-problems.json';
 import polynomialSubstitutionProblems from '../data/polynomial-substitution-problems.json';
-import basics1Problems from '../data/basics-1-arytmetyka.json';
-import basics2Problems from '../data/basics-2-logika-zbiory.json';
-import basics3Problems from '../data/basics-3-wyrazenia-algebraiczne.json';
-import basics4Problems from '../data/basics-4-rownania-nierownosci.json';
-import basics5Problems from '../data/basics-5-funkcje-fundament.json';
-import basics6Problems from '../data/basics-6-geometria-elementarna.json';
-import basics7Problems from '../data/basics-7-uklad-wspolrzednych.json';
-import basics8Problems from '../data/basics-8-potegi-pierwiastki.json';
-import basics9Problems from '../data/basics-9-logarytmy.json';
-import basics10Problems from '../data/basics-10-trygonometria-podstawowa.json';
-import basics11Problems from '../data/basics-11-kombinatoryka-prawdopodobienstwo.json';
-import basics12Problems from '../data/basics-12-statystyka.json';
-import basics13Problems from '../data/basics-13-uklady-rownan.json';
+import basicsFunkcjaKwadratowaProblems from '../data/basics-funkcja-kwadratowa.json';
 import systemsOfEquationsProblems from '../data/basics-13-uklady-rownan.json';
 import homographicFunctionsProblems from '../data/homographic-functions-problems.json';
-import elementaryFractionsProblems from '../data/elementary-fractions-problems.json';
 import basicsProcentyProblems from '../data/basics-procenty.json';
 import basicsPrzyblizeniaProblems from '../data/basics-przyblizenia.json';
 import basicsWartoscBezwzglednaProblems from '../data/basics-wartosc-bezwzgledna.json';
@@ -66,22 +53,9 @@ const TrigonometryCourse = () => {
   const [completedPolynomialSubstitutionProblems, setCompletedPolynomialSubstitutionProblems] = useState(new Set());
   
   // Basics completed states
-  const [completedBasics1Problems, setCompletedBasics1Problems] = useState(new Set());
-  const [completedBasics2Problems, setCompletedBasics2Problems] = useState(new Set());
-  const [completedBasics3Problems, setCompletedBasics3Problems] = useState(new Set());
-  const [completedBasics4Problems, setCompletedBasics4Problems] = useState(new Set());
-  const [completedBasics5Problems, setCompletedBasics5Problems] = useState(new Set());
-  const [completedBasics6Problems, setCompletedBasics6Problems] = useState(new Set());
-  const [completedBasics7Problems, setCompletedBasics7Problems] = useState(new Set());
-  const [completedBasics8Problems, setCompletedBasics8Problems] = useState(new Set());
-  const [completedBasics9Problems, setCompletedBasics9Problems] = useState(new Set());
-  const [completedBasics10Problems, setCompletedBasics10Problems] = useState(new Set());
-  const [completedBasics11Problems, setCompletedBasics11Problems] = useState(new Set());
-  const [completedBasics12Problems, setCompletedBasics12Problems] = useState(new Set());
-  const [completedBasics13Problems, setCompletedBasics13Problems] = useState(new Set());
+  const [completedBasicsFunkcjaKwadratowaProblems, setCompletedBasicsFunkcjaKwadratowaProblems] = useState(new Set());
   const [completedSystemsOfEquationsProblems, setCompletedSystemsOfEquationsProblems] = useState(new Set());
   const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
-  const [completedElementaryFractionsProblems, setCompletedElementaryFractionsProblems] = useState(new Set());
   const [completedRationalEquationsWordProblems, setCompletedRationalEquationsWordProblems] = useState(new Set());
   const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
 
@@ -113,25 +87,12 @@ const TrigonometryCourse = () => {
       return polynomialSubstitutionProblems;
     }
     // Basics topics
-    if (mode === 'basics-1-arytmetyka') return basics1Problems;
-    if (mode === 'basics-2-logika-zbiory') return basics2Problems;
-    if (mode === 'basics-3-wyrazenia-algebraiczne') return basics3Problems;
-    if (mode === 'basics-4-rownania-nierownosci') return basics4Problems;
-    if (mode === 'basics-5-funkcje-fundament') return basics5Problems;
-    if (mode === 'basics-6-geometria-elementarna') return basics6Problems;
-    if (mode === 'basics-7-uklad-wspolrzednych') return basics7Problems;
-    if (mode === 'basics-8-potegi-pierwiastki') return basics8Problems;
-    if (mode === 'basics-9-logarytmy') return basics9Problems;
-    if (mode === 'basics-10-trygonometria-podstawowa') return basics10Problems;
-    if (mode === 'basics-11-kombinatoryka-prawdopodobienstwo') return basics11Problems;
-    if (mode === 'basics-12-statystyka') return basics12Problems;
-    if (mode === 'basics-13-uklady-rownan') return basics13Problems;
+    if (mode === 'basics-funkcja-kwadratowa') return basicsFunkcjaKwadratowaProblems;
     if (mode === 'basics-procenty') return basicsProcentyProblems;
     if (mode === 'basics-przyblizenia') return basicsPrzyblizeniaProblems;
     if (mode === 'basics-wartosc-bezwzgledna') return basicsWartoscBezwzglednaProblems;
     if (mode === 'systems-of-equations') return systemsOfEquationsProblems;
     if (mode === 'homographic-functions') return homographicFunctionsProblems;
-    if (mode === 'elementary-fractions') return elementaryFractionsProblems;
     if (mode === 'kombinatoryka') return kombinatorykaProblems;
     if (mode === 'kombinatoryka-rozszerzenie') return kombinatorykaRozszerzenieProblems;
     if (mode === 'rational-equations-word-problems') return rationalEquationsWordProblems;
@@ -146,22 +107,9 @@ const TrigonometryCourse = () => {
     if (mode === 'polynomial-formulas') return completedPolynomialFormulasProblems;
     if (mode === 'polynomial-substitution') return completedPolynomialSubstitutionProblems;
     // Basics topics
-    if (mode === 'basics-1-arytmetyka') return completedBasics1Problems;
-    if (mode === 'basics-2-logika-zbiory') return completedBasics2Problems;
-    if (mode === 'basics-3-wyrazenia-algebraiczne') return completedBasics3Problems;
-    if (mode === 'basics-4-rownania-nierownosci') return completedBasics4Problems;
-    if (mode === 'basics-5-funkcje-fundament') return completedBasics5Problems;
-    if (mode === 'basics-6-geometria-elementarna') return completedBasics6Problems;
-    if (mode === 'basics-7-uklad-wspolrzednych') return completedBasics7Problems;
-    if (mode === 'basics-8-potegi-pierwiastki') return completedBasics8Problems;
-    if (mode === 'basics-9-logarytmy') return completedBasics9Problems;
-    if (mode === 'basics-10-trygonometria-podstawowa') return completedBasics10Problems;
-    if (mode === 'basics-11-kombinatoryka-prawdopodobienstwo') return completedBasics11Problems;
-    if (mode === 'basics-12-statystyka') return completedBasics12Problems;
-    if (mode === 'basics-13-uklady-rownan') return completedBasics13Problems;
+    if (mode === 'basics-funkcja-kwadratowa') return completedBasicsFunkcjaKwadratowaProblems;
     if (mode === 'systems-of-equations') return completedSystemsOfEquationsProblems;
     if (mode === 'homographic-functions') return completedHomographicFunctionsProblems;
-    if (mode === 'elementary-fractions') return completedElementaryFractionsProblems;
     if (mode === 'rational-equations-word-problems') return completedRationalEquationsWordProblems;
     if (mode === 'kombinatoryka') return completedPowersProblems; // kombinatoryka uses the same as powers
     if (mode === 'kombinatoryka-rozszerzenie') return completedKombinatorykRozszerzenieProblems;
@@ -179,38 +127,12 @@ const TrigonometryCourse = () => {
       setCompletedPolynomialFormulasProblems(newSet);
     } else if (mode === 'polynomial-substitution') {
       setCompletedPolynomialSubstitutionProblems(newSet);
-    } else if (mode === 'basics-1-arytmetyka') {
-      setCompletedBasics1Problems(newSet);
-    } else if (mode === 'basics-2-logika-zbiory') {
-      setCompletedBasics2Problems(newSet);
-    } else if (mode === 'basics-3-wyrazenia-algebraiczne') {
-      setCompletedBasics3Problems(newSet);
-    } else if (mode === 'basics-4-rownania-nierownosci') {
-      setCompletedBasics4Problems(newSet);
-    } else if (mode === 'basics-5-funkcje-fundament') {
-      setCompletedBasics5Problems(newSet);
-    } else if (mode === 'basics-6-geometria-elementarna') {
-      setCompletedBasics6Problems(newSet);
-    } else if (mode === 'basics-7-uklad-wspolrzednych') {
-      setCompletedBasics7Problems(newSet);
-    } else if (mode === 'basics-8-potegi-pierwiastki') {
-      setCompletedBasics8Problems(newSet);
-    } else if (mode === 'basics-9-logarytmy') {
-      setCompletedBasics9Problems(newSet);
-    } else if (mode === 'basics-10-trygonometria-podstawowa') {
-      setCompletedBasics10Problems(newSet);
-    } else if (mode === 'basics-11-kombinatoryka-prawdopodobienstwo') {
-      setCompletedBasics11Problems(newSet);
-    } else if (mode === 'basics-12-statystyka') {
-      setCompletedBasics12Problems(newSet);
-    } else if (mode === 'basics-13-uklady-rownan') {
-      setCompletedBasics13Problems(newSet);
+    } else if (mode === 'basics-funkcja-kwadratowa') {
+      setCompletedBasicsFunkcjaKwadratowaProblems(newSet);
     } else if (mode === 'systems-of-equations') {
       setCompletedSystemsOfEquationsProblems(newSet);
     } else if (mode === 'homographic-functions') {
       setCompletedHomographicFunctionsProblems(newSet);
-    } else if (mode === 'elementary-fractions') {
-      setCompletedElementaryFractionsProblems(newSet);
     } else if (mode === 'rational-equations-word-problems') {
       setCompletedRationalEquationsWordProblems(newSet);
     } else if (mode === 'kombinatoryka') {
@@ -263,81 +185,9 @@ const TrigonometryCourse = () => {
       };
     }
     // Basics topics
-    if (mode === 'basics-1-arytmetyka') {
+    if (mode === 'basics-funkcja-kwadratowa') {
       return {
-        title: 'Arytmetyka i liczby',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-2-logika-zbiory') {
-      return {
-        title: 'Podstawy logiki i zbiorów',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-3-wyrazenia-algebraiczne') {
-      return {
-        title: 'Wyrażenia algebraiczne',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-4-rownania-nierownosci') {
-      return {
-        title: 'Równania i nierówności elementarne',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-5-funkcje-fundament') {
-      return {
-        title: 'Funkcje - fundament',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-6-geometria-elementarna') {
-      return {
-        title: 'Geometria elementarna',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-7-uklad-wspolrzednych') {
-      return {
-        title: 'Układ współrzędnych',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-8-potegi-pierwiastki') {
-      return {
-        title: 'Podstawy rachunku potęgowego i pierwiastków',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-9-logarytmy') {
-      return {
-        title: 'Podstawy rachunku logarytmicznego',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-10-trygonometria-podstawowa') {
-      return {
-        title: 'Trygonometria podstawowa',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-11-kombinatoryka-prawdopodobienstwo') {
-      return {
-        title: 'Elementy kombinatoryki i prawdopodobieństwa',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-12-statystyka') {
-      return {
-        title: 'Podstawy statystyki opisowej',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'basics-13-uklady-rownan') {
-      return {
-        title: 'Układy równań',
+        title: 'Funkcja kwadratowa - przypomnienie',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -350,12 +200,6 @@ const TrigonometryCourse = () => {
     if (mode === 'homographic-functions') {
       return {
         title: 'Funkcje Homograficzne',
-        subtitle: `${problems.length} zadań krok po kroku`
-      };
-    }
-    if (mode === 'elementary-fractions') {
-      return {
-        title: 'Ułamki - szkoła podstawowa',
         subtitle: `${problems.length} zadań krok po kroku`
       };
     }
@@ -443,6 +287,16 @@ const TrigonometryCourse = () => {
       }
     }
 
+    // Load basics-funkcja-kwadratowa progress
+    const savedBasicsFunkcjaKwadratowa = localStorage.getItem('completedBasicsFunkcjaKwadratowaProblems');
+    if (savedBasicsFunkcjaKwadratowa) {
+      try {
+        setCompletedBasicsFunkcjaKwadratowaProblems(new Set(JSON.parse(savedBasicsFunkcjaKwadratowa)));
+      } catch (e) {
+        console.error('Error loading basics-funkcja-kwadratowa progress:', e);
+      }
+    }
+
     // Load systems-of-equations progress
     const savedSystemsOfEquations = localStorage.getItem('completedSystemsOfEquationsProblems');
     if (savedSystemsOfEquations) {
@@ -460,16 +314,6 @@ const TrigonometryCourse = () => {
         setCompletedHomographicFunctionsProblems(new Set(JSON.parse(savedHomographicFunctions)));
       } catch (e) {
         console.error('Error loading homographic-functions progress:', e);
-      }
-    }
-
-    // Load elementary-fractions progress
-    const savedElementaryFractions = localStorage.getItem('completedElementaryFractionsProblems');
-    if (savedElementaryFractions) {
-      try {
-        setCompletedElementaryFractionsProblems(new Set(JSON.parse(savedElementaryFractions)));
-      } catch (e) {
-        console.error('Error loading elementary-fractions progress:', e);
       }
     }
 
@@ -507,6 +351,11 @@ const TrigonometryCourse = () => {
     localStorage.setItem('completedAlgebraicFractionsIntroProblems', JSON.stringify([...completedAlgebraicFractionsIntroProblems]));
   }, [completedAlgebraicFractionsIntroProblems]);
 
+  // Save basics-funkcja-kwadratowa progress
+  useEffect(() => {
+    localStorage.setItem('completedBasicsFunkcjaKwadratowaProblems', JSON.stringify([...completedBasicsFunkcjaKwadratowaProblems]));
+  }, [completedBasicsFunkcjaKwadratowaProblems]);
+
   // Save systems-of-equations progress
   useEffect(() => {
     localStorage.setItem('completedSystemsOfEquationsProblems', JSON.stringify([...completedSystemsOfEquationsProblems]));
@@ -516,11 +365,6 @@ const TrigonometryCourse = () => {
   useEffect(() => {
     localStorage.setItem('completedHomographicFunctionsProblems', JSON.stringify([...completedHomographicFunctionsProblems]));
   }, [completedHomographicFunctionsProblems]);
-
-  // Save elementary-fractions progress
-  useEffect(() => {
-    localStorage.setItem('completedElementaryFractionsProblems', JSON.stringify([...completedElementaryFractionsProblems]));
-  }, [completedElementaryFractionsProblems]);
 
   // Save rational-equations-word-problems progress
   useEffect(() => {
@@ -622,10 +466,10 @@ const TrigonometryCourse = () => {
       storageKey = 'kombinatoryka-suggested-problems';
     } else if (mode === 'homographic-functions') {
       storageKey = 'homographic-functions-suggested-problems';
-    } else if (mode === 'elementary-fractions') {
-      storageKey = 'elementary-fractions-suggested-problems';
     } else if (mode === 'systems-of-equations') {
       storageKey = 'systems-of-equations-suggested-problems';
+    } else if (mode === 'basics-funkcja-kwadratowa') {
+      storageKey = 'basics-funkcja-kwadratowa-suggested-problems';
     } else if (mode === 'rational-equations-word-problems') {
       storageKey = 'rational-equations-word-problems-suggested-problems';
     } else if (mode === 'kombinatoryka-rozszerzenie') {
@@ -788,17 +632,17 @@ const TrigonometryCourse = () => {
           completedProblems={getCurrentCompleted()}
           onBack={handleBackToWelcome}
         />
-      ) : mode === 'elementary-fractions' ? (
-        // Special handling for elementary fractions - show start here screen instead of problem list
-        <ElementaryFractionsStartHere
+      ) : mode === 'kombinatoryka' ? (
+        // Special handling for kombinatoryka - show start here screen instead of problem list
+        <KombinatorykStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}
           onBack={handleBackToWelcome}
         />
-      ) : mode === 'kombinatoryka' ? (
-        // Special handling for kombinatoryka - show start here screen instead of problem list
-        <KombinatorykStartHere
+      ) : mode === 'basics-funkcja-kwadratowa' ? (
+        // Special handling for basics funkcja kwadratowa - show start here screen instead of problem list
+        <BasicsFunkcjaKwadratowaStartHere
           problems={problems}
           onSelectProblem={handleSelectProblem}
           completedProblems={getCurrentCompleted()}

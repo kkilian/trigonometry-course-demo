@@ -194,6 +194,13 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for absolute-value-equations:', suggestedIds);
       }
 
+      // Save suggested problems to localStorage for basics-funkcja-kwadratowa module
+      if (currentProblem.id && currentProblem.id.includes('quadratic_function')) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        localStorage.setItem('basics-funkcja-kwadratowa-suggested-problems', JSON.stringify(suggestedIds));
+        console.log('Saved suggested problems for basics-funkcja-kwadratowa:', suggestedIds);
+      }
+
       // Save suggested problems to localStorage for specific matura sessions
       if (currentProblem.id && currentProblem.id.includes('#2025-marzec')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);

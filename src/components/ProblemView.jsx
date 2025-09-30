@@ -259,7 +259,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
                       ? 'text-base md:text-lg mb-1'
                       : 'text-xl md:text-3xl mb-2'
                   }`}>
-                    <MathRenderer content={problem.statement} />
+                    <MathRenderer content={problem.statement} lineBreakBetweenMath={true} />
                   </h1>
                   {problem.quiz && (
                     <div className="mt-3">

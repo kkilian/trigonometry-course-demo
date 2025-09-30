@@ -102,25 +102,35 @@ const parseLatexText = (text) => {
   return [{ type: 'text', content: text }];
 };
 
-const MathRenderer = ({ content, className = '' }) => {
+const MathRenderer = ({ content, className = '', lineBreakBetweenMath = false }) => {
   // Debug logging for non-string content
   if (content && typeof content !== 'string') {
     console.warn('MathRenderer received non-string content:', typeof content, content);
   }
-  
+
   // Early return for empty content
   if (!content) {
     return <span className={className}></span>;
   }
-  
+
   // Parse content into segments
   const stringContent = typeof content === 'string' ? content : String(content);
   const segments = parseLatexTextMemo(stringContent);
-  
+
   // Render segments
   return (
     <span className={className}>
       {segments.map((segment, index) => {
+        // Check if we should add line breaks before and after math segments
+        // Only add line breaks for expressions longer than 10 characters (filters out single variables like $a$, $b$, $x$)
+        const shouldAddLineBreakBefore = lineBreakBetweenMath &&
+                                         segment.type === 'math' &&
+                                         segment.content.length > 10 &&
+                                         index > 0;
+        const shouldAddLineBreakAfter = lineBreakBetweenMath &&
+                                        segment.type === 'math' &&
+                                        segment.content.length > 10;
+
         if (segment.type === 'text') {
           // Regular text - apply very light gray color
           return <span key={index} className="text-stone-400">{segment.content}</span>;
@@ -148,21 +158,31 @@ const MathRenderer = ({ content, className = '' }) => {
           // Inline math content - use react-katex with black color and semibold
           try {
             return (
-              <span key={index} className="text-black font-bold" style={{ color: 'black' }}>
-                <InlineMath
-                  math={segment.content}
-                  renderError={(error) => {
-                    // Fallback to plain text if LaTeX fails
-                    console.warn('KaTeX render error:', error.message, 'for content:', segment.content);
-                    return <span>{segment.content}</span>;
-                  }}
-                />
-              </span>
+              <React.Fragment key={index}>
+                {shouldAddLineBreakBefore && <br />}
+                <span className="text-black font-bold" style={{ color: 'black' }}>
+                  <InlineMath
+                    math={segment.content}
+                    renderError={(error) => {
+                      // Fallback to plain text if LaTeX fails
+                      console.warn('KaTeX render error:', error.message, 'for content:', segment.content);
+                      return <span>{segment.content}</span>;
+                    }}
+                  />
+                </span>
+                {shouldAddLineBreakAfter && <br />}
+              </React.Fragment>
             );
           } catch (error) {
             // Fallback to plain text if component fails
             console.warn('React-KaTeX component error:', error.message, 'for content:', segment.content);
-            return <span key={index}>{segment.content}</span>;
+            return (
+              <React.Fragment key={index}>
+                {shouldAddLineBreakBefore && <br />}
+                <span>{segment.content}</span>
+                {shouldAddLineBreakAfter && <br />}
+              </React.Fragment>
+            );
           }
         }
       })}
