@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import MathRenderer from './MathRenderer';
 import NextProblemSuggestion from './NextProblemSuggestion';
 import MultiStepChoice from './MultiStepChoice';
+import QuizAnswer from './QuizAnswer';
 
 const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, completedProblems = new Set(), problems = [] }) => {
   const [revealedSteps, setRevealedSteps] = useState(new Set());
@@ -237,11 +238,23 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
               isScrolled ? 'mb-1' : 'mb-2'
             }`}>
               <div>
-                <span className={`font-medium text-stone-600 uppercase tracking-wider transition-all duration-300 ${
-                  isScrolled ? 'text-[10px]' : 'text-xs'
-                }`}>
-                  {problem.topic?.replace(/_/g, ' ')}
-                </span>
+                <div className="flex items-center gap-2">
+                  {/* Problem type icon */}
+                  {problem.type === 'quiz' ? (
+                    <svg className={`text-orange-500 ${isScrolled ? 'w-3 h-3' : 'w-4 h-4'}`} fill="currentColor" viewBox="0 0 20 20" title="Zadanie zamknięte (quiz)">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  ) : (
+                    <svg className={`text-stone-500 ${isScrolled ? 'w-3 h-3' : 'w-4 h-4'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Zadanie otwarte">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                  )}
+                  <span className={`font-medium text-stone-600 uppercase tracking-wider transition-all duration-300 ${
+                    isScrolled ? 'text-[10px]' : 'text-xs'
+                  }`}>
+                    {problem.type === 'quiz' ? 'ZADANIE ZAMKNIĘTE' : problem.topic?.replace(/_/g, ' ')}
+                  </span>
+                </div>
                 {!isScrolled && (
                   <span className="text-xs text-stone-500 font-mono ml-2 md:ml-4 hidden md:inline">
                     {problem.id}
@@ -351,8 +364,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
             )}
           </header>
 
-          {/* Compact progress bar when scrolled */}
-          {isScrolled && (
+          {/* Compact progress bar when scrolled (only for open problems) */}
+          {isScrolled && problem.type !== 'quiz' && (
             <div className="mt-2">
               <div className="flex items-center gap-2">
                 <div className="flex-1 bg-stone-200 rounded-full h-1.5">
@@ -373,7 +386,7 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
 
           {/* Progress and Next Problem */}
           <div className="mt-6 flex items-start justify-between gap-4">
-            {!isScrolled && (
+            {!isScrolled && problem.type !== 'quiz' && (
               <div className="flex-1">
                 <div className="flex items-center justify-between text-sm text-stone-600 mb-2">
                   <span>Postęp</span>
@@ -408,6 +421,22 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
       <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
         {/* Problem Content */}
         <div className="space-y-8 md:space-y-12 pt-6 md:pt-8">
+          {/* Quiz Type Problem */}
+          {problem.type === 'quiz' ? (
+            <div className="pt-6">
+              <QuizAnswer
+                quizText={problem.quiz}
+                correctAnswer={problem.answer}
+                explanation={problem.explanation}
+                onComplete={() => {
+                  if (onComplete) {
+                    onComplete(problem.id);
+                  }
+                }}
+              />
+            </div>
+          ) : (
+            <>
           {/* Completed View - Two Column Layout */}
           {showSolution ? (
             <div className="space-y-4">
@@ -647,9 +676,11 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
               ))}
             </div>
           )}
+            </>
+          )}
 
-          {/* Solutions - Only show in completed view */}
-          {showSolution && problem.solutions && (
+          {/* Solutions - Only show in completed view for open problems */}
+          {showSolution && problem.solutions && problem.type !== 'quiz' && (
             <div className="relative mt-6">
               <div className="absolute inset-0 bg-stone-200/20 blur-xl rounded-xl"></div>
               <div className="relative p-4 md:p-5 bg-white border border-stone-200 rounded-lg">
@@ -665,8 +696,8 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
             </div>
           )}
 
-          {/* Next Problem Suggestions - Show when problem is completed */}
-          {showSolution && (
+          {/* Next Problem Suggestions - Show when problem is completed (open problems only) */}
+          {showSolution && problem.type !== 'quiz' && (
             <NextProblemSuggestion
               currentProblem={problem}
               completedProblems={completedProblems}
