@@ -1,5 +1,593 @@
 [
   {
+    "id": "rational_function_domain_parameter",
+    "topic": "Dziedzina funkcji wymiernej z parametrem",
+    "difficulty": 4,
+    "statement": "Wyznacz wszystkie wartości parametru $m$, $m \\in \\mathbb{R}$, dla których dziedzina danej funkcji wymiernej jest zbiór liczb rzeczywistych: $f(x) = \\frac{x^2 + 5}{2x^2 - (m+3)x + 8}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dziedzina funkcji wymiernej jest zbiorem wszystkich liczb rzeczywistych?",
+        "expression": "Dziedzina to $\\mathbb{R}$ gdy mianownik $2x^2 - (m+3)x + 8 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Funkcja wymierna jest określona wszędzie tam, gdzie mianownik nie zeruje się",
+        "why": "Funkcja wymierna ma dziedzinę $\\mathbb{R}$ wtedy i tylko wtedy, gdy równanie mianownika nie ma rozwiązań rzeczywistych."
+      },
+      {
+        "step": 2,
+        "hint": "Co musi być prawdą o równaniu kwadratowym, aby nie miało ono rozwiązań rzeczywistych?",
+        "expression": "Warunek: $\\Delta < 0$ dla równania $2x^2 - (m+3)x + 8 = 0$",
+        "explanation": "Szukamy wartości parametru $m$, dla których wyróżnik jest ujemny",
+        "interactive_choice": {
+          "prompt": "Kiedy równanie kwadratowe $2x^2 - (m+3)x + 8 = 0$ nie ma rozwiązań rzeczywistych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdy wyróżnik (delta) jest ujemny: $\\Delta < 0$",
+              "feedback": "Doskonale! Brak rozwiązań rzeczywistych oznacza $\\Delta < 0$",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Gdy wyróżnik jest równy zero: $\\Delta = 0$",
+              "feedback": "Nie - wtedy równanie ma jedno rozwiązanie (podwójne), więc mianownik się zeruje",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Gdy współczynnik przy $x^2$ jest dodatni",
+              "feedback": "To wpływa na kierunek ramion paraboli, ale nie na istnienie rozwiązań",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie kwadratowe nie ma rozwiązań rzeczywistych dokładnie wtedy, gdy $\\Delta < 0$. Wtedy parabola nie przecina osi OX."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Jakie są współczynniki $a$, $b$, $c$ w równaniu mianownika?",
+        "expression": "$a = 2$, $b = -(m+3)$, $c = 8$",
+        "explanation": "Identyfikujemy współczynniki równania kwadratowego"
+      },
+      {
+        "step": 4,
+        "hint": "Jak obliczyć wyróżnik dla tych współczynników?",
+        "expression": "$\\Delta = b^2 - 4ac = [-(m+3)]^2 - 4 \\cdot 2 \\cdot 8$",
+        "explanation": "Podstawiamy do wzoru na deltę"
+      },
+      {
+        "step": 5,
+        "hint": "Jak uprościć wyrażenie $[-(m+3)]^2$?",
+        "expression": "$\\Delta = (m+3)^2 - 64$",
+        "explanation": "Kwadrat liczby ujemnej jest dodatni, więc $[-(m+3)]^2 = (m+3)^2$"
+      },
+      {
+        "step": 6,
+        "hint": "Jak rozwinąć $(m+3)^2$?",
+        "expression": "$\\Delta = m^2 + 6m + 9 - 64 = m^2 + 6m - 55$",
+        "explanation": "Używamy wzoru skróconego mnożenia i upraszczamy"
+      },
+      {
+        "step": 7,
+        "hint": "Jaką nierówność musimy rozwiązać?",
+        "expression": "Rozwiązujemy $m^2 + 6m - 55 < 0$",
+        "explanation": "Szukamy wartości $m$, dla których ta nierówność jest spełniona",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać nierówność $m^2 + 6m - 55 < 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć miejsca zerowe i sprawdzić znak funkcji kwadratowej",
+              "feedback": "Świetnie! To standardowa metoda dla nierówności kwadratowych",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dopełnić do kwadratu i rozwiązać bezpośrednio",
+              "feedback": "Możliwe, ale bardziej skomplikowane - lepiej znaleźć miejsca zerowe",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Podstawić różne wartości $m$ i sprawdzić",
+              "feedback": "To nie da pełnego rozwiązania - potrzebujemy analitycznego podejścia",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla nierówności kwadratowej najlepiej znaleźć miejsca zerowe, a następnie przeanalizować znak paraboli."
+        }
+      },
+      {
+        "step": 8,
+        "hint": "Jakie są miejsca zerowe funkcji $m^2 + 6m - 55$?",
+        "expression": "Rozwiązujemy $m^2 + 6m - 55 = 0$",
+        "explanation": "Znajdujemy granice przedziału, gdzie funkcja jest ujemna"
+      },
+      {
+        "step": 9,
+        "hint": "Jak najłatwiej rozwiązać to równanie?",
+        "expression": "$\\Delta_m = 36 - 4 \\cdot 1 \\cdot (-55) = 36 + 220 = 256$",
+        "explanation": "Obliczamy deltę dla równania względem $m$",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do $m^2 + 6m - 55 = 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wzór z deltą",
+              "feedback": "Dobry wybór - zawsze działa i jest tu prosty w obliczeniach",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Rozkład na czynniki $(m-a)(m-b)$",
+              "feedback": "Możliwe, ale trudno zgadnąć liczby: suma 6, iloczyn -55",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Podstawienie $m = t - 3$ i dopełnienie do kwadratu",
+              "feedback": "Zbyt skomplikowane dla tego równania",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla tego równania wzór z deltą jest najszybszy. Rozkład też działa: $(m+11)(m-5)=0$."
+        }
+      },
+      {
+        "step": 10,
+        "hint": "Ile wynosi $\\sqrt{256}$?",
+        "expression": "$\\sqrt{\\Delta_m} = \\sqrt{256} = 16$",
+        "explanation": "Pierwiastek z delty"
+      },
+      {
+        "step": 11,
+        "hint": "Jakie są rozwiązania równania $m^2 + 6m - 55 = 0$?",
+        "expression": "$m_1 = \\frac{-6 - 16}{2} = \\frac{-22}{2} = -11$ oraz $m_2 = \\frac{-6 + 16}{2} = \\frac{10}{2} = 5$",
+        "explanation": "Stosujemy wzory na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 12,
+        "hint": "Gdzie funkcja kwadratowa $m^2 + 6m - 55$ jest ujemna?",
+        "expression": "Parabola o ramionach skierowanych w górę ($a=1>0$) jest ujemna między pierwiastkami",
+        "explanation": "Dla $a > 0$ funkcja kwadratowa jest ujemna między pierwiastkami",
+        "why": "To kluczowa własność funkcji kwadratowej: gdy $a > 0$, parabola jest ujemna między pierwiastkami, a dodatnia poza nimi.",
+        "image": "/images/homographic/rational_function_domain_parameter_step12.png"
+      },
+      {
+        "step": 13,
+        "hint": "Jaki jest przedział wartości parametru $m$?",
+        "expression": "$m \\in (-11, 5)$",
+        "explanation": "Funkcja $m^2 + 6m - 55$ jest ujemna dla $m$ z przedziału otwartego $(-11, 5)$"
+      }
+    ],
+    "solutions": [
+      "$m \\in (-11, 5)$"
+    ],
+    "parameters": {
+      "condition": "Dziedzina $f(x)$ to $\\mathbb{R}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 13,
+        "stepsWithWhy": 2,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 4
+      }
+    },
+    "timestamp": "2025-09-30T03:51:55.942Z"
+  },
+  {
+    "id": "rational_function_domain_parameter",
+    "topic": "Dziedzina funkcji wymiernej z parametrem",
+    "difficulty": 4,
+    "statement": "Wyznacz wszystkie wartości parametru $m$, $m \\in \\mathbb{R}$, dla których dziedzina danej funkcji wymiernej jest zbiór liczb rzeczywistych: $g(x) = \\frac{mx - 3}{(m-1)x^2 + (1-m)x + 6}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dziedzina funkcji wymiernej jest zbiorem wszystkich liczb rzeczywistych?",
+        "expression": "Dziedzina to $\\mathbb{R}$ gdy mianownik $(m-1)x^2 + (1-m)x + 6 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Funkcja wymierna jest określona wszędzie tam, gdzie mianownik nie zeruje się",
+        "why": "Dla funkcji wymiernej $\\frac{L(x)}{M(x)}$ dziedzina to $\\mathbb{R} \\setminus \\{x: M(x) = 0\\}$. Chcemy by zbiór miejsc zerowych mianownika był pusty."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki jest stopień wielomianu w mianowniku?",
+        "expression": "Rozpatrujemy przypadki: $m = 1$ oraz $m \\neq 1$",
+        "explanation": "Stopień wielomianu zależy od wartości parametru $m$",
+        "interactive_choice": {
+          "prompt": "Od czego zależy stopień wielomianu $(m-1)x^2 + (1-m)x + 6$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zawsze jest to wielomian stopnia 2",
+              "feedback": "Nie do końca - co jeśli współczynnik przy $x^2$ wynosi zero?",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "Zależy od wartości parametru $m$ - może być stopnia 2, 1 lub 0",
+              "feedback": "Dokładnie! Gdy $m = 1$, współczynnik przy $x^2$ znika i mamy wielomian stopnia 1.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "Zawsze jest to wielomian stopnia 1",
+              "feedback": "Nie - dla $m \\neq 1$ mamy składnik $x^2$, więc stopień to 2.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Musimy rozpatrzyć dwa przypadki: $m = 1$ (wielomian liniowy) i $m \\neq 1$ (wielomian kwadratowy)."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Co się dzieje gdy $m = 1$?",
+        "expression": "Dla $m = 1$: mianownik to $(1-1)x^2 + (1-1)x + 6 = 6$",
+        "explanation": "Podstawiamy $m = 1$ do mianownika"
+      },
+      {
+        "step": 4,
+        "hint": "Czy mianownik równy 6 może się wyzerować?",
+        "expression": "$6 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Mianownik jest stałą różną od zera, więc nigdy się nie zeruje",
+        "why": "Gdy $m = 1$, dziedzina to $\\mathbb{R}$, więc $m = 1$ spełnia warunek zadania."
+      },
+      {
+        "step": 5,
+        "hint": "Co musi być prawdą dla równania kwadratowego bez pierwiastków rzeczywistych?",
+        "expression": "Dla $m \\neq 1$: wymagamy $\\Delta < 0$",
+        "explanation": "Warunek braku miejsc zerowych dla równania kwadratowego",
+        "interactive_choice": {
+          "prompt": "Dla $m \\neq 1$ mamy równanie kwadratowe $(m-1)x^2 + (1-m)x + 6 = 0$. Kiedy nie ma ono rozwiązań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdy wyróżnik (delta) $\\Delta < 0$",
+              "feedback": "Świetnie! Ujemna delta oznacza brak pierwiastków rzeczywistych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Gdy wyróżnik (delta) $\\Delta > 0$",
+              "feedback": "Nie - dodatnia delta oznacza dwa różne pierwiastki rzeczywiste.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Gdy wyróżnik (delta) $\\Delta = 0$",
+              "feedback": "Nie - zerowa delta oznacza jeden pierwiastek (podwójny).",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Równanie kwadratowe nie ma rozwiązań rzeczywistych wtedy i tylko wtedy, gdy $\\Delta < 0$."
+        }
+      },
+      {
+        "step": 6,
+        "hint": "Jakie są współczynniki równania kwadratowego $(m-1)x^2 + (1-m)x + 6 = 0$?",
+        "expression": "$a = m - 1$, $b = 1 - m$, $c = 6$",
+        "explanation": "Identyfikujemy współczynniki w postaci $ax^2 + bx + c = 0$"
+      },
+      {
+        "step": 7,
+        "hint": "Jak obliczyć wyróżnik dla tych współczynników?",
+        "expression": "$\\Delta = b^2 - 4ac = (1-m)^2 - 4(m-1) \\cdot 6$",
+        "explanation": "Podstawiamy do wzoru na deltę"
+      },
+      {
+        "step": 8,
+        "hint": "Jak uprościć wyrażenie $(1-m)^2$?",
+        "expression": "$(1-m)^2 = 1 - 2m + m^2$",
+        "explanation": "Rozwijamy kwadrat dwumianu"
+      },
+      {
+        "step": 9,
+        "hint": "Jak uprościć $4(m-1) \\cdot 6$?",
+        "expression": "$4(m-1) \\cdot 6 = 24(m-1) = 24m - 24$",
+        "explanation": "Mnożymy i rozwijamy nawias"
+      },
+      {
+        "step": 10,
+        "hint": "Jaka jest postać delty po podstawieniu?",
+        "expression": "$\\Delta = 1 - 2m + m^2 - (24m - 24) = m^2 - 2m + 1 - 24m + 24$",
+        "explanation": "Łączymy wyrażenia"
+      },
+      {
+        "step": 11,
+        "hint": "Jak uprościć deltę redukując wyrazy podobne?",
+        "expression": "$\\Delta = m^2 - 26m + 25$",
+        "explanation": "Porządkujemy: $m^2 + (-2m - 24m) + (1 + 24) = m^2 - 26m + 25$"
+      },
+      {
+        "step": 12,
+        "hint": "Jaką nierówność musimy rozwiązać?",
+        "expression": "$m^2 - 26m + 25 < 0$",
+        "explanation": "Wymagamy by delta była ujemna"
+      },
+      {
+        "step": 13,
+        "hint": "Jak najlepiej rozwiązać nierówność kwadratową?",
+        "expression": "Rozwiązujemy $m^2 - 26m + 25 = 0$",
+        "explanation": "Szukamy miejsc zerowych funkcji kwadratowej",
+        "interactive_choice": {
+          "prompt": "Którą metodę zastosować do $m^2 - 26m + 25 < 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć miejsca zerowe i sprawdzić znak funkcji",
+              "feedback": "Doskonale! To standardowa metoda dla nierówności kwadratowych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Dopełnić do kwadratu",
+              "feedback": "Możliwe, ale bardziej pracochłonne - lepiej znaleźć pierwiastki.",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić do postaci kanonicznej",
+              "feedback": "To w zasadzie dopełnienie do kwadratu - można, ale jest prościej.",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Znajdujemy pierwiastki równania $m^2 - 26m + 25 = 0$, a następnie analizujemy znak paraboli."
+        }
+      },
+      {
+        "step": 14,
+        "hint": "Jakie liczby dają sumę 26 i iloczyn 25?",
+        "expression": "$1 + 25 = 26$ oraz $1 \\cdot 25 = 25$",
+        "explanation": "Rozkładamy na czynniki: $(m - 1)(m - 25) = 0$"
+      },
+      {
+        "step": 15,
+        "hint": "Jakie są pierwiastki równania?",
+        "expression": "$m_1 = 1$ oraz $m_2 = 25$",
+        "explanation": "Miejsca zerowe funkcji kwadratowej"
+      },
+      {
+        "step": 16,
+        "hint": "Gdzie parabola $y = m^2 - 26m + 25$ jest poniżej osi OX?",
+        "expression": "Współczynnik przy $m^2$ jest dodatni, więc parabola jest ujemna między pierwiastkami",
+        "explanation": "Dla $m \\in (1, 25)$ mamy $\\Delta < 0$",
+        "why": "Parabola o współczynniku dodatnim przy $m^2$ ma kształt $\\cup$, więc jest ujemna między pierwiastkami."
+      },
+      {
+        "step": 17,
+        "hint": "Czy musimy wykluczyć $m = 1$ z przedziału $(1, 25)$?",
+        "expression": "Nie! Dla $m = 1$ już sprawdziliśmy, że dziedzina to $\\mathbb{R}$",
+        "explanation": "Wartość $m = 1$ spełnia warunek zadania z innego powodu (mianownik stały)"
+      },
+      {
+        "step": 18,
+        "hint": "Jakie są wszystkie wartości parametru $m$ spełniające warunek?",
+        "expression": "$m \\in (1, 25]$",
+        "explanation": "Łączymy przypadki: $m = 1$ (sprawdzony osobno) oraz $m \\in (1, 25)$ (z warunku $\\Delta < 0$)"
+      }
+    ],
+    "solutions": [
+      "$m \\in (1, 25]$"
+    ],
+    "parameters": {
+      "domain_condition": "Dziedzina $= \\mathbb{R}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 18,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T03:52:40.273Z"
+  },
+  {
+    "id": "rational_function_domain_parameter",
+    "topic": "Dziedzina funkcji wymiernej z parametrem",
+    "difficulty": 4,
+    "statement": "Wyznacz wszystkie wartości parametru $m$, $m \\in \\mathbb{R}$, dla których dziedzina danej funkcji wymiernej jest zbiór liczb rzeczywistych: $p(x) = \\frac{3x^2 + 2m}{(m^2 - 4)x^2 + (m+2)x + 1}$",
+    "steps": [
+      {
+        "step": 1,
+        "hint": "Kiedy dziedzina funkcji wymiernej jest zbiorem wszystkich liczb rzeczywistych?",
+        "expression": "Dziedzina to $\\mathbb{R}$ gdy mianownik $(m^2 - 4)x^2 + (m+2)x + 1 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Funkcja wymierna jest określona wszędzie tam, gdzie mianownik jest różny od zera",
+        "why": "Dla funkcji wymiernej $\\frac{L(x)}{M(x)}$ dziedzina to $\\mathbb{R} \\setminus \\{x: M(x) = 0\\}$. Chcemy by zbiór miejsc zerowych mianownika był pusty."
+      },
+      {
+        "step": 2,
+        "hint": "Jaki typ równania tworzy mianownik?",
+        "expression": "Rozpatrujemy dwa przypadki: $m^2 - 4 = 0$ oraz $m^2 - 4 \\neq 0$",
+        "explanation": "Współczynnik przy $x^2$ może być zerem, co zmienia typ równania",
+        "interactive_choice": {
+          "prompt": "Jak sklasyfikować wyrażenie $(m^2 - 4)x^2 + (m+2)x + 1$ względem $x$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To zawsze równanie kwadratowe",
+              "feedback": "Nie do końca - współczynnik przy $x^2$ to $m^2 - 4$, który może być zerem!",
+              "is_correct": false
+            },
+            {
+              "id": "B",
+              "text": "To równanie kwadratowe gdy $m^2 - 4 \\neq 0$, liniowe gdy $m^2 - 4 = 0$",
+              "feedback": "Dokładnie! Musimy rozpatrzyć oba przypadki osobno.",
+              "is_correct": true
+            },
+            {
+              "id": "C",
+              "text": "To równanie liniowe ze względu na parametr $m$",
+              "feedback": "Nie - analizujemy względem zmiennej $x$, nie parametru $m$",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Typ równania zależy od wartości $m^2 - 4$. Musimy rozpatrzyć przypadki."
+        }
+      },
+      {
+        "step": 3,
+        "hint": "Dla jakich wartości $m$ mamy $m^2 - 4 = 0$?",
+        "expression": "$m^2 = 4$, więc $m = -2$ lub $m = 2$",
+        "explanation": "Rozkładamy: $(m-2)(m+2) = 0$"
+      },
+      {
+        "step": 4,
+        "hint": "Co się dzieje z mianownikiem gdy $m = 2$?",
+        "expression": "Dla $m = 2$: mianownik to $(4-4)x^2 + (2+2)x + 1 = 4x + 1$",
+        "explanation": "Otrzymujemy funkcję liniową względem $x$"
+      },
+      {
+        "step": 5,
+        "hint": "Czy funkcja liniowa $4x + 1$ ma miejsce zerowe?",
+        "expression": "$4x + 1 = 0$ daje $x = -\\frac{1}{4}$",
+        "explanation": "Funkcja liniowa ma dokładnie jedno miejsce zerowe, więc $m = 2$ nie spełnia warunku",
+        "why": "Jeśli mianownik ma miejsce zerowe, to dziedzina nie jest całym $\\mathbb{R}$. Odrzucamy $m = 2$."
+      },
+      {
+        "step": 6,
+        "hint": "Co się dzieje z mianownikiem gdy $m = -2$?",
+        "expression": "Dla $m = -2$: mianownik to $(4-4)x^2 + (-2+2)x + 1 = 1$",
+        "explanation": "Otrzymujemy funkcję stałą równą 1"
+      },
+      {
+        "step": 7,
+        "hint": "Czy stała funkcja $f(x) = 1$ jest kiedykolwiek zerem?",
+        "expression": "$1 \\neq 0$ dla każdego $x \\in \\mathbb{R}$",
+        "explanation": "Mianownik nigdy nie jest zerem, więc $m = -2$ spełnia warunek!"
+      },
+      {
+        "step": 8,
+        "hint": "Co musimy sprawdzić dla przypadku $m^2 - 4 \\neq 0$?",
+        "expression": "Dla $m \\neq \\pm 2$ mianownik to równanie kwadratowe. Potrzebujemy $\\Delta < 0$",
+        "explanation": "Równanie kwadratowe nie ma rozwiązań gdy wyróżnik jest ujemny",
+        "interactive_choice": {
+          "prompt": "Kiedy równanie kwadratowe $ax^2 + bx + c = 0$ nie ma rozwiązań rzeczywistych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdy wyróżnik $\\Delta < 0$",
+              "feedback": "Świetnie! Ujemna delta oznacza brak miejsc zerowych.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Gdy współczynnik $a < 0$",
+              "feedback": "Nie - znak $a$ wpływa na kierunek ramion paraboli, nie na istnienie miejsc zerowych",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Gdy $a + b + c \\neq 0$",
+              "feedback": "To warunek na to, czy $x=1$ jest rozwiązaniem, nie na brak rozwiązań",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla równania kwadratowego: $\\Delta < 0$ oznacza brak miejsc zerowych."
+        }
+      },
+      {
+        "step": 9,
+        "hint": "Jak obliczyć deltę dla mianownika $(m^2-4)x^2 + (m+2)x + 1$?",
+        "expression": "$\\Delta = (m+2)^2 - 4(m^2-4) \\cdot 1$",
+        "explanation": "Wzór na deltę: $\\Delta = b^2 - 4ac$ gdzie $a = m^2-4$, $b = m+2$, $c = 1$"
+      },
+      {
+        "step": 10,
+        "hint": "Jak uprościć wyrażenie na deltę?",
+        "expression": "$\\Delta = m^2 + 4m + 4 - 4m^2 + 16 = -3m^2 + 4m + 20$",
+        "explanation": "Rozwijamy kwadrat i mnożymy, następnie redukujemy wyrazy podobne"
+      },
+      {
+        "step": 11,
+        "hint": "Kiedy $-3m^2 + 4m + 20 < 0$?",
+        "expression": "Rozwiązujemy $-3m^2 + 4m + 20 = 0$",
+        "explanation": "Najpierw znajdujemy granice przedziałów",
+        "interactive_choice": {
+          "prompt": "Jak rozwiązać nierówność $-3m^2 + 4m + 20 < 0$?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć miejsca zerowe i sprawdzić znak na przedziałach",
+              "feedback": "Dokładnie! Dla paraboli ramionami w dół, wartości ujemne są poza miejscami zerowymi.",
+              "is_correct": true
+            },
+            {
+              "id": "B",
+              "text": "Podstawić $m = 0$ i sprawdzić",
+              "feedback": "To da tylko jeden punkt, nie cały zbiór rozwiązań nierówności",
+              "is_correct": false
+            },
+            {
+              "id": "C",
+              "text": "Przekształcić do postaci $m^2 > \\frac{4m + 20}{3}$",
+              "feedback": "Możliwe, ale komplikuje - lepiej znaleźć miejsca zerowe",
+              "is_correct": false
+            }
+          ],
+          "explanation_after": "Dla nierówności kwadratowej znajdujemy miejsca zerowe, potem analizujemy znak."
+        }
+      },
+      {
+        "step": 12,
+        "hint": "Jaka jest delta dla równania $-3m^2 + 4m + 20 = 0$?",
+        "expression": "$\\Delta_m = 16 - 4(-3)(20) = 16 + 240 = 256 = 16^2$",
+        "explanation": "Obliczamy deltę dla równania względem parametru $m$"
+      },
+      {
+        "step": 13,
+        "hint": "Jakie są miejsca zerowe funkcji $-3m^2 + 4m + 20$?",
+        "expression": "$m = \\frac{-4 \\pm 16}{-6}$, więc $m_1 = \\frac{-4-16}{-6} = \\frac{-20}{-6} = \\frac{10}{3}$ oraz $m_2 = \\frac{-4+16}{-6} = \\frac{12}{-6} = -2$",
+        "explanation": "Używamy wzoru na pierwiastki równania kwadratowego"
+      },
+      {
+        "step": 14,
+        "hint": "Gdzie funkcja $-3m^2 + 4m + 20$ jest ujemna?",
+        "expression": "Parabola z ramionami w dół ($a = -3 < 0$) jest ujemna dla $m < -2$ lub $m > \\frac{10}{3}$",
+        "explanation": "Dla paraboli ramionami w dół, wartości ujemne są poza przedziałem między miejscami zerowymi",
+        "why": "Parabola o współczynniku $a < 0$ ma wartości ujemne na zewnątrz przedziału $[m_1, m_2]$."
+      },
+      {
+        "step": 15,
+        "hint": "Które wartości $m$ spełniają wszystkie warunki?",
+        "expression": "Z przypadku I: $m = -2$. Z przypadku II: $m \\in (-\\infty, -2) \\cup (\\frac{10}{3}, +\\infty)$ oraz $m \\neq \\pm 2$",
+        "explanation": "Łączymy wyniki z obu przypadków"
+      },
+      {
+        "step": 16,
+        "hint": "Jaki jest ostateczny zbiór wartości parametru $m$?",
+        "expression": "$m \\in (-\\infty, -2] \\cup (\\frac{10}{3}, +\\infty)$",
+        "explanation": "Punkt $m = -2$ należy do rozwiązania, punkt $m = 2$ nie należy (jest w środku przedziału $[-2, \\frac{10}{3}]$)"
+      }
+    ],
+    "solutions": [
+      "$m \\in (-\\infty, -2] \\cup (\\frac{10}{3}, +\\infty)$"
+    ],
+    "parameters": {
+      "parameter": "$m \\in \\mathbb{R}$"
+    },
+    "validation": {
+      "isValid": true,
+      "missingFields": [],
+      "warnings": [],
+      "stats": {
+        "totalSteps": 16,
+        "stepsWithWhy": 3,
+        "stepsWithChoice": 3,
+        "totalOptions": 9,
+        "correctOptions": 3
+      }
+    },
+    "timestamp": "2025-09-30T03:53:25.527Z"
+  },
+  {
     "id": "homographic_function_check",
     "topic": "Funkcje homograficzne",
     "difficulty": 2,
@@ -3533,7 +4121,8 @@
       }
     },
     "timestamp": "2025-09-25T11:20:40.236Z"
-  }, {
+  },
+  {
     "id": "absolute_rational_function",
     "topic": "Funkcje wymierne z wartością bezwzględną",
     "difficulty": 4,

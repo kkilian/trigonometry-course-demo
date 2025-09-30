@@ -1,0 +1,56 @@
+{
+  "type": "quadratic",
+  "function": "(x + 2) * (x - 5)",
+  "variable": "x",
+  "x_range": [-4, 7],
+  "roots": [-2, 5],
+  "vertex": {
+    "x": 1.5,
+    "y": -12.25,
+    "kwargs": {
+      "color": "stone_600"
+    }
+  },
+  "annotations": [
+    {
+      "xy": [-2, 0],
+      "text": "$x_1 = -2$",
+      "xytext": [-2, -3],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [5, 0],
+      "text": "$x_2 = 5$",
+      "xytext": [5, -3],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [1.5, 8],
+      "text": "Iloczynowa: $(x+2)(x-5)$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [1.5, 5],
+      "text": "Ogólna: $x^2 - 3x - 10$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-4, 7],
+  "ylim": [-15, 10],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/quadratic_three_forms_p8_step8.png"
+}

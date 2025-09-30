@@ -126,7 +126,8 @@
         "step": 8,
         "hint": "Które funkcje przeszły wszystkie testy?",
         "expression": "Funkcje kwadratowe: $f(x) = 2x^2 - 3x + 1$ oraz $h(x) = -x^2 + 5$",
-        "explanation": "Tylko te dwie funkcje spełniają definicję funkcji kwadratowej"
+        "explanation": "Tylko te dwie funkcje spełniają definicję funkcji kwadratowej",
+        "image": "/images/basics/quadratic_identification_step8.png"
       }
     ],
     "solutions": [
@@ -245,7 +246,8 @@
         "step": 7,
         "hint": "Skoro $a = 3 > 0$, to w którą stronę skierowane są ramiona?",
         "expression": "$a = 3 > 0$, więc ramiona paraboli skierowane są w górę",
-        "explanation": "Dodatni współczynnik $a$ oznacza ramiona skierowane w górę"
+        "explanation": "Dodatni współczynnik $a$ oznacza ramiona skierowane w górę",
+        "image": "/images/basics/quadratic_direction_step7.png"
       },
       {
         "step": 8,
@@ -390,7 +392,8 @@
             }
           ],
           "explanation_after": "Dla paraboli z ramionami w dół: $Z_f = (-\\infty, q]$. Dla ramion w górę byłoby: $Z_f = [q, +\\infty)$."
-        }
+        },
+        "image": "/images/basics/quadratic_range_step6.png"
       },
       {
         "step": 7,
@@ -807,7 +810,8 @@
             }
           ],
           "explanation_after": "W postaci $a(x-p)^2 + q$ wierzchołek ma współrzędne $W=(p, q)$. Tu: $p=2$, $q=3$."
-        }
+        },
+        "image": "/images/basics/quadratic_canonical_p6_step6.png"
       }
     ],
     "solutions": [
@@ -1053,7 +1057,8 @@
         "step": 8,
         "hint": "Jakie są ostateczne postacie funkcji?",
         "expression": "Postać iloczynowa: $f(x) = (x + 2)(x - 5)$\nPostać ogólna: $f(x) = x^2 - 3x - 10$",
-        "explanation": "Otrzymaliśmy obie wymagane postacie funkcji kwadratowej"
+        "explanation": "Otrzymaliśmy obie wymagane postacie funkcji kwadratowej",
+        "image": "/images/basics/quadratic_three_forms_p8_step8.png"
       }
     ],
     "solutions": [
@@ -1639,7 +1644,8 @@
             }
           ],
           "explanation_after": "Znak delty określa liczbę rozwiązań: $\\Delta > 0$ → 2 rozwiązania, $\\Delta = 0$ → 1 rozwiązanie, $\\Delta < 0$ → brak rozwiązań rzeczywistych."
-        }
+        },
+        "image": "/images/basics/delta_two_solutions_p12_step7.png"
       }
     ],
     "solutions": [
@@ -3029,7 +3035,8 @@
         "step": 12,
         "hint": "Jakie są wszystkie punkty przecięcia z osiami?",
         "expression": "Punkty przecięcia: $(0, -4)$, $(4, 0)$, $(-1, 0)$",
-        "explanation": "Wykres przecina oś OY w jednym punkcie i oś OX w dwóch punktach"
+        "explanation": "Wykres przecina oś OY w jednym punkcie i oś OX w dwóch punktach",
+        "image": "/images/basics/axes_intersections_p23_step12.png"
       }
     ],
     "solutions": [
@@ -3198,7 +3205,8 @@
         "step": 11,
         "hint": "Jak wygląda szkic wykresu?",
         "expression": "Parabola z ramionami w dół, wierzchołek w $(2, 3)$, przecina OX w dwóch punktach, OY w $(0, -1)$",
-        "explanation": "Łączymy wszystkie informacje w szkic: parabola przechodzi przez zaznaczone punkty, ma maksimum w wierzchołku"
+        "explanation": "Łączymy wszystkie informacje w szkic: parabola przechodzi przez zaznaczone punkty, ma maksimum w wierzchołku",
+        "image": "/images/basics/complete_sketch_p24_step11.png"
       }
     ],
     "solutions": [
@@ -3753,7 +3761,8 @@
         "step": 7,
         "hint": "Jakie są ostateczne przedziały monotoniczności?",
         "expression": "Funkcja malejąca: $x \\in (-\\infty, -3)$, Funkcja rosnąca: $x \\in (-3, +\\infty)$",
-        "explanation": "Funkcja $f(x) = x^2 + 6x - 7$ maleje dla $x < -3$ i rośnie dla $x > -3$"
+        "explanation": "Funkcja $f(x) = x^2 + 6x - 7$ maleje dla $x < -3$ i rośnie dla $x > -3$",
+        "image": "/images/basics/monotonicity_intervals_p28_step7.png"
       }
     ],
     "solutions": [
@@ -4038,7 +4047,8 @@
         "step": 8,
         "hint": "Jaka jest końcowa odpowiedź?",
         "expression": "Rozwiązanie: $x \\in [2, 3]$",
-        "explanation": "Przedział domknięty, bo nierówność zawiera równość ($\\leq$)"
+        "explanation": "Przedział domknięty, bo nierówność zawiera równość ($\\leq$)",
+        "image": "/images/basics/inequality_solution_p30_step8.png"
       }
     ],
     "solutions": [

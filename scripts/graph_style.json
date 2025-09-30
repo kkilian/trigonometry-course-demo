@@ -1,0 +1,74 @@
+{
+  "description": "E-ink style graph color palette - inspired by stone and warm tones",
+  "colors": {
+    "orange": "#ea580c",
+    "orange_light": "#fb923c",
+    "yellow": "#ca8a04",
+    "yellow_light": "#eab308",
+    "stone_900": "#1c1917",
+    "stone_700": "#44403c",
+    "stone_600": "#57534e",
+    "stone_400": "#a8a29e",
+    "stone_300": "#d6d3d1",
+    "stone_200": "#e7e5e4",
+    "stone_100": "#f5f5f4",
+    "stone_50": "#fafaf9",
+    "white": "#ffffff",
+    "green": "#16a34a",
+    "green_light": "#22c55e",
+    "red": "#dc2626"
+  },
+  "style": {
+    "figure": {
+      "facecolor": "stone_50",
+      "edgecolor": "stone_300",
+      "dpi": 150
+    },
+    "axes": {
+      "facecolor": "white",
+      "edgecolor": "stone_600",
+      "labelcolor": "stone_900",
+      "titlecolor": "stone_900",
+      "grid_color": "stone_300",
+      "grid_alpha": 0.5,
+      "grid_linestyle": "--",
+      "grid_linewidth": 0.8
+    },
+    "lines": {
+      "primary_color": "orange",
+      "secondary_color": "yellow",
+      "linewidth": 2.5
+    },
+    "markers": {
+      "color": "orange",
+      "size": 10,
+      "edge_color": "stone_900",
+      "edge_width": 1.5
+    },
+    "fill": {
+      "positive_color": "green_light",
+      "negative_color": "yellow_light",
+      "alpha": 0.25
+    },
+    "annotations": {
+      "color": "stone_900",
+      "box_facecolor": "stone_100",
+      "box_edgecolor": "stone_400",
+      "box_alpha": 0.9,
+      "arrow_color": "orange"
+    },
+    "legend": {
+      "facecolor": "white",
+      "edgecolor": "stone_300",
+      "framealpha": 0.95,
+      "fontsize": 11
+    },
+    "fonts": {
+      "title_size": 16,
+      "label_size": 14,
+      "tick_size": 12,
+      "annotation_size": 12,
+      "weight": "normal"
+    }
+  }
+}

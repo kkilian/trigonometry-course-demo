@@ -1,0 +1,66 @@
+{
+  "type": "quadratic",
+  "function": "-2*x**2 + 8*x - 5",
+  "variable": "x",
+  "x_range": [-1, 5],
+  "vertex": {
+    "x": 2,
+    "y": 3,
+    "kwargs": {
+      "label": "Wierzchołek (maksimum)"
+    }
+  },
+  "arrows": [
+    {
+      "xy": [0.5, -5],
+      "direction": "down",
+      "kwargs": {
+        "text": "↓",
+        "offset": 8,
+        "fontsize": 20
+      }
+    },
+    {
+      "xy": [3.5, -5],
+      "direction": "down",
+      "kwargs": {
+        "text": "↓",
+        "offset": 8,
+        "fontsize": 20
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "xy": [2, 3],
+      "text": "$(2, 3)$",
+      "xytext": [2, 5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [2, -8],
+      "text": "$Z_f = (-\\infty, 3]$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 13
+      }
+    },
+    {
+      "xy": [-0.5, 1],
+      "text": "$a = -2 < 0$",
+      "kwargs": {
+        "ha": "left",
+        "fontsize": 11
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-1, 5],
+  "ylim": [-10, 6],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/quadratic_range_step6.png"
+}

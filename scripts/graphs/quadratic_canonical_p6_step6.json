@@ -1,0 +1,38 @@
+{
+  "type": "quadratic",
+  "function": "(x - 2)**2 + 3",
+  "variable": "x",
+  "x_range": [-1, 5],
+  "vertex": {
+    "x": 2,
+    "y": 3,
+    "kwargs": {
+      "label": "Wierzchołek"
+    }
+  },
+  "annotations": [
+    {
+      "xy": [2, 3],
+      "text": "$W = (2, 3)$",
+      "xytext": [2, 5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [2, 10],
+      "text": "$f(x) = (x - 2)^2 + 3$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 13
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-1, 5],
+  "ylim": [0, 12],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/quadratic_canonical_p6_step6.png"
+}

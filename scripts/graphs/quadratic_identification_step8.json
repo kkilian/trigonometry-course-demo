@@ -1,0 +1,52 @@
+{
+  "type": "comparison",
+  "variable": "x",
+  "x_range": [-2, 4],
+  "functions": [
+    {
+      "function": "2*x**2 - 3*x + 1",
+      "label": "$f(x) = 2x^2 - 3x + 1$",
+      "color": "orange",
+      "linestyle": "-",
+      "linewidth": 2.5
+    },
+    {
+      "function": "x**3 - 2*x**2",
+      "label": "$g(x) = x^3 - 2x^2$",
+      "color": "stone_400",
+      "linestyle": "--",
+      "linewidth": 2
+    },
+    {
+      "function": "-x**2 + 5",
+      "label": "$h(x) = -x^2 + 5$",
+      "color": "orange",
+      "linestyle": "-",
+      "linewidth": 2.5
+    },
+    {
+      "function": "x**(-2) + x",
+      "label": "$p(x) = \\frac{1}{x^2} + x$",
+      "color": "stone_400",
+      "linestyle": "--",
+      "linewidth": 2
+    }
+  ],
+  "annotations": [
+    {
+      "xy": [1, 0],
+      "text": "Parabole: $f$ i $h$",
+      "xytext": [1, -3],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 13
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-2, 4],
+  "ylim": [-8, 8],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/quadratic_identification_step8.png"
+}

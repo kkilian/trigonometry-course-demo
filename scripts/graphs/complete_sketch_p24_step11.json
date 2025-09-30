@@ -1,0 +1,96 @@
+{
+  "type": "quadratic",
+  "function": "-(x - 2)**2 + 3",
+  "variable": "x",
+  "x_range": [-1, 5],
+  "roots": [0.268, 3.732],
+  "vertex": {
+    "x": 2,
+    "y": 3,
+    "kwargs": {
+      "label": "Wierzchołek"
+    }
+  },
+  "arrows": [
+    {
+      "xy": [0.5, -4],
+      "direction": "down",
+      "kwargs": {
+        "text": "↓",
+        "offset": 8,
+        "fontsize": 18
+      }
+    },
+    {
+      "xy": [3.5, -4],
+      "direction": "down",
+      "kwargs": {
+        "text": "↓",
+        "offset": 8,
+        "fontsize": 18
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "xy": [2, 3],
+      "text": "$W = (2, 3)$",
+      "xytext": [2, 4.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [0.268, 0],
+      "text": "$(2-\\sqrt{3}, 0)$",
+      "xytext": [0.268, -1.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10
+      }
+    },
+    {
+      "xy": [3.732, 0],
+      "text": "$(2+\\sqrt{3}, 0)$",
+      "xytext": [3.732, -1.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10
+      }
+    },
+    {
+      "xy": [0, -1],
+      "text": "$(0, -1)$",
+      "xytext": [0.8, -1],
+      "kwargs": {
+        "ha": "left",
+        "fontsize": 10
+      }
+    },
+    {
+      "xy": [2, -4.5],
+      "text": "$f(x) = -(x-2)^2 + 3$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    }
+  ],
+  "vertices": [
+    {
+      "x": 0,
+      "y": -1,
+      "kwargs": {
+        "color": "yellow",
+        "size": 10
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-1, 5],
+  "ylim": [-6, 5],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/complete_sketch_p24_step11.png"
+}

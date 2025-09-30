@@ -1,0 +1,60 @@
+{
+  "type": "quadratic",
+  "function": "x**2 - 3*x - 4",
+  "variable": "x",
+  "x_range": [-3, 6],
+  "roots": [-1, 4],
+  "annotations": [
+    {
+      "xy": [-1, 0],
+      "text": "$(-1, 0)$",
+      "xytext": [-1, -2],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [4, 0],
+      "text": "$(4, 0)$",
+      "xytext": [4, -2],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [0, -4],
+      "text": "$(0, -4)$",
+      "xytext": [1, -4],
+      "kwargs": {
+        "ha": "left",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [1.5, 8],
+      "text": "Przecięcia z osiami",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    }
+  ],
+  "vertices": [
+    {
+      "x": 0,
+      "y": -4,
+      "kwargs": {
+        "color": "yellow",
+        "size": 12
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-3, 6],
+  "ylim": [-6, 10],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/axes_intersections_p23_step12.png"
+}

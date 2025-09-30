@@ -1,0 +1,61 @@
+{
+  "type": "quadratic",
+  "function": "x**2 - 5*x + 6",
+  "variable": "x",
+  "x_range": [0, 5],
+  "roots": [2, 3],
+  "fill_negative": true,
+  "negative_label": "Rozwiązanie: $x \\in [2, 3]$",
+  "annotations": [
+    {
+      "xy": [2, 0],
+      "text": "$x = 2$",
+      "xytext": [2, -0.6],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [3, 0],
+      "text": "$x = 3$",
+      "xytext": [3, -0.6],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [2.5, -0.35],
+      "text": "$\\leq 0$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12,
+        "color": "yellow"
+      }
+    },
+    {
+      "xy": [2.5, 2.5],
+      "text": "$x^2 - 5x + 6 \\leq 0$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [2.5, 3.5],
+      "text": "Rozwiązanie: $[2, 3]$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11,
+        "color": "stone_700"
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [0, 5],
+  "ylim": [-1.5, 4],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/inequality_solution_p30_step8.png"
+}

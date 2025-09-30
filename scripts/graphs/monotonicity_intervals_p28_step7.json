@@ -1,0 +1,70 @@
+{
+  "type": "quadratic",
+  "function": "x**2 + 6*x - 7",
+  "variable": "x",
+  "x_range": [-8, 2],
+  "vertex": {
+    "x": -3,
+    "y": -16,
+    "kwargs": {
+      "label": "Minimum"
+    }
+  },
+  "arrows": [
+    {
+      "xy": [-6, 3],
+      "direction": "down",
+      "kwargs": {
+        "text": "↘ maleje",
+        "offset": 10,
+        "fontsize": 13,
+        "color": "stone_600"
+      }
+    },
+    {
+      "xy": [0, 3],
+      "direction": "up",
+      "kwargs": {
+        "text": "↗ rośnie",
+        "offset": 10,
+        "fontsize": 13,
+        "color": "stone_600"
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "xy": [-3, -16],
+      "text": "$x = -3$",
+      "xytext": [-3, -13],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [-6, -18],
+      "text": "$(-\\infty, -3)$ - maleje",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10,
+        "color": "stone_600"
+      }
+    },
+    {
+      "xy": [0, -18],
+      "text": "$(-3, +\\infty)$ - rośnie",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 10,
+        "color": "stone_600"
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-8, 2],
+  "ylim": [-20, 10],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/monotonicity_intervals_p28_step7.png"
+}

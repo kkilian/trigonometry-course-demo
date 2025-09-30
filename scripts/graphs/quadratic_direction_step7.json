@@ -1,0 +1,58 @@
+{
+  "type": "quadratic",
+  "function": "3*x**2 - 6*x + 2",
+  "variable": "x",
+  "x_range": [-1, 3],
+  "vertex": {
+    "x": 1,
+    "y": -1,
+    "kwargs": {
+      "label": "Wierzchołek"
+    }
+  },
+  "arrows": [
+    {
+      "xy": [-0.5, 5],
+      "direction": "up",
+      "kwargs": {
+        "text": "↑",
+        "offset": 8,
+        "fontsize": 20
+      }
+    },
+    {
+      "xy": [2.5, 5],
+      "direction": "up",
+      "kwargs": {
+        "text": "↑",
+        "offset": 8,
+        "fontsize": 20
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "xy": [1, -1],
+      "text": "$(1, -1)$",
+      "xytext": [1, -3],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [1, 8],
+      "text": "$a = 3 > 0$ → ramiona w górę",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 13
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [-1, 3],
+  "ylim": [-4, 10],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/quadratic_direction_step7.png"
+}

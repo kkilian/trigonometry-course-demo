@@ -1,0 +1,50 @@
+{
+  "type": "quadratic",
+  "function": "x**2 - 5*x + 6",
+  "variable": "x",
+  "x_range": [0, 5],
+  "roots": [2, 3],
+  "annotations": [
+    {
+      "xy": [2, 0],
+      "text": "$x_1 = 2$",
+      "xytext": [2, -0.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [3, 0],
+      "text": "$x_2 = 3$",
+      "xytext": [3, -0.5],
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11
+      }
+    },
+    {
+      "xy": [2.5, 2],
+      "text": "$\\Delta = 1 > 0$",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 12
+      }
+    },
+    {
+      "xy": [2.5, 3],
+      "text": "Dwa różne rozwiązania",
+      "kwargs": {
+        "ha": "center",
+        "fontsize": 11,
+        "color": "stone_600"
+      }
+    }
+  ],
+  "minimal": true,
+  "show_legend": false,
+  "xlim": [0, 5],
+  "ylim": [-1.5, 4],
+  "figsize": [10, 6],
+  "output": "/Users/krzysztofkilian/Desktop/trigonometry-course-demo/public/images/basics/delta_two_solutions_p12_step7.png"
+}
