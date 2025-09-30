@@ -1,16 +1,5 @@
 [
   {
-    "id": "#2025-marzec-QUIZ-EXAMPLE",
-    "number": 0,
-    "type": "quiz",
-    "topic": "Funkcje wykładnicze",
-    "difficulty": 2,
-    "statement": "Liczba ^{30}$ jest równa",
-    "quiz": "A. ^{10}$\nB. ^{15}$\nC. ^{10}$\nD. ^8$",
-    "answer": "B",
-    "explanation": "Przekształcamy: ^{30} = (2^2)^{15} = 4^{15}$"
-  },
-  {
     "id": "#2025-marzec-1-2p",
     "topic": "Dwumian Newtona",
     "difficulty": 4,

@@ -22,6 +22,29 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
   const startTimeRef = useRef(Date.now());
   const solveDurationRef = useRef(null);
 
+  // Parse statement to extract ABCD options if present
+  const parseStatementWithOptions = (statement) => {
+    // Match pattern: "text A. option1, B. option2, C. option3, D. option4"
+    // Look for the pattern starting with "A. " and containing all options
+    const optionsRegex = /\s+(A\.\s+.+?,?\s+B\.\s+.+?,?\s+C\.\s+.+?,?\s+D\.\s+.+)$/;
+    const match = statement.match(optionsRegex);
+
+    if (match) {
+      const optionsText = match[1];
+      const mainText = statement.substring(0, match.index).trim();
+
+      // Split options by letter markers (A., B., C., D.)
+      const options = optionsText
+        .split(/(?=[A-D]\.\s)/)
+        .map(opt => opt.trim().replace(/,\s*$/, '')) // Remove trailing commas
+        .filter(opt => opt.length > 0);
+
+      return { mainText, options };
+    }
+
+    return { mainText: statement, options: null };
+  };
+
   const handleStepClick = (stepIndex) => {
     const step = problem.steps[stepIndex];
     
@@ -267,27 +290,53 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
             <div className="flex items-start gap-4">
               <div className="flex-1">
                 <div className="flex items-start justify-between gap-2">
-                  <h1 className={`font-bold text-stone-900 leading-relaxed transition-all duration-300 flex-1 ${
-                    isScrolled
-                      ? 'text-base md:text-lg mb-1'
-                      : 'text-xl md:text-3xl mb-2'
-                  }`}>
-                    <MathRenderer content={problem.statement} lineBreakBetweenMath={true} />
-                  </h1>
-                  {problem.quiz && (
-                    <div className="mt-3">
-                      <div className="border-t border-stone-300 mb-3"></div>
-                      <div className={`text-stone-700 ${
-                        isScrolled ? 'text-sm md:text-base' : 'text-base md:text-xl'
-                      }`}>
-                        {problem.quiz.split('\n').map((option, idx) => (
-                          <div key={idx} className="mb-1">
-                            <MathRenderer content={option} />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  {(() => {
+                    const parsed = parseStatementWithOptions(problem.statement);
+
+                    return (
+                      <>
+                        <h1 className={`font-bold text-stone-900 leading-relaxed transition-all duration-300 flex-1 ${
+                          isScrolled
+                            ? 'text-base md:text-lg mb-1'
+                            : 'text-xl md:text-3xl mb-2'
+                        }`}>
+                          <MathRenderer content={parsed.mainText} lineBreakBetweenMath={true} />
+
+                          {/* Show options from statement if present */}
+                          {parsed.options && (
+                            <div className="mt-4">
+                              <div className="border-t-2 border-stone-300 mb-4"></div>
+                              <div className={`text-stone-700 font-normal ${
+                                isScrolled ? 'text-sm md:text-base' : 'text-base md:text-xl'
+                              }`}>
+                                {parsed.options.map((option, idx) => (
+                                  <div key={idx} className="mb-2">
+                                    <MathRenderer content={option} />
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Show quiz options if present (separate from statement) */}
+                          {problem.quiz && (
+                            <div className="mt-4">
+                              <div className="border-t-2 border-stone-300 mb-4"></div>
+                              <div className={`text-stone-700 font-normal ${
+                                isScrolled ? 'text-sm md:text-base' : 'text-base md:text-xl'
+                              }`}>
+                                {problem.quiz.split('\n').map((option, idx) => (
+                                  <div key={idx} className="mb-2">
+                                    <MathRenderer content={option} />
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </h1>
+                      </>
+                    );
+                  })()}
                   {isScrolled && (
                     <button
                       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

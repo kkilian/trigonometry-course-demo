@@ -3,7 +3,7 @@
     "id": "complex_powers_expression",
     "topic": "Potęgi i pierwiastki",
     "difficulty": 4,
-    "statement": "Liczba $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$ jest równa: A. $\\frac{1}{2}$, B. $4$, C. $\\frac{1}{4}$, D. $2$",
+    "statement": "Liczba $\\frac{6^{18} \\cdot 8^{-5}}{216} \\cdot \\sqrt[3]{\\frac{8}{3^{45}}}$ jest równa",
     "steps": [
       {
         "step": 1,
@@ -149,7 +149,7 @@
     "id": "logarithm_complex_bases",
     "topic": "Logarytmy o różnych podstawach",
     "difficulty": 4,
-    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$ jest równa: A. $\\frac{5}{3}$, B. $\\sqrt{2}$, C. $\\frac{10}{3}$, D. $2\\sqrt{2}$",
+    "statement": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\log_{2\\sqrt{2}} 96 - \\log_{\\sqrt{8}} 3$ jest równa",
     "steps": [
       {
         "step": 1,
@@ -471,7 +471,8 @@
       }
     },
     "timestamp": "2025-09-27T10:48:58.093Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "sqrt_equation_choice",
@@ -619,13 +620,14 @@
       }
     },
     "timestamp": "2025-09-27T10:49:32.017Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "symmetric_expressions_a4_b4",
     "topic": "Wyrażenia symetryczne",
     "difficulty": 4,
-    "statement": "Dane są liczby $a$ i $b$ dla których spełnione są warunki: $a + b = 6$ oraz $a \\cdot b = 4$. Wartość wyrażenia $a^4 + b^4$ jest równa: A. $1296$, B. $1264$, C. $864$, D. $752$",
+    "statement": "Dane są liczby $a$ i $b$ dla których spełnione są warunki: $a + b = 6$ oraz $a \\cdot b = 4$. Wartość wyrażenia $a^4 + b^4$ jest równa",
     "steps": [
       {
         "step": 1,
@@ -863,13 +865,14 @@
       }
     },
     "timestamp": "2025-09-27T10:50:43.423Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "compound_interest_biannual",
     "topic": "Procent składany",
     "difficulty": 3,
-    "statement": "Pan Cezary wpłacił do banku $5000$ zł na lokatę na procent składany, z kapitalizacją odsetek co pół roku. Po każdym rocznym okresie oszczędzania bank nalicza odsetki w wysokości $4\\%$ od kwoty bieżącego kapitału znajdującego się na lokacie. Po roku oszczędzania na koncie Pana Cezarego, bez uwzględnienia podatków, będzie kwota: A. $5174$ zł, B. $5202$ zł, C. $5316$ zł, D. $5408$ zł",
+    "statement": "Pan Cezary wpłacił do banku $5000$ zł na lokatę na procent składany, z kapitalizacją odsetek co pół roku. Po każdym rocznym okresie oszczędzania bank nalicza odsetki w wysokości $4\\%$ od kwoty bieżącego kapitału znajdującego się na lokacie. Po roku oszczędzania na koncie Pana Cezarego, bez uwzględnienia podatków, będzie kwota",
     "steps": [
       {
         "step": 1,
@@ -1174,7 +1177,8 @@
       }
     },
     "timestamp": "2025-09-27T10:52:24.171Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "quadratic_inequality_choice",
@@ -1326,7 +1330,8 @@
       }
     },
     "timestamp": "2025-09-27T10:53:08.307Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "piecewise_function_analysis",
@@ -1494,13 +1499,14 @@
       }
     },
     "timestamp": "2025-09-27T10:53:55.949Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "quadratic_function_forms",
     "topic": "Funkcje kwadratowe - postaci funkcji",
     "difficulty": 3,
-    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Wzór funkcji $g$ można przedstawić w postaci ___ oraz ___. A. $g(x) = -x^2 + x + 6$, B. $g(x) = -x^2 - x + 6$, C. $g(x) = -2x^2 + x + 6$, D. $g(x) = -(x - 2)(x + 3)$, E. $g(x) = -2(x + 2)(x - 3)$, F. $g(x) = -(x + 2)(x - 3)$",
+    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Wzór funkcji $g$ można przedstawić w postaci ___ oraz ___.",
     "steps": [
       {
         "step": 1,
@@ -1660,7 +1666,7 @@
     "id": "quadratic_function_range",
     "topic": "Funkcja kwadratowa - zbiór wartości",
     "difficulty": 4,
-    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $g$ jest przedział: A. $\\left(-\\infty, 6\\frac{1}{2}\\right]$, B. $[7, +\\infty)$, C. $\\left(-\\infty, 6\\frac{1}{4}\\right]$, D. $(-\\infty, 7]$",
+    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $g$ jest przedział",
     "steps": [
       {
         "step": 1,
@@ -1972,13 +1978,14 @@
       }
     },
     "timestamp": "2025-09-27T10:56:35.301Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "quadratic_transformation_max",
     "topic": "Funkcje kwadratowe - przekształcenia",
     "difficulty": 4,
-    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Funkcja kwadratowa $h$ jest określona za pomocą funkcji $g$ następująco: $h(x) = g(x + 3) - 2$. Największą wartość funkcja $h$ przyjmuje dla argumentu: A. $x = -2\\frac{1}{2}$, B. $x = -\\frac{1}{4}$, C. $x = -\\frac{1}{2}$, D. $x = -1\\frac{1}{4}$",
+    "statement": "W kartezjańskim układzie współrzędnych $(x, y)$ dana jest funkcja kwadratowa $g$ określona dla każdej liczby rzeczywistej $x$. Jednym z miejsc zerowych funkcji $g$ jest liczba $(-2)$, a także funkcja $g$ przecina oś $y$ w punkcie $(0, 6)$. Osią symetrii tej funkcji jest $x = \\frac{1}{2}$. Funkcja kwadratowa $h$ jest określona za pomocą funkcji $g$ następująco: $h(x) = g(x + 3) - 2$. Największą wartość funkcja $h$ przyjmuje dla argumentu",
     "steps": [
       {
         "step": 1,
@@ -2260,7 +2267,8 @@
       }
     },
     "timestamp": "2025-09-27T10:58:17.261Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "geometric_sequence_proof",
@@ -2407,7 +2415,8 @@
       }
     },
     "timestamp": "2025-09-27T10:58:57.534Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "recursive_sequence_sum",
@@ -2534,7 +2543,8 @@
       }
     },
     "timestamp": "2025-09-27T10:59:32.263Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "three_digit_remainder_2_mod_7",
@@ -2687,13 +2697,14 @@
       }
     },
     "timestamp": "2025-09-27T11:00:23.035Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "cosine_obtuse_angle",
     "topic": "Funkcje trygonometryczne kąta rozwartego",
     "difficulty": 4,
-    "statement": "Kąt $\\alpha$ jest rozwarty oraz $\\sin \\alpha = \\frac{4\\sqrt{3}}{7}$. Cosinus kąta $\\alpha$ wynosi: A. $-\\frac{1}{7}$, B. $\\frac{2\\sqrt{3}}{7}$, C. $\\frac{1}{7}$, D. $-\\frac{2\\sqrt{3}}{7}$",
+    "statement": "Kąt $\\alpha$ jest rozwarty oraz $\\sin \\alpha = \\frac{4\\sqrt{3}}{7}$. Cosinus kąta $\\alpha$ wynosi",
     "steps": [
       {
         "step": 1,
@@ -2998,7 +3009,8 @@
       }
     },
     "timestamp": "2025-09-27T11:01:59.685Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "perpendicular_bisector_through_point",
@@ -3157,7 +3169,8 @@
       }
     },
     "timestamp": "2025-09-27T11:02:39.724Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "parallel_lines_absolute_value",
@@ -3305,13 +3318,14 @@
       }
     },
     "timestamp": "2025-09-27T11:03:26.024Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "triangle_cosine_law",
     "topic": "Wzór cosinusów w trójkącie",
     "difficulty": 4,
-    "statement": "Dwa boki pewnego trójkąta mają długości $7$ i $8$ oraz cosinus kąta naprzeciwko trzeciego boku jest równy $\\frac{11}{16}$. Obwód tego trójkąta wynosi: A. $16$, B. $21$, C. $35$, D. $37$",
+    "statement": "Dwa boki pewnego trójkąta mają długości $7$ i $8$ oraz cosinus kąta naprzeciwko trzeciego boku jest równy $\\frac{11}{16}$. Obwód tego trójkąta wynosi",
     "steps": [
       {
         "step": 1,
@@ -3457,7 +3471,7 @@
     "id": "circle_tangent_arc_geometry",
     "topic": "Geometria koła - styczne i łuki",
     "difficulty": 4,
-    "statement": "Do okręgu o środku $O$ poprowadzono styczną przecinającą się z tym okręgiem w punkcie $K$. Na rysunku zaznaczono kąt $60°$ przy punkcie $K$. Długość wycinka koła $AB$ jest równa $3\\pi$. Długość odcinka $|BK|$ wynosi: A. $10$, B. $12$, C. $14$, D. $18$",
+    "statement": "Do okręgu o środku $O$ poprowadzono styczną przecinającą się z tym okręgiem w punkcie $K$. Na rysunku zaznaczono kąt $60°$ przy punkcie $K$. Długość wycinka koła $AB$ jest równa $3\\pi$. Długość odcinka $|BK|$ wynosi",
     "steps": [
       {
         "step": 1,
@@ -3610,7 +3624,7 @@
     "id": "rhombus_height_calculation",
     "topic": "Pole rombu i wysokość",
     "difficulty": 3,
-    "statement": "Dany jest romb o polu $32$, którego kąt ostry ma miarę $30°$. Wysokość tego rombu jest równa: A. $4$, B. $8$, C. $12$, D. $16$",
+    "statement": "Dany jest romb o polu $32$, którego kąt ostry ma miarę $30°$. Wysokość tego rombu jest równa",
     "steps": [
       {
         "step": 1,
@@ -3762,7 +3776,7 @@
     "id": "tetrahedron_surface_area",
     "topic": "Geometria przestrzenna - czworościan foremnyAAA",
     "difficulty": 4,
-    "statement": "Pole powierzchni całkowitej pewnego czworościanu foremnego jest równe $\\sqrt{3}$. Długość krawędzi tego czworościanu jest równa: A. $\\frac{1}{3}$, B. $\\frac{1}{\\sqrt{3}}$, C. $1$, D. $\\sqrt{3}$",
+    "statement": "Pole powierzchni całkowitej pewnego czworościanu foremnego jest równe $\\sqrt{3}$. Długość krawędzi tego czworościanu jest równa",
     "steps": [
       {
         "step": 1,
@@ -4061,7 +4075,8 @@
       }
     },
     "timestamp": "2025-09-27T11:07:11.646Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "four_digit_odd_divisible_5",
@@ -4202,7 +4217,8 @@
       }
     },
     "timestamp": "2025-09-27T11:07:46.940Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "probability_prime_sum_difference",
@@ -4348,7 +4364,8 @@
       }
     },
     "timestamp": "2025-09-27T11:08:39.028Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   },
   {
     "id": "statistics_mean_median",
@@ -4483,6 +4500,7 @@
       }
     },
     "timestamp": "2025-09-27T11:09:21.106Z",
-    "thinking_used": true
+    "thinking_used": true,
+    "type": "open"
   }
 ]
