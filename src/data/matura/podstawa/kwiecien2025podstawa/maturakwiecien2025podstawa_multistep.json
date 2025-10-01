@@ -762,7 +762,8 @@
         "stepsWithWhy": 3
       }
     },
-    "timestamp": "2025-09-30T09:21:03.802Z"
+    "timestamp": "2025-09-30T09:21:03.802Z",
+    "image": "/images/matura/podstawa/kwiecien2025podstawa/zad11.png"
   },
   {
     "id": "domain_piecewise_function",
@@ -1247,7 +1248,8 @@
         "stepsWithWhy": 3
       }
     },
-    "timestamp": "2025-09-30T09:23:13.195Z"
+    "timestamp": "2025-09-30T09:23:13.195Z",
+    "image": "/images/matura/podstawa/kwiecien2025podstawa/zad18.png"
   },
   {
     "id": "geometric_sequence_monotonic",
@@ -1336,7 +1338,8 @@
         "stepsWithWhy": 3
       }
     },
-    "timestamp": "2025-09-30T09:23:35.311Z"
+    "timestamp": "2025-09-30T09:23:35.311Z",
+    "image": "/images/matura/podstawa/kwiecien2025podstawa/zad19.png"
   },
   {
     "id": "recursive_sequence_b6",
@@ -1828,7 +1831,8 @@
         "stepsWithWhy": 6
       }
     },
-    "timestamp": "2025-09-30T09:25:50.276Z"
+    "timestamp": "2025-09-30T09:25:50.276Z",
+    "image": "/images/matura/podstawa/kwiecien2025podstawa/25.png"
   },
   {
     "id": "triangle_cosine_law",

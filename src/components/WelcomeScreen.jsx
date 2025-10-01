@@ -27,6 +27,12 @@ const WelcomeScreen = ({ onSelectMode }) => {
       problemCount: basicsFunkcjaKwadratowaProblems.length
     },
     {
+      id: 'homographic-functions',
+      title: 'Funkcje homograficzne',
+      description: 'Wykres, asymptoty, przekształcenia funkcji wymiernych',
+      problemCount: homographicFunctionsProblems.length
+    },
+    {
       id: 'kombinatoryka-menu',
       title: 'Kombinatoryka',
       description: 'Od podstaw do zaawansowanych zagadnień',
