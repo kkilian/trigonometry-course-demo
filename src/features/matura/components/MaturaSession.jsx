@@ -244,11 +244,6 @@ const MaturaSession = ({
                               {problem.steps?.length || 0} kroków
                             </span>
                           </div>
-                          <div className="bg-yellow-100 px-2 py-1 rounded-full">
-                            <span className="text-xs text-yellow-700 font-medium">
-                              0-{points}
-                            </span>
-                          </div>
                           <div className="w-6 h-6 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">
                             <svg className="w-3 h-3 text-stone-600 group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 20 20">
                               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -323,11 +318,6 @@ const MaturaSession = ({
                           <div className="bg-stone-100 px-3 py-1 rounded-full">
                             <span className="text-xs md:text-sm text-stone-600">
                               {problem.steps?.length || 0} kroków
-                            </span>
-                          </div>
-                          <div className="bg-yellow-100 px-3 py-1 rounded-full">
-                            <span className="text-xs md:text-sm text-yellow-700 font-medium">
-                              0-{points}
                             </span>
                           </div>
                           <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center transition-all">

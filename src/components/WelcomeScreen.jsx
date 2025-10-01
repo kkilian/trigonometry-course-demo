@@ -12,65 +12,6 @@ import basicsFunkcjaKwadratowaProblems from '../data/basics-funkcja-kwadratowa.j
 const WelcomeScreen = ({ onSelectMode }) => {
   const modules = [
     {
-      id: 'basics-funkcja-kwadratowa',
-      title: 'Funkcja kwadratowa - przypomnienie',
-      description: 'Postać funkcji, wykres paraboli, miejsca zerowe, wierzchołek, przekształcenia',
-      problemCount: basicsFunkcjaKwadratowaProblems.length
-    },
-    {
-      id: 'basics-reorganized',
-      title: 'FUNDAMENTY MATEMATYKI (nowa struktura)',
-      description: '4 sekcje tematyczne z systemem blokowania postępu',
-      problemCount: 0,
-      hasSubmenu: true,
-      topicsCount: 16,
-      disabled: true
-    },
-    {
-      id: 'polynomials',
-      title: 'Wielomiany',
-      description: 'Fundamenty - start od zera',
-      problemCount: 0,
-      hasSubmenu: true,
-      isPremium: true,
-      disabled: true
-    },
-    {
-      id: 'algebraic-fractions-intro',
-      title: 'Ułamki algebraiczne - Wprowadzenie',
-      description: 'Podstawy ułamków algebraicznych, działania, upraszczanie',
-      problemCount: algebraicFractionsIntroProblems.length,
-      disabled: true
-    },
-    {
-      id: 'homographic-functions',
-      title: 'Funkcje Homograficzne',
-      description: 'Funkcje postaci f(x) = (ax+b)/(cx+d), ich właściwości i wykresy',
-      problemCount: homographicFunctionsProblems.length
-    },
-    {
-      id: 'systems-of-equations',
-      title: '@testtesttest',
-      description: '@test',
-      problemCount: systemsOfEquationsProblems.length
-    },
-    {
-      id: 'rational-equations-word-problems',
-      title: 'Zadania tekstowe prowadzące do równań wymiernych',
-      description: 'Problemy słowne wymagające rozwiązania równań wymiernych',
-      problemCount: rationalEquationsWordProblems.length,
-      hasGlow: true
-    },
-    {
-      id: 'kombinatoryka-menu',
-      title: 'Kombinatoryka',
-      description: 'Od podstaw do zaawansowanych zagadnień',
-      problemCount: 0,
-      hasSubmenu: true,
-      topicsCount: 2,
-      disabled: false
-    },
-    {
       id: 'matura-2025-topics',
       title: 'Matura 2025 - Poziom podstawowy',
       description: 'Wszystkie sesje egzaminacyjne 2025 - poziom podstawowy',
@@ -80,27 +21,24 @@ const WelcomeScreen = ({ onSelectMode }) => {
       isNew: true
     },
     {
-      id: 'comparison',
-      title: 'PORÓWNANIE ROZWIĄZAŃ',
-      description: 'Porównaj różne podejścia do tych samych zadań side-by-side',
-      problemCount: Math.min(test1Problems.length, test2Problems.length),
-      isNew: true,
-      hasGlow: true
+      id: 'basics-funkcja-kwadratowa',
+      title: 'Funkcja kwadratowa - przypomnienie',
+      description: 'Postać funkcji, wykres paraboli, miejsca zerowe, wierzchołek, przekształcenia',
+      problemCount: basicsFunkcjaKwadratowaProblems.length
     },
     {
-      id: 'statystyka',
-      title: 'Statystyka',
-      description: 'Średnia, mediana, dominanta, rozstęp, wykresy',
-      problemCount: statystykaProblems.length,
-      disabled: true
+      id: 'kombinatoryka-menu',
+      title: 'Kombinatoryka',
+      description: 'Od podstaw do zaawansowanych zagadnień',
+      problemCount: 0,
+      hasSubmenu: true,
+      topicsCount: 2,
+      disabled: false
     }
   ];
 
-  // Sort modules - enabled first, disabled last
-  const sortedModules = [...modules].sort((a, b) => {
-    if (a.disabled === b.disabled) return 0;
-    return a.disabled ? 1 : -1;
-  });
+  // No sorting - keep original order
+  const sortedModules = [...modules];
 
   return (
     <div className="min-h-screen bg-stone-100">
@@ -152,18 +90,17 @@ const WelcomeScreen = ({ onSelectMode }) => {
           {/* Category Header */}
           <div className="px-4 md:px-8 py-3 md:py-4">
             <h2 className="text-xs font-medium text-stone-600 uppercase tracking-wider">
-              Dostępne kursy ({modules.length})
+              Dostępne kursy ({modules.filter(m => !m.disabled).length})
             </h2>
           </div>
 
           {/* Module Items */}
-          {sortedModules.map((module, index) => (
+          {sortedModules.filter(module => !module.disabled).map((module, index) => (
             <React.Fragment key={module.id}>
-              {/* Separator between enabled and disabled modules */}
-              {index > 0 && !sortedModules[index - 1].disabled && module.disabled && (
+              {/* Separator after Matura 2025 */}
+              {module.id === 'basics-funkcja-kwadratowa' && (
                 <div className="px-4 md:px-8 py-3">
                   <div className="border-t border-stone-300"></div>
-                  <p className="text-xs text-stone-500 mt-3">Wkrótce dostępne</p>
                 </div>
               )}
               <div className="px-4 md:px-8">
