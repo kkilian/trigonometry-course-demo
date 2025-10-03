@@ -52,10 +52,11 @@ const WelcomeScreen = ({ onSelectMode }) => {
         {/* Logo */}
         <div className="flex justify-start mb-8 md:mb-12">
           <svg
-            className="h-20 md:h-24 w-auto"
+            className="h-20 md:h-24 w-auto cursor-pointer"
             viewBox="0 0 220 268"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            onClick={() => window.location.reload()}
             style={{
               shapeRendering: 'crispEdges'
             }}
