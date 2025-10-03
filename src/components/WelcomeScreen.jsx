@@ -47,12 +47,12 @@ const WelcomeScreen = ({ onSelectMode }) => {
   const sortedModules = [...modules];
 
   return (
-    <div className="min-h-screen bg-stone-100">
+    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-stone-100 to-stone-150">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         {/* Logo */}
-        <div className="flex justify-start mb-8 md:mb-12">
+        <div className="flex justify-start mb-6 md:mb-8">
           <svg
-            className="h-20 md:h-24 w-auto cursor-pointer"
+            className="h-20 md:h-24 w-auto cursor-pointer transition-transform duration-300 hover:scale-105 hover:rotate-2"
             viewBox="0 0 220 268"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -92,12 +92,53 @@ const WelcomeScreen = ({ onSelectMode }) => {
           </svg>
         </div>
 
+        {/* Hero Section */}
+        <div className="mb-12 md:mb-16 px-4 md:px-8">
+          <h1 className="text-3xl md:text-5xl font-bold text-stone-900 mb-3 md:mb-4">
+            Matematyka na nowo
+          </h1>
+          <p className="text-lg md:text-xl text-stone-600 mb-6 max-w-2xl">
+            Interaktywne kursy z rozwiązaniami krok po kroku. Przygotuj się do matury lub poszerz swoją wiedzę.
+          </p>
+          <div className="flex flex-wrap gap-6 md:gap-8 text-sm md:text-base">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                <span className="text-xl">📚</span>
+              </div>
+              <div>
+                <div className="font-semibold text-stone-900">{modules.filter(m => !m.disabled).length}</div>
+                <div className="text-stone-600 text-xs md:text-sm">Kursy</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                <span className="text-xl">📝</span>
+              </div>
+              <div>
+                <div className="font-semibold text-stone-900">
+                  {modules.reduce((sum, m) => sum + (m.problemCount || 0), 0)}+
+                </div>
+                <div className="text-stone-600 text-xs md:text-sm">Zadań</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                <span className="text-xl">🎯</span>
+              </div>
+              <div>
+                <div className="font-semibold text-stone-900">Krok po kroku</div>
+                <div className="text-stone-600 text-xs md:text-sm">Rozwiązania</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Modules List */}
-        <div className="space-y-2 md:space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {/* Category Header */}
-          <div className="px-4 md:px-8 py-3 md:py-4">
-            <h2 className="text-xs font-medium text-stone-600 uppercase tracking-wider">
-              Dostępne kursy ({modules.filter(m => !m.disabled).length})
+          <div className="px-4 md:px-8 py-2 md:py-3">
+            <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wider">
+              Wybierz kurs
             </h2>
           </div>
 
@@ -120,15 +161,15 @@ const WelcomeScreen = ({ onSelectMode }) => {
                   }
                 }}
                 disabled={module.disabled}
-                className={`w-full text-left p-4 md:p-6 rounded-xl transition-all relative ${
+                className={`w-full text-left p-5 md:p-7 rounded-2xl transition-all duration-300 relative ${
                   module.disabled
                     ? 'bg-white/40 backdrop-blur-sm border border-stone-300/50 cursor-not-allowed opacity-60'
                     : module.hasGlow
-                    ? 'bg-white border border-orange-400 hover:border-orange-500 hover:bg-orange-50/30 group shadow-lg shadow-orange-400/40'
-                    : 'bg-white border border-stone-200 hover:border-stone-300 hover:bg-stone-50 group'
+                    ? 'bg-white border-2 border-orange-400 hover:border-orange-500 hover:bg-orange-50/30 hover:-translate-y-1 hover:shadow-2xl group shadow-xl shadow-orange-400/30'
+                    : 'bg-white border border-stone-200 hover:border-orange-300 hover:bg-stone-50 hover:-translate-y-1 hover:shadow-xl group shadow-md'
                 }`}
                 style={module.hasGlow ? {
-                  boxShadow: '0 0 30px rgba(251, 146, 60, 0.4), 0 0 60px rgba(251, 146, 60, 0.2)'
+                  boxShadow: '0 0 40px rgba(251, 146, 60, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1)'
                 } : {}}
               >
                 {module.isPremium && (
@@ -142,48 +183,63 @@ const WelcomeScreen = ({ onSelectMode }) => {
                     </span>
                   </div>
                 )}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
-                  <div className="flex-1 min-w-0">
-                    <h3 className={`text-base md:text-lg leading-relaxed font-medium mb-1 ${
-                      module.disabled ? 'text-stone-400' : 'text-stone-900'
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                  <div className="flex gap-4 flex-1 min-w-0">
+                    {/* Module Icon */}
+                    <div className={`flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center text-2xl md:text-3xl ${
+                      module.id === 'matura-2025-topics' ? 'bg-gradient-to-br from-orange-100 to-orange-200' :
+                      module.id === 'basics-funkcja-kwadratowa' ? 'bg-gradient-to-br from-blue-100 to-blue-200' :
+                      module.id === 'homographic-functions' ? 'bg-gradient-to-br from-purple-100 to-purple-200' :
+                      module.id === 'kombinatoryka-menu' ? 'bg-gradient-to-br from-green-100 to-green-200' :
+                      'bg-gradient-to-br from-stone-100 to-stone-200'
                     }`}>
-                      {module.title}
-                    </h3>
-                    <p className={`text-sm ${
-                      module.disabled ? 'text-stone-400' : 'text-stone-600'
-                    }`}>
-                      {module.description}
-                    </p>
+                      {module.id === 'matura-2025-topics' ? '🎓' :
+                       module.id === 'basics-funkcja-kwadratowa' ? '📈' :
+                       module.id === 'homographic-functions' ? '∞' :
+                       module.id === 'kombinatoryka-menu' ? '🎲' : '📐'}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className={`text-lg md:text-xl leading-relaxed font-semibold mb-1.5 ${
+                        module.disabled ? 'text-stone-400' : 'text-stone-900'
+                      }`}>
+                        {module.title}
+                      </h3>
+                      <p className={`text-sm md:text-base ${
+                        module.disabled ? 'text-stone-400' : 'text-stone-600'
+                      }`}>
+                        {module.description}
+                      </p>
+                    </div>
                   </div>
                   <div className="flex items-center justify-between md:justify-end gap-3 md:gap-6 flex-shrink-0 md:mt-2">
                     {module.hasSubmenu ? (
-                      <div className={`px-3 py-1 rounded-full ${
-                        module.disabled ? 'bg-stone-100/50 backdrop-blur-sm' : 'bg-yellow-100'
+                      <div className={`px-4 py-2 rounded-full font-medium ${
+                        module.disabled ? 'bg-stone-100/50 backdrop-blur-sm' : 'bg-gradient-to-r from-yellow-100 to-amber-100'
                       }`}>
                         <span className={`text-xs md:text-sm ${
-                          module.disabled ? 'text-stone-400/70' : 'text-yellow-700'
+                          module.disabled ? 'text-stone-400/70' : 'text-amber-700'
                         }`}>
                           {module.topicsCount || 4} {module.topicsCount === 1 ? 'temat' : module.topicsCount > 4 ? 'tematów' : 'tematy'}
                         </span>
                       </div>
                     ) : (
-                      <div className="bg-stone-100 px-3 py-1 rounded-full">
-                        <span className="text-xs md:text-sm text-stone-600">
+                      <div className="bg-gradient-to-r from-stone-100 to-stone-200 px-4 py-2 rounded-full">
+                        <span className="text-xs md:text-sm text-stone-700 font-medium">
                           {module.problemCount} zadań
                         </span>
                       </div>
                     )}
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                      module.disabled 
-                        ? 'bg-stone-100/50 backdrop-blur-sm' 
-                        : 'bg-stone-100 group-hover:bg-stone-200'
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      module.disabled
+                        ? 'bg-stone-100/50 backdrop-blur-sm'
+                        : 'bg-gradient-to-br from-orange-100 to-orange-200 group-hover:from-orange-200 group-hover:to-orange-300 group-hover:scale-110'
                     }`}>
-                      <svg className={`w-4 h-4 transition-colors ${
-                        module.disabled 
-                          ? 'text-stone-400/70' 
-                          : 'text-stone-600 group-hover:text-stone-700'
+                      <svg className={`w-5 h-5 transition-all duration-300 ${
+                        module.disabled
+                          ? 'text-stone-400/70'
+                          : 'text-orange-600 group-hover:text-orange-700 group-hover:translate-x-0.5'
                       }`} fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 5l6 5-6 5" />
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 5l6 5-6 5" />
                       </svg>
                     </div>
                   </div>
