@@ -3,6 +3,7 @@ import { preprocessMathText } from '../utils/similarity/textProcessor.js';
 import { TFIDFProcessor } from '../utils/similarity/tfidf.js';
 import { SimilarityCalculator } from '../utils/similarity/cosineSimilarity.js';
 import MathRenderer from './MathRenderer';
+import { getSessionStorageKey } from '../features/matura/config/sessions.config';
 // Import removed - problems now passed as prop
 
 const NextProblemSuggestion = ({ 
@@ -201,23 +202,32 @@ const NextProblemSuggestion = ({
         console.log('Saved suggested problems for basics-funkcja-kwadratowa:', suggestedIds);
       }
 
-      // Save suggested problems to localStorage for specific matura sessions
-      if (currentProblem.id && currentProblem.id.includes('#2025-marzec')) {
+      // Save suggested problems to localStorage for matura sessions
+      if (currentProblem.maturaSessionId) {
+        const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
+        const storageKey = getSessionStorageKey(currentProblem.maturaSessionId, 'suggested');
+        if (storageKey) {
+          localStorage.setItem(storageKey, JSON.stringify(suggestedIds));
+          console.log(`Saved suggested problems for ${currentProblem.maturaSessionId}:`, suggestedIds);
+        }
+      }
+      // Legacy: Save suggested problems to localStorage for old format (ID-based detection)
+      else if (currentProblem.id && currentProblem.id.includes('#2025-marzec')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('marzec2025podstawa-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for marzec 2025:', suggestedIds);
       }
-      if (currentProblem.id && currentProblem.id.includes('#2025-kwiecien')) {
+      else if (currentProblem.id && currentProblem.id.includes('#2025-kwiecien')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('kwiecien2025podstawa-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for kwiecien 2025:', suggestedIds);
       }
-      if (currentProblem.id && currentProblem.id.includes('#2025-maj')) {
+      else if (currentProblem.id && currentProblem.id.includes('#2025-maj')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('maj2025podstawa-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for maj 2025:', suggestedIds);
       }
-      if (currentProblem.id && currentProblem.id.includes('#2025-czerwiec')) {
+      else if (currentProblem.id && currentProblem.id.includes('#2025-czerwiec')) {
         const suggestedIds = bestMatches.slice(0, 2).map(p => p.id);
         localStorage.setItem('czerwiec2025podstawa-suggested-problems', JSON.stringify(suggestedIds));
         console.log('Saved suggested problems for czerwiec 2025:', suggestedIds);

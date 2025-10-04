@@ -71,10 +71,18 @@ const MaturaRouter = ({ sessionId, onSelectProblem, onBack }) => {
   // Handle problem selection with completion tracking
   const handleSelectProblem = (problem) => {
     if (onSelectProblem) {
-      onSelectProblem(problem, {
+      // Dodaj maturaSessionId do problemu dla NextProblemSuggestion
+      const enhancedProblem = {
+        ...problem,
+        maturaSessionId: sessionId
+      };
+
+      onSelectProblem(enhancedProblem, {
         markCompleted: () => markProblemCompleted(problem.id),
         isCompleted: isProblemCompleted(problem.id),
-        completedProblems: completedProblems  // Przekaż completedProblems dla ProblemView
+        completedProblems: completedProblems,  // Przekaż completedProblems dla ProblemView
+        problems: problems.map(p => ({ ...p, maturaSessionId: sessionId })),  // Przekaż wszystkie problems z sessionId
+        sessionId: sessionId  // Przekaż sessionId dla storage key
       });
     }
   };

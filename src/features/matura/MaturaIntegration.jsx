@@ -34,11 +34,18 @@ const MaturaIntegration = ({ onBack }) => {
     setCurrentProblem(null);
   };
 
-  const handleProblemComplete = () => {
+  const handleProblemComplete = (problemId) => {
     if (problemCallbacks?.markCompleted) {
       problemCallbacks.markCompleted();
     }
-    handleBackFromProblem();
+    // Nie przekierowujemy automatycznie - pozwalamy użytkownikowi zobaczyć solution view
+    // Użytkownik może wrócić klikając przycisk "Lista zadań" lub wybrać następne zadanie
+  };
+
+  const handleSelectNextProblem = (problem) => {
+    // Wywołaj oryginalny handleSelectProblem z poprzednimi callbacks
+    setCurrentProblem(problem);
+    // Callbacks pozostają te same, więc nie musimy ich aktualizować
   };
 
   // Render based on current view
@@ -48,7 +55,9 @@ const MaturaIntegration = ({ onBack }) => {
         problem={currentProblem}
         onBack={handleBackFromProblem}
         onComplete={handleProblemComplete}
+        onSelectProblem={handleSelectNextProblem}
         completedProblems={problemCallbacks?.completedProblems || new Set()}
+        problems={problemCallbacks?.problems || []}
       />
     );
   }
