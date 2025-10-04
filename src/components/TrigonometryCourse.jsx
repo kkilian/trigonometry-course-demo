@@ -57,7 +57,17 @@ const TrigonometryCourse = () => {
   const [completedSystemsOfEquationsProblems, setCompletedSystemsOfEquationsProblems] = useState(new Set());
   const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
   const [completedRationalEquationsWordProblems, setCompletedRationalEquationsWordProblems] = useState(new Set());
-  const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(new Set());
+  const [completedKombinatorykRozszerzenieProblems, setCompletedKombinatorykRozszerzenieProblems] = useState(() => {
+    const saved = localStorage.getItem('completedKombinatorykRozszerzenieProblems');
+    if (saved) {
+      try {
+        return new Set(JSON.parse(saved));
+      } catch (e) {
+        console.error('Error loading kombinatoryka-rozszerzenie progress:', e);
+      }
+    }
+    return new Set();
+  });
 
   // Comparison states
   const [comparisonMode, setComparisonMode] = useState('list'); // 'list' | 'view'
@@ -328,15 +338,7 @@ const TrigonometryCourse = () => {
     }
 
 
-    // Load kombinatoryka-rozszerzenie progress
-    const savedKombinatorykRozszerzenie = localStorage.getItem('completedKombinatorykRozszerzenieProblems');
-    if (savedKombinatorykRozszerzenie) {
-      try {
-        setCompletedKombinatorykRozszerzenieProblems(new Set(JSON.parse(savedKombinatorykRozszerzenie)));
-      } catch (e) {
-        console.error('Error loading kombinatoryka-rozszerzenie progress:', e);
-      }
-    }
+    // kombinatoryka-rozszerzenie progress is now loaded in the state initializer
 
 
   }, []);

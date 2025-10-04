@@ -73,7 +73,8 @@ const MaturaRouter = ({ sessionId, onSelectProblem, onBack }) => {
     if (onSelectProblem) {
       onSelectProblem(problem, {
         markCompleted: () => markProblemCompleted(problem.id),
-        isCompleted: isProblemCompleted(problem.id)
+        isCompleted: isProblemCompleted(problem.id),
+        completedProblems: completedProblems  // Przekaż completedProblems dla ProblemView
       });
     }
   };

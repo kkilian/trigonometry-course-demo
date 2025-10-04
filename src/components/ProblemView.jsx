@@ -506,98 +506,27 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
             </div>
           ) : (
             <>
-          {/* Completed View - Simple Single Column */}
+          {/* Completed View - Maximally Clean and Simple */}
           {showSolution ? (
-            <div className="space-y-4">
+            <div className="space-y-6">
               {problem.steps?.map((step, index) => (
-                <div key={index} className="relative pl-8">
-                  {/* Step number circle */}
-                  <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-stone-700 text-white text-xs flex items-center justify-center font-bold z-10">
-                    {index + 1}
+                <div key={index} className="relative pl-10">
+                  {/* Minimal step indicator */}
+                  <div className="absolute left-0 top-0 text-sm font-mono text-stone-400">
+                    {String(index + 1).padStart(2, '0')}
                   </div>
 
-                  {/* Connecting line */}
-                  {index < problem.steps.length - 1 && (
-                    <div className="absolute left-3 top-8 -bottom-4 w-0.5 bg-stone-300"></div>
-                  )}
-
-                  {/* Step content */}
-                  <div className="bg-white border border-stone-200 p-4 space-y-3 rounded-lg">
+                  {/* Step content - tylko expression i explanation */}
+                  <div className="space-y-2">
                     {step.expression && (
-                      <div className="text-xl md:text-2xl text-stone-900 font-medium">
+                      <div className="text-xl md:text-2xl text-stone-900">
                         <MathRenderer content={step.expression} />
                       </div>
                     )}
 
                     {step.explanation && (
-                      <div className="text-base text-stone-600">
+                      <div className="text-stone-600 leading-relaxed">
                         <MathRenderer content={step.explanation} />
-                      </div>
-                    )}
-
-                    {/* Hint - inline, simple gray text */}
-                    {step.hint && (
-                      <div className="pt-2 border-t border-stone-100">
-                        <p className="text-sm text-stone-500 italic">
-                          <MathRenderer content={step.hint} />
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Step image */}
-                    {step.image && (
-                      <div className="mt-4 flex justify-center">
-                        <div
-                          className="relative group cursor-pointer max-w-2xl"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setEnlargedImage(step.image);
-                          }}
-                          title="Kliknij aby powiększyć"
-                        >
-                          <img
-                            src={step.image}
-                            alt={`Wykres do kroku ${index + 1}`}
-                            className="w-full h-auto rounded-lg border border-stone-200 shadow-sm hover:shadow-md transition-shadow"
-                          />
-                          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity rounded-lg"></div>
-                          <div className="absolute top-2 right-2 bg-white/90 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <svg className="w-4 h-4 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Why button and expandable content */}
-                    {step.why && (
-                      <div className="mt-4 border-t border-stone-100 pt-4">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleWhy(index);
-                          }}
-                          className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 bg-stone-50 hover:bg-stone-100 rounded-lg transition-colors"
-                        >
-                          <span>Dlaczego?</span>
-                          <svg
-                            className={`w-4 h-4 transition-transform ${expandedWhy.has(index) ? 'rotate-180' : ''}`}
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-
-                        {expandedWhy.has(index) && (
-                          <div className="mt-3 pl-4 border-l-2 border-stone-300">
-                            <p className="text-sm text-stone-700 leading-relaxed">
-                              <MathRenderer content={step.why} />
-                            </p>
-                          </div>
-                        )}
                       </div>
                     )}
                   </div>

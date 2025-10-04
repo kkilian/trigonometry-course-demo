@@ -20,7 +20,7 @@ const MaturaIntegration = ({ onBack }) => {
 
   const handleSelectProblem = (problem, callbacks) => {
     setCurrentProblem(problem);
-    setProblemCallbacks(callbacks);
+    setProblemCallbacks(callbacks); // callbacks zawiera: { markCompleted, isCompleted }
     setCurrentView('problem');
   };
 
@@ -48,6 +48,7 @@ const MaturaIntegration = ({ onBack }) => {
         problem={currentProblem}
         onBack={handleBackFromProblem}
         onComplete={handleProblemComplete}
+        completedProblems={problemCallbacks?.completedProblems || new Set()}
       />
     );
   }

@@ -6,32 +6,36 @@ import { getSessionStorageKey } from '../config/sessions.config';
  * Zastępuje rozproszone stany w TrigonometryCourse
  */
 const useMaturaProgress = (sessionId) => {
-  const [completedProblems, setCompletedProblems] = useState(new Set());
-  const [suggestedProblems, setSuggestedProblems] = useState([]);
-
-  // Load progress from localStorage on mount
-  useEffect(() => {
-    if (!sessionId) return;
+  // SOTA: Inicjalizacja localStorage w useState - natychmiastowe ładowanie
+  const [completedProblems, setCompletedProblems] = useState(() => {
+    if (!sessionId) return new Set();
 
     const progressKey = getSessionStorageKey(sessionId, 'progress');
-    const suggestedKey = getSessionStorageKey(sessionId, 'suggested');
-
     try {
-      // Load completed problems
       const savedProgress = localStorage.getItem(progressKey);
       if (savedProgress) {
-        setCompletedProblems(new Set(JSON.parse(savedProgress)));
-      }
-
-      // Load suggested problems
-      const savedSuggested = localStorage.getItem(suggestedKey);
-      if (savedSuggested) {
-        setSuggestedProblems(JSON.parse(savedSuggested));
+        return new Set(JSON.parse(savedProgress));
       }
     } catch (error) {
       console.error('Error loading matura progress:', error);
     }
-  }, [sessionId]);
+    return new Set();
+  });
+
+  const [suggestedProblems, setSuggestedProblems] = useState(() => {
+    if (!sessionId) return [];
+
+    const suggestedKey = getSessionStorageKey(sessionId, 'suggested');
+    try {
+      const savedSuggested = localStorage.getItem(suggestedKey);
+      if (savedSuggested) {
+        return JSON.parse(savedSuggested);
+      }
+    } catch (error) {
+      console.error('Error loading suggested problems:', error);
+    }
+    return [];
+  });
 
   // Save progress to localStorage whenever it changes
   useEffect(() => {

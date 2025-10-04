@@ -205,9 +205,28 @@ import homographicFunctionsProblems from '../data/homographic-functions-problems
 ```
 
 ### 4.3. Stan dla ukończonych problemów
+
+**SOTA: Inicjalizacja z localStorage**
+
 ```jsx
-const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(new Set());
+const [completedHomographicFunctionsProblems, setCompletedHomographicFunctionsProblems] = useState(() => {
+  const saved = localStorage.getItem('completedHomographicFunctionsProblems');
+  if (saved) {
+    try {
+      return new Set(JSON.parse(saved));
+    } catch (e) {
+      console.error('Error loading homographic-functions progress:', e);
+    }
+  }
+  return new Set();
+});
 ```
+
+**Dlaczego to ważne:**
+- ✅ Stan jest inicjalizowany od razu z localStorage
+- ✅ Brak opóźnienia - ukończone zadania widoczne natychmiast
+- ✅ Lepsza wydajność - nie czeka na useEffect
+- ✅ Brak race conditions przy nawigacji
 
 ### 4.4. Funkcja getCurrentProblems()
 ```jsx
@@ -250,11 +269,12 @@ if (mode === 'homographic-functions') {
 ```
 
 ### 4.8. localStorage - ładowanie danych
+
+**UWAGA:** Jeśli używasz inicjalizacji stanu z localStorage (jak w punkcie 4.3), to **NIE POTRZEBUJESZ** osobnego useEffect do ładowania:
+
 ```jsx
+// ❌ NIEPOTRZEBNE - jeśli stan jest inicjalizowany z localStorage w useState
 useEffect(() => {
-  // ... istniejące ładowanie danych
-  
-  // Load homographic-functions progress
   const savedHomographicFunctions = localStorage.getItem('completedHomographicFunctionsProblems');
   if (savedHomographicFunctions) {
     try {
@@ -265,6 +285,8 @@ useEffect(() => {
   }
 }, []);
 ```
+
+**Zamiast tego** - ładowanie jest już zrobione w useState (punkt 4.3)
 
 ### 4.9. localStorage - zapisywanie danych
 ```jsx
@@ -760,15 +782,74 @@ useEffect(() => {
 
 1. **Sprawdzenie stanu:** `const isCompleted = completedProblems.has(problem.id);`
 2. **Dla ukończonych:** Wszystkie Set są wypełnione wszystkimi indeksami kroków
-3. **`showSolution = true`:** Włącza widok "solution" z dwukolumnowym layoutem (kroki + hinty obok siebie)
+3. **`showSolution = true`:** Włącza widok "solution" - maksymalnie prosty, czysty layout
 4. **Dla nieukończonych:** Normalne resetowanie (puste Sety)
+
+#### **SOTA: Widok Solution - Maksymalna Prostota**
+
+**Filozofia:** "Geniusz tkwi w prostocie"
+
+Widok solution dla ukończonych zadań pokazuje **TYLKO**:
+- **Expression** (rozwiązanie matematyczne)
+- **Explanation** (wyjaśnienie)
+
+**BEZ:**
+- ❌ Hint
+- ❌ "Dlaczego?" sekcji
+- ❌ Obrazków
+- ❌ Żółtych boxów
+- ❌ Efektów glow
+- ❌ Niepotrzebnych borderów
+
+**Implementacja layoutu:**
+
+```jsx
+{/* Completed View - Pure Simplicity: tylko expression i explanation */}
+{showSolution ? (
+  <div className="space-y-6">
+    {problem.steps?.map((step, index) => (
+      <div key={index} className="relative pl-10">
+        {/* Minimal step indicator */}
+        <div className="absolute left-0 top-0 text-sm font-mono text-stone-400">
+          {String(index + 1).padStart(2, '0')}
+        </div>
+
+        {/* Step content - tylko expression i explanation */}
+        <div className="space-y-2">
+          {step.expression && (
+            <div className="text-xl md:text-2xl text-stone-900">
+              <MathRenderer content={step.expression} />
+            </div>
+          )}
+
+          {step.explanation && (
+            <div className="text-stone-600 leading-relaxed">
+              <MathRenderer content={step.explanation} />
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+) : (
+  /* Interactive Steps View (original) */
+  ...
+)}
+```
+
+**Cechy layoutu:**
+- Numeracja kroków: `01`, `02`, `03`... (monospace, szary)
+- Expression: duża czcionka (xl/2xl), ciemna (stone-900)
+- Explanation: normalna czcionka, szara (stone-600)
+- Brak borderów, boxów, efektów wizualnych
+- Maksymalna czytelność i prostota
 
 #### **Efekt:**
 
-✅ **Ukończone zadania** - pokazują się w widoku "solution" ze wszystkimi krokami, hintami i wyjaśnieniami odsłoniętymi
-✅ **Nowe zadania** - pokazują się normalnie, użytkownik musi klikać kroki aby odsłonić
-✅ **Spójne UX** - użytkownik od razu widzi pełne rozwiązanie gdy wraca do ukończonego zadania
-✅ **Brak frustracji** - nie trzeba ponownie przeklikiwać wszystkich kroków
+✅ **Ukończone zadania** - czysty widok z expression + explanation
+✅ **Nowe zadania** - interaktywny widok z klikaniem kroków
+✅ **Maksymalna czytelność** - zero visual noise, tylko treść
+✅ **Spójność z filozofią** - "Geniusz tkwi w prostocie"
 
 ---
 
@@ -785,6 +866,8 @@ System StartHere oparty na implementacji SOTA (RationalEquationsWordProblemsStar
 - ✅ **Animacje** - pulsowanie, gradienty, efekty cienia, hover effects
 - ✅ **Automatyczne odsłanianie ukończonych zadań** - pełny widok solution dla zadań rozwiązanych
 - ✅ **Brak redundancji** - żadnych duplikowanych sekcji "Twoje zadania"
+- ✅ **Maksymalna prostota widoku solution** - tylko expression + explanation, zero visual noise
+- ✅ **Persystencja z localStorage w useState** - natychmiastowe ładowanie bez opóźnień
 
 **Czas implementacji:** ~15-20 minut dla doświadczonego programisty
 **Pliki do modyfikacji:** 4 pliki (WelcomeScreen, TrigonometryCourse, NextProblemSuggestion + nowy komponent)
