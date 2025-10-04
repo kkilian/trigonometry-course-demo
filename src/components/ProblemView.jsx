@@ -118,16 +118,36 @@ const ProblemView = ({ problem, onBack, onComplete, onSelectProblem, onSkip, com
 
   // Reset all UI states when problem changes
   useEffect(() => {
-    setRevealedSteps(new Set());
-    setCompletedSteps(new Set());
-    setHintShownSteps(new Set());
-    setShowSolution(false);
-    setExpandedWhy(new Set());
-    setShowStatementExplanation(false);
-    setCompletedInteractiveChoices(new Set());
-    setShowMultiStepSteps(new Set());
-    setEnlargedImage(null);
-    solveDurationRef.current = null;
+    // Check if this problem is already completed
+    const isCompleted = completedProblems.has(problem.id);
+
+    if (isCompleted) {
+      // If completed, reveal all steps and show solution view
+      const allStepIndices = new Set(problem.steps.map((_, index) => index));
+      setRevealedSteps(allStepIndices);
+      setCompletedSteps(allStepIndices);
+      setHintShownSteps(allStepIndices);
+      setShowSolution(true); // Show the completed "solution" view
+      setExpandedWhy(new Set());
+      setShowStatementExplanation(false);
+      setCompletedInteractiveChoices(allStepIndices);
+      setShowMultiStepSteps(new Set());
+      setEnlargedImage(null);
+      solveDurationRef.current = null;
+    } else {
+      // If not completed, reset to initial state
+      setRevealedSteps(new Set());
+      setCompletedSteps(new Set());
+      setHintShownSteps(new Set());
+      setShowSolution(false);
+      setExpandedWhy(new Set());
+      setShowStatementExplanation(false);
+      setCompletedInteractiveChoices(new Set());
+      setShowMultiStepSteps(new Set());
+      setEnlargedImage(null);
+      solveDurationRef.current = null;
+    }
+
     // Scroll to top when opening a new problem
     window.scrollTo(0, 0);
   }, [problem.id]);
