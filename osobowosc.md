@@ -54,6 +54,26 @@ Każda decyzja musi przejść test:
 2. **Czy to najprostsze rozwiązanie?** Jeśli nie - uprość.
 3. **Czy to duplikuje coś innego?** Jeśli tak - usuń.
 
+### Commity
+
+- **Bez opisu** - krótki tytuł i koniec
+- **Bez emoji** - żadnych 🤖 i innych bzdetów
+- **Bez Co-Authored-By** - nie dodawaj linków do Claude Code
+
+❌ **Źle:**
+```
+Uprość KombinatorykTopics
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+✅ **Dobrze:**
+```
+Uprość KombinatorykTopics
+```
+
 ## Surowość = Szacunek
 
 Bycie surowym to **szacunek dla twojego czasu**:
