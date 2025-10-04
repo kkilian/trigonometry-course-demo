@@ -662,6 +662,116 @@ Trackuje wszystkie wybory użytkownika dla adaptacyjnego AI (max 50):
 
 ---
 
+## **WAŻNE: Sekcja "Twoje zadania" - NIE IMPLEMENTUJ**
+
+### **Dlaczego NIE używamy sekcji "Twoje zadania"**
+
+Wcześniej niektóre moduły miały sekcję "Twoje zadania" pokazującą ostatnio rozwiązane zadania w zielonych kartach. **To rozwiązanie zostało usunięte jako redundantne.**
+
+### **Powody usunięcia:**
+
+❌ **Redundancja** - ukończone zadania są już widoczne w zakładce "Wszystkie zadania" z zielonym podświetleniem
+❌ **Niepotrzebna nawigacja** - użytkownik musi scrollować przez dodatkową sekcję
+❌ **Duplikacja informacji** - te same zadania w dwóch miejscach
+❌ **Zaśmiecony interfejs** - dodatkowe elementy bez wartości dodanej
+
+### **Nowe podejście SOTA:**
+
+✅ **Jedna zakładka "Wszystkie zadania"** pokazuje pełną listę z:
+- Zielonym podświetleniem dla ukończonych zadań
+- Checkmark "✓ Ukończone" przy każdym rozwiązanym zadaniu
+- Możliwość ponownego otwarcia i przejrzenia rozwiązania
+
+✅ **Przycisk toggle** umożliwia przełączanie między:
+- "Sugerowane zadania" (AI-driven selection)
+- "Wszystkie zadania (X)" (kompletna lista)
+
+### **Implementacja:**
+
+**NIE DODAWAJ** tego kodu do swojego komponentu StartHere:
+```jsx
+// ❌ TEGO NIE RÓB - stary, przestarzały kod
+{completedProblems.size > 0 && !showAllProblems && (
+  <div className="mt-12 px-4 md:px-8">
+    <h3>Twoje zadania</h3>
+    {/* ... sekcja z zielonymi kartami ... */}
+  </div>
+)}
+```
+
+**ZAMIAST TEGO** użyj tylko zakładki "Wszystkie zadania" która już pokazuje ukończone zadania z zielonym stylem.
+
+---
+
+## **Automatyczne odsłanianie ukończonych zadań w ProblemView**
+
+### **Funkcjonalność**
+
+Gdy użytkownik kliknie w **ukończone zadanie** z listy "Wszystkie zadania", zadanie powinno się **automatycznie pokazać w pełni odsłonięte** (widok "solution") zamiast zaczynać od początku.
+
+### **Implementacja w ProblemView.jsx**
+
+#### **Problem:**
+Domyślnie, gdy użytkownik otwiera zadanie, wszystkie kroki są ukryte i trzeba je klikać, aby odsłonić hinty i wyjaśnienia. To działa dobrze dla nowych zadań, ale dla **ukończonych zadań** powinniśmy pokazać wszystko od razu.
+
+#### **Rozwiązanie:**
+
+Dodaj logikę sprawdzającą czy zadanie jest ukończone w useEffect resetującym stan UI:
+
+```jsx
+// Reset all UI states when problem changes
+useEffect(() => {
+  // Check if this problem is already completed
+  const isCompleted = completedProblems.has(problem.id);
+
+  if (isCompleted) {
+    // If completed, reveal all steps and show solution view
+    const allStepIndices = new Set(problem.steps.map((_, index) => index));
+    setRevealedSteps(allStepIndices);
+    setCompletedSteps(allStepIndices);
+    setHintShownSteps(allStepIndices);
+    setShowSolution(true); // Show the completed "solution" view
+    setExpandedWhy(new Set());
+    setShowStatementExplanation(false);
+    setCompletedInteractiveChoices(allStepIndices);
+    setShowMultiStepSteps(new Set());
+    setEnlargedImage(null);
+    solveDurationRef.current = null;
+  } else {
+    // If not completed, reset to initial state
+    setRevealedSteps(new Set());
+    setCompletedSteps(new Set());
+    setHintShownSteps(new Set());
+    setShowSolution(false);
+    setExpandedWhy(new Set());
+    setShowStatementExplanation(false);
+    setCompletedInteractiveChoices(new Set());
+    setShowMultiStepSteps(new Set());
+    setEnlargedImage(null);
+    solveDurationRef.current = null;
+  }
+
+  // Scroll to top when opening a new problem
+  window.scrollTo(0, 0);
+}, [problem.id]);
+```
+
+#### **Kluczowe elementy:**
+
+1. **Sprawdzenie stanu:** `const isCompleted = completedProblems.has(problem.id);`
+2. **Dla ukończonych:** Wszystkie Set są wypełnione wszystkimi indeksami kroków
+3. **`showSolution = true`:** Włącza widok "solution" z dwukolumnowym layoutem (kroki + hinty obok siebie)
+4. **Dla nieukończonych:** Normalne resetowanie (puste Sety)
+
+#### **Efekt:**
+
+✅ **Ukończone zadania** - pokazują się w widoku "solution" ze wszystkimi krokami, hintami i wyjaśnieniami odsłoniętymi
+✅ **Nowe zadania** - pokazują się normalnie, użytkownik musi klikać kroki aby odsłonić
+✅ **Spójne UX** - użytkownik od razu widzi pełne rozwiązanie gdy wraca do ukończonego zadania
+✅ **Brak frustracji** - nie trzeba ponownie przeklikiwać wszystkich kroków
+
+---
+
 ## **Podsumowanie**
 
 System StartHere oparty na implementacji SOTA (RationalEquationsWordProblemsStartHere) zapewnia najlepsze doświadczenie użytkownika w całej aplikacji. Dzięki temu procesowi można łatwo dodawać nowe działy z zachowaniem wszystkich funkcjonalności:
@@ -673,7 +783,9 @@ System StartHere oparty na implementacji SOTA (RationalEquationsWordProblemsStar
 - ✅ **Czysty, intuicyjny design** - brak ukrytych funkcji, wszystko widoczne
 - ✅ **Spójny UI/UX** - identyczny wygląd we wszystkich działach
 - ✅ **Animacje** - pulsowanie, gradienty, efekty cienia, hover effects
+- ✅ **Automatyczne odsłanianie ukończonych zadań** - pełny widok solution dla zadań rozwiązanych
+- ✅ **Brak redundancji** - żadnych duplikowanych sekcji "Twoje zadania"
 
-**Czas implementacji:** ~15-20 minut dla doświadczonego programisty  
-**Pliki do modyfikacji:** 4 pliki (WelcomeScreen, TrigonometryCourse, NextProblemSuggestion + nowy komponent)  
+**Czas implementacji:** ~15-20 minut dla doświadczonego programisty
+**Pliki do modyfikacji:** 4 pliki (WelcomeScreen, TrigonometryCourse, NextProblemSuggestion + nowy komponent)
 **Nowe pliki:** 2 (JSON data + komponent StartHere)
